@@ -217,6 +217,13 @@ test('unparseable grade text triggers revise then punch-out', () => {
 
 console.log('\n=== qa-gate ===');
 
+test('field name is "decision" not "punchOut" (regression: orchestrator read qaResult.punchOut, which never existed, so qa-gate silently never punched out on real content)', () => {
+  const text = '## Verdict: FAIL\n\n| 4A | Word count | FAIL | too short |';
+  const result = qaGate(text);
+  assert.ok(['proceed', 'punch-out'].includes(result.decision), 'result.decision must be one of the two enum values');
+  assert.strictEqual(result.punchOut, undefined, 'result.punchOut should not exist — reading it in run-workflow.js was the bug');
+});
+
 test('any FAIL line triggers punch-out', () => {
   const text = '- PASS: title tag\n- FAIL: missing meta description\n- WARN: image alt text thin';
   const result = qaGate(text);
@@ -226,6 +233,33 @@ test('any FAIL line triggers punch-out', () => {
 
 test('all PASS/WARN proceeds', () => {
   const text = '- PASS: title tag\n- WARN: image alt text thin';
+  const result = qaGate(text);
+  assert.strictEqual(result.decision, 'proceed');
+});
+
+test('real blog-qa-reviewer table-row FAIL triggers punch-out (regression: table format never matched)', () => {
+  const text = [
+    '## Verdict: FAIL',
+    '',
+    '| # | Checkpoint | Status | Notes |',
+    '|---|-----------|--------|-------|',
+    '| 4A | Word count | FAIL | ~745 words; under 800 minimum |',
+    '| 4B | Trade-offs discussed | PASS | fine |',
+  ].join('\n');
+  const result = qaGate(text);
+  assert.strictEqual(result.decision, 'punch-out');
+  assert.ok(result.failCount >= 1);
+});
+
+test('real blog-qa-reviewer clean table (all PASS/WARN cells) proceeds', () => {
+  const text = [
+    '## Verdict: PASS',
+    '',
+    '| # | Checkpoint | Status | Notes |',
+    '|---|-----------|--------|-------|',
+    '| 4A | Word count | PASS | 1200 words |',
+    '| 4B | Trade-offs discussed | WARN | thin but present |',
+  ].join('\n');
   const result = qaGate(text);
   assert.strictEqual(result.decision, 'proceed');
 });

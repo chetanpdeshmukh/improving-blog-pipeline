@@ -10,13 +10,19 @@
 
 /**
  * Patterns that identify a FAIL line in blog-qa-reviewer output.
- * The reviewer uses "FAIL:" prefix or "**FAIL**" bold notation.
+ * The reviewer's real output is a markdown checkpoint table
+ * ("| 4A | Word count | FAIL | ... |") plus a top verdict line
+ * ("## Verdict: FAIL" / "### Verdict: FAIL") — not the "FAIL:"
+ * prefix or bold notation this originally assumed, which never
+ * matched a real report and let every FAIL silently proceed.
  */
 const FAIL_PATTERNS = [
   /^FAIL:/im,
   /^\*\*FAIL\*\*/im,
   /^\s*[-*]\s*FAIL\b/im,
   /\bstatus:\s*FAIL\b/i,
+  /\|\s*FAIL\s*\|/i,
+  /^#+\s*Verdict:\s*FAIL\b/im,
 ];
 
 /**

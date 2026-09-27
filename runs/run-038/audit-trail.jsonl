@@ -9,3 +9,4 @@
 {"run_id":"run-038","step":"grade-gate","attempt":1,"timestamp":"2026-09-27T20:26:33.682Z","model":null,"input_tokens":null,"output_tokens":null,"total_tokens":null,"cost_usd":0,"status":"pass","outcome":"Grade: B | revisions: 0"}
 {"run_id":"run-038","step":"blog-qa-reviewer","attempt":1,"timestamp":"2026-09-27T20:30:36.532Z","model":"claude-sonnet-4-6","input_tokens":4434,"output_tokens":3171,"total_tokens":7605,"cost_usd":0.060867,"status":"pass","outcome":"05-qa.md produced"}
 {"run_id":"run-038","step":"qa-gate","attempt":1,"timestamp":"2026-09-27T20:30:36.539Z","model":null,"input_tokens":null,"output_tokens":null,"total_tokens":null,"cost_usd":0,"status":"pass","outcome":"all checks PASS/WARN"}
+{"run_id":"run-038","step":"blog-refinement","attempt":1,"timestamp":"2026-09-27T20:33:05.574Z","model":"claude-sonnet-4-6","input_tokens":6570,"output_tokens":2469,"total_tokens":9039,"cost_usd":0.056745,"status":"pass","outcome":"06-publish-kit.md produced"}

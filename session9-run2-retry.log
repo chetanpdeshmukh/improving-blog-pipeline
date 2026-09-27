@@ -1,0 +1,18 @@
+  [init] claude binary: /Users/Chetan.Deshmukh/Library/Application Support/Claude/claude-code/2.1.281/claude.app/Contents/MacOS/claude
+  [test-mode] --short: targeting 500-800 words instead of production 800-1600
+
+=== Blog Pipeline — run-046 ===
+Transcript: InfraCloud Webinar - Bringing Observability to Complex AI Platforms and Models - LIVE.txt
+
+[1/6] transcript-analysis
+  [transcript-analysis] calling claude CLI (attempt 1)...
+[2/6] blog-draft-writer
+  [blog-draft-writer] calling claude CLI (attempt 1)...
+[3/6] anti-ai-voice
+  [anti-ai-voice] calling claude CLI (attempt 1)...
+[4/6] ai-smell-test
+  [ai-smell-test] calling claude CLI (attempt 1)...
+[5/6] blog-qa-reviewer
+  [blog-qa-reviewer] calling claude CLI (attempt 1)...
+
+[PUNCH-OUT] run-046 → step "qa-gate": QA reviewer found 6 FAIL item(s): ## Verdict: FAIL; | 2C | Gaps acknowledged | FAIL | `[INSERT DIAGRAM]` placeholder is live in the article body |; | 3C | AI patterns | FAIL | Mirror structure in the "Three Workload Types" section |; | 4A | Word count | FAIL | ~743 words; below the 800-word floor |; | 5D | Publication kit | FAIL | No SEO title, no meta description, no URL slug (3 separate failures) |; | 6A | Technical accuracy | FAIL | DGX power draw figure and rack math are inconsistent |

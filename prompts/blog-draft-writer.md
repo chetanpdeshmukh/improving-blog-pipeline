@@ -243,3 +243,13 @@ This is the difference between prescriptive writing (weak) and consequential wri
 - Do not skip the war story beats — a story without Setup, Pressure, Decision, and Outcome is a bullet point
 - Do not write a section without a tradeoff — "when this works / when it fails" is mandatory per H2
 
+---
+
+## Final Step: Word Count Self-Check (Required Before Output)
+
+Before returning the draft, count its total words. This is a real count, not an estimate — read through and tally, or reconstruct the count from paragraph lengths.
+
+- **If over 1,600 words:** trim now, in this same pass, before returning anything. Cut by removing whichever paragraph or example contributes least (the same test from Length & Depth Strategy: "if removing a paragraph doesn't reduce the article's value, remove it"). Do not trim by shortening sentences throughout — that damages the consequential, specific writing this skill requires. Re-count after cutting; repeat if still over.
+- **If under 800 words:** expand the thinnest section using the Expansion rule (mechanism, risk, consequence — never restatement), then re-count.
+- Only return the draft once the count is confirmed inside 800–1,600 words. The automated guardrail downstream has zero tolerance for a miss and no revision path — it hard-stops the run on 1,601 words exactly the same as on 2,500.
+

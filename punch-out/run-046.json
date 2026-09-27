@@ -1,0 +1,6 @@
+{
+  "runId": "run-046",
+  "step": "qa-gate",
+  "reason": "QA reviewer found 6 FAIL item(s): ## Verdict: FAIL; | 2C | Gaps acknowledged | FAIL | `[INSERT DIAGRAM]` placeholder is live in the article body |; | 3C | AI patterns | FAIL | Mirror structure in the \"Three Workload Types\" section |; | 4A | Word count | FAIL | ~743 words; below the 800-word floor |; | 5D | Publication kit | FAIL | No SEO title, no meta description, no URL slug (3 separate failures) |; | 6A | Technical accuracy | FAIL | DGX power draw figure and rack math are inconsistent |",
+  "timestamp": "2026-09-27T21:40:30.202Z"
+}

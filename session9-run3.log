@@ -1,0 +1,11 @@
+  [init] claude binary: /Users/Chetan.Deshmukh/Library/Application Support/Claude/claude-code/2.1.281/claude.app/Contents/MacOS/claude
+
+=== Blog Pipeline — run-042 ===
+Transcript: Improving Podcast - AI Strategies Why You Need One for Your Business.txt
+
+[1/6] transcript-analysis
+  [transcript-analysis] calling claude CLI (attempt 1)...
+[2/6] blog-draft-writer
+  [blog-draft-writer] calling claude CLI (attempt 1)...
+
+[FATAL] claude CLI spawn error: spawnSync /Users/Chetan.Deshmukh/Library/Application Support/Claude/claude-code/2.1.281/claude.app/Contents/MacOS/claude ETIMEDOUT

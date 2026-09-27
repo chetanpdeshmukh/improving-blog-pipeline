@@ -1,0 +1,352 @@
+I'll work through the full Phase 1 analysis of this transcript now.
+
+---
+
+## 0. Speaker Identification
+
+**Host (unnamed):** Podcast host and moderator for "The Improving Edge." Primarily asks questions and transitions topics, but also contributes personal AI usage anecdotes (the "translating me into robot" prompt system). Host questions and filler responses are not treated as insight sources.
+
+**Guest/SME — Devlin:** Chief Consulting Officer at Improving. The sole substantive expert in this conversation. All war stories, controversy points, frameworks, and claims below are attributed to Devlin unless noted.
+
+**Attribution note:** Several transcript segments have ambiguous turn indicators (the `>>` notation is inconsistent). Two anecdotes — the expense report story and the token bill/delivery lead story — are attributed to Devlin based on context (mentions the Houston office, references delivery leads in a way consistent with the CCO role). The "translating me into robot" personal prompt anecdote reads as the host's own story, prompted by Devlin's question "Where are you failing to use AI today?"
+
+---
+
+## 1. The Villain
+
+Organizations are responding to board and market pressure by buying AI tools first, then hunting for problems to justify them. The result: McKinsey reports 80% of AI projects are net negative to the business, and MIT reports 95% never make it out of pilot. The failure isn't the technology — it's that nobody started with the problem.
+
+---
+
+## 2. War Stories Extracted
+
+**War Story 1 — The developer who burned a month's budget in three days (Devlin)**
+
+- **Setup:** An internal Improving developer was working with dev tooling and locked onto the "thinking fast" model — a high-speed reasoning model that costs approximately 15x a standard model, and 130x a basic model.
+- **Pressure:** No guardrails or cost awareness were in place. The developer was productive and presumably delivering output.
+- **Decision:** Continued using the premium model for what Devlin describes as routine software development work.
+- **Outcome:** In three to four days (Devlin gives both figures — inconsistency worth flagging), the developer consumed the equivalent of ten people's monthly token budget. Devlin frames this as a near-ROI-destruction event: a 10x ROI could have been wiped out by model selection alone.
+- **Gap flag:** What happened after? Was the developer retrained? Were guardrails added?
+
+**War Story 2 — The expense report that should have always been automated (Devlin)**
+
+- **Setup:** Devlin was filling out an expense report three days late, receiving follow-up emails, doing it manually.
+- **Pressure:** A colleague in the Houston office pointed out that Claude Co-work (an AI agent with browser access) could handle it.
+- **Decision:** Devlin connected Claude Co-work to Chrome, fed it emails, calendar, and receipts, and let it prefill the expense report.
+- **Outcome:** It worked. Devlin's reaction: "I should have thought of this." His point: even the person building AI strategy at a consulting firm missed the obvious automation directly in front of him.
+- **Narrative tension:** Strong. The CCO of an AI consulting firm failing to automate his own expense report is precisely the kind of self-deprecating credibility-building moment that makes a LinkedIn post go viral.
+
+**War Story 3 — Improving's internal AI experimentation rollout (Devlin)**
+
+- **Setup:** When Improving rolled out internal AI collaboration channels, leadership faced the standard adoption risk: employees either ignoring the tools or being intimidated by others' polished use cases.
+- **Decision:** The mandate was "share your experiments, not your success stories." Leadership explicitly wanted a roughly even balance of failures and wins. The executive team went first.
+- **Outcome:** Not fully stated — Devlin describes the rollout approach but does not quantify adoption or behavioral outcomes. **Gap: what were the measurable results of this approach?**
+
+**War Story 4 — The client token bill that turned out to be fine (Devlin, attributed by context)**
+
+- **Setup:** A client on a time-and-materials engagement received a token usage bill that looked alarming.
+- **Pressure:** Client flagged "that's too many tokens."
+- **Decision:** Devlin's team walked through what was produced for those tokens.
+- **Outcome:** Client reversed position: "Oh, never mind. Got it. ROI." Story is brief and illustrative — not a full narrative. Works as a one-line proof point, not a feature-length example.
+
+---
+
+## 3. Controversy and Counter-Intuitive Points
+
+**Conflict 1 — The ROI argument**
+Industry says: "Track and optimize your AI token spend carefully."
+Devlin says: "If token economics are your main concern, your ROI probably isn't there. You should be targeting 5–10x ROI in year one — at that level, token cost is noise. The only exception is order-of-magnitude exceptions, which you need detection for, not micromanagement."
+Evidence: "If you really care about the token economics your ROI [snorts] probably isn't there."
+Shareable potential: **High** — this is a direct challenge to the prevailing "AI costs are out of control" narrative and reframes cost vigilance as a signal of poor problem selection.
+
+**Conflict 2 — AI replaces workers**
+Industry says: "AI will reduce headcount and replace knowledge workers."
+Devlin says: "AI running autonomously fails 25% of the time on complex tasks. Humans alone fail 15%. Together, they fail less than 5%. The gain is hybrid intelligence, not replacement — and your strategy has to reflect that."
+Evidence: MIT Sloan review data 2024–2025.
+Shareable potential: **High** — specific failure-rate numbers give this legs. It reframes the replacement narrative with data, not reassurance.
+
+**Conflict 3 — Build a company AI strategy**
+Industry says: "Build a unified, company-wide AI strategy."
+Devlin says: "Company AI maturity doesn't exist. You have departmental maturity. The work type, tooling ecosystem, and precision requirements are so different by department that a monolithic strategy will misallocate resources by design."
+Evidence: "You're not going to have a company AI maturity. You're going to have departmental maturity."
+Shareable potential: **Medium-High** — challenges a common consulting deliverable in a way that consultants and internal strategy leads will find either validating or provocative.
+
+**Conflict 4 — Leaders eat last**
+Industry says (per Simon Sinek's framework): "Leaders eat last — serve the team first, absorb risk last."
+Devlin says: "Leaders use AI first. They should be the first to publicly share where they're failing with AI, not just their wins. If the executive team isn't visibly experimenting and failing, the workforce defaults to fear."
+Evidence: "While Simon Sinek would say leaders eat last, leaders use AI first."
+Shareable potential: **High** — direct, named contrast with a widely known leadership framework. Highly quotable.
+
+**Conflict 5 — Start with best-in-class tooling**
+Industry says: "Use the most capable AI models for important work."
+Devlin says: "You don't need Opus or a thinking model to do basic tasks. The cost spread between the cheapest and most expensive model available is approximately 130x. Model selection is a strategy decision, not a technical preference."
+Evidence: "Doesn't have to be Opus every single time. Like it's okay. Haiku will get it done for you."
+Shareable potential: **Medium** — practical and actionable, but less provocative than the others. Works as a supporting point inside a larger section.
+
+---
+
+## 4. Exclusion List
+
+The following must not appear in the draft:
+
+- Generic AI capability overviews (what LLMs can do, how transformer models work) — the target audience is CTO/VP level and already knows this
+- Vendor comparisons or tool reviews beyond the "stay in your ecosystem" guidance — Devlin explicitly avoids endorsing specific vendors
+- AI ethics or bias content — Devlin does not raise it; adding it would dilute focus and misrepresent what the article is actually about
+- Job replacement fear-mongering as a primary framing — the article addresses this but as a communication management problem, not an existential debate
+- Generic change management frameworks (Kotter's 8 steps, ADKAR, etc.) — the skeptic's section will address the change management parallel, but the article should not adopt that vocabulary
+- The "how to write better prompts" angle — under-reliance is mentioned as a failure mode, but prompt optimization is too tactical for this article's level
+- Specific AI tool tutorials or walkthroughs
+
+---
+
+## 5. Gap Analysis
+
+**GAP [CRITICAL]:** The departmental audit process is named and outcome-described, but the actual mechanics are never shown. Devlin says to map tasks by frequency, volume, and precision required — but there is no description of the scoring methodology, facilitation approach, or timeframe. The article will describe a framework the reader cannot execute without a consultant. This is acceptable only if framed as a diagnostic, not a how-to. If the intent is practitioner-grade content, this gap must be resolved or explicitly acknowledged.
+*What the draft loses if unresolved:* The article reads as a sales pitch for an assessment engagement rather than a useful framework.
+
+**GAP [CRITICAL]:** The 5–10x ROI target in year one is stated as fact with no sourcing. Is this Improving's internal benchmark? Industry data? A rule of thumb? For a senior audience reading this article, an unsourced ROI claim will either go ignored or actively undermine credibility. The claim leaves unchallenged the assumption that ROI is measurable within year one — which is itself contested in large enterprises.
+*What the draft loses if unresolved:* The most quotable statistic in the article may become its weakest point under scrutiny.
+
+**GAP [CRITICAL]:** The MIT and McKinsey statistics (95% never leave pilot; 80% net negative) are cited by Devlin but the specific study titles, publication dates, and methodology are not given. "MIT report" and "McKinsey reports" are vague enough to be unfalsifiable. These are the article's central evidence base.
+*What the draft loses if unresolved:* The two most important claims in the article cannot be cited by readers or verified by editors.
+
+**GAP [NICE-TO-HAVE]:** The Improving internal experimentation rollout (War Story 3) has no outcome data. What adoption rate resulted? What was the ratio of wins to failures shared? What changed in how employees engaged with AI tools afterward? Even qualitative before/after language would strengthen this.
+*What the draft loses if unresolved:* The "leaders fail first" section has a strong prescription but no evidence it worked at scale.
+
+**GAP [NICE-TO-HAVE]:** The over-reliance / under-reliance framework is conceptually useful but the under-reliance examples are abstract (hard-coding document types, re-prompting every time). A concrete before-and-after example would make this section actionable.
+*What the draft loses if unresolved:* Readers understand the over-reliance failure mode clearly (from the developer war story) but can only infer what under-reliance looks like in practice.
+
+**GAP [NICE-TO-HAVE]:** Devlin references the AI failure rate data (25% / 15% / <5%) from MIT Sloan 2024–2025 but does not name the specific study or define "complex tasks." The claim is strong enough that readers will search for it — and the definition of "complex" significantly affects how applicable the data is.
+*What the draft loses if unresolved:* The hybrid intelligence argument, which is one of the article's most defensible positions, rests on a loosely cited data point.
+
+---
+
+## Competitor and SEO Quick Scan
+
+**Existing coverage landscape:**
+Major consulting firms (BCG, McKinsey, Deloitte, Gartner) publish AI strategy guides that are comprehensive, vendor-neutral, and organized around maturity models. They are well-sourced but generic — they could apply to any company in any industry. Harvard Business Review publishes adjacent think pieces on AI adoption culture. LinkedIn thought leaders publish "my five AI tips" listicles.
+
+**What existing content misses:**
+- The departmental maturity framing (vs. company-wide strategy) is underrepresented
+- Hybrid intelligence with actual failure-rate numbers is rarely presented in plain business language
+- Token economics as a strategic (not IT) concern is almost entirely absent from business-level AI strategy content
+- The "leaders fail first" inversion of leadership norms is not common in enterprise AI content
+- The psychological identity disruption angle is occasionally touched on but almost never quantified or structured
+
+**How this article differs:**
+This article is practitioner-voiced, first-person, experience-led, and willing to say that most companies are getting this wrong in two specific measurable ways. It names a dollar-range cost problem (500–2,000/month per super user), a specific cost multiplier (130x between cheapest and most expensive model), and a specific failure-rate data set. That combination of specificity is rare in this content category.
+
+**Question-based H2s for featured snippet / AI overview capture:**
+- "Why do most AI projects fail to make it out of pilot?"
+- "How do you build an AI strategy by department?"
+
+**Primary search intent:** Business leaders (VP Engineering, CTO, COO, CDO) searching for why their AI initiatives are stalling or how to structure an AI strategy that survives contact with the organization. Secondary intent: practitioners looking for a diagnostic framework to bring to leadership.
+
+---
+
+## The Outline
+
+### Working Title Options (ranked)
+
+1. **"Why 95% of AI Projects Never Leave Pilot — And What Your Strategy Is Actually Missing"** — leads with the most alarming statistic, promises a diagnosis, signals practitioner-level content
+2. **"Stop Buying Tools, Start Solving Problems: The AI Strategy Framework That Delivers 5–10x ROI"** — more prescriptive, better for audiences already past fear-of-missing-out and into execution mode
+3. **"The People Problem Inside Every AI Strategy (and the Data That Proves It)"** — strongest for audiences who've already bought the tools and are wondering why adoption is failing
+
+---
+
+### Full Outline
+
+**Depth target:** 800–1,600 words
+
+---
+
+**H2: The board wants AI. Your organization is setting up to fail it.**
+
+Section purpose: Establish the villain with data before offering any solutions. Open with the McKinsey and MIT statistics as the hook. Make clear this is not a technology failure — it's a strategy failure that masquerades as one.
+
+- H3: When the tool precedes the problem, waste is guaranteed
+  - The furniture store analogy — buying what looks nice vs. knowing what the room needs
+  - Tool-first adoption as a board pressure response, not a business decision
+- H3: The two failure modes that explain every stalled AI initiative
+  - 80% of McKinsey-tracked projects: net negative ROI (didn't spend less than they gained)
+  - 95% of MIT-tracked projects: never make it out of pilot
+  - These are not the same failure and require different fixes
+
+`[INSERT DIAGRAM: two-axis grid showing why projects fail — x-axis: tool-first vs. problem-first; y-axis: built for demo vs. built for production. Each quadrant labeled with outcome.]`
+
+---
+
+**H2: Company AI maturity doesn't exist. Departmental maturity does.**
+
+Section purpose: Introduce the departmental audit framework as the counter to monolithic AI strategy. This is Devlin's most distinctive structural contribution.
+
+- H3: Why a single AI roadmap will misallocate resources by design
+  - Accounting team vs. IT team: different tools, different workflows, different automation potential
+  - One generic toolkit for a company produces generic, average results everywhere
+- H3: The departmental audit: mapping tasks by frequency, volume, and precision
+  - Score each task: how often, how much volume, how much precision is actually required
+  - "My expense report notes get average work from me" — not everything deserves excellence
+  - Output: a hit list of high-ROI automation targets by role, rolled up by department
+- H3: Boxes and arrows on a whiteboard — and why you start with only the boxes
+  - Map the nodes (the work units) before the arrows (the integrations)
+  - Fully automated end-to-end is not the goal at step one
+  - Stay inside your existing ecosystem: Microsoft stack → Copilot, Power Automate; Google stack → Gemini, App Scripts
+
+`[INSERT DIAGRAM: sample boxes-and-arrows workflow for one department showing boxes (work units) annotated with frequency/precision/volume scores, arrows labeled with integration type and risk level]`
+
+- H3: The 12-month roadmap and the revisit cadence
+  - AI tooling economics are changing fast: things expensive today get cheaper
+  - Build a recurring review into the strategy — this is not a one-time deliverable
+  - "We're in year three of a 15-year cycle, not a 5-year cycle"
+
+---
+
+**H2: The psychology problem your AI project budget doesn't account for**
+
+Section purpose: Name the identity disruption that turns well-intentioned AI adoption into quiet sabotage. This is the section most likely to resonate with leaders who've already bought the tools and are confused by low adoption.
+
+- H3: Why employees become saboteurs without meaning to
+  - "I am a software developer" — identity attached to the task, not the output
+  - Moving the work = moving the identity. Resistance is not irrational.
+  - Forced AI adoption produces an army of people who will point out every mistake the AI makes
+- H3: Two failure modes — over-reliance and under-reliance
+  - Over-reliance: believing AI is magic, skipping quality checks, not learning the new error patterns AI introduces (different from human error patterns)
+  - Under-reliance: hyper-specific prompting, re-prompting every time instead of capturing learnings into agents, treating AI as a search engine rather than a configurable system
+  - The fix for each is different and requires deliberate people-side intervention
+- H3: Start by eating the parts of the job nobody wanted anyway
+  - Find the work the team already resents — expense reports, status updates, document searches
+  - Let AI improve that first. "Oh, AI is a friend of mine."
+  - Then move to expanding and amplifying the work people actually value
+  - From "write the code" to "help the customer deliver an outcome"
+
+---
+
+**H2: The data case for keeping humans in the loop — and what "hybrid intelligence" actually means**
+
+Section purpose: Provide the evidence-backed counter to both the "AI replaces workers" narrative and the "AI is unreliable" dismissal. This section gives leaders a frame they can use internally.
+
+- H3: Why neither AI alone nor humans alone is the right answer
+  - AI alone on complex tasks: ~25% failure rate (MIT Sloan 2024–2025)
+  - Humans alone on complex tasks: ~15% failure rate
+  - AI + human together: <5% failure rate
+  - The combination outperforms both components — that is the design target
+
+`[INSERT DIAGRAM: bar chart comparing failure rates — AI alone / Human alone / Hybrid — with source citation]`
+
+- H3: What this means for how you staff and supervise AI-assisted work
+  - AI makes different mistakes than humans make — the existing manager's error-detection instinct is trained for human mistakes, not AI mistakes
+  - Quality and review patterns must change, not just the tooling
+  - "Hybrid intelligence" is not a hedge — it's where the actual performance gains live
+
+---
+
+**H2: Leaders fail first — the internal communication strategy most AI rollouts skip**
+
+Section purpose: Translate the psychology and change management insight into a concrete leadership behavior prescription. The Simon Sinek inversion ("leaders use AI first") is the most quotable moment in the transcript.
+
+- H3: Your employees are getting their AI narrative from the news — and the news is wrong
+  - Robotics didn't remove all humans from manufacturing (predicted in 1974 for the following 50 years — it didn't happen)
+  - If leadership doesn't provide a counter-narrative, employees fill the vacuum with what they hear externally
+  - Communication plan is not optional — it's a strategy component
+- H3: Simon Sinek says leaders eat last. For AI, leaders use AI first.
+  - Executive team publicly shares experiments, not just polished wins
+  - Roughly even ratio of failures to successes in early rollout communication
+  - The CCO of Improving missed an obvious automation on his own expense report — and said so publicly. That's the model.
+- H3: How Improving rolled out internal AI experimentation
+  - Started with executive team, then broader population
+  - "Share your experiments, not your success stories" as the governing norm
+  - Gap: outcome data from this rollout is not available in the transcript — this will be framed as an in-progress learning
+
+---
+
+**H2: Token economics: the cloud VM problem you haven't anticipated yet**
+
+Section purpose: Address the cost dimension practically — not as a reason to slow down, but as a discipline that, if skipped, can destroy the ROI case after the fact.
+
+- H3: The 130x cost spread — and why model selection is a strategic decision
+  - Range from basic task-specific model to Opus thinking-fast: approximately 130x cost difference
+  - A developer burning premium models on routine software tasks consumed ten people's monthly budget in three days
+  - This is not an edge case — it's the cloud VM sprawl problem repeating in a new form
+- H3: When token cost matters and when it signals the wrong problem
+  - If token economics dominate your ROI discussion, your problem selection is probably wrong
+  - Target: 5–10x ROI in year one. At that level, token costs are noise.
+  - Exception: order-of-magnitude anomalies (10x budget in 3 days) require detection, not micromanagement
+- H3: Right-sizing the model to the task
+  - "Haiku will get it done for you" for routine tasks
+  - Reserve reasoning-heavy and thinking models for genuinely complex, high-value work
+  - Build cost monitoring into the operational model — not as a budget exercise, but as a signal that something is misconfigured
+
+---
+
+**H2: The skeptic's view: Isn't this just change management with a new name?**
+
+Section purpose: Address the strongest credible objection head-on. This earns trust with the technically sophisticated reader who is already suspicious of AI strategy consulting as a rebranded version of digital transformation consulting.
+
+- Acknowledge the overlap directly: yes, organizational change management is embedded in AI strategy. This is not a coincidence or a marketing move — it's a diagnosis.
+- The difference: change management frameworks (Kotter, ADKAR) assume the change itself is defined and the job is adoption. AI strategy requires that the change be defined first, which most frameworks skip. Tool-first AI adoption collapses because the change is never defined — the tool is dropped into an undefined problem space.
+- The second difference: the economics of getting it wrong are measurable and near-term (McKinsey 80% net-negative, MIT 95% pilot death). Traditional change management rarely produces this kind of quantifiable short-cycle feedback.
+- Concede: if your organization already has strong change management discipline and problem-to-solution rigor, the lift is lower. The framework is not novel — the failure to apply it to AI is what's novel.
+
+---
+
+**H2: Building for a 15-year cycle while the tools change every quarter**
+
+Section purpose: Close with the strategic horizon frame. This prevents the reader from treating AI strategy as a one-time deliverable.
+
+- H3: The kitchen remodel model — iteration, not reconstruction
+  - Don't rebuild the skyscraper every three years. Remodel the kitchen, then the bathroom.
+  - People-centric framing makes each iteration feel like improvement, not disruption
+  - Platform choice matters: build on a foundation that allows incremental change
+- H3: The recurring culture that sustains a 15-year adoption curve
+  - Excel didn't produce a generation of Excel experts — it raised the floor
+  - AI will do the same: raise the floor, not produce a generation of prompt engineers
+  - The goal is a workforce that engages with this continuously, not one that completes an AI project
+
+---
+
+## Recommended Title Options (ranked)
+
+1. **"Why 95% of AI Projects Never Leave Pilot — And What Your Strategy Is Actually Missing"**
+2. **"Stop Buying Tools, Start Solving Problems: The AI Strategy Framework That Delivers 5–10x ROI"**
+3. **"The People Problem Inside Every AI Strategy (and the Data That Proves It)"**
+
+---
+
+## Primary Search Intent
+
+CTO, VP of Engineering, COO, or CDO searching for why their AI initiative has stalled, failed to scale, or produced unclear ROI. Secondary intent: internal strategy and transformation leads looking for a framework to bring to leadership that reframes AI adoption as a business-problem exercise rather than a technology procurement exercise.
+
+---
+
+## Questions for the SME (Devlin)
+
+These questions address CRITICAL gaps and should be resolved before the draft is finalized.
+
+1. **On the departmental audit:** Can you walk through what the actual audit process looks like — how long it takes, who participates, what the scoring methodology is for frequency/volume/precision? Without this, the article describes an outcome (a hit list and roadmap) but not a process the reader can initiate or evaluate.
+
+2. **On the ROI benchmark:** Where does the 5–10x first-year ROI target come from? Is this Improving's internal benchmark from client engagements, third-party research, or a general rule of thumb? The article will cite this prominently — it needs a source or a clear "based on Improving's engagement experience" qualifier.
+
+3. **On the MIT and McKinsey statistics:** Can you point to specific study titles and publication dates for the 95% pilot failure rate and the 80% net-negative ROI figures? The article is built on these claims — readers and editors will search for them.
+
+4. **On the Improving internal rollout:** Do you have any outcome data from the internal AI experimentation channel rollout? Even qualitative — what changed about how employees engaged? What surprised you? The war story currently ends at "we did this" without a result.
+
+---
+
+```json
+{
+  "title": "Why 95% of AI Projects Never Leave Pilot — And What Your Strategy Is Actually Missing",
+  "introduction": "For CTOs and business leaders watching AI budgets grow with little return, this article diagnoses exactly why most AI initiatives fail — and provides a departmental-level strategy framework that starts with the problem, not the tool.",
+  "problem_statement": "Organizations respond to board pressure by buying AI tools first and hunting for problems afterward, producing projects that McKinsey reports as 80% net negative to the business and MIT reports as 95% failing to exit pilot — not because the technology failed, but because the strategy was never built around a real problem.",
+  "takeaway": "AI strategy that delivers measurable ROI starts with the department's biggest, most frequent problems — not the shiniest available tools — and treats the people and identity disruption as a first-class design constraint, not an afterthought.",
+  "body_sections": [
+    { "heading": "The board wants AI. Your organization is setting up to fail it." },
+    { "heading": "Company AI maturity doesn't exist. Departmental maturity does." },
+    { "heading": "The psychology problem your AI project budget doesn't account for" },
+    { "heading": "The data case for keeping humans in the loop — and what 'hybrid intelligence' actually means" },
+    { "heading": "Leaders fail first — the internal communication strategy most AI rollouts skip" },
+    { "heading": "Token economics: the cloud VM problem you haven't anticipated yet" },
+    { "heading": "The skeptic's view: Isn't this just change management with a new name?" },
+    { "heading": "Building for a 15-year cycle while the tools change every quarter" }
+  ]
+}
+```

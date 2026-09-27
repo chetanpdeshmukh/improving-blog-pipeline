@@ -98,11 +98,33 @@ const PRICE_OUTPUT_PER_TOKEN = 15.00 / 1_000_000;
 // Helpers
 // ---------------------------------------------------------------------------
 
-/** Auto-increment run ID based on existing run-NNN folders. */
+/**
+ * Auto-increment run ID and claim its folder atomically.
+ *
+ * Uses the HIGHEST existing run-NNN number + 1, not a count of
+ * matching folders — a count silently reuses an existing run's id
+ * (and overwrites its files) whenever the sequence has a gap, e.g.
+ * a manually deleted run-NNN folder. Also claims the folder with a
+ * non-recursive mkdirSync (EEXIST on collision) and retries the next
+ * number, so two processes racing resolveRunId() at the same instant
+ * still each get a distinct, exclusively-created folder instead of
+ * both writing into the same run.
+ */
 function resolveRunId() {
   fs.mkdirSync(RUNS_DIR, { recursive: true });
-  const existing = fs.readdirSync(RUNS_DIR).filter(d => /^run-\d{3}$/.test(d));
-  return `run-${String(existing.length + 1).padStart(3, '0')}`;
+  for (let attempt = 0; attempt < 50; attempt++) {
+    const existing = fs.readdirSync(RUNS_DIR).filter(d => /^run-\d{3}$/.test(d));
+    const maxNum = existing.reduce((max, d) => Math.max(max, parseInt(d.slice(4), 10)), 0);
+    const runId = `run-${String(maxNum + 1 + attempt).padStart(3, '0')}`;
+    try {
+      fs.mkdirSync(path.join(RUNS_DIR, runId));
+      return runId;
+    } catch (err) {
+      if (err.code === 'EEXIST') continue;
+      throw err;
+    }
+  }
+  throw new Error('resolveRunId: could not claim a run folder after 50 attempts');
 }
 
 /** Read a prompt file. */
@@ -539,13 +561,14 @@ async function main() {
   });
 
   const qaResult = qaGate(qaText);
+  const qaPunchOut = qaResult.decision === 'punch-out';
   logStep(runDir, guardrailEntry(runId, 'qa-gate',
-    qaResult.punchOut ? 'punch-out' : 'pass',
-    qaResult.punchOut
+    qaPunchOut ? 'punch-out' : 'pass',
+    qaPunchOut
       ? `${qaResult.failItems.length} FAIL item(s): ${qaResult.failItems.slice(0, 3).join('; ')}`
       : 'all checks PASS/WARN'));
 
-  if (qaResult.punchOut) {
+  if (qaPunchOut) {
     punchOut(runId, runDir, 'qa-gate',
       `QA reviewer found ${qaResult.failItems.length} FAIL item(s): ${qaResult.failItems.join('; ')}`);
   }

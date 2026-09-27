@@ -1,0 +1,14 @@
+════════════════════════════════════════════════
+  Session 9 PILOT batch — 2 InfraCloud (--short) + 2 Improving Podcast (full length)
+════════════════════════════════════════════════
+
+▶ Running: InfraCloud Webinar - Architecting Modern AI Systems A Microservices Approach  (flag: --short)
+  ──────────────────────────────────────────
+  [init] claude binary: /Users/Chetan.Deshmukh/Library/Application Support/Claude/claude-code/2.1.281/claude.app/Contents/MacOS/claude
+  [test-mode] --short: targeting 500-800 words instead of production 800-1600
+
+=== Blog Pipeline — run-040 ===
+Transcript: InfraCloud Webinar - Architecting Modern AI Systems A Microservices Approach.txt
+
+[1/6] transcript-analysis
+  [transcript-analysis] calling claude CLI (attempt 1)...

@@ -1,0 +1,2 @@
+{"run_id":"run-044","step":"transcript-analysis","attempt":1,"timestamp":"2026-09-27T21:22:09.991Z","model":"claude-sonnet-4-6","input_tokens":11011,"output_tokens":5595,"total_tokens":16606,"cost_usd":0.116958,"status":"pass","outcome":"01-outline.json produced"}
+{"run_id":"run-044","step":"outline-check","attempt":1,"timestamp":"2026-09-27T21:22:09.997Z","model":null,"input_tokens":null,"output_tokens":null,"total_tokens":null,"cost_usd":0,"status":"pass","outcome":"outline valid"}
