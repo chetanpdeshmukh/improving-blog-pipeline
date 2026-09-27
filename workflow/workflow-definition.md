@@ -102,14 +102,14 @@ Checks: title present, introduction present, problem_statement present, body_sec
 
 **Produces:**
 - Full article draft in Markdown
-- Word count: 1,500–3,000 words
+- Word count: 800–1,600 words
 - Each H2 section must include a stated tradeoff (when this approach works, when it fails)
 - At least one war story arc (Setup / Pressure / Decision / Outcome) somewhere in the body
 - At least one failure mode per recommendation
 
 **Guardrail after:** `guardrails/draft-check.js`  
 Checks:
-- Word count between 1,500 and 3,000
+- Word count between 800 and 1,600
 - At least 3 H2 headings present in Markdown
 - No placeholder text ("TBD", "INSERT HERE", "TODO", "[placeholder]")
 - Draft does not begin with a generic opener ("In today's", "In the world of", "In recent years")

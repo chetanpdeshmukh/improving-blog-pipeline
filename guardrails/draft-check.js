@@ -8,7 +8,7 @@
 'use strict';
 
 const MIN_WORDS = 800;
-const MAX_WORDS = 1800;
+const MAX_WORDS = 1600;
 const MIN_H2_HEADINGS = 3;
 
 const PLACEHOLDER_PATTERNS = [
@@ -42,18 +42,24 @@ function countWords(text) {
 
 /**
  * @param {string} draftText - Raw markdown output from blog-draft-writer
+ * @param {{ minWords?: number, maxWords?: number }} [opts] - Override the default
+ *   800-1600 production range. Used by the --short test-iteration mode in
+ *   run-workflow.js (500-800 words) so fast-iteration runs on real transcripts
+ *   don't get punched out by the production word-count gate.
  * @returns {{ pass: boolean, errors: string[], warnings: string[], wordCount: number }}
  */
-function draftCheck(draftText) {
+function draftCheck(draftText, opts = {}) {
+  const minWords = opts.minWords ?? MIN_WORDS;
+  const maxWords = opts.maxWords ?? MAX_WORDS;
   const errors = [];
   const warnings = [];
 
   // Word count
   const wordCount = countWords(draftText);
-  if (wordCount < MIN_WORDS) {
-    errors.push(`Word count too low: ${wordCount} words (minimum ${MIN_WORDS})`);
-  } else if (wordCount > MAX_WORDS) {
-    errors.push(`Word count too high: ${wordCount} words (maximum ${MAX_WORDS})`);
+  if (wordCount < minWords) {
+    errors.push(`Word count too low: ${wordCount} words (minimum ${minWords})`);
+  } else if (wordCount > maxWords) {
+    errors.push(`Word count too high: ${wordCount} words (maximum ${maxWords})`);
   }
 
   // H2 heading count

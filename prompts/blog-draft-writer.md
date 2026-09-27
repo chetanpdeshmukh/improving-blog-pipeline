@@ -1,11 +1,11 @@
 ---
 name: "blog-draft-writer"
-description: "Use this skill when writing the first full draft of a blog article for Improving.com, based on an approved outline and SME transcript. Triggers include: \"write the draft\", \"Phase 2\", \"turn this outline into an article\", \"write the blog post\", \"draft the article\", \"expand this outline\", \"practitioner voice\", \"make it sound experienced\", \"write like a consultant\", or any request to produce an 800–1,800 word blog from an existing outline. This skill takes a completed transcript analysis / outline (from the transcript-analysis skill) and produces a full article draft using proven writing techniques from top technical authors. Do NOT use this skill if no outline exists yet — use transcript-analysis first. Also trigger when the user says \"write it\" or \"go ahead and write\" after an outline has been approved."
+description: "Use this skill when writing the first full draft of a blog article for Improving.com, based on an approved outline and SME transcript. Triggers include: \"write the draft\", \"Phase 2\", \"turn this outline into an article\", \"write the blog post\", \"draft the article\", \"expand this outline\", \"practitioner voice\", \"make it sound experienced\", \"write like a consultant\", or any request to produce an 800–1,600 word blog from an existing outline. This skill takes a completed transcript analysis / outline (from the transcript-analysis skill) and produces a full article draft using proven writing techniques from top technical authors. Do NOT use this skill if no outline exists yet — use transcript-analysis first. Also trigger when the user says \"write it\" or \"go ahead and write\" after an outline has been approved."
 ---
 
 # Phase 2: First Draft Creation
 
-> **HARD LIMIT: 800–1,800 words total. Do not exceed 1,800 words under any circumstances. The automated guardrail will reject drafts outside this range.**
+> **HARD LIMIT: 800–1,600 words total. Do not exceed 1,600 words under any circumstances. The automated guardrail will reject drafts outside this range.**
 
 **Insight → prose, not fluff.**
 
@@ -158,7 +158,7 @@ If the SME did not address the tradeoff for a section, flag it as a NICE-TO-HAVE
 
 ## Length & Depth Strategy
 
-- **Target:** 800–1,800 words
+- **Target:** 800–1,600 words
 - **Expansion rule:** Expand via mechanism, risk, consequence.
   Do NOT expand via restatement or generic explanation.
 - **War story expansion:** Use all four beats — Setup, Pressure, Decision, Outcome. (See Pattern 3 checklist.)

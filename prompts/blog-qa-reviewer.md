@@ -151,10 +151,9 @@ Flag any sentence that lectures the reader.
 ## Checkpoint 4: Depth & Quality
 
 ### 4A: Word Count
-- Under 1,200 → **FAIL** (insufficient depth)
-- 1,200–1,500 → **WARN** (consider expanding key sections)
-- 1,500–3,000 → **PASS**
-- Over 3,000 → **WARN** (consider tightening)
+- Under 800 → **FAIL** (insufficient depth)
+- 800–1,600 → **PASS**
+- Over 1,600 → **WARN** (consider tightening)
 
 ### 4B: Real Trade-Offs Discussed
 - At least one section must acknowledge costs, risks, or downsides
