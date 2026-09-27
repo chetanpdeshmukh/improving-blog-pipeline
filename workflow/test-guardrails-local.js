@@ -275,6 +275,19 @@ test('all PASS/WARN proceeds', () => {
   assert.strictEqual(result.decision, 'proceed');
 });
 
+test('real table-row WARN (e.g. 4A word count within the 3% tolerance band) is counted, not silently missed like table-row FAIL was', () => {
+  const text = [
+    '## Verdict: PASS',
+    '',
+    '| # | Checkpoint | Status | Notes |',
+    '|---|-----------|--------|-------|',
+    '| 4A | Word count | WARN | 790 words, within 3% of the 800 floor |',
+  ].join('\n');
+  const result = qaGate(text);
+  assert.strictEqual(result.decision, 'proceed');
+  assert.strictEqual(result.warnCount, 1, `expected the table-row WARN to be counted, got warnCount=${result.warnCount}`);
+});
+
 test('real blog-qa-reviewer table-row FAIL triggers punch-out (regression: table format never matched)', () => {
   const text = [
     '## Verdict: FAIL',

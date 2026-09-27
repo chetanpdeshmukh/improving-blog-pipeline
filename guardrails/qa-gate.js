@@ -51,9 +51,12 @@ function qaGate(qaOutput) {
   const failItems = extractFailItems(qaOutput);
   const failCount = failItems.length;
 
-  // Count WARNs for informational logging
+  // Count WARNs for informational logging. Same table-row format as the
+  // FAIL patterns above — the "^WARN:"/"**WARN**" forms never matched a
+  // real report either, just less harmfully (warnCount is informational
+  // only and never affects `decision`).
   const warnLines = qaOutput.split('\n').filter(line =>
-    /^WARN:|^\*\*WARN\*\*|\bstatus:\s*WARN\b/i.test(line)
+    /^WARN:|^\*\*WARN\*\*|\bstatus:\s*WARN\b|\|\s*WARN\s*\|/i.test(line)
   );
   const warnCount = warnLines.length;
 

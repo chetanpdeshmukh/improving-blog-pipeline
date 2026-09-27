@@ -151,9 +151,13 @@ Flag any sentence that lectures the reader.
 ## Checkpoint 4: Depth & Quality
 
 ### 4A: Word Count
-- Under 800 → **FAIL** (insufficient depth)
+- Under 776 → **FAIL** (insufficient depth)
+- 776–800 → **WARN** (marginally short — note it, don't block; matches draft-check's 3% tolerance band)
 - 800–1,600 → **PASS**
-- Over 1,600 → **WARN** (consider tightening)
+- 1,600–1,648 → **WARN** (marginally long — note it, don't block; matches draft-check's 3% tolerance band)
+- Over 1,648 → **FAIL** (consider tightening)
+
+These bands mirror guardrails/draft-check.js exactly (3% of the nearest boundary is a warn-only zone on BOTH sides, not just the over-max side) so a draft draft-check already let through with a warning isn't then hard-failed here for the same reason.
 
 ### 4B: Real Trade-Offs Discussed
 - At least one section must acknowledge costs, risks, or downsides

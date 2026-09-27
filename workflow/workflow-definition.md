@@ -109,7 +109,7 @@ Checks: title present, introduction present, problem_statement present, body_sec
 
 **Guardrail after:** `guardrails/draft-check.js`  
 Checks:
-- Word count between 800 and 1,600
+- Word count: 800–1,600 is clean; within 3% of either boundary (776–800 or 1,600–1,648) is a non-blocking WARN; beyond 3% sends the draft back to blog-draft-writer for a trim/expand pass (up to 2 attempts) before punching out
 - At least 3 H2 headings present in Markdown
 - No placeholder text ("TBD", "INSERT HERE", "TODO", "[placeholder]")
 - Draft does not begin with a generic opener ("In today's", "In the world of", "In recent years")
