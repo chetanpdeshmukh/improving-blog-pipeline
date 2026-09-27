@@ -163,16 +163,35 @@ function punchOut(runId, runDir, step, reason) {
 function callModel(systemPrompt, userContent) {
   const combinedPrompt = `${systemPrompt}\n\n---\n\n${userContent}`;
 
-  const result = spawnSync(
-    CLAUDE_BIN,
-    ['--print', '--model', MODEL, '--output-format', 'json', '--tools', 'none'],
-    {
-      input:     combinedPrompt,   // fed to claude's stdin
-      encoding:  'utf8',
-      maxBuffer: 20 * 1024 * 1024, // 20 MB — enough for any blog step output
-      timeout:   600_000,          // 10 minutes per step
+  // A 10-minute ceiling with no retry was hit on a SOLO run (no concurrent
+  // load) during session 10 — the call itself legitimately took longer
+  // than 10 minutes for a rich full-length transcript, not just under
+  // parallel contention. Raised to 15 minutes and given one automatic
+  // retry specifically for ETIMEDOUT (a transient condition, safe to
+  // retry — a real error like a bad model name or missing binary fails
+  // some other way and is not retried here).
+  const SPAWN_TIMEOUT_MS = 900_000; // 15 minutes per step
+  const MAX_SPAWN_ATTEMPTS = 2;
+
+  let result;
+  for (let attempt = 1; attempt <= MAX_SPAWN_ATTEMPTS; attempt++) {
+    result = spawnSync(
+      CLAUDE_BIN,
+      ['--print', '--model', MODEL, '--output-format', 'json', '--tools', 'none'],
+      {
+        input:     combinedPrompt,   // fed to claude's stdin
+        encoding:  'utf8',
+        maxBuffer: 20 * 1024 * 1024, // 20 MB — enough for any blog step output
+        timeout:   SPAWN_TIMEOUT_MS,
+      }
+    );
+
+    if (result.error?.code === 'ETIMEDOUT' && attempt < MAX_SPAWN_ATTEMPTS) {
+      console.error(`  [callModel] claude CLI timed out after ${SPAWN_TIMEOUT_MS / 60000} min (attempt ${attempt}/${MAX_SPAWN_ATTEMPTS}) — retrying once`);
+      continue;
     }
-  );
+    break;
+  }
 
   if (result.error) {
     throw new Error(`claude CLI spawn error: ${result.error.message}`);
