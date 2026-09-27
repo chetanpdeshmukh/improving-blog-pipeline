@@ -332,6 +332,46 @@ test('real blog-qa-reviewer clean table (all PASS/WARN cells) proceeds', () => {
   assert.strictEqual(result.decision, 'proceed');
 });
 
+test('publication kit (5D), alone, even at FAIL, never triggers punch-out (Chetan\'s direction, session 12: 5D fails structurally on every run since blog-refinement generates the kit AFTER blog-qa-reviewer runs — it is a sequencing artifact, not a content defect)', () => {
+  const text = [
+    '### Verdict: FAIL',
+    '| 5D | Publication kit | FAIL | No SEO title tag, meta description, or URL slug present |',
+  ].join('\n');
+  const result = qaGate(text);
+  assert.strictEqual(result.decision, 'proceed', 'a 5D-only FAIL must not punch out');
+  assert.strictEqual(result.failCount, 0);
+  assert.strictEqual(result.publicationKitFailItems.length, 1, 'the 5D FAIL should still be surfaced, just non-blocking');
+});
+
+test('a report failing ONLY on excluded checkpoints (4A + 5D) proceeds even though the reviewer\'s own Verdict line says FAIL (regression: the standalone "## Verdict: FAIL" summary line aggregates every checkpoint, including excluded ones, so counting it independently would silently override the 4A/5D exclusions)', () => {
+  const text = [
+    '## Verdict: FAIL',
+    '',
+    '| # | Checkpoint | Status | Notes |',
+    '|---|-----------|--------|-------|',
+    '| 4A | Word count | FAIL | 495 words, under the 776 floor |',
+    '| 5D | Publication kit | FAIL | kit not yet generated |',
+  ].join('\n');
+  const result = qaGate(text);
+  assert.strictEqual(result.decision, 'proceed', 'excluded-only FAILs must proceed despite the Verdict line reading FAIL');
+  assert.strictEqual(result.failCount, 0);
+  assert.strictEqual(result.nonBlockingFailItems.length, 2);
+});
+
+test('a real (non-excluded) checkpoint FAIL still punches out even when 4A/5D also FAIL in the same report', () => {
+  const text = [
+    '## Verdict: FAIL',
+    '| 3B | Banned words | FAIL | "leverage" present |',
+    '| 4A | Word count | FAIL | 495 words |',
+    '| 5D | Publication kit | FAIL | kit not yet generated |',
+  ].join('\n');
+  const result = qaGate(text);
+  assert.strictEqual(result.decision, 'punch-out');
+  assert.strictEqual(result.failCount, 1);
+  assert.ok(result.failItems.some(i => /3B/.test(i)));
+  assert.ok(!result.failItems.some(i => /4A|5D/.test(i)), '4A/5D rows must not leak into the blocking failItems');
+});
+
 // ---------------------------------------------------------------------------
 console.log(`\n=== Results: ${pass} passed, ${fail} failed ===\n`);
 if (fail > 0) {

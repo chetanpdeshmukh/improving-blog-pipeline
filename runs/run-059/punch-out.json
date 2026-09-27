@@ -1,0 +1,6 @@
+{
+  "runId": "run-059",
+  "step": "qa-gate",
+  "reason": "QA reviewer found 3 FAIL item(s): ### Verdict: FAIL; | 4C | War stories expanded | FAIL | Director's 11-day Exchange lockout compressed to one sentence |; | 5D | Publication kit | FAIL | No title tag, meta description, or URL slug present; no internal link |",
+  "timestamp": "2026-09-27T23:21:46.679Z"
+}

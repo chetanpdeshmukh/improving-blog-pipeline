@@ -220,6 +220,16 @@ Check for:
 - URL Slug → **FAIL** if missing
 - At least 1 internal link to Improving.com → **WARN** if missing
 
+**IMPORTANT — 5D never blocks publication, even at FAIL.** You are reviewing the
+article at Step 5 of the pipeline, before Step 6 (blog-refinement) generates the
+publication kit — so the kit will not exist yet when you review a real submission,
+regardless of how good the article is. This is a pipeline-sequencing fact, not a
+content defect, and the qa-gate is coded to ignore this checkpoint's status entirely
+when deciding whether to escalate to human review — a 5D FAIL is logged for
+visibility only. Score it honestly (FAIL if the kit fields are genuinely absent) so
+the number is accurate in the report, but do not let a 5D FAIL affect your overall
+Verdict line — the Verdict reflects the OTHER checkpoints only.
+
 ### 5E: AI Citation Readiness
 - Are there 2–3 self-contained, quotable statements?
 - Are structured elements present (tables, numbered steps, decision frameworks)?
@@ -260,9 +270,9 @@ Starts with "In today's…" or similar → **FAIL**.
 
 ### Verdict: [PASS / CONDITIONAL PASS / FAIL]
 
-**PASS** = Publish-ready. Zero FAIL items outside of 4A (word count never counts toward the Verdict — see 4A note above).
-**CONDITIONAL PASS** = WARNs only (again excluding 4A, which never counts). Publishable but would benefit from fixes.
-**FAIL** = Must address FAIL items before publishing. A 4A FAIL alone, with every other checkpoint PASS/WARN, is NOT a FAIL verdict — score it CONDITIONAL PASS or PASS depending on the rest.
+**PASS** = Publish-ready. Zero FAIL items outside of 4A and 5D (word count and publication-kit-presence never count toward the Verdict — see the 4A and 5D notes above).
+**CONDITIONAL PASS** = WARNs only (again excluding 4A and 5D, which never count). Publishable but would benefit from fixes.
+**FAIL** = Must address FAIL items before publishing. A 4A and/or 5D FAIL alone, with every other checkpoint PASS/WARN, is NOT a FAIL verdict — score it CONDITIONAL PASS or PASS depending on the rest.
 
 ### Summary
 2–3 sentences: article's core strengths and primary issues.

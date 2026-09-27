@@ -161,18 +161,28 @@ Any banned phrase found = FAIL, logs exact phrase and character position, retrie
 **Guardrail after:** `guardrails/grade-gate.js`  
 Logic:
 ```
-parse grade from output (regex: /Grade:\s*([A-F])/i)
-if grade is A or B:
+gradeGate(gradeReport, revisionCount) returns { decision: 'proceed' | 'revise' | 'punch-out', grade, ... }
+if decision === 'proceed':
   → proceed to Step 5
-if grade is C, D, or F:
+if decision === 'revise' and revisionCount < MAX_REVISIONS:
   → increment revision_count
-  → if revision_count < 2:
-      → return to Step 2 (blog-draft-writer) with original outline + smell-test feedback appended
-  → if revision_count >= 2:
-      → PUNCH-OUT: write punch-out record, halt workflow
+  → send to Step 6's prompt, blog-refinement — scoped to a TARGETED fix only
+    (the smell-test's specific flagged findings + the cleaned draft; no SEO,
+    no publish kit) — then re-run anti-ai-voice on the result before re-grading
+if decision === 'punch-out' or revisionCount >= MAX_REVISIONS:
+  → PUNCH-OUT: write punch-out record, halt workflow
 ```
 
-**Revision loop note:** When returning to Step 2 for revision, the orchestrator appends the ai-smell-test output to the outline context so the draft writer has explicit failure feedback. The revision attempt counter resets to 0 only at the start of each new run — it does not reset between revision rounds.
+**Revision loop note (corrected 2026-09-27, session 12 — this previously documented
+routing back to Step 2/blog-draft-writer, which was never actually implemented):** a
+failing grade routes to **blog-refinement**, not back to blog-draft-writer or
+anti-ai-voice. Anti-ai-voice is a lexical filter (banned words/phrases) and cannot
+perform the structural rewrites a grader's specific findings require (contrast-
+negation, mic-drop closers, triadic parallel structure). blog-refinement is invoked
+here with restrictive `userContent` — "fix only the flagged patterns below, return
+article only, no publish kit" — so it stays scoped to pattern fixes. The corrected
+draft is then re-cleaned through anti-ai-voice for a final lexical pass and re-graded.
+See `feedback-pipeline-debugging.md` (Bug 3) for the original bug this fixes.
 
 ---
 
@@ -193,14 +203,18 @@ if grade is C, D, or F:
 **Guardrail after:** `guardrails/qa-gate.js`  
 Logic:
 ```
-count FAIL items in output (regex: /^FAIL:/m or /\bFAIL\b/)
-if FAIL count > 0:
+extract FAIL/WARN table rows from the real checkpoint-table + Verdict-line report
+(patterns matching "| ... | FAIL | ... |", "## Verdict: FAIL", etc. — see qa-gate.js)
+exclude any FAIL row for checkpoint 4A (word count) from the blocking count —
+  word count is never a punch-out condition, see punch-out/punch-out-policy.md §3
+if blocking FAIL count > 0:
   → PUNCH-OUT: write punch-out record with list of FAIL items, halt workflow
-if FAIL count === 0:
-  → proceed to Step 6
+if blocking FAIL count === 0:
+  → proceed to Step 6 (word-count FAILs, if any, are still logged, just non-blocking)
 ```
 
-This is a hard gate — there is no revision loop at this stage. Any FAIL means the draft needs human judgment, not another AI pass.
+This is a hard gate — there is no revision loop at this stage. Any non-word-count
+FAIL means the draft needs human judgment, not another AI pass.
 
 ---
 
@@ -219,7 +233,7 @@ This is a hard gate — there is no revision loop at this stage. Any FAIL means 
 - URL slug (lowercase, hyphenated)
 - Social teaser (LinkedIn post copy, ~200 words)
 
-This is the PASS terminal state. The publish kit is written to `runs/run-NNN/step-6-publishkit.md` and `runs/run-NNN/workflow-result.json` is written with `"outcome": "pass"`.
+This is the PASS terminal state. The publish kit is written to `runs/run-NNN/06-publish-kit.md`.
 
 ---
 
@@ -227,87 +241,119 @@ This is the PASS terminal state. The publish kit is written to `runs/run-NNN/ste
 
 | Condition | Where | Action |
 |---|---|---|
-| Outline missing required fields (x2) | After Step 1 | Halt with error |
-| Draft out of word count / placeholder text (x2) | After Step 2 | Halt with error |
-| Banned AI phrase found (x2) | After Step 3 | Halt with error |
-| ai-smell-test grade C/D/F | After Step 4 | Revise (max 2 rounds) |
-| ai-smell-test still C/D/F after 2 rounds | After Step 4 revision loop | **PUNCH-OUT** |
-| blog-qa-reviewer: any FAIL item | After Step 5 | **PUNCH-OUT** |
-| blog-qa-reviewer: all PASS/WARN | After Step 5 | Continue to Step 6 |
-| Step 6 completes | End | Write publish kit, PASS result |
+| Outline missing required fields | After Step 1 | `failWorkflow()` (technical, not punch-out) |
+| Draft has a structural defect (e.g. `[INSERT ...]` placeholder) | After Step 2 | `punchOut()` |
+| Draft out of word count, redraft budget exhausted | After Step 2 | WARN + proceed (never blocks — see `punch-out/punch-out-policy.md` §3) |
+| Contrast-negation density too high, retry budget exhausted | After Step 3 pre-check | `punchOut()` |
+| Banned word/phrase found | After Step 3 | WARN only, does not block (grade-gate catches quality downstream) |
+| ai-smell-test grade C/D/F | After Step 4 | Revise via blog-refinement (max `MAX_REVISIONS`=2 rounds) |
+| ai-smell-test still C/D/F after max revisions | After Step 4 revision loop | `punchOut()` |
+| blog-qa-reviewer: any FAIL item outside checkpoints 4A/5D | After Step 5 | `punchOut()` |
+| blog-qa-reviewer: all PASS/WARN (4A word-count and 5D publication-kit FAILs, if any, are non-blocking — 5D fails structurally since the kit doesn't exist until Step 6) | After Step 5 | Continue to Step 6 |
+| Step 6 completes | End | Write `06-publish-kit.md`, PASS result |
+| `claude` CLI spawn error / uncaught exception at any step | Any step | `failWorkflow()` (technical, not punch-out) |
 
 ---
 
 ## Punch-Out Protocol
 
-When a punch-out triggers, the orchestrator:
+When a punch-out triggers, `punchOut()` in `run-workflow.js`:
 
-1. Writes `runs/run-NNN/punch-out-record.json`:
+1. Writes `runs/run-NNN/punch-out.json` AND a copy to `punch-out/run-NNN.json`:
    ```json
    {
-     "run_id": "run-NNN",
-     "triggered_at_step": "step name",
+     "runId": "run-NNN",
+     "step": "step name",
      "reason": "human-readable description",
-     "fail_items": ["list of specific FAIL items if from QA gate"],
-     "revision_attempts": 0,
      "timestamp": "ISO 8601"
    }
    ```
-2. Writes `runs/run-NNN/workflow-result.json` with `"outcome": "punch-out:human-review-required"`
-3. Appends final audit JSONL entry with `"status": "punch-out"`
-4. Exits without running any further steps
+2. Appends a final audit JSONL entry with `"status": "punch-out"`
+3. Exits with code 1 without running any further steps
+
+A separate, structurally identical `failWorkflow()` handles technical/mechanical
+breakage (not a human-judgment call) and writes to `failures/run-NNN.json` instead —
+see `punch-out/punch-out-policy.md` §1 for the full distinction. There is no
+`workflow-result.json` file; the run's outcome is read from which of these terminal
+files exists (`06-publish-kit.md` / `punch-out.json` / `failure.json`) plus the audit
+trail — see `results/e2e-success-rate-report.md`'s methodology section.
 
 The punch-out is not a failure of the pipeline — it is a designed safety exit. The end-to-end success rate counts punch-outs as "completed as designed" when they were triggered correctly.
 
 ---
 
-## Revision Loop Detail
+## Revision Loop Detail (corrected 2026-09-27, session 12)
 
-The revision loop applies only to the ai-smell-test gate (Step 4). It does not apply to the QA gate (Step 5) — that gate's failures require human judgment.
+The revision loop is driven by the ai-smell-test/grade-gate result (Step 4), but the
+revision itself is a **targeted blog-refinement pass**, not a return to Step 2. It
+does not apply to the QA gate (Step 5) — that gate's failures require human judgment,
+never another AI pass.
 
 ```
 revision_count = 0
 
 loop:
-  run Step 2 (blog-draft-writer) with [outline + smell-test-feedback if revision > 0]
-  run Step 3 (anti-ai-voice)
-  run Step 4 (ai-smell-test)
-  
-  if grade A or B:
+  if revision_count === 0:
+    run Step 3 (anti-ai-voice) on the fresh draft
+  else:
+    run blog-refinement, scoped to fixing ONLY the flagged findings from the last
+    grade report (no SEO, no publish kit), then re-run Step 3 (anti-ai-voice) on
+    the result for a final lexical clean
+  run Step 4 (ai-smell-test) on the cleaned text
+
+  gradeResult = gradeGate(gradeReport, revision_count)
+  if gradeResult.decision === 'proceed':
     break loop → proceed to Step 5
-  
-  revision_count += 1
-  
-  if revision_count >= 2:
+
+  if gradeResult.decision === 'punch-out' or revision_count >= MAX_REVISIONS:
     PUNCH-OUT
     break
+
+  revision_count += 1
 ```
 
 Each revision attempt is logged in the audit trail with the attempt number.
+`MAX_REVISIONS` is 2 (3 total grading attempts before punch-out).
 
 ---
 
 ## Handoff Schemas
 
-Each step writes its output as a plain Markdown or JSON file in the run folder. The orchestrator reads it back to pass to the next step. No streaming between steps — each step is a complete Anthropic API call.
+Each step writes its output as a plain Markdown or JSON file in the run folder,
+named for the real files `run-workflow.js` produces (not the placeholder names an
+earlier draft of this document used). The orchestrator reads a step's output back
+in-memory to pass to the next step — these files are also the durable audit record.
 
 | Step output file | Format | Consumed by |
 |---|---|---|
-| `step-1-outline.md` | JSON (stringified in .md) | Step 2 |
-| `step-2-draft.md` | Markdown | Step 3 |
-| `step-3-antiaivoice.md` | Markdown | Step 4 |
-| `step-4-smelltest.md` | Markdown (grade + feedback) | grade-gate.js + Step 2 if revision |
-| `step-5-qareview.md` | Markdown (PASS/WARN/FAIL items) | qa-gate.js |
-| `step-6-publishkit.md` | Markdown (article + SEO kit) | End state |
+| `01-outline.json` | JSON | Step 2 (skipped when run with `--draft`) |
+| `02-draft.md` | Markdown | Step 3 |
+| `03-cleaned.md` | Markdown | Step 4 |
+| `04-graded.md` (+ `04b-smell-fix-revN.md` per revision attempt) | Markdown (grade + feedback) | grade-gate.js; `04b-*` feeds back into anti-ai-voice on revision |
+| `05-qa.md` | Markdown (PASS/WARN/FAIL checkpoint table + Verdict) | qa-gate.js |
+| `06-publish-kit.md` | Markdown (article + SEO kit) | End state (PASS only) |
+| `punch-out.json` | JSON | Human reviewer (punch-out path only) |
+| `failure.json` | JSON | Engineer (technical-failure path only) |
+| `audit-trail.jsonl` | JSONL, one line per step/guardrail | Audit trail (§5 of `PRE-SUBMISSION-CHECKLIST.md`) |
 
 ---
 
 ## Retry and Error Handling
 
-- Each guardrail that fails retries its **upstream step** once before halting.
-- Network errors or API timeouts on any Anthropic call are retried once with a 5-second delay.
-- After any two consecutive failures (guardrail or network), the run halts with `"status": "error"` in the audit trail. This is distinct from a punch-out.
-- The orchestrator always writes a `workflow-result.json` before exiting, even on error.
+- The `claude` CLI call itself (`callModel()` in `run-workflow.js`) retries once,
+  automatically, only on an `ETIMEDOUT` spawn error (a transient condition) — a
+  15-minute timeout per step. Any other spawn error (bad binary, non-zero exit) is
+  not retried and routes to `failWorkflow()`.
+- There is no separate "retry the upstream step once" behavior for guardrail
+  failures — a guardrail failure routes directly to `punchOut()` or `failWorkflow()`
+  per the branching rules above; the only in-pipeline retries are the grade-gate
+  revision loop (content-driven, capped at `MAX_REVISIONS`) and the word-count
+  redraft loop (capped at 3 total attempts, then warn-and-proceed — see
+  `punch-out/punch-out-policy.md` §3 and §7).
+- There is no `workflow-result.json` file (see the Punch-Out Protocol section above)
+  and no Anthropic API calls — all AI steps go through the `claude` CLI in
+  `--print --tools none` mode, authenticated via the CLI's own session, not an API
+  key.
 
 ---
 
@@ -328,33 +374,31 @@ Revision loops add approximately one blog-draft-writer + anti-ai-voice + ai-smel
 
 ---
 
-## Required Files per Run Folder
+## Required Files per Run Folder (corrected 2026-09-27, session 12 — matches real output, see `run-workflow.js`)
 
-A complete run folder contains:
+A complete PASS run folder contains:
 
 ```
 runs/run-NNN/
-├── step-1-outline.md
-├── step-2-draft.md
-├── step-3-antiaivoice.md
-├── step-4-smelltest.md
-├── step-5-qareview.md
-├── step-6-publishkit.md      ← PASS path only
-├── punch-out-record.json     ← punch-out path only
-├── audit-trail.jsonl
-└── workflow-result.json
+├── 01-outline.json                       ← absent when run with --draft
+├── 02-draft.md                           ← absent when run with --draft
+├── 03-cleaned.md
+├── 04-graded.md
+├── 04b-smell-fix-revN.md                 ← one per revision attempt, if any
+├── 05-qa.md
+├── 06-publish-kit.md                     ← PASS path only
+└── audit-trail.jsonl
 ```
 
-`workflow-result.json` always present, always contains:
-```json
-{
-  "run_id": "run-NNN",
-  "input_file": "test-data/transcript-NN-name.txt",
-  "outcome": "pass | punch-out:human-review-required | error",
-  "total_tokens": 0,
-  "total_cost_usd": 0.00,
-  "revision_attempts": 0,
-  "timestamp_start": "ISO 8601",
-  "timestamp_end": "ISO 8601"
-}
+A punch-out or failure run folder has the same files up through whichever step it
+stopped at, plus one of:
 ```
+├── punch-out.json     ← punch-out path only (also copied to punch-out/run-NNN.json)
+└── failure.json        ← failure path only (also copied to failures/run-NNN.json)
+```
+
+There is no `workflow-result.json` — that file was planned in an earlier draft of
+this document but never implemented. A run's outcome is determined by which of the
+three terminal files above is present (see `results/e2e-success-rate-report.md`'s
+methodology), and full per-step detail (model, tokens, cost, status) lives in
+`audit-trail.jsonl`, not a separate summary file.
