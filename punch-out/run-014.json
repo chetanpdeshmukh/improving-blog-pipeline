@@ -1,0 +1,6 @@
+{
+  "runId": "run-014",
+  "step": "outline-check",
+  "reason": "Outline failed validation: Could not parse outline as JSON: Unexpected token 'W', \"Web search\"... is not valid JSON",
+  "timestamp": "2026-09-26T08:05:58.262Z"
+}

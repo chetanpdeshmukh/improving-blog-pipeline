@@ -1,0 +1,2563 @@
+[music]
+
+
+>> Welcome to the Improving Edge. This is
+
+
+where we talk about how AI and
+
+
+technology are showing up in
+
+
+organizations. What's working, what's
+
+
+not, what we're learning along the way.
+
+
+I'm sharing conversations with people
+
+
+doing the work, turning innovation into
+
+
+outcomes. Today I have with me John
+
+
+Rusic, one of our technical directors at
+
+
+Improving, who's been working in our AI
+
+
+practice. Thank you for joining me,
+
+
+John.
+
+
+>> It's an absolute pleasure to be here.
+
+
+>> Awesome. We're going to talk a little
+
+
+bit about AI-driven business models.
+
+
+So, this is where and it's it's beyond
+
+
+just automation. People oftentimes think
+
+
+of AI-driven business as being
+
+
+automation.
+
+
+Tell me a little bit when we say AI
+
+
+business model, what is it we're
+
+
+referring to?
+
+
+>> Yeah, so I think it really depends on
+
+
+the type of business, right? We've We've
+
+
+seen and we can solve the headlines as
+
+
+technology businesses, right? Got this
+
+
+brand new
+
+
+chat on my website or new functionality
+
+
+that I've I've delivered, right? But, if
+
+
+I'm building a deck,
+
+
+the AI-enabled deck board isn't really a
+
+
+thing. But, can I still AI-enable my
+
+
+business and how I market and how I
+
+
+deliver services to customers? And so,
+
+
+I think everything can be AI-enabled. We
+
+
+just have to be mindful of what is my
+
+
+core business and then how do I leverage
+
+
+these new tools and technologies to just
+
+
+do what I already do great, better, and
+
+
+faster.
+
+
+>> Got you. So, it's more thinking not just
+
+
+about the business at the top level, but
+
+
+thinking about the different components
+
+
+of what goes into your business and
+
+
+where it can be impactful inside of
+
+
+those?
+
+
+>> Absolutely. Yeah, so AI is definitely
+
+
+changed the world and taking taking the
+
+
+world by storm, but it's I don't think
+
+
+it fundamentally changes
+
+
+how
+
+
+the enterprises of today run, right?
+
+
+It's human connections, it's service
+
+
+providing, it's delivering values to
+
+
+value to customers, right? And so, if
+
+
+you start to get away from that and just
+
+
+say, "Oh, this new AI thing is I've got
+
+
+to implement that quick. I've got to do
+
+
+this." but kind of lose that focus on
+
+
+what am I using this for? How is this
+
+
+accelerating my business or helping my
+
+
+business grow at doing it in the right
+
+
+way? Then kind of what's the point? And
+
+
+you can also drive yourself then into a
+
+
+direction that
+
+
+maybe is sub-optimal for your business
+
+
+without having that insight and kind of
+
+
+the value and understanding of what is
+
+
+this going to bring to my business and
+
+
+my customers.
+
+
+>> Got you. So, it's not just uh ooh, this
+
+
+is a cool new shiny thing or oh, yeah,
+
+
+we want to have that, too. It's really
+
+
+thinking about what is value, what is
+
+
+ROI, and and like how are we going to
+
+
+use this for something meaningful in the
+
+
+business.
+
+
+>> Absolutely. Yeah, and and there's
+
+
+certainly a competitive edge to this
+
+
+watching what your customers competitors
+
+
+are doing with with the tools, but if
+
+
+you just start chasing the new headline,
+
+
+uh
+
+
+you could get yourself into some trouble
+
+
+uh with how fast things are moving and
+
+
+the technologies that are driving
+
+
+driving the AI enablement.
+
+
+>> Yeah, I know I saw a study uh a few
+
+
+weeks ago that was talking about the
+
+
+fact that for the jobs that it can do,
+
+
+the tasks that it can do, you might see
+
+
+a 30 or even 40%
+
+
+uh increase in productivity, but then
+
+
+the ones that it's not good at, you
+
+
+might lose 15 or 20%, which means that
+
+
+your net overall, if you're not careful
+
+
+in picking, ends up not being quite what
+
+
+it could be if you just were a little
+
+
+more selective.
+
+
+What's What's example that you've seen
+
+
+of a business that's maybe done this
+
+
+well in terms of picking?
+
+
+>> Yeah, so I
+
+
+Google has kind of gone
+
+
+really really well with how they have
+
+
+kind of chased
+
+
+the the AI space as far as the kind of
+
+
+hyperscalers. They're pretty much the
+
+
+only one of the the hyperscalers that
+
+
+has kind of done this done this well on
+
+
+their side. But then certainly for
+
+
+improving for where we work with our
+
+
+customers, uh I've got a couple
+
+
+examples. One we work with an education
+
+
+company that sits on a huge volume of
+
+
+educational material, whether that's
+
+
+videos, PowerPoint presentations,
+
+
+classroom aids, etc. Uh they had a
+
+
+really hard time making that available
+
+
+and searchable for their clients. And
+
+
+with these new AI tools, we were able to
+
+
+index that and search it and really
+
+
+process the unstructured data and make
+
+
+it
+
+
+searchable and locatable in a way that
+
+
+was never
+
+
+able we were never able to do
+
+
+previously, right? Uh
+
+
+some of these tools that it can do well,
+
+
+like looking for opportunities. If
+
+
+you've got a group of of people that
+
+
+their job is to scan for opportunities,
+
+
+be it web, publications, newspapers,
+
+
+etc., these AI tools can do that
+
+
+extremely well and surface opportunities
+
+
+faster and better and just cast a wider
+
+
+net. But again, if I'm a manufacturing
+
+
+company, if I'm a construction company,
+
+
+right? I've just got to use these tools
+
+
+in the right way because they aren't
+
+
+going to deliver the kind of value
+
+
+unless you put them in the right
+
+
+locations.
+
+
+>> You got to set them up for success. Like
+
+
+you were talking about the like with the
+
+
+school um with the education company,
+
+
+right? They have this huge bolus of
+
+
+information, right? Content, knowledge,
+
+
+like how do we surface that in a way
+
+
+that's meaningful and usable? And it
+
+
+reminded me of the food science company
+
+
+that we worked with where, you know,
+
+
+they're developing these new products
+
+
+and it's like, oh, well, we need, you
+
+
+know, maybe this flavor or going for
+
+
+this taste or whatever and you have no
+
+
+idea that any of these ingredients
+
+
+existed if you didn't have that
+
+
+underlying system that could take all of
+
+
+that knowledge, all of that content and
+
+
+surface it in the appropriate context,
+
+
+in the appropriate way. It's it's about
+
+
+sharing that at a
+
+
+>> at optimal time.
+
+
+>> Yeah, exactly. And and I think that's
+
+
+what these tools have really enabled is
+
+
+kind of data ingestion and rapid
+
+
+surfacing of ideas or key themes out of
+
+
+a large corpus of information that to
+
+
+your point of where you can lose 50%
+
+
+productivity or gain it, that's where
+
+
+the huge gain is as if it's a role where
+
+
+it's processing text, summarizing text,
+
+
+um coming up with the I guess decision
+
+
+piece can be AI assisted but certainly
+
+
+still driven by a human. Right. But the
+
+
+gathering of information to inform that
+
+
+decision is where these new AI tools
+
+
+have really, really proven their value
+
+
+for our customers.
+
+
+>> Yeah, cuz we get bored as humans, right?
+
+
+Sifting through like massive SharePoint
+
+
+sites sounds like like uh sixth ring of
+
+
+hell to me, right? Versus AI is just
+
+
+like, cool, I'll go find it and I'll dig
+
+
+into that content.
+
+
+>> Absolutely. And I guess the the
+
+
+cautionary tale there is
+
+
+it still can make things up as it's
+
+
+doing that. So, if everybody in there
+
+
+be careful. Uh yes, it may scan your and
+
+
+come out with some amazing insights, but
+
+
+it may put two and two together out of
+
+
+some of your content that doesn't tell
+
+
+the whole story or tells a false story.
+
+
+And so, that is still where the human
+
+
+reviewer at the the end of this process
+
+
+is still very, very key especially in
+
+
+critical
+
+
+deliverables to customers or clients.
+
+
+>> So if I'm looking at, all right, my
+
+
+business has the potential to harness
+
+
+this AI, but I may need to re-architect
+
+
+my business around that. Like give me an
+
+
+example of where you've seen someone do
+
+
+that well, where they've said, "Okay,
+
+
+we're going to make this core to who
+
+
+who we are who our product is and and
+
+
+really kind of reshape." Like what were
+
+
+the pieces they had to reshape around
+
+
+that?
+
+
+>> I don't know if I have a specific
+
+
+example for me, but I know the thing
+
+
+that enables any of that desire
+
+
+is a great data estate and a data
+
+
+architecture and data governance.
+
+
+Because what is We talked about AI
+
+
+surfacing all of this information,
+
+
+right? And that is fantastic, but
+
+
+how do I get that? Do I know what the AI
+
+
+is looking at? You mentioned SharePoint
+
+
+integration, that's fantastic, but do I
+
+
+know what data within my SharePoint
+
+
+estate the AI has access to?
+
+
+>> Yeah.
+
+
+>> Uh we're working with that a lot with
+
+
+customers and I'm sure we'll get into
+
+
+security
+
+
+uh soon, but like if a CEO wants to have
+
+
+a interaction with an AI tool that gives
+
+
+them insights into salaries or spend or
+
+
+customer opportunities, right?
+
+
+You've got to know where that data lives
+
+
+and how it's accessed so that somebody
+
+
+that maybe using a platform on your
+
+
+website or another internal employee
+
+
+can't ask it the right question to then
+
+
+surface that data. So
+
+
+where does my data live? Is it tagged
+
+
+appropriately? Uh is it marked secure?
+
+
+So do I know what it's what is coming
+
+
+back? And so as I'm architecting or
+
+
+building an AI-enabled business, really
+
+
+that is kind of a foundational piece of
+
+
+building a strategy around that to
+
+
+actually deliver value for internal
+
+
+employees and then customers and
+
+
+whatever solution you want to provide.
+
+
+>> Yeah, and I think that's a really
+
+
+important point that you make there.
+
+
+Often times when you talk about data
+
+
+security with folks, they're thinking
+
+
+about like the outer
+
+
+>> Right?
+
+
+>> the outer fence, right? Like, okay, am I
+
+
+keeping hold of my data? Am I leaking
+
+
+data out to models? Is it getting used
+
+
+for training? You know, all the
+
+
+different challenges that that that can
+
+
+be.
+
+
+>> But then
+
+
+>> you also need to have some inside ring
+
+
+fences, right? Some things around
+
+
+sensitive data. So, you know, you you
+
+
+don't return and surface, you know, all
+
+
+of your
+
+
+compensation data to the marketing team.
+
+
+>> Exactly.
+
+
+>> Or, you know, the the wrong information
+
+
+to the wrong people. There's that's very
+
+
+much a part of the the data security
+
+
+conversation.
+
+
+>> Absolutely, yeah. And and where these
+
+
+tools really have, I mean, shown their
+
+
+metal on my on that the agentic side,
+
+
+but it's really in that data
+
+
+presentation and analysis beyond what
+
+
+you could do previously in a statically
+
+
+configured report or a static dashboard.
+
+
+We've been able to do that for years,
+
+
+right? But if I've got a a novel
+
+
+question, uh a novel way of looking at
+
+
+things, these AI tools can just
+
+
+understand the query and do it. But
+
+
+again
+
+
+they need access to the data
+
+
+but they also need the right access to
+
+
+the data or the access to the right data
+
+
+with the right security tools for the
+
+
+person asking that question.
+
+
+>> So, I heard you talk about, you know,
+
+
+data security, right? The data
+
+
+architecture. What do you What do you
+
+
+mean by data architecture? What does
+
+
+that look like?
+
+
+>> Yeah, so it's it's really an
+
+
+understanding of your data, okay? Right?
+
+
+Of where it is, how it's tagged, what is
+
+
+secure and and what's not, what lives
+
+
+inside of your walls, what may also live
+
+
+in a third-party platform if I've
+
+
+integrated with a third-party HR
+
+
+solution or or a tool set like that,
+
+
+where does that data live? When do I
+
+
+have to or what tools do I have to put
+
+
+in place and what security do I have to
+
+
+put in place if I want to build an AI
+
+
+tool set or an AI capability that
+
+
+surfaces that data in a secure and
+
+
+performative manner. So it's really kind
+
+
+of cataloging and and understanding that
+
+
+data architecture of what data do I
+
+
+have, where does it live, who can access
+
+
+it and
+
+
+some people have a great handle on that.
+
+
+Others don't, but I think it really is a
+
+
+foundational thing for truly AI enabling
+
+
+your business and trying to deliver
+
+
+insights that were previously possible.
+
+
+It's got to be based on what you already
+
+
+know and what you already have and you
+
+
+got to know what you have and what you
+
+
+know.
+
+
+>> Got you. Okay, you got to know what your
+
+
+components are and what your materials
+
+
+are that you're building off of. So I
+
+
+hear data security, data architecture.
+
+
+What are some of the other key
+
+
+components that that we need to think
+
+
+about if we're re-architecting our
+
+
+business around AI?
+
+
+>> Yeah, and and I think the the the big
+
+
+one is I'm going to come back to
+
+
+security and I'm not a security
+
+
+engineer, but
+
+
+with all of these large language models,
+
+
+how we are interacting with them as
+
+
+probably everyone has heard of ChatGPT.
+
+
+That was how it 2023, oh my gosh,
+
+
+ChatGPT. And a lot of folks in their
+
+
+business are, "Wow, I've got access to
+
+
+this great tool. Let me take a data
+
+
+report and dump it in and
+
+
+>> stuff. Yeah, here you go.
+
+
+>> insights, right? Oh my gosh, it's
+
+
+amazing. Well, that has just left your
+
+
+confines of your control if you don't
+
+
+understand that that is going to going
+
+
+outside of your network to then be
+
+
+trained on and processed. Right. So
+
+
+understanding foundationally to to your
+
+
+point of the guardrails and the gates
+
+
+and the fences of the fences of the AI
+
+
+tools
+
+
+and their agreements that I have. Am I
+
+
+working with an AI tool that is under an
+
+
+enterprise agreement where it's agreed
+
+
+not to be trained on my data? Do I feel
+
+
+safe processing this data through a
+
+
+large language model that's going to
+
+
+format it and return it and answer your
+
+
+question. Uh and understanding that kind
+
+
+of fundamentally that chat.openai.com
+
+
+is different than interacting with an
+
+
+enterprise
+
+
+Azure OpenAI, an enterprise Anthropic
+
+
+account, an enterprise Google account,
+
+
+uh than just hey, this great new tool
+
+
+can answer this question and I'm going
+
+
+to copy paste uh a table of data in here
+
+
+and ask it uh and off it goes to
+
+
+summarize it.
+
+
+>> Yeah. And so the the fence the ring
+
+
+fences are yes, my company my
+
+
+organization's ring fence and then the
+
+
+security fences inside of that, but then
+
+
+also what does the fence look like
+
+
+around anywhere I'm integrating to a
+
+
+third party? Like understanding how do
+
+
+you handle and manage my data becomes
+
+
+really important part of this.
+
+
+>> It is hugely important. It's it's
+
+
+absolutely critical and I mean you can
+
+
+go to any publication and find horror
+
+
+stories about uh data leakage and and
+
+
+somebody asked it a question and started
+
+
+getting proprietary information from
+
+
+some company because
+
+
+it was trained on it.
+
+
+>> Some Yeah, somebody had put it out
+
+
+there. And I actually I saw a report
+
+
+recently that talked about the number of
+
+
+companies there's only something like
+
+
+40% of companies that have a AI policy.
+
+
+Yeah. Uh you know, a GPT specific policy
+
+
+and they were tracking all of the
+
+
+incidents of people using their personal
+
+
+accounts to do company work and they
+
+
+said something like 232 incidents a day
+
+
+on average.
+
+
+>> Oh.
+
+
+>> Of people dropping stuff into their own
+
+
+personal GPT account uh or Claude
+
+
+account and off it goes out into the
+
+
+wild.
+
+
+>> And I hope that person is paying for it
+
+
+cuz at least that is protected, but if
+
+
+it if it's just my sign up for chat GPT
+
+
+and
+
+
+go.
+
+
+>> Yeah, absolutely. A 230 a day seems low
+
+
+to me on a
+
+
+>> On an average, yeah. I don't know if
+
+
+that included Sundays and Saturdays,
+
+
+maybe. Who who knows.
+
+
+Um but yeah, I say all the time like if
+
+
+you're not paying for the product, you
+
+
+are the product.
+
+
+>> Absolutely.
+
+
+>> And certainly your data is the product,
+
+
+which is what they're looking to glom
+
+
+onto and what they're looking to to get
+
+
+a hold of and process.
+
+
+>> Absolutely. And it may I mean to be
+
+
+fair, it may not even be malicious. It's
+
+
+just the way these things work is to get
+
+
+better, I need more and new data to
+
+
+train and improve my product. And if
+
+
+you're giving it to them,
+
+
+>> It's the business model.
+
+
+>> part of the next version of
+
+
+the solution.
+
+
+>> So, how do you like we've talked a lot
+
+
+about security. And you know, security
+
+
+is always one of those tradeoffs between
+
+
+convenience, right, and speed being uh
+
+
+an analog to convenience versus
+
+
+security. How do you maintain that
+
+
+balance in an AI-first world of uh
+
+
+security and speed?
+
+
+>> Yeah, so I mean I think we absolutely
+
+
+touched on it is that whatever tools
+
+
+that you are integrating with to give
+
+
+you that enhancement and and speed and
+
+
+productivity just have to be implemented
+
+
+in the right way and with the right
+
+
+understanding of what are my agreements
+
+
+with that provider of the data that I
+
+
+give them. And if you've got that
+
+
+enterprise agreement, then I mean
+
+
+there's still a significant level of
+
+
+trust that they're doing everything on
+
+
+their part to meet that your terms of
+
+
+service and the the agreements, right?
+
+
+Um
+
+
+I'm going to pivot a little bit to like
+
+
+kind of the code side of things with the
+
+
+with security. So, we'll touch on data
+
+
+security, but
+
+
+we
+
+
+we're developers, right? One of the
+
+
+biggest boons to this whole thing is the
+
+
+speed of development, the speed of
+
+
+solution delivery.
+
+
+But what has we've seen with that is
+
+
+opened up massive security risk. Whereas
+
+
+I'm developing software without the
+
+
+appropriate controls and knowledge and
+
+
+integrations with established security
+
+
+solutions and authentication providers,
+
+
+uh you can open yourself for
+
+
+for some issues on that side. So, from a
+
+
+personal or internal data
+
+
+availability, that has to be secured.
+
+
+And then with any software solutions
+
+
+that you're developing, you've got to
+
+
+use and have the right understanding
+
+
+around that for when I'm developing
+
+
+solutions, is the data that the solution
+
+
+is interacting with or is the
+
+
+authentication that is being used to
+
+
+access this actually secure or is there
+
+
+a fundamental flaw that the the coding
+
+
+agent or the the LLM decided, you know
+
+
+what, it's easier if I hard code this
+
+
+key in the front end.
+
+
+>> Yeah.
+
+
+>> And to all of the kind of
+
+
+good
+
+
+data security, software development
+
+
+security, all of those good data
+
+
+practices we've built and established
+
+
+and learned over decades
+
+
+>> Right.
+
+
+>> are more and more critical right now.
+
+
+Um and so layering these tools on with
+
+
+that
+
+
+get you that speed and a productivity
+
+
+boost without hopefully opening yourself
+
+
+up to
+
+
+>> A breach or something.
+
+
+>> breach.
+
+
+>> Um and so making sure that you have, if
+
+
+you're using agents, right, using agents
+
+
+to code stuff, is there one with that
+
+
+security stance that as we're looking at
+
+
+the product we're developing or the the
+
+
+solution we're developing, making sure
+
+
+that we're not creating you know, holes
+
+
+for somebody to go climb in.
+
+
+>> Oh, absolutely. And and kind of just
+
+
+still understanding the kind of code
+
+
+reviews and tests and all of the
+
+
+established security scans and protocols
+
+
+that you would run on a website we
+
+
+delivered
+
+
+5 years ago before
+
+
+>> Right.
+
+
+>> before the world changed, uh still have
+
+
+a place here. I can just get to a
+
+
+testable website a lot faster than I
+
+
+could
+
+
+5-6 years ago.
+
+
+>> Yep. So, as companies are adopting these
+
+
+uh AI-driven business models, like
+
+
+there's going to be some hurdles to
+
+
+climb over. So, what are some of the
+
+
+biggest pushbacks that you've seen to AI
+
+
+adoption?
+
+
+>> Well, I mean, we'll come back to the
+
+
+security thing, but then it's also the
+
+
+people in the company
+
+
+uh kind of pushing back on
+
+
+the the delivery of is this going to
+
+
+take my job? Is it Is How is How is my
+
+
+world changing and shifting under my
+
+
+feet as the companies are are pushing
+
+
+these tools? And I think in some cases
+
+
+some of the mandates for AI have maybe
+
+
+had the the negative effect of you must
+
+
+use this or you must see these metrics
+
+
+hit as opposed to here's what this can
+
+
+do for you. Here's how this can help
+
+
+your job. Here's how this enhances your
+
+
+already incredibly smart. You were here
+
+
+for a reason. Here's a tool that can
+
+
+help elevate what you can do with all of
+
+
+your kind of human knowledge. So, I
+
+
+think that kind of pivot of
+
+
+of this is a requirement. You must use
+
+
+this tool to
+
+
+hey, understand this tool, know it, and
+
+
+here's how it can improve you as a as a
+
+
+human, as a
+
+
+uh an employee, and what you can deliver
+
+
+within the company.
+
+
+Uh fa- kind of phrasing it as a
+
+
+additional capability, not a mandate, is
+
+
+a huge thing for adoption internally.
+
+
+>> So, rather than being dictatorial, you
+
+
+know, thou shalt, it's more
+
+
+inspirational of like
+
+
+imagine what we could kind of that sort
+
+
+of thing.
+
+
+>> Yeah, and I mean, I know that's what we
+
+
+do here in improving with some of our
+
+
+courses and training and and evangelism.
+
+
+Uh
+
+
+it's really getting folks on board and
+
+
+with the understanding, but in the right
+
+
+way of here's how you use it
+
+
+appropriately, here's the guardrails
+
+
+around what tools and capabilities have
+
+
+these enterprise agreements. Here's an
+
+
+understanding of where those fences are
+
+
+of what you want to use when
+
+
+uh and and kind of laying out the buffet
+
+
+of options to make your job better as
+
+
+opposed to you will use this thing and
+
+
+we'll be tracking your metrics on it.
+
+
+>> So, what advice would you give to
+
+
+somebody who's at the beginning of this
+
+
+journey? Like, where would they start?
+
+
+>> I think understand that everyone is at
+
+
+the beginning of this journey.
+
+
+>> Okay.
+
+
+>> Uh I don't think anyone There are people
+
+
+who are farther ahead, further experts,
+
+
+but nobody has reached nirvana of AI. We
+
+
+are all still learning of where these
+
+
+solutions can have the most business
+
+
+impact. So, I guess an awareness of
+
+
+where you are. Are you
+
+
+a ChatGPT user or just a asking asking
+
+
+questions, right? Am I at a level two
+
+
+where I've got data integrated with some
+
+
+of these tools in a siloed, understood,
+
+
+secured framework that can then surface
+
+
+new insights and provide additional
+
+
+business value. Have I moved to agents
+
+
+which either human instructed or or
+
+
+automated are going off and actually
+
+
+doing work for me or servicing different
+
+
+things, right? So, understanding where
+
+
+you are in that journey, but then also
+
+
+understanding that if I'm at level one,
+
+
+like here are kind of the steps to get
+
+
+to level three, and don't beat yourself
+
+
+up of well, I see this level eight of
+
+
+everything is just run for me.
+
+
+Nobody's there yet. You're You're fine.
+
+
+>> Yeah.
+
+
+>> Take your steps, but make sure you don't
+
+
+kind of skip or jump too fast, have a
+
+
+fundamental understanding of those
+
+
+security boundaries, how those things
+
+
+work, and where they most add value for
+
+
+you and your organization.
+
+
+>> Got it. So, definitely it's a
+
+
+progression, right? Like it's a a
+
+
+journey,
+
+
+but you need to start your journey. Like
+
+
+you've got to start moving. You've got
+
+
+to start wherever it is you are. You've
+
+
+got to start there and say, "All right,
+
+
+what's the next thing that I can do that
+
+
+will help us with this adoption?"
+
+
+>> Absolutely. And I know you use the word
+
+
+misconception. If anyone has the
+
+
+misconception that this is a fad or
+
+
+we'll be back to the status quo here in
+
+
+a few years, that's that is one of the
+
+
+biggest misconceptions I see. Like
+
+
+things are fundamentally shifting and
+
+
+you just got to understand it and
+
+
+understand that this always happens.
+
+
+This is the story of technology. This is
+
+
+the story of the industrial revolution.
+
+
+This is the story of the world.
+
+
+>> You can embrace it.
+
+
+>> embrace it.
+
+
+>> It'll be okay.
+
+
+>> It will be okay.
+
+
+>> Yeah.
+
+
+>> Yeah. And there can be some great
+
+
+success in in you'll find some things in
+
+
+your personal and professional lives
+
+
+where you go, "Wow, this is amazing that
+
+
+I'm able to do this or I'm able to
+
+
+answer this question."
+
+
+>> Yeah, I know that's been that's been
+
+
+true for
+
+
+uh
+
+
+for myself and my wife. You know, she
+
+
+works in a nonprofit and and so they
+
+
+they were very much um you know, not
+
+
+sure how it's going to how they can use
+
+
+it in the business.
+
+
+But it was a okay, here's step one. Step
+
+
+one is like
+
+
+just start giving it prompts and seeing
+
+
+what happens. Like explore.
+
+
+Uh see what it will work with you on.
+
+
+Maybe it gives you a bad answer. Tell it
+
+
+it gave you a bad answer. Tell it why
+
+
+it's a bad answer or why it's not what
+
+
+you wanted. Be be clearer in your
+
+
+expectations.
+
+
+You know, do a better job of delegating
+
+
+and saying, "Here's the you know, here's
+
+
+the outcomes I'm looking for. Here's the
+
+
+context that I have. Here's you know,
+
+
+maybe the guardrails of what I want you
+
+
+to do." And then off you go.
+
+
+>> Absolutely. And so
+
+
+you use the word context there. I That's
+
+
+really what these are driven off is is
+
+
+context. And so you come into this with
+
+
+the context of decades of experience
+
+
+that you bring with you into any
+
+
+business decision that you make, right?
+
+
+Or personal decision, right? And these
+
+
+LLMs, if you just say
+
+
+"Hey, I like this." And that's all you
+
+
+give it.
+
+
+>> There's no context.
+
+
+>> There's no context, right? And so,
+
+
+understanding these tools and then
+
+
+either through automated processes
+
+
+pulling in more context to get you that
+
+
+better result, feedback loops of, "Hey,
+
+
+I'd rather see it this way." That's just
+
+
+more and more context that you give that
+
+
+model to tune that better result. And
+
+
+so, kind of that other fundamental
+
+
+understanding that
+
+
+these are predictive text engines, but
+
+
+they can predict much better given a
+
+
+better kind of corpus or instructions of
+
+
+what you want them to do other than a
+
+
+simple sentence.
+
+
+You hit the nail on the head.
+
+
+Start
+
+
+practicing.
+
+
+>> Right.
+
+
+>> Start start testing, right? How does it
+
+
+look if I say,
+
+
+"I would like to see this." As opposed
+
+
+to,
+
+
+"My style is this. I'd like to see that
+
+
+da da da da da."
+
+
+I would like
+
+
+Now ask the question, right? See how how
+
+
+you see the response improve.
+
+
+>> We know that, you know, this is a the
+
+
+AI adoption's a journey, right? It's
+
+
+it's a spectrum. We talked about our
+
+
+maturity model.
+
+
+Um but it's a journey for the
+
+
+organization. So, what types of
+
+
+industries are you seeing maybe further
+
+
+along in the AI adoption? And what
+
+
+industries are you seeing that maybe are
+
+
+lagging a little bit in that?
+
+
+>> Certainly tech companies are
+
+
+because that's their world are ahead of
+
+
+the AI adoption. Uh certainly
+
+
+dev
+
+
+organizations that are developing
+
+
+software and software solutions are
+
+
+ahead given the
+
+
+propensity of these tools like Claude
+
+
+Code and and uh cursor.
+
+
+>> And they're very much focused on that
+
+
+niche, too, right? Like Claude is with
+
+
+Claude code and cursor and windsurf and
+
+
+all those. They're like
+
+
+>> Oh, I mean
+
+
+>> Yes, for sure. And that's And companies
+
+
+that build products that then see, oh my
+
+
+goodness, this new tool can incredibly
+
+
+accelerate how I deliver that
+
+
+deliver new software solutions to my
+
+
+customers are ahead of that curve as
+
+
+they've they've started embracing these
+
+
+these tools. But
+
+
+I've also seen great improvement. We uh
+
+
+we partner with a organization in in my
+
+
+area that is helping some startups and I
+
+
+saw one that his core business was
+
+
+helping HVAC and roofing companies
+
+
+better target using AI.
+
+
+>> Okay.
+
+
+>> It's not an AI-enabled roof.
+
+
+>> Right.
+
+
+>> But it's leveraging AI to look at I he
+
+
+was even looking at weather patterns to
+
+
+determine where hailstorms came in so
+
+
+that he could contract with these
+
+
+roofers so they could better target
+
+
+their marketing.
+
+
+Um
+
+
+customer service certainly is ripe for
+
+
+some of these AI solutions.
+
+
+That that can
+
+
+Some people like that. Some people don't
+
+
+like talking to the bot, right?
+
+
+>> Right. Right.
+
+
+>> Um
+
+
+But I've had And to be fair, I've had
+
+
+incredible experiences.
+
+
+Uh one example was a credit card. Uh I
+
+
+had just
+
+
+missed a payment or
+
+
+slipped my mind that my payment was due
+
+
+yesterday. I went on the chatbot and
+
+
+said, "Hey, I've just made this payment.
+
+
+This is the first time I've missed it."
+
+
+And the chatbot, no human, just came
+
+
+back and said, "Yep, cool. We've
+
+
+refunded your your charge."
+
+
+>> Wow.
+
+
+>> like
+
+
+>> Wow, really?
+
+
+>> I didn't know I had permissions for
+
+
+that.
+
+
+>> Like that's amazing. And then you've
+
+
+also had the terrible experiences where
+
+
+it's like, "Please, just give me a human
+
+
+being."
+
+
+>> It runs you in a circle until you just
+
+
+want to hang up. Yeah.
+
+
+>> Exactly. So so we're still
+
+
+on the growth trajectory of of where
+
+
+these these can go. Uh but
+
+
+I think tech industries are growing back
+
+
+to your original
+
+
+question faster. I don't think any
+
+
+industry or business
+
+
+does not have an opportunity to grow
+
+
+using these in the right place.
+
+
+>> So, John, what are a couple of takeaways
+
+
+that you would like someone listening to
+
+
+this to walk away with as we wrap this
+
+
+up?
+
+
+>> I just want to say for a business,
+
+
+there's so much hype out there. And
+
+
+we're talking the theme of this is
+
+
+AI-enabled business, right?
+
+
+There are certainly new businesses that
+
+
+have been created with AI, but there are
+
+
+thousands and thousands, millions even,
+
+
+of established businesses.
+
+
+Don't forget what got you to that
+
+
+establish
+
+
+point pre-AI. What is your DNA?
+
+
+What is the DNA of your company? What is
+
+
+your goal? What are you trying to
+
+
+deliver to your customers? And then make
+
+
+decisions on where AI can drop in and
+
+
+make that better.
+
+
+>> Yeah.
+
+
+>> Right? Trying to just shoehorn an AI
+
+
+solution in because
+
+
+a news article or even a competitor
+
+
+dropped a new AI chatbot on their
+
+
+website or has a marketing material
+
+
+that's spraying AI everywhere.
+
+
+Great,
+
+
+but don't lose that DNA.
+
+
+Don't lose that customer human
+
+
+interaction.
+
+
+>> Yep.
+
+
+>> Build a solution, bring in AI when you
+
+
+can make an existing process easier or
+
+
+faster. If you can remove a friction
+
+
+point for your customers. If you can
+
+
+better target and identify new customers
+
+
+that will appreciate
+
+
+the services that you bring and the way
+
+
+that you do business. So,
+
+
+I I don't I just don't want people to
+
+
+get away of this is a silver bullet and
+
+
+I've got to put AI in.
+
+
+You probably need to get on there and
+
+
+start your journey, but do it with the
+
+
+mindset of the core DNA of of why you're
+
+
+there in the first place.
+
+
+>> Got you.
+
+
+Thank you, John. I appreciate you being
+
+
+here and thank you for the insights.
+
+
+>> Thank you very much. It's been a
+
+
+pleasure.
+
+
+>> [music]

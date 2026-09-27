@@ -1,0 +1,3211 @@
+[music]
+
+
+>> Welcome to the Improving Edge.
+
+
+This is where we have conversations
+
+
+about how AI and technology are showing
+
+
+up in real organizations. What's
+
+
+working, what's not, what we're learning
+
+
+along the way.
+
+
+I'm having conversations with the folks
+
+
+doing the work, the people turning
+
+
+innovation into outcomes.
+
+
+Today we're going to be talking about
+
+
+the history and origin of AI with Scott
+
+
+Pullen, one of our vice presidents of
+
+
+technology and and a leader of the AI
+
+
+practice at Improving. Thanks for being
+
+
+here, Scott.
+
+
+>> Thanks for having me.
+
+
+>> So when we talk about the origin of AI,
+
+
+like where it started, cuz it's not
+
+
+brand new, like it's been here for a
+
+
+while and all the way through to the
+
+
+innovations that we've seen recently,
+
+
+the things that have drawn it to the
+
+
+forefront, like tell me a little bit cuz
+
+
+you've been in the space for quite a
+
+
+while.
+
+
+>> Yeah.
+
+
+>> Tell me about like where did AI start?
+
+
+What is some of that origin story?
+
+
+>> Yeah, I would say that it's definitely
+
+
+starting with Alan Turing.
+
+
+He is a kind of like the Godfather for
+
+
+AI. I mean, he really revolutionized it
+
+
+and back after the Enigma and all that
+
+
+stuff, after finishing that, he started
+
+
+going through and understanding and
+
+
+saying, "Can computers think?" And so
+
+
+that really kind of set the precedent of
+
+
+like where are we at with AI, how's that
+
+
+moving forward? And then kind of step
+
+
+forward probably like the mid-50s-ish,
+
+
+there was a conference in Dartmouth. And
+
+
+a bunch of researchers got together and
+
+
+they're like, "We can figure this AI
+
+
+thing out like in a summer, just knock
+
+
+it out of the park."
+
+
+>> Super easy, like wrote a simple thing we
+
+
+could knock out. Got you.
+
+
+>> For those who don't know, they did not
+
+
+do that. Um the it's they effectively it
+
+
+went through what they
+
+
+a lot of people in the research space
+
+
+like to call is AI winter.
+
+
+So during the period cuz like they found
+
+
+out well, we don't have the copious
+
+
+amounts of data, we don't have the
+
+
+copious amounts of compute that's
+
+
+needed. Uh so it just kind of had a
+
+
+wall. So the '70s happened and everybody
+
+
+was having a good time during that,
+
+
+right? So it was from there and then it
+
+
+moved
+
+
+>> The winter though, it was because they
+
+
+were resource constrained. They didn't
+
+
+have the means they needed to really
+
+
+break
+
+
+>> Exactly. Yeah, so they didn't have all
+
+
+all that resources that they needed to
+
+
+effectively be able to build out what we
+
+
+have today. And so kick off probably
+
+
+about
+
+
+um I'd say early 2000s, that's when GPUs
+
+
+started coming to play, big data was all
+
+
+around, everybody's collecting stuff,
+
+
+and then
+
+
+um additionally we started having new
+
+
+algorithms pop up. And so that's kind of
+
+
+and then we eventually got to where
+
+
+we're at today with like ChatGPT,
+
+
+Claude, all those awesome products. So
+
+
+it's it's been a real huge adventure,
+
+
+but it it's been a long time coming, I
+
+
+would say. So.
+
+
+>> And so when you first kind of got
+
+
+involved, like talk about where the
+
+
+state of AI was that you experienced
+
+
+when you stepped into it cuz you went to
+
+
+school for this.
+
+
+>> Yeah, effectively. So I think that came
+
+
+natural to me when I was in school cuz I
+
+
+my undergrad's in physics,
+
+
+um was uh statistical modeling and
+
+
+thermodynamics and that different types
+
+
+of environments in there. And so for
+
+
+those don't know, statistical aspects
+
+
+are kind of the foundation for a lot of
+
+
+machine learning
+
+
+um uh premises and which stems into deep
+
+
+learning. And so uh that's where I first
+
+
+got my start. And so I started going
+
+
+down that path and then skip ahead a
+
+
+couple years, I was in the railroad,
+
+
+working there, and I was actually
+
+
+building
+
+
+um
+
+
+regressional systems for the railroad to
+
+
+do a various number of different things.
+
+
+But we ran into a bunch of different
+
+
+problems with
+
+
+um effectively
+
+
+uh not being able to calculate data
+
+
+properly and small sample sizes, a
+
+
+number of different things, compute
+
+
+resources. And so, it was uh,
+
+
+then I researched into deep learning and
+
+
+actually started understanding it was
+
+
+like, "Oh, this is the next precedent
+
+
+for what we're actually going to see
+
+
+because we had all the big data stuff
+
+
+going, we're collecting stuff, Hadoop
+
+
+was really high at that time." Um, and
+
+
+so, um, I was like, "I need to really
+
+
+research this cuz this is literally the
+
+
+next step for us because we have the
+
+
+data, we're starting to get the computer
+
+
+cuz this is when gaming was huge,
+
+
+everybody loved GPUs and all that stuff.
+
+
+I remember buying my first uh, Nvidia
+
+
+970 and I was like, "Oh, this is
+
+
+awesome." And then I realized, "Oh, I
+
+
+could use this for work, too." And so, I
+
+
+transformed it. I actually brought my
+
+
+GPU in and bought a couple other ones to
+
+
+a lab server that I had um, at uh, the
+
+
+railroad and I plugged them all in and
+
+
+started building models and all that
+
+
+stuff. And so, that was like the cutting
+
+
+turning point. It was like the early
+
+
+2000s
+
+
+uh, 2010-ish, around that time is like
+
+
+when you realize, "Oh, this is this is
+
+
+serious." So.
+
+
+>> Which So, you mentioned, you know, that
+
+
+time frame really was interesting uh,
+
+
+not just for AI, like you were talking
+
+
+about GPUs, which then that's when
+
+
+crypto showed up, get super interested
+
+
+in GPUs as well. We don't necessarily
+
+
+need to run down that engine, but it it
+
+
+really was a a transformational time.
+
+
+You know, what you're talking about,
+
+
+there's a a lot of math around, very
+
+
+math intensive, the things that they
+
+
+were doing at the railroad, right? The
+
+
+things that you that you've learned. And
+
+
+I know even now, like things are very
+
+
+math intensive, but there were a couple
+
+
+of breakthrough
+
+
+uh, breakthroughs that happened that
+
+
+allowed this to really become
+
+
+ubiquitous. Like, what were some of
+
+
+those things and why were they so
+
+
+meaningful?
+
+
+>> Yeah, I would say it was the discovery
+
+
+of deep learning itself because prior to
+
+
+that, it was just machine learning,
+
+
+statistical algorithms, regressions,
+
+
+classification, very kind of relatively
+
+
+simple stuff because in the early 70s is
+
+
+when
+
+
+computer vision was well natural
+
+
+language processing and computer vision
+
+
+were kind of starting to spin up
+
+
+and they effectively built a model that
+
+
+could predict letters based off of what
+
+
+it saw and so that's where that kind of
+
+
+started but it again another AI winter
+
+
+occurred but effectively
+
+
+with all the rest of this new technology
+
+
+it really drove and propelled us to do a
+
+
+lot more and so I would say
+
+
+the researchers who developed the deep
+
+
+learning algorithm they they won
+
+
+effectively what is the Nobel Prize for
+
+
+computer science for it and so that
+
+
+kicked off a whole another set of like
+
+
+researchers to go and look into what are
+
+
+called transformers that was the next
+
+
+revolutionary thing that will let us to
+
+
+literally chat GPT effectively GPT from
+
+
+open AI came out because of that and
+
+
+then also
+
+
+they had BERT from Google that came out
+
+
+after that so it was that kind of
+
+
+revolutionary path to help us understand
+
+
+as to how do we interpret and uh
+
+
+determine as to like the next series of
+
+
+text and all that and really model
+
+
+around the human brain and it's it's
+
+
+funny cuz it
+
+
+little side note is
+
+
+one of my favorite
+
+
+individuals that I like to quote is
+
+
+Fei-Fei
+
+
+uh
+
+
+Li I think is her name I forget her name
+
+
+but a Fei-Fei Li is she's a huge
+
+
+researcher as well and she has this
+
+
+aspect of um
+
+
+computers are built and behave like
+
+
+humans
+
+
+>> Okay.
+
+
+>> and so there's nothing artificial about
+
+
+artificial intelligence it's very
+
+
+humanistic all that stuff and so she's
+
+
+another big contributor cuz she had a
+
+
+huge contribution to the computer
+
+
+vision realm as well and so my favorite
+
+
+thing about that is that it also
+
+
+introduces this paradigm of we always
+
+
+see computers as to be perfect they they
+
+
+perform actions 100% of the time
+
+
+completely accurate when we look at AI
+
+
+we expect that same thing When in
+
+
+reality, it's based off of humans.
+
+
+>> Right.
+
+
+>> And so, if they really brought that to
+
+
+light for a lot of people to say like,
+
+
+"Hey, look, we're developing AI, but
+
+
+understand it's more like humans than it
+
+
+is like computers." So.
+
+
+>> And it's especially true with the LLMs
+
+
+cuz they're a probability and all of
+
+
+those those sorts of things. You talked
+
+
+about two concepts in there and so I and
+
+
+two technical concepts. So, like explain
+
+
+to my mom, you know, like what is deep
+
+
+learning and what is trans for
+
+
+transformer?
+
+
+>> Yeah, so deep learning is effectively
+
+
+we take copious amounts of data. The
+
+
+same thing that we were doing with
+
+
+machine learning, training over a set of
+
+
+data, we have some sort of prediction
+
+
+that we want to have, and then we have
+
+
+data that represents that prediction.
+
+
+Effectively, deep learning is that at a
+
+
+much larger scale. There's a bunch of
+
+
+different new techniques and frameworks
+
+
+that you introduce to get to that and
+
+
+achieve
+
+
+your model construction in a reasonable
+
+
+amount of time. So, that's that is deep
+
+
+learning at its premise. It's it's
+
+
+effectively a much larger version of
+
+
+machine learning and probability and
+
+
+calculations. And so, there's a bunch of
+
+
+other architectures and math there that
+
+
+goes into that, but
+
+
+>> The technical thing.
+
+
+>> Yeah, that I want to stay away from,
+
+
+right?
+
+
+>> And then transformer.
+
+
+>> Transformers are effectively
+
+
+a part of
+
+
+deep learning. Effectively, it is a type
+
+
+of way that we interpreted data through
+
+
+a model effectively.
+
+
+It It allows you to go from a series of
+
+
+text to numbers to help
+
+
+translate to computers what we're
+
+
+effectively trying to mean by the words
+
+
+that we produce to them. So, it's like
+
+
+the most basic way I can put it. So.
+
+
+>> So, when we talk about LLMs and then the
+
+
+things that they do well, right? You've
+
+
+mentioned vision,
+
+
+obviously text that handles super well.
+
+
+That's what it's been trained on. That's
+
+
+what we ask it to produce when we're you
+
+
+know, querying these models and saying,
+
+
+you know, "Give me the following
+
+
+things." Especially for generative AI.
+
+
+What are the things that the AI models
+
+
+do exceptionally well? And maybe where
+
+
+do they fall down?
+
+
+>> Yeah, so I would say where it does
+
+
+really well is pattern recognition.
+
+
+That's first and foremost.
+
+
+Being able to identify various patterns
+
+
+that exist within text, within images,
+
+
+within
+
+
+various different types of processes.
+
+
+That's the one thing that it does really
+
+
+well. Like we can do like language
+
+
+translation aspects. Like language is
+
+
+very
+
+
+definitive and there's very there's
+
+
+rules around it and so it can predict
+
+
+those different things. It can recognize
+
+
+the patterns within it. And same with
+
+
+and computer vision the same way goes
+
+
+there as well. So when we look at
+
+
+pictures,
+
+
+when a computer is looking at it, it's
+
+
+trying to identify shapes within side of
+
+
+pixels at different levels. And then it
+
+
+spans out, looks at another shapes, and
+
+
+then goes down effectively from there.
+
+
+And then effectively has a total story
+
+
+at the end of it. So it's all about
+
+
+pattern recognition. That is the first
+
+
+and foremost like top thing that it does
+
+
+really really well.
+
+
+>> Which makes sense cuz and
+
+
+is something that I think we as humans
+
+
+are pattern recognition engines as well.
+
+
+Which may be why we humanize the the
+
+
+models more than we maybe should cuz
+
+
+it's like, "Oh, we're kind of samezies."
+
+
+>> Yep.
+
+
+>> Right? And so it's like, "Oh,
+
+
+>> It's built after us, right?"
+
+
+>> Yeah, and there's also the the folks
+
+
+that are building the models throw in
+
+
+some of this humanistic side and they
+
+
+even chat with you in such a way and
+
+
+give you some of these almost these
+
+
+clues to make it seem like, "Oh,
+
+
+>> Maybe I am."
+
+
+>> Maybe you are not.
+
+
+>> [laughter]
+
+
+>> Yeah, it is. Yeah, it's
+
+
+it's definitely one of those things
+
+
+where we have to be very careful with it
+
+
+because it can kind of it's where we're
+
+
+getting into a lot of issues in the
+
+
+cybersecurity space now because people
+
+
+think that AI is a real person. You You
+
+
+got to be careful with it. So
+
+
+>> You do. And those patterns it recognizes
+
+
+sometimes they're not always true. Like
+
+
+Yeah. I don't know if you've seen the Is
+
+
+it a Is it a Chihuahua or a blueberry
+
+
+muffin?
+
+
+>> Oh, yes. Yes, it's one of my favorites.
+
+
+>> It's like Wait, we can't distinguish
+
+
+between a blueberry muffin and a
+
+
+Chihuahua.
+
+
+>> That's funny cuz I have two white cats
+
+
+and
+
+
+um one is like slightly off-colored as
+
+
+well. And so I built a whole model like
+
+
+demonstrating back in the day before all
+
+
+the hype of AI. I was like showing like,
+
+
+"Hey, AI is real now or like machine
+
+
+learning at least is at that time." And
+
+
+I built a whole model to show like,
+
+
+"Hey, here are my two cats. I can
+
+
+distinguish them." It didn't do very
+
+
+well. It Cuz it was too
+
+
+The model wasn't good enough yet. So
+
+
+you're like,
+
+
+>> So I'll settle that for
+
+
+>> Yeah. Yeah. Yeah, exactly.
+
+
+>> So what else What are some of the things
+
+
+that the models don't do very well or
+
+
+where they're challenged?
+
+
+>> Yeah, I would say it's anything where
+
+
+there's a lot of context that needs to
+
+
+be applied. So when you work with a
+
+
+large language model today or like
+
+
+ChatGPT
+
+
+or Claude, if I ask it to perform some
+
+
+sort of actions without any major
+
+
+context, it doesn't know what to do. For
+
+
+example, when I was
+
+
+um
+
+
+work going through my phone today, I was
+
+
+using Claude to effectively ask it say,
+
+
+"Hey, can you go summarize this chat
+
+
+between these three people?" I didn't
+
+
+tell it where. And it was like, "I don't
+
+
+know what you're talking about." I was
+
+
+like, "Oh." I added to it, "Go at Go
+
+
+look in Teams. Summarize this chat for
+
+
+me so I don't have to read all of it."
+
+
+And then it effectively performed it. So
+
+
+it comes back to that. It says,
+
+
+"If I don't have all the context" It's
+
+
+the same way if I interact with any
+
+
+individual. It says if I say to go
+
+
+summarize my chat with an individual,
+
+
+but I don't tell you where that chat is,
+
+
+you'll either spin your wheels or turn
+
+
+back to me like, "Where's the chat at?"
+
+
+So
+
+
+>> Yeah, we regularly talk about, you know,
+
+
+the treat it like an intern.
+
+
+Right? Give it intern-level
+
+
+instructions, expect intern-level work
+
+
+out of it.
+
+
+Um you know, don't just ship off
+
+
+whatever it was it gave you. But you do
+
+
+have to be, you know, that level of
+
+
+specific as you're giving it
+
+
+instructions and and I think a lot of
+
+
+people don't realize what we're doing is
+
+
+delegation.
+
+
+>> Mhm.
+
+
+>> Right? And and not everybody's really
+
+
+good at delegating.
+
+
+>> Mhm.
+
+
+>> Go go straight at
+
+
+>> for me.
+
+
+>> Yeah.
+
+
+>> And it goes off and you're like, well,
+
+
+I'm not that thing. Well, I'm not that
+
+
+thing.
+
+
+>> Playing
+
+
+>> Playing not that rock is not a fun game
+
+
+to play.
+
+
+>> Yeah.
+
+
+>> But but we do that often times just
+
+
+because of our lack of specificity of
+
+
+expectations
+
+
+and guidance that that it is going to
+
+
+need, that context that you were talking
+
+
+about.
+
+
+>> Yeah. So yeah, that's the major area
+
+
+that I would say that it it kind of
+
+
+falls flat. So, but in time, hopefully
+
+
+it'll eventually have more context. I
+
+
+mean, this is we're just kind of diving
+
+
+into some newer technology of like uh
+
+
+what I would say most technologies are
+
+
+starting to move towards is models that
+
+
+are specific to you. Rather having
+
+
+general models, we'll have a model
+
+
+that's specific to you, so it'll just be
+
+
+like, oh, I know what exactly what he's
+
+
+talking about and I know exactly where
+
+
+it needs to go.
+
+
+>> Well.
+
+
+>> Yeah. It it kind of has some of that
+
+
+pre-existing context. The the system
+
+
+that that we are working on at
+
+
+improving, like I was fighting with it
+
+
+just this morning because I have some
+
+
+very specific ways that I like it to
+
+
+proofread and edit something that I've
+
+
+written. And we all know that for
+
+
+whatever reason the models love m dashes
+
+
+and like that drives me up a wall. And
+
+
+so I have an explicit do not ever use m
+
+
+dashes. It's in the file, it's in its
+
+
+voice file, it should be there and it
+
+
+forgets to read it.
+
+
+>> Mhm.
+
+
+>> And then it sends something up and I'm
+
+
+like, come on, like go back, try again.
+
+
+I'm like, oh, that's right. It's an
+
+
+intern. Like, okay.
+
+
+>> Yeah, but a little bit of gray.
+
+
+>> Yeah, like
+
+
+>> Yes, be specific.
+
+
+>> So,
+
+
+>> I'm old enough, I grew up with the
+
+
+Jetsons and so I expected by now I
+
+
+should have a flying car, I should have
+
+
+a robot that cleans my house, which
+
+
+depending on
+
+
+whether or not you're interested in
+
+
+investing in some of these
+
+
+semi-autonomous robots and having some
+
+
+weirdo navigate around your house and
+
+
+fold your laundry
+
+
+is potentially possible. What are some
+
+
+of the things you thought AI would be
+
+
+able to do by this point that it just
+
+
+hasn't met the mark yet?
+
+
+>> Yeah, it's it's funny. I actually have a
+
+
+bit of more of a pessimistic view on
+
+
+this. I actually believe that we are
+
+
+further along than I expected.
+
+
+>> Okay.
+
+
+>> Which is
+
+
+depending on who you ask, it's good or
+
+
+bad. But my the reason why I say that is
+
+
+that
+
+
+growing up with
+
+
+in like building originally before we
+
+
+had all the frameworks, all these cloud
+
+
+platforms, all that stuff and building
+
+
+it from scratch and doing all that stuff
+
+
+and then seeing where we're at today is
+
+
+astonishing. Especially in such short of
+
+
+time comparative to what we've done in
+
+
+the past. I mean, ChatGPT has literally
+
+
+broken the model on technology adoption.
+
+
+And so seeing that aspect is is huge.
+
+
+And so I'm actually very excited as to
+
+
+where we're at. That being said, I think
+
+
+that there are times where we may be
+
+
+moving a little too fast because there
+
+
+are certain things that we need to take
+
+
+into consideration with bringing AI into
+
+
+new businesses, but
+
+
+I think the biggest thing here is that
+
+
+don't get me wrong, I wish I had a
+
+
+flying car too, but I think we should
+
+
+still be proud as to where we're at
+
+
+today because it it took tremendous work
+
+
+to get to where we are. And most of
+
+
+these people who built these new models
+
+
+and these new algorithms had little to
+
+
+no funding because the hard part is if
+
+
+the business doesn't see the value
+
+
+immediately,
+
+
+>> Right.
+
+
+>> they won't invest into it. And it's the
+
+
+same thing that happened with computer
+
+
+vision and all that. And so
+
+
+as we've grown and we've gotten better,
+
+
+I think that
+
+
+it's definitely something to be
+
+
+commended for all of the researchers who
+
+
+have done everything that they have to
+
+
+get us where we are. So
+
+
+>> So what I'm hearing is don't put all
+
+
+your CRM data in that one-shot it
+
+
+app that somebody builds. But it's
+
+
+probably still better to to stick with
+
+
+one of the big providers that battles
+
+
+has to for now.
+
+
+>> For sure. I would definitely say that
+
+
+for sure because
+
+
+I think there's a time where
+
+
+especially this is a topic that got
+
+
+brought up to me recently and talking
+
+
+about how with being able to code with
+
+
+AI, I can build platforms in such short
+
+
+of time compared to what we used to be
+
+
+able to do, right?
+
+
+>> Right.
+
+
+>> But there's a whole another dynamic of
+
+
+that of supporting it, sustaining it,
+
+
+building it, hosting it, scaling it that
+
+
+isn't really taken into consideration
+
+
+with people who just try to use AI to
+
+
+build this whole platform. And so I
+
+
+think there is a realm where people will
+
+
+have
+
+
+this idea of saying, "Hey, why don't we
+
+
+just build our CRM or ERP system
+
+
+in-house?"
+
+
+>> Right.
+
+
+>> But they don't think about the aspects
+
+
+of sustaining that for long-term and it
+
+
+becomes more expensive. And it's the
+
+
+reason why we have these systems is
+
+
+because it made it cheaper in the
+
+
+long-term run. And so I think
+
+
+there'll be a ebb and flow on those
+
+
+types of system the SAS base systems.
+
+
+>> A little bit of learning.
+
+
+>> Yep, a little bit of learning. People
+
+
+will walk away and then come back and be
+
+
+like, "Oh, we Just kidding. We actually
+
+
+do need your system." And hopefully
+
+
+that'll balance out the payment cycle
+
+
+aspect of that too cuz I know a lot of
+
+
+people
+
+
+there are certain platforms out there
+
+
+that they complain they're like, "This
+
+
+is too expensive of a platform now
+
+
+compared to what we used to pay for."
+
+
+And so the futures don't necessarily
+
+
+meet that and so maybe the companies
+
+
+will come to some sort of agreement to
+
+
+level out pricing on that side of it
+
+
+too. So but I'm very curious to see
+
+
+where that goes.
+
+
+>> Yeah, we were discussing this the other
+
+
+day. The
+
+
+you know, a system like that the TCO the
+
+
+total cost of ownership creation of it
+
+
+is only about 10% of the TCO. And so
+
+
+we're hyper focused on this creation
+
+
+being super fast. And it's like, "Great,
+
+
+but you're optimizing 10%." Like what
+
+
+about the nine? Like maybe you compress
+
+
+it a little bit, but I don't think
+
+
+you're going to have something that's
+
+
+battle-tested, that's been, you know,
+
+
+securely audited, all those other sorts
+
+
+of things that really are the value that
+
+
+some of these long-lived systems bring.
+
+
+>> Uh I agree with you. I think there's
+
+
+there's going to be some some moving
+
+
+around and some understanding
+
+
+>> Yeah. That we kind of have lessons
+
+
+learned.
+
+
+>> Yeah, yes.
+
+
+>> Yeah, very much so.
+
+
+>> So,
+
+
+you mentioned before uh about
+
+
+the humanistic side and how it can feel
+
+
+human uh when we're conversing with
+
+
+these models.
+
+
+Uh and I see a lot of people are
+
+
+starting to use them more as a
+
+
+collaborator, not just a tool. So, talk
+
+
+a little bit more about what you're
+
+
+seeing with regards to how we're
+
+
+leveraging it to be more collaborative
+
+
+and allowing us to maybe orchestrate
+
+
+more work.
+
+
+>> Yeah, I mean, I think one of the biggest
+
+
+things is and this is the hard part I'd
+
+
+say about AI because we've run
+
+
+a number of different executive and
+
+
+uh engineering level like training and
+
+
+workshops to effectively help people
+
+
+adopt AI. How to effectively use AI, how
+
+
+to build it into your workflows, how to
+
+
+effectively bring it to the next level
+
+
+for your company. And the number one
+
+
+thing that is the major outlier for all
+
+
+of that is that nobody really
+
+
+understands how to
+
+
+adopt AI into their workflow cuz it's a
+
+
+totally different
+
+
+Um
+
+
+how do I orchestrate it? How do I work
+
+
+with it? How do I guide it to
+
+
+effectively do this? It's almost at to
+
+
+executive level of
+
+
+organizing a company of how do I
+
+
+delegate tasks effectively? How do I
+
+
+orchestrate them and this needs to
+
+
+happen then and this needs to happen
+
+
+then and how to do all that. And so,
+
+
+most people are used to I perform this
+
+
+action 100% of the time over and over
+
+
+and over again, but now I have to
+
+
+reframe myself to go in to develop all
+
+
+that. And so, I think that's one of the
+
+
+big hard learning lessons, I think, that
+
+
+folks are having in this space, but it's
+
+
+it's the part that effectively, once
+
+
+it's figured out, cuz it's a matter of
+
+
+time, humans adapt, and we grow, and we
+
+
+get better,
+
+
+that's where AI will really start to
+
+
+take off. So, that that's kind of where
+
+
+I'm at with that, so.
+
+
+>> Got you. So, what might some of those
+
+
+skills look like for somebody that is
+
+
+trying to move into more of that type of
+
+
+thinking and that perspective?
+
+
+>> Yeah, so, my personal opinion is around
+
+
+systems. So, with a background in
+
+
+physics, a lot of times you're looking
+
+
+at things at a holistic level,
+
+
+understanding the whole system's impact,
+
+
+and then going down to granular aspects
+
+
+of it. And so,
+
+
+individuals who are trying to get into
+
+
+this space, and we talk about this
+
+
+pretty often with a lot of our
+
+
+engineering groups, is that it it's very
+
+
+key as an engineer for you to start to
+
+
+understand systems holistically in in
+
+
+its totality, um
+
+
+to help you understand as to how to
+
+
+build the minor components.
+
+
+Um and so, understanding systems-level
+
+
+design is very critical in my eyes when
+
+
+it comes to working with AI and being
+
+
+able to orchestrate it and move it out
+
+
+to from just perform this little task
+
+
+for me six times a day versus
+
+
+do this, do that, do this, and I'm going
+
+
+to come back later and check on how you
+
+
+did.
+
+
+>> Yeah, we have one of our clients,
+
+
+uh is an executive, we're getting him
+
+
+stood up yesterday on on the executive
+
+
+operating system, right, and helping him
+
+
+think about, you know, where he is in
+
+
+the maturity model, right, and and
+
+
+thinking about work.
+
+
+And And it's really easy to kind of look
+
+
+at it and come up with some of these
+
+
+crazy ideas that it's like, it would be
+
+
+great if it just, you know, analyze my
+
+
+P&L. Well, that statement alone, the
+
+
+number of tasks in that statement, we're
+
+
+like, "Whoa, whoa, time out."
+
+
+>> Nope.
+
+
+>> You're looking up here, like you need to
+
+
+have that, that's good, but then you
+
+
+have to bring it down to that task level
+
+
+thing and say, "What are all the
+
+
+components of that? What are those
+
+
+pieces?" Because some of those pieces
+
+
+are are compressible and you
+
+
+[clears throat] can leverage these
+
+
+models for. Some of them still need your
+
+
+human brain, right? There's no
+
+
+creativity without biology. And you need
+
+
+that uh you know, discernment in there.
+
+
+And but then
+
+
+maybe we rearrange the entirety of the
+
+
+chain of work based on that in in more
+
+
+interesting ways to still achieve that
+
+
+same outcome.
+
+
+>> And it's proper goal setting too on top
+
+
+of that cuz like it's asking it to
+
+
+analyze your P&L. Well, what's your end
+
+
+goal? Cuz as an AI, I'll analyze it but
+
+
+I won't tell you anything.
+
+
+>> There's numbers in there.
+
+
+>> There's numbers in there. Yeah, and
+
+
+there's letters, too. Uh yeah. So, like
+
+
+that's the thing is like if I set proper
+
+
+goals and workflows and tasks for it, it
+
+
+can effectively achieve what you're
+
+
+looking for. Like if I want to
+
+
+understand, okay, what's the major
+
+
+impact to my P&L that's
+
+
+causing the reduction in being able to
+
+
+make more profits and all that stuff
+
+
+that that helps it guide it to say,
+
+
+"Okay, here's potentially what you're
+
+
+looking for."
+
+
+>> Yeah, I'm feeling convicted. You're
+
+
+telling me I need to be a better
+
+
+delegator. Start with the end in mind.
+
+
+Work your way backwards. Just give me
+
+
+enough context to let me go do the work.
+
+
+So, it sound that sounds like that's a
+
+
+skill maybe I could work on and get
+
+
+better.
+
+
+>> everybody needs to get better at it,
+
+
+too. So, I I I still struggle with it
+
+
+every day. So.
+
+
+>> Yeah. Especially with my kids. I like,
+
+
+"Oh, man. Didn't do what I said."
+
+
+>> Yeah. Yeah.
+
+
+>> So, what do you see as the next big
+
+
+potential breakthrough in this space?
+
+
+>> I would say everyone talks about
+
+
+artificial general intelligence. It's
+
+
+that aspect of
+
+
+Yeah, AGI. It's that aspect where AI is
+
+
+to the level of humans and they can
+
+
+perform and interact and think like we
+
+
+do.
+
+
+I don't think that's the next step. I
+
+
+think it's actually the model that gets
+
+
+us there.
+
+
+As it stands today, all of our models
+
+
+like deep learning are probabilistic
+
+
+based.
+
+
+But there's no actual sense of reasoning
+
+
+behind them. And so I think that is the
+
+
+next breakthrough is the model that
+
+
+actually determines the reasoning for
+
+
+us, rather than what we have today,
+
+
+which is simulated reasoning. Um and I
+
+
+say that is that it is doing
+
+
+probabilistic calculations on different
+
+
+scenarios that it's been introduced to
+
+
+to come up with the simulated reasoning
+
+
+capability. Granted, this is a very
+
+
+controversial topic in the AI realm.
+
+
+Uh people think that the AI has
+
+
+reasoning capabilities. In a certain
+
+
+regard it does, but in totality as
+
+
+humans do when we're introduced to a
+
+
+brand new problem that's never been
+
+
+introduced before, has nobody in the
+
+
+world has zero experience to or nobody
+
+
+in the world has experience to,
+
+
+that is where AI breaks down. And so,
+
+
+that's one of the areas of where AI, if
+
+
+we come up with a model to determine as
+
+
+to how do we
+
+
+effectively model reasoning in as as
+
+
+humans do,
+
+
+that's the next breakthrough. That's
+
+
+when we introduce the old our current
+
+
+model of with probabilistic tendencies
+
+
+and then this reasoning aspect, that's
+
+
+when I think we'll reach AGI. So, that's
+
+
+the next step that I think we need to be
+
+
+looking for, but
+
+
+>> Got you.
+
+
+>> So,
+
+
+>> the pattern recognition machine showing
+
+
+up with a novel
+
+
+context or a novel situation, it's got
+
+
+nothing.
+
+
+>> Yeah, it it it'll fall apart to augment
+
+
+this.
+
+
+>> So, is that leaning towards the world
+
+
+models?
+
+
+>> I think yes in in a way. So, I think
+
+
+it's it's a large collection of models
+
+
+for sure in the sense of where we have
+
+
+our own individual model that is pattern
+
+
+recognition of us, and then there will
+
+
+be a larger model that does reasoning
+
+
+and understanding of who we are and what
+
+
+we're doing and make recommendations
+
+
+with the pattern matching. So, it's a
+
+
+combination and workflows of two
+
+
+different models. Do I think that
+
+
+they'll can try to combine that into one
+
+
+giant model? Most likely. They all try
+
+
+to smash it together. Yeah, just out of
+
+
+curiosity. I mean, you got to You got to
+
+
+You got to test it, right? So, I think
+
+
+that that'll definitely try to happen.
+
+
+But, at the end of the day, I think the
+
+
+most progression we'll get is from
+
+
+kind of a collection of models that tell
+
+
+who we are and then pattern recognition
+
+
+of like a community of people, what is
+
+
+their kind of general understanding, and
+
+
+then the reasoning model coming in right
+
+
+behind it.
+
+
+>> Got you. So, an aggregation of these
+
+
+specialized models.
+
+
+>> Definitely.
+
+
+>> So, I know a lot of people look at, like
+
+
+you were saying before, just how fast
+
+
+we've advanced, right? We're on this J
+
+
+curve. Like, where does the J curve go
+
+
+to the right of now from your
+
+
+perspective?
+
+
+>> Mhm. I think it's more around the agents
+
+
+aspects right now.
+
+
+Adoption of using agents to do work more
+
+
+efficiently and identifying ways where
+
+
+we can have better automation. I think
+
+
+that is the next the next kind of
+
+
+venture that
+
+
+it's that adoption of that nature of
+
+
+agents.
+
+
+As it stands today, people interact with
+
+
+AI in the sense I tell you to do
+
+
+something rather than I give you a task
+
+
+and some context and then let you go
+
+
+figure it out. So, we just did it
+
+
+another workshop not too long ago and
+
+
+most of the people around there are
+
+
+like, "Oh, I just want it to go do
+
+
+this." I was like, "Okay, but what's
+
+
+your end goal for why you're trying to
+
+
+do this?" Oh, well, I want to build X,
+
+
+Y, and Z. I was like, "Okay, why not
+
+
+just give it this collection of
+
+
+information and then give it the steps
+
+
+to do that and let it go." They're like,
+
+
+"Can it do that?" I was like, "Yeah,
+
+
+that's the aspects of agents. Try it
+
+
+out." And so, they did that and they
+
+
+were blown away. And so, I think it's
+
+
+this adoption of understanding, okay, I
+
+
+see the problem,
+
+
+break down the problem in my head, and
+
+
+then figure out what information do I
+
+
+need to provide to it, and then release
+
+
+it to an agent to see how well it does.
+
+
+And it may get you 20% of the way. It
+
+
+may get you 80% of the way. But the
+
+
+thing is if you don't try and break that
+
+
+mentality of do this
+
+
+versus what about this try to
+
+
+>> Here's what I want. Right, going back to
+
+
+that, you know, Dell that issue and all
+
+
+of being direct F. So, do you think we
+
+
+will continue to see this massive growth
+
+
+in the models where like, you know, chat
+
+
+GPT 8 is like a bazillion times better
+
+
+than the current
+
+
+>> It's tough to say on that one. I think
+
+
+that they'll try, but
+
+
+do the means justify the cost, right?
+
+
+Like like
+
+
+it cost what? I think it was meta was
+
+
+like $15 million to train llama 2 at
+
+
+that time like couple years back. I
+
+
+mean, if that's only going to scale up
+
+
+much higher and all these GPUs and all
+
+
+these data centers, is building a bigger
+
+
+model better? I it's hard to say with
+
+
+that because we don't know. We're not
+
+
+there yet. And then
+
+
+we have some representation of that with
+
+
+chat GPT, but also there's a bunch of
+
+
+other systematic things that are behind
+
+
+that as well. People think that chat GPT
+
+
+is just a large language model. In
+
+
+reality, it's not. It's a whole
+
+
+application. And so there's caching
+
+
+mechanisms and things to help it do what
+
+
+it does as a large language model even
+
+
+better. Building a bigger model, I don't
+
+
+think is necessarily the question. I
+
+
+think it's building a better model more
+
+
+effectively is the right answer.
+
+
+>> Got you. So, more specialization. You
+
+
+don't need to spend $2 trillion
+
+
+training the that biggest model.
+
+
+>> When will you get your money back out?
+
+
+Like how does that work?
+
+
+>> Yeah, when you Well, OpenAI is already
+
+
+starting to run into that.
+
+
+>> [laughter]
+
+
+>> It's not pretty. Yeah, that's not
+
+
+pretty.
+
+
+>> So, are there any industries that you're
+
+
+looking at that you're like, I don't
+
+
+know how AI touches you?
+
+
+>> Mhm.
+
+
+It's funny. I literally just had this
+
+
+conversation with my Uber driver on the
+
+
+way over.
+
+
+He said flagpole creation was his thing.
+
+
+>> [laughter]
+
+
+>> Which I was like, I mean, yeah, sure.
+
+
+Yeah, sure.
+
+
+But honestly,
+
+
+it's it's not I don't think there's any
+
+
+industry that won't be touched by AI. I
+
+
+think it's what industries will
+
+
+need AI effectively to grow and get
+
+
+better. And I think the number one is
+
+
+robotics. Um
+
+
+because
+
+
+as it stands today, we don't really have
+
+
+I thought we'd be much further along in
+
+
+robotics comparative to where we are at
+
+
+today. Um that not saying that the
+
+
+people who do robotics that they haven't
+
+
+made great achievements. They have. I
+
+
+mean on DARPA and then a bunch of other
+
+
+companies have made huge advancements in
+
+
+those areas.
+
+
+Um but I think like for example at my
+
+
+my sister-in-law asked me he's like,
+
+
+"What should we put our nephews into?" I
+
+
+think I'm going to get him into computer
+
+
+science and do software engineering. I
+
+
+was like, "No.
+
+
+That's that's going to be gone by the
+
+
+time they're even
+
+
+in college." And I was like, "That's
+
+
+like
+
+
+it's it's not necessarily going to be
+
+
+gone, but it's that time has passed." I
+
+
+said, "Get him into robotics." And so
+
+
+now all she does is buy him Legos. But
+
+
+that's the next area I think cuz it's
+
+
+it's that human element of physical
+
+
+interaction of world. It's another one
+
+
+of those things that AI doesn't do
+
+
+really well is physical interaction of
+
+
+world introduced to
+
+
+randomness and
+
+
+missing context. Like those are the
+
+
+things that it struggles with. And so I
+
+
+think with robotics coming into play, I
+
+
+think that's where AI is really needed.
+
+
+And that's where I think more
+
+
+enhancements in AI needs to be done as
+
+
+well to help that that industry. So
+
+
+>> Yeah, I know they definitely have made
+
+
+some advances. I saw a video recently of
+
+
+the the cadre of karate.
+
+
+They were all synchronized in their
+
+
+kicks and their flips and all kinds of
+
+
+crazy stuff. I was like, "Woah, that
+
+
+that's a little bit crazy." I just
+
+
+wanted to do my laundry. I just say but
+
+
+I don't know would you be on the
+
+
+waitlist for for Optimus? Right? Are you
+
+
+going to sign up?
+
+
+>> As long as it's not run by a human
+
+
+being. Yeah, yeah.
+
+
+>> My wife was she's like, "I am out on
+
+
+knowing
+
+
+sitting in his basement telepresence
+
+
+robot." operating this thing. Like she
+
+
+knows. Yes.
+
+
+>> Yeah, too creepy. Yeah, yeah, too
+
+
+creepy.
+
+
+>> I agree. Yeah, I really like it's
+
+
+autonomy.
+
+
+>> Yeah, so yeah. No, I think if they got
+
+
+to the point where it was fully
+
+
+autonomous, it ran by itself, the
+
+
+self-computer was there inside of
+
+
+itself, and I went down that path, I
+
+
+would definitely consider it. I mean, it
+
+
+it's something that helps
+
+
+as humans we tend to lean towards
+
+
+the least work as possible. I don't want
+
+
+to say lazy, but least work as possible.
+
+
+Convenience, right?
+
+
+>> rhymes with lazy.
+
+
+>> You're right. Yeah, convenience
+
+
+is like the number one thing is like
+
+
+that most of us seek out. And so having
+
+
+something that helps with laundry and
+
+
+cooking and all that stuff, that's
+
+
+another thing that's off our mental
+
+
+load. And as humans as it stands today,
+
+
+there's a lot of mental load that we
+
+
+have compared to what we saw even 50
+
+
+years ago. So, or even 20 years ago.
+
+
+>> Well, so I love to cook. So, like we
+
+
+will have a battle. My robot tries to
+
+
+take over my He's like, "Check it." I'll
+
+
+choke him out. Yeah.
+
+
+>> Well, we're having an issue.
+
+
+>> What are some key takeaways you would
+
+
+love folks to have as they wrap up
+
+
+listening to our time together?
+
+
+>> Yeah, I would say be open-minded about
+
+
+AI.
+
+
+Um I know there's a lot of fear out
+
+
+there around AI and people are worried
+
+
+that it's going to take jobs and all
+
+
+that stuff. I think it'll change jobs
+
+
+for sure. But I think it's it's better
+
+
+to be open-minded. It's the same way
+
+
+that
+
+
+I have to talk about this with
+
+
+my stepfather in the sense of like
+
+
+before we had lamp posts, people would
+
+
+go out and like light them with candles
+
+
+and and all that. Like that job's gone
+
+
+because of a lamp post, right? This this
+
+
+idea of jobs changing is one of the
+
+
+biggest things
+
+
+I think
+
+
+I often hear about concern about both
+
+
+personally and professionally. And And I
+
+
+would say is that be open minded to
+
+
+being re-skilled to do something new or
+
+
+build something else or
+
+
+being able to ebb and flow in the job
+
+
+market. I think that's the number one
+
+
+thing that we have to be considered of.
+
+
+And then to the executives of make sure
+
+
+we're starting to build programs to help
+
+
+those individuals transfer to a new
+
+
+role. Just because we've automated some
+
+
+sort of role doesn't necessarily mean
+
+
+that individual doesn't provide value.
+
+
+And so there I think that is another big
+
+
+thing that I would tell people to leave
+
+
+with as well.
+
+
+>> Thank you Scott. Thank you for being
+
+
+here. Thanks for having me.
+
+
+>> [music]

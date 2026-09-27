@@ -1,0 +1,59 @@
+Welcome to the Improving Edge. Today I'm joined by Marcus Velez, who leads AI strategy and transformation practice at a global consulting firm and has been advising C-suite executives on AI adoption for nearly a decade. Marcus, thanks for being here.
+
+>> Thanks for having me. Really excited to get into this topic today.
+
+>> So let's start with the big question everyone is wrestling with. How do organizations actually measure ROI on AI investments?
+
+>> Right, so this is the number one question I get from every CEO and CFO I talk to. And the challenge is that most companies are still measuring AI the way they measured software implementations in the 1990s — you know, just looking at cost savings, headcount reduction. And that's fundamentally the wrong framework.
+
+What we're seeing is that companies that truly unlock AI value are thinking about it across three dimensions. You've got operational efficiency, strategic differentiation, and what I call organizational intelligence. And the organizations that only optimize for the first dimension are leaving probably 70 to 80 percent of the value on the table.
+
+>> That's a bold claim. Where does that 70 to 80 percent number come from?
+
+>> Yeah, it's based on research across hundreds of AI deployments. Studies consistently show that operational efficiency gains — the stuff that shows up in your first 12 months — represent only about 20 to 30 percent of the total value an AI program can deliver. The rest comes from things that are harder to quantify upfront: better decision-making, faster product innovation cycles, talent retention because your people are doing more meaningful work.
+
+>> So how do you help executives get comfortable with value that's harder to put a number on?
+
+>> It's about connecting AI outcomes to business outcomes that leadership already cares about. And we've seen that companies with a structured AI value framework are about three times more likely to successfully scale their AI initiatives beyond the pilot stage. It's not just about having good technology — it's about having the organizational readiness to absorb and act on what AI surfaces.
+
+One thing we always do is help clients build what I call an AI value scorecard. You've got leading indicators — model accuracy, adoption rate, time-to-insight — and lagging indicators — revenue impact, cost per decision, customer satisfaction scores. The mistake most companies make is only tracking the lagging indicators and then being frustrated six months in when they can't see the ROI.
+
+>> Let's talk about the failure modes. Where do AI programs most commonly go wrong from a value perspective?
+
+>> The number one failure I see is what I call the pilot trap. Companies run a successful proof of concept, everyone gets excited, leadership signs off on expansion, and then it just... stalls. And the reason it stalls is almost never the technology. It's change management, it's data governance, it's the fact that the business processes the AI was supposed to plug into weren't actually documented well enough to integrate with.
+
+Research shows that nearly 60 percent of enterprise AI pilots never make it to production. And of the ones that do, a significant portion are operating at well below their intended capacity within the first year because the adoption support just wasn't there.
+
+>> What's the conversation you have with a CFO who says, look, we've spent two million dollars on AI and I can't see it in the numbers?
+
+>> That's a really common conversation. And the first thing I say is, what were you measuring before you started? Because a lot of times the baseline wasn't established clearly. You can't show ROI if you didn't define what success looked like at the outset.
+
+The second thing is about time horizons. AI doesn't deliver ROI the way an ERP implementation does. An ERP goes live and you immediately see process changes. AI systems improve over time — they get smarter as they see more data, as your teams get better at asking the right questions, as the feedback loops get tighter. So you need a different expectation-setting conversation with the board.
+
+What I usually say is, in month one to three, you're investing. Months three to nine, you're learning. Beyond nine months, if you've done the foundational work, you start seeing compounding returns. Companies that maintain that patience and discipline see, on average, somewhere between two and a half to four times return on their AI investments over a three-year horizon.
+
+>> Let's pivot to the talent side of this. Because ROI isn't just financial. It's also about what AI does to your workforce.
+
+>> Absolutely. And this is where I think the conversation is finally starting to mature. The early narrative was all about displacement — AI is going to take jobs. And yes, some roles will be automated. That's real. But the more interesting story is what happens to the people whose work gets augmented.
+
+We've seen productivity improvements of anywhere from 20 to 40 percent in knowledge worker roles when AI tools are properly deployed. And interestingly, employee satisfaction tends to go up, not down, because people are spending more time on creative, strategic work and less time on repetitive tasks that were never really what they were hired to do.
+
+The challenge is that AI can fundamentally understand the patterns in your workforce — who's doing what, where the bottlenecks are, where skills gaps exist — in ways that weren't possible before. So you can start being much more proactive about talent development rather than reactive.
+
+>> What advice do you give companies that are just starting this journey?
+
+>> Start with a clear problem statement. Not "we want to implement AI" — that's not a problem statement. What specific decision or process is too slow, too expensive, or producing inconsistent outcomes? AI is a solution in search of a problem when you start with the technology. Start with the problem.
+
+Second, get your data house in order before you invest heavily in models. I've seen organizations spend millions on AI infrastructure only to realize their data quality is so poor that the models can't produce reliable outputs. Data readiness is the single biggest predictor of AI program success.
+
+Third, invest in change management as heavily as you invest in the technology. I'd argue you should be spending at least one dollar on change management for every two dollars you spend on the technical build. Most organizations invert that ratio.
+
+>> Any final thoughts on where this is all headed?
+
+>> I think we're at an inflection point where AI is going to be embedded in every significant business decision — not as a tool you go consult, but as an intelligence layer that's continuously informing how your organization operates. The companies that get ahead of that shift now, that build the governance structures and the data foundations and the human-AI collaboration skills, are going to have a durable competitive advantage that's very hard for late movers to close.
+
+The window to get ahead of this is narrowing. Organizations that wait another two or three years to get serious are going to find themselves operating at a structural disadvantage that goes beyond just efficiency — it'll affect their ability to attract talent, to retain customers, and to innovate fast enough to stay relevant.
+
+>> Marcus, this has been a really valuable conversation. Thanks for joining us today.
+
+>> My pleasure. Happy to dig into any of this further with anyone who wants to reach out.

@@ -1,0 +1,3958 @@
+Welcome to the improving edge. This is
+
+
+where we talk about how AI and
+
+
+technology actually shows up in
+
+
+organizations, what works, what doesn't,
+
+
+what we're learning along the way. I'll
+
+
+be sharing conversations with the people
+
+
+doing the work, turning innovations into
+
+
+outcomes. Today I'm here with Stephen
+
+
+Johnson, vice president at improving,
+
+
+who works with customers to help them
+
+
+figure out and navigate their AI
+
+
+journeys. Thank you for being here,
+
+
+Stephen.
+
+
+>> Happy to be here.
+
+
+>> A lot of companies rush to adopt AI
+
+
+without a clear framework. Talk to me a
+
+
+little bit about like what are some good
+
+
+guides or maybe some principles that
+
+
+they should be thinking about as they're
+
+
+looking to adopt AI. Most of the people
+
+
+that we talked to have already rolled
+
+
+out AI by this point. Okay,
+
+
+>> like 2025 everybody went nuts and like
+
+
+hired consultants and I mean talking
+
+
+about enterprise companies they got
+
+
+their Mckenzie report or their BCG
+
+
+report or whatever and it's like you
+
+
+know rinse and repeat set up governance
+
+
+go do some PC's
+
+
+find a 5 to 10x return
+
+
+scale that thing you know and now
+
+
+everybody is like we still just have a
+
+
+report Okay.
+
+
+>> You know, like we just buy stuff like,
+
+
+you know, Microsoft gives us stuff and
+
+
+it gets better and better and we just
+
+
+kind of roll that out. But like how do
+
+
+we actually like do AI?
+
+
+And one of the things we tell them is
+
+
+there's a lot of ways to do it, but you
+
+
+know, let's circle back to your
+
+
+company's mission and your values and
+
+
+what you're trying to accomplish, right?
+
+
+And when we do that, let's actually
+
+
+deploy things and see how it works out.
+
+
+We push 5 to 10x returns. Everybody
+
+
+does. If you're going to do something,
+
+
+do a 5 to 10x return. Don't build your
+
+
+own models. Use what's already available
+
+
+from like Microsoft and AWS and all that
+
+
+stuff.
+
+
+>> It's a good rule of thumb, right? The 5
+
+
+to 10.
+
+
+>> It's a good rule of thumb, right? But
+
+
+then you look at like, you know, I'm in
+
+
+Houston, you're in Dallas, there's a lot
+
+
+of industrial companies, companies like
+
+
+retail here, like you know, some of the
+
+
+financial companies, and it's like, all
+
+
+right, it's not like you haven't been
+
+
+doing AI forever, right? like predictive
+
+
+maintenance.
+
+
+>> It's not as new as everybody claims it
+
+
+is.
+
+
+>> Yeah, most of those big hitters are kind
+
+
+of already there and now, you know, some
+
+
+seale people got chat GPT and they use
+
+
+it all the time at their house and
+
+
+they're like, "All right, let's go."
+
+
+Like, "What's the next thing?"
+
+
+>> Okay.
+
+
+>> And it's kind of hard to operationalize
+
+
+when you've already done so many things.
+
+
+Like I mean there's a lot of automation
+
+
+that goes into finding
+
+
+natural gas in the Gulf of Mexico,
+
+
+hitting a 10 foot radius at 30,000 ft
+
+
+and getting that out,
+
+
+>> right?
+
+
+>> Where you go, am I going to really add a
+
+
+lot of AI to that and make it that much
+
+
+better. So you've got to really find
+
+
+those five to 10 extra turns. I don't
+
+
+know. Are you finding those
+
+
+>> in enterprise companies still or do you
+
+
+feel like it's kind of like hard to get?
+
+
+>> Well, and that's what I was going to
+
+
+say. I think some of it comes down to
+
+
+like you were saying the the Mackenzie
+
+
+report right so it's step by step and
+
+
+like they've gone through the steps and
+
+
+the issue tends to be more with
+
+
+expectations right where it's well what
+
+
+is it you're trying to get out of it
+
+
+like well automate all the things it's
+
+
+like okay that's not going to happen
+
+
+that's that's not that's not where we
+
+
+are but that's also you don't understand
+
+
+>> the things you're trying to do you just
+
+
+kind of want to wave the magic you know
+
+
+GPT wand and have it do all the things
+
+
+for you. And so I would I would agree. I
+
+
+think there is the the what's next like
+
+
+what's a framework that I can use to
+
+
+identify where my ROI is going to come
+
+
+from. Do you have an example of of
+
+
+somebody that's that's kind of looked at
+
+
+this maybe a customer story where
+
+
+they've looked at this and they've
+
+
+actually seen an ROI that they were
+
+
+like, "Okay, cool. Because we dove in
+
+
+and built the right expectation, we know
+
+
+that we got the outcome we were hoping
+
+
+for."
+
+
+>> Yeah. I mean, I think with the influx of
+
+
+LLMs and the AI around that kind of
+
+
+stuff, like extreme information
+
+
+processing that you would have to take
+
+
+tons of people, months or even years to
+
+
+do. Think about a lot of the super
+
+
+majors now are going back to old data,
+
+
+right?
+
+
+>> Tons of seismic data, tons of lease
+
+
+data, opinions,
+
+
+writeups, notes, PDFs from years and
+
+
+year, even decades ago. and they're
+
+
+going, "If we're going to go back to the
+
+
+same places,
+
+
+let's narrow down where we should go and
+
+
+let's use all the historical data that
+
+
+we have that we've never been able to
+
+
+like put together and get an insight out
+
+
+of it to narrow down where where we
+
+
+should go and what we should do." And so
+
+
+that's becoming a really popular use
+
+
+case where you go, we just would never
+
+
+ever have the manpower to somehow go and
+
+
+get all of this stuff, read all of it,
+
+
+get together in a room, make a decision
+
+
+together on what it all means with all
+
+
+of these siloed people, and then go
+
+
+reduce our risk when we go and drill
+
+
+somewhere. And so AI's been super
+
+
+helpful with that, right?
+
+
+>> But then you get into a situation where
+
+
+everyone's a copycat in oil and gas, and
+
+
+they want to do it, too. and you go to
+
+
+the next place and they have absolutely
+
+
+no data that's findable or connected and
+
+
+so then they get into that whole like
+
+
+all right so now we have like three
+
+
+years of data engineering before we can
+
+
+do anything right
+
+
+>> right
+
+
+>> and so it's like how do you parse that
+
+
+down and do small things so that you
+
+
+don't have to wait so that becomes more
+
+
+of the focus is tangible outcomes
+
+
+quickly
+
+
+>> yeah I think that's an important point
+
+
+right like the data is really the
+
+
+foundation of all of this. And for those
+
+
+companies that have maybe these
+
+
+proprietary data sets, their ability to
+
+
+do meaningful things with it goes up.
+
+
+>> Uh, and those that that maybe haven't uh
+
+
+rationalized their data or or haven't
+
+
+acquired the same levels of data,
+
+
+they've still got quite a bit of runway
+
+
+to cover before they're going to be able
+
+
+to to kind of do something meaningful
+
+
+with it.
+
+
+>> Yeah. How often do you see companies
+
+
+that are past that?
+
+
+>> Not very often. You know, there's
+
+
+there's a lot of them. We were just
+
+
+talking earlier about how having
+
+
+proprietary data sets is going to be a
+
+
+differentiator as we move forward. And
+
+
+so thinking about in your organization
+
+
+where does our data live where is it you
+
+
+know the data coming into us and maybe
+
+
+the data going out like is there
+
+
+something in between that we can do
+
+
+that's meaningful with that that becomes
+
+
+that business differentiator. You talked
+
+
+earlier about uh you mentioned co-pilot
+
+
+as a company is looking at going to
+
+
+either going all in on a platform or
+
+
+maybe and and saying we are you know
+
+
+Microsoft shop we're doing co-pilot or
+
+
+we're a Google shop and we are doing
+
+
+Gemini versus going and picking one-offs
+
+
+and like best of breed tools to do some
+
+
+of this work like what are you seeing in
+
+
+terms of customers going one or the
+
+
+other and how are they weighing that
+
+
+out? Yeah, I mean it just depends on the
+
+
+maturity. So there's companies that are
+
+
+in the experimentation mode and they're
+
+
+going to go with whatever is the most
+
+
+popular because they just haven't done
+
+
+enough stuff to say, "Oh, I like this
+
+
+model for this thing a lot better than
+
+
+that model for that thing because they
+
+
+haven't tried all these models for
+
+
+everything yet." It just takes time to
+
+
+be able to do it. And then there's
+
+
+companies who have gone from
+
+
+experimentation into real deliberate
+
+
+practice. So you look at like improving
+
+
+internally. We've got 3,000 plus
+
+
+engineers and we've got these a
+
+
+improving AI roundtables that they run
+
+
+every week and you get in there and you
+
+
+listen to it and there's always someone
+
+
+presenting something that they've been
+
+
+experimenting with
+
+
+>> and they go all right well so I'm trying
+
+
+to solve this problem and I you know I
+
+
+start with claude and then that gets
+
+
+into cursor and then cursor hands off to
+
+
+wind surf at this point because I like
+
+
+the way windsurf does this a little bit
+
+
+better than the cursor does this and
+
+
+obviously I'm not a technical guy but I
+
+
+sit in every single one of I'm just
+
+
+like, how do you guys have enough time
+
+
+>> to figure out which model works best for
+
+
+this thing? And it's always like these
+
+
+small returns that you get with the way
+
+
+these things are built. Then all of a
+
+
+sudden, one of them gets updated and it
+
+
+becomes the best at that part now and it
+
+
+gets put there. And they all talk about
+
+
+this stuff and it's like once you have a
+
+
+deliberate practice, you're going to use
+
+
+a ton of different models, you know, to
+
+
+accomplish certain things because you're
+
+
+putting together workflows. You don't
+
+
+just have like an agent that does
+
+
+something. You've got agents that are
+
+
+put into workflows and skills that
+
+
+you've built that are in, you know, a
+
+
+repository that you can go and say,
+
+
+"Hey, we've got a common task that we
+
+
+always have to do." For instance, with
+
+
+our software development product, let me
+
+
+grab that skill, put it in my code, move
+
+
+on. So that that happens at that point,
+
+
+right? And so the answer is depends on
+
+
+your maturity. You're going to start
+
+
+with a few and then you're going to move
+
+
+on to a ton of them.
+
+
+>> Yeah. And there is going to be a lot of
+
+
+that experimentation. But I I think your
+
+
+point about the the round table is is
+
+
+creating a communication channel for how
+
+
+do you share what it is you're learning
+
+
+like you can't be on all models at all
+
+
+time like nobody has that kind of
+
+
+capacity and so how do we aggregate all
+
+
+of our learnings and learn from each
+
+
+other becomes really important for
+
+
+accelerating everybody. I was reading
+
+
+earlier about uh just h how many folks
+
+
+have taken and and you mentioned like
+
+
+one claude. It was like, okay, so one
+
+
+claude, well, how expensive is it when
+
+
+I'm I have five of those running or 10
+
+
+of those running and they're doing a
+
+
+bunch of different things and, you know,
+
+
+running around and and doing various
+
+
+tasks and workflows, experimentation can
+
+
+get really expensive. And so drawing
+
+
+that back to how are we going to see
+
+
+ROI, I think you're only going to see
+
+
+ROI in the narrow. And so that's why
+
+
+that what's our expectations, what's the
+
+
+experimentation that we're trying to
+
+
+build towards an innovation. You've got
+
+
+to narrow that focus if you really want
+
+
+to see ROI because right now you can
+
+
+burn tokens which is literally burning
+
+
+money. Um you can burn tokens on all
+
+
+kinds of different things and you're
+
+
+learning but you're not necessarily
+
+
+developing business value.
+
+
+>> Yeah. And I think it goes back to
+
+
+business value and the values of the
+
+
+company in general, right? Because
+
+
+otherwise it's like you're saying,
+
+
+"Well, I don't know if it if a $1,500
+
+
+computer is really
+
+
+a risk we should take with a new
+
+
+employee." It's like obviously everyone
+
+
+needs that, right? Right.
+
+
+>> So, if you're going like, "Should we
+
+
+spend these tokens or not?" Then that
+
+
+inherently means you have no idea what
+
+
+the value of the thing is that you're
+
+
+going to build out of the end of it
+
+
+because otherwise you'd be like, "Yeah,
+
+
+we can spend that because I know what
+
+
+we're going to get and that's worth it."
+
+
+Right? So the experimentation without
+
+
+any kind of like direction or value that
+
+
+you think you're going to get, you're
+
+
+always going to be like, I don't know if
+
+
+I want to spend that kind of money.
+
+
+>> Well, I was talking talking to Devlin
+
+
+the other day around the spend that
+
+
+improving is putting into AI and him
+
+
+going and getting approval from
+
+
+who he has to get approval from and
+
+
+making that argument. And I mean, it's a
+
+
+big number, right?
+
+
+>> Yeah. And so it's very easy to show the
+
+
+return on that number, but it's kind of
+
+
+crazy to go and start like letting
+
+
+tokens go crazy with these different
+
+
+groups if you don't tie it back to
+
+
+value. So if you think about like
+
+
+company values, like customerf facing
+
+
+companies, SAS companies, companies have
+
+
+commercials on TV, they sell you stuff,
+
+
+their value is going to be focused on
+
+
+trust and transparency with customers.
+
+
+So
+
+
+if you just go backwards from those two
+
+
+things and you say how is AI going to
+
+
+take us a little bit more towards that
+
+
+in our journey or in the service
+
+
+offering that we have then you can start
+
+
+to say okay that goes backwards in this
+
+
+way and you can tie spending to that
+
+
+right industrial companies like I work
+
+
+with in Houston auditability control
+
+
+their regulated environments safety
+
+
+right things like that that's a whole
+
+
+different discussion on what I should
+
+
+spend money with AI.
+
+
+>> Yeah.
+
+
+>> You know, when those are the things that
+
+
+you want to maximize. Now, obviously
+
+
+maximizing returns on like finding oil
+
+
+is another one, but you know, regulatory
+
+
+control, things like that are important.
+
+
+Then you get to like innovationled
+
+
+firms, they're going to accept a much
+
+
+higher risk, right, than like a
+
+
+industrial company would. So those
+
+
+people have a a totally different spend
+
+
+in mind. and and justification. So, it
+
+
+kind of goes back to what are we really
+
+
+trying to do and what is value for us
+
+
+and you can kind of see like, okay,
+
+
+we're probably going to be a a mid or a
+
+
+high spender or a lower spender. So, you
+
+
+talked about how it can kind of drive
+
+
+you towards these positive things,
+
+
+right? Like trust and transparency. Do
+
+
+you have an example of where it's gone
+
+
+badly and it's driven the other way?
+
+
+like it's reduced trust or maybe create
+
+
+created chaos or challenges.
+
+
+>> Well, I mean, I was thinking on the way
+
+
+here, a lot of our customers have values
+
+
+that go against
+
+
+laying people off because we did AI. And
+
+
+so, one of the big things people talk
+
+
+about is like, I mean,
+
+
+when we optimize with this, like, does
+
+
+that mean we should look at these
+
+
+layoffs because we don't want to do
+
+
+that? That's not part of our values.
+
+
+And so I started thinking about that
+
+
+scenario and you know made me think of
+
+
+meta with Mark Zuckerberg who was like
+
+
+you know I think AI is basically going
+
+
+to be the replacement of middle
+
+
+engineers down right
+
+
+>> he did like 5,000 layoffs and said it
+
+
+was like the lower performers and we're
+
+
+going to move people to different
+
+
+places. But when you look at their
+
+
+values,
+
+
+they kind of sum them up as
+
+
+people build great products. That's one
+
+
+of them. Long-term impact over
+
+
+short-term optimization.
+
+
+>> Okay?
+
+
+>> Right? And then empowering individuals
+
+
+to do their best work.
+
+
+>> So people are in those.
+
+
+>> So you think about people people, right?
+
+
+If you think about people build great
+
+
+products, are you putting AI in to
+
+
+amplify the people you already have
+
+
+or
+
+
+is it being used to optimize headcount?
+
+
+Right? Those are two different ways that
+
+
+you could look at that. And there's this
+
+
+promise of like software never ends,
+
+
+>> right? So you almost have like a
+
+
+responsibility to come up with more
+
+
+stuff for your software to do.
+
+
+Otherwise, you're going to end up losing
+
+
+people because you accomplish the end
+
+
+really fast now. Meta is a company
+
+
+that's never going to be at the end of
+
+
+their software. Right? But if you are a
+
+
+company who's not in the software
+
+
+business and there is like I just need
+
+
+to get it here and I can run my
+
+
+business, you got to start thinking
+
+
+about like what does that mean for our
+
+
+software team? Well, but I think and
+
+
+I've used that phrase before, right?
+
+
+That no software is ever finished,
+
+
+right? And uh I would say in technology,
+
+
+no technology is ever finished. And
+
+
+every dollar of revenue in every company
+
+
+I'm aware of runs through technology at
+
+
+this point. But I would say that um as
+
+
+you're looking at this and how it's
+
+
+impacting your people, I think it was
+
+
+Satia that was quoted as saying like AI
+
+
+is not going to replace you. people
+
+
+using AI might replace you,
+
+
+>> right?
+
+
+>> And so that's where we need to look at
+
+
+and say how how are we accelerating our
+
+
+folks? How are we growing them? Um to
+
+
+your point earlier about,
+
+
+you know, the responsibility of coming
+
+
+up with more things. I don't know if
+
+
+it's so much of a responsibility as just
+
+
+like a natural occurrence. You know, if
+
+
+you wave the magic AI wand and you
+
+
+cleared the entire backlog,
+
+
+the next day the product manager is
+
+
+going to show up and be like, "I had an
+
+
+idea, right?" Or, "I thought of this or
+
+
+whatever." And and it'll get filled up
+
+
+again. And there'll be things for us to
+
+
+do. We're just moving to the next higher
+
+
+level problem or the next higher level
+
+
+of complexity of feature of opportunity.
+
+
+You know, the markets are dynamic. They
+
+
+continue to shift. people continue to
+
+
+innovate and find new ways to do things.
+
+
+And so I agree. I think that as we are
+
+
+accelerating and seeing these
+
+
+efficiencies show up in our business,
+
+
+the opportunity to invest that
+
+
+efficiency back into something
+
+
+meaningful to the business goes up.
+
+
+That's a lot harder to think about when
+
+
+you're, you know, when we're staring the
+
+
+same things that we've been looking at,
+
+
+you know, for the last however long.
+
+
+staring that in the face. It's hard to
+
+
+think beyond that. I think we're going
+
+
+to have to find those opportunities as
+
+
+we get to them.
+
+
+>> Yeah. And it's funny because, you know,
+
+
+back when we started doing predictive
+
+
+maintenance, it was like, what's the
+
+
+hard ROI of this,
+
+
+>> right?
+
+
+>> Go, oh, well,
+
+
+>> it kind of means you don't
+
+
+>> people are going to have so much more
+
+
+time to do stuff because the thing is
+
+
+telling them what to go fix now, so it
+
+
+doesn't take as long later.
+
+
+>> Yeah.
+
+
+>> They go, "Well, what kind of stuff?" you
+
+
+know like well
+
+
+>> well just a lot more time in the day and
+
+
+they go that's soft ROI hard ROI is how
+
+
+many less people can do the same amount
+
+
+of work right
+
+
+>> right
+
+
+>> so it's the same thing now and I'm
+
+
+wondering like and people have asked me
+
+
+this if we go down the route of AI in
+
+
+terms of organizational change
+
+
+management
+
+
+what do we owe our people on the other
+
+
+side of that to make sure that they are
+
+
+tasked with things to do because we're
+
+
+going to remove a lot stuff. So that's
+
+
+like a almost like a creative ask from
+
+
+management,
+
+
+>> which is a really hard ask, right? Help
+
+
+help me think about if I give you 30%
+
+
+more capacity, what would you invest it
+
+
+in? And it's like, yeah, I don't know.
+
+
+Like that's a great question. I think
+
+
+that there's another aspect of this that
+
+
+that you kind of touched on. You know,
+
+
+the people we have in our business today
+
+
+know our business, right? So they have
+
+
+some domain knowledge around that
+
+
+business. If I take someone and I give
+
+
+them 30% more time or um capacity like
+
+
+what are the skills that they have the
+
+
+abilities they have that are meaningful
+
+
+to the business that would show value
+
+
+that back to that business value right
+
+
+that would show business value for them
+
+
+to use that time meaningfully.
+
+
+>> So who comes up with that? Do those
+
+
+people need to tell you that or do you
+
+
+need to tell them?
+
+
+>> I don't know. That's the question,
+
+
+right? I I think they're they would say
+
+
+the responsibility is on the manager
+
+
+because I don't know, you know, I don't
+
+
+I don't have the purview over the whole
+
+
+business. Like those are the higherups
+
+
+and you all should come up with it. But
+
+
+I think there's also potentially a
+
+
+disconnect between the folks that are
+
+
+doing the work. Like if you ask the
+
+
+higherups like what do you do dayto-day
+
+
+or what does this person do dayto-day?
+
+
+They're like I think they're in payroll.
+
+
+I think they're in HR. you know, like do
+
+
+they actually know the things that their
+
+
+people do on a regular basis? So then
+
+
+they can better direct where that goes.
+
+
+It might be the difference between like
+
+
+bottom up management and top down
+
+
+management.
+
+
+>> And I mean there's an idea right where I
+
+
+ask, you know, to to go right back to
+
+
+them. Do you look at AI as an
+
+
+empowerment tool or an extraction tool?
+
+
+>> It's good framing.
+
+
+>> Sometimes the answer is an extraction
+
+
+tool like we are lowering budgets.
+
+
+market is such a way that we have to do
+
+
+this with less people. How do we do
+
+
+that? That's an honest approach, right?
+
+
+Right. And then you can go from there.
+
+
+It's an empowerment thing. Now, we've
+
+
+got a little bit of consulting to do
+
+
+with each other. Like, okay, what do we
+
+
+owe our people? And sometimes I ask
+
+
+myself too, if I'm an employee,
+
+
+am I entitled to AI from my company? Is
+
+
+that a responsibility that my company
+
+
+owes me?
+
+
+>> It's an interesting question.
+
+
+>> You know, because if I want it, do they
+
+
+have to give it to me? Is that something
+
+
+that I should expect them to do? Because
+
+
+if you think about it, if you go into a
+
+
+company and they have nothing, are you
+
+
+immediately like
+
+
+this place is going to get optimized
+
+
+soon. What does Yeah.
+
+
+>> for some of these people I'm looking at?
+
+
+>> Or is it my responsibility to bring it
+
+
+to bear, right? I I think about my my
+
+
+brother who is a mechanic. As a
+
+
+mechanic, when you show up to the job,
+
+
+you bring your mechanic's toolbox. Like
+
+
+that's what you need to do your job.
+
+
+like does this become part of
+
+
+everybody's toolbox where I might show
+
+
+up to this place and and they have no AI
+
+
+strategy whatsoever which should
+
+
+probably tell you something about them
+
+
+uh like you said but then if they don't
+
+
+like do I show up am I responsible to
+
+
+bring it myself you know as tools of my
+
+
+trade well and I think that's going to
+
+
+be a hiring thing going forward is like
+
+
+can we attract top talent for instance
+
+
+at a software company if we've said good
+
+
+news everyone gets GitHub copilot and
+
+
+you go, "What else do we get?" Right.
+
+
+Right.
+
+
+>> It's kind of like showing up at the
+
+
+furniture factory and all the wood is on
+
+
+the floor and they're like, "We give you
+
+
+guys power drills." You're like, "Well,
+
+
+I'm kind of have to like do more stuff
+
+
+before I can use that yet."
+
+
+>> Yeah. Like, can we have more stuff than
+
+
+that? And so, companies now are really
+
+
+like trying to adopt this stuff and
+
+
+become deliberate in the way that they
+
+
+use it with these communities of
+
+
+practice because otherwise they can't
+
+
+attract top talent anymore. So, if that
+
+
+becomes a value, we have the best
+
+
+people. you almost have no choice but to
+
+
+adopt the newest tools, potentially
+
+
+optimize your workforce, meaning
+
+
+layoffs, because you have to be that way
+
+
+for the best talent that's coming in.
+
+
+>> And I think there's a group of people,
+
+
+you mentioned layoffs, they want to
+
+
+believe that there will be zero layoffs.
+
+
+No, nobody's going to lose their job.
+
+
+That's not entirely true. I think it's
+
+
+important that executives be honest
+
+
+about, hey, we are working to make the
+
+
+business better. And sometimes the
+
+
+business getting better means we need
+
+
+different people. The propensity that I
+
+
+see though is AI gets blamed. You know,
+
+
+with Amazon announcing last last year
+
+
+that they were laying off 30,000 people,
+
+
+right? They laid off 14 in November.
+
+
+They just laid off the other 16. Well,
+
+
+it was interesting to me. I saw the
+
+
+headline yesterday, you know, 16,000
+
+
+people laid off because of AI
+
+
+inefficiency. But then if you read what
+
+
+he actually said, it was this is not
+
+
+about AI. This is about the fact that I
+
+
+guess they had they had hired a 100,000
+
+
+people in 2020, right? Because the
+
+
+pandemic and the boom and all this sort
+
+
+of thing. It's way easier to say, well,
+
+
+it's AI's fault or it's an efficiency
+
+
+fault rather than no, like we're
+
+
+correcting a business decision.
+
+
+>> Yeah, the rationalizing business and
+
+
+that's a lot harder message to carry as
+
+
+someone who's responsible for those
+
+
+decisions. But I think it's important
+
+
+that you know you talked about trust and
+
+
+transparency that you be honest about
+
+
+this is why this is happening and yes
+
+
+you can consider some of the people for
+
+
+are these folks that we can upskill. is
+
+
+their ability to grow these roles to
+
+
+these additional tasks for efficiencies
+
+
+or no, you know what, we can reduce our
+
+
+workforce. And not that you're
+
+
+necessarily being extractive like you
+
+
+were talking about, but you're being a
+
+
+realist about where your business is and
+
+
+where it needs to go to continue to be
+
+
+competitive in the future. We get
+
+
+brought in with questions and it becomes
+
+
+evident really quickly whether a company
+
+
+is lacking in the leadership traits of
+
+
+like confidence, inspiration,
+
+
+innovation,
+
+
+trying new things or if they're lacking
+
+
+on the manager side of like, wow, what a
+
+
+great innovative idea. Let's put the
+
+
+plan together and execute it,
+
+
+>> right?
+
+
+>> You know, so sometimes it's like, what
+
+
+can we even do with AI? Nobody's telling
+
+
+us. Nobody's being creative and showing
+
+
+us like you should try these things that
+
+
+you've never thought of before. Well,
+
+
+immediately you're like we need some
+
+
+leaders to come in here who are
+
+
+inspirational,
+
+
+innovative, super confident. We're going
+
+
+to roll some stuff out. And sometimes
+
+
+it's like, I see the billion dollar
+
+
+company with one engineer that does AI,
+
+
+right? Let's be that.
+
+
+>> Yeah.
+
+
+>> But nobody knows how to implement that.
+
+
+It's like never going to happen, right?
+
+
+Right?
+
+
+>> So then it just hits a wall one way or
+
+
+the other. So it's important that
+
+
+companies recognize where they're
+
+
+lacking in that sense because once you
+
+
+fill both sides, you can actually move
+
+
+versus being stuck all the time. And
+
+
+that's where these, you know, a lot of
+
+
+consultancies back up the truck and
+
+
+they'll stay with you forever.
+
+
+>> Yeah.
+
+
+>> Because they're just in the me with you
+
+
+going like, I totally agree. this group
+
+
+can't implement your awesome ideas or I
+
+
+totally agree this group can't come up
+
+
+with anything great and everybody's
+
+
+there forever and nothing really
+
+
+happens. See that so often
+
+
+>> they're more interested in the
+
+
+commiseration than actually addressing
+
+
+like
+
+
+>> yeah and it's just not possible to move
+
+
+from either great ideas to implementing
+
+
+those ideas or we're ready to implement
+
+
+and we just don't have ideas.
+
+
+>> The dichotomy of manager versus leader
+
+
+and that the business needs both, right?
+
+
+You got to have the visionary, the
+
+
+person that's going to paint the
+
+
+picture, but you also got to get the
+
+
+person that's like going to get the
+
+
+paint, get the canvas, like actually
+
+
+make sure that this stuff happens and
+
+
+and there's delivery of what it is we're
+
+
+working towards. That's an important
+
+
+part that I think you touch on there is
+
+
+making sure that you have the ideas,
+
+
+right? You have the what could we do and
+
+
+the inspiring aspirational type
+
+
+ideations are really important but then
+
+
+to figure out what is it we're going to
+
+
+do first like what is it we're going to
+
+
+try first where are experiments the ROI
+
+
+is only going to come out of the
+
+
+execution right there's no ROI in
+
+
+ideiation right you just end up with
+
+
+like a laundry list that's not helpful
+
+
+yeah and so to to drive back to the ROI
+
+
+you've got to figure out what is it
+
+
+we're going to start with what is
+
+
+expectation like what are our measures
+
+
+and then go from there.
+
+
+>> Yeah. And we've got a client that does
+
+
+both sides really well. Okay. We've got
+
+
+uh an amazing company out of Chicago uh
+
+
+that's actually a nonprofit consortium
+
+
+for people that make food.
+
+
+>> So this is the Institute of Food
+
+
+Technologists. Their members come to
+
+
+them for
+
+
+integrity,
+
+
+scientific approach,
+
+
+factual information. Right?
+
+
+>> Okay.
+
+
+>> That is that is their values in a
+
+
+nutshell.
+
+
+>> Very grounded.
+
+
+>> Not only do we have the best smartest
+
+
+people, but we've got integrity around
+
+
+our scientific approach and the data
+
+
+that you get from us is going to be real
+
+
+and trustable data. And so you have, you
+
+
+know, people that work at Pepsi and
+
+
+General Mills and all these people that
+
+
+are making the new Pepsi, the new Kind
+
+
+Bar, the new cereal, and it's got to be
+
+
+vegan. So if I'm creating these recipes,
+
+
+something has to be vegan. Now, I'm
+
+
+going to the FDA and I'm looking at the
+
+
+latest guidance on what vegan counts as.
+
+
+Right. Right.
+
+
+>> But then I'm also looking at, okay, they
+
+
+also want it to, you know, be okay for
+
+
+nut allergies, so I'm I'm finding ways
+
+
+to remove peanuts and things like that
+
+
+>> and hopefully still taste good. and
+
+
+hopefully still taste good, right? And
+
+
+so there's certain ingredients and
+
+
+chemicals that are out there that are
+
+
+incredible products by these companies.
+
+
+And so,
+
+
+>> you know, we go to startup events and
+
+
+it's usually software related. Their
+
+
+startup events and their hackathons and
+
+
+things like that are with these
+
+
+companies that build food additives and
+
+
+and different things like that. They're
+
+
+very innovative. And so you might have
+
+
+something that's completely vegan that
+
+
+tastes like meat that you can add to a
+
+
+product and you know go forward with
+
+
+that taste that you need but meeting all
+
+
+of these stipulations and sometimes
+
+
+those companies are hard to find. So, as
+
+
+you're building these recipes within the
+
+
+tool that this company has built, it's
+
+
+recommending different ingredients that
+
+
+are going to help you get to that final
+
+
+piece, but it's also looking at a
+
+
+marketplace of vendors that you may not
+
+
+have ever known about and going,
+
+
+actually, this innovative product would
+
+
+solve your problem, and here's a direct
+
+
+line to that company, so you can go
+
+
+order that. Right now, this company, the
+
+
+institute, get back to my original
+
+
+point, has scientists
+
+
+creating content. They have trainers
+
+
+that go and and create these amazing
+
+
+videos to help you learn things. And
+
+
+this is all available from their website
+
+
+as long as you're a member of the
+
+
+consortium and it's just managed
+
+
+incredibly well. Now, on the other side
+
+
+of that, they look at membership
+
+
+numbers. They go, technology is the
+
+
+thing now. AI is the thing now. Let's
+
+
+build this tool that's going to be the
+
+
+face of our institution that leverages
+
+
+AI to help our members in the context of
+
+
+their work do it better, do it faster,
+
+
+do it more accurately, and at the same
+
+
+time, let's make the companies that that
+
+
+do this food that are associated with us
+
+
+get married up with these guys. And it's
+
+
+literally a win-win across the board.
+
+
+Yeah,
+
+
+>> it's a perfect example of we have
+
+
+innovative ideas and leaders who can
+
+
+make things happen with we have people
+
+
+who manage the back end of that
+
+
+incredibly well and make sure we stick
+
+
+with our values.
+
+
+>> And it sounds like this tool is is great
+
+
+because it's both researcher and
+
+
+collaborator. Right.
+
+
+>> Right. So you're getting like you said
+
+
+both sides of that where it was like oh
+
+
+you didn't know about X Y and Z and you
+
+
+know what if what if what if? Um, and
+
+
+it's really easy to make architectural
+
+
+decisions with a company like that
+
+
+because they say, "Look, we don't want
+
+
+to necessarily have these agents within
+
+
+our tool go way out to the internet and
+
+
+come back and hallucinate things. Let's
+
+
+keep it within our, you know, 80 years
+
+
+of historical data that we have in these
+
+
+scientific journals and make sure that
+
+
+we reduce that because that is core to
+
+
+our values." Now, there could be other
+
+
+companies that would say maybe there's
+
+
+something out there that we don't have
+
+
+and that's okay to put in here because
+
+
+the person might get an answer that
+
+
+wouldn't be a scientific company. It may
+
+
+be a different one, but it helps you
+
+
+understand how to architect things.
+
+
+>> I had a David bar for the first time
+
+
+this weekend. I don't know if you've
+
+
+seen these new It's a protein bar. I'm a
+
+
+protein bar.
+
+
+>> You bought that cuz it's a David bar.
+
+
+>> Of course, I bought it cuz it was a
+
+
+David bar. But protein bars, you know,
+
+
+I'm gluten-free, so about half the time
+
+
+they taste terrible. Like they're awful.
+
+
+And and you you take a bite out of it
+
+
+and you're always like like clenched for
+
+
+that first bite like is this going to be
+
+
+awful? Turned out it was good. I enjoyed
+
+
+it. It was the cake batter one. It
+
+
+wasn't quite like cake batter, but it
+
+
+was still good.
+
+
+>> Can't mess that up.
+
+
+>> Yeah. And so I had had that for the
+
+
+first time. So I'm wonder I got to find
+
+
+out whether or not they uh they're
+
+
+members of IFA. Maybe
+
+
+>> you should look.
+
+
+>> Maybe use the use the tool. um to make a
+
+
+better product. So you mentioned Agentic
+
+
+and everybody's talking about kind of
+
+
+Agentic is the the next thing. What is
+
+
+it that you're hearing from customers as
+
+
+they're thinking about Agentic? Is it is
+
+
+it an approach? Is it a mindset? Like
+
+
+draw a little bit of a picture around
+
+
+what you're seeing about Agentic.
+
+
+>> Yeah. So agents aren't that new anymore.
+
+
+Everybody kind of gets it, right?
+
+
+Whether you've put agents together in
+
+
+Copilot Studio, you know, that are like
+
+
+super easy, like I'm just going to tie a
+
+
+Teams channel to a SharePoint folder so
+
+
+I can ask it stuff. Most people have
+
+
+like tinkered around with this stuff and
+
+
+made little agents for themselves. What
+
+
+we've found that's kind of getting weird
+
+
+though is the software development life
+
+
+cycle. For the longest time, it was
+
+
+like, oh, you got to go to agile, right?
+
+
+Right? We got to go to scrum and we got
+
+
+to be like super fast moving and kind of
+
+
+edit things as we go, but the product
+
+
+gets launched to the market faster. We
+
+
+get customer feedback faster and we're
+
+
+moving, right? As opposed to let's write
+
+
+all the documentation for this product
+
+
+for 6 months before we start anything
+
+
+and then by then it's obsolete or
+
+
+whatever, right? In that waterfall
+
+
+style. What we're seeing is you don't
+
+
+need scrum and agile to be fast anymore
+
+
+because of AI.
+
+
+>> Okay? So you can actually return to that
+
+
+almost waterfall style where you use
+
+
+agents to meet with stakeholders and
+
+
+customers and frame out your product
+
+
+incredibly quickly because you can
+
+
+transcribe a conversation,
+
+
+have AI write a product backlog, parse
+
+
+out user stories and acceptance criteria
+
+
+from that, ask it to estimate stories,
+
+
+kind of give you a sense of how long
+
+
+it's going to take. And by the way,
+
+
+while I'm sitting next to you, I'll I'll
+
+
+do some UI to make sure I know what you
+
+
+meant.
+
+
+>> And you can say, "Oh, that screen is
+
+
+more than what I thought than that one."
+
+
+Right? Things that would take months to
+
+
+do in the past.
+
+
+>> So again, it's compressing that work.
+
+
+It's accelerating us.
+
+
+>> It's compressing that. But while you're
+
+
+doing that, you're also building your
+
+
+agents that the software developers are
+
+
+going to essentially oversee that are
+
+
+going to build this product for you. So
+
+
+you're doing some work up front like in
+
+
+a big lump and then you're just like
+
+
+taking off like a rocket ship from
+
+
+there.
+
+
+>> Yep.
+
+
+>> And so the question is like what do our
+
+
+teams look like now?
+
+
+>> Right.
+
+
+>> Because we are used to scrum master UX
+
+
+developer QA and these are specialists
+
+
+that have their specialties. their life
+
+
+is built around like I'm a QA engineer
+
+
+and that's what I do right going forward
+
+
+a QA engineer could write tests give it
+
+
+to AI and say give me code that
+
+
+accomplishes these tests and makes them
+
+
+pass
+
+
+>> so it starts to kind of put fingers into
+
+
+each other's cross functional
+
+
+>> they start to blend right so we look at
+
+
+it now more as teams that are made up of
+
+
+product definers and teams that are made
+
+
+up product definers and product builders
+
+
+Okay,
+
+
+>> a product builder could be a developer,
+
+
+could be a QA, could be a combination of
+
+
+both. A definer could be a developer who
+
+
+is generating UI code to help define the
+
+
+product, right? But it all kind of
+
+
+blends together and you get from like an
+
+
+8 to 12 person team to a four to five
+
+
+person team of definer builder
+
+
+and that becomes really interesting and
+
+
+you're moving way faster,
+
+
+>> right? And then if you're in an
+
+
+enterprise, you have multiple teams,
+
+
+you've got a layer underneath of, you
+
+
+know, people engineering the platform
+
+
+and they're giving you things that they
+
+
+build to help with dev sec ops, right?
+
+
+Security reviews and, you know, all the
+
+
+things that you need to do to get to
+
+
+production and things like that. And
+
+
+they can enable a bunch of teams with
+
+
+what agents they're building.
+
+
+>> Now, you said the team goes from eight
+
+
+to four. And a lot of people hear that
+
+
+as, oh, you got rid of the other four
+
+
+people, but it's not. Now we have two
+
+
+teams of four and now we're working on
+
+
+two problems, not one problem.
+
+
+>> And again, it might work.
+
+
+>> It might not be that we got rid of the
+
+
+other four.
+
+
+>> Could be that depends on that company,
+
+
+right?
+
+
+>> And there are a lot of companies that
+
+
+are saying let's get rid of the other
+
+
+four. There's a lot of other companies
+
+
+that are saying like we've got way too
+
+
+much work and our executives that are
+
+
+demanding what we do this year have
+
+
+started using AI and their expectations
+
+
+are now way different than they were two
+
+
+years ago. And I don't have the money to
+
+
+hire anyone new. The only thing I can do
+
+
+is turn to you guys and ask you, can you
+
+
+save me with AI?
+
+
+>> Well, I think about the organizations
+
+
+that over the last five, six years,
+
+
+right, have been constrained, whether
+
+
+that's budgetary constraints or people
+
+
+constraints, like there's been this
+
+
+constraint
+
+
+of we need to get more done with less,
+
+
+more done with less, more done with
+
+
+less. and like all of that pent up
+
+
+energy and and pent up ideas like maybe
+
+
+this this clears the loggerhead and we
+
+
+do see more opportunity to build things
+
+
+that they were like oh yeah we're not
+
+
+getting that done for two years well no
+
+
+turns out we can start that Q2 well and
+
+
+that's the thing right is that most
+
+
+people who are funding software
+
+
+development are so jaded by that like
+
+
+yeah I know we said it would be 6 months
+
+
+but then this thing was in the code and
+
+
+we were trying to modernize it and we
+
+
+nobody could have known and now it's
+
+
+going to be 18 months.
+
+
+>> Okay,
+
+
+>> everyone's jaded by that. So, they just
+
+
+don't want to fund that kind of stuff
+
+
+and it gets put to the side and things
+
+
+get old and then eventually you bite the
+
+
+bullet and do the thing that's 3x what
+
+
+you thought it would be.
+
+
+>> Yeah. The tab comes due, right?
+
+
+>> The tab comes due. But that stuff is is
+
+
+getting derisked now because you can use
+
+
+agents to go look at an old codebase,
+
+
+tell you exactly the plan to modernize
+
+
+it. In a couple of days, that agent or
+
+
+set of agents knows that codebase better
+
+
+than any human could. Even the ones that
+
+
+built it 15 years ago
+
+
+>> because it can carry all that context.
+
+
+>> It just carries that context. And from
+
+
+that, you can start to extract product
+
+
+backlogs. you can really estimate effort
+
+
+off of that in a way that you've taken
+
+
+dependencies into account, integrations
+
+
+into account. Now you can go back and
+
+
+say honestly with traditional
+
+
+development I would have thought this
+
+
+would take 18 months. It looks like
+
+
+using these agents and really like
+
+
+looking at this thing it would have
+
+
+taken 36 with traditional development.
+
+
+So I would have been way off. we're
+
+
+going to use AI enabled engineers and
+
+
+it's going to be eight months. And if
+
+
+you do conversations like that, way more
+
+
+projects are going to come out of the
+
+
+woodwork than you ever had before, which
+
+
+is where your other developers end up
+
+
+going. So, I think there's going to be a
+
+
+reinvigoration
+
+
+of people building software at their
+
+
+organizations. Yeah.
+
+
+>> Where they just didn't want to do it
+
+
+before. More projects,
+
+
+people have a place to go
+
+
+>> and derisked like you were saying. I do
+
+
+agree. I think we're going to see a big
+
+
+growth in in projects. Going back to
+
+
+Aentic and some of the high-profile ones
+
+
+that we've seen go badly. So, the Air
+
+
+Canada chatbot that was giving away free
+
+
+seats, uh, Replet, the assistant that
+
+
+like deleted the production database and
+
+
+created a total mess there. What are the
+
+
+lessons or the things that organizations
+
+
+that are like, "Okay, we're going to go
+
+
+in on this and we're going to lean into
+
+
+that growth, right? And we're going to
+
+
+take those things that now it's going to
+
+
+take eight months instead of 36." Like
+
+
+what are some of the guard rails that
+
+
+they might need to put in place to make
+
+
+sure that they don't become an Air
+
+
+Canada?
+
+
+>> I mean, I think it's exceptionally rare
+
+
+that those things would happen, but it's
+
+
+not out of the realm, right? One of the
+
+
+most popular things that we see that's
+
+
+also really risky that I'll say is way
+
+
+more popular than that kind of stuff.
+
+
+>> Yeah.
+
+
+>> Is we implemented chat bots and agents
+
+
+here that help people out, but we didn't
+
+
+decide who gets to see what. So now
+
+
+everybody sees like the CEO's salary and
+
+
+stuff like that, right? Because you just
+
+
+didn't decide who can see what kind of
+
+
+stuff. And so now it's like,
+
+
+>> you know, very highlevel documents can
+
+
+be searched and seen. It just answers a
+
+
+question for someone at a lower level
+
+
+that's like, "Oh, crap." Right.
+
+
+>> Yeah. The way I frame that, you know,
+
+
+people say, "Oh, security, right? We
+
+
+should talk about security." And when
+
+
+you say that, they think about security
+
+
+like what data is leaking out.
+
+
+>> Yeah.
+
+
+>> And I'm like, "No, no, you're leaking
+
+
+data in.
+
+
+>> You just don't even know it." And so,
+
+
+you flip the switch on co-pilot and
+
+
+you're like, "Cool. Now we have
+
+
+Copilot." And you ask Copilot, "Hey, you
+
+
+know, go grab me the Excel spreadsheet
+
+
+that has everybody's compensation
+
+
+package in And it's like, okay, I know
+
+
+right where that is. And nobody's put
+
+
+security in place internally to make
+
+
+sure that those permissions are right.
+
+
+Like, ooh, man, that's bad. Like, that
+
+
+is not good.
+
+
+>> So, stuff like that. I mean, you look at
+
+
+Air Canada and Repid and they all had
+
+
+holes somewhere that somebody didn't
+
+
+think about. And so, you can't stop work
+
+
+to be like, we're going to look at
+
+
+agents now. People have to keep doing
+
+
+what they're doing. And so I think the
+
+
+key to what most people are seeing is
+
+
+bringing in consultants that have seen
+
+
+this kind of stuff where they need to,
+
+
+you know, and having deep learning where
+
+
+you spend time in learning, building
+
+
+agents, understanding the limitations
+
+
+and the risks of those agents and
+
+
+learning what that means to you.
+
+
+Building the agents with people that can
+
+
+point out those risks and make sure that
+
+
+you acknowledge them. then going out and
+
+
+experimenting for a couple of weeks and
+
+
+coming back and sharing that and and
+
+
+building it out a little bit more. This
+
+
+is all allowing you to still maintain
+
+
+your workload,
+
+
+>> right?
+
+
+>> But you're just getting a little bit
+
+
+better as you go. And it goes from basic
+
+
+agents in the field to now we're getting
+
+
+a little more advanced and we're putting
+
+
+workflows and skills together
+
+
+and common repositories for people that
+
+
+maybe just joined the organization
+
+
+because you told them, "Yeah, we have
+
+
+co-pilot, but we have common
+
+
+repositories for agents that are going
+
+
+to do a lot of the simple tasks that you
+
+
+have at this job. They've already been
+
+
+created. There's workflows around those
+
+
+agents, and all you have to do is go
+
+
+grab them and do the stuff." I hear you
+
+
+saying start small and iterate, right?
+
+
+>> Start small and iterate, but while
+
+
+you're working it. Yeah. Because you you
+
+
+got to get your job done, right?
+
+
+>> But you don't want to just like get
+
+
+paralysis by analysis, right? Where
+
+
+you're so afraid that something's going
+
+
+to break. Get people in there who can
+
+
+help you move that can coach and be
+
+
+embedded in the teams that do this stuff
+
+
+all the time.
+
+
+But
+
+
+find vendors and consultancies that you
+
+
+can measure with them how quickly they
+
+
+are actually removing themselves because
+
+
+they're improving your team, right?
+
+
+That's key. And so I'll take it back to
+
+
+something that we were talking about
+
+
+before was, you know, find the five and
+
+
+10x ROI. And I think that the analysis
+
+
+paralysis often times comes from people
+
+
+look at those numbers and they're like,
+
+
+"Oh my gosh, I have to find something
+
+
+huge in order to find that level of
+
+
+ROI." Like, I can't imagine a 10x ROI.
+
+
+Like, we've got to build this crazy
+
+
+complicated system just to get 10x. And
+
+
+I don't think that you need to. I think
+
+
+that you can find those numbers 5 and
+
+
+10x. You can find it just in making, you
+
+
+know, the payroll clerk able to, you
+
+
+know, close out payroll, you know, a day
+
+
+earlier or you can find it in, you know,
+
+
+the software developer like you were
+
+
+saying. If if I'm able then to maybe
+
+
+generate some of this boilerplate code
+
+
+faster, like there's a five and 10x
+
+
+because it's compounded, not just that
+
+
+developer, it's compounded across the
+
+
+team. the those little agents and the
+
+
+the ability to save someone just 15
+
+
+minutes in their day, you're going to
+
+
+see that kind of ROI. Well, yeah, and
+
+
+again, it goes back to your values,
+
+
+right? So if you look at creating
+
+
+customer-f facing AI, if you have a lot
+
+
+of people calling to get things done and
+
+
+you have deprioritized
+
+
+really effective one-on-one conversation
+
+
+for cost and so people wait on the
+
+
+phone, they finally get to someone who
+
+
+may not know the answer. There's
+
+
+multiple calls. You rarely have first
+
+
+call resolution. You can implement some
+
+
+of these AI platforms that immediately
+
+
+answer the phone, know who that customer
+
+
+is, have a wealth of knowledge about
+
+
+existing policies, plus all of the great
+
+
+calls that you've fed it to say, "This
+
+
+is what good looks like in this
+
+
+scenario." And calling a company, they
+
+
+answer immediately.
+
+
+My wife had this scenario not long ago
+
+
+with my son. 1800 contacts.
+
+
+>> Okay. We had a bunch of boxes of
+
+
+contacts left over cuz his prescription
+
+
+changed and they were still on the old
+
+
+one. Like what do we do with these cuz
+
+
+we got new ones. Like I wonder if we can
+
+
+get our money back or what. And so it's
+
+
+like yeah, let's just bite the bullet
+
+
+and try to call this place like
+
+
+>> on speaker while we're on the laptop and
+
+
+just navigate this problem, right?
+
+
+Answer the phone. Person says, "Hello,
+
+
+Miss Johnson. What can I help you with?"
+
+
+Immediately. Yeah.
+
+
+>> Well, my son's prescription changed. Do
+
+
+we have old contacts? I tell you what,
+
+
+why don't you ship those back to us?
+
+
+We'll refund you. We've already got all
+
+
+your info because you order from us, put
+
+
+it in a box, take it to UPS, we'll take
+
+
+care of the rest. Is there anything else
+
+
+I can help with?
+
+
+>> Like, that's customer service at the
+
+
+next level.
+
+
+>> He's like, there's nothing else we can
+
+
+help with. Goes to the end, hey, we
+
+
+would like to let you know this was an
+
+
+AI
+
+
+bot that you just talked to. Can you do
+
+
+a survey? Let us know how that went. And
+
+
+it's like five out of five, right? Yeah,
+
+
+>> that was incredible.
+
+
+>> Wow. Did she know she was talking to an
+
+
+AI?
+
+
+>> Not until I told her it.
+
+
+>> Okay.
+
+
+>> Yeah. I mean, the comment was like,
+
+
+"Customer service isn't dead." Until we
+
+
+found out, well, this is an AI bot.
+
+
+>> This isn't alive either. Okay.
+
+
+>> Yeah. So, it's not alive either, to be
+
+
+fair. That's an example where Yeah.
+
+
+Let's invest in this AI because we are
+
+
+enhancing trust in our company. Right
+
+
+now, if this is a super serious issue
+
+
+and we punt to a person, that's okay. We
+
+
+still do that. That's still part of our
+
+
+core.
+
+
+>> Humans are still available. They're not
+
+
+replaced. It's just they're accelerated.
+
+
+>> But we have maximized the amount of
+
+
+people that we can talk to, fix problems
+
+
+for. I mean, let's be honest, everybody
+
+
+would rather call for 30 seconds than
+
+
+like try to search a website. The only
+
+
+reason we go try to search a website to
+
+
+get things done is because of the
+
+
+problem calling. Right.
+
+
+>> Right. We believe the call is going to
+
+
+be an hour of our life and our blood
+
+
+pressure is going up 40 points.
+
+
+>> Yeah.
+
+
+>> And instead sounds like you 1800
+
+
+contacts got your business for like go
+
+
+forward at this point. I mean it's like
+
+
+I mean jeez
+
+
+>> it's so obvious that that's a good thing
+
+
+to do right.
+
+
+>> I think I'm going to go call.
+
+
+>> Yeah. There you go.
+
+
+>> Now I'm actually excited about getting
+
+
+contacts. So Stephen, what is one
+
+
+takeaway you want these listeners to
+
+
+have from our time together?
+
+
+>> Yeah. So AI is definitely doable for
+
+
+everyone. My advice is to find
+
+
+consultants to help you, but make sure
+
+
+that they are measuring themselves not
+
+
+only on your productivity gains and your
+
+
+ROI and all the things that they
+
+
+normally do, but that they're also
+
+
+measuring themselves on how well they
+
+
+are improving your knowledge of the
+
+
+technology and how quickly they can
+
+
+actually remove themselves because of
+
+
+how effective your internal team is.
+
+
+Now, by doing that, you can move them to
+
+
+different things at your company if
+
+
+you'd like, but that's something that
+
+
+we've found is extremely important,
+
+
+builds trust, and everything moves
+
+
+faster when there's trust.
+
+
+>> Excellent. I think that's great. Thank
+
+
+you, Stephen, for joining me. I
+
+
+appreciate the conversation and the time
+
+
+together. This episode was brought to
+
+
+you by Improving, a modern digital
+
+
+services company focused in AI, data,
+
+
+and platform.

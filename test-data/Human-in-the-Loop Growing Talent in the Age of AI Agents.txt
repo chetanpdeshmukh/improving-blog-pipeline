@@ -1,0 +1,3037 @@
+Welcome to the improving edge. This is
+
+
+where we talk about how AI and
+
+
+technology actually show up in the
+
+
+organizations. What's working? What's
+
+
+not? What we're learning along the way.
+
+
+I'll be sharing conversations with
+
+
+people doing the real work turning
+
+
+innovations into outcomes. Today I have
+
+
+with me Blake McMillan, vice president
+
+
+at improving. Thanks for being here,
+
+
+Blake.
+
+
+>> I'm happy to be here, David. Looking
+
+
+forward to this.
+
+
+>> Me too. So, looking forward to a
+
+
+conversation. We're going to talk a
+
+
+little bit about AI and people. A lot of
+
+
+talk about how AI is replacing people.
+
+
+Today, we're going to be talking about
+
+
+how we're going to grow people in this
+
+
+age of AI, right? How we invest in our
+
+
+talent, right? Our most important thing.
+
+
+Most people when you talk to them
+
+
+especially executives they talk about
+
+
+people are our biggest asset.
+
+
+>> So what is it that you're seeing uh from
+
+
+your side as businesses are thinking
+
+
+about how we grow talent in the age of
+
+
+AI?
+
+
+>> Yeah. Uh so I look at it where you know
+
+
+one of the things that people
+
+
+immediately get you know concerned about
+
+
+is is AI going to take my job. Right.
+
+
+>> Right. Like people get concerned about
+
+
+that. People get you know scared about
+
+
+that. That's like a lot of what's going
+
+
+on in the news. But what I look at it is
+
+
+is that element that you're bringing in,
+
+
+which is this is a way to grow talent.
+
+
+This is a way to enable people. This is
+
+
+a way to help people develop their
+
+
+skills, help them be better at what they
+
+
+do. And when they do that, then they're
+
+
+going to be able to contribute at a
+
+
+higher level.
+
+
+So, as you're thinking about those
+
+
+skills, right, you're talking about
+
+
+growing people's skills. What are the
+
+
+skills that we're typically focused on
+
+
+that are maybe different now than they
+
+
+were five or six years ago?
+
+
+>> Yeah, for sure. I think one of the
+
+
+things that that I've seen is just your
+
+
+ability to produce some to type of
+
+
+content. It's going to be different for
+
+
+whatever your role is, right? You know,
+
+
+if people are doing uh graphical things,
+
+
+visual things, like sure, there's
+
+
+there's that, but I mean, I look at it
+
+
+from my own personal perspective of
+
+
+creating content. Like one of the things
+
+
+that you know I was uh looking to do was
+
+
+create kind of a a set of courseware
+
+
+that we would have to offer publicly so
+
+
+that people could learn AI and I had to
+
+
+use AI to do it. Like so like I was I
+
+
+was learning about AI as I was creating
+
+
+the courseware for AI and I got to know
+
+
+a whole lot more about how to
+
+
+effectively uh interact with AI um than
+
+
+when I started.
+
+
+>> Yeah. I think they call that dog
+
+
+fooding, right? Where you're eating your
+
+
+own dog food and kind of learning as you
+
+
+go.
+
+
+>> Yeah, that's right.
+
+
+>> One of the things, and I was talking
+
+
+about this earlier that I've realized it
+
+
+really stretches you because effectively
+
+
+when you're using AI, you're using a a
+
+
+GPT, it's delegation, right? And so
+
+
+you're having to explain what it is that
+
+
+you want in a way that makes sense so
+
+
+you get the outcomes that you want. It's
+
+
+effectively delegation.
+
+
+I know for a lot of the folks that I've
+
+
+worked with through the course of my
+
+
+career, delegation is something that's
+
+
+it's hard.
+
+
+>> Yeah. Yeah. Yeah. Yeah.
+
+
+>> So, talk to me a little bit about how it
+
+
+is you go about teaching people to use
+
+
+uh AI.
+
+
+>> Yeah. It's funny that that thing that
+
+
+you uh kind of started off with there is
+
+
+that when you delegate, like if I just
+
+
+said, "Hey Dave, can you get me
+
+
+something to drink?" And then I run off
+
+
+and then you bring the bubbly
+
+
+grapefruit. Right. I'm like, "Dude,
+
+
+grapefruit?" Really? And you're like,
+
+
+"Oh, you just said get something to
+
+
+drink,
+
+
+>> right? You're nonspecific."
+
+
+>> Yeah. And so, anything that you bring
+
+
+back that's liquid, like, you know, it's
+
+
+a drink, right? But if I can get more
+
+
+specific, if I can give you more
+
+
+clarity, David, I am dragging today,
+
+
+man. Can you hook me up with some
+
+
+coffee? And like, yeah, maybe a little
+
+
+cream, a little sugar. Now, what what's
+
+
+going to come back? Right.
+
+
+>> Right.
+
+
+>> Again, you're going to bring the
+
+
+grapefruit bubbly because you got the
+
+
+good sense of humor. Like, here you No,
+
+
+you don't need the caffeine. You're
+
+
+fine. No, but seriously, like what would
+
+
+happen is I would get a better outcome
+
+
+because I was more specific. And that's
+
+
+one of the things that I help people
+
+
+understand is if you are in this space
+
+
+where you think that you're just going
+
+
+to throw some random uh request at AI
+
+
+and it's going to produce brilliance.
+
+
+Not so much.
+
+
+>> Yeah. Right. And we talk about that uh
+
+
+you know, not that rock, right? Somebody
+
+
+says, "Hey, give me a rock." and you
+
+
+bring it to them and they're like, "Not
+
+
+that rock." I was like, "Oh, so a
+
+
+different rock." "No, not that rock." It
+
+
+was like, "Please be more specific."
+
+
+Like, "What rock are you looking for?"
+
+
+You know, there's a there's a funny
+
+
+thing though is there is value in being
+
+
+not that rock. One of the things that I
+
+
+found is that sometimes what can get me
+
+
+away from what I call the blank page um
+
+
+paralyzation where I don't know where to
+
+
+start is I will throw out something
+
+
+completely random, completely not
+
+
+thought out and just say, "Help me think
+
+
+through this."
+
+
+>> Okay.
+
+
+>> And it throws some stuff and it and then
+
+
+it'll happen. Right.
+
+
+>> Right.
+
+
+>> Not that option three is insane. Option
+
+
+four, boring. Option five, let's go more
+
+
+like that, right? Like so I use it as I
+
+
+I'll use AI as a collaboration partner
+
+
+to explore ideas. I call it a thinking
+
+
+partner.
+
+
+>> Yeah. And that's a great way to think
+
+
+about it, right? So especially as we're
+
+
+framing this like you were saying
+
+
+earlier as AI is not a replacement for
+
+
+people. It's an augmentation of people.
+
+
+So how I can leverage it as a
+
+
+collaboration partner partner or as a
+
+
+content creator.
+
+
+>> These different use cases. What are some
+
+
+of the other use cases that you're
+
+
+finding personally Yeah. Yeah. for it to
+
+
+to help grow your skill sets?
+
+
+>> So, one of the things I look at it as is
+
+
+having instant critical feedback. Um,
+
+
+and by the way, you have to make sure
+
+
+that you tell AI that's what you're
+
+
+after because AI is very affirming. You
+
+
+can throw in the idea, Blake, that's a
+
+
+great idea. We should keep going with
+
+
+this. But if you will kind of let it
+
+
+know, hey, I'm not just looking for
+
+
+affirmation here. I'm looking for you to
+
+
+p poke holes into my approach. I'm I'm
+
+
+looking for you to tell me when I've
+
+
+taken a step too far. Like and and
+
+
+that's again something with training
+
+
+that I try to make sure of is that it
+
+
+scales in a way that people can keep up.
+
+
+Right? Cuz I think I've told you this
+
+
+before, but I have attempted to become a
+
+
+programmer before. I tried it, right? I
+
+
+tried Python. I tried Swift. And yeah, I
+
+
+know some people are like, "Oh, so you
+
+
+tried the little kitty languages." Yeah,
+
+
+I tried because I didn't start off with
+
+
+something, you know, like, you know, C++
+
+
+or anything that's crazy. Um, so I
+
+
+started with something that was easy and
+
+
+I was tracking right right up until
+
+
+Hello World and I'm like, I got this.
+
+
+I'm doing it. And then all of a sudden
+
+
+it goes and makes this massive jump and
+
+
+I'm like, I don't even know what
+
+
+happened.
+
+
+>> You got left behind.
+
+
+>> I'm so completely lost. Well, like
+
+
+that's, you know, kind of the thing that
+
+
+I I look for when I'm trying to develop
+
+
+training is that we're building on
+
+
+something, right? And when I was
+
+
+building our first course, I went from
+
+
+hello world to crazy town and it said,
+
+
+"This might be a jump that many will
+
+
+find difficult." Okay?
+
+
+>> And so I was able to say, "Okay, let me
+
+
+back down from that." But if you don't
+
+
+basically authorize it to give you
+
+
+critical feedback, it won't.
+
+
+>> It'll just affirm everything that you do
+
+
+and tell you how brilliant you are.
+
+
+>> Yeah. Very much I find on that. Right.
+
+
+The default mode is kind of a golden
+
+
+retriever, right? I just wanted to Yeah.
+
+
+Something like Yeah,
+
+
+>> I love that idea.
+
+
+>> And you'll say, "Well, wait, that's not
+
+
+true." And it's like, "You're right.
+
+
+That's not true. I made it up." Um, so
+
+
+then how do you know what AI is telling
+
+
+you, whether or not it's true? like how
+
+
+are you vetting some of these things?
+
+
+Cuz if you're training folks to use AI,
+
+
+obviously you've got to give them that
+
+
+filter for veracity.
+
+
+>> Mhm.
+
+
+>> What does that look like from a skills
+
+
+perspective?
+
+
+>> Yeah. I Well, I think there's some
+
+
+strengths that AI has and then there's
+
+
+some things that AI can do, but you got
+
+
+to kind of be careful when you're just
+
+
+asking it to help you create ideas. Are
+
+
+any ideas like not what you wanted to
+
+
+explore, what you wanted to hear? Yeah,
+
+
+maybe. But it's okay because I want that
+
+
+there to be a dialogue. That's what I
+
+
+teach people. Don't think that the first
+
+
+thing it tells you is the answer. What
+
+
+you want to do is have a conversation,
+
+
+right? And and one of my I guess habits
+
+
+is I always ask it for options. Don't
+
+
+give me a thing. Give me five things.
+
+
+And then when I get those five things, I
+
+
+give it feedback. I evaluate. One is
+
+
+trash, two is illegal, three is okay,
+
+
+four is good, five, I don't even know
+
+
+what you're talking about. Let's do more
+
+
+like four, right? And then it expands
+
+
+and gives me five more options. Now,
+
+
+sometimes it feels a need to say, well,
+
+
+these are options 7 8 9 10. Like, no,
+
+
+no, we're not going to count them up. I
+
+
+just trashed one, you know, one through
+
+
+three and five. Like, replace those. You
+
+
+got to give it some, you know, some some
+
+
+instructions. But what I'm looking for
+
+
+is for it just to like roll with me, you
+
+
+know, give me those ideas, help me think
+
+
+outside of what I started with.
+
+
+>> But I hear you saying like we have to be
+
+
+the critical thinking at Hustle. Yeah.
+
+
+Like we're we're the gatekeeper of what
+
+
+gets through, what doesn't get through.
+
+
+So then how do you help people to
+
+
+develop that critical thinking? Because
+
+
+I I know I've heard uh a lot of folks
+
+
+talk about mood. Critical thinking is
+
+
+not a skill that's typically taught.
+
+
+>> Um it's it's it's a it can be a
+
+
+challenge, but it's something that you
+
+
+can learn. So like how how do you help
+
+
+people to think through uh you know how
+
+
+do you help people to develop their
+
+
+critical thinking?
+
+
+>> Yeah, that's that is kind of tricky. Um
+
+
+because really what we're looking for is
+
+
+for you to get better at expressing what
+
+
+your what your end state is, what your
+
+
+outcome is. Um, and so I think that's
+
+
+one of the one of the the things that
+
+
+you have to do is you have to be able to
+
+
+understand what am I hoping for, right?
+
+
+Because if I just go in without any
+
+
+clear objective or any clear
+
+
+understanding of what what I'm hoping to
+
+
+uh achieve, well then um I
+
+
+think I'll be frustrated by by what AI
+
+
+comes back with me, you know, comes back
+
+
+to and gives me. And so, like, one of
+
+
+the things I'm looking for is helping
+
+
+people get better at expressing what
+
+
+they're after, giving feedback, but the
+
+
+thing that you're asking, I don't know.
+
+
+Like, honestly, like I don't know how to
+
+
+tell people, hey, be more creative. Um,
+
+
+hey, have better ideas. Like, I don't
+
+
+>> Well, I think that on the creative
+
+
+point, you know, that is another skill.
+
+
+Um, I've said before like creativity
+
+
+only exists in biology and you know,
+
+
+OpenAI had a paper that they uh released
+
+
+last year where they talked about having
+
+
+assessed their their model and it is
+
+
+math all the way down like it's
+
+
+provable. It's math and there's no
+
+
+creativity in math. I mean people from
+
+
+like Enron might argue there's some
+
+
+creativity that we can do that people go
+
+
+to jail. Uh, but like there's no true
+
+
+creativity. You really need the biology
+
+
+for that creativity. But you just talked
+
+
+about a way to leverage the AI to help
+
+
+build my creativity.
+
+
+>> Yeah. Like you can nurture it through a
+
+
+conversation, right? You can nurture it
+
+
+by exploring other ideas. And to me that
+
+
+that's one of the benefits that I found
+
+
+with artificial intelligence is I have a
+
+
+collaboration partner that's up at 2
+
+
+a.m.
+
+
+>> Right? Cuz sometimes like sometimes it
+
+
+just happens where my brain's like, "Oh,
+
+
+that'll be enough sleep for you, mister.
+
+
+And so what do I want to do? just lay
+
+
+there in bed or like do something. And
+
+
+so I'll get up and I'll start working on
+
+
+something. Now, if I called one of my,
+
+
+you know, friends at work um and said,
+
+
+"Hey, let's collaborate on something."
+
+
+They'd be like, "What are you doing,
+
+
+crazy? Go back to sleep." Right.
+
+
+>> Wrong number.
+
+
+>> Yeah. Yeah. But AI is like a let's do
+
+
+it. Yeah. I'm ready. Yeah. And then we
+
+
+get to explore new areas, new ideas. And
+
+
+so to me, that's that's one of the
+
+
+that's one of the things where AI can
+
+
+help you um I don't know, augment your
+
+
+creativity, but as far as it being the
+
+
+source, yeah, I don't think so. I I
+
+
+think it's got to come from you. Okay.
+
+
+>> So, we see a lot of companies that are
+
+
+investing heavily in technology. Um what
+
+
+does investing more in their people look
+
+
+like as we continue to move into this AI
+
+
+age? Yeah, I think for uh for companies
+
+
+it's you know this kind of goes back to
+
+
+the thing that we talked at uh or talked
+
+
+about just at the very beginning here is
+
+
+like you know there is an approach that
+
+
+people can have that says hey what can
+
+
+AI do that people can do because we'll
+
+
+save money by having AI do those jobs
+
+
+and then you know we don't need to pay
+
+
+those people anymore. Um, I think that
+
+
+there instead is the investment of
+
+
+invest in your people to gain the skills
+
+
+to become better at what they do and
+
+
+take away some of the noise from their
+
+
+jobs that like it needs to get done, but
+
+
+does it really need a human to do it?
+
+
+Right? And so if we can find those
+
+
+places uh to help people leverage AI so
+
+
+that they can do their high value work
+
+
+and they don't have as much time spent
+
+
+on some of that noise, some of that like
+
+
+more administrative stuff,
+
+
+>> they can be better.
+
+
+>> Yeah, that's something that we talk
+
+
+about in our in our workshops and even
+
+
+just as we're talking with customers.
+
+
+You know, AI is a task compression edge.
+
+
+So there's tasks that we do that are
+
+
+compressible
+
+
+>> and tasks that aren't. Like you can't
+
+
+write a model that builds trust with a
+
+
+customer. Like that's not the thing.
+
+
+That's an innately human activity. And
+
+
+so it's personto person. And so there's
+
+
+nothing we can do necessarily to
+
+
+compress that.
+
+
+>> But if we're talking about you know
+
+
+writing a report or summarizing anything
+
+
+or some of these other things very
+
+
+compressible.
+
+
+>> Yes.
+
+
+>> So as we take uh those things and we
+
+
+maybe compress you know
+
+
+>> call it 80% of the tasks that you do.
+
+
+>> Well one we still need a human for that
+
+
+20%. like we still need the person.
+
+
+>> What I hear you saying is so then how do
+
+
+we identify the skills that they have,
+
+
+the abilities that go beyond maybe what
+
+
+they're already doing and a way to
+
+
+invest in them so that they can grow
+
+
+their role or grow their capacities.
+
+
+>> How do you think about identifying in in
+
+
+folks like what is a skill that they
+
+
+might have that we could invest in? like
+
+
+how do you assess that from a from a
+
+
+training perspective and see those
+
+
+potentials, those capabilities?
+
+
+>> Yeah. So like an example would be our AI
+
+
+for product managers. Um our AI for
+
+
+product managers, it's not going to
+
+
+focus on teaching you how to write story
+
+
+uh user stories faster. Why? Because AI
+
+
+is really stinking good at it. Right.
+
+
+>> Right. And so instead of worrying about
+
+
+like formatting things in a certain way,
+
+
+it's about like do you understand your
+
+
+customer? Do you actually understand
+
+
+what their needs are? Um, do you have a
+
+
+hypothesis around what will be value to
+
+
+them? Now, what's interesting is that AI
+
+
+can help you explore that space.
+
+
+>> Help you explore that space,
+
+
+>> right?
+
+
+>> It will not give you the answers because
+
+
+I mean, sure, it can give you some
+
+
+answers, right? It can it can get really
+
+
+creative and tell you all about this
+
+
+customer that doesn't exist and will
+
+
+never use your product, but
+
+
+>> make it all up.
+
+
+>> Exactly. Amazing. and and to a detail
+
+
+level that is astounding, right? But
+
+
+what it can also do is help you explore
+
+
+that. And to me, that's one of the
+
+
+things that uh like for a product
+
+
+manager, if you're spending your time uh
+
+
+like fiddling around with Jira tickets,
+
+
+I mean, it's a way that you could spend
+
+
+your time, but it's also a way that
+
+
+doesn't actually produce insights,
+
+
+doesn't produce knowledge, doesn't
+
+
+produce ideas to chase after and build
+
+
+for your customers. So, how are you
+
+
+going to know your customer? Can you
+
+
+spend more time with your customers now
+
+
+that you don't have to do some of that
+
+
+compressible work? Yeah,
+
+
+>> that's what I hope.
+
+
+>> Now, I hear you saying focusing on
+
+
+things that produce value, not just
+
+
+activity.
+
+
+>> That's right. We can get caught up in a
+
+
+lot of that activity and then maybe
+
+
+instead we offload that activity to our
+
+
+models and allow them to go and and take
+
+
+care of those things and complete those
+
+
+things. Yeah. So, we can focus on the
+
+
+customer.
+
+
+>> Yeah. understanding the real problem.
+
+
+>> Yeah. And and that's one of the things
+
+
+that um uh that I've been exploring with
+
+
+some folks back at the office is we
+
+
+start looking at some different levels
+
+
+of engaging with AI, you know, like kind
+
+
+of one of the first levels is you just
+
+
+become aware of it, right? Like so
+
+
+people that are listening to this, they
+
+
+are in that place at least, right?
+
+
+Because they're like, I'm curious about
+
+
+this. Let me let me go find out more
+
+
+about what's going on with AI. Like so
+
+
+you become aware and then you start to
+
+
+mess with it. You start to use it. you
+
+
+start to engage with it. And like for
+
+
+me, that's that was kind of my uh like
+
+
+one of my big switches was when I first
+
+
+started using AI, I was like, well, it's
+
+
+just training data and it's wrong a lot
+
+
+and I don't really see it. Like I I'm
+
+
+not that excited by it.
+
+
+>> Skeptical.
+
+
+>> Yeah. Well, I mean, it just didn't seem
+
+
+as useful to me. But then once that
+
+
+training data didn't didn't encompass
+
+
+all of its knowledge and then it started
+
+
+to be able to, you know, reach out and
+
+
+do those searches, then I'm like, "Oh,
+
+
+okay. Now I get it. Now I see how this
+
+
+can be much more useful." And so I
+
+
+started manually using it. But then that
+
+
+next tier is where you start to
+
+
+automate, right? And and just so we're
+
+
+clear, not there yet. Like and depending
+
+
+on when people watch this, if you watch
+
+
+it, you know, uh, real soon, then I
+
+
+don't know. Probably not there yet. But
+
+
+that's kind of my next tier is looking
+
+
+for how to automate and how to how to
+
+
+take some of those tasks that uh you
+
+
+know that don't really require creative
+
+
+input but just have them done you know.
+
+
+>> Yeah. So you talked a little bit about
+
+
+your journey as you like awareness
+
+
+experimentation and like moving into
+
+
+automation.
+
+
+>> Tell me about a time like in the
+
+
+training realm where you saw those
+
+
+lights go on for somebody in the
+
+
+>> Oh yes. Oh, I I mean this happens like
+
+
+every single time, right? And one of the
+
+
+one of the things is just helping people
+
+
+understand one is uh is the more
+
+
+information that you give, the more
+
+
+context you give, the better it goes.
+
+
+Right now, this is going to be a
+
+
+spoiler. So if someone comes to my class
+
+
+like I think I saw the podcast where you
+
+
+talked about this one of the things I'll
+
+
+do is I'll have them start off with
+
+
+asking a really vague generic kind of
+
+
+question and then AI comes back and you
+
+
+know AI's tryh hard so it's like able
+
+
+and it just gives all this information
+
+
+and then I ask them so how useful was
+
+
+that and they're like oh well you know
+
+
+people
+
+
+but people are trying to be positive
+
+
+well I could see where this could be
+
+
+useful I'm like oh Good. And and I'm and
+
+
+that's when I'm seeing my glass half
+
+
+ball people. I'm like I go, "That's
+
+
+right. It's pretty good, isn't it?"
+
+
+Right. And then what we do is we start
+
+
+to explore giving it more context,
+
+
+giving it some constraints, letting it
+
+
+know who you want it to be and who you
+
+
+and and who you are, right?
+
+
+>> And then we ask the exact same question.
+
+
+I don't change the question. I just give
+
+
+more context. And then all of a sudden,
+
+
+everything changes. And I see that light
+
+
+bulb moment happen. I see people go,
+
+
+"Oh,
+
+
+this is why when I've interacted with it
+
+
+before, I've been disappointed because I
+
+
+wasn't given the information. I wasn't
+
+
+given the context of why I'm asking this
+
+
+question." And when you do,
+
+
+>> it's a game changer. And and people
+
+
+start to see what it's actually capable
+
+
+of.
+
+
+>> So, I hear you saying, uh, help them
+
+
+figure out how to build a frame, right?
+
+
+how to frame all this up. Give them
+
+
+context and and make sure you're giving
+
+
+enough in that delegation
+
+
+>> that it knows its edge conditions, its
+
+
+boundaries. What is it I want back? Do
+
+
+do I want this as a PDF? Do I want it as
+
+
+text? Do I want it as an image? Like,
+
+
+give me a little bit more.
+
+
+>> So, we're not going to play too much of
+
+
+not that rock.
+
+
+>> Exactly. But that not that rock thing.
+
+
+That is also part of the process. And
+
+
+that's one of the things that again
+
+
+that's one of the other light bulb
+
+
+moments is like, "Yeah, don't just put
+
+
+up with that. If it gave you something
+
+
+that you don't like, tell it." No, I
+
+
+don't want that. That's completely the
+
+
+wrong direction. Now, um sometimes
+
+
+people will like tease me because
+
+
+they're like, "Oh, you know, like when
+
+
+AI takes over, it's coming for you first
+
+
+cuz you're not nice to us sometimes."
+
+
+And I'm I'm not right. I'm just like,
+
+
+"That's exactly the wrong thing. I don't
+
+
+like that." Like I'm but I'm being
+
+
+straight with it, right? I'm I'm being
+
+
+like very transparent around the
+
+
+feelings that it's giving me because
+
+
+then I I'm giving it some signals.
+
+
+Here's what I love. And you get that
+
+
+positive response from me. Oh, you
+
+
+nailed it. This is so great. It's like,
+
+
+oh, thanks. But I know that's just part
+
+
+of the programming, but it feels
+
+
+different for me, right?
+
+
+>> Oh, but like you know it uh but like and
+
+
+it and it starts to learn, okay, he
+
+
+likes this, he doesn't like this. And
+
+
+again, it's that golden retriever David,
+
+
+right? It's like it's just looking for
+
+
+like I just want to make him happy. Pet
+
+
+just pet. That's all I need is pet me
+
+
+and make me feel good. Give me Billy
+
+
+rubs.
+
+
+>> That's right.
+
+
+>> So, as a trainer, like you put together
+
+
+these classes. So, you have a rubric
+
+
+that you run through, you know, outcomes
+
+
+that you're looking for. Um, some stuff
+
+
+that probably would frame a prompt
+
+
+really, really well, maybe an agent. So,
+
+
+do if you look in your little crystal
+
+
+ball, having been in the training space
+
+
+for so long and look out several years,
+
+
+>> are we going to have AI trainers? You
+
+
+know what's weird is to me that is a
+
+
+potential future that I can see. Um, and
+
+
+it's kind of on my fourth horizon. Um
+
+
+and the reason being is uh one of the
+
+
+frustrations um I had when I was trying
+
+
+to kind of level up my AI skills is that
+
+
+kind of the only sources of training
+
+
+that I really had was going out to the
+
+
+internet like you know LinkedIn Learning
+
+
+or you know UDI or what whatever
+
+
+whatever thing that has video
+
+
+courseware. I'm going to be honest, man.
+
+
+It bored me to tears. Like, there was so
+
+
+much theory, so much vocabulary, and I'm
+
+
+like, all okay, I'm just gonna forget
+
+
+all this stuff. And so, I I'm just h it
+
+
+was it was really frustrating. Um, and
+
+
+so one of the things that we we try to
+
+
+do with our with our courses is make
+
+
+them interactive, right? Like it's
+
+
+interactive. So when AI can actually
+
+
+provide that interaction,
+
+
+provide that feedback, but also in a uh
+
+
+in a way that's critical and not just
+
+
+mindlessly affirming, then yeah, it
+
+
+might get there. But remember, we're
+
+
+also going to have to make sure that
+
+
+it's trained up with all of the context
+
+
+to understand those learning objectives,
+
+
+to understand what's likely to come.
+
+
+What's, you know, what objections are
+
+
+people going to have? What do you do
+
+
+when someone completely loses thread?
+
+
+How do you help them back on track when
+
+
+we can do that? Maybe.
+
+
+>> Maybe.
+
+
+>> Yeah. So, you said that's fourth
+
+
+horizon. So, talk to me a little bit. Uh
+
+
+what's what's further in, maybe a little
+
+
+closer in, what are some of the
+
+
+innovations that you think are coming?
+
+
+>> Yeah. uh in this space, you know,
+
+
+talent. Uh
+
+
+>> yeah, that so yeah, that kind of like
+
+
+that that that learning uh that learning
+
+
+journey learning. Yeah. Um so I think it
+
+
+goes from uh like just being aware of
+
+
+AI, knowing that it's happening to
+
+
+getting in there and actually using it
+
+
+using it effectively using it
+
+
+effectively in like kind of a manual
+
+
+transaction mode. I I think that's, you
+
+
+know, that's happening and that's that's
+
+
+kind of where a lot of the level one
+
+
+public training that that that I've
+
+
+created starts with is going from I know
+
+
+about AI, how I'm using it, or maybe I
+
+
+dabbled with it, right? I turned myself
+
+
+into a cartoon. I got it to talk to me
+
+
+like a pirate. Yay. Right? But did it do
+
+
+anything for me? No. Right? So, how do I
+
+
+get you from playing around with it to
+
+
+actually seeing where it can make
+
+
+noticeable improvements in your
+
+
+effectiveness? So, I think that's that's
+
+
+kind of one of the one of the one of the
+
+
+steps.
+
+
+The next step, and it's the one that I'm
+
+
+like I'm kind of nervous about, but I'm
+
+
+excited about too, is exploring some of
+
+
+that automation, exploring some of like
+
+
+that uh that the way where you can get
+
+
+agents to work for you and build the
+
+
+trust to know that when it gives you
+
+
+this output that it's learned enough
+
+
+about you to where it's giving you the
+
+
+output that you're expecting and not
+
+
+just wildly hallucinating fun things
+
+
+that it could think of.
+
+
+>> Yeah.
+
+
+So are there any skills that you foresee
+
+
+like going away? So if you go back to
+
+
+like the late 60s, early '7s, there was
+
+
+this job called computer operator. Yeah.
+
+
+And as we progressed like that went away
+
+
+because like you operate a computer, I
+
+
+operate a computer. Like there is just
+
+
+some default things that you're able to
+
+
+do. And I see prompting and and using AI
+
+
+as that. But then there are other skills
+
+
+I think that are going to potentially
+
+
+atrophy and not need to be trained. So
+
+
+what might some of those skills be?
+
+
+Yeah, this is this is interesting
+
+
+because one of the first things that
+
+
+just immediately pops in my mind like do
+
+
+you remember that person that would be
+
+
+in the meeting and they wouldn't really
+
+
+contribute, they wouldn't really talk,
+
+
+but you would just see them scribbling
+
+
+stuff down the whole time like they're
+
+
+just taking like notes and then after
+
+
+the meeting they would send these
+
+
+amazing summaries where you're just
+
+
+like, "Oh, wow man." Like I was just so
+
+
+engaged in the meeting. I I didn't have
+
+
+time to even think about like taking all
+
+
+this stuff down. I'm so glad that we
+
+
+have this because this summarizes
+
+
+everything including the action items,
+
+
+>> right?
+
+
+>> That's gone now, man. I mean, look, I'm
+
+
+just going to be honest like that is
+
+
+golden because the way that AI can
+
+
+capture the capture those meet, capture
+
+
+those action items. It's it's amazing
+
+
+and and I love it. And and for that
+
+
+reason, like whenever I have like a
+
+
+team's meeting, I'm like, "Oh, this is
+
+
+great." And I got to remember I'm going
+
+
+to set transcription. I'm gonna I'm
+
+
+gonna turn on transcription and then uh
+
+
+it's it's gonna you know start building
+
+
+this. Now I do want to say this though
+
+
+that there's an interesting thing that I
+
+
+noticed that I started to do. I started
+
+
+to realize that there are keywords I can
+
+
+use to help the AI be even better as
+
+
+transcription. So I'm like so David that
+
+
+was an action item
+
+
+>> and so you're queuing it.
+
+
+>> Yeah. Yeah. I I'm doing in the
+
+
+transcription. I'm like okay. So, uh,
+
+
+when that action item is done, I have a
+
+
+dependency on that. And so, when that's
+
+
+done, and when do you think you're going
+
+
+to get that done, right? And and you
+
+
+know, this is just, you know, how how we
+
+
+interact meetings, right? It's like,
+
+
+well, when do you think I think I'm
+
+
+going to have that Friday? Okay. When
+
+
+you get that done on Friday, then I'll
+
+
+be able to start my action item. This is
+
+
+Blake. And I don't know why it still
+
+
+calls me Christopher. I think it's
+
+
+something weird. But, uh, but uh, and so
+
+
+this will be my action item. And once I
+
+
+have this, then I'll start it. And it
+
+
+should take me about a week. Well, I'm
+
+
+excited for our next team's meeting
+
+
+because I want to watch you play the
+
+
+transcript in our next meeting. And I
+
+
+do, too. I I use the heck out of that.
+
+
+Copilot does it fantastic. I actually
+
+
+have a device, Plaude. I don't know if
+
+
+you've seen this. P L A U D. Plaude.
+
+
+Like applaud.
+
+
+>> Yeah.
+
+
+>> Without the E or the AP.
+
+
+>> Yeah.
+
+
+>> Plaude is a device that sits on the back
+
+
+of my phone and it has mics and so it
+
+
+can hear for like 45 ft all the way
+
+
+around it. Well, if you're in a physical
+
+
+meeting, not a team's meeting,
+
+
+>> you don't have a team's transcription.
+
+
+>> Yeah, this does that.
+
+
+>> Okay. So, it captures it. It It's been
+
+
+It's been kind of a game changer for my
+
+
+in-person meetings because the same
+
+
+thing, it'll summarize. Here's the
+
+
+action items, but it also has the
+
+
+ability then for me to ask it questions
+
+
+and it will go find stuff kind of like
+
+
+uh and so I've been using that here
+
+
+recently for my in-person because I do
+
+
+miss the transcription and the
+
+
+summarization and all the the benefits
+
+
+that co-pilot gives me.
+
+
+>> That's an interesting thing, right? Like
+
+
+we like we see these benefits, right?
+
+
+And then we start to experience them and
+
+
+then we start to feel a little uh
+
+
+uncomfortable when we don't have that,
+
+
+right? Like uh like I mean just just the
+
+
+way you're describing it like I'm just
+
+
+like I'm sold. Like I I like on my way
+
+
+home I'll be like all right I got I got
+
+
+to give me one.
+
+
+>> Yeah.
+
+
+>> And it is it's a little bit of that
+
+
+phantom limb syndrome. Like if you've
+
+
+ever left your phone at home and then
+
+
+you get to the gym or wherever it is
+
+
+you're going and you're like
+
+
+>> I'm very uncomfortable right now. I
+
+
+realize I'm disconnected like holy
+
+
+smokes. Which I think is actually
+
+
+healthy, you know, having some
+
+
+disconnect time from our phone. I'm not
+
+
+saying that's a bad thing. It is
+
+
+actually a good thing. And uh but you
+
+
+definitely you definitely feel it. It's
+
+
+that uncomfortable moment. Um, but I I
+
+
+do think it's interesting to think about
+
+
+what are some of these skills, you know,
+
+
+that maybe we we don't need to focus on
+
+
+so much that we don't need to lean into
+
+
+uh as we're
+
+
+>> as we're growing because if I'm not
+
+
+doing that, what that means is I now
+
+
+have capacity to go invest somewhere
+
+
+else, right? to go invest and and maybe
+
+
+grow and and okay then
+
+
+>> can I learn another language you know
+
+
+whether that's swift or uh Python
+
+
+I recently I recently wrote a Swift app
+
+
+>> uh having never used uh never built
+
+
+anything in Swift so I haven't built an
+
+
+iPhone app in 15 years
+
+
+>> so I did Swift as well u so I'm I'm not
+
+
+throwing rocks I'm in the pews I'm not
+
+
+in the pulp u but there's these
+
+
+opportunities then to go invest invest
+
+
+in other skills. And I hear you saying
+
+
+the the collaboration being a great
+
+
+skill to invest in, but then also just
+
+
+using that time for experimentation to
+
+
+say, how might I how might I do this?
+
+
+How might I do this? Well, can it do it?
+
+
+Let's try. Let's see what comes out of
+
+
+it. Sometimes it'll be a little bit more
+
+
+that uh golden retriever type answer.
+
+
+Sometimes we've got to push it to be a
+
+
+little bit more critical. But it's
+
+
+definitely important that we try that we
+
+
+test it out so that we can grow in our
+
+
+skills.
+
+
+>> Yeah. 100%. And that to me is is to me
+
+
+the game changer, right? is that when
+
+
+you start to utilize AI in the way that
+
+
+we've been talking about like uh in this
+
+
+time together um that it will produce
+
+
+open space and then it's up to you to
+
+
+make sure that you use that open space
+
+
+in a way to be better contributing like
+
+
+you know for example like uh with with
+
+
+some of the time that I can save without
+
+
+having to track down meeting notes and
+
+
+and that I'm like okay cool well that
+
+
+gives me a little bit of time. Maybe
+
+
+I'll like focus on like creating some
+
+
+content or I'll focus on creating an
+
+
+article or I'll like draft something
+
+
+that I should do for a short video,
+
+
+which I need to do more. Uh yeah, but
+
+
+like you know that that's what it does
+
+
+is it creates that space for you. But to
+
+
+me, AI is not going to nag you. It's not
+
+
+going to tell you how to use your space,
+
+
+right? You create that space, but it's
+
+
+up to you to use it. It's up to you to
+
+
+take advantage over that time that
+
+
+you've that you've just gained. So
+
+
+conscious capitalism is a big deal in
+
+
+improving right we talk about how we are
+
+
+founded or grounded I would say in the
+
+
+philosophy of conscious capitalism
+
+
+conscious capitalism is very much about
+
+
+people right that's the conscious part
+
+
+not just the capitalism part it's
+
+
+important that the business you know
+
+
+make money primarily so that it can
+
+
+invest in people
+
+
+>> and so from your perspective how do you
+
+
+square conscious capitalism and its
+
+
+ideas and its philosophy
+
+
+in this age of AI.
+
+
+>> Yeah. I think this goes back into the
+
+
+the humanization of our approach, right?
+
+
+Because I don't want to replace human
+
+
+interactions with AI. I think that I
+
+
+think that's a miss. But what I can do
+
+
+is I can enrich my human interactions,
+
+
+right? Because maybe I can become better
+
+
+prepared, right? So instead of me coming
+
+
+to a meeting and not really knowing
+
+
+what's going on, maybe I'll spend some
+
+
+time getting up to speed and I might use
+
+
+AI for that, right? But now I can get in
+
+
+and I can have a better conversation
+
+
+because I'm a little bit more grounded
+
+
+in the topic and uh or or maybe I can
+
+
+make more time to have those good
+
+
+quality interactions because I'm not
+
+
+worried about having to uh you know read
+
+
+15 pages of a report as soon as I'm done
+
+
+with this and instead I can say hey let
+
+
+me get the let me get the summary
+
+
+because I don't need every bit of this.
+
+
+I need to find the parts that I need.
+
+
+Right. And and so I look for that
+
+
+compressible work, right? Compress it.
+
+
+So then I can have that more personal,
+
+
+that more human interaction with people.
+
+
+>> That's great. And so as an agileist, I
+
+
+know the manifesto, hey, we talk about
+
+
+people over process. And so I hear you
+
+
+saying, nope, that's still a valid
+
+
+triage is process is important,
+
+
+>> people are more important. And how is it
+
+
+that we lean into that?
+
+
+>> Yeah. So talking about agility like how
+
+
+do you see AI reshaping agility for us
+
+
+in the business space?
+
+
+>> Yeah, there's uh there is definitely
+
+
+some uh some shift here, right? And I
+
+
+think one of the one of the shifts that
+
+
+we see is that what was really hard
+
+
+before is now suddenly much easier. And
+
+
+by the way, just so you know, I'm I am
+
+
+talking through the the things that I've
+
+
+learned from other people. U not being a
+
+
+programmer, I don't know what it's like
+
+
+to code an API or to, you know, set the
+
+
+foundation layer of the blah blah blah
+
+
+whatever technical technical, right? But
+
+
+what I've heard from our developers is
+
+
+this thing that used to take me two
+
+
+hours, I can now do in two minutes. And
+
+
+it's it's kind of like the foundational
+
+
+stuff, right? it's the syntax uh
+
+
+certainty things like that. Um so that
+
+
+used to be the hard part is is to is to
+
+
+is to do a lot of that really highly
+
+
+technical syntax work. But that is not
+
+
+where people are absolutely needed as
+
+
+much anymore. Now it's the problem
+
+
+solving. Now it's the understanding the
+
+
+problem, understanding the how the
+
+
+problem affects the customer,
+
+
+understanding how that affects our
+
+
+company, our organization, our
+
+
+stakeholders, and solving that problem
+
+
+that doesn't go away. I think that's the
+
+
+part that's still there, right? That's
+
+
+still that thing that that we're going
+
+
+to look for humans to do. Um, but
+
+
+getting some help and some of that
+
+
+technical domain, I think that's what I
+
+
+think that's what we're seeing. Uh,
+
+
+we're starting to see that shift. Those
+
+
+are those uncompressible tasks, right?
+
+
+The understanding and and the the
+
+
+culmination of all of that understanding
+
+
+into a solution to the problem.
+
+
+So Blake, as we're thinking about how
+
+
+we're investing in people, right, and
+
+
+we're growing talent in this age of AI,
+
+
+what are a couple of key takeaways that
+
+
+you would want somebody listening to
+
+
+this to walk away with?
+
+
+>> Yeah, I I think one of the first things
+
+
+is is the value of people. Um uh and
+
+
+like you know we we we discussed this
+
+
+during uh you know during our
+
+
+conversation about like you know there's
+
+
+work that's compressible. Um that
+
+
+doesn't mean that you compress away a
+
+
+person. Um because that person still has
+
+
+value that person still has ways that
+
+
+they can contribute. And so investing in
+
+
+people helping them learn helping them
+
+
+grow. Like to me I think that's one of
+
+
+the big takeaways is like you have
+
+
+people that have a knowledge and
+
+
+understanding of your business and of
+
+
+your customers. When they have that,
+
+
+they have value even if what they do is
+
+
+highly compressible work. So invest in
+
+
+them. Invest in them. Help them learn
+
+
+new skills so they can contribute in
+
+
+some different ways than they're used
+
+
+to. And then for them it's about being
+
+
+open. It's about being open to change
+
+
+because that is one of the big things
+
+
+that comes from the world of agility and
+
+
+it also you know definitely applies here
+
+
+in this world of AI is that work is
+
+
+going to change. your job is going to
+
+
+change. Change is inevitable. And so
+
+
+when you can learn to adapt to that
+
+
+change and you know when we look at AI,
+
+
+it's an enabler for that. Like to me, I
+
+
+think that's that's one of the big big
+
+
+things I want people to take away from
+
+
+this is that you need to invest in your
+
+
+skills and then for the organization,
+
+
+you need to provide those opportunities
+
+
+for people to invest in their skills.
+
+
+>> That's great, Blake. Thank you so much
+
+
+for being here. Appreciate the
+
+
+conversation.
+
+
+>> Yeah, this has been fun.

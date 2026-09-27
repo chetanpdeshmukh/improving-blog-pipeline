@@ -1,0 +1,19 @@
+{
+  "name": "blog-pipeline-stage4",
+  "version": "1.0.0",
+  "description": "Stage 4 AI certification — blog transcript to publish kit pipeline",
+  "main": "workflow/run-workflow.js",
+  "scripts": {
+    "start": "node workflow/run-workflow.js",
+    "test": "echo 'Usage: node workflow/run-workflow.js test-data/<transcript>.txt'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "license": "UNLICENSED",
+  "notes": {
+    "runtime": "Uses `claude` CLI (Claude Code >=2.0) for all AI steps — no ANTHROPIC_API_KEY required. Run `claude --version` to confirm it is installed and authenticated before first run."
+  }
+}
