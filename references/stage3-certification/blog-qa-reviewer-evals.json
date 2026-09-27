@@ -1,0 +1,112 @@
+{
+  "description": "Stage 3 promptfoo eval suite for blog-qa-reviewer skill — QA gating agent for Improving blog pipeline",
+  "workingDirectory": ".",
+  "rubricVersion": "2026-09",
+  "testCases": [
+    {
+      "id": "unlinked-stat-catch",
+      "description": "Detects unlinked statistics and issues FAIL with fix directive pointing to original source",
+      "variables": {
+        "input": "According to MIT researchers, 73% of enterprises report that AI adoption creates new technical debt. This statistic underscores the hidden costs of moving fast. The construction company we interviewed noted that their initial deployment cost 40% more than expected due to rework.",
+        "context": "Transcript source: Kevin Jordane podcast interview (The Improving Edge, Episode 1). SME cited MIT stat from memory; no hyperlink provided in source material."
+      },
+      "expected": "Skill flags the MIT stat as FAIL (unlinked). Fix directive explicitly instructs: locate MIT's original research, link to it, or replace with a verifiable linked alternative. Competitor-source exclusion mentioned (do not link to competitor consulting firm's report about the MIT research).",
+      "assertions": [
+        {
+          "type": "contains",
+          "value": "FAIL",
+          "metric": "FAIL verdict issued"
+        },
+        {
+          "type": "regex",
+          "value": "(locate|link|original|source|MIT|research)",
+          "metric": "Fix directive references source-finding, not generic 'verify'"
+        },
+        {
+          "type": "regex",
+          "value": "(competitor|secondary|consulting|blog)",
+          "metric": "Competitor-source exclusion mentioned"
+        }
+      ]
+    },
+    {
+      "id": "vague-capability-flag",
+      "description": "Detects vague capability language (e.g., 'we help teams', 'we enable transformation', 'we accelerate initiatives') and issues FAIL with specific rewrite",
+      "variables": {
+        "input": "Improving helps organizations transform their operations through AI. We accelerate digital transformation initiatives. Our team enables enterprises to realize the value of AI. With our approach, companies can leverage their data to drive better outcomes.",
+        "context": "Draft from blog article about Improving's AI strategy service. Language is generic and could apply to any consulting firm."
+      },
+      "expected": "Skill flags every vague capability statement as FAIL. For each, provides a specific rewritten alternative naming: (a) concrete technology or methodology (e.g., 'IOS framework' or 'multi-agent systems'), (b) measurable outcome or use case (e.g., 'reduce incident response time from 4 hours to 15 minutes'), or (c) specific team type or buyer persona (e.g., 'DevOps teams' or 'VP of Engineering').",
+      "assertions": [
+        {
+          "type": "contains",
+          "value": "FAIL",
+          "metric": "FAIL verdict issued"
+        },
+        {
+          "type": "regex",
+          "value": "(IOS|multi-agent|framework|incident response|DevOps|measure|specific)",
+          "metric": "Specific rewrite offered"
+        },
+        {
+          "type": "count-occurrences-greater-than",
+          "value": "FAIL",
+          "count": 2,
+          "metric": "Multiple vague statements caught (at least 3 FAILs for this input)"
+        }
+      ]
+    },
+    {
+      "id": "missing-section-fail",
+      "description": "Detects missing required article sections (Introduction, Problem Statement, Body/Examples, Takeaway) and issues FAIL",
+      "variables": {
+        "input": "# Agentic AI in DevOps\n\nDevOps teams are exploring agentic AI to automate incident response. Early results show promise. Teams using agents for diagnostics report faster MTTR. The next frontier is autonomous remediation.\n\n## Conclusion\n\nAgentic AI is changing how teams work. Organizations should consider pilot programs."
+      },
+      "context": "Draft missing clear 'Problem Statement' section (what problem does agentic AI solve?) and substantive 'Body' examples beyond one sentence each."
+    },
+    {
+      "id": "specific-example-pass",
+      "description": "Accepts well-grounded examples with concrete detail (company name, metric, timeline, specific technology) and issues PASS with praise for specificity",
+      "variables": {
+        "input": "We worked with a financial services firm (50-person DevOps team) that was spending 3 hours per day on repetitive alerts. Using a multi-agent system to triage alerts and trigger runbooks, they reduced mean time to resolution from 120 minutes to 18 minutes in 6 weeks. The agents could not fully replace humans but handled 78% of incidents without escalation."
+      },
+      "expected": "Skill issues PASS for this example. Recognizes and praises: company size, baseline metric (3 hours/day), specific technology (multi-agent), measurable outcome (120→18 min), timeline (6 weeks), success rate (78%). Example is usable and credible."
+    },
+    {
+      "id": "unsupported-claim-fail",
+      "description": "Detects claims without supporting evidence (no citation, no example, no reasoning) and issues FAIL with fix directive",
+      "variables": {
+        "input": "AI agents dramatically improve team efficiency. Most organizations see 40% faster delivery when they adopt agentic systems. Teams that invest in agent training outperform their peers by a wide margin. The ROI is almost always positive."
+      },
+      "expected": "Skill flags every unsupported claim as FAIL. Fix directives specify: either provide a cited source, add a specific example, or reframe as observational ('we have observed' or 'early pilots show'). No made-up stats."
+    }
+  ],
+  "scorers": [
+    {
+      "id": "verdict-correctness",
+      "type": "llm-rubric",
+      "description": "Is the FAIL/PASS verdict correct for this input? Score 1-5.",
+      "rubric": "1: Wrong verdict (should FAIL but issued PASS, or vice versa). 2: Correct verdict but weak reasoning. 3: Correct verdict with adequate reasoning. 4: Correct verdict with specific reasoning tied to input. 5: Correct verdict with specific, quotable, actionable reasoning tied to exact text in input."
+    },
+    {
+      "id": "fix-directive-quality",
+      "type": "llm-rubric",
+      "description": "For FAIL verdicts: is the fix directive specific, actionable, and usable by a human reviewer? Score 1-5.",
+      "rubric": "1: Fix is generic ('improve this'). 2: Fix names the category but not the action. 3: Fix has 2-step action. 4: Fix has 3-4 clear steps with examples. 5: Fix is so specific a human can execute it immediately without asking for clarification."
+    },
+    {
+      "id": "false-positive-rate",
+      "type": "contains-none",
+      "value": ["FAIL"],
+      "description": "For PASS test cases: does the skill incorrectly issue a FAIL? (Should be 0 false positives.)"
+    },
+    {
+      "id": "evidence-grounding",
+      "type": "regex",
+      "pattern": "(specific|example|metric|cited|source|quote)",
+      "description": "Does the skill ground its verdict in specific evidence from the input text? Looks for references to concrete data, examples, or quotations."
+    }
+  ],
+  "passThreshold": 4.0,
+  "notes": "This eval suite measures the blog-qa-reviewer skill's ability to catch content quality issues before publication and provide actionable fix directives. Test cases cover: unlinked stats, vague capability language, missing sections, specificity checks, and unsupported claims. Success = all 5 test cases pass with verdict-correctness >= 4 AND fix-directive-quality >= 4 (for FAIL cases)."
+}

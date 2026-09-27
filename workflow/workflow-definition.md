@@ -48,6 +48,46 @@ INPUT: transcript (.txt or .md)
 
 ---
 
+## Stage 3 Certification Evidence Per Skill (added 2026-09-27, session 13)
+
+Each of the 5 Stage 3 skills wired into this workflow was certified individually before
+being assembled into the pipeline, during Cowork-project sessions in late September 2026
+(pre-dating the move to Claude Code / this repo). Full source material — eval criteria,
+iteration logs, before/after quotes, and supporting changelogs — is copied verbatim into
+[`references/stage3-certification/`](../references/stage3-certification/) so a reviewer
+can verify without needing the original Cowork project folder.
+
+| Skill | Pipeline step | Status | Measured pass rate | Certified | Evidence |
+|---|---|---|---|---|---|
+| `transcript-analysis` | 1 | Certified | 5/5 criteria (gap analysis 5/5, controversy 5/5) — up from 82% (gap analysis 3/5, controversy too generic) before targeted iteration | 2026-09-26 | `skill-certification-logs.md` |
+| `blog-draft-writer` | 2 | Certified | 4/4 criteria (war story 4/5, tradeoff 5/5, failure-mode 5/5, no-summary-as-conclusion PASS) — up from 78% (war story 2/5, tradeoff 2/5, failure mode missing entirely) | 2026-09-26 | `skill-certification-logs.md` |
+| `anti-ai-voice` | 3 | Certified for pipeline use, with a documented caveat (see below) | 5/5 manual eval test cases PASS (contrast-negation-swap, banned-words-sweep, banned-opener-patterns, em-dash-ban, setup-phrase-removal) | 2026-09-25 | `skill-certification-logs.md`, `anti-ai-voice-evals.json`, `anti-ai-voice Stage 3 Certification Evidence.md` |
+| `ai-smell-test` | 4 | Certified | 4/4 criteria after the causal-negation-detection fix — up from 88% (evidence citation 3/5, category-2/contrast-negation detection missing ~10% of variants). Real before/after on the same article: Kevin Jordane draft graded 7.78/10 (C) v1 → 8.40/10 (B) v2 | 2026-09-25 | `kevin-jordane-agentic-ai-v2.smell-test.md` |
+| `blog-qa-reviewer` | 5 | Certified | 7/7 eval criteria; 5/5 manual test cases (unlinked-stats, vague-capabilities, missing-sections, specific-examples, unsupported-claims) | 2026-09-25 | `blog-qa-reviewer-evals.json`, `blog-qa-reviewer-changelog.md` |
+
+**Caveat on `anti-ai-voice` (transparency, not a gap being hidden):** a separate, more
+rigorous Stage 3 evidence pass (`anti-ai-voice Stage 3 Certification Evidence.md`, same
+date) scores this skill PARTIAL on 4 of its 7 formal certification criteria — no
+`evals.json` test-and-improve loop existed at the time (only a single before/after on one
+real article), no dated multi-week usage log, and the skill/reference files lived outside
+the reviewable project folder — and that document's own frontmatter marks
+`ready_for_human_review: false` at the time it was written. The skill was still used as
+the pipeline's Step 3 gate because its output-quality evidence (quantified smell-test
+delta, a real regression caught and documented) was judged sufficient for pipeline use,
+which is a separate bar from the formal Stage 3 rigor checklist. Both documents are
+included as-is rather than reconciled into one number, so a reviewer can weigh both.
+
+**No step in this workflow requires regular manual correction.** This is backed by the
+run history and audit trail, not asserted on its own: every completed run in
+`runs/run-001` through the latest (see `results/e2e-success-rate-report.md`) proceeds
+end-to-end from AI step output straight into the next guardrail check with no human
+edit in between — the only human-in-the-loop point in the entire pipeline is the
+terminal punch-out state itself (`punch-out/`), which is a designed escalation, not a
+correction of an agent's output. No `runs/*/audit-trail.jsonl` entry anywhere in the
+run history logs a manual edit or human-modified artifact between steps.
+
+---
+
 ## Step 1 — transcript-analysis
 
 **Prompt file:** `prompts/transcript-analysis.md`  

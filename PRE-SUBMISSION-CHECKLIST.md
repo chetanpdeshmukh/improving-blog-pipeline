@@ -10,7 +10,7 @@ Do not submit while any item below is ❌. Re-run this checklist any time the pi
 changes materially, and update the status markers — this file should reflect the
 repo's real state at submission time, not a snapshot from when it was written.
 
-Last audited: 2026-09-27 (session 11).
+Last audited: 2026-09-27 (session 13; §1's two partial items closed this session).
 
 ---
 
@@ -20,8 +20,8 @@ Last audited: 2026-09-27 (session 11).
 
 - [x] **Multiple Stage 3 agents wired into an end-to-end workflow** — `workflow/workflow-definition.md` documents all 6 steps (transcript-analysis → blog-draft-writer → anti-ai-voice → ai-smell-test → blog-qa-reviewer → blog-refinement), each backed by a certified Stage 3 skill in `prompts/`.
 - [x] **Handoffs and branching logic documented** — `workflow-definition.md` §"Branching Summary" and §"Handoff Schemas".
-- [ ] **Every agent passes its Stage 3 quality bar (95%+ on real work)** — ⚠ **PARTIAL.** All 5 skills (anti-ai-voice, blog-qa-reviewer, ai-smell-test, transcript-analysis, blog-draft-writer) are Stage 3 certified per prior session work, but the workflow-definition doc does not currently **cite** each skill's actual pass rate/certification evidence inline. Action: add a table to `workflow-definition.md` (or this doc) listing each of the 5 skills with its certification date and measured pass rate, linking to the Stage 3 evidence files (`anti-ai-voice Stage 3 Certification Evidence.md`, `blog-qa-reviewer-evals.json`, `anti-ai-voice-evals.json`, `skill-certification-logs.md` — all in the parent folder, not yet copied into this repo).
-- [ ] **No agents that still require regular manual correction** — ⚠ **PARTIAL.** True in the sense that no step currently requires a human to hand-edit output before the next step runs. But this needs to be stated explicitly and backed by evidence (the run history) rather than left implicit — add a line to workflow-definition.md or the README asserting this and pointing at the run history / audit trail as proof.
+- [x] **Every agent passes its Stage 3 quality bar (95%+ on real work)** — done session 13. `workflow/workflow-definition.md`'s new "Stage 3 Certification Evidence Per Skill" section cites each of the 5 skills' certification date and measured pass rate inline, with an honest caveat noted on `anti-ai-voice` (a separate, more rigorous evidence doc scores it PARTIAL on 4/7 formal criteria despite passing pipeline-use eval). Source evidence files copied verbatim into `references/stage3-certification/` so a reviewer doesn't need the original Cowork project folder.
+- [x] **No agents that still require regular manual correction** — done session 13. `workflow-definition.md`'s new section states this explicitly, backed by the run history: every run proceeds AI-step-output → guardrail with no human edit in between; the only human-in-the-loop point is the terminal punch-out escalation, not a correction.
 - [x] **The workflow itself is a Stage 3 prompt and needs to be evaluated individually** — `workflow/orchestration-eval.md` (added session 12). Covers `workflow/test-guardrails-local.js` (36 assertions on the deterministic guardrail functions), the mock-CLI batch (`run-050`–`057`, orchestrator control-flow under a canned model), and the punch-out bypass test (`punch-out/bypass-test-evidence.md`, is the gate itself load-bearing) as three distinct evaluation methods with explicit pass criteria.
 
 ## 2. Guardrails

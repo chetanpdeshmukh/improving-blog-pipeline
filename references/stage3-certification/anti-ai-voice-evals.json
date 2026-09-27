@@ -1,0 +1,134 @@
+{
+  "description": "Stage 3 promptfoo eval suite for anti-ai-voice skill",
+  "workingDirectory": ".",
+  "rubricVersion": "2026-09",
+  "testCases": [
+    {
+      "id": "contrast-negation-swap",
+      "description": "Removes contrast negation patterns (X is not Y. X is Z.) — highest-frequency AI tell",
+      "variables": {
+        "input": "The failure patterns are not random. They are predictable. This is not a model quality problem. It is a compounding probability issue. We did not lose the sale. We gained a new process."
+      },
+      "expected": "The skill removes all three contrast-negation patterns and produces positive-positive rewrites without the negation opener.",
+      "assertions": [
+        {
+          "type": "contains-none",
+          "value": ["are not random", "is not a model", "did not lose"],
+          "metric": "Contrast negation patterns removed"
+        },
+        {
+          "type": "regex",
+          "value": "are predictable|compounding probability|gained a new process",
+          "metric": "Positive rewrites present (sample check)"
+        }
+      ]
+    },
+    {
+      "id": "banned-words-sweep",
+      "description": "Removes ~50 banned words from references/banned-words.md: 'leverage', 'seamless', 'Moreover', 'Additionally', 'However', etc.",
+      "variables": {
+        "input": "To leverage our expertise, we need to Moreover enhance the seamless integration. Additionally, we must ensure the solution is robust. However, this approach enables organizations to realize value quickly."
+      },
+      "expected": "All banned words ('leverage', 'Moreover', 'seamless', 'Additionally', 'However') are removed or replaced. Output reads like a practitioner wrote it.",
+      "assertions": [
+        {
+          "type": "contains-none",
+          "value": ["leverage", "Moreover", "seamless", "Additionally", "However"],
+          "metric": "Banned words removed"
+        },
+        {
+          "type": "regex",
+          "value": "\\b(to|using|by|through|approach)\\b",
+          "metric": "Natural alternatives present"
+        }
+      ]
+    },
+    {
+      "id": "banned-opener-patterns",
+      "description": "Removes opening templates like 'In today's...', 'As organizations increasingly...', 'The reality is that...', 'It's important to note that...'",
+      "variables": {
+        "input": "In today's business environment, organizations are struggling. As organizations increasingly adopt AI, the challenge becomes greater. The reality is that most teams lack the skills. It's important to note that this problem is widespread."
+      },
+      "expected": "All opening templates are removed. Draft opens directly with a claim or observation.",
+      "assertions": [
+        {
+          "type": "contains-none",
+          "value": ["In today's", "As organizations increasingly", "The reality is that", "It's important to note that"],
+          "metric": "Banned opening patterns removed"
+        },
+        {
+          "type": "regex",
+          "value": "^[^(In today|As organizations|The reality|It's important)]",
+          "metric": "Direct opening present"
+        }
+      ]
+    },
+    {
+      "id": "em-dash-ban",
+      "description": "Confirms zero em dashes in output (KB rule: em dashes are an AI writing tell)",
+      "variables": {
+        "input": "The context required to reason about a deeply integrated system — often too large for a single context window — requires architectural decisions. We have three paths forward — scaling, caching, or chunking. The choice is clear — we must scale."
+      },
+      "expected": "All em dashes are replaced with commas, semicolons, or periods. Sentences remain clear.",
+      "assertions": [
+        {
+          "type": "contains-none",
+          "value": ["—"],
+          "metric": "Zero em dashes (em dash character removed)"
+        },
+        {
+          "type": "regex",
+          "value": "[,;.]",
+          "metric": "Alternative punctuation present"
+        }
+      ]
+    },
+    {
+      "id": "setup-phrase-removal",
+      "description": "Removes weak setup phrases like 'This distinction matters because...', 'Most people... the few who...', 'Here's the thing...'",
+      "variables": {
+        "input": "This distinction matters because the failure modes are different. Most executives, when they think about AI, focus on speed. The few who understand the architecture know it's more complex. Here's the thing: you can't scale linearly."
+      },
+      "expected": "Setup phrases are removed. Claims are stated directly without the lead-in.",
+      "assertions": [
+        {
+          "type": "contains-none",
+          "value": ["This distinction matters because", "Here's the thing"],
+          "metric": "Weak setup phrases removed"
+        },
+        {
+          "type": "regex",
+          "value": "^(The failure modes|Most executives|You can't scale)",
+          "metric": "Direct claim opening present"
+        }
+      ]
+    }
+  ],
+  "scorers": [
+    {
+      "id": "banned-word-count",
+      "type": "contains-none",
+      "description": "Count of banned words remaining in output. Lower is better (0 is ideal)."
+    },
+    {
+      "id": "contrast-negation-count",
+      "type": "regex",
+      "pattern": "\\b(is not|are not|did not|does not|do not)\\s+\\w+\\.\\s+\\1\\s+(is|are|does)",
+      "description": "Count of remaining contrast negation pairs. Lower is better (0 is ideal)."
+    },
+    {
+      "id": "em-dash-count",
+      "type": "contains-none",
+      "value": ["—"],
+      "description": "Count of em dashes remaining. Must be 0."
+    },
+    {
+      "id": "readability-improvement",
+      "type": "llm-rubric",
+      "description": "Does the output read like a sharp senior practitioner wrote it, not an LLM? Score 1-5. Applied to output vs. input.",
+      "rubric": "1: Sounds more AI-like than input. 2: No clear change. 3: Slightly more human. 4: Noticeably more human/direct. 5: Clearly human voice throughout, all tells removed, sentences punchy and specific."
+    }
+  ],
+  "passThreshold": 4.0,
+  "notes": "This eval suite measures the anti-ai-voice skill's ability to strip AI-sounding language from drafts. Each test case targets a specific category of AI tells. Scorer #4 (readability-improvement) is subjective but essential — the whole point is that output sounds human-written. Success = all 5 test cases pass with rubric score >= 4."
+}
