@@ -83,7 +83,7 @@ const PUNCH_OUT_DIR = path.join(ROOT, 'punch-out');
 const { logStep, aiStepEntry, guardrailEntry } = require('../monitoring/audit-logger');
 const { outlineCheck }  = require('../guardrails/outline-check');
 const { contrastNegationCheck } = require('../guardrails/contrast-negation-check');
-const { draftCheck }    = require('../guardrails/draft-check');
+const { draftCheck, WORD_COUNT_WARN_THRESHOLD } = require('../guardrails/draft-check');
 const { voiceCheck }    = require('../guardrails/voice-check');
 const { gradeGate }     = require('../guardrails/grade-gate');
 const { qaGate }        = require('../guardrails/qa-gate');
@@ -398,6 +398,19 @@ async function main() {
       punchOut(runId, runDir, 'draft-check', `Draft failed validation: ${draftResult.errors.join('; ')}`);
     }
 
+    // Word count is handled separately from the structural errors above.
+    // A marginal miss (within WORD_COUNT_WARN_THRESHOLD, currently 3%) is
+    // logged as a warning for whoever reviews the run — it does not block
+    // and does not spend a redraft. A larger miss goes into the same
+    // redraft loop as contrast-negation below (see wordCountNeedsRedraft).
+    const wordCountIssue = draftResult.wordCountIssue;
+    if (wordCountIssue?.severity === 'warn') {
+      logStep(runDir, guardrailEntry(runId, 'draft-check',
+        'warn', `Word count marginal — review recommended: ${wordCountIssue.message}`));
+      console.log(`  [draft-check] WARN: ${wordCountIssue.message} (within ${(WORD_COUNT_WARN_THRESHOLD * 100).toFixed(0)}% tolerance — proceeding, flagged for review)`);
+    }
+    const wordCountNeedsRedraft = wordCountIssue?.severity === 'redraft';
+
     // Deterministic pre-check for contrast-negation density — catches the
     // habit at the source, before spending an anti-ai-voice + smell-test
     // cycle on a draft that's going to plateau at C regardless.
@@ -406,13 +419,32 @@ async function main() {
       contrastResult.pass ? 'pass' : 'fail',
       contrastResult.pass ? 'contrast-negation density acceptable' : `${contrastResult.hits.length} contrast-negation hits found`));
 
-    if (contrastResult.pass || draftAttempt > MAX_DRAFT_REDRAFTS) {
+    if ((contrastResult.pass && !wordCountNeedsRedraft) || draftAttempt > MAX_DRAFT_REDRAFTS) {
+      if (wordCountNeedsRedraft) {
+        // Redraft budget spent and still outside tolerance — this is now
+        // the same outcome as before this fix, just reached after giving
+        // the writer a real chance to trim/expand first.
+        punchOut(runId, runDir, 'draft-check',
+          `Word count still out of range after ${MAX_DRAFT_REDRAFTS} redraft attempt(s): ${wordCountIssue.message}`);
+      }
       break;
     }
 
-    console.log(`  [contrast-negation-check] ${contrastResult.hits.length} hits — sending back to blog-draft-writer (attempt ${draftAttempt + 1}/${MAX_DRAFT_REDRAFTS + 1})`);
-    const flaggedList = contrastResult.hits.map((h, i) => `${i + 1}. [${h.reason}] "${h.excerpt}"`).join('\n');
-    draftUserContent = `Here is the approved outline:\n\n${outlineText}\n\n---\nYour previous draft used contrast-negation / substitution-framing sentences ${contrastResult.hits.length} times. Rewrite the full blog draft from scratch using the SAME outline, but avoid this sentence shape entirely. Flagged instances from the previous attempt:\n\n${flaggedList}\n\nOutput ONLY the blog article — no preamble, no commentary. Start directly with the # title heading. Hard limit: ${WORD_MIN}–${WORD_MAX} words maximum.\n\nCRITICAL AI-SMELL BAN: Do NOT use contrast-negation structures ("X doesn't Y. It Z." / bare ", not a/the ..." tails / "rather than" substitutions / "is not a/the X" claims). State claims directly and positively instead.`;
+    const issueList = [];
+    if (wordCountNeedsRedraft) {
+      console.log(`  [draft-check] ${wordCountIssue.message} — sending back to blog-draft-writer (attempt ${draftAttempt + 1}/${MAX_DRAFT_REDRAFTS + 1})`);
+      const direction = draftResult.wordCount > WORD_MAX
+        ? `Your previous draft was ${draftResult.wordCount} words, over the ${WORD_MAX}-word maximum. Trim it: cut whichever paragraph or example contributes least to the argument (per the "if removing it doesn't reduce the article's value, remove it" test) — do not shorten sentences throughout, that damages the specific, consequential writing this piece needs.`
+        : `Your previous draft was ${draftResult.wordCount} words, under the ${WORD_MIN}-word minimum. Expand the thinnest section using mechanism, risk, or consequence — never restatement or generic filler.`;
+      issueList.push(direction);
+    }
+    if (!contrastResult.pass) {
+      console.log(`  [contrast-negation-check] ${contrastResult.hits.length} hits — sending back to blog-draft-writer (attempt ${draftAttempt + 1}/${MAX_DRAFT_REDRAFTS + 1})`);
+      const flaggedList = contrastResult.hits.map((h, i) => `${i + 1}. [${h.reason}] "${h.excerpt}"`).join('\n');
+      issueList.push(`Your previous draft used contrast-negation / substitution-framing sentences ${contrastResult.hits.length} times. Rewrite avoiding this sentence shape entirely. Flagged instances:\n\n${flaggedList}\n\nCRITICAL AI-SMELL BAN: Do NOT use contrast-negation structures ("X doesn't Y. It Z." / bare ", not a/the ..." tails / "rather than" substitutions / "is not a/the X" claims). State claims directly and positively instead.`);
+    }
+
+    draftUserContent = `Here is the approved outline:\n\n${outlineText}\n\n---\n${issueList.join('\n\n')}\n\nRewrite the full blog draft from scratch using the SAME outline. Output ONLY the blog article — no preamble, no commentary. Start directly with the # title heading. Hard limit: ${WORD_MIN}–${WORD_MAX} words maximum.`;
   }
   } // end else (normal blog-draft-writer path)
 

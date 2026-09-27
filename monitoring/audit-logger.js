@@ -67,7 +67,7 @@ function calculateCost(inputTokens, outputTokens) {
  * Build a guardrail log entry (no model, no tokens, zero cost).
  * @param {string} runId
  * @param {string} stepName
- * @param {'pass'|'fail'|'punch-out'} status
+ * @param {'pass'|'fail'|'warn'|'punch-out'} status
  * @param {string} outcome
  * @returns {object}
  */

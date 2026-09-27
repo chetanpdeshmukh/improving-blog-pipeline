@@ -127,16 +127,54 @@ test('production max is 1,600, not the old 1,800 (regression: stale word-count r
   const body = 'word '.repeat(560); // 3 sections x 560 = 1680 words — over 1600, under old 1800
   const text = `# Title\n\n## Section One\n\n${body}\n\n## Section Two\n\n${body}\n\n## Section Three\n\n${body}`;
   const result = draftCheck(text);
-  assert.strictEqual(result.pass, false, 'expected fail at 1680 words against the 1600 production ceiling');
+  // Word count no longer flips `pass` on its own (see the wordCountIssue
+  // tri-state tests below) — but it must still be flagged against the
+  // 1,600 ceiling, not the stale 1,800 one.
+  assert.ok(result.wordCountIssue, 'expected a wordCountIssue at 1680 words against the 1600 production ceiling');
+  assert.strictEqual(result.wordCountIssue.severity, 'redraft', '1680/1600 is 5% over — beyond the 3% warn threshold');
 });
 
-test('--short test-mode override: 600 words passes with {minWords:500, maxWords:800}, fails default', () => {
+test('--short test-mode override: 600 words passes with {minWords:500, maxWords:800}, flags redraft under default 800-1600', () => {
   const body = 'word '.repeat(200); // 3 sections x 200 = 600 words
   const text = `# Title\n\n## Section One\n\n${body}\n\n## Section Two\n\n${body}\n\n## Section Three\n\n${body}`;
   const shortResult = draftCheck(text, { minWords: 500, maxWords: 800 });
   assert.strictEqual(shortResult.pass, true, `expected pass under --short range, got: ${JSON.stringify(shortResult.errors)}`);
+  assert.strictEqual(shortResult.wordCountIssue, null, 'expected no word-count issue under --short range');
   const defaultResult = draftCheck(text);
-  assert.strictEqual(defaultResult.pass, false, 'expected fail under production 800-1600 range (600 words is below 800 minimum)');
+  assert.strictEqual(defaultResult.pass, true, 'word count alone no longer fails `pass` — structural checks are unaffected');
+  assert.ok(defaultResult.wordCountIssue, 'expected a wordCountIssue (600 is 25% below the 800 minimum)');
+  assert.strictEqual(defaultResult.wordCountIssue.severity, 'redraft');
+});
+
+test('word count within 3% of a boundary is severity "warn", not "redraft" (regression: run-043/run-045 punched out for 1.2%/3.1% misses with no revision chance)', () => {
+  // countWords tokenizes markdown syntax chars too ("#", "##" each count),
+  // so build text to an EXACT total word count by measuring the fixed
+  // heading overhead (11 tokens: "# Title" + three "## Section N" lines)
+  // and filling the body to make up the rest, split across the 3
+  // required H2 sections (the split doesn't need to be even).
+  const makeText = (totalWords) => {
+    const overhead = 11;
+    const bodyWords = totalWords - overhead;
+    const k1 = Math.ceil(bodyWords / 3);
+    const k2 = Math.ceil((bodyWords - k1) / 2);
+    const k3 = bodyWords - k1 - k2;
+    const b1 = 'word '.repeat(k1).trim(), b2 = 'word '.repeat(k2).trim(), b3 = 'word '.repeat(k3).trim();
+    return `# Title\n\n## Section One\n\n${b1}\n\n## Section Two\n\n${b2}\n\n## Section Three\n\n${b3}`;
+  };
+
+  // 1648/1600 = exactly 3% over -> warn (boundary is inclusive)
+  const atThreshold = draftCheck(makeText(1648));
+  assert.strictEqual(atThreshold.wordCount, 1648, 'test text construction should hit the exact target word count');
+  assert.strictEqual(atThreshold.pass, true);
+  assert.strictEqual(atThreshold.wordCountIssue.severity, 'warn', `1648 words (3.0% over) should warn, got: ${JSON.stringify(atThreshold.wordCountIssue)}`);
+
+  // 1649/1600 = just over 3% -> redraft
+  const overThreshold = draftCheck(makeText(1649));
+  assert.strictEqual(overThreshold.wordCountIssue.severity, 'redraft', `1649 words (3.06% over) should redraft, got: ${JSON.stringify(overThreshold.wordCountIssue)}`);
+
+  // Exactly in range -> no issue at all
+  const clean = draftCheck(makeText(1200));
+  assert.strictEqual(clean.wordCountIssue, null);
 });
 
 console.log('\n=== extractSmellTestReport (XML tool-call stripping) ===');

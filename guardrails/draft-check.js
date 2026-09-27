@@ -11,6 +11,14 @@ const MIN_WORDS = 800;
 const MAX_WORDS = 1600;
 const MIN_H2_HEADINGS = 3;
 
+// A word-count miss within this fraction of the nearest boundary is treated
+// as marginal: warn only, don't block or redraft. Beyond it, the miss is
+// large enough to send back to blog-draft-writer for a real trim/expansion
+// pass rather than either punching out immediately or silently ignoring it.
+// (Two full-length runs punched out here for being 1.2% and 3.1% over —
+// see KB session 10 notes.)
+const WORD_COUNT_WARN_THRESHOLD = 0.03;
+
 const PLACEHOLDER_PATTERNS = [
   /\bTBD\b/i,
   /\bINSERT HERE\b/i,
@@ -48,20 +56,45 @@ function countWords(text) {
  *   800-1600 production range. Used by the --short test-iteration mode in
  *   run-workflow.js (500-800 words) so fast-iteration runs on real transcripts
  *   don't get punched out by the production word-count gate.
- * @returns {{ pass: boolean, errors: string[], warnings: string[], wordCount: number }}
+ * @returns {{
+ *   pass: boolean, errors: string[], warnings: string[], wordCount: number,
+ *   wordCountIssue: null | { severity: 'warn'|'redraft', message: string, deviation: number }
+ * }}
+ *
+ * Word count is handled separately from the other structural errors below:
+ * a miss within WORD_COUNT_WARN_THRESHOLD of the nearest boundary is a
+ * `warn`-severity wordCountIssue (never blocks, never redrafts — the run
+ * proceeds and the note is there for whoever reviews the run); a larger
+ * miss is `redraft`-severity, which the orchestrator sends back to
+ * blog-draft-writer for a real trim/expand pass (same pattern as the
+ * contrast-negation redraft loop) before punching out. Neither case sets
+ * `pass: false` on its own — only the structural errors below do.
  */
 function draftCheck(draftText, opts = {}) {
   const minWords = opts.minWords ?? MIN_WORDS;
   const maxWords = opts.maxWords ?? MAX_WORDS;
   const errors = [];
   const warnings = [];
+  let wordCountIssue = null;
 
   // Word count
   const wordCount = countWords(draftText);
   if (wordCount < minWords) {
-    errors.push(`Word count too low: ${wordCount} words (minimum ${minWords})`);
+    const deviation = (minWords - wordCount) / minWords;
+    const message = `Word count too low: ${wordCount} words (minimum ${minWords}, ${(deviation * 100).toFixed(1)}% under)`;
+    wordCountIssue = {
+      severity: deviation <= WORD_COUNT_WARN_THRESHOLD ? 'warn' : 'redraft',
+      message,
+      deviation,
+    };
   } else if (wordCount > maxWords) {
-    errors.push(`Word count too high: ${wordCount} words (maximum ${maxWords})`);
+    const deviation = (wordCount - maxWords) / maxWords;
+    const message = `Word count too high: ${wordCount} words (maximum ${maxWords}, ${(deviation * 100).toFixed(1)}% over)`;
+    wordCountIssue = {
+      severity: deviation <= WORD_COUNT_WARN_THRESHOLD ? 'warn' : 'redraft',
+      message,
+      deviation,
+    };
   }
 
   // H2 heading count
@@ -94,7 +127,8 @@ function draftCheck(draftText, opts = {}) {
     errors,
     warnings,
     wordCount,
+    wordCountIssue,
   };
 }
 
-module.exports = { draftCheck };
+module.exports = { draftCheck, WORD_COUNT_WARN_THRESHOLD };
