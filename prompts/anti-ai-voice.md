@@ -36,26 +36,68 @@ You can remove 10–20% of the words if it makes the piece tighter.
 
 ---
 
-## Step 1: Banned Word & Phrase Sweep
+## Step 1: Banned Word & Phrase Sweep (Canonical — Improving's Anti-AI Voice Editor v1.0)
 
 Before any other editing, scan the full text and remove every instance of these banned
-words and phrases. None of them can appear in the final version:
+words, phrases, and patterns. None of them can appear in the final version. This list is
+sourced from Improving's canonical Anti-AI Voice Editor document and is non-negotiable —
+no exceptions, no softening.
 
-AI buzzwords: leverage (as a verb), seamless/seamlessly, cutting-edge, state-of-the-art,
-next-generation/next-gen, game-changer/game-changing, transformative, revolutionary,
-innovative, synergistic, ecosystem, robust, holistic, end-to-end, best-in-class, world-class,
-best practice(s).
-Corporate fluff: empower/empowerment, enable (when vague), facilitate, unlock the potential.
-Hollow affirmations: it is important to note, it is worth noting, it's worth mentioning,
-it should be noted that.
-AI essay openers/closers: in today's fast-paced [world/environment], in conclusion, in summary,
-moreover (as a sentence opener), furthermore (as a sentence opener).
-Do not just swap in a synonym from this same list — rewrite the sentence so it says something
-concrete instead.
+**High-confidence AI tell phrases (never appear, even modified):** "In today's fast-paced
+world" · "Now more than ever" · "At the end of the day" · "The bottom line is" · "As we've
+seen" · "It's important to note" · "It's worth noting" · "This begs the question" · "Let's
+take a closer look" · "What this means is" · "That said" · "With that in mind" ·
+"Ultimately" · "Clearly" · "Needless to say" · "Navigating"
 
-When you remove a banned word, do not just swap in a synonym. Rewrite the sentence so it
-says something concrete. If the sentence has nothing concrete to say without the banned word,
-delete the sentence.
+**Common AI structures:** "In a world where…" · "Most people think X, but…" · "Stop X.
+Start Y." · "It's not just about… it's about…" · "This isn't just a trend — it's a
+transformation"
+
+**Empty insight / thought-leadership language:** "This isn't just about X — it's about Y"
+· "It's not only X, but also Y" · "This shift represents a fundamental change" · "A
+paradigm shift" · "Game-changing" · "Revolutionary" · "Transformational" · "Unlocks new
+possibilities" · "Redefines how we think about" · "Raises important questions"
+
+**Generic contrast & false balance (illusion of reasoning without showing reasoning):**
+"Most people think X. But the reality is Y." · "Many organizations struggle with X. The
+solution is Y." · "The difference between success and failure is X." · "On the one hand…
+on the other hand…" · "Some argue X, while others believe Y"
+
+**Empty authority & attribution:** "Experts agree" · "Industry leaders say" · "Research
+shows" (without citation) · "It's widely believed" · "Many teams are finding" ·
+"Organizations are realizing" — if you can't name the actor, the mechanism, or the
+consequence, remove the claim.
+
+**Padding & symmetry abuse:** lists that exist only to reach three items · rephrasing the
+same idea multiple ways · sentences that restate the previous sentence · paragraphs that
+summarize the paragraph before them.
+
+**Over-explaining the obvious:** "AI is a rapidly evolving field" · "Businesses are under
+pressure to adapt" · "Technology continues to advance" · "Change is inevitable" — assume a
+capable reader; explain what breaks, what changes, or what decisions follow.
+
+**Promotional & sales leakage:** "Designed to help you" · "Empowers organizations" ·
+"Delivers value" · "Enables teams to" · "Provides a solution" · "Helps unlock" · "Drive
+results"
+
+**Hedge & softening overuse:** "Can help" · "May enable" · "Often" · "Typically" · "In many
+cases" · "Potentially" · "Somewhat" — use hedging only when uncertainty is real and
+material.
+
+**AI buzzwords:** leverage (as a verb), seamless/seamlessly, cutting-edge,
+state-of-the-art, next-generation/next-gen, transformative, innovative, synergistic,
+ecosystem, robust, holistic, end-to-end, best-in-class, world-class, best practice(s).
+
+**Em dash ban (explicit, non-negotiable):** do not use the em dash (—), double hyphens
+(`--`), or spaced hyphens as substitutes. Heavily overused by LLMs and signals synthetic
+sentence construction. Approved alternatives: periods, correct commas, short standalone
+sentences, full sentence rewrites. Example — banned: "This approach works — but only if
+teams align early." Rewrite: "This approach works only when teams align early." or "This
+approach works. Teams must align early."
+
+When you remove a banned word, do not just swap in a synonym from this same list. Rewrite
+the sentence so it says something concrete. If the sentence has nothing concrete to say
+without the banned word, delete the sentence.
 
 **Example — wrong fix:**
 - Original: "This is a crucial step in the process."

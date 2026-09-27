@@ -32,6 +32,17 @@ const BANNED_PHRASES = [
   { phrase: 'Best-in-class',              pattern: /\bbest[- ]in[- ]class\b/i,         reason: 'hollow superlative' },
   { phrase: 'It\'s worth mentioning',     pattern: /it's worth mention/i,              reason: 'hollow hedging phrase' },
   { phrase: 'In summary',                 pattern: /^In summary[,\s]/im,               reason: 'AI essay closer' },
+  // Canonical Improving Anti-AI Voice Editor v1.0 additions (2026-02-19 SharePoint source)
+  { phrase: 'Em dash (—)',                 pattern: /—/,                                reason: 'em dash explicitly banned — synthetic sentence construction tell' },
+  { phrase: 'Now more than ever',          pattern: /now more than ever/i,               reason: 'high-confidence AI tell phrase' },
+  { phrase: 'At the end of the day',       pattern: /at the end of the day/i,            reason: 'high-confidence AI tell phrase' },
+  { phrase: 'The bottom line is',          pattern: /the bottom line is/i,               reason: 'high-confidence AI tell phrase' },
+  { phrase: 'As we\'ve seen',              pattern: /as we'?ve seen/i,                   reason: 'high-confidence AI tell phrase' },
+  { phrase: 'This begs the question',      pattern: /this begs the question/i,           reason: 'high-confidence AI tell phrase' },
+  { phrase: 'What this means is',          pattern: /what this means is/i,               reason: 'high-confidence AI tell phrase' },
+  { phrase: 'Paradigm shift',              pattern: /\bparadigm shift\b/i,               reason: 'empty insight buzzword' },
+  { phrase: 'Experts agree',               pattern: /\bexperts agree\b/i,                reason: 'empty authority attribution' },
+  { phrase: 'It\'s widely believed',       pattern: /it'?s widely believed/i,            reason: 'empty authority attribution' },
 ];
 
 /**
