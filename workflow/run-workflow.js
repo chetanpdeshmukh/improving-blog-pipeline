@@ -188,9 +188,18 @@ function callModel(systemPrompt, userContent) {
  * otherwise strip all XML tags and return what remains.
  */
 function extractSmellTestReport(text) {
-  // Try to pull content from <parameter name="content">...</parameter>
-  const match = text.match(/<parameter name="content">([\s\S]*?)<\/parameter>/);
-  if (match) return match[1].trim();
+  // Try to pull content from <parameter name="content">...</parameter>.
+  // The model sometimes emits more than one tool-call attempt in a single
+  // response (a partial/aborted one, then a corrected one) — taking the
+  // FIRST match risks capturing a truncated fragment with no scorecard,
+  // which then fails grade-gate parsing entirely. Take the LONGEST match
+  // instead, since a truncated attempt is reliably shorter than the real
+  // report.
+  const matches = [...text.matchAll(/<parameter name="content">([\s\S]*?)<\/parameter>/g)];
+  if (matches.length > 0) {
+    const longest = matches.reduce((a, b) => (b[1].length > a[1].length ? b : a));
+    return longest[1].trim();
+  }
   // Fallback: strip XML-style tags
   return text.replace(/<[^>]+>/g, '').trim();
 }
