@@ -244,12 +244,33 @@ async function main() {
   // Useful for testing steps 2-6 without waiting for the slow analysis step.
   const outlineFlag = process.argv.indexOf('--outline');
   const outlinePath = outlineFlag !== -1 ? process.argv[outlineFlag + 1] : null;
-  // Only treat argv[2] as a transcript if --outline was NOT passed
-  const transcriptPath = outlinePath ? null : process.argv[2];
 
-  if (!transcriptPath && !outlinePath) {
-    console.error('Usage: node workflow/run-workflow.js <path/to/transcript.txt>');
+  // --draft <path>  skips steps 1 AND 2 and feeds a pre-written draft straight
+  // into anti-ai-voice → ai-smell-test → grade-gate. For fast iteration on the
+  // back half of the pipeline (voice/smell/grade) without waiting on the two
+  // slowest, most expensive steps (transcript-analysis, blog-draft-writer).
+  const draftFlag = process.argv.indexOf('--draft');
+  const draftFlagPath = draftFlag !== -1 ? process.argv[draftFlag + 1] : null;
+
+  // --short  test-iteration mode: targets a 500-800 word draft instead of the
+  // production 800-1,600 range. For running REAL transcripts fast during
+  // iteration (shorter draft = faster + cheaper claude CLI calls at every
+  // downstream step) without switching to a synthetic --draft fixture.
+  // Never use this for the actual certification submission runs.
+  const shortMode = process.argv.includes('--short');
+  const WORD_MIN = shortMode ? 500 : 800;
+  const WORD_MAX = shortMode ? 800 : 1600;
+  if (shortMode) {
+    console.log(`  [test-mode] --short: targeting ${WORD_MIN}-${WORD_MAX} words instead of production 800-1600`);
+  }
+
+  // Only treat argv[2] as a transcript if neither --outline nor --draft was passed
+  const transcriptPath = (outlinePath || draftFlagPath) ? null : process.argv.find((a, i) => i >= 2 && a !== '--short');
+
+  if (!transcriptPath && !outlinePath && !draftFlagPath) {
+    console.error('Usage: node workflow/run-workflow.js [--short] <path/to/transcript.txt>');
     console.error('       node workflow/run-workflow.js --outline <path/to/01-outline.json>');
+    console.error('       node workflow/run-workflow.js --draft <path/to/draft.md>');
     process.exit(1);
   }
 
@@ -259,7 +280,15 @@ async function main() {
 
   let outlineText;
 
-  if (outlinePath) {
+  if (draftFlagPath) {
+    console.log(`\n=== Blog Pipeline — ${runId} (resume from draft) ===`);
+    console.log(`Draft: ${path.basename(draftFlagPath)}\n`);
+    console.log('[1/6] transcript-analysis — SKIPPED (using provided draft)');
+    console.log('[2/6] blog-draft-writer — SKIPPED (using provided draft)');
+    outlineText = '(skipped — draft supplied directly via --draft)';
+    logStep(runDir, guardrailEntry(runId, 'outline-check', 'pass', 'skipped — draft supplied directly'));
+    logStep(runDir, guardrailEntry(runId, 'draft-check', 'pass', 'skipped — draft supplied directly'));
+  } else if (outlinePath) {
     // ── Skip step 1: load existing outline ───────────────────────────────────
     if (!fs.existsSync(outlinePath)) {
       console.error(`Outline file not found: ${outlinePath}`);
@@ -300,10 +329,27 @@ async function main() {
   }
 
   // ── Step 2: blog-draft-writer ─────────────────────────────────────────────
+  let draftText;
+
+  if (draftFlagPath) {
+    if (!fs.existsSync(draftFlagPath)) {
+      console.error(`Draft file not found: ${draftFlagPath}`);
+      process.exit(1);
+    }
+    draftText = fs.readFileSync(draftFlagPath, 'utf8').trim();
+    saveArtifact(runDir, '02-draft.md', draftText);
+
+    const contrastResult = contrastNegationCheck(draftText);
+    logStep(runDir, guardrailEntry(runId, 'contrast-negation-check',
+      contrastResult.pass ? 'pass' : 'fail',
+      contrastResult.pass ? 'contrast-negation density acceptable' : `${contrastResult.hits.length} contrast-negation hits found`));
+    if (!contrastResult.pass) {
+      punchOut(runId, runDir, 'contrast-negation-check', `Supplied draft failed contrast-negation gate: ${contrastResult.hits.length} hits`);
+    }
+  } else {
   console.log('[2/6] blog-draft-writer');
   const MAX_DRAFT_REDRAFTS = 2;
-  let draftText;
-  let draftUserContent = `Here is the approved outline:\n\n${outlineText}\n\n---\nIMPORTANT: Write the full blog draft now. Output ONLY the blog article — no preamble, no commentary, no "Draft complete" lines. Start directly with the # title heading. Hard limit: 800–1,500 words maximum. Do NOT exceed 1,500 words.\n\nCRITICAL AI-SMELL BAN: Do NOT use contrast-negation structures ("X doesn't Y. It Z." / "Not X — Y." / "The question isn't X. It's Y." / bare ", not a/the ..." tails / "rather than" substitutions). These are the #1 AI writing tell and will cause an automatic D grade. Rewrite any such sentence as a direct positive claim.`;
+  let draftUserContent = `Here is the approved outline:\n\n${outlineText}\n\n---\nIMPORTANT: Write the full blog draft now. Output ONLY the blog article — no preamble, no commentary, no "Draft complete" lines. Start directly with the # title heading. Hard limit: ${WORD_MIN}–${WORD_MAX} words maximum. Do NOT exceed ${WORD_MAX} words.\n\nCRITICAL AI-SMELL BAN: Do NOT use contrast-negation structures ("X doesn't Y. It Z." / "Not X — Y." / "The question isn't X. It's Y." / bare ", not a/the ..." tails / "rather than" substitutions). These are the #1 AI writing tell and will cause an automatic D grade. Rewrite any such sentence as a direct positive claim.`;
 
   for (let draftAttempt = 1; draftAttempt <= MAX_DRAFT_REDRAFTS + 1; draftAttempt++) {
     const rawDraftText = await runStep({
@@ -322,7 +368,7 @@ async function main() {
     }
     draftText = stripped;
 
-    const draftResult = draftCheck(draftText);
+    const draftResult = draftCheck(draftText, { minWords: WORD_MIN, maxWords: WORD_MAX });
     logStep(runDir, guardrailEntry(runId, 'draft-check',
       draftResult.pass ? 'pass' : 'fail',
       draftResult.pass ? 'draft valid' : draftResult.errors.join('; ')));
@@ -344,8 +390,9 @@ async function main() {
 
     console.log(`  [contrast-negation-check] ${contrastResult.hits.length} hits — sending back to blog-draft-writer (attempt ${draftAttempt + 1}/${MAX_DRAFT_REDRAFTS + 1})`);
     const flaggedList = contrastResult.hits.map((h, i) => `${i + 1}. [${h.reason}] "${h.excerpt}"`).join('\n');
-    draftUserContent = `Here is the approved outline:\n\n${outlineText}\n\n---\nYour previous draft used contrast-negation / substitution-framing sentences ${contrastResult.hits.length} times. Rewrite the full blog draft from scratch using the SAME outline, but avoid this sentence shape entirely. Flagged instances from the previous attempt:\n\n${flaggedList}\n\nOutput ONLY the blog article — no preamble, no commentary. Start directly with the # title heading. Hard limit: 800–1,500 words maximum.\n\nCRITICAL AI-SMELL BAN: Do NOT use contrast-negation structures ("X doesn't Y. It Z." / bare ", not a/the ..." tails / "rather than" substitutions / "is not a/the X" claims). State claims directly and positively instead.`;
+    draftUserContent = `Here is the approved outline:\n\n${outlineText}\n\n---\nYour previous draft used contrast-negation / substitution-framing sentences ${contrastResult.hits.length} times. Rewrite the full blog draft from scratch using the SAME outline, but avoid this sentence shape entirely. Flagged instances from the previous attempt:\n\n${flaggedList}\n\nOutput ONLY the blog article — no preamble, no commentary. Start directly with the # title heading. Hard limit: ${WORD_MIN}–${WORD_MAX} words maximum.\n\nCRITICAL AI-SMELL BAN: Do NOT use contrast-negation structures ("X doesn't Y. It Z." / bare ", not a/the ..." tails / "rather than" substitutions / "is not a/the X" claims). State claims directly and positively instead.`;
   }
+  } // end else (normal blog-draft-writer path)
 
   // ── Step 3 + 4: anti-ai-voice → ai-smell-test (revision loop) ────────────
   console.log('[3/6] anti-ai-voice');
@@ -488,17 +535,23 @@ async function main() {
 }
 
 // ---------------------------------------------------------------------------
-// Entry point
+// Entry point — only runs the pipeline when this file is executed directly.
+// When required as a module (e.g. by a local no-CLI test harness), only the
+// pure helper functions below are exposed; main() is never invoked.
 // ---------------------------------------------------------------------------
-main().catch(err => {
-  console.error('\n[FATAL]', err.message ?? err);
-  try {
-    fs.mkdirSync(PUNCH_OUT_DIR, { recursive: true });
-    fs.writeFileSync(
-      path.join(PUNCH_OUT_DIR, 'unknown-fatal.json'),
-      JSON.stringify({ runId: 'unknown', step: 'orchestrator', reason: err.message ?? String(err), timestamp: new Date().toISOString() }, null, 2),
-      'utf8'
-    );
-  } catch (_) { /* swallow */ }
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch(err => {
+    console.error('\n[FATAL]', err.message ?? err);
+    try {
+      fs.mkdirSync(PUNCH_OUT_DIR, { recursive: true });
+      fs.writeFileSync(
+        path.join(PUNCH_OUT_DIR, 'unknown-fatal.json'),
+        JSON.stringify({ runId: 'unknown', step: 'orchestrator', reason: err.message ?? String(err), timestamp: new Date().toISOString() }, null, 2),
+        'utf8'
+      );
+    } catch (_) { /* swallow */ }
+    process.exit(1);
+  });
+}
+
+module.exports = { extractSmellTestReport, stripDraftMetaCommentary };

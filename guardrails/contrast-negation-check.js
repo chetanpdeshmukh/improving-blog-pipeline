@@ -13,6 +13,14 @@
  * draft (before voice-cleaning and grading) lets the fix happen at the
  * source instead of being patched downstream.
  *
+ * run-029 still plateaued at C even with this gate active: the density
+ * threshold (MAX_ALLOWED_HITS = 3) let a single contrast-negation hit in
+ * the title through, but the smell test scores ANY instance in the title
+ * or opening sentence as CRITICAL regardless of overall count, since
+ * that's the most visible position in the piece. This gate is now
+ * position-aware: zero tolerance for the title line and the opening
+ * sentence, density threshold (unchanged) for the rest of the body.
+ *
  * Deterministic — no AI calls.
  */
 
@@ -42,10 +50,40 @@ const CONTRAST_NEGATION_PATTERNS = [
 const MAX_ALLOWED_HITS = 3;
 
 /**
- * @param {string} text - Raw or stripped output from blog-draft-writer
- * @returns {{ pass: boolean, hits: Array<{ reason: string, excerpt: string }> }}
+ * Splits the draft into its "critical zone" (title line + opening sentence,
+ * where the smell test applies zero tolerance) and the remaining body
+ * (where the density threshold still applies).
+ *
+ * @param {string} text
+ * @returns {{ criticalZone: string, body: string }}
  */
-function contrastNegationCheck(text) {
+function splitCriticalZone(text) {
+  const lines = text.split('\n');
+  let titleLineIdx = lines.findIndex((l) => /^#\s+\S/.test(l));
+  if (titleLineIdx === -1) titleLineIdx = 0;
+  const titleLine = lines[titleLineIdx] || '';
+
+  // Opening = first non-empty, non-heading line after the title, up through
+  // its first TWO sentence terminators. The two-sentence corrective template
+  // ("X isn't Y. It's Z.") and similar tells span two sentences — capturing
+  // only the first sentence let a hit slip into the body, where the density
+  // threshold (not zero-tolerance) let it through undetected.
+  let openingSentence = '';
+  for (let i = titleLineIdx + 1; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (!line || /^#/.test(line)) continue;
+    const match = line.match(/^(?:[^.!?]*[.!?]\s*){1,2}/);
+    openingSentence = match ? match[0].trim() : line;
+    break;
+  }
+
+  const criticalZone = `${titleLine}\n${openingSentence}`;
+  const body = text.replace(titleLine, '').replace(openingSentence, '');
+
+  return { criticalZone, body };
+}
+
+function findHits(text) {
   const hits = [];
 
   for (const { pattern, reason } of CONTRAST_NEGATION_PATTERNS) {
@@ -62,8 +100,23 @@ function contrastNegationCheck(text) {
     }
   }
 
+  return hits;
+}
+
+/**
+ * @param {string} text - Raw or stripped output from blog-draft-writer
+ * @returns {{ pass: boolean, hits: Array<{ reason: string, excerpt: string, zone: string }> }}
+ */
+function contrastNegationCheck(text) {
+  const { criticalZone, body } = splitCriticalZone(text);
+
+  const criticalHits = findHits(criticalZone).map((h) => ({ ...h, zone: 'title/opening (zero-tolerance)' }));
+  const bodyHits = findHits(body).map((h) => ({ ...h, zone: 'body' }));
+
+  const hits = [...criticalHits, ...bodyHits];
+
   return {
-    pass: hits.length <= MAX_ALLOWED_HITS,
+    pass: criticalHits.length === 0 && bodyHits.length <= MAX_ALLOWED_HITS,
     hits,
   };
 }
