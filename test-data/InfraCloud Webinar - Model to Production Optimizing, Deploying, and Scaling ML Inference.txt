@@ -1,0 +1,4777 @@
+hi there it's a brand new month it's a
+
+
+brand new week and we are back with
+
+
+another exciting webinar today it's
+
+
+great to see you all back for the third
+
+
+installment of our AI explor webinar
+
+
+series and whether you are a seasoned ml
+
+
+engineer or you are just getting into it
+
+
+today's session is all about making your
+
+
+AI models truly production
+
+
+ready so if you have ever built
+
+
+something you are proud of you know it
+
+
+can be an application a script or an AI
+
+
+model you know the real test is when it
+
+
+leaves your laptop it leaves your Dev
+
+
+environment and faces the Ws of
+
+
+production today we are diving exactly
+
+
+into that make or break moment
+
+
+optimizing deploying and scaling your
+
+
+machine learning models it's going to be
+
+
+like you know it works on my machine to
+
+
+it works at scale so welcome to the
+
+
+third episode of our AI explore webinar
+
+
+series and today's discussion area is
+
+
+model to production optimizing deploying
+
+
+and scaling ml
+
+
+inferences and talking about that in
+
+
+case you missed it we would like to tell
+
+
+you that we are the proud sponsors of
+
+
+Nvidia AI Summit that's happening in
+
+
+Mumbai on October 24th and 25th so do
+
+
+drop by our booth to learn more about
+
+
+the exciting things that we are doing at
+
+
+infac cloud and and we also have some
+
+
+Cutting Edge demos planned so do come
+
+
+and check out what we have in store and
+
+
+also have some fun games to test your AI
+
+
+skills so if you think you are an AI
+
+
+wizard you have to visit our booth and
+
+
+play these amazing
+
+
+games having said that if this is the
+
+
+first time you're joining a webinar do
+
+
+remember that do note down that this is
+
+
+this isn't the first time we are doing
+
+
+it we have done a lot of webinars in the
+
+
+past and especially the AI explore
+
+
+Series so if you want to check out the
+
+
+other webinars we did in this series we
+
+
+spoke about setting up your oi uh your
+
+
+own AI lab we also discussed about how
+
+
+to observe your entire AI infrastructure
+
+
+and today we are going to discuss about
+
+
+model serving and deployment techniques
+
+
+so if you want to check out any of our
+
+
+previous videos all you have to do is
+
+
+scan the QR code that is on your screen
+
+
+and it will take you to our YouTube
+
+
+playlist where you can access all the
+
+
+previous videos that we have uploaded
+
+
+till
+
+
+now and like always I am not the only
+
+
+one today I have some guests along with
+
+
+me so before I bring on the guest for
+
+
+today a quick introduction about me
+
+
+because I spoke a lot and then introduce
+
+
+myself to all the new folks who are
+
+
+joining in I am Atul PR Sharma a senior
+
+
+developer Advocate at infra Cloud uh
+
+
+where I help build poc's and content
+
+
+strategy for our customers and client to
+
+
+help them and their developers adopt
+
+
+open source and Cloud native Tech I'm
+
+
+also a cncf Ambassador and actively
+
+
+involved in the community and when I'm
+
+
+not doing community or content you can
+
+
+find me at a restaurant trying out a new
+
+
+Cuisine so that's pretty much about me
+
+
+and let me get on the stage the guests
+
+
+for today I have sanket and I have Aman
+
+
+hi Aman hi sankit thank you so much for
+
+
+tuning in
+
+
+great so both shank and Aman AR in the
+
+
+First Time guest over here this is their
+
+
+second or third strength if I am correct
+
+
+and if you have seen a previous webinar
+
+
+you probably know about them but then if
+
+
+you're tuning in for the first time you
+
+
+know we need to know what they are and
+
+
+what they do so San am sank and Aman why
+
+
+don't you go ahead and introduce
+
+
+yourself to our audience so uh so I'm
+
+
+sanit I'm principal engineer at enra
+
+
+Cloud uh my I've been dappling around e
+
+
+one year for past one year uh my
+
+
+interest areas are AI cloud and
+
+
+distributed systems and uh so when I'm
+
+
+not uh basically coding or exploring
+
+
+infrastructure I mostly spend time
+
+
+reading playing sports or playing with
+
+
+my daughter who is now eight months old
+
+
+so uh that's pretty much about me uh
+
+
+excited to present what we have to
+
+
+do great thanks an am over to you
+
+
+thanks heyone I'm Aman principal
+
+
+engineer at infr Cloud uh my interest
+
+
+areas are mostly around Cloud native
+
+
+systems I've been working for them 12
+
+
+years now uh the last one or two year
+
+
+focuses more on like AI cloud and how to
+
+
+add similar things in the AI Cloud
+
+
+world when not doing all these things I
+
+
+you be either reading a book or probably
+
+
+watching a movie that's
+
+
+it interesting so we have a voraus
+
+
+reader a movie buff and a new parent who
+
+
+is seeing his daughter grow and I think
+
+
+that's really how an application grows
+
+
+as well you know your model you start
+
+
+with something small and then you see it
+
+
+growing learning evolving and then
+
+
+reaching uh to the
+
+
+masses a little bit of housekeeping
+
+
+stuff before we you know move forward
+
+
+like always we would be taking questions
+
+
+from all of you so do put in your
+
+
+questions queries suggestion in the
+
+
+comment box wherever you're joining in
+
+
+if you're tuning in from LinkedIn put it
+
+
+in the comment ments and I will take the
+
+
+question with our guests or if you're
+
+
+joining in from YouTube or streamyard
+
+
+just put in your questions and we would
+
+
+be happy to take them
+
+
+up so starting with the most basic
+
+
+question what exactly is a gen AI model
+
+
+so I'm sure all of us use AI in our
+
+
+day-to-day lives and when you ask a
+
+
+question let's say to g chat GPT it's
+
+
+not just looking Pi up an answer from a
+
+
+database you know instead it is trying
+
+
+to understand the input that you have
+
+
+provided based on that it tries to
+
+
+predict the next best response and
+
+
+create something in real time and you
+
+
+know that could be text it could be code
+
+
+or even images or videos in more
+
+
+advanced
+
+
+models so essentially speaking about gen
+
+
+what is a generative AI model it's
+
+
+basically an algorithm that learns
+
+
+patterns from dat to make prediction so
+
+
+your model is typically an algorithm
+
+
+that is trained with a lot of data from
+
+
+different sources and based on that it
+
+
+learns to identify patterns to make
+
+
+predictions gen models are sophisticated
+
+
+deep learning models that as the name
+
+
+suggests generate text image audio and
+
+
+video when given a certain instruction
+
+
+so you know basically like when you
+
+
+provide a prompt hey generate an image
+
+
+of Mumbai Skyline with Gateway of India
+
+
+and Taj Hotel
+
+
+it actually tries to understand what you
+
+
+have provided and based on the learning
+
+
+that it has it is trying to it'll try to
+
+
+generate an image about that so it is
+
+
+built by feeding large amounts of data
+
+
+and allowing the model to learn over
+
+
+time and get you know improve when it
+
+
+comes to predicting the outputs and you
+
+
+know it could be like I said generating
+
+
+text image or videos and there are
+
+
+different techniques uh you know each
+
+
+model uh employ to improve the
+
+
+predictions over time and that is why if
+
+
+you ask one prompt or if you give one
+
+
+prompt to different models you will get
+
+
+different answers from uh you know each
+
+
+of them and that is where the techniques
+
+
+with which they are built they are
+
+
+trained uh you know that is where it
+
+
+affects uh
+
+
+that uh so now that you have a very
+
+
+basic and just uh idea of what
+
+
+generative AI models are and how to
+
+
+create and how they work to create new
+
+
+content the next big question here is
+
+
+how do we actually use them in real
+
+
+world right I had an algorithm I trained
+
+
+it with tons and petabytes of data and
+
+
+you know the model is working it's
+
+
+answering my queries but then the real
+
+
+question is how do you get it to the
+
+
+real world audience and that's exactly
+
+
+where model serving comes into play at a
+
+
+very high level it's a process that
+
+
+takes your train model the jna model
+
+
+that you did the chat GPD sort of model
+
+
+that we discussed from the lab to an
+
+
+actual product ction setup making it
+
+
+available to Folks at scale now this if
+
+
+you see is a very straightforward and a
+
+
+very lay man description that I've given
+
+
+and that is why I have experts with me
+
+
+who actually can help Define and refine
+
+
+this description so over to Aman who can
+
+
+help us more about model serving what it
+
+
+is how it works why it's needed etc etc
+
+
+etc sure yeah if I say like the analogy
+
+
+that you give is
+
+
+exactly the one that will be required
+
+
+here uh basically you have a code you
+
+
+have a process now you have designed it
+
+
+you have created your service now how do
+
+
+you run it and it same happens with the
+
+
+models as well because ultimately models
+
+
+also run as a process uh within your
+
+
+computer system so how do you serve them
+
+
+how do you make them us of course you no
+
+
+one is going to use it like uh just
+
+
+installing it in their computer and
+
+
+using it as C you need to create some
+
+
+applications on top of it probably apis
+
+
+grpc whatnot so like in the typical
+
+
+application world we have three models
+
+
+of serving usually uh there are more but
+
+
+I'll just call the top three ones which
+
+
+is like you have a synchronous model you
+
+
+just make a request you have an API end
+
+
+point and you get a response so
+
+
+basically your inference inference or
+
+
+your model is basically running in a
+
+
+container or let's say in any process or
+
+
+v machine and it's wrapped up by an API
+
+
+server you make a request you get the
+
+
+response now when we create applications
+
+
+sometimes interactivity becomes the
+
+
+prime key and how your customers are
+
+
+engaged like you see chat gbt you type
+
+
+in something and it doesn't give you
+
+
+like a response in one single shot it
+
+
+will keep on typing it that's like a
+
+
+streaming model uh it's an interactive
+
+
+model it will keep you data and you feel
+
+
+like someone is really writing it so
+
+
+that's what the streaming model does you
+
+
+kind of stream the content back to it
+
+
+you can have a batch data and you can
+
+
+even put a stream layer in front of it
+
+
+and uh you can even handle the load as
+
+
+well and lastly the batch model where
+
+
+you don't care about the latency but
+
+
+what you care about is that your
+
+
+Hardware or the whatever you're using is
+
+
+used to it Max Peak and that's where you
+
+
+can use the batch models because
+
+
+throughput is your main concern rather
+
+
+than uh throughput utilization of your
+
+
+Hardware is your primary concern rather
+
+
+than the end user latencies so you can
+
+
+basically put all your data as a bunch
+
+
+of sheet within a sheet or any other
+
+
+file formats or any other data formats
+
+
+and you just submit it to a model and
+
+
+then model will process it in these
+
+
+cases just utilization of gpus and all
+
+
+these things it's pretty high because it
+
+
+doesn't need to respond immediately but
+
+
+it needs to be very efficient to process
+
+
+all the
+
+
+data
+
+
+yeah now when we talk about serving
+
+
+layer there are always two components in
+
+
+the uh infant side of llms or gen models
+
+
+now we have a typical server thing where
+
+
+you put your code and you put it behind
+
+
+a server or you put it along with the
+
+
+server and then it can serve the request
+
+
+whatever is coming in front of it but
+
+
+when it comes to llm there is also
+
+
+called an engine thing now what the
+
+
+purpose of engine is uh you have to do
+
+
+certain optimizations uh like let's say
+
+
+if your model is not performing to your
+
+
+speed it is not utilizing the hardware
+
+
+properly you're seeing memory issues
+
+
+you're seeing CPU utilization GPU
+
+
+utilization issues those kinds of
+
+
+tunings are basically done at engine
+
+
+level and when it comes to your serving
+
+
+side where you have your customers and
+
+
+uh where you have to make sure that
+
+
+you're able to handle let's say millions
+
+
+of requests per seconds and how you
+
+
+performing and scaling based on that
+
+
+that is the part where server comes in
+
+
+so if you see these are the two
+
+
+component that will always remain there
+
+
+there are multiple Frameworks to do that
+
+
+as well like BLM Ray some falls in the
+
+
+engine category some falls in the server
+
+
+category only or some Falls in both like
+
+
+CU flow can work as a framework and it
+
+
+can tie it to multiple Frameworks
+
+
+multiple servers and you can just deploy
+
+
+it same as race but TGI it is also an
+
+
+engine as well as server uh in itself so
+
+
+you can utilize it only to do that same
+
+
+with Nvidia Tron it's a server but but
+
+
+they have their own engines like tensor
+
+
+RT llm or you can even use VM with the
+
+
+Tron infant server so we can combine
+
+
+these things or you can use just one so
+
+
+that's where these Frameworks help in uh
+
+
+doing all these
+
+
+activities yeah sorry I was on mute
+
+
+interesting Insight so I think you know
+
+
+model serving involves a lot of
+
+
+components you know like you rightly
+
+
+spoke about you know talking about the
+
+
+backend and you know server
+
+
+capabilities right and uh now that we
+
+
+understood or got an idea into how
+
+
+models are served into production uh the
+
+
+actual real world challenge is making
+
+
+sure how they can handle the real world
+
+
+Demand right so uh just imagine that you
+
+
+are giving a prompt to a chat GPT or a
+
+
+Claude or a Gemini and imagine it taking
+
+
+more than 5 seconds or 10 seconds to
+
+
+respond to your query right you would
+
+
+really be like hey what's going wrong
+
+
+why the hell are you taking so much time
+
+
+to you know respond to my query now from
+
+
+a user's perspective that is latency you
+
+
+know that's that's just the tip of the
+
+
+iceberg if I can say uh you know when it
+
+
+comes to the the performance of the uh
+
+
+model uh model so as more and more users
+
+
+interact with these models uh you know
+
+
+whether it's generating text queries or
+
+
+making predictions uh we need to have
+
+
+strategies in place to make sure that
+
+
+these are running smoothly and
+
+
+efficiently even at scale you know when
+
+
+these model are responding to concurrent
+
+
+users who are you know located at
+
+
+different geographies have different
+
+
+network requirements different devices
+
+
+you want your models to be working
+
+
+perfectly well and uh that is where we
+
+
+focus on a lot of optimization
+
+
+techniques uh where we try to focus on
+
+
+how we can best utilize the hardware
+
+
+that we have and provide the best
+
+
+throughput or the experience to the end
+
+
+users who are using it right so in this
+
+
+specific section we would be looking at
+
+
+a few techniques that will help optimize
+
+
+the models that you have in place so
+
+
+that you can take full advantage of your
+
+
+uh infrastructure and other things that
+
+
+are associated with that uh so Amon over
+
+
+to you again for a deep dive into model
+
+
+optimizations
+
+
+sure uh first of all let's look at why
+
+
+you actually need optimization I think
+
+
+you already summarized it but key points
+
+
+like you mentioned latency it is the
+
+
+first thing where customer notices it
+
+
+and then it becomes a pin for everyone
+
+
+to troubleshoot and do it because that's
+
+
+where your key product performance and
+
+
+everything is measured now when we talk
+
+
+about optimizations uh one thing I would
+
+
+like to call out is there are there is
+
+
+also a thing called like tuning the
+
+
+models that is also considered a part of
+
+
+optimization but uh today we might we'll
+
+
+be focusing more on let's say when you
+
+
+have tuned your model already uh you
+
+
+have done Laura QA and all these
+
+
+techniques and you have fine tuned it
+
+
+you have your own context and everything
+
+
+added to it
+
+
+now once you have that model now you
+
+
+need to deploy it into your production
+
+
+systems how do you do that so that's
+
+
+where we will be focusing more on the
+
+
+optimization technique that we are
+
+
+covering
+
+
+today now uh if you start with it the
+
+
+first one I would call it is
+
+
+quantization now quantization is a very
+
+
+simple I mean if you have to explain it
+
+
+like a simple one like you have a
+
+
+Precision of 32 bits you reduce it to 8
+
+
+Bits it sounds very simple when you read
+
+
+it in that way but yeah it is actually
+
+
+uh it has many things behind it uh you
+
+
+can run it smoothly with any of these
+
+
+Frameworks all of these Frameworks that
+
+
+I spoke about earlier they support it uh
+
+
+it's just one command that you have to
+
+
+fire you have to understand what your
+
+
+existing data type is and what data type
+
+
+you want to reach to but what what you
+
+
+need to understand here is you're not
+
+
+training a model it is a trained model
+
+
+uh it's a model that is ready for
+
+
+inference and now you are doing a
+
+
+quantization so you're not doing on all
+
+
+the data you're only doing on the
+
+
+parameters and weights right what can be
+
+
+the side effects of it you can lose
+
+
+certain Precision because you are
+
+
+reducing the your model Precision like
+
+
+fp16 to getting to 8 inate or something
+
+
+like that inate to in4 or using mixed
+
+
+precisions in all these models you will
+
+
+lose certain uh precisions uh when you
+
+
+make calls to your servers or generate
+
+
+outputs out of it but in many cases we
+
+
+have noticed that it doesn't matter a
+
+
+lot uh Because unless and until you're
+
+
+really running or building something
+
+
+that needs that very granular precisions
+
+
+then probably yes you need to run model
+
+
+as it is it was strained on whatever the
+
+
+the memory data types for but if not in
+
+
+many of the cases like translation like
+
+
+you're building a small app within for
+
+
+your organization you're building for a
+
+
+small customer base for a very dedicated
+
+
+case you can do that and it really helps
+
+
+you to load your model onto the
+
+
+Hardwares you always don't need like
+
+
+bigger Hardwares or bigger gpus and all
+
+
+those sizes uh like we run Lama 38
+
+
+billion model on RTX 490 which is
+
+
+basically a 24gb machine uh we quantize
+
+
+it a bit and we can easily run multiple
+
+
+replicas of it and we can test it
+
+
+validate it create applications on top
+
+
+of it and what so that's the advantage
+
+
+of using quantization use it anywhere on
+
+
+your local system if it has a GPU use it
+
+
+on the smaller system you always don't
+
+
+need like h100 and all those buzz buzz
+
+
+gpus
+
+
+okay pruning is very interesting one uh
+
+
+because here uh you what you are
+
+
+basically doing is you are taking away
+
+
+the parameters that are not kind of
+
+
+useful to you now you this is slightly
+
+
+complex because you need to understand
+
+
+what parameters you are using what not
+
+
+now it not even it sounds like you have
+
+
+to choose but the way it works or the
+
+
+libraries are currently doing it is
+
+
+basically weights are basically the
+
+
+numbers uh you can consider it like
+
+
+something like 1.1 1.52 what not these
+
+
+kinds of decimal numbers Etc like now it
+
+
+will go in and check like if the
+
+
+probability is very near to zero for
+
+
+that particular weight or parameter then
+
+
+probably it might not be used in entire
+
+
+model off so it will take out those
+
+
+parameters and remove it for you so all
+
+
+you do is you take a big model uh you
+
+
+run it through a pruning of utility uh
+
+
+it will check like whatever weights or
+
+
+parameters that have a very low bias or
+
+
+very low probability it will remove them
+
+
+what it will do it will reduce your
+
+
+model size again the benefits like
+
+
+quantization you can use that model
+
+
+small models on any hardware you can
+
+
+deployed you can scale it well your
+
+
+inference speed would be better and your
+
+
+precisions you're targeting a specific
+
+
+thing because you have already assumed
+
+
+that you're not using those edge cases
+
+
+and you have removed them so your use
+
+
+case should also be very targeted in
+
+
+these distillation again it sounds very
+
+
+much like pruning uh it's again one of
+
+
+the model compression techniques but uh
+
+
+the reason it is very interesting is you
+
+
+take a very big model and nowadays we
+
+
+see like uh Foundation models are
+
+
+getting bigger and bigger but they're
+
+
+also consuming a lot of data like
+
+
+sometimes the entire internet and
+
+
+whatnot and the application that you
+
+
+might be building is not relevant to
+
+
+that like you don't need that entire
+
+
+internet data but you still need that
+
+
+capability of generating or models now
+
+
+how can you do that probably choose a
+
+
+better model and create a sub model out
+
+
+of it so if you see the diagram it's
+
+
+saying like a teacher model which could
+
+
+be any of the foundational models that
+
+
+are out there now you target your use
+
+
+case let's say you're only targeting
+
+
+translation that's it and that to within
+
+
+a specific language then you can just
+
+
+carve out a small student model out of
+
+
+it and use that model that model will be
+
+
+literally of very low size and it is
+
+
+still capable as the foundational model
+
+
+no changes are made to the foundational
+
+
+model in this case only a new student
+
+
+model is created a smaller model and
+
+
+that can even be fine tuned on your
+
+
+specific data and it will still perform
+
+
+as good as the feature model in the
+
+
+optimization and performance
+
+
+wise now this is about KV caching uh
+
+
+it's it is very much uh to the
+
+
+all these Transformer based models llms
+
+
+that we are seeing currently all these
+
+
+bigger foundational models now usually
+
+
+you have like a different memories in
+
+
+your system right you have a ram then
+
+
+when it comes to GPU GPU has also
+
+
+multiple Ram uh multiple memory systems
+
+
+right it has a small memory that is very
+
+
+close to your C Cuda course or streaming
+
+
+multiprocessors it's like a cache then
+
+
+it has a bigger memory piece which is
+
+
+basically your high bandwidth memory and
+
+
+that's called like vram and it is the
+
+
+one where all when you load a model or
+
+
+all your parameters and everything will
+
+
+be loaded now when you make a query uh
+
+
+many of the times your the nature of llm
+
+
+is it's an auto regressive you ask a
+
+
+question then it will generate a word
+
+
+then it will attach to your original
+
+
+sentence and then it will again generate
+
+
+the next word right so there's a lot of
+
+
+reutilization of the your initial query
+
+
+and that's where these KV caching
+
+
+strategies comes into play because if
+
+
+you load the entire parameters all the
+
+
+time the cues the values the weights and
+
+
+everything your memory will become very
+
+
+will become soon full very soon and you
+
+
+will not be able to utilize the system
+
+
+to its performance what will happen is a
+
+
+lot of data will go to the disk and then
+
+
+you have to read it from disk if it is
+
+
+now in the KV caching strategies again
+
+
+there are multiple options you can use
+
+
+uh and it is also biged into the
+
+
+different servers engines that we are
+
+
+using so it comes down to your attention
+
+
+mechanism tuning one way to call it is
+
+
+like we must have heard about VM it uses
+
+
+page detention what it does is because
+
+
+it just reads some data from the memory
+
+
+and some from the this whatever is
+
+
+required currently create the blocks for
+
+
+that and it uses
+
+
+those right you have group cury
+
+
+attentions multi cury attentions
+
+
+basically you GP your cury uh because
+
+
+your Cy is not changing right once you
+
+
+ask the question that's the question you
+
+
+it it is what it is and when the output
+
+
+are generated in an auto regressive
+
+
+manner it keeps appending to your query
+
+
+so whatever the probabilities or weights
+
+
+are calculated for them or the biases
+
+
+are calculated from them in the
+
+
+transform model that will not change
+
+
+very much so it kind of caches them and
+
+
+use it into different group theories or
+
+
+different multiple ques and that's where
+
+
+you achieve a good optimization on the
+
+
+key value cachet that you use so you can
+
+
+use your bandwidth entire memory
+
+
+bandwidth or entire memory to a very
+
+
+efficient
+
+
+way thanks uh am for those uh insights
+
+
+on you know various uh optimization
+
+
+techniques so uh if you're tuning in
+
+
+right now we were discussing model
+
+
+optimization techniques and I'm took us
+
+
+through to uh you know various
+
+
+techniques and if you have been here
+
+
+till right from the beginning if you
+
+
+have any queries please feel free to you
+
+
+know drop them in the comments as well
+
+
+uh so Aman while I was listening to you
+
+
+you know again I'm not an expert in AI
+
+
+but then there were a lot of things that
+
+
+I could relate to when it comes to you
+
+
+know even deploying uh non-ai workloads
+
+
+as well you know these are I think
+
+
+universally accepted uh you know
+
+
+discussion or uh you know strategies
+
+
+that we involve to improve the you know
+
+
+performance of our applications uh you
+
+
+know like obviously you you about
+
+
+caching mechanism and then you you group
+
+
+your query send it to a server you know
+
+
+in in in a traditional
+
+
+application now one thing that I also uh
+
+
+realized when you spoke about
+
+
+quantization is uh you know when you are
+
+
+let's say reducing the number of uh you
+
+
+know let's say features or or or you
+
+
+know basically going down from 32 bit to
+
+
+an 8bit you essentially lose lose data
+
+
+in in that process and that actually
+
+
+affects your precision as well but then
+
+
+it it reduces the size of your model
+
+
+right so even if I have a a GPU with a
+
+
+lower you know memory footprint I can
+
+
+deploy the model into that now that's
+
+
+where I think it would be very critical
+
+
+to find the right balance of you know
+
+
+how much you want to quantize it uh and
+
+
+you know what is the size you want
+
+
+because I'm sure that is going to affect
+
+
+the out you know uh eventual performance
+
+
+of the of the model that uh you know
+
+
+that you deploy uh so moving on I think
+
+
+you know when you spoke about various
+
+
+different techniques I'm sure uh this
+
+
+would be a question to all our viewers
+
+
+as well that uh hey I mean you you spoke
+
+
+about various techniques and various you
+
+
+know ways to optimize the model but then
+
+
+which one should I choose I mean should
+
+
+I let's say I'm building something do I
+
+
+need to go ahead with quantization
+
+
+remove the features reduce it and put it
+
+
+or should I prefer something more
+
+
+advanced let's say like a KV caching
+
+
+technique or should I use all of them so
+
+
+uh what are your thoughts on it how are
+
+
+you going to help uh such users decide
+
+
+that what's the right model for them to
+
+
+use or a process to decide what model to
+
+
+use sure yeah and you're that it could
+
+
+be like a selection of one of these
+
+
+which one is the best and or if I say it
+
+
+could be even you can use all of these
+
+
+so what I'll show you now is like a
+
+
+sample flow the application that I'm
+
+
+assuming here is like someone wants to
+
+
+build a translation app that needs to
+
+
+run in a mobile all the purpose that it
+
+
+has is just to do a translation and that
+
+
+to can be even for a specific language
+
+
+that's it right now like I said you can
+
+
+start with a real original llama model
+
+
+like a 65 billion because it's
+
+
+performant it covers lot of data and has
+
+
+all the different H cases already feed
+
+
+into it and whatnot so we started with
+
+
+that and we can do a model distillation
+
+
+like I said you can create a small
+
+
+student model out of it and that's what
+
+
+we'll be doing in the model distillation
+
+
+phase right so now we have a smaller
+
+
+model which is just around what 7
+
+
+billion parameters and that's it because
+
+
+we are only and only targeting the
+
+
+translation use cases now that's good
+
+
+but now we notice that again there are a
+
+
+lot of parameters that are not adding
+
+
+any value to it so we can get into the
+
+
+pruning part uh because still with 7
+
+
+billion our size is still very high and
+
+
+it will not run on the mobile very
+
+
+efficiently so we did pruning and we
+
+
+even reduce it to the more smaller
+
+
+numbers and let's say now we get to the
+
+
+5 billion parameters uh why because we
+
+
+are just removing the parameters of
+
+
+Weights that are completely of no use uh
+
+
+they are just adding a very small Ed
+
+
+cases and all those things and probably
+
+
+our app is a very specific translation
+
+
+Bas that's it all that done now is a
+
+
+final step where I have to decide what
+
+
+memory I have and what kind of size I
+
+
+have in my mobile and all those things
+
+
+and I still feel that I will not be able
+
+
+to fit a 5 billion model so I'll go to
+
+
+the quantization I'll Target
+
+
+quantization and let's say I Tred it
+
+
+with 8 bit quantizations I tested it and
+
+
+all the cases are working fine that we
+
+
+are targeting that's and now that takes
+
+
+it to a very small number which can even
+
+
+fit into your 2GB mobile Ram or a v if
+
+
+you have like a GPU VR over there you
+
+
+can use that so that's how you can even
+
+
+use all this of course a sample flow in
+
+
+production or your actual scenarios it
+
+
+might be different the models will be
+
+
+different you might have to test it each
+
+
+and every stage you did a distillation
+
+
+you test your student model again is it
+
+
+performant or not you did pruning you
+
+
+have to test for those every edge cases
+
+
+that you feel your app can have same
+
+
+with quantization uh you need to be sure
+
+
+that you're not hitting those edge cases
+
+
+like where it loses a Precision you're
+
+
+not actually opening that doors and
+
+
+those cases you might not be able to use
+
+
+quantization you have to set a 5 billion
+
+
+and then make your Hardware accordingly
+
+
+for that so that's how you can see all
+
+
+things can be used and last layer is KV
+
+
+caching when it comes to engines this is
+
+
+the technique everyone should definitely
+
+
+use many of the models already have it
+
+
+many of the servers already do the best
+
+
+uh KV caching mechanisms like if you use
+
+
+VM they already have it in built inside
+
+
+that same with TGI they also have their
+
+
+retention mechanism modules that are
+
+
+already enabled so that comes usually
+
+
+with the engines and so but you can
+
+
+again if you want to tune more get to
+
+
+the last mil you can definitely do those
+
+
+KV caching
+
+
+Str this is a really interesting
+
+
+workflow you know am that you have
+
+
+shared I mean I cannot imagine having a
+
+
+65 billion parameter running on you know
+
+
+my mobile device as well you know by
+
+
+following uh all these uh techniques so
+
+
+uh for for anyone you know if if you're
+
+
+watching this I think this uh framework
+
+
+will give you a very good idea of how
+
+
+you can take a parent model and then do
+
+
+all the processes of optimizing your
+
+
+model and then eventually making it you
+
+
+know fit enough to run on different
+
+
+devices with smaller uh footprint you
+
+
+know have KV caching mechanisms to
+
+
+improve the performance so uh uh this is
+
+
+what you need to you know focus on
+
+
+whenever you are having a model and uh
+
+
+you know you are performing optimization
+
+
+and I think that's the right time to
+
+
+take a question that we have from
+
+
+vinayak which I'm going to put it on
+
+
+screen uh so vak shind asked us uh what
+
+
+is the process to carry out pruning or
+
+
+distillation and are there any tools to
+
+
+perform uh any any of these
+
+
+activities yeah so many of the servers
+
+
+and engines that we mentioned uh they
+
+
+already has a utility in built into that
+
+
+so these are like probably python
+
+
+modules a command that you can just
+
+
+trigger and execute it distillation has
+
+
+again like dist pruning both have like
+
+
+different model like there's pass GPD
+
+
+there are again certain Frameworks that
+
+
+have been designed them so you have to
+
+
+choose one that fits your case well and
+
+
+uh sometimes it might need more compute
+
+
+because when you're doing a distillation
+
+
+you're taking a big model and then
+
+
+training out a small model out of it so
+
+
+you might need for a certain period of
+
+
+time a high amount of computer so yeah
+
+
+based on that you have to choose your
+
+
+tools and utilities but you don't have
+
+
+to write anything custom for it most of
+
+
+these popular framework servers they
+
+
+already have the utilities Ed into that
+
+
+for these
+
+
+things great uh thanks someone so I
+
+
+think V in short the answer is most of
+
+
+the tools you know that we spoke about
+
+
+the servers have these capabilities in
+
+
+build and you know you can just use them
+
+
+and probably change some configuration
+
+
+settings based on your requirements and
+
+
+you should be good to uh go uh thanks so
+
+
+much for that question and then we are
+
+
+moving on with our discussion uh so at
+
+
+this point we have optimized our model
+
+
+right you know we got it down from 65
+
+
+billion to let's say a two billion
+
+
+parameter model which is ready to be
+
+
+deployed uh on a mobile device uh but
+
+
+when it comes to real world scenarios
+
+
+you know we spoke about concurrent users
+
+
+we spoke about a lot of load that is
+
+
+being generated at one particular time
+
+
+and that is where you want your model to
+
+
+Scale based on the requests that come in
+
+
+and uh it's not as easy as putting a
+
+
+load balancer and saying hey diverge the
+
+
+traffic to you know the 10 models that I
+
+
+have which is deployed on 10 different
+
+
+machines uh because that's not quite
+
+
+feasible for a lot of reasons uh so
+
+
+moving on to the next section we would
+
+
+be discussing about uh a lot of
+
+
+parallelism and scaling techniques that
+
+
+are involved to you know make your
+
+
+optimized models to reach the real world
+
+
+folks uh and give them a better uh
+
+
+experience so Aman why don't you tell us
+
+
+what is the need of
+
+
+Paralis sure uh like you said you have
+
+
+your everything ready now is the time
+
+
+when you actually deploy it and uh if
+
+
+you have been following like the cloud
+
+
+native World from last 8 10 years it is
+
+
+the it is the big thing that I everyone
+
+
+is doing how do you Auto scale how do
+
+
+you make handle the loads and that's
+
+
+where Cloud shines you can provision
+
+
+notes quickly you can get replicas and
+
+
+whatnot now when it comes to models uh
+
+
+because we already see that they are of
+
+
+big sizes you need bigger Hardwares uh
+
+
+now does that same thing apply over here
+
+
+is what parallelism comes into because
+
+
+it might happen that your model might
+
+
+not fit even in your Hardware so what is
+
+
+the meaning of then the parallelism uh
+
+
+are you taking the data and spread it
+
+
+are you taking the model and spreading
+
+
+it on different system so that is one
+
+
+thing we will see
+
+
+now even the data sets can be high or
+
+
+your model is small fine but your data
+
+
+set is high like I said about the batch
+
+
+workloads right uh you're processing
+
+
+millions of Records you're doing
+
+
+inferencing on millions of Records not
+
+
+like chb you're asking one question at a
+
+
+time and you might be a user who process
+
+
+multiple CU at a single time and that's
+
+
+where you have to again have a
+
+
+replicated model like we have containers
+
+
+replicated different nodes same way can
+
+
+we will be able to do the inference as
+
+
+well so that is what inference
+
+
+parallelism and scaling targets
+
+
+yeah I think the first one and the most
+
+
+relatable one in the normal world is
+
+
+data parallelism it's like having one
+
+
+model and running replicated versions of
+
+
+it here you do the fine tuning or uh you
+
+
+do the all the optimizations on your
+
+
+data that you insert to those models so
+
+
+let's say I was talking about the batch
+
+
+so I have a bunch of rows bunch of
+
+
+Records now I have to process it but I
+
+
+have even enough Hardware that I can run
+
+
+L
+
+
+replicated instances of my model so I
+
+
+can chunk my data and pass it onto a
+
+
+different different instances in that
+
+
+way the throughput of each server will
+
+
+come good because they are processing
+
+
+only on the data size that they can
+
+
+handle and for me again we I'm doing a
+
+
+parel processing because I've just
+
+
+passed on the data to multiple server
+
+
+because I had hardware and that's where
+
+
+I can utilize on the both side my
+
+
+inference will be good my throughput
+
+
+utilization of the hardware will be good
+
+
+and responsible good it might not be
+
+
+make sense to doing for like interactive
+
+
+sessions because there it's just about
+
+
+the load that you are getting you can
+
+
+relate to that like chat GB like
+
+
+multiple users are making a request at
+
+
+the same time millions of requests are
+
+
+coming in so you can spread it out you
+
+
+can maintain those sessions within one
+
+
+server so that context is not lost and
+
+
+all those things but yeah that in that
+
+
+way you can use the state of
+
+
+parallelism now tensor parallelism it is
+
+
+about the models and the networks so all
+
+
+these models are basically based of like
+
+
+neural network right so you have
+
+
+different tensors that are basically
+
+
+kind of you can call you can think of it
+
+
+like a brain or memories kind of it
+
+
+right for within a model now in tensor
+
+
+parallelism you can basically split a
+
+
+model like I was talking earlier you can
+
+
+split a model and then put that model
+
+
+pieces into different different gpus so
+
+
+it could be within your one node it
+
+
+could be across your multiple nodes now
+
+
+when what will happen is let's say I
+
+
+have one model and I did a tensor
+
+
+parallelism I enabled it then certain
+
+
+tensors will be loaded into certain GPU
+
+
+certain other tensors will be loaded
+
+
+into that that split happens very
+
+
+smartly it's not like random one
+
+
+otherwise data will keep running here
+
+
+and there so the split happens very
+
+
+smartly and handled by all these
+
+
+optimization engines only uh server
+
+
+engines basically now what where you
+
+
+will benefit from it basically you are
+
+
+split if you are want to run a bigger
+
+
+model and uh you have you don't have
+
+
+like uh one GPU can fit into it then you
+
+
+can use multiple gpus but here the
+
+
+limitation that you will hit is uh you
+
+
+need to have very high performance
+
+
+networks as well so let's say if you're
+
+
+using only one box using something like
+
+
+EnV link would be really sh really shiny
+
+
+within two GPU machines you could have
+
+
+highspeed interconnect GPU networks
+
+
+because your data might flow from after
+
+
+processing from one GPU certain tensors
+
+
+process it now it will move on to the
+
+
+next GPU so you have to have that high
+
+
+performant Network otherwise network
+
+
+will become a bottleneck for
+
+
+you absolutely I think Aman is just
+
+
+recapping what we discussed in our
+
+
+previous webinars is the importance of
+
+
+network you know a lot of us when we
+
+
+talk about AI it's all GPU GPU GPU maybe
+
+
+a little bit around power but then
+
+
+Network fast Network and fast storage
+
+
+are something which is very critical
+
+
+when it comes to working with uh models
+
+
+so tensor parallelism you know uh it you
+
+
+need a high bandwidth network with uh
+
+
+with you along on the systems that you
+
+
+are working on moving on to the next one
+
+
+pipel pism it might sound very similar
+
+
+to the tensor one but the Chang is uh so
+
+
+if I have log you might have like a
+
+
+sequential jobs in the normal World in
+
+
+the cloud world we have seen like jobs
+
+
+that are being run like you have a
+
+
+certain D workflows that you create
+
+
+basically execute this and execute that
+
+
+then go if the result is this then go
+
+
+into that particular portion of the code
+
+
+now when we talk about pipeline
+
+
+parallelism it's almost same uh if you
+
+
+are processing something which is
+
+
+sequential uh right uh you know that
+
+
+certain things need to be processed
+
+
+first and then it can be passed on to
+
+
+the other layer then pip talism can is
+
+
+really good for you you can split the
+
+
+model into the sequential stages let's
+
+
+say you did certain n numbers of layers
+
+
+in one uh first GPU then you add the
+
+
+other layers in next one because you
+
+
+know that the way things you are going
+
+
+to do that will be purely a sequential
+
+
+operation and that's where you can again
+
+
+uh leverage the multiple gpus but again
+
+
+like I said in the fens parallelism
+
+
+whenever you go beyond one GPU Network
+
+
+becomes a bottom neck it it's not too
+
+
+much in data parallelism because it's a
+
+
+replicated mode so no GP to GP
+
+
+communication happens but when you talk
+
+
+about Pipeline and tensor parallelism a
+
+
+lot of GP to GP communic will happen and
+
+
+that's where you need to have a good
+
+
+highp Speed network between your gpus be
+
+
+within one box be across the
+
+
+boxes and last one uh is expert paradism
+
+
+this is more of like uh you might have
+
+
+seen lot of new models are coming up
+
+
+which are called as like mixture of
+
+
+expert what it does it basically it has
+
+
+uses different technique where the model
+
+
+is not just one single thing where you
+
+
+get like a one model and you make any
+
+
+questions to it then it will process the
+
+
+entire model for it it has enabled
+
+
+certain networks like uh basically it is
+
+
+it has internally multiple experts for
+
+
+different different areas right it could
+
+
+be anything like uh it could be based on
+
+
+like let's say translation language
+
+
+translation all those things and then it
+
+
+could be certain around like games
+
+
+novels and what on now you can enable
+
+
+only the things that you need or it
+
+
+could be even multimodel like let's say
+
+
+you enabled text and then there is
+
+
+certain for video part but you don't
+
+
+need it you don't enable that that's
+
+
+where expert pism comes in you might
+
+
+have to use even the model that actually
+
+
+have those multiple experts is a
+
+
+precursor to it but what it does is you
+
+
+get a model you make queries it will
+
+
+only and only turn on the experts of
+
+
+neural network that are needed to
+
+
+process that part it will not do the
+
+
+other things so it will not load the
+
+
+entire models 10 different models and
+
+
+all those things you can still have a
+
+
+model that can do multiple things but
+
+
+you can only you will only be enabling
+
+
+the one that you need
+
+
+yes so I think you know we we looked at
+
+
+for different parallelism uh techniques
+
+
+to you know serve your uh models to the
+
+
+real world uh Solutions and I think
+
+
+again uh a lot of questions that need to
+
+
+be answered here right let's say if I
+
+
+have multiple gpus but then that's where
+
+
+my network becomes a bottleneck but then
+
+
+if I don't have multiple gpus that's
+
+
+where I look at something like a data
+
+
+paral M so uh again the you know
+
+
+overarching question here is which
+
+
+technique should I use to uh you know
+
+
+serve my model in a better way so that
+
+
+my entire resource is utilized perfectly
+
+
+so I think Aman again has a very
+
+
+detailed and interesting sample flow
+
+
+that will help all of us understand how
+
+
+to choose the technique which suits our
+
+
+requirement best or how to choose
+
+
+between multiple techniques to get the
+
+
+best output for the process that you are
+
+
+uh know going Ahad with so am on over to
+
+
+you
+
+
+yeah and whenever we heard about
+
+
+parallelism scaling it look very
+
+
+tempting that why not use it increase
+
+
+the performance and whatnot I we have
+
+
+generated this small flow diagram uh
+
+
+which is very basic one but what it
+
+
+targets is like uh just placing you
+
+
+where which kind of pism technique might
+
+
+be a good choice for you it can be a
+
+
+starter you can again Deep dive and go
+
+
+into the making decisions but let's say
+
+
+you start with it and if your model size
+
+
+exceeds your single device memory uh so
+
+
+I was talking earlier that we were using
+
+
+RTS 49 which is 24 GB so we have boxed
+
+
+like Beyond 24 GB we cannot go now if
+
+
+you choose any model that is
+
+
+basically more than this size then we
+
+
+need to have certain parallelism now
+
+
+within that we need to understand is my
+
+
+model sequential like I was saying
+
+
+earlier like uh is it that the data that
+
+
+I will pass in it will be processed in a
+
+
+stages then it's fine I'll
+
+
+straightforward go with pipeline
+
+
+parallelism but no if it is not like
+
+
+that it can go into any layers and it
+
+
+can do that then probably concept alism
+
+
+works better for me in that way I can
+
+
+use more of my Hardware utilization and
+
+
+increase that now when it comes to like
+
+
+the model size doesn't exist single
+
+
+device memory it's good it can fit into
+
+
+that box we choosing small models or
+
+
+whatever I have a h100 let's say and I
+
+
+have big memory I can fit the model into
+
+
+it then what is it that decides when I
+
+
+need a parm so there it becomes
+
+
+important like what is your input
+
+
+batches are you making just one queries
+
+
+and you know that your customer load
+
+
+might not be more than 100 requests per
+
+
+second can easily handle that uh it can
+
+
+generate even the KV caches and all
+
+
+those things for it then you probably
+
+
+don't need anything you can even run a
+
+
+single device Insurance your diverse
+
+
+input types or task are okay and you run
+
+
+a single device insance right but let's
+
+
+say you have a big batches you are
+
+
+processing billions of multiple order
+
+
+millions of orders in a day you're
+
+
+generating inference on top of this then
+
+
+you need data parallelism that is the
+
+
+path that you have to go or if you are
+
+
+processing multiple different diverse
+
+
+data types so you have text you have
+
+
+videos and whatnot then you can go and
+
+
+leverage uh expert parallelism expert
+
+
+parallelism like I said will take your
+
+
+inputs understand what layer need to be
+
+
+activated what expert needs to be
+
+
+activated and only activate that so it
+
+
+can still fit in your boxes and on
+
+
+demand it will turn on the neural
+
+
+networks or experts that are
+
+
+required right so if you want to take a
+
+
+screenshot of this you can but you know
+
+
+we are recording this so you can anytime
+
+
+tune in to our YouTube uh playlist to
+
+
+watch this uh webinar again and go
+
+
+through whatever Aman has uh discuss but
+
+
+then again this is a very good blueprint
+
+
+for all of us uh you know who are
+
+
+working in this area and want to or are
+
+
+confused between you know what are the
+
+
+better parallelism techniques that they
+
+
+should be applying so uh thank you Amon
+
+
+for uh you know taking us through that
+
+
+and uh thank you Aman also for giving us
+
+
+in-depth insights on you know
+
+
+quantization techniques to optimization
+
+
+as well as parallelism and I think it's
+
+
+it's it's great that you know we could
+
+
+cram in such huge amounts of information
+
+
+in such crisp way uh I'm sure all of you
+
+
+who have you know joined in and watch
+
+
+this live you can go back and now you
+
+
+know what K caching is or you know how
+
+
+quantization can affect you and even the
+
+
+flow diagrams that Aman had shared so
+
+
+thank you so much Amon for that uh good
+
+
+theory lesson to all of us and now I
+
+
+think it's the most exciting part where
+
+
+we want to implement what we have
+
+
+learned right so uh you know Aman has
+
+
+been teaching me especially for the last
+
+
+week about all these processes so I have
+
+
+had got some idea and sank who is the
+
+
+master engineer here has taken those
+
+
+learnings and implemented it on the
+
+
+models that we have on our AI lab so now
+
+
+I'll throw it to sankit who will take us
+
+
+through the demo and show us how you can
+
+
+actually Implement some of these techn
+
+
+techniques to optimize your models and
+
+
+then serve them so sankit the stage is
+
+
+all
+
+
+yours so we can do a quick uh walk
+
+
+through of the uh so I think we have
+
+
+introduced our lab uh in last webinars
+
+
+so essentially right now we have like
+
+
+let's say three machines with gpus RTX
+
+
+490 cards and then so this is more like
+
+
+a miniature lab that we have built out
+
+
+and then you know uh so if you're like
+
+
+interested in knowing uh more details
+
+
+about like all the lab ET definitely go
+
+
+through our previous webinars I would
+
+
+say uh and so now uh so the es stack
+
+
+that we have set up on this lab as of
+
+
+now is uh so we we have designed our own
+
+
+uh charts and Etc to deploy the model so
+
+
+which we'll be like demoing today so
+
+
+this is more uh the entire stack which
+
+
+is sh in the slide is more like a lower
+
+
+layers that we have built so far right
+
+
+uh okay so I'll share my screen and
+
+
+quickly walk through the like demo
+
+
+now yes moving on to the screen getting
+
+
+San screen
+
+
+online yes uh s can you zoom in a little
+
+
+bit so that it becomes easier for our
+
+
+viewers to read what it is yes that's
+
+
+perfect okay so uh effectively like
+
+
+let's say when you want to host a model
+
+
+right first you want to get the weights
+
+
+of that model so for example let's
+
+
+consider a sample model I have Lama 3.2
+
+
+1B model and you can see uh like if you
+
+
+explore the weights and all you can see
+
+
+so typically you will see like safe
+
+
+tensors files in uh in that particular
+
+
+model repo uh and you have to download
+
+
+these model weights uh so as as I
+
+
+mentioned we use NFS so my typical step
+
+
+is to just download the model BDS uh so
+
+
+I can see let's say this is the command
+
+
+which I typically fire so hugging face
+
+
+uh download uh model ID and I'll
+
+
+download the model weights right uh so
+
+
+since I've have already downloaded
+
+
+weights I can see those are available in
+
+
+my NFS uh you can I can also see what
+
+
+all uh models I have like downloaded in
+
+
+the past so you can see have bunch of
+
+
+models which I've downloaded and tried
+
+
+out so let's say uh I want to quickly uh
+
+
+launch this model right so I think we
+
+
+have introduced our AI stack uh so let's
+
+
+say we want to launch a model
+
+
+okay so I want to launch a model 3.2 1B
+
+
+instruct so this is the UI that we have
+
+
+built uh on top of our AI stack so this
+
+
+is a rapper UI uh so this helps me in
+
+
+launching the model quickly so I'll
+
+
+quickly select like node where I want to
+
+
+launch and I'm let's say using VM to
+
+
+launch the model
+
+
+I'm creating an inference end
+
+
+point so what this does in the back end
+
+
+is uh we are just launching like a Helm
+
+
+chart uh which deploys this
+
+
+model okay so this takes a bit of time
+
+
+uh to launch the model meanwhile we can
+
+
+also see all the GPU nodes that we have
+
+
+and we have observability also on
+
+
+them uh I can see let's
+
+
+see okay
+
+
+so
+
+
+this so I'm just checking uh for the Pod
+
+
+that we just launched so let's say this
+
+
+model is getting launched
+
+
+yeah I see uh the Pod VM uh pod is
+
+
+launched with the model weights and it's
+
+
+just processing further so it will load
+
+
+the model weights
+
+
+Etc okay I can see now the end points
+
+
+are accessible for the model uh we can
+
+
+quickly fire let's say model CPI
+
+
+on VM and then just see okay our model
+
+
+is available
+
+
+uh the model which we just downloaded
+
+
+and launched so it's 3.2 1B instruct
+
+
+model right uh we can quickly invoke
+
+
+this model uh so I have a handy command
+
+
+to try
+
+
+out the screen
+
+
+is okay so I'll call a completions API
+
+
+so most of the time you if you have
+
+
+tried like openi apis or something like
+
+
+that so this is standard endpoint that
+
+
+openi provides or any model uh which is
+
+
+sort of instruct model uh it provides
+
+
+these APS so if I call so what I'm doing
+
+
+here is I'm mentioning the model then
+
+
+these are the uh so this is like a
+
+
+prompt system prompt and then this this
+
+
+is my query what is deep
+
+
+learning and I mention okay you can use
+
+
+like Max tokens 256
+
+
+so when I execute this uh so I should I
+
+
+should like receive a
+
+
+response okay
+
+
+so so I should receive a response so let
+
+
+me try one C I have
+
+
+so we have our demo Gods trying to play
+
+
+their part in the live demo okay yeah so
+
+
+I got the response uh so mostly I think
+
+
+something was incorrect in the payload
+
+
+that I sent so I see like for example uh
+
+
+my query was what is deep learning I
+
+
+received some response from the model
+
+
+that we have hosted so yeah and so 3.1b
+
+
+is very small model but I've already
+
+
+created few models for myself just for
+
+
+the demo purpose so let's say I have few
+
+
+more models which I had hosted uh so I
+
+
+can so this is the UI where I see which
+
+
+all models I have hosted so I have 3.8
+
+
+uh 3.18 B instruct model so which I have
+
+
+hosted on one of the node it's again
+
+
+it's hosted with VM uh and then there's
+
+
+also one more model which is using uh
+
+
+awq which is activation uh so activation
+
+
+aware weight quantization sort of so uh
+
+
+so we'll compare like both of these two
+
+
+models uh just sort of run a quick
+
+
+Benchmark uh and then see you know what
+
+
+kind of performance we get from these
+
+
+two models so let's say I have so let's
+
+
+first uh try out uh 3.1 ITB stuff model
+
+
+uh so what I would do is I would do is
+
+
+let's say I have a benchmark script
+
+
+which I will run over that model uh so
+
+
+okay let me copy the
+
+
+commands uh so I meanwhile I also set up
+
+
+some dashboard so right now we see I
+
+
+haven't made any request to this model
+
+
+so most of the graphs that I have are
+
+
+empty so I don't see
+
+
+uh so what I'm going to do is let's say
+
+
+I'm making like 200 requests to the
+
+
+model uh with concurrency of T and then
+
+
+there are certain additional parameters
+
+
+that we
+
+
+using okay so I see
+
+
+the requests are getting meet
+
+
+so typically what happens is uh once you
+
+
+start making request uh we have uh
+
+
+grafana dashboard uh through which we
+
+
+monitor these metrics and also we have
+
+
+embedded graph on dashboard panels in
+
+
+this UI so we can quickly monitor uh
+
+
+some of the metrics
+
+
+ET and a Shameless plug there we did a
+
+
+webinar only dedicated to observing an
+
+
+AI platform so you can do check that out
+
+
+and we have some responses here on our
+
+
+panels yeah so as I as I making requests
+
+
+to the model I can see the throughput is
+
+
+rising sort of and I can see let's say
+
+
+uh current throughput is around 69 token
+
+
+per second right and then there are
+
+
+couple of additional uh metrics that I
+
+
+can see what is the end to end latency
+
+
+that user sees for a particular request
+
+
+and these are uh helpful metrics time to
+
+
+First token latency and then time for
+
+
+output token latency so these are the
+
+
+key metrics which you watch let's say
+
+
+when we are benchmarking a particular
+
+
+model right so these help you in
+
+
+identifying how your model is performing
+
+
+how it is serving to your users
+
+
+Etc and while S is doing that if you
+
+
+have any questions uh regarding the demo
+
+
+please feel free to drop them in the
+
+
+comment
+
+
+section yeah so yeah my charts are
+
+
+becoming more colorful now as we are
+
+
+sending more request so yeah the
+
+
+throughput is also Rising as I make more
+
+
+request so yeah I mean right now let's
+
+
+say we are getting around 400 token per
+
+
+second uh to put here right and if I go
+
+
+to another model so this is uh quantized
+
+
+model uh like quantied version of the
+
+
+same model that we just tried out uh
+
+
+maybe what we can do is we can also make
+
+
+request to this model and then see how
+
+
+it
+
+
+goes stop probably the request okay uh
+
+
+so these are the high level statistics
+
+
+that we have got from our benchmarking
+
+
+results uh so we some uh like so this is
+
+
+more like a in to end throughput uh that
+
+
+client has seen uh which is around 50
+
+
+token per second and uh these are some
+
+
+stats that we see like okay time to
+
+
+First token then there's a latency what
+
+
+is the latency that uh in user has seen
+
+
+and then there are metrics which we have
+
+
+seen uh from
+
+
+our uh dashboard per right now let's try
+
+
+another model which is one typ model so
+
+
+okay let me start Benchmark for
+
+
+this
+
+
+yeah
+
+
+empty Okay so my requests are
+
+
+flowing and we are waiting for more
+
+
+colorful charts to come up on the panel
+
+
+so that we know everything's working uh
+
+
+once again if you have any questions do
+
+
+put in the comments uh there is one
+
+
+which I'll probably take up once and is
+
+
+done with the
+
+
+demo so meanwhile I can also uh I'm
+
+
+quickly like walking uh as we make more
+
+
+uh request to the modelist right we can
+
+
+see that temperature rises uh for
+
+
+particular gpus then power consumption
+
+
+Also Rises uh and yeah you can see like
+
+
+probably the mid uh memory consumption
+
+
+for those particular gpus wherever the
+
+
+models are hosted uh so this essentially
+
+
+helps you in understanding how your
+
+
+resources are getting
+
+
+utilized okay so I see like bit more
+
+
+metrics coming
+
+
+in okay yeah
+
+
+so uh as we see here probably the
+
+
+throughput is almost double uh or twice
+
+
+of what we got earlier so earlier we got
+
+
+around like 50 token per second uh from
+
+
+users point of view and we are almost
+
+
+getting like a twice of uh the
+
+
+throughput that we got so since I'm
+
+
+using uh like a quantize model uh which
+
+
+probably does a better uh job in
+
+
+computations uh whereas we might be
+
+
+losing some sort of uh accuracy uh in
+
+
+the model but uh we get more tokens per
+
+
+second and uh you know uh we are able to
+
+
+serve let's say more users uh when we
+
+
+are using quantization so yeah I
+
+
+think this pretty much
+
+
+covers so we can see here like almost uh
+
+
+you know we saw around like 400 tokens
+
+
+per second right in the other chart here
+
+
+we see throughput going around 100 600
+
+
+token per second and sometimes I've seen
+
+
+it going around let's say, or500 token
+
+
+per second as why as I do do tweak some
+
+
+things on the model side
+
+
+so yeah uh that's pretty much what I
+
+
+wanted to cover over to
+
+
+you great uh thanks uh so much again
+
+
+sankit for you know giving us that demo
+
+
+uh I do have a question in the uh you
+
+
+know comments from one of our guests but
+
+
+then I will take the liberty of asking
+
+
+my question first to you so uh I do
+
+
+understand that you know when you are
+
+
+doing any sort of optimization uh there
+
+
+is lot of uh you know testing sort of
+
+
+involved to identify the exact thing the
+
+
+exact output that you need you know you
+
+
+try a lot of things and then uh you you
+
+
+you know you get the desired output uh
+
+
+so typically uh I want to get some idea
+
+
+from you how is this uh process actually
+
+
+done uh you know when when you are doing
+
+
+the optimization process are there tools
+
+
+that are available that uh you know help
+
+
+you throw some data to it you get output
+
+
+and you realize okay hey this is not
+
+
+right maybe I need to quantize it better
+
+
+or lose something uh maybe some light on
+
+
+that process how do you really optimize
+
+
+uh or maybe test how the model is
+
+
+performing so so uh first thing when I'm
+
+
+trying out the model right first I'll
+
+
+check uh if do I have enough resources
+
+
+to run that model uh means like GPU
+
+
+memory do I have enough GPU memory and
+
+
+then uh even system resources if those
+
+
+are enough or not right if not then
+
+
+probably uh I'll follow the flow which
+
+
+uh Aman has mentioned we have to do
+
+
+quantization Etc now when you have to do
+
+
+quantization uh definitely the tools are
+
+
+there uh so like if you're using let's
+
+
+say TGI or VM Etc uh you can mention the
+
+
+quantization parameters at runtime uh
+
+
+like if you are just doing uh so there
+
+
+are different quantization techniques
+
+
+typically use uh which are used uh so
+
+
+one popular one is bits and bytes uh
+
+
+which is you just mention okay I want to
+
+
+load model in 4bit in four or in8 data
+
+
+type so in that case uh this can pretty
+
+
+much uh done at run time uh and uh if
+
+
+you want to do uh if you want to use
+
+
+techniques like awq which is active
+
+
+weight aware quantization or there are
+
+
+also some methods like gptq uh or you
+
+
+know now this a popular framework ggf so
+
+
+these are different quantization
+
+
+techniques and if you have to do like uh
+
+
+these quantization techniques so then
+
+
+probably uh you know uh there are
+
+
+different methods uh depending on which
+
+
+quantization technique you are using but
+
+
+most of the time you would find these
+
+
+models quantized by some some of the
+
+
+open source folks and they uh once the
+
+
+quantization is done uh they will host
+
+
+or post these models on hugging pH uh so
+
+
+if you just just search by model name
+
+
+and then just put prefix or sorry suffix
+
+
+like gptq or let's say awq you'll find
+
+
+weights for uh the quantise model if you
+
+
+don't find then there definitely there's
+
+
+a process to do it let's say if you are
+
+
+doing like uh Lama 70b model uh
+
+
+quantization with awq so in in that case
+
+
+probably you will need some data set uh
+
+
+and then uh one GPU and then probably it
+
+
+will take like two hours to get
+
+
+your model quantized with say within awq
+
+
+or gptq also takes a bit of time but
+
+
+let's say if you're just doing uh
+
+
+loading a model uh in a lower size then
+
+
+you don't need that much time you can
+
+
+pretty much uh do quantization at end
+
+
+time so depending on what kind of
+
+
+performance you're looking for
+
+
+and uh you know uh how much memory and
+
+
+CPU resources you can give to model
+
+
+hosting you have to consider all all
+
+
+these uh aspects and then host your
+
+
+model
+
+
+accordingly and of course once you have
+
+
+hosted the model you sort of run
+
+
+benchmarking uh you monitor all the
+
+
+metrics that we just saw and then also
+
+
+you have to monitor all the hardware
+
+
+resources that you're giving to
+
+
+your
+
+
+model interesting I think sank you
+
+
+really provided uh hack if that's the
+
+
+right word for people to look for
+
+
+optimized models uh so uh you know as
+
+
+sank pointed out you can go to hugging
+
+
+phas type a model name and put a suffix
+
+
+as awq if I am correct if I heard that
+
+
+right and then ggu these are the two you
+
+
+know very popular optimization
+
+
+techniques so uh if you're on hugging
+
+
+phase just search for the model with
+
+
+this suffix and you can get the
+
+
+optimized model that you can use readily
+
+
+or if you want to optimize you know you
+
+
+can very well take these techniques
+
+
+deploy it on your hardware and then
+
+
+optimize the process uh so thanks anit
+
+
+for that and I think David this was
+
+
+pretty much your question as well where
+
+
+you asked about how and where did you
+
+
+perform the quantization technique and
+
+
+could you elaborate a bit uh more on the
+
+
+process so uh that is what exactly David
+
+
+asked and I think sankit you answered a
+
+
+part of the question what uh David had
+
+
+asked so uh I hope David sankit answers
+
+
+your question as well and uh if you all
+
+
+have any further questions please uh put
+
+
+in the comments as we are at the very
+
+
+end of our discussion today uh also we
+
+
+would be doing these webinars again we
+
+
+try to do them very frequently and uh
+
+
+you know in a responsive manner so you
+
+
+can subscribe to our upcoming webinars
+
+
+all you have to do is scan this QR code
+
+
+and you would be updated of uh you know
+
+
+whatever is happening and whatever is
+
+
+being planned for this uh also the UI
+
+
+that Sage short that we are using to
+
+
+interact with our AI infrastructure that
+
+
+we have deployed we would be having a
+
+
+glimpse of that or maybe an advanced
+
+
+version of it at the AI Summit uh in
+
+
+Mumbai so uh if you're coming to AI
+
+
+Summit do drop by the INF Cloud boot to
+
+
+get a firsthand feel of uh how we built
+
+
+the entire stack as well as uh the layer
+
+
+on top of it that helps you to interact
+
+
+uh with the entire system that you have
+
+
+actually
+
+
+employed uh with
+
+
+that I don't see any questions so we
+
+
+come to the end of today's uh webinar uh
+
+
+thank you all for joining in for today's
+
+
+session uh especially sankit and Aman
+
+
+for giving us those in insightful ideas
+
+
+on how we can optimize our models and
+
+
+then deploy uh them uh so we covered a
+
+
+lot of ground today from understanding
+
+
+jna models to serving them in production
+
+
+to optimizing them and scaling way
+
+
+parallelism uh the demo actually showed
+
+
+you how these techniques come to life uh
+
+
+and with blueprints and flow diagrams
+
+
+that Aman said you now have a clear part
+
+
+to implement these strategies in your
+
+
+system uh and remember you know like
+
+
+shank said optimizing and scaling your
+
+
+model is not just about the performance
+
+
+uh it Al it's also about ensuring that
+
+
+your AI models can meet the real world
+
+
+demands efficiently and cost effectively
+
+
+so that is where you need to figure out
+
+
+the right balance and uh whether you are
+
+
+just getting started or scaling up uh
+
+
+the tools and methods that we have
+
+
+covered today will help you take your
+
+
+model from Theory to production so uh
+
+
+thank you again for all of you for
+
+
+joining in uh I hope you had a great
+
+
+webinar and looking forward to seeing
+
+
+you again in our upcoming Edition so uh
+
+
+have a great day and thank you once
+
+
+again

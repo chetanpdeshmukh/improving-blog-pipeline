@@ -1,0 +1,5641 @@
+hi there and welcome to a brand new
+
+
+episode of our webinar called AI explore
+
+
+and wishing you all a very happy New
+
+
+Year well technically it's still January
+
+
+it's the first month so I can wish you
+
+
+all a very happy new year and also this
+
+
+is the first webinar that we are doing
+
+
+in 2025 and uh trust me we have some
+
+
+amazing discussions that are lined up
+
+
+not only today but also for our upcoming
+
+
+webinars as well I'm your host Atul Pria
+
+
+Sharma a senior developer Advocate at
+
+
+infac Cloud where I do a lot of things
+
+
+and this webinar is one of the things
+
+
+that I
+
+
+do so this is the fifth episode of our
+
+
+AI explore webinar and today we will be
+
+
+discussing about building AI systems for
+
+
+those of you who don't know outside of
+
+
+work I'm a big-time foodie and a food
+
+
+blogger so whenever I'm free you know
+
+
+I'm at a restaurant trying out some new
+
+
+dish and I coming from the city called
+
+
+Hyderabad in India and this city is
+
+
+famous for its
+
+
+Biryani and Biryani is a dish that has
+
+
+lot of complex elements in it right you
+
+
+need proper ingredients you know you
+
+
+need the right amount of rice right
+
+
+quality of rice the spices the meat the
+
+
+aromatic and each of these has to be
+
+
+cooked in a perfect proportion and then
+
+
+combine together and building a systems
+
+
+is exactly like that so today's webinar
+
+
+will be about that and uh before we move
+
+
+on to the juicy discussions today a
+
+
+quick recap on the previous webinars
+
+
+that we have done so we have discussed
+
+
+in the past about building your own AI
+
+
+lab we spoke about how to observe your
+
+
+AI systems along with a lot of other uh
+
+
+you know topics so all you have to do is
+
+
+scan this QR code that will take you to
+
+
+our YouTube page where you can watch our
+
+
+previous
+
+
+webinars with that out of the way I
+
+
+think it's extremely important to invite
+
+
+uh my guest for today's webinar two
+
+
+amazing people I've had interactions
+
+
+with and let me bring upon Craig who is
+
+
+joining us from cloud flare and we have
+
+
+Amon who is joining from infocloud hey
+
+
+Craig hey Amon thanks for
+
+
+joining hey thanks for having
+
+
+us good to see you
+
+
+on so excited and now I'm thinking about
+
+
+birani the whole time I'm going to be
+
+
+thinking about B
+
+
+if if I was in your city I would have
+
+
+definitely you know sent one to your
+
+
+doorstep but yes maybe next time you are
+
+
+in India or I'm there we are meeting on
+
+
+a plate of
+
+
+Biryani awesome so let do it so uh Craig
+
+
+is uh the first time he's making his
+
+
+first appearance on this webinar and uh
+
+
+you know a lot of you have who have been
+
+
+watching our webinars Aman is a regular
+
+
+uh you know person on these webinars so
+
+
+uh we have a tradition where I ask my
+
+
+guests to introduce themselves because I
+
+
+fear that there might be chances that I
+
+
+might miss something and my guest can
+
+
+get offended so Craig why don't you go
+
+
+ahead and introduce yourself to our
+
+
+audience you know tell us who you are
+
+
+what do you do at work where are you
+
+
+based out of and you know some Hobbies
+
+
+outside of work okay awesome yeah sure
+
+
+so I'm a I am a developer educator uh
+
+
+for cloud flare uh I'm based in Portland
+
+
+Oregon uh I focus on our our our AI
+
+
+products uh and so uh developer educator
+
+
+is one of those things where you're like
+
+
+well I educate developers that's a it's
+
+
+like the title the title kind of says
+
+
+what says what it is so whatever that
+
+
+means right so I like that you said
+
+
+there a tool where you said that you
+
+
+know you do all sorts of other things so
+
+
+whether that be video or or docs or
+
+
+writing code samples and that sort of
+
+
+thing so try to make sure that everybody
+
+
+can get up and running on cloud flare on
+
+
+the cloud flare stack uh and uh on AI uh
+
+
+uh I have hobbies outside I like to do
+
+
+of um I'm into comedy I like I've done
+
+
+some uh done some standup comedy some
+
+
+improv uh I'm trying to get into some
+
+
+sketch writing now uh so that's kind of
+
+
+an outside hobby that I have I like to
+
+
+rock climb too there's there's two we
+
+
+got two things there and I also like to
+
+
+eat birani that's also a hobby that I
+
+
+have
+
+
+so very happy to talk about
+
+
+systems wow wow there that's great uh
+
+
+you know things that you've been doing
+
+
+obviously love your interest uh let's
+
+
+see what Amon uh has to tell about
+
+
+himself hey thanks thanks for having me
+
+
+here again uh yeah so my background I
+
+
+working from last 12 years mostly in
+
+
+Cloud native container systems and all
+
+
+I've seen the overall Evolution and
+
+
+worked quite closely in these areas and
+
+
+like many of the architects in the
+
+
+industry I am last two years doing just
+
+
+doing AI stuff and trying to just get
+
+
+some knowledge out of it yeah that has
+
+
+been mostly my experience uh apart from
+
+
+work uh I am quite oppos it to Craig
+
+
+pretty boring I just read books and
+
+
+watch Netflix that's all I do yeah the
+
+
+only thing common is I also love Biryani
+
+
+a lot can have it
+
+
+daily perfect perfect so I think this is
+
+
+going to be an exciting webinar we have
+
+
+three Biryani lovers with one AI expert
+
+
+the other one AI Pro and the third me
+
+
+who's still trying to get to speed with
+
+
+what's what's happening around so uh you
+
+
+know before we get into the actual
+
+
+discussion uh quick housekeeping stuff
+
+
+uh you know first first of all do let us
+
+
+know where you are joining in from and
+
+
+whether you are a Biryani fan as well or
+
+
+not drop in your comments whether you on
+
+
+YouTube whether you're on LinkedIn or
+
+
+streamyard let us know where you're
+
+
+joining in from and what do you do and
+
+
+we would be taking in questions from all
+
+
+of you so at any stage you feel you have
+
+
+something to ask uh please feel free to
+
+
+put it in the comments I will take it up
+
+
+with the guest either during the webinar
+
+
+or at the end of it now with that out of
+
+
+the way I think it's high time we get
+
+
+started with the meat of today's
+
+
+discussion and that is comparing uh AI
+
+
+versus traditional systems right uh so
+
+
+all of us have been you know working in
+
+
+the software industry for quite a while
+
+
+now and we have seen the entire
+
+
+landscape changeed quite vividly and
+
+
+quite quickly right uh from from
+
+
+absolute beginners where we were
+
+
+probably working on with monolit right
+
+
+just have one single piece of code doing
+
+
+everything for you and then suddenly
+
+
+Cloud native coming you have
+
+
+microservices then your apps are now
+
+
+distributed globally and then apis and
+
+
+you know a b bunch of all other things
+
+
+so the way the entire transitions has
+
+
+happened I think a lot of us have uh you
+
+
+know handled it pretty well but then the
+
+
+systems have changed uh you know quite a
+
+
+bit and I think uh you know that that's
+
+
+where I would lead into my first
+
+
+question which would be to Amon and uh
+
+
+that would be more around to uh you know
+
+
+understanding that how are AI systems
+
+
+different from traditional systems and
+
+
+what are some specific requirements that
+
+
+are absolutely necessary to build an AI
+
+
+system yeah sure yeah so I think you
+
+
+pretty much very well summarized the
+
+
+traditional systems and it's like
+
+
+industry knows it all about it now there
+
+
+are multier systems there are databases
+
+
+you know the patterns bunch of books on
+
+
+design patterns and whatnot but what has
+
+
+changed now is with AI everything and
+
+
+everything is about data so if you have
+
+
+experienced Gemini now coming out in the
+
+
+last one month you might have seen it
+
+
+coming everywhere on the Google product
+
+
+it is like on your mail it is on your
+
+
+Google Docs it is on your sheet and what
+
+
+does it actually work on it works on the
+
+
+data that you have on that particular
+
+
+screen so that's what all the AI systems
+
+
+basically need uh and when I say about
+
+
+this is just the input of it now when it
+
+
+comes to relating it when it comes to
+
+
+hey I want to put my domain knowledge to
+
+
+it my company knowledge to it it's
+
+
+another layer of data and when you
+
+
+cerate like uh you must have seen on
+
+
+chat GPD or CLA that you make queries
+
+
+continuously and after 10 or six you
+
+
+will 10 or 20 iterations you will see CL
+
+
+showing a message that reduce the chat
+
+
+your chat size is increasing it's better
+
+
+to in create a new chat because it has
+
+
+to memorize all those things so lot of
+
+
+data goes in getting one output code and
+
+
+that's where AI is all about data now
+
+
+when we have this much data the problem
+
+
+is how do you scale right uh you can
+
+
+definitely follow the traditional
+
+
+practices and replicated have more
+
+
+instances of servers and you can just
+
+
+scale it people might say that
+
+
+communities and all these are already
+
+
+cracked things right you know how to
+
+
+scale the problem is uh these Hardwares
+
+
+these are not yet those easily
+
+
+accessible or that I mean that more
+
+
+cheaper compared to the traditional
+
+
+compute VMS that has gone considerably
+
+
+to the lower prices but still gpus are
+
+
+very very very costly you cannot say
+
+
+that I can just run my entire systems as
+
+
+like over subscription of 1x 2x you
+
+
+cannot do that you cannot afford that
+
+
+your Complete product pricing will
+
+
+change based on that and lastly uh like
+
+
+you mentioned on the traditional systems
+
+
+you have different patterns uh whenever
+
+
+something fails you get a particular
+
+
+error code that hey 404 your server is
+
+
+not performing well 505 your server is
+
+
+down 30 something redirecting this is
+
+
+all well defined but when we're talking
+
+
+about AI or llm models and all these
+
+
+things the first part is it will always
+
+
+respond but you don't know it is
+
+
+responding right wrong so there is a
+
+
+validator that needs to be there now
+
+
+that validator is can be in multiple
+
+
+Fashions if you're just doing a chat you
+
+
+yourself a validator but if you are
+
+
+running a product you might need like a
+
+
+code validators you might need language
+
+
+validators you multiple things you need
+
+
+before even sending out that code so
+
+
+there's no standard pattern that has
+
+
+been achieved on this so that's where
+
+
+it's complex like how do you do that and
+
+
+how when people talk about like I'm
+
+
+adopting a infrastructure for my product
+
+
+but how this things you'll have to think
+
+
+about it when you are doing it because
+
+
+this is going to change it's not like
+
+
+traditional micros servic say that I'll
+
+
+just put this I'll put that I'll get
+
+
+this error code I'll redirect it's not
+
+
+going to work in that
+
+
+way yes that's absolutely uh interesting
+
+
+you know one thing Aman that you really
+
+
+mentioned was there is no standardized
+
+
+way you know when you are when you are
+
+
+probably building a system here right uh
+
+
+a lot of different things like you
+
+
+pointed out your data your resources you
+
+
+know especially uh you know when it
+
+
+comes to inference and training uh
+
+
+obviously your hardware gpus and then
+
+
+you know the the traditional
+
+
+uh way of handling errors or patterns
+
+
+would not you know probably work now
+
+
+taking this to the next level you know
+
+
+we spoke about the infrastructure layer
+
+
+but then there are a lot of components
+
+
+that are built uh you know on top of it
+
+
+and uh Craig why don't you uh you know
+
+
+tell us what are some core components
+
+
+that are part of an AI system you know
+
+
+which absolutely differentiates it from
+
+
+anything
+
+
+years yeah yeah yeah so for sure you
+
+
+need you know right so we have we have
+
+
+models right we have so different models
+
+
+that that are uh out there um and uh
+
+
+they change right so on top of what
+
+
+you're talking about there with like
+
+
+watching the error uh changing there you
+
+
+also have uh models that uh you know
+
+
+models are are typically broken down by
+
+
+a specific task right and so so you
+
+
+might be using that model to solve a
+
+
+task and a new one might come out and
+
+
+now you change that now you have a new
+
+
+error you've moved your you've moved
+
+
+your uh your problem there um so so they
+
+
+they need to be I I believe that's what
+
+
+we were talking about here when we're
+
+
+talking about uh with a specific version
+
+
+control of it you have a certain version
+
+
+of this this model that comes out that
+
+
+works differently and and might might uh
+
+
+uh even the the place where you're
+
+
+hosting the model might uh the the way
+
+
+that you're hosting the model might make
+
+
+it behave a little bit differently as
+
+
+well um yeah yeah um
+
+
+uh uh um so one of the things uh that we
+
+
+do so uh here is you can watch you can
+
+
+watch how your users are using things
+
+
+because over time too you want your you
+
+
+want your AI system to get better right
+
+
+as people use it you want to you want to
+
+
+watch what they're doing and are they
+
+
+using it the way that you intended to do
+
+
+it so that that this this last Bol here
+
+
+this this Advanced monitoring and
+
+
+observability stack that's something
+
+
+that we we lean into I I'll I at the at
+
+
+the end here I'll do a little demo of
+
+
+how how we do that here at Cloud flare
+
+
+um we have a tool called AI Gateway uh
+
+
+that lets you watch uh the stuff as it's
+
+
+going in and lets you build um the vows
+
+
+from that so you can say did that work
+
+
+and if that did and then you can go and
+
+
+you could take you could build a
+
+
+training set for that um uh yeah
+
+
+so interesting yeah I think I think you
+
+
+know the the point that Aman and you
+
+
+both you highlighted about you know
+
+
+observing and I think what you really
+
+
+mentioned about uh you know uh the
+
+
+phrase that you use basically are your
+
+
+users actually using it the way you you
+
+
+want them to use right I think that's
+
+
+very critical because when you are
+
+
+building something as a team you you are
+
+
+doing it for one particular thing but
+
+
+then eventually when it reaches your
+
+
+customers or end users it might be you
+
+
+know used in a completely different way
+
+
+and I think uh that's where your entire
+
+
+monitoring observability and even the
+
+
+validation steps would uh you know come
+
+
+in because eventually you don't want
+
+
+something to be sent to your users which
+
+
+was not supposed to go right you don't
+
+
+want to be in a soup especially today
+
+
+when everything spreads like a wildfire
+
+
+on the internet you don't want to be in
+
+
+soup for any any any reason
+
+
+yeah and you know a lot of a lot of
+
+
+these models end up chaining together
+
+
+right so a lot of these tasks are so you
+
+
+take you take the input from one you
+
+
+know we're we're talking about heavy IO
+
+
+so you take the input for one you and
+
+
+that creates output you take that output
+
+
+you put it someplace else and it's got
+
+
+this really rich data pipeline as you
+
+
+start as you start thinking about that
+
+
+at any any point in that that can break
+
+
+right any point in that that data
+
+
+pipeline so that gets that gets
+
+
+challenging as well and how do you watch
+
+
+that and all that sort of stuff
+
+
+so absolutely I think the way you
+
+
+mentioned it was simply like calling one
+
+
+function to other function and sending
+
+
+output from one function to other but
+
+
+then in reality we know how difficult it
+
+
+is to maintain such a huge Pipeline with
+
+
+so many models inputs and outputs are
+
+
+you know flowing between them now while
+
+
+we spoke about the technical aspects you
+
+
+know we focused on the infrastructure as
+
+
+well as the core components I think
+
+
+there are uh absolutely you know you
+
+
+need to consider business uh aspects of
+
+
+it as well right because while while
+
+
+technical things are in place you know
+
+
+you want to be quick uh you know to
+
+
+release the features you want your
+
+
+you know customer success stories to
+
+
+come out really well as well so Craig
+
+
+what are your thoughts on some absolute
+
+
+necessary considerations that uh teams
+
+
+or businesses should have when they are
+
+
+adopting or building an AI
+
+
+system yeah uh I I think that uh latency
+
+
+is a big part of thing so we we've come
+
+
+up with the the ability to like think
+
+
+about um
+
+
+uh we we've come up with some some some
+
+
+places where the user's kind of waiting
+
+
+for something to happen and then there's
+
+
+like these backend tasks as well that
+
+
+that can happen uh and so uh as far as
+
+
+like thinking about how is how is the
+
+
+user interacting with this AI system
+
+
+that there on the on the front side of
+
+
+that when you build that you need to
+
+
+build the AI systems that allow people
+
+
+to be able to build those applications
+
+
+right so like that's kind of where our
+
+
+head's at it's like
+
+
+um uh you need you need to have it's
+
+
+hard right so so one of one of the
+
+
+things that like like getting getting
+
+
+this up and running is hard and
+
+
+challenging so so uh you need a team of
+
+
+people right you need a team of people
+
+
+who are dialed in and and understand how
+
+
+to make make this scale right because it
+
+
+the cost scale right so you need to
+
+
+figure out how to make this scale and
+
+
+how to make it scale um I think one of
+
+
+the problems that I haven't seen touched
+
+
+on too much is is the global how Global
+
+
+this needs to be right like like while
+
+
+it might be really great if I'm hitting
+
+
+Us East one that looks really great
+
+
+right but if I take that and I go to to
+
+
+hyperbad and where there is is that
+
+
+great is that like the latency there is
+
+
+is important um and that's that's
+
+
+something that we've always dealt with
+
+
+at at CL I don't know if people know
+
+
+people people probably know who cloud
+
+
+player is with the we have you know over
+
+
+points presence in over 330 cities so
+
+
+like we are thinking about that and but
+
+
+that is hard right like getting getting
+
+
+that there is hard so getting that that
+
+
+the the gpus out there is hard um and
+
+
+having the infrastructure to be able to
+
+
+build on top of it is also hard right so
+
+
+uh yeah I'll let you talk a little bit
+
+
+but there I'm on I been seal the bike
+
+
+yeah uh I think uh infra costing
+
+
+estimation right sizing that has always
+
+
+been a concern even in the normal
+
+
+traditional Services World they always
+
+
+have to do the right size but the only
+
+
+challenge here is I mean if we skip the
+
+
+last five days or last 10 days when the
+
+
+world turned into the red uh
+
+
+is it was still costly to run any model
+
+
+and in the last 10 days we only know
+
+
+that there are model that can even run
+
+
+on the smaller systems that can be train
+
+
+small system but yeah this space is
+
+
+evolving we still don't know whether
+
+
+this is certain or not how much but
+
+
+whatever is out there you still need a
+
+
+lot to run models and you your time to
+
+
+market for any product to La I mean be
+
+
+successful it really needs a good infra
+
+
+it needs to attract audience when you
+
+
+attract audience you have to have more
+
+
+infra and this is not easily accessible
+
+
+so that's where your infrastructure
+
+
+maturity and even if you acquired it you
+
+
+need to design it in a very good fashion
+
+
+like uh in the the previous webinars
+
+
+also we spoke about like uh when you are
+
+
+having these GPU machines in your data
+
+
+center it's not as simple as a
+
+
+traditional compute traditional Compu
+
+
+usually have to run good on 10 gbps
+
+
+Network that's fair enough for them
+
+
+because they don't do a lot of shuffling
+
+
+between the systems right but when we
+
+
+talk about inference parallelism like
+
+
+pipeline tensor lot of data needs to
+
+
+move across the machines and you cannot
+
+
+sustain with 10gbps you might need like
+
+
+better 200 gigs of lines you need
+
+
+smarter switches to do that that do
+
+
+Network level of offloading for you so
+
+
+that's where the entire infrastructure
+
+
+maturity has also changed quite a lot
+
+
+with traditional systems and people used
+
+
+to do mlof practices it was there
+
+
+earlier but like in a very Niche domains
+
+
+like computer vision uh Speech Text to
+
+
+Speech spech detection those things
+
+
+there are very well defined models they
+
+
+were very well defined things but now
+
+
+everything has become natural language
+
+
+and when it becomes that it means just
+
+
+the same example as Gemini uh similarly
+
+
+it will happen for many other products
+
+
+you will see models just jumping on the
+
+
+screen everywhere whatever features you
+
+
+have people will like to offload it to
+
+
+make it easier in natural language and
+
+
+that's where your normal operations
+
+
+should also be enounced to like more of
+
+
+ml operations they need to know these
+
+
+things how they tie up and all this
+
+
+boils down to the fact like how much
+
+
+accurate you want to be and how much
+
+
+cost you want to burn and that's where
+
+
+it like on the cost of being accuracy
+
+
+can you acquire like th000 gpus it might
+
+
+not so that's the tradeoff that you have
+
+
+to get
+
+
+to right interesting there are some
+
+
+really really good uh you know comments
+
+
+from both of you on the business you
+
+
+know side of things and considering that
+
+
+all three of us are Foodies and I have
+
+
+two more Foodies in the comments who
+
+
+love Biryani uh you know it's it's fair
+
+
+to you know relate this back to uh you
+
+
+know a McDonald burger you know for
+
+
+example I think when they made the
+
+
+hamburger in the US they would have not
+
+
+they would have thought that okay it
+
+
+works over here you know whether you're
+
+
+in LA or New York you get a standardized
+
+
+MD Burger but what if we are going to
+
+
+India you know the hamburger might not
+
+
+be a success there so how would the
+
+
+application or the burger rather you
+
+
+know be there so you know you customize
+
+
+to that location you reduce the latency
+
+
+so even here you know we get it in like
+
+
+five minutes or a couple of minutes so I
+
+
+think that the same analogy uh you know
+
+
+comes back to uh you know the the models
+
+
+uh and the entire AI systems uh as well
+
+
+so having looked into the the core
+
+
+aspects of it of of a typical uh you
+
+
+know AI system and understood what are
+
+
+the various uh you know base level
+
+
+requirements that is that is necessary
+
+
+to build a system uh I think it's it's
+
+
+evident and more important and more
+
+
+logical rather to talk about the
+
+
+building blocks of a particular uh you
+
+
+know AI system and uh you know a lot of
+
+
+us are seeing uh the the the fast or
+
+
+vast changing landscape of AI LL models
+
+
+you know you have a new model coming up
+
+
+almost on a daily basis you know you
+
+
+open your eyes and you have a new model
+
+
+who is beating the Benchmark left right
+
+
+center right uh so these models are
+
+
+obviously essentially uh you know the
+
+
+core of the an AI system but then I as I
+
+
+understand it these are just one piece
+
+
+of the puzzle and it is very essential
+
+
+to understand how you are going to build
+
+
+something out of it build something more
+
+
+useful and then take it to your end
+
+
+customers right how are they going to
+
+
+benefit from whatever llm you're using
+
+
+whatever you know benchmark you're
+
+
+beating so on and so forth so uh Aman
+
+
+what are some core requirements in terms
+
+
+of uh you know building blocks that are
+
+
+absolutely necessary to to start or to
+
+
+build a AI system in
+
+
+place right I think the first things
+
+
+first uh the costliest Fe there is the
+
+
+GPU cluster so you have to be mastered
+
+
+in that how we are managing it how you
+
+
+are scheduling workloads I think last
+
+
+six to eight years I think people have
+
+
+been more used to kubernetes and anyone
+
+
+who has used kubernetes would always
+
+
+love to handle the scheduling offload
+
+
+the scheduling part to the cluster and
+
+
+that's what people expectation is
+
+
+turning out in the GPU as well I don't
+
+
+want to marry to a GPU I just want a GPU
+
+
+where it is that's fine it should be
+
+
+part of my cluster so an efficient
+
+
+management of your cluster and
+
+
+scheduling is very essential that really
+
+
+considerably increase the productivity
+
+
+of your entire team now like I spoke in
+
+
+the last SL as well the high band wi
+
+
+Network that's a new requirement to be
+
+
+very honest it's more of like it was
+
+
+never there it was there for like very
+
+
+specific set of systems but now it is
+
+
+becoming more common if you want to use
+
+
+if you want to perform you want the
+
+
+models to be performed in that way and
+
+
+your all gpus should be utilized
+
+
+effectively uh you need to have a good
+
+
+bandwidth Network at least within your
+
+
+data center what goes out in the
+
+
+internet nobody can control but at least
+
+
+in your data center you should be able
+
+
+to control it now uh critical things are
+
+
+like models like you said is not the
+
+
+only data uh you have your company
+
+
+domains I think uh you create we out of
+
+
+it uh embeddings and all those things
+
+
+you need to host it somewhere that data
+
+
+is there then you have C again
+
+
+traditional systems you have cash layers
+
+
+same in the models as well where do you
+
+
+store that how how much you can put on
+
+
+the system how much you can put on the
+
+
+distributed storages what you need again
+
+
+if you say distributed storage that
+
+
+doesn't mean that uh you can offload it
+
+
+to normal S3 or an NFS that that might
+
+
+not fly because when your model runs you
+
+
+expect it to return like in seconds that
+
+
+is what people expecting when they hit
+
+
+aury to CHP that's a addiction that Chad
+
+
+GPD and clae has created to them people
+
+
+mind so even if you host your own model
+
+
+you want it to perform hey I given you a
+
+
+test you just analyze and give me
+
+
+everything in one second two seconds for
+
+
+that to happen model has to access data
+
+
+even in milliseconds and that can only
+
+
+be possible through advanced distributed
+
+
+storage
+
+
+Technologies and that is highly
+
+
+dependent on your network again high
+
+
+band with network ties to it and like I
+
+
+said scheduling is something that people
+
+
+are addicted to kubernetes and that's
+
+
+where your container orchestration again
+
+
+comes in uh at least that takes out the
+
+
+part of hey I tested this on this
+
+
+machine you cannot run it that those
+
+
+things have gone uh that's an old day
+
+
+now so you can continue the same
+
+
+tradition here build your ml workload as
+
+
+a container deploy entire your infra you
+
+
+can test it across the infras all things
+
+
+changes like you might get new gpus you
+
+
+might have to revalid it but other than
+
+
+that your Cod is box and everything is
+
+
+reusable yep anything you want to add to
+
+
+this yeah yeah I think you know that the
+
+
+the GPU like we talked about the GPU is
+
+
+expensive that's that's an expensive
+
+
+piece there and you want to make sure
+
+
+that you're also utilizing it the best
+
+
+that you have because you made this
+
+
+investment right in it so like that's
+
+
+something to really think about as
+
+
+you're trying to figure out how to
+
+
+schedule uh something that I don't often
+
+
+have to deal with because like we do we
+
+
+do that but I hear the team talking
+
+
+about that about like we have we have
+
+
+these gpus and how do we make sure that
+
+
+they're all being utilized and you
+
+
+know if you have it on the globe right
+
+
+you could there's parts of the there's
+
+
+parts of the world that are asleep at
+
+
+certain times so you could possibly if
+
+
+the it's a long running task and it's
+
+
+not one of those things that like we
+
+
+talked about where you're expecting to
+
+
+come back right away you could probably
+
+
+route things that way right and and try
+
+
+to light up all the gpus try to make
+
+
+them all go bur at once and if that if
+
+
+if you're doing that then then you're
+
+
+doing it but it's hard it's it's really
+
+
+really hard like I I I I watch I watch
+
+
+the struggle of of making people do this
+
+
+and it uh I'm super impressed I'm always
+
+
+impressed by by mlops teams of how how
+
+
+great they are at thinking through this
+
+
+this new problem right because this is a
+
+
+new problem of like this is this very
+
+
+expensive thing that we need to fully
+
+
+use so yeah
+
+
+yep respect to mlop teams and uh you
+
+
+know I've been someone who have been
+
+
+working closely with platform
+
+
+engineering as well and I think that's
+
+
+where I feel you know when you have a
+
+
+platform it takes care of a lot of
+
+
+things which is essentially abstracted
+
+
+from developers right so we don't need
+
+
+to worry about how you know my workload
+
+
+is going to a particular GPU or whether
+
+
+the resources are being used in an
+
+
+optimized manner or not so I think uh
+
+
+you you very well pointed out so if
+
+
+there's any ml person in our chat hats
+
+
+off to you and your entire team for
+
+
+taking care of you know the entire mlops
+
+
+pipelines that we have in place so uh
+
+
+yeah I think you know both Amon and
+
+
+Craig pointed out really nicely the core
+
+
+components you know you obviously have
+
+
+the hardware and the GPU uh you have the
+
+
+network which I wasn't aware of that how
+
+
+critical it is when it comes to uh you
+
+
+know ml systems and then obviously
+
+
+storage as well you know something which
+
+
+is quite neglected and obviously your
+
+
+orchestration uh layer as well now once
+
+
+we once we get into design right uh when
+
+
+you have these score requirements all of
+
+
+these cannot work independently and all
+
+
+of them have to come together and that
+
+
+is where you get to figure out or rather
+
+
+understand how do you want to place all
+
+
+these systems together you know the
+
+
+basically understanding how the entire
+
+
+system should be built using these
+
+
+components to give you the desired
+
+
+output that you want uh so Craig what
+
+
+are your uh you know thoughts or
+
+
+insights on how do you bring all of
+
+
+these comp components and what are some
+
+
+intricacies that one should understand
+
+
+why they are building such
+
+
+systems yeah I I I love the we're
+
+
+starting off here we're talking about
+
+
+the the event driven pipeline right so
+
+
+there's a lot of things that happen and
+
+
+then you want to go do a a thing you
+
+
+want to go kick off a a different AI uh
+
+
+model you want to kick off a flow that
+
+
+uses an AI model that uses an AI model
+
+
+um and I think that that is um using
+
+
+using a queuing system or something
+
+
+along that line some sort of event-
+
+
+driven thing through through cues is a
+
+
+very um good thing to think about and
+
+
+we're seeing those patterns arise um
+
+
+I'll I'll show a demo of that here a
+
+
+little bit later too um uh yeah and then
+
+
+uh uh along along the lines here right
+
+
+of um
+
+
+uh sometimes models go down right and
+
+
+you're relying on these you're relying
+
+
+on on some you know maybe you're relying
+
+
+on a state-of-the-art model and maybe
+
+
+your model goes down and you want to
+
+
+flip it to a state-of-the-art model when
+
+
+that does go down so that that is a
+
+
+pattern that's real right and
+
+
+um another thing that happens uh you
+
+
+know like not not only can the model go
+
+
+down but the model can be updated so
+
+
+some of these some of these you're
+
+
+you're pinned to a model and we talk
+
+
+about these version updates and a
+
+
+version update happens and all of a
+
+
+sudden the code that you've written as a
+
+
+developer has changed there and so you
+
+
+need to switch that really quick so I
+
+
+think that that is a a pattern of adding
+
+
+this layer adding this layer in there um
+
+
+of of making sure that you're able to
+
+
+switch uh models when when one goes down
+
+
+or fall back to another model so I I
+
+
+think Al lines of that that uh the
+
+
+circuit breaker pattern is there in in
+
+
+uh it's it's a bit of a new abstraction
+
+
+I think called like a Gateway uh is kind
+
+
+of where where people are are are
+
+
+calling that at uh here I think that's
+
+
+what we're after here on this but if
+
+
+we're talking about that from a from a
+
+
+ml side too I'd love to to let the ml
+
+
+let that that happen but that on the on
+
+
+the dev side that's kind of where it's
+
+
+at I'll I'll I I'll I'll make sure I
+
+
+include a little bit of how how we think
+
+
+about that there so we we can kind of
+
+
+walk through that up when when we do a
+
+
+demo here
+
+
+later great uh Aman what are your
+
+
+thoughts because I know that you know
+
+
+you have been involved in some
+
+
+discussions that infac cloud as well you
+
+
+know architecting some larger system so
+
+
+anything that you would want to add to
+
+
+this yeah so I just add to the point
+
+
+that Craig mentioned models can go down
+
+
+and the classic example if you have been
+
+
+using CLA activ
+
+
+one time a day you will definitely see a
+
+
+message that we are overbooked right now
+
+
+and switching your all the request
+
+
+to other than son or Opus yeah so they
+
+
+do that I mean even at running at such a
+
+
+good scale having such a good infra they
+
+
+also get over I mean they tons of
+
+
+requests coming and same patterns apply
+
+
+to your systems when you design it if
+
+
+you are hosting a model you cannot rely
+
+
+on it like your scale of product users
+
+
+can increase from 100 to 1,000 let's say
+
+
+you are doing an event your model cannot
+
+
+handle it you might have not tested it
+
+
+that well uh but you need to have a
+
+
+circuit breaker that hey switch it to
+
+
+the at least the lower version of it
+
+
+that can still give responses not so
+
+
+manyate but still we'll handle that we
+
+
+have designed the system for that so
+
+
+that is something like typically come
+
+
+from the traditional microservices
+
+
+architecture but you still have to have
+
+
+there and service meas is always like a
+
+
+to SW you have it you don't have it
+
+
+there is pros and cons gives you
+
+
+visibility yeah so I not do too deep
+
+
+into that it's good to have and it's
+
+
+even not good to have so it's customer
+
+
+decision interesting I think I think you
+
+
+know really good insights coming in from
+
+
+here uh you know just like in life all
+
+
+of us should have plan B for everything
+
+
+I think when you're building AI systems
+
+
+as well you need to ensure you have a
+
+
+plan B plan C Plan D as well uh because
+
+
+you you don't know you know someone just
+
+
+goes ahead and puts a video about what
+
+
+you have what your application is and
+
+
+suddenly you see a spike that now you
+
+
+have 100 100 people just accessing your
+
+
+service and you are just sending them
+
+
+error 500 you know something of that
+
+
+sort so you don't want them to happen
+
+
+and that is where it's very crucial to
+
+
+understand uh what what your needs are
+
+
+what your customers are looking for and
+
+
+then decide how you want the system to
+
+
+be uh you know in place uh so now having
+
+
+discussed the system I think uh you know
+
+
+uh as a typical software development
+
+
+life cycle you go from high to the lower
+
+
+level I think the next important step is
+
+
+your actual design patterns you know how
+
+
+do you get into the lower level modules
+
+
+lower level constructs while you are
+
+
+building uh Ani system and I think uh
+
+
+the expert today for these design
+
+
+patterns is Craig over here and I got
+
+
+him here just for this because you know
+
+
+he has been doing things left right
+
+
+center and spend a lot of time on
+
+
+identifying best practices around how to
+
+
+design uh you know the lowlevel
+
+
+constructs uh so I think I'll just leave
+
+
+it open for you and go ahead and uh you
+
+
+know share your insights with us cool
+
+
+great yeah um so there's the these
+
+
+models are based on tasks right on tasks
+
+
+that they can do uh and we've there it's
+
+
+very what the the state-of-the-art
+
+
+models can actually do a lot and you can
+
+
+go and hit the state-of-the-art model
+
+
+but it is important to remember that
+
+
+there's these small smaller models that
+
+
+are very specific to a certain thing so
+
+
+you might want to think about using
+
+
+those instead of making the larger model
+
+
+go and do all of the work so you could
+
+
+think about having different models and
+
+
+uh get that gets into a design pattern
+
+
+right if you're gonna I'm going to take
+
+
+I'm going to break apart what I would
+
+
+have done in a in a large uh a large
+
+
+statement hitting hitting one of these
+
+
+AI models into these smaller bits and
+
+
+kind of chain those together and then
+
+
+also what that allows you to do is to do
+
+
+you could maybe do some batch processing
+
+
+like that we were talking about the in
+
+
+the previous one because these models
+
+
+are smaller and uh uh easier and output
+
+
+is more uh specific to what you're
+
+
+really looking for instead of having to
+
+
+go and and building things around that
+
+
+so that's that's something all of these
+
+
+have have a very restful API a lot of
+
+
+which is really nice right so like we've
+
+
+abstracted away this ability to touch
+
+
+these models with this this rest API and
+
+
+it will stream right so it'll stream out
+
+
+um uh uh especially in the llm models
+
+
+stream out the context to you at because
+
+
+we want the users to feel like that it's
+
+
+being updated right um so I kind of
+
+
+actually I've been loving lately how um
+
+
+the more the the reasoning style model
+
+
+where it's like taking a little break
+
+
+like just I'm going to think and because
+
+
+this is important stuff like so so the
+
+
+the the thinking style of that but
+
+
+you'll see that it's still streaming
+
+
+what it's thinking right so so we're
+
+
+always trying to send back those those
+
+
+uh tokens as fast as possible um and
+
+
+that's just where we're at right now
+
+
+with with how how things are working and
+
+
+the again the models are updating right
+
+
+so so we want to make sure that uh
+
+
+you're pinning the model to the right
+
+
+thing so because models change right
+
+
+models are trained on different things
+
+
+and the way that uh you you might be
+
+
+expecting things to work can immediately
+
+
+change if you don't if you don't have
+
+
+that that pinned um and uh the the the
+
+
+pattern this like this the stateless uh
+
+
+inference Service as you do a chat and
+
+
+we we talked about this actually a
+
+
+little bit earlier as you do a chat the
+
+
+chat grows but I'm pushing the chat each
+
+
+time to this to that same restful API so
+
+
+the chat's growing like these messages
+
+
+array is growing and growing and I'm
+
+
+shoving that in uh each time and so that
+
+
+needs to be you need to figure out how
+
+
+to how to handle that properly too right
+
+
+so but that's kind of the that's the
+
+
+main the main pattern for that is you're
+
+
+you're oftentimes not even storing that
+
+
+that that those messes you're pushing
+
+
+them each time into there uh um and uh
+
+
+sometimes that might not be the best way
+
+
+to to build stuff uh maybe maybe the
+
+
+best way to build stuff is to H take it
+
+
+on the other side and store a little bit
+
+
+of state right and then and work through
+
+
+that but we see we see this a lot like
+
+
+if if you're using these models you are
+
+
+pushing up your context each time of of
+
+
+what you're doing and what's what's on
+
+
+your and that can be expensive right
+
+
+that could be expensive and uh also hard
+
+
+to manage and think about like oh what
+
+
+if they use this for a half hour right
+
+
+like I think a lot of the use cases we
+
+
+start thinking of like Okay cool so they
+
+
+did it for five minutes we're good but
+
+
+like what if this is a long running
+
+
+thing how do I do how do I summarize
+
+
+this how do I how do I get the most core
+
+
+part of this because you can only push
+
+
+so much context I know that our context
+
+
+Windows have like grow grown like crazy
+
+
+but you can only push so much in as
+
+
+you're going
+
+
+effective cost effectively too so then
+
+
+you need to start thinking on that side
+
+
+of things so um the design patterns kind
+
+
+of like switch as you as you think about
+
+
+how the application is going to be built
+
+
+as you think about how you're going to
+
+
+be using the AI
+
+
+there yeah so before I you know move to
+
+
+Aman I think what do you spoke about the
+
+
+context window and the whole stateless
+
+
+part of it or maintaining the state uh I
+
+
+remember you know I mean all of all of
+
+
+us when we use any models now and the
+
+
+moment you exceed a certain length of
+
+
+message or prompt that you're sending
+
+
+them it immediately prompts that hey
+
+
+your chats are getting longer now you
+
+
+know the responses will be slower or you
+
+
+know things like that and I remember
+
+
+some time back I was working uh on a
+
+
+similar thing and it it's only when you
+
+
+actually get out from uh you know a
+
+
+hosted solution to building something on
+
+
+your own that's when you realize the
+
+
+entire context window uh you know aspect
+
+
+of it and then you realize that you have
+
+
+to spend that much amount of it every
+
+
+time you know I mean I was working on
+
+
+junking and then I realized okay hey on
+
+
+the UI or a hosted version it doesn't
+
+
+seem what's happening in background but
+
+
+then when I'm implementing it I realize
+
+
+that again that's the chunk every time
+
+
+that has to go and plus probably you
+
+
+know keep keep adding on top of it uh
+
+
+yeah Aman is having a laughter so maybe
+
+
+he has a story to share
+
+
+here yeah I think it happened in the
+
+
+same way like you said when when you
+
+
+start designing it this hits like a
+
+
+first thing like uh it's so much data
+
+
+you have to send to make one right
+
+
+decision and this is really I mean this
+
+
+this really changes your all the right
+
+
+sizing calculation everything you have
+
+
+thought about it's not like you ask it
+
+
+and it will just answer it so it's not
+
+
+one way sheet you have to give lot of
+
+
+things to it to just get one accurate
+
+
+answer yeah yeah and that's that's AI
+
+
+for all you for all of you you need to
+
+
+give it lots of information to to to get
+
+
+one uh you know particular answer now uh
+
+
+we spoke about so many things you know
+
+
+until now we spoke about the blocks core
+
+
+building blocks we spoke about system
+
+
+patterns design patterns and I think the
+
+
+these all things eventually affect the
+
+
+performance of your model right and like
+
+
+Aman said earlier you know nobody wants
+
+
+to be staring at a screen after giving a
+
+
+prompt you know it just says loading we
+
+
+are waiting for a response or anything
+
+
+of that sort right everyone wants things
+
+
+to happen quite quickly uh so Craig
+
+
+again coming back to you uh what are
+
+
+some absolute necessary performance
+
+
+optimization uh tips or tricks that you
+
+
+would want developers or teams to keep
+
+
+in mind when they're building sub
+
+
+systems
+
+
+yeah yeah so if you're if you're
+
+
+building something where you're going to
+
+
+just interact and you want an answer to
+
+
+come back and that answer might be
+
+
+something that a lot of people are going
+
+
+to ask that is something that you could
+
+
+cash right and and if you can cash so so
+
+
+you've seen this right so when you're
+
+
+looking at apps and there's little
+
+
+bubbles it's like I'm trying to do this
+
+
+thing and there's the bubbles it's the
+
+
+suggestion of the bubbles and it runs
+
+
+through there those bubbles can be uh
+
+
+you can change whatever those bubbles
+
+
+are first of all like the most
+
+
+frequently Asked question questions
+
+
+right and and those can be cash and if
+
+
+you can get that to hit the cash you
+
+
+don't even need to worry right on that
+
+
+on the other side of that like you don't
+
+
+need to worry that um it's not actually
+
+
+not even hitting your AI system right so
+
+
+so that's a good thing to do um uh uh
+
+
+being able to to spin up models uh spin
+
+
+up models as as the load comes up that's
+
+
+like uh very important and then also
+
+
+being able to again we're getting back
+
+
+to the routing stuff there being able to
+
+
+go uh and and get that uh the the model
+
+
+where need it um uh I think
+
+
+that uh
+
+
+the understanding your load right it
+
+
+because because as you build these apps
+
+
+you're going to see that your your daily
+
+
+load of things are going across at a
+
+
+certain time and understanding that and
+
+
+and going and saying how can I how can I
+
+
+make that better right here and again if
+
+
+you had gpus in other places how could
+
+
+you go and help with that how can you
+
+
+inform the routing algorithm based on
+
+
+what's happening there as well so um
+
+
+yeah and I think uh yeah you know uh
+
+
+absolutely important things you know
+
+
+that that you have pointed out over here
+
+
+especially on the whole uh aspect of
+
+
+moving things Shifting the traffic or or
+
+
+or load balancing aspect uh of it and uh
+
+
+I think Casper over here has an
+
+
+interesting question which which I would
+
+
+probably want to take it up now rather
+
+
+than at the end because I think it's we
+
+
+are at a right juncture to take this up
+
+
+uh so Casper is basically asking what
+
+
+are some patterns that you have found
+
+
+effective for handling model warm-up and
+
+
+cold starts and I think cold starts is
+
+
+is a problem you know with a lot of
+
+
+things not only uh you know AI systems
+
+
+as well uh so both of you what what are
+
+
+some things that you you would have come
+
+
+across or you know to address this
+
+
+particular
+
+
+problem yeah I
+
+
+think many at the application layer or
+
+
+if you think it from the fundamental
+
+
+perspective that remains same uh any
+
+
+Cold Shot you need uh the actual server
+
+
+or the actual process uh to be at least
+
+
+alive or being wared up or there in
+
+
+memory right so that remains same for
+
+
+even for models if you want to run it
+
+
+you probably can do like a one request
+
+
+or a test request every few some time
+
+
+that will keep the model in memory and
+
+
+loaded in the inference servers because
+
+
+inference servers also work in a
+
+
+different way you have server then you
+
+
+have model models load on the server and
+
+
+then they are so and there could be
+
+
+different models like we talked earlier
+
+
+like it could be chain of models that
+
+
+you're using so that those traditional
+
+
+things remain same data like we said it
+
+
+should be closer and should be more
+
+
+easily accessible if you are spending
+
+
+more time on just getting the initial
+
+
+data or if your gpus are not that good
+
+
+so understand what you're using like
+
+
+Craig earlier said how you're using
+
+
+these two visibilities are pretty
+
+
+necessary so if it GPU in itself can't
+
+
+hold in memory your context then you
+
+
+probably will have a lot of wait times
+
+
+because it will have to again and again
+
+
+go back to the storage and then get your
+
+
+answers and all those things so observe
+
+
+and based on that take decisions what
+
+
+things work for you what design works
+
+
+for you but on the fundamental L it
+
+
+remains same as the traditional systems
+
+
+do test queries and all that works for
+
+
+you yeah great uh Craig anything from
+
+
+youring yeah I I I think it's it's an
+
+
+interesting question because if you're
+
+
+thinking about making a platform where
+
+
+you host models uh to use it's a little
+
+
+different than thinking about how your
+
+
+app application is using the ones that
+
+
+you're hosting for yourself um so uh you
+
+
+the the on the platform side of things
+
+
+you can kind of watch it's it's really
+
+
+interesting uh this space is moving so
+
+
+fast that you can kind of watch the
+
+
+trends of the models of how they're
+
+
+going right so you can kind of some of
+
+
+these models will fall off after people
+
+
+aren't aren't using them anymore some
+
+
+people will build apps and they'll if if
+
+
+you're running a platform if you're
+
+
+running a a host of model platform
+
+
+you'll see that some of these models
+
+
+will will will start to to fall off
+
+
+which is where you would probably see
+
+
+some of these these cold starts but it
+
+
+kind of just works um and the effective
+
+
+on that platform is because the people
+
+
+are using the models and and the models
+
+
+are kind of staying warm and of course
+
+
+I'm simplifying the amazing work that
+
+
+the mlops engineers have done in models
+
+
+that are being most used are are alive
+
+
+and warm for you uh that's that's
+
+
+actually the the the trick is like how
+
+
+do you how do you anticipate how these
+
+
+models are going to be used and you know
+
+
+we're in a we're in the place where you
+
+
+have you can do this with AI as well of
+
+
+like hey this is probably going to be a
+
+
+place where uh we're going to need to
+
+
+have a warm model let's make that model
+
+
+warn right like that's a um uh there's
+
+
+some there's some science that's
+
+
+happening uh in there uh as well and
+
+
+again one of those things that um I'm
+
+
+glad someone's thinking about it you
+
+
+know what I mean on that like when you
+
+
+have when you have these libraries that
+
+
+do the thing that you want it to do you
+
+
+know yeah yeah right I think uh more
+
+
+than science I think it's it's more of
+
+
+an Inception your as because you need an
+
+
+AI to observe your AI so I think there
+
+
+lot there's a lot of it you know going
+
+
+here uh so I think I think we have had
+
+
+great uh great discussions until now I
+
+
+think we have had a lot more theoretical
+
+
+stuff you know we we discussed all the
+
+
+model building blocks that's requir the
+
+
+core components infra design patterns
+
+
+and I think like like a typical uh you
+
+
+know uh learning scenario once you have
+
+
+done with learning something it's it's
+
+
+necessary to implement it and see how
+
+
+things work uh and that's where Craig is
+
+
+going to introduce us to Cloud worker Ai
+
+
+and uh tell us how we can Implement all
+
+
+of these things to build a simple
+
+
+application or or even complex
+
+
+applications uh you know using uh the
+
+
+the worker AI so Craig uh you know over
+
+
+to you awesome so yeah so I want to
+
+
+introduce you to Cloud for workers AI
+
+
+which extracts away a lot of the stuff
+
+
+that we have been talking about here a
+
+
+lot of these challenges that you would
+
+
+have been having to do we have an mlops
+
+
+team that has gone and thought about
+
+
+this um and we've built this Global
+
+
+Network of uh there's their serverless
+
+
+gpus which we'll talk about here a
+
+
+little bit I'll show you I'll show you
+
+
+what that feels like um we have this
+
+
+Global Network and if you don't know
+
+
+Cloud flare um we we're on a mission to
+
+
+help build a better internet and so
+
+
+we've we've uh we've taken our time to
+
+
+figure out what that means that means
+
+
+low latency and that means security and
+
+
+that means giving developers the ability
+
+
+to help build the better internet and as
+
+
+we know having access to a GPU is hard
+
+
+to have sometimes so what we've done is
+
+
+we've built this this system called
+
+
+workers Ai and workers is based on um we
+
+
+we'll take a look at a couple workers
+
+
+here here we we'll build a little
+
+
+serverless application um and uh what
+
+
+we're going to do is we're going to uh
+
+
+be able to access these serverless gpus
+
+
+through a single API call so we also
+
+
+have we have an external one so there's
+
+
+um on the on you can hit it through a
+
+
+rest API but you can also hit it from
+
+
+within our Network So within this this
+
+
+Global Network you can hit it and it's
+
+
+it's fast no matter where your users are
+
+
+coming from we're thinking about that
+
+
+we're trying to make that latency think
+
+
+about where where that is um and what
+
+
+we've done is we've partnered with open
+
+
+models so everything that we're hosting
+
+
+are open models so so we're we're
+
+
+hosting open models we're partnered with
+
+
+hugging face so so a lot of the models
+
+
+that you'll see and if we can flip to
+
+
+the flip to the next the next slide here
+
+
+I'll show you there's a bunch so this is
+
+
+these are the docs here we have a bunch
+
+
+of different tasks that you can do when
+
+
+I was when I was talking earlier about
+
+
+breaking down the task into think that
+
+
+you might want to do um there's T
+
+
+there's models that are very specific to
+
+
+what you might be trying to do so we got
+
+
+speech recognition um you know there's
+
+
+there's all sorts of models and we we
+
+
+were talking before in the past uh and
+
+
+I'll I'll share a link to this here as
+
+
+well so you can you can jump in here and
+
+
+it and and click around as well um so
+
+
+it's really powerful right so we've got
+
+
+we've got all these these different ways
+
+
+of thinking about how to solve this
+
+
+problem in a small little uh model
+
+
+that's available for you that should be
+
+
+lightning fast as you go to to to use it
+
+
+no matter where you're at so that's
+
+
+that's the concept of what workers AI is
+
+
+now what what it's doing is it's sitting
+
+
+on top of uh the cloudflare stack so if
+
+
+we could go to the next uh next slide
+
+
+here
+
+
+um the the cloud flare stack is very
+
+
+powerful and I am I'm wa loving watching
+
+
+this thing grow I've I've been with
+
+
+Cloud for about a year and just the
+
+
+amount of stuff that has like come on
+
+
+since then so we have a there's a vector
+
+
+database right so one of the things
+
+
+about um uh one of the things that we
+
+
+that didn't come up too often actually
+
+
+in our talk there is the the you have to
+
+
+get your data into these AI applications
+
+
+we tal we talked about that and one of
+
+
+the ways that you do that is through a
+
+
+vector database right so you take your
+
+
+information and you store this in a
+
+
+vector database and we have one of these
+
+
+there available to you as well as we
+
+
+have this thing called the AI Gateway
+
+
+which is allows you to to um not only
+
+
+run models on ours because we know that
+
+
+you you probably going to be using stady
+
+
+of thee art models but this is how you
+
+
+can watch and make sure that things are
+
+
+are working there right so so you can
+
+
+watch all the the cues coming through
+
+
+and we can do evals and we can build uh
+
+
+training sets from that but everything
+
+
+pipes through this one place and you can
+
+
+use a it gives you a URL so you can use
+
+
+it with all the other applications that
+
+
+you're doing so if you want to go get
+
+
+your data to go all through one place
+
+
+which I think is probably honestly where
+
+
+we're going we can't we had this concept
+
+
+and and of like we should probably run
+
+
+something through here because we have
+
+
+other other gateways Cloud flare
+
+
+provides other gateways and it it's been
+
+
+so right like every every step of this
+
+
+this AI Journey that the the whole
+
+
+world's going through right now rapidly
+
+
+running through this we've been saying
+
+
+oh we should just add that to AI Gateway
+
+
+and it and it's been working really well
+
+
+so um excited for you all to see a
+
+
+little I'll show a little bit of that
+
+
+here in a second uh we we also have the
+
+
+whole data layer here which we said was
+
+
+important right we said like being able
+
+
+to store your data is super important
+
+
+being able to Cache key value stores are
+
+
+really important for that we also have
+
+
+D1 which is a sqlite database it's
+
+
+distributed so you can kind of get
+
+
+access to that from wherever you're at
+
+
+we have R2 which if you uh increment
+
+
+both the r and the two you'll see that
+
+
+uh it it is a compatible with s and
+
+
+three so R2 is object storage now the
+
+
+really awesome thing for AI people to
+
+
+know about with AI is there's zero
+
+
+egress fees so if you take data out you
+
+
+don't pay for it that's not true of most
+
+
+object storage places and there's a lot
+
+
+of data and so that gets really costly
+
+
+as you're going to train models so
+
+
+that's a great place to store your
+
+
+training data compute we've got workers
+
+
+we'll take a look at that really quick
+
+
+so it's a it's a it's a V8 isolate
+
+
+engine which means it's always on so
+
+
+back to the cold start question there
+
+
+the as far as the compute side goes it
+
+
+is always on it's it's wild um they're
+
+
+super fun to build I I'll I'll show you
+
+
+that here we have a q's product where
+
+
+you can just kind of go and you can do
+
+
+your data pipeline right so you can sit
+
+
+send stuff through there on top of that
+
+
+we have this thing called workflows
+
+
+which just uh very recently came out
+
+
+durable execution and it has timing so
+
+
+you can do these steps at a time and
+
+
+make sure that they happen so as we know
+
+
+uh sometimes you run into these 429
+
+
+errors if you're hitting an API an
+
+
+external API um it will do exponential
+
+
+back off automatically just does it and
+
+
+then you you just kind of say go run
+
+
+this workflow and it will finish uh
+
+
+which is really really powerful and we
+
+
+have these durable objects which we've
+
+
+been trying to figure out how to explain
+
+
+this I'm going to try it really quick so
+
+
+it's a the tiny little server that you
+
+
+can spin up and you can put them
+
+
+wherever you want to go and it has
+
+
+access to websockets which I think is
+
+
+getting more and more important as we
+
+
+see this again what we were talking
+
+
+about earlier about I want to feel like
+
+
+something's happening so they have they
+
+
+have a web socket and then they can run
+
+
+um run and it has a it own SQL light
+
+
+instance so it's a its own little server
+
+
+basically um it's incredibly powerful
+
+
+and we really think that as you start
+
+
+thinking about agents and building
+
+
+agents and stuff you're going to be
+
+
+hanging out in this space in this real
+
+
+in this derbal object space we also have
+
+
+real time uh so we have the ability to
+
+
+do video calls and things like that and
+
+
+we can do streams and images and what's
+
+
+important to know is that all of this
+
+
+can be part of your AI stack right so so
+
+
+this is all just kind of available and
+
+
+it feels really good and let me show you
+
+
+how it feels so I'm going to go and
+
+
+share my
+
+
+screen
+
+
+here yes and we have a demo coming up
+
+
+here by Craig uh know we we looked at
+
+
+the cloud Fair stack that he pointed out
+
+
+of and the various you know features
+
+
+that that it provides and uh you know as
+
+
+a developer I think it's it's a it makes
+
+
+really good sense to you know try try it
+
+
+out to build something like an agent
+
+
+because you have you know all the
+
+
+features that are available for you and
+
+
+I was just going to the website
+
+
+you know they have a generous free tire
+
+
+as well where you can uh you know try it
+
+
+and I think yeah Craig screen is ready
+
+
+and we'll just get it on screen so yeah
+
+
+here you are awesome so what I'll do is
+
+
+I'll just make a quick little I'm gonna
+
+
+make a quick little worker so we can
+
+
+kind of feel the flow of that so I'm
+
+
+just going to do uh mpm create
+
+
+cloudflare at latest and so it is it
+
+
+looks like it's mpm right so it's node
+
+
+it's very node friendly um and I'm going
+
+
+to make a new uh one here I'm going to
+
+
+name it we just say we'll call this
+
+
+hello world Ai and uh because you know
+
+
+you got to start at hello world we've
+
+
+got these templates um uh we have a
+
+
+whole bunch of Frameworks that we
+
+
+support So if you're going to do a web
+
+
+framework you can you could go build a
+
+
+full app over here on a worker uh so
+
+
+I'll just do this hello worker we'll do
+
+
+this
+
+
+typescript get this going um and again
+
+
+it's it's npm enabled right so like it's
+
+
+adjacent I would say node adjacent but
+
+
+it's not node uh and uh so you're able
+
+
+to use the whole a whole lot of packages
+
+
+that you're trying to do so anything
+
+
+that's over in that space we also have a
+
+
+python worker as well um so I'm going to
+
+
+go ahead and I'm going to make this uh
+
+
+I'm G by by default it has get uh and
+
+
+and I'll push this up when we're done as
+
+
+well um do I want to deploy my
+
+
+application not right now and so I'm
+
+
+going to go into my Hello World AI uh
+
+
+directory here and I'm G to open this up
+
+
+in my editor I've got a really nice uh
+
+
+template to get started here and let's
+
+
+just take a look at the code really
+
+
+quick it says hello world so we should
+
+
+let's make sure that we got hello world
+
+
+running I'm going to open this up let me
+
+
+I'll make this a little bit bigger it
+
+
+looks like we need to yes I was just
+
+
+going to say that Yep
+
+
+looks all right sweet so um uh so it
+
+
+says hello world I'm just GNA run I've
+
+
+got a little server here I'm gonna do
+
+
+mpm run
+
+
+Dev very nice uh development environment
+
+
+so it's going to ask me to uh if I want
+
+
+to open up a browser and I do want to do
+
+
+that and it's over here let me grab this
+
+
+quick so it opened up this browser hello
+
+
+world we're we're we're doing the thing
+
+
+and we want to now go back and uh this
+
+
+is wrong right there's a typo here it's
+
+
+actually a comma so I'm going to do a
+
+
+save automatically Reloaded The Local
+
+
+server got all the niceties now and I
+
+
+refresh and and we have that working now
+
+
+what's really cool about um about
+
+
+workers what I really love about it is
+
+
+that I can go and deploy this but let's
+
+
+make it a little bit let's make it a
+
+
+little bit quicker um I'm going to use
+
+
+one of my favorite packages just again
+
+
+it's mpm adjacent so I'm going to use uh
+
+
+a a web framer called hono I don't know
+
+
+if you've seen hono but it's incredible
+
+
+for building microservices uh have you
+
+
+have you all used hono
+
+
+before nope I haven't that's new for me
+
+
+anyone in the audience if you have used
+
+
+hono please let us know if you have not
+
+
+please let us know again so uh I'm just
+
+
+going to type hono and because I use it
+
+
+so much uh it's going to do this git
+
+
+we're going to do a git and it's going
+
+
+to go get to hello so it feels a little
+
+
+bit Express if you've seen express it
+
+
+feels feels similar to that it's got
+
+
+these really nice um so we've got hello
+
+
+world Json here right I'm going to go
+
+
+ahead and I'm GNA just now I can run
+
+
+this locally I could start working on it
+
+
+but I'm just going to go ahead and
+
+
+deploy it um I'm going to deploy it
+
+
+again I haven't said where this should
+
+
+live I'm just going to go and I'm going
+
+
+to deploy it and I'm going to deploy it
+
+
+on my on my account I haven't said where
+
+
+it's going to live and I just deploy it
+
+
+and what happened is it just was
+
+
+deployed to what we call region Earth
+
+
+instead of you know us east1 it's region
+
+
+Earth it's literally everywhere um so
+
+
+this is up and running and now I've got
+
+
+a URL and you can you can see how fast
+
+
+that went right and so now oh I think I
+
+
+I left it at hello so I'm gon I'll fix
+
+
+that in the next one so slash hello
+
+
+we've got hello world invalid Json right
+
+
+so so now we've got a really nice quick
+
+
+microservice uh that we could go and do
+
+
+uh but we're here to talk about some AI
+
+
+so let's bring some AI into this so um
+
+
+we have this concept of bindings and
+
+
+bindings allow to to talk to those that
+
+
+stack that I was talking about so one of
+
+
+the really nice Bindings that we can do
+
+
+let's make
+
+
+this comments um so one of the really
+
+
+nice things that we can do is we can add
+
+
+a uh new binding here and I'm just going
+
+
+to add this
+
+
+Ai
+
+
+and believe yeah I want to do Ai and it
+
+
+autocompletes which is very nice and I'm
+
+
+going to
+
+
+say by
+
+
+in is AI so we're going to uh all I need
+
+
+to do to get that working now now I'm
+
+
+able to um and this is all typescript so
+
+
+it it will automatically generate a type
+
+
+type for
+
+
+me seef type
+
+
+gen and uh now I have this interface
+
+
+that I can go and so now I'm in here I'm
+
+
+going to get back some results from this
+
+
+Ai and we'll
+
+
+say uh we want to do C.M and now you see
+
+
+that I have ai here and now I can run
+
+
+any model so again we're talking about
+
+
+that there's this one line I've got all
+
+
+these models here we'll just use uh
+
+
+we'll use the
+
+
+Llama let's use CF and all these models
+
+
+are coming from hugging face the
+
+
+the yeah yeah all these models all these
+
+
+models are are hugging face based based
+
+
+models so we've got this one here from
+
+
+from meta right So meta's Meta doing
+
+
+that and I'm G to go and uh I'm just
+
+
+going to really quick we can do we could
+
+
+do the messages array everybody knows
+
+
+the the famous messages array and all of
+
+
+the models we've made it so it feels the
+
+
+same way right so we're going to do uh
+
+
+roll and we'll make the user say h let's
+
+
+just
+
+
+do let's have it
+
+
+say uh say Hello
+
+
+World in five languages and you know
+
+
+what I want to make sure that this is
+
+
+working properly I want to make sure
+
+
+that uh I want to track this as it go so
+
+
+in order to do that um one way when
+
+
+you're using this you can just add this
+
+
+new line here for this AI Gateway way
+
+
+it's so funny when you use when you use
+
+
+the uh the bigger screen the those those
+
+
+things stop helping the the popups stop
+
+
+helping so say uh we're gonna do a
+
+
+Gateway wait hold on so he CF run
+
+
+messages and then I want to
+
+
+do hold on a second CF
+
+
+messages run the messages array and then
+
+
+I want to do I want to do yeah there we
+
+
+Gateway and then I'm going to give it an
+
+
+ID it's too big I'm not getting my auto
+
+
+complete it's funny uh so we'll do we'll
+
+
+do there's a Gateway that we
+
+
+want and that Gateway has an ID and that
+
+
+ID we're going to call this uh live
+
+
+demo that's and why is he upset oh I
+
+
+don't need doubles there that's what's
+
+
+happening is that what's
+
+
+happening I think I do need
+
+
+doubles oh I'm missing this
+
+
+start
+
+
+that
+
+
+sorry I've broken
+
+
+something uh I'm not going to we show
+
+
+the Gateway I'll show I'll show you a
+
+
+demo of that here in a second as as we
+
+
+get to it but we'll just get this uh uh
+
+
+run here and I'm going to do this mpm
+
+
+run deploy and again this is going to be
+
+
+um this will be live here uh and it's
+
+
+not streaming right so this is what this
+
+
+is is this is not going to stream but
+
+
+it's still going to be pretty fast so
+
+
+we're GNA open the oh I need to show the
+
+
+results I didn't show the results of it
+
+
+so uh we'll we'll we're going to pass in
+
+
+hello world and I'll just pass out the
+
+
+results there as well and then I will um
+
+
+R deploy
+
+
+this here we
+
+
+go and uh it's it's GNA it's going to
+
+
+take a little bit because it's not
+
+
+streaming but there we go so we've got
+
+
+immediately we've got this this response
+
+
+from a llama model uh that is there uh
+
+
+and it says hello
+
+
+world uh uh we've got halaal and we've
+
+
+got alunda
+
+
+and yeah we didn't get erdu or Hindi I
+
+
+wish that we did I wish that that had
+
+
+come out but so we got we got we got
+
+
+hello world there very very quickly um
+
+
+uh and so again what's powerful is with
+
+
+these bindings is that they keep on they
+
+
+keep on uh uh growing right so so your
+
+
+your powers grow there let me let me
+
+
+show you really quick one of the
+
+
+microservices that I wanted to to demo
+
+
+uh uh here is this Auto transcriber um
+
+
+so very simp this is this is a worker
+
+
+and I have uh I've created this this
+
+
+worker entry point um and it has it
+
+
+exposes these methods this list uploads
+
+
+get upload uh and delete upload uh and
+
+
+it's it's maintaining that and it's just
+
+
+it's it's kind of abstracting away the
+
+
+fact that I'm going to upload files and
+
+
+so the files that I wanted to upload um
+
+
+I have this this object storage and I
+
+
+can just drop a file into my object
+
+
+storage and it will uh it will go and uh
+
+
+grab that file it will pass to the
+
+
+whisper model right so now we're doing
+
+
+one of these pipelines so I've dropped a
+
+
+I've dropped a a file it's going to pass
+
+
+it's going to go to the the AI model
+
+
+it's going to generate the transcription
+
+
+for that and then it will store the
+
+
+transcription uh in in
+
+
+metadata um and the trans and again so
+
+
+now we're talking about the caching
+
+
+right so I don't need to run the
+
+
+transcription every single time on this
+
+
+I want to Cache the fact that I have uh
+
+
+done this transcription so I'll drop
+
+
+into there I could drop a file it will
+
+
+go into an auto transcription and then
+
+
+we'll have uh the ability to have this
+
+
+micros service that takes that gives
+
+
+gives back the URL and and we can use
+
+
+that in other applications so like I've
+
+
+built this wrapper around a whole AI
+
+
+process that can happen I and we'll I'll
+
+
+share this uh with you I'm going to run
+
+
+this really quick I I'm noticing that
+
+
+we're running a little bit tight on time
+
+
+are we okay to go a little bit longer
+
+
+here yeah y sure
+
+
+okay okay I'm going to I'm going to
+
+
+deploy I'm going to deploy this service
+
+
+and I'm going to show you um uh oh oh so
+
+
+first of all the Gateway that I didn't
+
+
+get that I didn't get working uh uh
+
+
+because of my my uh screen being too
+
+
+large is what I'm blaming it on that uh
+
+
+you could very easily you you say that
+
+
+I'm I'm I'm going to a certain uh
+
+
+Gateway and you can see how many tokens
+
+
+came through and if you come in you can
+
+
+look and you can see this is me testing
+
+
+beforehand uh uh that it works and you
+
+
+can see what I passed in and what
+
+
+happened here and I can eval and I can
+
+
+build data sets and all sorts of things
+
+
+so this is the Gateway that's there and
+
+
+I can build that for specific URLs and I
+
+
+can use those URLs um I know that you
+
+
+you've seen in most of the um sdks you
+
+
+can say use a specific Ur and you can
+
+
+pipe it through here uh and then you'll
+
+
+have all the information here for you to
+
+
+build uh whatever new tools that you
+
+
+want to do there um so in my uh in that
+
+
+app in that app that I have I have this
+
+
+uh the I have a uploads uh directory
+
+
+there and I'm going to show you let me
+
+
+I'm going to I'm going to run I'm G to
+
+
+tail the logs here so we can watch this
+
+
+go really
+
+
+quick
+
+
+um and I'm going to take a file from my
+
+
+uh local system
+
+
+here what can we grab here
+
+
+let's grab uh I have just a a little uh
+
+
+robot that was talking that says brought
+
+
+to you by cloudflare so it should we'll
+
+
+drop this uh into my bucket here and
+
+
+this is wired up to a queue that's going
+
+
+to go and it will send uh that
+
+
+information through and it should catch
+
+
+it in this transcription
+
+
+here uh and I've got a I've got a
+
+
+bug as you do
+
+
+demog gods are not are not happy right
+
+
+now uh um so I I'll need to figure out
+
+
+what that is I recently just changed
+
+
+this to be using a new a new package and
+
+
+I think I broke it as I did that but all
+
+
+that to say yeah you got the idea it
+
+
+came through it it triggered that it
+
+
+triggered my code which happened to have
+
+
+a bug and now I'm able to go I'll go and
+
+
+and debug that as well and then um it
+
+
+will I'm able to use in the other code
+
+
+in the other my other code uh I'm able
+
+
+to use this microservice and what's
+
+
+really cool about these entry points is
+
+
+I'm not using I'm going across the
+
+
+internal Network and I'm not using uh a
+
+
+rest API I'm actually using it
+
+
+specifically so I I've made a binding
+
+
+that's very similar right this this
+
+
+binding here is very similar to the AI
+
+
+binding I've made my own binding and I
+
+
+can call list uploads and I can extract
+
+
+all that stuff and pull it into my other
+
+
+applications and I can use this
+
+
+microservice for any sort of app uh that
+
+
+I want to so I I would bring the file in
+
+
+there and it would go and and update uh
+
+
+there so that's the that's the concept
+
+
+of of and what it kind of feels like and
+
+
+also again what it feels like building
+
+
+here I don't I I I uh why the
+
+
+microservices are important right I I
+
+
+could be working on this micros service
+
+
+that handles these uploads and uh there
+
+
+could be one that's working already
+
+
+right it's working already and I'm I'm
+
+
+sitting here fiddling with it where I
+
+
+was filing it to to do this buffer code
+
+
+because the the code to make um uh
+
+
+something b64 I was trying to simplify
+
+
+it right before I started here and
+
+
+that's not what you should do right
+
+
+before you do a
+
+
+demo and I I broke it so uh um that's
+
+
+that's the uh that's what it feels it it
+
+
+basically it feels awesome and it's fast
+
+
+to work here and the cloud flare stack
+
+
+has all of this wonderful things that
+
+
+you need to build a modern AI
+
+
+application uh and it's really fun and
+
+
+fast and we'd love for you to do just
+
+
+that um there is a a link that we have
+
+
+uh uh for this um uh we'd love for you
+
+
+to come join the the community or our
+
+
+Discord if you're interested in learning
+
+
+more take a look at all of those models
+
+
+that we have there very uh generously
+
+
+priced uh we have a great free tier too
+
+
+so you can kind of sign up without a
+
+
+credit card start working through all
+
+
+this stuff um and we'd love to hear from
+
+
+you so join join the community and
+
+
+there's docs there uh the link for the
+
+
+docs there is uh uh to to go start
+
+
+exploring developers. cloudflare.com
+
+
+come hang out uh love to see
+
+
+you thank you y thanks thanks a lot
+
+
+Craig for that uh you know uh nice nice
+
+
+demo you know I think uh it's it was
+
+
+very easy when you showed how to just
+
+
+pull in a model and then just have a
+
+
+construct in place and get everything
+
+
+working and uh uh you know even the way
+
+
+everything else is tied so neatly with
+
+
+the entire uh offering I think that will
+
+
+make lives much easier for anyone to you
+
+
+know uh basically reduce the time to
+
+
+Market you know you have everything in
+
+
+one place whether it's R2 or you know
+
+
+whatever and then get it working and on
+
+
+a personal note I use cloudfare for my
+
+
+website not the AI part obviously you
+
+
+know the other things I am a cloudfare
+
+
+customer myself as well uh but then I'll
+
+
+probably try this uh out uh while we uh
+
+
+move on to the final stages you know to
+
+
+the uh final questions I think there was
+
+
+one in the comments that I saw uh which
+
+
+is Craig for you uh and I think it's
+
+
+fairly straightforward what are the
+
+
+audio files that are currently supported
+
+
+you know or yeah yeah so so um uh the
+
+
+the files are uh this is this is the
+
+
+whisper model and it supports MP3 and
+
+
+wave and I think it even supports MP4 so
+
+
+you could also like people use the
+
+
+whisper model to do transcriptions for
+
+
+uh videos right so what comes back which
+
+
+I was trying to show you but I broke it
+
+
+uh is is a actual transcription uh of
+
+
+time stamps so you can use those time
+
+
+stamps to build really nice uh uh
+
+
+applications on the other side where you
+
+
+can click the word and will jump to that
+
+
+point in the video uh you know that sort
+
+
+of thing if if because it's timestamped
+
+
+right so you can you can wire the thing
+
+
+together produces a vtt uh as well as
+
+
+the text uh of of what the person said
+
+
+and you know voice is getting more and
+
+
+more important uh for that and I I would
+
+
+have expect to see and again to the
+
+
+point that we were talking about earlier
+
+
+these models are going to evolve and we
+
+
+will have a text to speech uh or a
+
+
+speech to text uh model automatic speech
+
+
+recognition model that will keep on be
+
+
+the best of the best will be there and
+
+
+it we'll be doing whatever it is that we
+
+
+want to do as fast as possible on that
+
+
+that model is really fast I wish that I
+
+
+I wish that it didn't eat didn't fall in
+
+
+the space there at the end because of my
+
+
+code it wasn't actually the model code
+
+
+it was my code so uh it's super fast uh
+
+
+how how quick that can go and how big
+
+
+the files can be as well right so you
+
+
+can upload large files there and it can
+
+
+go and process that so super neat y
+
+
+interesting I think you know one
+
+
+exercise that we could probably try
+
+
+would be taking this video and using the
+
+
+worker AI to transcribe it and have the
+
+
+time stamps done for this so uh maybe
+
+
+let's see that something that I do I
+
+
+I'll probably share my learnings of you
+
+
+know doing that uh so with that you know
+
+
+we come to the uh end of today's webinar
+
+
+you know we stretched it uh by by
+
+
+sometime but I think it was really
+
+
+fruitful because we we had had some
+
+
+really in-depth in you know discussions
+
+
+around how do you build and manage AI
+
+
+systems and then you know actually
+
+
+getting deep into the system aspects of
+
+
+it the designing aspects of various
+
+
+modules and eventually the the demo that
+
+
+actually showed how you can use
+
+
+cloudfare workers work as AI to you know
+
+
+get things up and running uh so thank
+
+
+you so much Craig and Amon for your time
+
+
+uh you know it's been a wonderful
+
+
+discussion lots of learning for me uh
+
+
+and I'm sure uh you know a lot of our
+
+
+audience also
+
+
+learned quite a bit from this uh webinar
+
+
+as
+
+
+well so yeah before we sign off for
+
+
+today you know uh we'll have a lot more
+
+
+webinars lined up so please uh scan this
+
+
+QR code And subscribe to our any
+
+
+upcoming webinar and with that uh you
+
+
+know the three Biryani lovers will take
+
+
+a leave for today and you know please
+
+
+please follow us on socials please
+
+
+follow Craig am and myself infac cloud
+
+
+cloud flare to see what are the exciting
+
+
+things that we all are doing uh so with
+
+
+that see you all on the other side uh
+
+
+thanks once again Craig
+
+
+andan thanks everybody thank you byebye

@@ -1,0 +1,4306 @@
+hi there and welcome to another episode
+
+
+of the AI explore webinar series as part
+
+
+of these AI explore webinars we focus on
+
+
+exploring AI from infrastructure to
+
+
+platforms and from llms to Genna
+
+
+applications this is our second episode
+
+
+where we would be discussing about
+
+
+observability in AI when I started
+
+
+working with jna models and applications
+
+
+like chat GPT and CLA I thought that you
+
+
+know maybe the whole idea or the whole
+
+
+core of AI is GPU so if you monitor the
+
+
+GPU that's fine but it's only later I
+
+
+realize that that's not the thing there
+
+
+are a lot of other components which are
+
+
+involved when you want to observe your
+
+
+AI applications and AI
+
+
+platforms to put it simple if you have a
+
+
+car which is functioning you cannot just
+
+
+focus on the engine of the car there are
+
+
+a lot of other components that you have
+
+
+to look at it you know there are doors
+
+
+there are tires there are wheels and
+
+
+that exact thing comes to AI as well so
+
+
+when you have ai platforms there is a
+
+
+different level of complexity involved
+
+
+and that is what we are going to discuss
+
+
+today a couple of weeks back me and my
+
+
+colleague we did give a talk at a local
+
+
+Meetup here in India where we spoke
+
+
+about observability in
+
+
+AI but that was just the tip of the
+
+
+iceberg so if you were one of them who
+
+
+attended that Meetup make sure to stay
+
+
+till the end of today's webinar because
+
+
+today we are going to Deep dive into
+
+
+observable observing complex AI
+
+
+platforms and
+
+
+models but before we begin today's
+
+
+episode there is an exciting news that I
+
+
+want to share with all of
+
+
+you we are thrilled to announce that
+
+
+infac cloud is the silver sponsor at the
+
+
+Nvidia AI Summit that is is happening in
+
+
+Mumbai from October 23rd to October
+
+
+25th the Nvidia AI Summit is the place
+
+
+where all the Breakthrough and
+
+
+Innovations in AI happen and we being a
+
+
+part of it will share our expertise and
+
+
+experiences and obviously learn from the
+
+
+other industry players so make sure to
+
+
+drop by our booth at the Nvidia AI
+
+
+Summit in
+
+
+October further if you are new to
+
+
+today's webinar uh you can watch our
+
+
+previous webinars we have been doing
+
+
+webinars on platform engineering and AI
+
+
+as well so you can scan this QR code
+
+
+which will take you to our YouTube
+
+
+playlist where you can watch the
+
+
+previous episode of the other
+
+
+webinar and like always I am not the
+
+
+only person who would be talking today I
+
+
+have a couple of guests with me one of
+
+
+them is the first time first appearance
+
+
+on this webinar today so we have Aman
+
+
+here and we have our regular feature
+
+
+Vishal as well on the webinar so hi Aman
+
+
+hi Vishal thank you so much for joining
+
+
+in great so before we start a quick
+
+
+round of introductions from all of us uh
+
+
+I your host a familiar face here I am uh
+
+
+a senior developer Advocate at infocloud
+
+
+where I help organizations adopt open
+
+
+source Technologies and platforms I'm
+
+
+also a cncf Ambassador where I conduct a
+
+
+lot of meetups in my city here and
+
+
+outside of work I'm a big time foodie
+
+
+and a travel blogger so when I'm not
+
+
+doing webinars or working you can find
+
+
+me at a restaurant trying out something
+
+
+new so over to Amon for him to introduce
+
+
+us where is he from what does what does
+
+
+he do and what is one thing that you
+
+
+like doing outside of
+
+
+work yeah thanks ad thanks for having me
+
+
+here I'm principal engineer at infar
+
+
+cloud based in pun from last 14 years
+
+
+now so kind of like a puner uh I've been
+
+
+doing Cloud native stuff systems designs
+
+
+and distributed systems from last 10 to
+
+
+12 years now but from last one year
+
+
+focuses on mapping the same things in
+
+
+the a cloud space very interesting word
+
+
+Beyond work I love to read books or
+
+
+probably watch
+
+
+movies and V over to
+
+
+you thank you D thanks for having me
+
+
+uh Vish founder in infac Cloud mostly
+
+
+focused on open source Technologies
+
+
+around Cloud native infrastructure for
+
+
+last 80 years and implementing those at
+
+
+Enterprises and obviously now trying to
+
+
+use them for the AI cloud and AI
+
+
+infrastructure basically uh based in
+
+
+Pune since almost 24 a years on and off
+
+
+I guess uh yeah and Beyond work I like
+
+
+uh being in Mountain's nature and
+
+
+reading good books and you know watching
+
+
+good movies
+
+
+interesting so we have two punkers and
+
+
+one sud sudo puner here in today's
+
+
+webinar and we will be going through
+
+
+discussing about observability in AI
+
+
+today but before we move on some
+
+
+housekeeping stuff we would be taking
+
+
+questions from you so if you have any
+
+
+questions or queries in between the
+
+
+webinar you can put it in the comments
+
+
+box uh whether you're joining in on
+
+
+LinkedIn or YouTube and I would be
+
+
+taking that questions with the guests as
+
+
+well so with that out of the way I think
+
+
+it's good time to begin our discussion
+
+
+uh so observability is one of the major
+
+
+Concepts where the whole idea is to get
+
+
+insights into a system by checking
+
+
+what's happening externally by looking
+
+
+at the metrics logs and traces which is
+
+
+often known as the Triad or the pillar
+
+
+of observability and I've been a long
+
+
+time advocate of observability ever
+
+
+since I learned about this and the the
+
+
+the tools that I used and and it always
+
+
+amazes me how we can predict or look at
+
+
+various softwares and applications by
+
+
+tracking various metrics and logs so
+
+
+what you see here in this uh image over
+
+
+here is you know we have a cluster we
+
+
+have name spaces and then you have some
+
+
+metrics coming into promethus which is
+
+
+then taking it to a grafana dashboard
+
+
+probably where you visualize the metrics
+
+
+and then you have a team that analyzes
+
+
+it and takes action so that's a quick
+
+
+observability 101 session observability
+
+
+under 30 seconds for you but then this
+
+
+entire landscape when you map it to an
+
+
+AI platform or an AI application it
+
+
+changes completely and that is what we
+
+
+would be discussing
+
+
+today so observability in AI is complex
+
+
+that's the only thing which I will say
+
+
+but I will now hand it over to Vishal
+
+
+and Amon to demystify that complexity a
+
+
+little bit and take us through the
+
+
+entire webinar
+
+
+today cool
+
+
+so uh I think when it comes to absor I
+
+
+think there are two fundamental things
+
+
+which are different I think the way you
+
+
+collect data you know whether it is
+
+
+metrics or logs or you know traces or or
+
+
+anything you know is is not
+
+
+fundamentally different if you ask me
+
+
+but I think there are two fundamental
+
+
+aspects which are different one is
+
+
+obviously introduction of new components
+
+
+new layers right so gpus obviously at
+
+
+Hardware layer uh llm you know and
+
+
+inference servers or model engines for
+
+
+example you know is another new
+
+
+component they're introducing model by
+
+
+themselves you know are obviously
+
+
+completely different and new compared to
+
+
+any previous software uh you know for
+
+
+last whatever number of decades
+
+
+basically right uh so so obviously that
+
+
+means there are new and different things
+
+
+to monitor uh for example time to First
+
+
+token and stuff like that the second and
+
+
+which is more fundamental change in the
+
+
+observability for example if there is
+
+
+observability in your normal software
+
+
+today uh there might be you know modules
+
+
+and classes and functions you know lines
+
+
+of code and you can go and say hey this
+
+
+is where the exception happened
+
+
+basically right and then you can Trace
+
+
+back from there what might have gone
+
+
+wrong in that scenario now how do you do
+
+
+this with model you know you're sending
+
+
+a request model has been trained you're
+
+
+getting a response right how do you know
+
+
+and how do you uh kind of debug for lack
+
+
+of a better word right that what caused
+
+
+a certain exception or a certain
+
+
+response to be not right and wrong
+
+
+basically right and I think that is
+
+
+something I don't think there is right
+
+
+answer and and 100% clear answer today
+
+
+as an industry that will continue to
+
+
+evolve but the first one obviously we
+
+
+kind of have a good handle in terms of
+
+
+what to look at at these components but
+
+
+the second will continue to evolve
+
+
+evolve I would
+
+
+say absolutely I think I completely
+
+
+agree to you that the process Remains
+
+
+the Same but then the way you implement
+
+
+it and the things that you track uh
+
+
+obviously change uh over to you Aman for
+
+
+taking us a little more deeper into this
+
+
+aspect
+
+
+sure yes so I think observ in AI the
+
+
+fundamental difference like I think V
+
+
+mentioned there are main new components
+
+
+got added like at the hardware layer we
+
+
+got lot of accelerators and the only
+
+
+point for which they being sold is like
+
+
+they are performance heavy like they
+
+
+they do per they do provide a lot of
+
+
+good performance so do the end users
+
+
+have become performance thirsty so you
+
+
+have to track those things if you are
+
+
+really using it to those performance
+
+
+levels and are you using the right
+
+
+optimization tool Lings and whatnot to
+
+
+get those in performance benefits so
+
+
+that is what we will look at it today
+
+
+from certain aspect of a observability
+
+
+okay so broadly if you see there are
+
+
+almost three different kind of workloads
+
+
+or areas in AI observability so the top
+
+
+one being the training workloads where
+
+
+you have seen like M different big
+
+
+models coming out every day right
+
+
+companies are training models on bunch
+
+
+of gpus and all now that space needs a
+
+
+completely different kind of
+
+
+observability reason being you are
+
+
+building a new model every other day or
+
+
+you are basically fine tuning it you
+
+
+need to track was it better than the
+
+
+previous version or not how capable it
+
+
+is run it against multiple data sets and
+
+
+identify it so that training space uh
+
+
+completely Targets on the model quality
+
+
+model performance and how the entire
+
+
+infrastructure that supports the
+
+
+training workloads how that is being
+
+
+utilized then we have a space of
+
+
+developing llm apps which is basically
+
+
+most of the companies are currently
+
+
+doing uh using the foundational models
+
+
+creating some kind of versions on top of
+
+
+it and basically it might be a rag app
+
+
+an agent based app you connect it to the
+
+
+different systems your policy documents
+
+
+or your internal documents and you kind
+
+
+of build on top of it again this is more
+
+
+of when we say talk about observability
+
+
+in developing nlm app space we focus
+
+
+more on troubleshooting aspects of it
+
+
+like V was mentioning like the tracing
+
+
+part how do you analyze tbug and
+
+
+troubleshoot so that all things comes
+
+
+into picture like you're using multiple
+
+
+systems uh let's say Vector databases
+
+
+you're using agents which part is
+
+
+getting slow so you have to trace those
+
+
+things and the last pie is the inference
+
+
+workload which is again subset of
+
+
+developing a Maps because when you are
+
+
+talking about inference it means you are
+
+
+basically deploying a model it could be
+
+
+a foundational model like llama and all
+
+
+these things or it could be your own
+
+
+property model but you're deploying it
+
+
+into a certain GPU GPU based systems and
+
+
+you're using it now here what matters
+
+
+more is your performance efficiencies
+
+
+and how much reliable it is basically
+
+
+all we need is how fast you're getting
+
+
+the responses that depends because
+
+
+that's a crucial layer between your
+
+
+entire LM or any other ecosystem how
+
+
+fast you're getting responses how much
+
+
+respon is it using the gpus at the level
+
+
+that is required or not so that will be
+
+
+the focus of our discussion today so
+
+
+we'll talk about AI inference
+
+
+observability as a main topic and there
+
+
+are other things onm apps and training
+
+
+workloads but uh probably will not go
+
+
+today in this
+
+
+session okay so when it comes to the
+
+
+observability uh we call it like a
+
+
+layered approach and it's not like
+
+
+something new uh even in the other
+
+
+systems we might be doing it in the same
+
+
+way uh many companies do it in same way
+
+
+so at the bottom you always have an
+
+
+infrastructure layer here we call it AI
+
+
+infrastructure layer reason being there
+
+
+are a lot of accelerator on the compute
+
+
+side you have gpus on the network side
+
+
+you have fast performing networks like
+
+
+infin Band rock and whatnot on the
+
+
+storage again there are fast processing
+
+
+servers for storage as well parallel
+
+
+file systems and whatnot and all these
+
+
+need a good amount of power consumption
+
+
+they need a good cooling system to keep
+
+
+it operational uh racks are there in the
+
+
+B data centers now to Top This you use
+
+
+an operating system in an orchestration
+
+
+layer and by that you get a usable uh
+
+
+infrastructure layer where you can
+
+
+deploy your services you can deploy what
+
+
+so if I have to top it up with the AI
+
+
+workloads it would be starting with an
+
+
+AI model backend which is like an engine
+
+
+uh now we'll talk about in detail like
+
+
+what the difference between back and
+
+
+serving uh in further slides but uh in
+
+
+summary it is like a server back end is
+
+
+your server and then you have a serving
+
+
+layer which is basically a user facing
+
+
+layer where your end users actually
+
+
+interact with the a system so we'll go
+
+
+by same this layered approach we'll
+
+
+cover each layer in detail further
+
+
+slides sorry I was on mute so yeah I
+
+
+think Aman gave a real good uh you know
+
+
+overview in terms of the layered
+
+
+approach to observing uh your entire AI
+
+
+platform and the three layers that we
+
+
+also discussed in our previous webinar
+
+
+were your infrastructure your Orchestra
+
+
+which includes the orchestration layer
+
+
+and then you talk about the backends and
+
+
+then the serving part as well so we will
+
+
+start with observing infrastructure and
+
+
+we see uh how critical your storage and
+
+
+networking are and how do we observe
+
+
+them so uh if you see infrastructure
+
+
+layer these are primarily divided into
+
+
+two broad categories one is hardware and
+
+
+then there is a software layer now
+
+
+Hardware is basically what is there in
+
+
+your data center so you have compute
+
+
+servers you have networking racks and
+
+
+whatnot and it is critical to monitor
+
+
+those as well because that's ultimately
+
+
+where your everything your all the
+
+
+workloads and systems are running then
+
+
+you have a software layer which is
+
+
+basically starts with like a your
+
+
+operating system then you top it up with
+
+
+any orchestration engine like kubernetes
+
+
+and on top of that if you are doing like
+
+
+a GPU Cloud then probably some GPU
+
+
+operators some sharing plugins Network
+
+
+operators storage operators and what on
+
+
+now Within These two layers uh what do
+
+
+you need to Monitor and why it is
+
+
+critical so if you look at Hardware
+
+
+layer it is very important for us to
+
+
+monitor the utilization metrics and the
+
+
+why it is important is because if you
+
+
+know that all these gpus like h100 a100
+
+
+they you consume lot of memory like
+
+
+around 700 Watts one dgx box might use
+
+
+like let's say four five say 8 kilow of
+
+
+memory and rack only has like 20 Kow
+
+
+that's so only two dgs boxes will come
+
+
+in that so you have to be sure like your
+
+
+power is being measured properly how
+
+
+much power consumption is happening
+
+
+there is no over consumption under
+
+
+consumption all those
+
+
+things you need to monitor the
+
+
+temperature of your gpus as well these
+
+
+are costly pieces costly accelerators so
+
+
+you need to be sure that they are
+
+
+running under the right conditions uh
+
+
+this could indicate that whether you
+
+
+have to update your cooling systems are
+
+
+they working fine or not and this
+
+
+completely affects your entire data
+
+
+center
+
+
+design same goes with the networks as
+
+
+well uh because at the network layer
+
+
+also you have switches wir in infinite
+
+
+band networks how they are performing is
+
+
+there any condition all those things
+
+
+that in stre mod now at the software
+
+
+layer uh since we are talking about
+
+
+mainly AI clouds uh AI observability so
+
+
+you allocate gpus now GPU allocation can
+
+
+be like one to one basis or it could be
+
+
+like a shared model you projected
+
+
+certain gpus you now we have Mig in the
+
+
+recent gpus right so you can basically
+
+
+divide one GPU into seven sub smaller
+
+
+gpus so how that allocation happens how
+
+
+do you monitor that are they being used
+
+
+effectively or not or that or was it not
+
+
+worth doing that uh kind
+
+
+of using the make we you needed the
+
+
+whole GPU but actually divided it and
+
+
+you not getting the uh benefits out of
+
+
+it then you have a network and storage
+
+
+performance that you need to track
+
+
+because all these workloads that run
+
+
+they consume good amount of networking
+
+
+and storage you need to be sure of
+
+
+scheduling efficiencies uh like we use
+
+
+kubernetes because you can get
+
+
+distributed clusters easily with it and
+
+
+it has all those things baked in where
+
+
+it can do scheduling and all those so
+
+
+but you need to be make sure that you're
+
+
+not over basically over subscribing a
+
+
+node all the workloads are going into
+
+
+one single node you're Distributing it
+
+
+properly and no and lastly is your Port
+
+
+startup times basically uh
+
+
+all these applications it depend hold up
+
+
+or if there is any latency or delay in
+
+
+that so those things will be measured on
+
+
+those
+
+
+parts yes and interestingly when am was
+
+
+talking about exactly when Aman was
+
+
+talking about latency you know we we
+
+
+experienced that in real time as he got
+
+
+stuck uh but yeah one thing one thing
+
+
+you know I I I found it interesting when
+
+
+you spoke about you know measuring the
+
+
+temperature for your gpus because they
+
+
+tend to get real hot uh engineers at
+
+
+infra Cloud at our office in Pune where
+
+
+we have the AI lab we actually had set
+
+
+up an we we actually had an air
+
+
+condition but then we tweaked it and had
+
+
+some IR remotes and IR systems in place
+
+
+to ensure that you know the AC's turn on
+
+
+and on off uh you know at a particular
+
+
+time depending on the temperatures of GP
+
+
+gpus so that's a fairly interesting
+
+
+thing that we uh you know did
+
+
+there yeah moving on to the next aspect
+
+
+networking
+
+
+yeah I think networking is again one
+
+
+critical aspect because lot of things
+
+
+that happen like inference training or
+
+
+doing llm apps whichever area you pick
+
+
+from the AI all needs a good good
+
+
+networking components now networking
+
+
+accelerators are also again divided into
+
+
+like a one node networking and like a
+
+
+multi- node networking within one node
+
+
+we have again multiple accelerators like
+
+
+there are libraries or tools or some
+
+
+advancement where you can skip PC and
+
+
+you can directly access the memory those
+
+
+things you have NV links to have
+
+
+communication between GPU to GPU within
+
+
+a node and when you move Beyond one node
+
+
+uh again you have infinite band Rocky
+
+
+and all these fast networking topologies
+
+
+so basically you can have a infinite
+
+
+band switch in between that connects
+
+
+multiple GPU nodes across the data
+
+
+center and you can still have like a 400
+
+
+gigs of n but all this is in theory like
+
+
+when you're using it or you're deploying
+
+
+your own inference workloads and let's
+
+
+say you're using pism techniques uh you
+
+
+need to make sure that your inference
+
+
+engines are basically communicating at
+
+
+those speeds and that's where you need
+
+
+to measure your entire network through
+
+
+put NY you need to be on top of it
+
+
+because there's no value if it is only
+
+
+on paper that you are using for G you
+
+
+might need to do some tuning in your
+
+
+applications some performance to get
+
+
+those performance games so it could be a
+
+
+GPU to GPU communication bandw within a
+
+
+one single node so if you're not on like
+
+
+latest systems then probably you have to
+
+
+still measure how much your PCI time is
+
+
+going into communication between the GPU
+
+
+but if you are on the latest systems
+
+
+you're using NV link and all then are
+
+
+you utilizing those bandwidth
+
+
+effectively are your eight gpus are
+
+
+basically communicating at what 900 Gibs
+
+
+or something that in
+
+
+willink commits uh you have to make sure
+
+
+that or whatever you feel that the best
+
+
+your workloads can achieve you have to
+
+
+be on top of it you have infin band RDMA
+
+
+basically these are used for multiple
+
+
+nodes communication so when you have
+
+
+multiple no GPU noes sprad across a Data
+
+
+Center and you're running like a
+
+
+inference with a parallelism you have
+
+
+tensor parallelism let's say any data
+
+
+parallelism you have to data transfer
+
+
+between these two uh inference engines
+
+
+so you have to measure those like are
+
+
+they taking too much time are we using
+
+
+the proper infinite band range to
+
+
+achieve that all this are and when when
+
+
+you go to the other slide on the storage
+
+
+systems we'll see the impact of why
+
+
+network bandw is even critical when we
+
+
+talk about the storage
+
+
+systems so when you see modern storage
+
+
+systems for this AI cloud data centers
+
+
+again they are very much Network heavy
+
+
+uh so you can have like a dgx box or anx
+
+
+box with like a t 20 or 30 TB of dis
+
+
+attached to it but again within that
+
+
+disc you have to basically use tools
+
+
+like GPU direct storage or direct memory
+
+
+access dma Technologies so that you
+
+
+don't spend Cycles where your GPU goes
+
+
+first to CPU or RAM and then gets the
+
+
+data from your dis so if you utilize dma
+
+
+and all these toolings properly uh you
+
+
+basic basically directly connecting to
+
+
+your disc and then getting the data this
+
+
+is this happens for your one node but
+
+
+when you again take the same networking
+
+
+approach and we go to the across entire
+
+
+data center again we have like modern
+
+
+network interface cards based on like
+
+
+connect Tex and all and in between you
+
+
+will again have the same infin band
+
+
+Rocky and whatnot now again you have to
+
+
+make sure that when the GPU to GPU
+
+
+networking or GPU to GPU data access is
+
+
+happening uh you are basically not
+
+
+spending too much time on the CPU ccle
+
+
+or Rams and all those things and you
+
+
+using all these RDMA Technologies
+
+
+properly so bottom line you have to
+
+
+always measure for any storage systems
+
+
+you have to measure the iops you have to
+
+
+measure the storage throughput latency
+
+
+or capacity utilization that being any
+
+
+system you use you use NFS direct
+
+
+storages you use PAR file systems these
+
+
+are the key indicators right but if you
+
+
+go beyond that you have direct memory
+
+
+access and RDMA and these are more mix
+
+
+of networking based things so you need
+
+
+to be aware of how your GP direct
+
+
+storage throughput is are you really
+
+
+bypassing that PCI and getting that
+
+
+performance game uh are you doing RDM
+
+
+throughput so how much you are using
+
+
+that complete Network bandwidth that is
+
+
+happening over there for parallel file
+
+
+systems again they provide the
+
+
+efficiency that multiple processes can
+
+
+access the data to at the same time so
+
+
+you need to be on top of it what is your
+
+
+file creation access time if your
+
+
+network is still you need to identify
+
+
+like is your network is a bottl neck or
+
+
+is the solution that you're using is a
+
+
+Bott neck to identify those things you
+
+
+have to be on top of your latency
+
+
+metrics and all those things and that's
+
+
+where the mix of networking and storage
+
+
+in a g Cloud
+
+
+comes
+
+
+yeah now uh we spoke about Network we
+
+
+spoke about infrastructure but how do
+
+
+you actually do it so I think in our
+
+
+last webinar also we mentioned that we
+
+
+using kubernetes and many of
+
+
+things that we seeing people are using
+
+
+kubernetes creating data center creating
+
+
+the clusters of distribut distributed
+
+
+clusters right so when you're using
+
+
+kubernetes the B the stack that we
+
+
+proper mostly use based on the open
+
+
+source stch is prasana based St uh for
+
+
+General cluster cluster metrics cluster
+
+
+performance and all those things but if
+
+
+you want to get the metrics of like GPU
+
+
+whatever we spoke earlier like about
+
+
+networking storage GPU utilization
+
+
+temperature and all those things uh you
+
+
+can use a dcgm exporter this is by
+
+
+Nvidia and it already exports all of
+
+
+these metrics whe it even exports
+
+
+metrics around your vgpus your mix and
+
+
+your GP locations and all those things
+
+
+so your entire Hardware as well as
+
+
+software there both are covered by that
+
+
+there are certain other open source
+
+
+exporters as but not that much are not
+
+
+included here but yeah if you want to
+
+
+explore more deeper there are some
+
+
+customer
+
+
+exporters right so I think before we get
+
+
+into to the observing model part of
+
+
+things I think uh you know it's it's
+
+
+very crucial for us to understand what
+
+
+all goes behind the application that you
+
+
+use so now that when you give a prompt
+
+
+to a chat GP or Cloud you know what are
+
+
+the different layers which are there and
+
+
+how they are working you know it was
+
+
+only in the previous webinar that I
+
+
+learned the importance of networking and
+
+
+storage when it comes to building your
+
+
+AI infrastructure uh like many of you
+
+
+for me it was all about that hey up a
+
+
+very high you know vram GPU and then
+
+
+everything works but then the networking
+
+
+and storage needs to be there to support
+
+
+it so that you know the entire system is
+
+
+not bottleneck so I think Aman gave real
+
+
+good insights into what are the exact
+
+
+things that you need to uh you know
+
+
+measure when it comes to your storage or
+
+
+networking bandwidth or even the GPU as
+
+
+well so now we shift our Focus to a
+
+
+higher layer moving from the
+
+
+infrastructure getting into the models
+
+
+layer and uh again Aman will help us
+
+
+understand what are the different ways
+
+
+and the metrics that we can measure if
+
+
+you if you want to track our AI models
+
+
+in
+
+
+place sure so uh before we get into like
+
+
+observability for models so one thing to
+
+
+clarify like common confusion is what is
+
+
+the difference between an the model
+
+
+backend versus a model server so there
+
+
+are two components uh when we talk about
+
+
+backends you can even call it like
+
+
+engines as as well uh but these are the
+
+
+basically the actual uh boxes where your
+
+
+model is actually going to run so all
+
+
+the optimization tunings like we you
+
+
+must have heard about like the attention
+
+
+mechanism page attention uh you have
+
+
+kernel fusions and all these
+
+
+Technologies coming in uh that do
+
+
+perform the optimizations uh on the GPU
+
+
+processing all these things are baked
+
+
+inside the engines so engines are the
+
+
+one that are responsible for providing
+
+
+the last mile of that performance Gaines
+
+
+so if you have to T tune in anything to
+
+
+improve your performance of your
+
+
+entrance then probably engines will be
+
+
+the layer that to start with you need to
+
+
+be sure that you're using all these
+
+
+things properly then you have servers
+
+
+and servers are basically a wrapper on
+
+
+top of these or it could be certain
+
+
+other things other tools as well now
+
+
+servers basically have one part as
+
+
+engine and the other part is basically
+
+
+the how they make it accessible to the
+
+
+end users so you might need to have like
+
+
+something to expose out the metrics or
+
+
+collect those metrics and expose those
+
+
+metrics out to the
+
+
+observability layer right so that is one
+
+
+part of the servers you then have
+
+
+certain frontend tool link connection
+
+
+handling like HTTP grpc connections who
+
+
+will handle those connections and how it
+
+
+will be delegated to your engines so
+
+
+those are the things that are covered in
+
+
+the servers
+
+
+part so you see the backend capabilities
+
+
+uh mostly it is about the memory
+
+
+optimization model specific optimization
+
+
+or batching support so we'll see more
+
+
+about it but broadly the differences you
+
+
+can assume back end as the core server
+
+
+core engine that actually runs your
+
+
+model and server is just like you're in
+
+
+normal world if I have to give it's like
+
+
+a web server uh you put your application
+
+
+code inside this web server and then it
+
+
+just does all the other things of like
+
+
+scaling G request multimodel serving any
+
+
+engine supports all these things it
+
+
+handles so now when you go about model
+
+
+backends what actually model backend for
+
+
+like I was saying they are made to
+
+
+provide a layer of optimization when you
+
+
+are serving your models uh the role of
+
+
+an engine is to provide complete
+
+
+optimization that you can gain the
+
+
+performance G you can get quick
+
+
+responses from the models uh you're
+
+
+you're generating uh the speed that you
+
+
+are expecting because when you're using
+
+
+it like in a chat bot or something the
+
+
+latency that you're expecting should be
+
+
+less like it should be a millisecond of
+
+
+latency that you're expecting you need
+
+
+the response as fast as possible like we
+
+
+see on the chat GPT cloud and all these
+
+
+tools so for that what they do is
+
+
+engines provide things like batching
+
+
+strategies uh you have one the
+
+
+traditional ways individual requests
+
+
+come in they are sent to the server and
+
+
+they are processed then you have Dynamic
+
+
+batching which is basically like a Time
+
+
+based or count based thing like either
+
+
+fire request came in or one second
+
+
+happened uh it will process the all the
+
+
+request that came in by that time now
+
+
+the more the things that are
+
+
+advancements in this space is like
+
+
+continuous batching so if a request came
+
+
+in even after uh the previous request is
+
+
+already processing it will still be
+
+
+included in the same mat because llms
+
+
+can support that model it's just
+
+
+specifically to llms that they can
+
+
+support this kind of model it is being
+
+
+used now these advancement these are
+
+
+only provided by the engines and when
+
+
+you are using them what is critical for
+
+
+you to observe is are you getting this
+
+
+Bing metrics or optim are they really
+
+
+providing you that gain the latency and
+
+
+throughput gain is your end to end
+
+
+latency is getting reduced is your
+
+
+throughput is good are you able to
+
+
+generate more tokens per
+
+
+second so what is the time for your per
+
+
+token right and you can relate it with
+
+
+with your GP utilization to make sure
+
+
+that uh the token that you're getting
+
+
+and the GP are utilized in the similar
+
+
+manners then within the llms there is
+
+
+lot of things that happened with the
+
+
+attentions and all these things the key
+
+
+value caching right so key value payers
+
+
+are critical because they being as an
+
+
+llm it's an autor regressive mode it
+
+
+generates multiple tokens every time it
+
+
+generates a new token it sends it back
+
+
+and again generate a new token and it
+
+
+keep on doing it until the end is
+
+
+reached So within that we do a KV
+
+
+caching uh there are different methods
+
+
+to it some do through past mechanism
+
+
+some do the normal KV caching in the
+
+
+memory and all those but critical for as
+
+
+an observer or when you're doing it in
+
+
+observability uh it's very critical to
+
+
+understand and see that are you
+
+
+utilizing the memory effectively because
+
+
+Beyond a certain limit GPU memories are
+
+
+not the bottom leg to the inflence
+
+
+performance it's more of the
+
+
+optimizations that you do how much your
+
+
+KV cache is being utilized how much new
+
+
+tokens are a and generated or request
+
+
+are
+
+
+and I think Amon has byed and sent to
+
+
+the
+
+
+model yeah some there was a yes yes we
+
+
+can come back to computation
+
+
+part sure
+
+
+uh where I was I
+
+
+mean no so you were talking about the
+
+
+computation process with caching how the
+
+
+tokens are uh you know generated that
+
+
+was the part lost you yeah so like I
+
+
+said the llm generated in an auto
+
+
+regressive manner so you have the tokens
+
+
+generated it goes back to the again
+
+
+attached to the original sentence and
+
+
+then you again generate the next token
+
+
+so you can see that the previous contest
+
+
+remains same so you can probably store
+
+
+that as a cache now there are techniques
+
+
+to it like ped detention or standard
+
+
+attention Bas mechanism using GPU
+
+
+memories and all so what to critical is
+
+
+to track here is you need to be sure
+
+
+that you're using the k cash properly
+
+
+right uh you are not doing lot of Skips
+
+
+to that and that is being used
+
+
+effectively whichever mechanism you're
+
+
+using if you're using VM it might be a
+
+
+based detention so you have to measure
+
+
+that other the swapping and all those
+
+
+things are happening
+
+
+properly so yeah I think these are the
+
+
+critical metrics that comes to when it
+
+
+is KV caching or like model load times
+
+
+and you have like a different phases
+
+
+within an LM like prefill decode uh it
+
+
+starts with the prefill and then it
+
+
+continuously go in the decode phase uh
+
+
+so you have to measure latency at each
+
+
+stages and that will give you an
+
+
+indication that where actually you need
+
+
+to do the M
+
+
+tuning interesting so I think before we
+
+
+move into the model serving area I think
+
+
+uh until now what what I realized is the
+
+
+the depth of details that you know Aman
+
+
+you have shared and I think uh Chandra
+
+
+who is one of our uh viewers who also
+
+
+agrees that you know we have provided
+
+
+good depth of details whether it comes
+
+
+to the GPU slide or even the the
+
+
+previous model slide uh I'm sure that at
+
+
+least for me the way I look at how the
+
+
+uh chat GPD or Cloud actually works in
+
+
+back end has completely changed now I
+
+
+can you know I can visualize what
+
+
+happens when I send a request what
+
+
+happens in the background and how it is
+
+
+you know let's say it is tokenized and
+
+
+how it goes to the inference server and
+
+
+so on and so forth so uh thanks Chandra
+
+
+for those uh good feedback uh we you
+
+
+know we are open for questions always so
+
+
+if you have any questions uh please
+
+
+droing to the comments and Aman would be
+
+
+more than happy to answer uh and also
+
+
+you know we have written a couple of
+
+
+blogs around uh AI especially around
+
+
+gpus time slicing and as well as Network
+
+
+so do check out our blogs on infr cloud.
+
+
+blogs where you can get on more details
+
+
+as well so with that let us move to the
+
+
+final layer uh which was about observing
+
+
+the model serving layer uh which
+
+
+essentially is where the end users uh
+
+
+you know interact with so let us see
+
+
+what are the various uh metrics that we
+
+
+need to track and the focus areas for
+
+
+us so this is the final layer I think
+
+
+when it comes to inference at least
+
+
+basically if you have to relate it with
+
+
+your whatever current microservices or
+
+
+current kind of deployment that we do
+
+
+non GPU kind of thing it is basically a
+
+
+server that we are deploying engine is
+
+
+part of it now what matters here uh like
+
+
+other normal microservices or
+
+
+applications are they being scaled uh
+
+
+are the how the requests are being
+
+
+handled what are the interfaces that are
+
+
+open is it htdp
+
+
+GPC because it's a role of server to
+
+
+take that request and pass it on to the
+
+
+engine and then engine does the all
+
+
+these optimization that we spoke about
+
+
+like batching and all those things now
+
+
+when it comes to kubernetes uh we all
+
+
+know that it is good for scaling the
+
+
+workload scaling up scaling down both
+
+
+things can happen using the HPS and so
+
+
+server again brings up that Ro so when
+
+
+we tie the observability of server with
+
+
+HPS and all we can again use the same
+
+
+principles that we use for normal ports
+
+
+and scale our infant servers based on
+
+
+that when we talk about the allocations
+
+
+like uh at the first SL we spoke about
+
+
+GPU sharing strategies like Mig so you
+
+
+can in the diagram if you can see
+
+
+there's a MIG right and we let's say
+
+
+created four gpus out of it then you can
+
+
+allocate four infant server on it it
+
+
+depends I'm not saying like it will fit
+
+
+in all the cases but if you're using a
+
+
+small model it can just run four
+
+
+replicas within one GPU and still they
+
+
+are isolated they like completely
+
+
+different part replicas that are
+
+
+running so that's the key roles of as a
+
+
+server and again like other web server
+
+
+we have to track here like an latency
+
+
+for endtoend request because this is the
+
+
+layer where actual interaction happens
+
+
+it could be that you are doing some
+
+
+processing in between and then you are
+
+
+serving passing it to llm and then
+
+
+you're getting the responses back and
+
+
+again doing some processing and then
+
+
+sending it out so your end to end
+
+
+request changes for that and it could be
+
+
+tied with your this web
+
+
+servers you need to be on top of like
+
+
+how much your request per second is and
+
+
+how much your tokens per seconds uh Auto
+
+
+scaling metrics for servers like spoke
+
+
+and load distribution across the
+
+
+servers interesting so the
+
+
+model yeah so so model serving like you
+
+
+said is the area where we all interact
+
+
+with uh you know as users this is where
+
+
+we hit and like a typical web server if
+
+
+I can say uh you know we have we track
+
+
+the metrics which which you mentioned
+
+
+you know from latency to throughput so
+
+
+on and so forth so overall until now we
+
+
+looked at the various layers that we
+
+
+have to observe when it comes to AI inra
+
+
+uh sorry AI platforms so we started with
+
+
+infrastructure we spoke about storage we
+
+
+spoke about networking GPU and then we
+
+
+moved uh one layer above and then we
+
+
+looked at the back ends where we you
+
+
+know how to how to track them and what
+
+
+are the various metrics and then finally
+
+
+we reach the topmost layer where we
+
+
+interact with so uh the next part uh
+
+
+would be the demo you know enough of
+
+
+theory I think we we have discussed a
+
+
+lot of things today and I'm sure you
+
+
+know we will uh have something
+
+
+interesting when we go into the demo uh
+
+
+so before I go into the demo uh Aman we
+
+
+have a question from one of our viewers
+
+
+on Linkin uh ishank and I will just
+
+
+flash that question on the
+
+
+screen yeah right there so ishan bansel
+
+
+asked us can you touch upon some cost
+
+
+measures while we integrate observ ility
+
+
+with AI based on the session I'm
+
+
+assuming it will incur huge cost as
+
+
+well so uh I think it again relates to
+
+
+the first slide that we had the Triad of
+
+
+observability so if you're doing
+
+
+something like a let's say training work
+
+
+so if you're doing like developing LM
+
+
+apps yes a lot of metrics will be
+
+
+generated in those cases because
+
+
+basically when you're developing LM apps
+
+
+it's just like you're developing your
+
+
+current apps you might have traces you
+
+
+might have small metrics you are running
+
+
+in debug mode you'll be collecting lot
+
+
+of different data points so that time it
+
+
+might be higher but when it comes to
+
+
+inference it's basically like let's say
+
+
+your application is not packaged and
+
+
+you're putting it in production so the
+
+
+amount of logs or metrics that will come
+
+
+out will not be as huge as the it is for
+
+
+the other things and for the
+
+
+infrastructure layer I think uh buing
+
+
+the GPU utilization metrics or
+
+
+networking component metrics other
+
+
+things we anyways Ed to capture it right
+
+
+in the kubernetes cluster we capture the
+
+
+ne details even in a normal ec2 any
+
+
+server based instance we are habitual to
+
+
+capture those metrics like how the CPU
+
+
+performances memory performances so that
+
+
+will not bring a lot of big met and
+
+
+again it depends on the overall size of
+
+
+your setup so if you're bring on a huge
+
+
+data center then yes but if you're a
+
+
+small
+
+
+lab great uh I hope ishank uh Aman has
+
+
+answered your question it uh and if you
+
+
+have anything following do do let us
+
+
+know in the comments and you know would
+
+
+be more than happy to answer
+
+
+those so yeah if if if you missed that
+
+
+previous webinar what do you see on this
+
+
+slide is the photo of our sandbox AI lab
+
+
+that is present in our office uh in Pune
+
+
+and this is where the team is doing some
+
+
+exciting stuff and one of them would be
+
+
+what Aman will be showing us today uh
+
+
+focusing on the observability aspects of
+
+
+AI
+
+
+platforms sure so before we get into the
+
+
+actual dashboards and screen uh just a
+
+
+back a lab like mentioned just now that
+
+
+in the last webinar we have already
+
+
+demoed this but just in high Lev view we
+
+
+are running three
+
+
+node GPU based worker nodes three work
+
+
+nodes and they are using RTX 490 gpus
+
+
+we'll have deployed one or two INF
+
+
+servers on these it's entirely kuties
+
+
+based setup uh then what we on software
+
+
+stack if
+
+
+you on the software stack so OS
+
+
+provisioning uh you're doing piix Boot
+
+
+and all to bring up the entire systems
+
+
+and all orchestration layer like I just
+
+
+mentioned we are using kubernetes for
+
+
+GPU Integrations we using GPU operators
+
+
+and networking operators on the load
+
+
+balancer side metal using and for
+
+
+monitoring like I said we are using very
+
+
+light layers of like grafana node
+
+
+exporters and n n dcg exporter since it
+
+
+is a miniature lab and not other gpus
+
+
+and other kind of SE configurations but
+
+
+yeah this will give you a good Insight
+
+
+onto whatever we just discussed in
+
+
+this a overview of the kind of app that
+
+
+we have deployed on the system right now
+
+
+so it is more of like a rag app as an
+
+
+example what it is at the bottom we have
+
+
+the communties cluster from itas grafana
+
+
+Lo and all these things for monitoring
+
+
+part and GPU operators load Bal file
+
+
+system Forex on top of that we have
+
+
+deployed an aack which is basically an
+
+
+inference server uh we using the TGI
+
+
+server we have an embedding server that
+
+
+basically chunks out the data or if you
+
+
+can upload something Uh custom files or
+
+
+R it can do that as
+
+
+well and we access it through currently
+
+
+it's notm Gateway but we are directly
+
+
+accessing through metal right now that's
+
+
+the goal that we are planning
+
+
+to great so I think Aman did give us a
+
+
+good overview on the AI lab that we have
+
+
+the various applications that we have
+
+
+the various layers and the various
+
+
+components now we'll Deep dive into the
+
+
+demo now which Aman is going to uh show
+
+
+up so Aman you can bring up your screen
+
+
+so that we can you know show it to folks
+
+
+on what exactly we have done here and
+
+
+how they can make their system
+
+
+observable so in three two one here we
+
+
+have
+
+
+screen all right so what I'm going to
+
+
+show is just the context like the entire
+
+
+app system that I mentioned I've been
+
+
+using it before the webinar and
+
+
+generated some uh queries questions and
+
+
+all those things basically normal just
+
+
+like chat gbt I'll go layer by layer uh
+
+
+let's just start from infrastructure and
+
+
+then we'll look at the back ends and the
+
+
+service metrics so if I start with the
+
+
+gpus so like I said very critical to
+
+
+measure the temperature power usage and
+
+
+power to consumptions and all if you see
+
+
+uh currently wherever the model is
+
+
+deployed there are certain High spikes
+
+
+of temperature usage uh the power usage
+
+
+is high on those
+
+
+noes these are the actual nodes where
+
+
+our actual infin server so we had we
+
+
+have deployed a
+
+
+llama Lama 3.18 billion model and using
+
+
+a TGI server TGI is basically a
+
+
+combination of a server as well as a
+
+
+back end it's using both within the same
+
+
+model now we can even see the GPU
+
+
+utilizations if I just increase the time
+
+
+window when I was doing the cies you can
+
+
+see a lot of fluctuations when I made
+
+
+the CES the gpus utilization spiked
+
+
+during those times uh because I was
+
+
+making bigger basset of
+
+
+cues you can monitor the streaming
+
+
+multiprocessors basically these are the
+
+
+final core units of gpus that actually
+
+
+do the processing stages and so that's
+
+
+where actual processing happens you have
+
+
+the frame buffer memory which is
+
+
+basically where when you do model load
+
+
+uh you have parameters you have key
+
+
+values and all those things that are
+
+
+basically being loaded in the GPU memory
+
+
+so we call it like a VR and that is what
+
+
+frame buffer actually deposites so you
+
+
+see that on the infra 0 gp0 which is
+
+
+where my model is actually deployed
+
+
+there we are running around 23.2 GB
+
+
+because we are running Lama 38 billion
+
+
+and it is a cont version and with all
+
+
+the maths done it should take only less
+
+
+than 24 GB it's very near to it so you
+
+
+can see it's the same comes out here on
+
+
+the other note we are running an
+
+
+embedding server so that doesn't need
+
+
+too much of memories and all those
+
+
+things so we're just using a 2.0 G so
+
+
+this is majorly on the GPU part but if I
+
+
+switch back to normal typical kubernetes
+
+
+cluster utilization we can see we can
+
+
+again Monitor and this is not related to
+
+
+specifically to gpus or anything right
+
+
+uh this is around normal cluster metrics
+
+
+so you have CPU utilizations what are
+
+
+the commitments how the memory
+
+
+utilization is happening you can see Nam
+
+
+space based utilizations how the memory
+
+
+is being utilized across those name
+
+
+spaces and all and if I have to go into
+
+
+any of these into deeper I can just uh
+
+
+switch to that and get most details of
+
+
+it like I'm using a stack so whatever
+
+
+the CPU usage is I can capture those
+
+
+things and this is pretty gener like I
+
+
+said it is not like it is related to
+
+
+certain GPU or anything it is more of
+
+
+like a kubernetes dashboard that come
+
+
+with node exporters and kubernetes set
+
+
+of the
+
+
+dashboards after this I'll switch to our
+
+
+inference so like I said we using TGI
+
+
+right now and if I switch to the 1 hour
+
+
+window because I was making this all
+
+
+these requests before the webinar so
+
+
+like I said critical Parts as the top
+
+
+ones that we are seeing right now these
+
+
+you can directly relate to your model
+
+
+pends so model backend like I said was
+
+
+is to mainly to provide you the
+
+
+performance game so you can see the time
+
+
+to first open you always need to be on
+
+
+top of it how much time it is taking are
+
+
+is it like going into seconds then
+
+
+probably you have really need to do
+
+
+either some Hardware checks or you have
+
+
+to check the model backend is it being
+
+
+tuned or not is the model right for you
+
+
+right fit for you or not all these
+
+
+questions comes
+
+
+decode per token latency basically we
+
+
+discussed earlier like prefill decode
+
+
+these are the stages of an llm right so
+
+
+you need decode is where the major work
+
+
+happen and that's where you have to see
+
+
+that how much latency is happening
+
+
+because that is directly related to your
+
+
+end user latencies as well throughput uh
+
+
+not like normal web applications it's
+
+
+not like the number of requests that are
+
+
+being served it is more of like a number
+
+
+of tokens generated per second and that
+
+
+is where you see the speed when you talk
+
+
+to any chat GP or anything like if you
+
+
+how frequently you are getting the
+
+
+responses back so how frequently it
+
+
+generates the token it's the same way at
+
+
+the same speed it can basically in the
+
+
+relevance to it it can deliver it or it
+
+
+can stream it to the end
+
+
+user General metrics around how many
+
+
+tokens per prompt were uh submitted and
+
+
+then how many tokens were generated for
+
+
+per
+
+
+request now these are when it comes to
+
+
+TGI these are the metrics that we can
+
+
+observe right now since we are at a
+
+
+miniature lab we not at the scaled out
+
+
+lab if it is like 100 servers and
+
+
+running a parallelism based inference we
+
+
+might be capturing more metrics we might
+
+
+have to go into the network part of it
+
+
+storage part and all those things that
+
+
+is not relevant to our lab right now
+
+
+because we just running it on one single
+
+
+mode at this
+
+
+moment now if you see on the server side
+
+
+so you can see the requests that are
+
+
+coming in and how much time they are
+
+
+taking what is the per token latencies
+
+
+and all those things so these are two
+
+
+deep metrics like if you have to look at
+
+
+the batching metrics how many tokens for
+
+
+batch happened what is the batch size
+
+
+that you're doing you can increase it in
+
+
+the configurations of your engines and
+
+
+uh that will be reflected here so if
+
+
+like we discussed earlier like if you
+
+
+increase the batch sizes or if you
+
+
+change the batching mode then it
+
+
+probably changes the way your responses
+
+
+are generated or the speed at which it
+
+
+is
+
+
+generated I mean there are more to it
+
+
+but like I said we are running a very
+
+
+miniature lab and uh within that context
+
+
+on the one single TG and one single node
+
+
+I think this these are the metrics that
+
+
+we can capture at this moment yeah there
+
+
+are many other things that we can
+
+
+capture on the networking side storage
+
+
+side if you're using inference
+
+
+parallelism then there are completely
+
+
+different metrics that you have to track
+
+
+so probably in further webinars we might
+
+
+add those as
+
+
+well interesting I think Aman has
+
+
+repeatedly mentioned that there are more
+
+
+metrics but then if you look at this
+
+
+dashboard there are already 100 numbers
+
+
+which I can see on the dashboard uh and
+
+
+I think all the all the ones that we saw
+
+
+you know Aman did Cover almost each of
+
+
+them when we were discussing earlier in
+
+
+the webinar today uh you know on all the
+
+
+aspects right from infrastructure layer
+
+
+talking about the power consumption of
+
+
+gpus like he showed and then he showed
+
+
+us how the kubernetes normal metrics are
+
+
+you know coming from let's say a node
+
+
+exporter which tells me how my pods are
+
+
+functioning how my clusters functioning
+
+
+and then eventually coming to the
+
+
+inference server where we have these
+
+
+details when it talks about the batching
+
+
+modes the time to first open Etc so
+
+
+there's a lot of math involved uh and
+
+
+this math is not only involved to build
+
+
+model but even when it comes to
+
+
+monitoring and ensuring the key
+
+
+performance uh these are critical as
+
+
+well so U once again I think uh we are
+
+
+we are almost at the end of the webinar
+
+
+with the uh demo so if you have any
+
+
+questions you know feel free to drop
+
+
+them in the comments and uh Aman would
+
+
+be more than happy to take them and uh
+
+
+coming back to our uh you know the the
+
+
+AI lab that we spoke about so uh
+
+
+whatever you saw in terms of the setup
+
+
+the applications that we are using the
+
+
+the kuber dis cluster and everything on
+
+
+top of it uh if you are planning to
+
+
+build something like that with similar
+
+
+infrastructure and the components then
+
+
+you are lucky because we have open
+
+
+source all the charts that are that are
+
+
+used to bring this infrastructure up so
+
+
+do scan this QR code it will take you to
+
+
+our GitHub repository where you will
+
+
+find all the charts that is required to
+
+
+bring this infrastructure up so you have
+
+
+your tgis you have your teis you have
+
+
+your DBS everything that is required to
+
+
+get your system up and running so uh you
+
+
+know do go ahead and check this out if
+
+
+you are planning to make something of
+
+
+this sort and you know you can uh very
+
+
+well reach out to me Amon or anyone of
+
+
+us at infa Cloud if you are facing any
+
+
+issues and you know we would be more
+
+
+than happy to help you out uh here and
+
+
+there so we can now move to see if there
+
+
+are any questions
+
+
+so there was one question by S which was
+
+
+asking about will this be recorded and
+
+
+shared yes aai this webinar is recorded
+
+
+so you would be able to see it on our
+
+
+YouTube channel so you can check there
+
+
+and while I'm going through this I have
+
+
+more of feedback coming in than
+
+
+questions which is again very exciting
+
+
+and inviting so
+
+
+uh thank you so much gorov uh you know
+
+
+for your kind words that you uh like
+
+
+whatever we show and also thanks to
+
+
+Chandra you know for acknowledging the
+
+
+efforts that Aman actually put into get
+
+
+the demo and the everything else in
+
+
+place so I guess uh you know we are we
+
+
+are good uh in terms of question and we
+
+
+are at the top of the hour as well uh so
+
+
+before we close in uh I will ask Aman to
+
+
+give in a few closing remarks on when it
+
+
+comes to observ in AI obviously you know
+
+
+we looked at the various aspects that
+
+
+are involved how complex it is but then
+
+
+if if someone is setting up the setting
+
+
+up observ for their uh infrastructure
+
+
+what are some things that they should
+
+
+keep in mind while they are building
+
+
+something of that sort so we will leave
+
+
+our audience with those Pearls of Wisdom
+
+
+that we will share with
+
+
+them yeah yeah I think this is a very
+
+
+trending and a very fast moving uh space
+
+
+right we are seeing every day something
+
+
+you coming up right so like we said like
+
+
+in the slides like you need to identify
+
+
+First yourself where you are in the this
+
+
+AI world are you training are you doing
+
+
+building an apps or are you just doing
+
+
+an inference and if you streamline that
+
+
+part uh you will just remove lot of
+
+
+metrics and lot of things overheads that
+
+
+you have to track so once you have a
+
+
+Clarity on that and what systems you're
+
+
+using are you on a cloud are you
+
+
+building on your own private data
+
+
+centers these things mix up and uh once
+
+
+you have that Clarity you will be very
+
+
+well defined like we just it with one
+
+
+exporter which is nvdia dcgm exporter so
+
+
+you don't have to like over engineer it
+
+
+if you're using one stack using only
+
+
+Nvidia and certain toolings around it
+
+
+you might not need more much more
+
+
+exporters you can just plug in your
+
+
+existing prom gra System point the
+
+
+exporters to it and just use it but if
+
+
+you using complex workloads some third
+
+
+party apps and all those things you
+
+
+might have to invest more time on
+
+
+integrating their systems and all those
+
+
+things so just identify the space you
+
+
+are in the stack that you have and then
+
+
+just turned over engineer is because
+
+
+this is very fast moving
+
+
+yes I think the fundamental answer keep
+
+
+it simple silly I think that applies to
+
+
+uh everything that you do figure out
+
+
+where you are and what your needs are
+
+
+and accordingly uh you know apply the
+
+
+tools and Tech I think before we close
+
+
+my dear friend Ram AER has a question
+
+
+for Amon so we'll just flash that on the
+
+
+screen so uh Aman Ram ask what are the
+
+
+hardest parts of setting up AI infra
+
+
+according to you and for a company
+
+
+wanting to make a publicly available API
+
+
+or
+
+
+SS yeah so I think if you're making the
+
+
+second part of the question which is if
+
+
+you're making a SAS or an API based
+
+
+Solutions it's the last piece that we
+
+
+covered was your performance metrics uh
+
+
+that is really critical because you're
+
+
+basically opening up yourselves to a lot
+
+
+of public end users and this even
+
+
+relates to your internal teams as well
+
+
+if they are using even for the internal
+
+
+tools as well the any INF system this is
+
+
+the piece where you cannot like change
+
+
+the model overnight right it's a
+
+
+foundational models are built and
+
+
+they're getting bigger and bigger you
+
+
+just take them quantise and you probably
+
+
+use them so you have to work a lot on
+
+
+the optimization part and you need to
+
+
+focus on the right choice of the engines
+
+
+right side right choice of the servers
+
+
+that is the piece that will give you the
+
+
+performance game and when it comes to
+
+
+your AI inra again it's a choice are you
+
+
+setting up your own lab then probably
+
+
+you have to go very deep understand all
+
+
+the computes that can be used what is
+
+
+the networking spe speed that you
+
+
+require if you're doing only inference
+
+
+probably less networking if you're doing
+
+
+training then you need to look at the
+
+
+pictures of all the high Lev all the
+
+
+infin band RDM and
+
+
+everything and if you're on the cloud
+
+
+then probably these things are not too
+
+
+much of worry for you you can just
+
+
+subscribe to those Services take those
+
+
+set it up and use it but your
+
+
+observability will help you to track are
+
+
+you using those cloud services so that's
+
+
+where the this part will again plug
+
+
+in thanks Aman for that answers uh so I
+
+
+hope Ram you have got your answer uh
+
+
+around you know what are the things or
+
+
+what are the critical components that
+
+
+are required for setting up AI infra
+
+
+especially when you are an API or S
+
+
+company so uh before we close in uh
+
+
+thank you so much Aman for for your time
+
+
+and also for sharing insights uh deep
+
+
+insights if if I if I may say uh with
+
+
+all of us uh I'm sure it's uh there's a
+
+
+lot of takeaways for everyone from this
+
+
+webinar even for me as well and uh you
+
+
+know for everyone who has joined in
+
+
+thank you so much for joining in and uh
+
+
+we will be coming up with future
+
+
+episodes of this webinar so you know we
+
+
+started with talking about the AI lab
+
+
+that we set up and then today we focused
+
+
+on observability and similarly uh you
+
+
+know you might have realized until now
+
+
+that uh it's it's a very complex field
+
+
+and as in when you know you you start
+
+
+working with it you realize the various
+
+
+layers and various components involved
+
+
+in it so we would be coming up with more
+
+
+future uh more webinars in the future so
+
+
+do scan this QR code so that you are
+
+
+notified whenever uh we are coming up
+
+
+with a new session so uh with that once
+
+
+again uh thank you so much everyone for
+
+
+joining in uh you know it was a great
+
+
+time having all of you here uh thanks to
+
+
+Aman as well thanks to Vish who had to
+
+
+drop off our meeting and uh I'll be
+
+
+looking forward to seeing all of you
+
+
+again on our next webinar so do keep
+
+
+your eye on our social channels follow
+
+
+us on Twitter follow us on LinkedIn so
+
+
+that you are updated with the latest
+
+
+webinar and content as well so until
+
+
+then uh you know goodbye good evening
+
+
+have a great day wherever you're joining
+
+
+in from and we will see you again in our
+
+
+next webinar thank you so much

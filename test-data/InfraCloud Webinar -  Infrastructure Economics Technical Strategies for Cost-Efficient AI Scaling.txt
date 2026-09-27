@@ -1,0 +1,4741 @@
+Hi there everyone. Uh thank you so much
+
+
+for joining in and sorry for the little
+
+
+delay that we had here. Uh you know
+
+
+basically we had some technical g glitch
+
+
+uh in the backdrop and you all know the
+
+
+demo gods uh need to be pleased all the
+
+
+times and unfortunately they were not uh
+
+
+at our side for the last few minutes. Uh
+
+
+but as they say better late than never
+
+
+we are back live and I can see a few of
+
+
+you joining in the webinar as well. So,
+
+
+uh, welcome to the latest installment in
+
+
+our AI explore webinar series and I'm
+
+
+excited to be back here again. Uh, I am
+
+
+Atul for those of you who don't know, I
+
+
+am a senior developer advocate at
+
+
+Infraoud Technologies. Uh, where I help
+
+
+individuals and organizations adopt
+
+
+opensource technologies, tools and
+
+
+platforms. I'm also a CNCF ambassador
+
+
+and I organize community meetups in my
+
+
+city here in Hyderabad, India. Now for
+
+
+those who have been with us on this
+
+
+journey, we have covered quite a bit of
+
+
+ground already. So we started exploring
+
+
+by setting up by showing you how we set
+
+
+up our AI lab uh in the first webinar
+
+
+and then we moved into the critical area
+
+
+of observability. you know how we deploy
+
+
+observability in our AI systems. And our
+
+
+third session we tackled the challenges
+
+
+of taking models to production and more
+
+
+recently we talked about architectural
+
+
+patterns for modern AI systems. In
+
+
+today's webinar our focus is on
+
+
+infrastructure economics where we would
+
+
+be looking into some technical
+
+
+strategies for cost effective AI
+
+
+scaling. Uh being a food blogger, you
+
+
+know, I always have a food reference uh
+
+
+whenever I'm talking about uh anything
+
+
+technical. Uh you can watch all our
+
+
+previous videos to get a hang of it. And
+
+
+here's the QR code. You can scan this QR
+
+
+code and get to our YouTube page that
+
+
+will list all the previous videos that
+
+
+we have done on AI explore. So being
+
+
+from Hyderabad, one of the most famous
+
+
+dish that we have here in Hyderabad is
+
+
+the Hyderabadi biryani. And to be to the
+
+
+art of making biryani is exquisite. You
+
+
+know, it's it's a craft that not many
+
+
+excel at. And while you're preparing a
+
+
+biryani, right, when you want to make a
+
+
+perfect biryani, you first start with
+
+
+the finest ingredients and you prepare
+
+
+your kitchen setup. It's similar to
+
+
+setting up your AI lab and then you
+
+
+carefully monitor the entire process of
+
+
+applying dum and then ensuring that the
+
+
+meat is properly cooked with the uh with
+
+
+the rice and that the perfect aroma that
+
+
+comes in. And this entire process
+
+
+reminds me exactly of how you set up AI
+
+
+labs, right? uh so when you have a AI
+
+
+system that's running locally or maybe
+
+
+in a closed network where a few of your
+
+
+team members are trying it but when you
+
+
+want to take it to a larger scale this
+
+
+is exactly how it will be you know it's
+
+
+about scaling that Hyderabadi biryani
+
+
+recipe from a family dinner to a
+
+
+restaurant operations you know there are
+
+
+a lot of things involved here you need
+
+
+to balance the quality of ingredients uh
+
+
+while managing the cost you need to
+
+
+optimize the cooking process and als
+
+
+also you know take care of the entire
+
+
+operations and ensure that there's no
+
+
+wastage. So what works in a small scale
+
+
+experiment whether it's virani or your
+
+
+AI setup it often becomes expensive at
+
+
+scale and that's what we are going to
+
+
+discuss today and like every time I am
+
+
+not alone here I have two guests on
+
+
+these webinar I have Philip who is a
+
+
+developer advocate at ben and I also
+
+
+have Ammon who is the principal engineer
+
+
+at cloud hey Philip and ammon thank you
+
+
+so much for joining in on today's
+
+
+webinar thanks Thanks for having me this
+
+
+morning.
+
+
+Great. So uh you know there is a ritual
+
+
+that we follow on this webinar and
+
+
+that's basically that instead of me
+
+
+introducing the guest I always ensure
+
+
+that the guests introduce themselves so
+
+
+that I don't miss out on something that
+
+
+they want to say you know so uh why
+
+
+don't you go ahead and introduce
+
+
+yourself you know tell us what do you do
+
+
+where are you from what are your
+
+
+interest uh and what do you do outside
+
+
+of work uh so Philip would you like to
+
+
+go first sure thanks so hey everyone I'm
+
+
+Philip um I'm calling in from San
+
+
+Francisco this morning. I work at a
+
+
+company called B 10 which is the AI
+
+
+inference platform um for serving high
+
+
+volume mission critical workloads in
+
+
+production and I uh I lead the developer
+
+
+advocate team here. So, I've been with
+
+
+the company for over 3 years. Um,
+
+
+working across content, documentation,
+
+
+um, you know, code, demos, all that fun
+
+
+stuff and including webinars. And, um,
+
+
+let's see. Outside of work, I'm a big
+
+
+martial arts guy. I like to train in
+
+
+jiu-jitsu and
+
+
+kickboxing. And I live in Redwood City,
+
+
+which is a short Cal Train ride away
+
+
+from downtown SF.
+
+
+Interesting. Thanks so much Philip for
+
+
+that wonderful introduction. Uh Ammon
+
+
+over to you. Hey everybody, I'm Aman.
+
+
+I'm based in Pune and I'm principal
+
+
+engineer at Infcloud. Uh I'm doing this
+
+
+cloud native work from last 10 years
+
+
+now. I've been part of Infraoud from
+
+
+last six years. I've seen and love to
+
+
+work on the complex distributed systems
+
+
+quite a lot and from last two years it
+
+
+has been more around AI applying same
+
+
+principles and wherever we can use it.
+
+
+outside of work, I love uh book reading
+
+
+and just watching Netflix.
+
+
+Thanks so much, Ammon. So, you know, we
+
+
+have a pretty diverse uh panel here. You
+
+
+know, whether it's about uh talking
+
+
+about models and influences or talking
+
+
+about reading books, Netflix and martial
+
+
+arts. Uh and for those of you who don't
+
+
+know a little backstory, I met Philip at
+
+
+CubeCon in Paris if I'm not wrong. And
+
+
+uh apart from you know discussing about
+
+
+the webinar and AI uh one thing we
+
+
+connected on was IPL and Philip
+
+
+supported Chennai super kings tala for a
+
+
+reason and it's it's good to be back uh
+
+
+you know we were just speaking on the
+
+
+backstage talking about uh you know how
+
+
+CSK has been performing uh so it's it's
+
+
+quite interesting that you know IP has
+
+
+reached a lot of places and uh for all
+
+
+of you who are joining in please let me
+
+
+know where are you joining in from what
+
+
+you do in the comments and uh you know
+
+
+make it as interesting as uh
+
+
+possible. So uh with that I think you
+
+
+know it's it's it's time to get into the
+
+
+core discussion for today. Uh you know
+
+
+we have set the stage perfectly in terms
+
+
+of uh the entire analogy between biryani
+
+
+and AI models and how it eventually
+
+
+scales. So with that stage setup uh you
+
+
+know I would I'm I'm quite curious
+
+
+always uh you know especially when it
+
+
+comes to AI and uh uh you know
+
+
+infrastructure and when you look at AI
+
+
+infrastructure as you know when when you
+
+
+are working with a lot of uh you know
+
+
+compute that you need or or a lot of
+
+
+other resources for deploying your
+
+
+models what's usually the first thing
+
+
+that you spot and say that hey this is
+
+
+where uh you know I'm spending too much
+
+
+uh so so Philip over to you know what is
+
+
+that one or two areas that you always
+
+
+look at and say that hey there's
+
+
+something that uh can be improved
+
+
+yeah when I think about improving cost
+
+
+characteristics for AI infrastructure um
+
+
+it generally comes down to two things
+
+
+one is you know the infrastructure
+
+
+itself are we provisioning our resources
+
+
+correctly are we um you know scaling
+
+
+appropriately with with traffic and
+
+
+demand but I think honestly the bigger
+
+
+one often comes more down to model
+
+
+performance If we can take the same
+
+
+hardware resources and get more tokens,
+
+
+more images, more transcription, more of
+
+
+whatever we're trying to do out of these
+
+
+resources, then we're able to scale more
+
+
+efficiently and have a lower marginal
+
+
+cost of each generation. So you know bu
+
+
+building a building a cost-effective
+
+
+infrastructure it is really a
+
+
+combination between both the you know
+
+
+hardware management and traditional
+
+
+infrastructure domain and also the
+
+
+researchoriented model performance
+
+
+domain.
+
+
+Absolutely. I think it's it's it's it's
+
+
+a marriage of two things and only when
+
+
+both of them complement each other I
+
+
+think that's when we get uh you know the
+
+
+perfect recipe and like you rightly said
+
+
+you know you need to plan your uh
+
+
+capacity in such a way depending on the
+
+
+workloads that you have and also look at
+
+
+uh not only the infrastructure side of
+
+
+things but even the uh you know model
+
+
+model aspects of it u and I think one
+
+
+approach where which at least I have
+
+
+heard when I've interacted with you know
+
+
+few organizations is taking a different
+
+
+approach. You know a lot of times uh
+
+
+companies or organizations would want to
+
+
+stick to on-prem but there are times
+
+
+when they you know move into hybrid uh
+
+
+and I think that's where you know I
+
+
+would want to get ammon to share his
+
+
+insights since you know he has been uh
+
+
+uh quite actively involved in those kind
+
+
+of uh discussions you know especially
+
+
+with multiloud and hybrid. So uh ammon
+
+
+your thoughts on on this aspect.
+
+
+Sure. Sure. So I think when it comes to
+
+
+multi cloud or hybrid approaches all
+
+
+this starts from the fact that uh what
+
+
+the business is going to serve. Are
+
+
+there any compliance requirements? Can
+
+
+you put the data on the hyperscalers?
+
+
+Can you put on uh any other niche
+
+
+providers? But there are two things that
+
+
+needs to be answered like what you are
+
+
+trying to build and what is the
+
+
+limitation like are there any compliance
+
+
+anything. Now why this approach of
+
+
+multiloud has been more popular is
+
+
+because with the advent of these AI
+
+
+solutions everyone is trying to create
+
+
+some wrapper abstractions around it. So
+
+
+we see one side the foundational models
+
+
+coming out every day and then the other
+
+
+is how to make them usable. So you might
+
+
+see that somewhere as might be releasing
+
+
+10 different services. It might be good
+
+
+at uh instances something but there are
+
+
+niche providers that are creating
+
+
+solutions on top of these solutions. So
+
+
+be it image generation service,
+
+
+transcription uh summarization services.
+
+
+So but you don't have to do that heavy
+
+
+toll of designing the solutions because
+
+
+LLM models is one thing and then making
+
+
+them consumable is another piece. You
+
+
+have to address multi-tenency
+
+
+observability tracking request s
+
+
+batching and all those stuff. So there
+
+
+are a lot of things. So that's where
+
+
+this approach of identifying which
+
+
+solution solves your problem best
+
+
+considering the factor that it handles
+
+
+your scale, it handles your compliance
+
+
+requirements and everything. So that's
+
+
+where you can leverage uh some where
+
+
+some might be cost effective, some might
+
+
+be solution effective. So that's where
+
+
+companies can take the advantage of
+
+
+this. Another is again coming to the
+
+
+solution you might be doing something
+
+
+which is more of like a a very it
+
+
+doesn't need a lot of data to make an
+
+
+inference and then you can just put it
+
+
+out to the edge devices because uh all
+
+
+this conversations and everything like
+
+
+classic example of how Apple added the
+
+
+intelligence to the mobiles right you it
+
+
+can do many smart things even in your
+
+
+device so why because you don't need to
+
+
+push every data out of it it cost you to
+
+
+uh it cost you actually because it's an
+
+
+egress traffic and egress both are
+
+
+mostly charge in all the cloud providers
+
+
+some rate. So that's where you can save
+
+
+cost, you can uh bring more efficiency
+
+
+on the throughputs if you deploy your
+
+
+solutions closer to the user on the
+
+
+edge. Interesting. I think I I like the
+
+
+way you put the entire thing around uh
+
+
+you know services that the cloud
+
+
+providers can offer and also the scale
+
+
+uh you know that that they can handle. I
+
+
+think uh these two are uh rightly good
+
+
+areas which organizations should uh you
+
+
+know definitely understand before they
+
+
+make the switch or decide you know where
+
+
+to move on. Now I think when you when we
+
+
+are discussing about uh you know cost
+
+
+especially when it is uh you know
+
+
+talking about infrastructure I think uh
+
+
+the pricing model or cost attribution
+
+
+and budgeting also plays a vital role.
+
+
+Uh and I think I would want uh you know
+
+
+Philip to talk a little more about how
+
+
+are the various aspects uh you know that
+
+
+are going to affect the overall cost
+
+
+when it comes to choosing a cost
+
+
+attribution model.
+
+
+Yeah. Um, actually if I could just touch
+
+
+on multicloud really quick. Okay. Uh,
+
+
+because this is something that we've
+
+
+learned a lot about at B 10. Base 10
+
+
+sits on top of currently seven different
+
+
+public cloud providers with more coming,
+
+
+you know, very frequently. And one thing
+
+
+that you really have to be aware of when
+
+
+you're building a multi cloud solution
+
+
+is that GPUs and cloud providers are
+
+
+like not necessarily funible in the way
+
+
+that you would expect them to be. A, you
+
+
+know, a early example that I ran into
+
+
+when I was doing, you know, some
+
+
+benchmarking work a couple years ago was
+
+
+learning that like PCIe and SXM
+
+
+connectors for um for like A100 and H100
+
+
+GPUs actually make a huge difference.
+
+
+Not only does is the connection
+
+
+different, but actually the hardware
+
+
+behind that connector is different.
+
+
+These are two entirely different SKs
+
+
+where the PCIes are having lower compute
+
+
+and memory bandwidth um than the SXM
+
+
+versions. And then even once you're
+
+
+making sure that you're using entirely
+
+
+say SXM GPUs um you still have things to
+
+
+consider in the networking hardware. So
+
+
+for example, we've recently launched
+
+
+multi-node inference which lets you use
+
+
+more than eight GPUs to run extremely
+
+
+large models like DeepSeek R1 and
+
+
+there's actually a lot of different
+
+
+standards on the market for this node to
+
+
+node connectivity. So Nvidia has um
+
+
+Infiniband which is their sort of
+
+
+standard version of this um which is a
+
+
+pretty high throughput connection but
+
+
+not every cloud provider uses that. Some
+
+
+have their own custom versions which can
+
+
+be the same performance, better
+
+
+performance or worse performance um in
+
+
+real world situations. So, you know,
+
+
+building these kind of multicloud
+
+
+approaches, especially once you step
+
+
+outside the main CSPs into the broader
+
+
+world of of cloud providers, you have to
+
+
+be very careful to make sure that you
+
+
+know exactly what you're getting from a
+
+
+hardware perspective, both on the GPU
+
+
+and on the networking equipment because
+
+
+otherwise you might make some um you
+
+
+know, pretty fair assumptions about what
+
+
+you you know, what you're expecting the
+
+
+setup to look like and actually have to
+
+
+build some kind of abstraction to, you
+
+
+know, cover for the fact that all this
+
+
+stuff works differently.
+
+
+Absolutely. I think I I'll I'll totally
+
+
+echo the the the whole part where you
+
+
+emphasized on the network bandwidth as
+
+
+well because we remember you know in one
+
+
+of our previous webinars we discussed uh
+
+
+the infinite band coming in and then the
+
+
+focus entirely was on you know the way
+
+
+the models perform and the network
+
+
+bandwidth that is required to you know
+
+
+either splice or the way you are you
+
+
+know probably training your models or
+
+
+you know in during inference and uh you
+
+
+know like ammon point you know spoke
+
+
+about abstractions I think uh you know
+
+
+that that becomes very critical because
+
+
+the more the more abstractions that you
+
+
+on that you add on top of uh you know
+
+
+whatever the low-level architecture you
+
+
+have essentially that's going to affect
+
+
+the overall performance as well and that
+
+
+eventually will be a pass part of your
+
+
+of the added cost. Uh so so yeah I think
+
+
+uh I think that was a very valid point
+
+
+on the uh infrastructure and the
+
+
+multiloud side of things. Uh and uh let
+
+
+me get back to the uh you know model
+
+
+model costing sort of uh discussions uh
+
+
+you know since we were uh you know
+
+
+trying to touch upon that and uh you
+
+
+know I remember you were talking about
+
+
+the per request model and I think uh you
+
+
+know you would be the right person to
+
+
+tell us more about it because I'm
+
+
+relatively new to uh you know the
+
+
+costing aspects of uh models. Sure. So
+
+
+the the breakdown here is shared
+
+
+inference endpoints versus dedicated
+
+
+deployments. Shared inference endpoints
+
+
+are where you're on a multi-tenant
+
+
+system which is generally run by some
+
+
+inference provider um or a foundation
+
+
+model lab. Um and the most famous
+
+
+example of this is of course going to be
+
+
+the open AI like GPT API. So with the
+
+
+GPT API, you and everyone else all send
+
+
+your traffic to the same endpoint. Um
+
+
+you pay per token of input and output
+
+
+and you can choose which model you use.
+
+
+You don't really have to manage
+
+
+anything. You don't have to set anything
+
+
+up. This is really great for getting
+
+
+started and small scale projects because
+
+
+you have absolutely zero overhead.
+
+
+You're just consuming token by token and
+
+
+that makes your costs very predictable
+
+
+if you know how many tokens you're going
+
+
+to generate um because you're just doing
+
+
+a a small a small project and it also
+
+
+keeps overhead very minimal. The issue
+
+
+is as you scale you start to run in a
+
+
+lot of problems with these shared
+
+
+inference endpoints. One big problem is
+
+
+around rate limits and capacity limits
+
+
+as well as noisy neighbors causing SLA
+
+
+degradations uh high latency spikes as
+
+
+well as even outages. If you look at
+
+
+most shared inference endpoints, you're
+
+
+not going to see more than a couple
+
+
+nines of
+
+
+uptime. So the other option is dedicated
+
+
+deployments. And for very large scale
+
+
+deployments where you're serving massive
+
+
+production traffic, dedicated
+
+
+deployments can be a much better
+
+
+solution. uh you get more predictable
+
+
+pricing because you're just paying for
+
+
+the underlying GPU resources and then
+
+
+from there as we started uh this
+
+
+discussion by talking about it's all up
+
+
+to your model performance efforts how
+
+
+much you get out of that. So if you can
+
+
+stand up a high throughput low latency
+
+
+model server on dedicated deployments
+
+
+and you have sufficient production
+
+
+traffic then on a per request or per
+
+
+token basis you're saving a lot of
+
+
+money. To use your um to use your
+
+
+metaphor around making biryani it's like
+
+
+the difference between buying your
+
+
+chicken and rice at the grocery store or
+
+
+buying it at a restaurant wholesaler.
+
+
+You absolutely nailed that with that
+
+
+analogy. And uh I I I think you know
+
+
+it's it's it's very comparable to the uh
+
+
+entire aspect of reserved versus
+
+
+dedicated instance you know where
+
+
+especially you know in the in the
+
+
+yesterday or even today when we all move
+
+
+for the compute right a lot of times uh
+
+
+if if your usage is predictable you
+
+
+probably you know go in for a longer run
+
+
+and uh you know get a reserved instance
+
+
+as well. Now uh I think we have you know
+
+
+fairly touched upon the larger uh aspect
+
+
+of uh cost which are involved on the
+
+
+infrastructure side of things. I think
+
+
+uh you know we'll we'll get a little bit
+
+
+deeper into what uh Philip you actually
+
+
+spoke about you know that it's not
+
+
+always entirely the infrastructure you
+
+
+know there's also a lot of emphasis that
+
+
+needs to be put on the uh you know the
+
+
+the way you select the models or you
+
+
+know the the way you optimize the
+
+
+performance right uh so I I'll get back
+
+
+to you and uh help us uh help us
+
+
+including me and our viewers understand
+
+
+you know how to choose a particular
+
+
+model or or or what are the decisions uh
+
+
+or what are the factors that affect your
+
+
+decision which eventually affect the uh
+
+
+cost when you are choosing the models.
+
+
+Yeah, absolutely. So my advice is always
+
+
+to start with the largest most expensive
+
+
+most capable model you can possibly
+
+
+find. Um you know when you are just
+
+
+building an MVP of some product go ahead
+
+
+and grab GPT 4.5 or Sonnet 3.7 Gemini
+
+
+the new Gemini 25 looks great. Um, and
+
+
+use that because you're going to be
+
+
+doing such low volume in development
+
+
+that the cost basically doesn't matter.
+
+
+And you want to validate that the thing
+
+
+you're trying to build is even possible.
+
+
+You know, is there any model in the
+
+
+world that can handle the tasks that
+
+
+you're throwing at it? And if you, you
+
+
+know, start there and you're able to
+
+
+build something off of these really high
+
+
+performance models, that's amazing. But
+
+
+from there you are probably going to
+
+
+want to optimize cost before going into
+
+
+production. So the second step is coming
+
+
+up with really great evals. You have to
+
+
+understand what good quality means for
+
+
+your application. You should have some
+
+
+example prompts and some example
+
+
+responses so that you're able to, you
+
+
+know, ensure that any new model you
+
+
+adopt is going to be just as good for
+
+
+your use case. From there you can start
+
+
+using smaller and smaller models. You
+
+
+can look at some of the llama models,
+
+
+the Quen models. um you can look at
+
+
+potentially even if you have enough data
+
+
+points in that eval set uh even looking
+
+
+into fine-tuning and you should be able
+
+
+to find some smaller specialized model
+
+
+that that does a great job. The reason
+
+
+that getting a smaller model, you know,
+
+
+maybe it's a distilled reasoning model,
+
+
+maybe it's a, you know, more efficient
+
+
+model like QWQ that's come out recently,
+
+
+an efficient vision model like Gemma 3.
+
+
+The advantage here is that structurally
+
+
+these smaller models consume fewer
+
+
+resources. You need fewer GPUs um and
+
+
+fewer GPU cycles within those GPUs to
+
+
+run these models in production. And so
+
+
+with that, like there's no amount of
+
+
+performance optimization in the world
+
+
+that's going to make, you know, llama
+
+
+70B run as fast as llama 8B, assuming
+
+
+that you can do all that same stuff to
+
+
+8B, right? So the smaller the model that
+
+
+you can end up using in production, the
+
+
+uh the better it's going to be for your
+
+
+cost characteristics.
+
+
+That's an interesting uh analogy. For
+
+
+someone like me who's completely new, I
+
+
+really uh you know understood the
+
+
+benefit of starting with a really large
+
+
+model which can do exactly uh you know
+
+
+everything that I that I wanted to do
+
+
+and then eventually scaling it down
+
+
+scaling down in terms of you know
+
+
+getting to a smaller uh models that
+
+
+smaller and maybe specialized models
+
+
+that can uh you know do stuff do the
+
+
+same stuff for me. And uh like you said
+
+
+you know it's very important to have
+
+
+your uh evaluation parameters in place.
+
+
+So you you have your prompts in place,
+
+
+you have your performance metrics,
+
+
+what's exactly required by you and then
+
+
+you compare which model works uh you
+
+
+know best for you. uh and I think you
+
+
+know at the same time you also pointed
+
+
+that you know as we go down or we choose
+
+
+smaller models you know their resource
+
+
+requirements also reduces right uh so
+
+
+whether you talk about compute or
+
+
+whether you talk about GPU you know that
+
+
+also affects now taking this discussion
+
+
+to uh you know the others half of the
+
+
+thing uh the other side of things where
+
+
+the hardware selection also matters
+
+
+right and uh that's why Raman I would
+
+
+want you to tell us you know how we
+
+
+could think from a hardware perspective
+
+
+starting with instead of how Philip told
+
+
+about you know starting from a larger
+
+
+model right no I would like to continue
+
+
+what I think Philip mentioned it's a
+
+
+great uh example that uh when you're
+
+
+starting on validating your idea it's
+
+
+always best to get to the uh best of the
+
+
+best and then validate your idea and
+
+
+then come to the optimization part and
+
+
+the same applies for the hardware
+
+
+selection because uh there are different
+
+
+categories of hardware you have CPUs you
+
+
+have GPUs and then they are accelerators
+
+
+literally created by hyperscalers or
+
+
+Nvidia right which can even go to the
+
+
+massive scales but what you need to
+
+
+understand is what you have validated
+
+
+your idea where it fits in it can be
+
+
+like a smaller model district model that
+
+
+you wanted to use and that does only a
+
+
+very small job then there are many
+
+
+optimization libraries that can put it
+
+
+into a CPU as well so you really don't
+
+
+even need a big GPU costing and then
+
+
+management of it and all those things
+
+
+right uh but if that doesn't happen then
+
+
+go to the GPUs and then again understand
+
+
+your workload uh are you doing just a
+
+
+single request batching are being do
+
+
+like 100 requests at a time, what kind
+
+
+of users you have and based on that
+
+
+choose your models effectively. You
+
+
+could have dedicated instance, shared
+
+
+model and whatnot. Uh same that we
+
+
+covered earlier but that decides what
+
+
+kind of infra you're actually going to
+
+
+use. It could be your own on-pre systems
+
+
+or it could be a cloud-based solution.
+
+
+If you ended up using let's say an image
+
+
+subscription service, right? Image image
+
+
+generation service which is already
+
+
+provided by many providers and your
+
+
+valid idea prompting ideas and
+
+
+everything works fine with it, right?
+
+
+Then why do you have to really own it?
+
+
+If the cost your economics comes into
+
+
+that that you can still make profit out
+
+
+of. So that's where you land up with
+
+
+your business your ideas and then you
+
+
+validate it and then you incrementally
+
+
+go to the choice of hardware. You can
+
+
+start with scale out architectures just
+
+
+start small and then when you feel that
+
+
+it is increasing you're getting massive
+
+
+amounts. You apply the same strategies
+
+
+that we talked earlier at the start that
+
+
+you can have autoscaling. You can then
+
+
+do the right sizing and all this stuff.
+
+
+But you don't need to like jump with the
+
+
+H200 H100 that these are the best in the
+
+
+market. I will only use those
+
+
+interesting that's that that's quite a
+
+
+uh you know different uh it's rather
+
+
+similar POV you know on how to get
+
+
+started and I think once you have
+
+
+decided you know the the models that you
+
+
+need or the in the the infrastructure
+
+
+that you need for your requirements uh
+
+
+that's when I think the actual
+
+
+optimization start and you know Philip
+
+
+you correctly mentioned you know there's
+
+
+no dirt of optimization available which
+
+
+can bring down
+
+
+70B to an 8 88 88 88 8B performance.
+
+
+Right. So, uh let us quickly touch upon
+
+
+some uh you know optimization techniques
+
+
+when it comes to serving. I think there
+
+
+are a few points uh on the screen but uh
+
+
+Philip anything that you would like to
+
+
+uh add to these or maybe reiterate.
+
+
+Sure. So, I actually just gave a talk on
+
+
+this at NVIDIA GTC last week on how to
+
+
+use Tensor Rot LLM in particular to
+
+
+implement a bunch of these serving
+
+
+optimizations. And that was a 40inut
+
+
+talk. So I'm going to try not to say
+
+
+everything I said there right here in
+
+
+this webinar. But uh I would definitely
+
+
+encourage anyone who's interested to go
+
+
+give it a watch um once it gets posted
+
+
+within a couple days on the session
+
+
+catalog. Um anyway looking at some of
+
+
+these optimizations here. One thing is
+
+
+that GPUs fundamentally are throughput
+
+
+machines. Um they are really good at
+
+
+batch workloads. And when we think about
+
+
+model serving um at least in the you
+
+
+know next token generation step
+
+
+generally we are bound on memory
+
+
+bandwidth. So how quickly can we read
+
+
+things out of VRAM? That's going to be
+
+
+the bottleneck on how quickly we can
+
+
+generate tokens. We want to approach
+
+
+being computebound as much as possible.
+
+
+Um we want to eliminate the memory
+
+
+bandwidth as a bottleneck. And one way
+
+
+to do that is batching. As we increase
+
+
+our batch size, we do use marginally
+
+
+more memory as that batch size
+
+
+increases, but we use substantially more
+
+
+compute. So less of our compute cycles
+
+
+are are going
+
+
+wasted. Um in terms of you know the
+
+
+caching strategies, um this this
+
+
+actually you know goes back to request
+
+
+routing as well. Um so you know that
+
+
+large batch is going to help with our
+
+
+throughput, but what about our latency?
+
+
+So one great thing for that is something
+
+
+called KV cache reuse. As we you know
+
+
+run model inference we are generating
+
+
+you know we're reading the weights we're
+
+
+reading the activations we're also
+
+
+generating the KV cache uh which is the
+
+
+result of each computation. So
+
+
+especially for prefill which is that
+
+
+process of generating the first token we
+
+
+are going to be able to you know if the
+
+
+prompt is say a repeated uh standard
+
+
+prompt and then a small user thing at
+
+
+the end or maybe it's shared context
+
+
+like an entire codebase going in and a
+
+
+quick little summary from the user at
+
+
+the end. we're going to be able to reuse
+
+
+the computation that we did originally
+
+
+in order to, you know, uh, in order to
+
+
+basically skip a bunch of prefill work
+
+
+and go directly to what's novel about
+
+
+this request versus the last one we got.
+
+
+That's where routing comes in because we
+
+
+don't necessarily want to put our KV
+
+
+cache on every single GPU in our
+
+
+distributed system. um that would take a
+
+
+ton of memory and you know we can use
+
+
+some strategies like offloading KV cache
+
+
+to CPU especially on you know
+
+
+Gracehopper type architectures where
+
+
+you're able to have a very high intercon
+
+
+high bandwidth interconnect between CPU
+
+
+and GPU or even if you have fast enough
+
+
+memory disk you could maybe even keep
+
+
+some KV cache there but another option
+
+
+is to just limit KV cache um to
+
+
+different you know model or different
+
+
+GPUs within your model serving
+
+
+architecture. Um, if each one has
+
+
+certain requests cached and you can use
+
+
+request routing to route similar
+
+
+requests to models that potentially
+
+
+already have the relevant KV cache
+
+
+information, then you don't need to
+
+
+duplicate your cache everywhere, and
+
+
+you're still able to get a very high hit
+
+
+rate, which is going to, of course,
+
+
+improve latency and throughput, reducing
+
+
+cost.
+
+
+Wow, that's that's quite a you know
+
+
+really uh high energy high octane uh you
+
+
+know capsule that you gave us of your
+
+
+40-minute talk. uh and I think uh you
+
+
+know that that was quite interesting and
+
+
+uh you know to understand the batching
+
+
+process and how the KV caching uh you
+
+
+know can be used for this and eventually
+
+
+routing uh and a mix of all these three
+
+
+can actually affect the uh the the
+
+
+functioning or the performance and uh
+
+
+like Philip you know said that this was
+
+
+more of a large talk that he gave at GTC
+
+
+but if you all are interested to hear it
+
+
+more and maybe you know uh us doing some
+
+
+more interesting things around this uh
+
+
+let us know in the comments. Maybe I'll
+
+
+try to uh you know lure Philip in with a
+
+
+biryani and we could do another
+
+
+interesting webinar focusing just uh on
+
+
+the optimization techniques. uh and
+
+
+before I move forward you know there is
+
+
+one question that I have I've been sent
+
+
+uh by by my team uh here and I don't
+
+
+know how I feel it's it's we are at the
+
+
+right juncture to answer this and I
+
+
+think ammonip anyone of you could take
+
+
+this uh and the question is how do you
+
+
+decide when to use uh CPU versus GPU for
+
+
+inference inference scaling uh and are
+
+
+there any clear cost performance
+
+
+benchmarks uh that you have when you
+
+
+when you need to decide
+
+
+it any uh anyone of you can take
+
+
+this. Sure. So I think CPUs are really
+
+
+good if you are doing something which is
+
+
+like a lightweight model. Uh because
+
+
+like just Philip was mentioning about
+
+
+this memory cycle this computational
+
+
+overload and all right so you cannot fit
+
+
+like a two big model or a two big
+
+
+request within the CPU right because the
+
+
+way it is designed it doesn't have that
+
+
+much of a bigger memories that it can
+
+
+just push it back and then read it from
+
+
+there. So that's where if you have like
+
+
+a low uh like a very small size models,
+
+
+you could expect low low I mean low
+
+
+latencies and you can just put it onto
+
+
+the edge that's a good case for that
+
+
+right because that's easier that's
+
+
+available everywhere. any user can
+
+
+acquire those arts. But when it comes to
+
+
+the performance systems when you are
+
+
+targeting about high scale volume your
+
+
+model is going to be big with volume you
+
+
+might even move to the like bigger size
+
+
+modules and then you come into the cycle
+
+
+of I think Philip was mentioning about
+
+
+optimizations on the usage of memory and
+
+
+that's where you need really the good
+
+
+GPUs and the accelerator hardware and
+
+
+that is usually how you can make a
+
+
+decision but
+
+
+interesting Philip anything else would
+
+
+you want to add to this? Yeah, just that
+
+
+like I don't really ever think about CPU
+
+
+versus GPU. Um with the exception of
+
+
+like some local embedding model
+
+
+inference. Um when when I think about
+
+
+production um workloads for basically
+
+
+any of the models that I you know run
+
+
+across in in my daily work, it's it's
+
+
+entirely CPU. The decision is more like
+
+
+you know which CPU is this H100? Should
+
+
+I, you know, use an H100 multi- instance
+
+
+GPU to, you know, save on cost for
+
+
+smaller models? Can I fit this on an L4
+
+
+and still get good performance? Those
+
+
+are more of the trade-offs that um we're
+
+
+generally thinking about.
+
+
+Absolutely. I think when you are
+
+
+operating at scale and especially in
+
+
+production I think uh the the whole CPU
+
+
+part takes a backseat and that's when
+
+
+you ensure or or try to at least ensure
+
+
+whether it works uh with the with the
+
+
+latest GPUs or the hardware that you
+
+
+have. Uh now moving on into our
+
+
+discussion I think you know we spoke
+
+
+about infrastructure cost at the
+
+
+beginning we spoke about the various uh
+
+
+opportunities when it comes to
+
+
+multicloud or hybrid talking about uh
+
+
+the costing attributes. We then dived
+
+
+into the whole uh optimizations part of
+
+
+it and I think logically it makes sense
+
+
+now to talk about uh the operational
+
+
+efficiency because uh logically you know
+
+
+when we we have uh optimized the system
+
+
+as much as possible we have optimized
+
+
+our models and now it's all about uh
+
+
+efficiency and you know how do we uh
+
+
+improve that now the to initially talk
+
+
+about things you know a lot of existing
+
+
+practices are still you know valid when
+
+
+we working with AI workloads, you know,
+
+
+talk about DevOps or MLOps and there are
+
+
+a lot of different attributes that are
+
+
+taken care of especially when it comes
+
+
+from uh a cost point of view and there
+
+
+are lot of advancements and uh newer
+
+
+techniques, newer way of working that's
+
+
+that's coming in. So Ammon would you
+
+
+like to shed some light on the DevOps
+
+
+practices which actually help for
+
+
+inferences?
+
+
+Sure. So in the last 10 years with all
+
+
+this containerization and distributed
+
+
+systems uh what we have done on the
+
+
+DevOps practices is more like creating a
+
+
+generalized set of practice that
+
+
+accelerates your uh production time like
+
+
+you get to the your software development
+
+
+life uh I mean entire life cycle reduces
+
+
+you get more effective you produce
+
+
+faster you get more visible results and
+
+
+all and those fundamental remains same
+
+
+even when you start using these systems
+
+
+uh reason being uh you are not using AI
+
+
+systems for fun that's completely
+
+
+different than you don't need any oper
+
+
+ational practices but if you're using it
+
+
+for business you need to use it like a
+
+
+machine like every day day in day out
+
+
+different developers will be working on
+
+
+it. So you need pipelines. You need to
+
+
+have uh same systems as you use to do
+
+
+your crit software development. There
+
+
+could be changes in the pieces or
+
+
+component that might be in the
+
+
+pipelines. But ultimately you need that
+
+
+whenever you make a change in the
+
+
+product. It should be released, tested,
+
+
+validated and customers are using it.
+
+
+When it is out in the production, you're
+
+
+tracking its uh complete observability.
+
+
+You know where the things are going, how
+
+
+GPU is performing, how your machines are
+
+
+performing because whatever we're
+
+
+talking about cost, those decisions can
+
+
+only be made when you have these
+
+
+observability metrics. One way is you
+
+
+just go in and look at the builds but
+
+
+the then that that will not tell you
+
+
+like what really happened. Uh did the
+
+
+GPU perform based on your user request
+
+
+or it was just of a heavy costing of the
+
+
+GPU like we were talking about the
+
+
+dedicated models. So that's why you need
+
+
+all these CI/CD pipelines infrastructure
+
+
+as a code practices environment should
+
+
+come as and when you want you're
+
+
+detached to the cloud providers for
+
+
+anyone you can easily move to the
+
+
+different like uh earlier Philip was
+
+
+mentioning about the uh there are
+
+
+limitations of different different cloud
+
+
+providers and different hardware. you
+
+
+should be ready to get out of it as easy
+
+
+as possible. Uh of course it might not
+
+
+be like 100% but you should be there at
+
+
+like 80% that you can your code is
+
+
+automated and then containerization is
+
+
+something we have been experiencing from
+
+
+last 10 years. It just makes your work
+
+
+easy make it repeatable and you can just
+
+
+pass it on between different same
+
+
+practices I think are getting applied to
+
+
+all the inference models we are seeing
+
+
+name blueprints and all those stuff that
+
+
+are coming out. uh it's become all day
+
+
+easy to get just just get a model deploy
+
+
+it provide an API endpoint to others and
+
+
+then people can just rotate it around
+
+
+between the images
+
+
+absolutely uh Philip anything you want
+
+
+to add something that you know you are
+
+
+being part of your team is doing which
+
+
+you think uh you know could be a good
+
+
+practice for everyone else yeah I mean I
+
+
+think I think Aman nailed it like one
+
+
+thing that we've shipped recently that's
+
+
+had a big impact is customized
+
+
+environments um you You want to make
+
+
+sure that you're able to have the same
+
+
+development, staging, production loop um
+
+
+that you experience for everything else
+
+
+in your um in your product uh within
+
+
+your models as well. You know, these ML
+
+
+models, they're now missionritical
+
+
+systems within people's production
+
+
+applications and accordingly they need
+
+
+to be treated the same way as any other
+
+
+mission critical system um and
+
+
+integrated into the same sort of
+
+
+monitoring and obser observability tools
+
+
+like graphana. um that you might be
+
+
+using for other components as well.
+
+
+Yes, I think you know the the whole
+
+
+aspect that uh fundamentally the
+
+
+practices remain the same and uh it's
+
+
+most important uh in production or uh
+
+
+you know your your entire processes that
+
+
+your each environment actually is mirror
+
+
+of the production so that you are able
+
+
+to test it develop it uh in the exact
+
+
+same uh you know setup that you have
+
+
+that that your customers are are using
+
+
+and I think ammon touched upon the
+
+
+observability part of it and I One of
+
+
+the key things over there is cost
+
+
+monitoring and optimization. Uh so what
+
+
+are some key metrics Philip if you would
+
+
+want to add you know for tracking
+
+
+various costs that are associated when
+
+
+you move to production.
+
+
+Yeah I mean I think the most important
+
+
+thing is just making sure that you're
+
+
+keeping track of your GPU spend like GPU
+
+
+spend is going to be the vast vast
+
+
+majority of of this entire cost here.
+
+
+Um, I think that, you know, setting
+
+
+limits to your scaling so that you're
+
+
+not going to scale past a certain number
+
+
+of replicas is important. Um, and to
+
+
+make sure that you have good alerting,
+
+
+um, actually more around traffic,
+
+
+traffic spikes, that kind of stuff,
+
+
+because that's what's going to inform
+
+
+cost. Um, so making sure that you're
+
+
+able to understand when you're scaling
+
+
+up, why, um, and that, you know, scaling
+
+
+up is the right decision in these cases.
+
+
+Um, that's going to be what's going to
+
+
+keep your cost under control.
+
+
+Absolutely. You don't want to be running
+
+
+something and then just forgetting about
+
+
+it waking up next day to see your credit
+
+
+card being charged few thousand dollars
+
+
+because something was just running and
+
+
+you never paid attention to it. Uh and I
+
+
+think you know one of one of the ways of
+
+
+uh you know doing that is also uh
+
+
+sharing resources uh and I think it's
+
+
+it's uh it's inevitable to to do that
+
+
+with the current you know cloudnative
+
+
+landscape uh that we have. So uh this
+
+
+one's again for both of you uh Philip
+
+
+and Aman. What are uh various techniques
+
+
+that you see where we can uh you know
+
+
+implement resource sharing and improve
+
+
+the performance. Uh Philip would you
+
+
+like to go first? Sure. So you know
+
+
+obviously if you're using a shared
+
+
+inference endpoint that you're not
+
+
+running yourself then resource sharing
+
+
+is very easy. Everything's multi-tenant
+
+
+out of the box and you don't really have
+
+
+to worry about this once you move to
+
+
+dedicated deployments and you're
+
+
+building this infrastructure yourself.
+
+
+Um, one thing that's really critical is
+
+
+being able to scale down to zero. So, if
+
+
+you're not sending traffic to a model,
+
+
+there's no GPU running, you're not
+
+
+spending any money. Um, scaling to zero
+
+
+is it's a bit of a tricky challenge
+
+
+because, you know, you have zero is kind
+
+
+of like an edge case in in the number of
+
+
+resources to have in your system. And
+
+
+another main challenge in scale to zero
+
+
+is what happens afterward. What happens
+
+
+when you get a request? How do you encue
+
+
+that request in your system? and then
+
+
+most importantly have a really fast cold
+
+
+start where you're able to go get a GPU
+
+
+on an sort of ondemand basis. You're
+
+
+able to load your container and your
+
+
+model weights into that GPU, spin it up,
+
+
+spin up the model server, get that
+
+
+started, take that request out of the
+
+
+queue, handle it, and send it back to
+
+
+the customer. Um, this can this can be a
+
+
+really slow process actually. you know,
+
+
+we're talking about minutes or or even
+
+
+hours if you don't have an optimized
+
+
+system here of just like waiting for a
+
+
+GPU on whatever cloud provider and then
+
+
+loading, you know, gigabytes or hundreds
+
+
+of gigabytes of model weights on. Uh,
+
+
+but with the right optimizations with
+
+
+making sure that you have a, you know,
+
+
+warm pool of GPUs to pull from, making
+
+
+sure that you have your, you know,
+
+
+weights and your containers cached very,
+
+
+very close to these GPUs. um you can
+
+
+actually reduce these substantially. So
+
+
+for example, we've seen cold start times
+
+
+of like 2 minutes um for DeepSeek R1
+
+
+which is a 671 billion parameter model
+
+
+which means 671 GB of weights alone are
+
+
+getting streamed in that time. Um so
+
+
+there is a lot that you can do on the
+
+
+infrastructure side to make these cold
+
+
+starts very very fast.
+
+
+Interesting. I think you simplified the
+
+
+entire process very much. Uh I'm sure
+
+
+there are a lot more moving parts uh you
+
+
+know to to to ensuring the cold starts
+
+
+are reduced as much as possible. Uh
+
+
+Ammon anything from your end on this?
+
+
+I think Philip pretty much covered it. I
+
+
+think I only covered the last point like
+
+
+we have already seen this in the systems
+
+
+like API gateway or if you have worked
+
+
+with like data lakes warehouse you
+
+
+always get what you pay for and where uh
+
+
+so there is a prioritization mechanism
+
+
+and similar principles apply to this.
+
+
+You might have seen like if you're using
+
+
+a free version your request will be like
+
+
+we can only do 30 requests and then you
+
+
+will be shipped to a lower model. So
+
+
+similarly understand what kind of
+
+
+workloads you are serving to what kind
+
+
+of customers you are serving to and
+
+
+based on that do an intelligent taring.
+
+
+You don't have to like put everything
+
+
+for everyone. Uh so and understand what
+
+
+layer you are at and if you can add
+
+
+those API gateway layers or like request
+
+
+routing layers where you can just
+
+
+understand is it a priority request is
+
+
+it a delayed request that can happen. So
+
+
+that kind of routing can help you really
+
+
+help you handle your resources well.
+
+
+interesting and I think one of our
+
+
+viewer sent in a question just at the uh
+
+
+you know right time when we were talking
+
+
+about resource sharing and I think uh
+
+
+it's a it's a fundamental question but
+
+
+then it's a very practical question and
+
+
+uh you know it's about so so the
+
+
+person's asking would it not be
+
+
+difficult to monitor the resources when
+
+
+they are shared across uh different
+
+
+models so how do you actually uh track
+
+
+your resources when they are across uh
+
+
+different uh different servers
+
+
+But when you're sharing it across
+
+
+models,
+
+
+I I I think Aman should take this one. I
+
+
+honestly have no idea because B 10
+
+
+handles this for me.
+
+
+Yeah. So again, uh like I said, same
+
+
+fundamentals apply here. Uh because when
+
+
+you run like a node uh still that node
+
+
+if you're running 10 containers on it,
+
+
+those 10 containers are literally
+
+
+sharing those uh uh node. So you have to
+
+
+understand the system in the same
+
+
+analogy that if you're running a GPU
+
+
+server that's a server literally it's
+
+
+not like a literally an AI enabled thing
+
+
+it's a GPU server at the end right so if
+
+
+you're putting 10 processes on top of it
+
+
+and those are utilizing your GPU then
+
+
+you have to track those process usage
+
+
+and how are they being utilized and then
+
+
+you come to a conclusion that really is
+
+
+the wise sharing that is happening that
+
+
+is what you were anticipating that these
+
+
+10 process are same or five processes
+
+
+are literally something that are on free
+
+
+tier that can delayed or can be shifted
+
+
+to lower instances. Then that's kind of
+
+
+routing that comes out of your
+
+
+observability stack. So treat it same
+
+
+because it's just the same systems. It's
+
+
+just the new softwares and new product
+
+
+that are coming on top of it.
+
+
+Thanks Aan. I think uh that answers your
+
+
+question when it comes to monitoring the
+
+
+resources. uh and yeah I think I think
+
+
+we have pretty much uh touched upon the
+
+
+surface scratched the surface of uh you
+
+
+know uh cost when it comes to
+
+
+infrastructure to model performance and
+
+
+eventually on the operational efficiency
+
+
+and I think it's the right time to uh
+
+
+you know hand over to Phillip to talk
+
+
+more about what basin is uh I know they
+
+
+are doing a lot of interesting things
+
+
+around inferences and improving
+
+
+developer workflows but then I will hand
+
+
+it over to Philip to tell us more on
+
+
+what uh what the offering is and how it
+
+
+can help us on the uh scaling side of
+
+
+things.
+
+
+Thank you. So, B 10 is as I uh you know
+
+
+said in my introduction, it's a model
+
+
+influence platform for serving mission
+
+
+critical workloads in production and our
+
+
+customers are top AI native companies
+
+
+who are building you know tools and
+
+
+applications powered by generative
+
+
+models.
+
+
+when we look at you know AI applications
+
+
+oh oop sorry I got one slide ahead of
+
+
+myself uh when we look at like the the
+
+
+path to production um generally you
+
+
+start in a sort of alpha with this
+
+
+shared endpoint multi-tenant system that
+
+
+we've been talking about where you're
+
+
+just making individual requests to the
+
+
+models as you try to build out your
+
+
+service but eventually it's time to
+
+
+launch that service um and in that case
+
+
+you start thinking about scale how do I
+
+
+first get to a dedicated node where I'm
+
+
+able to you know serve this model
+
+
+without throughput limitations. Then as
+
+
+I get more users, how do I scale that
+
+
+node up so that I can have multiple
+
+
+nodes and and fluctuate based on
+
+
+traffic. You also might want to scale
+
+
+that across multiple regions so that
+
+
+your models are close to your user for
+
+
+low latency and you're able to access
+
+
+more resources and then eventually
+
+
+across multiple clouds so that you can
+
+
+do a bunch of these cost optimization
+
+
+strategies that we've talked about
+
+
+today. Problem is this is really
+
+
+complicated. So you know as your users
+
+
+are coming into your application you've
+
+
+got a model performance problem in terms
+
+
+of making sure that you have all of
+
+
+these different optimizations
+
+
+implemented. You have infrastructure
+
+
+problems around routing networking
+
+
+multicluster management as well as
+
+
+hardware issues like how are you able to
+
+
+select and provision the hardware you
+
+
+need? How are you able to get it on
+
+
+demand? Um and all of this stuff relates
+
+
+to each other. So it's not just a series
+
+
+of linear issues to solve. every single
+
+
+issue affects the other issue. For
+
+
+example, which hardware you use affects,
+
+
+you know, which model performance
+
+
+optimizations are available to you as
+
+
+well as which clouds and which regions
+
+
+you're able to
+
+
+access. And inference is at the root of
+
+
+every single trade-off you're going to
+
+
+make during this process because you're
+
+
+trading off between performance,
+
+
+quality, and cost in every single
+
+
+decision you're making here. What B 10
+
+
+does is it provides the model
+
+
+performance tooling, the scalable
+
+
+infrastructure, the embedded AI
+
+
+engineering expertise and the
+
+
+cloudnative infrastructure to help you
+
+
+scale throughout this entire journey
+
+
+going from that single node to the
+
+
+multi-node, the multiple regions, the
+
+
+multiple clouds as you serve your
+
+
+compound AI workloads in
+
+
+production. So what does that actually
+
+
+mean? Like what does performance grade
+
+
+inference infrastructure look like?
+
+
+Well, you know, you have to have
+
+
+excellent performance uh with support
+
+
+for every framework. You know, Tensor RT
+
+
+LLM is super great, but maybe doesn't
+
+
+support every model. You might also want
+
+
+something like SGLANG or VLM for certain
+
+
+models. You need the scalability to both
+
+
+autoscale from zero with fast cold
+
+
+starts like we talked about as well as
+
+
+scaling up to handle, you know, as many
+
+
+as billions of requests. you need
+
+
+massive uptime across every cloud and
+
+
+every region with minimal lock in so
+
+
+that you can add, you know, whatever
+
+
+complexity you need on your end. And
+
+
+then of course cost efficiency so that
+
+
+you're able to, you know, optimize for
+
+
+cost while still making sure you hit
+
+
+your latency SLAs's um and maximize the
+
+
+utilization of GPUs as well as spend
+
+
+down any cloud commits. That's what B 10
+
+
+does. So we're powering leading AI
+
+
+companies um who are building some of
+
+
+the best you know tools today uh for
+
+
+using AI models in both a B2B and B TOC
+
+
+context and our actual platform um is
+
+
+all about developer experience. So,
+
+
+we're trying to make it easy to
+
+
+optimize, package, and deploy models,
+
+
+build compound AI systems out of
+
+
+multiple models, run those systems
+
+
+anywhere, and do that, you know, with
+
+
+with a pretty fun workflow that, you
+
+
+know, doesn't really that that that
+
+
+doesn't stand in your way of of getting
+
+
+to production and in fact helps you get
+
+
+to market sooner. So, what does that
+
+
+actually look like? You can come on to
+
+
+base 10 and you can come into our model
+
+
+library and grab a prepackaged model or
+
+
+you can take any open source fine-tuned
+
+
+and custom model and package it yourself
+
+
+using trust which is our open source
+
+
+model packaging framework. So once you
+
+
+select a model you deploy it into
+
+
+production. What you get is this
+
+
+dashboard um that shows all of your
+
+
+different model deployments. You know
+
+
+you can you can say for example name
+
+
+your deployments to keep track of them.
+
+
+I could name this one Fred. Um, and you
+
+
+have, you know, information on your
+
+
+instance types. You can select different
+
+
+CPU and GPU instances, H100s, H100 MIGs,
+
+
+all that kind of stuff. You also get
+
+
+some um metrics that's showing your
+
+
+inference volume calling it coming in
+
+
+your response times, that kind of stuff.
+
+
+As well as, you know, nice nice to haves
+
+
+like activity logs and logs for your
+
+
+actual inference requests as they come
+
+
+in. Now let me show you the autoscaling
+
+
+component really quickly because that's
+
+
+interesting. So on autoscaling and this
+
+
+is on a sort of like per deployment
+
+
+basis. You can configure it. Um you can
+
+
+scale down to zero. So if you're getting
+
+
+no traffic, your model shuts down and
+
+
+you're not serving you're not spending
+
+
+any money and you can scale all the way
+
+
+up to a you know configurable number of
+
+
+um of maximum GPUs. Within autoscaling
+
+
+there's a few important settings to pay
+
+
+attention to. So the first one is that
+
+
+autoscaling window. That's the time
+
+
+frame of traffic considered for scaling
+
+
+decisions. So say I'm going to look at
+
+
+my average volume over the last 20
+
+
+seconds and use that to determine if I
+
+
+need more or fewer GPUs. On top of that,
+
+
+there's also a scale down delay. And
+
+
+that's important because you know even
+
+
+with fast cold starts, you don't
+
+
+necessarily want to scale down too
+
+
+aggressively. If you were to, for
+
+
+example, have a traffic spike in a sort
+
+
+of biodal pattern where there's a huge
+
+
+spike, it backs off for a couple minutes
+
+
+and then spikes again, you might want to
+
+
+just keep the service up through that so
+
+
+you can handle that second spike. That's
+
+
+what that scale down delay lets you do
+
+
+and you can scale that up to as much as
+
+
+an hour. Um, there's also the
+
+
+concurrency target. That's the number of
+
+
+requests per replica before scaling up.
+
+
+That's an incredibly important number.
+
+
+That's going to be based on the batch
+
+
+size that your model server is able to
+
+
+handle with the performance that you're
+
+
+looking for. So the higher that
+
+
+concurrency target, the fewer replicas
+
+
+you're going to need, but the higher the
+
+
+latency is going to be for each end
+
+
+user. So finding that right balance
+
+
+there is an important model performance
+
+
+question. And within your B 10
+
+
+dashboard, you can actually see how as
+
+
+that inference volume and response time
+
+
+scales up and down. Um your replicas are
+
+
+able to scale up and down in
+
+
+conjunction. So we see the traffic
+
+
+spiking here. The replicas come up with
+
+
+some replicas starting up to handle it.
+
+
+And then as that you know scales back
+
+
+down it comes down. So we're fluctuating
+
+
+between you know in this case to handle
+
+
+this traffic like 23 and 28 replicas
+
+
+over the last hour. Um and you can see
+
+
+as you know replicas scale down and back
+
+
+up um in response to traffic how we have
+
+
+the cold starts on this yellow line here
+
+
+and the active replica counts on this
+
+
+blue line. Traffic based autoscaling is
+
+
+definitely the way to do it. Um there is
+
+
+also an approach around you know doing a
+
+
+autoscaling more based on GPU resource
+
+
+utilization. Um but we what we found is
+
+
+that trafficbased is going to give you
+
+
+you know better more predictable um
+
+
+scaling and is going to prevent a whole
+
+
+ton of issues that came out of
+
+
+resource-based
+
+
+scaling. So yeah that's a you know super
+
+
+quick lightning round overview of B 10.
+
+
+Um, you can take any model that can be
+
+
+an open- source model, it can be a
+
+
+custom model or you could say take one
+
+
+of these open source models and
+
+
+fine-tune it and deploy that as well.
+
+
+Optimize it with our engine builder uh
+
+
+for maximum performance and deploy it
+
+
+into the system and scale it in
+
+
+production.
+
+
+Wow, that was pretty interesting. Uh
+
+
+thanks thanks a lot Philillip for that
+
+
+uh quick yet insightful demo. I think
+
+
+you know the the way you explained the
+
+
+autoscaling features that ben provides
+
+
+especially dealing with the scale up and
+
+
+the scale down window which which I feel
+
+
+is uh pretty simple to look at but I'm
+
+
+sure you know there lot of brainstorming
+
+
+and decisions that go behind in deciding
+
+
+and arriving at that particular number.
+
+
+Uh and I think for me personally, you
+
+
+know, I'm I'm I'm very much uh uh you
+
+
+know, new to this. And I think the way
+
+
+you uh spoke about, you know, focusing
+
+
+more on traffic like like uh you know,
+
+
+like you mentioned based on your
+
+
+analysis of how how users are using your
+
+
+services that you know scaling based on
+
+
+request uh traffic is is is a better
+
+
+option rather than GPU resources alone.
+
+
+you know I think that gives you a larger
+
+
+uh picture and I uh completely
+
+
+completely you know echo that. So uh
+
+
+thanks a lot for that uh you know
+
+
+insightful demo and uh yeah I think uh
+
+
+anyone who's seeing this if you want to
+
+
+try uh you can head over to
+
+
+ben.co and you know you can try uh you
+
+
+know pick up the models from the model
+
+
+library and then see what it is for your
+
+
+use case. Uh and uh I'm assuming the bas
+
+
+team will be available at CubeCon uh in
+
+
+London next week. Am I correct? Yes, we
+
+
+will have a booth at CubeCon London. I'm
+
+
+not going to be there personally, but
+
+
+we're going to have a lot of great
+
+
+people out there to help out and you
+
+
+know tell people more about B10.
+
+
+Interesting. Yeah. So, if you are
+
+
+attending CubeCon in London next week,
+
+
+uh do visit uh B and booth. uh praise uh
+
+
+praise Phillip for the wonderful uh demo
+
+
+that he has given us uh and and and do
+
+
+try to you know learn more about the
+
+
+exciting offerings that they have. Now
+
+
+uh before you know while I was going
+
+
+through the questions you know before I
+
+
+take on uh any other questions there's
+
+
+one there's one particular thing which I
+
+
+want to ask uh both of you uh before we
+
+
+actually wrap up and it's more about on
+
+
+the emerging trends. So uh what are
+
+
+these what are some trends or
+
+
+technologies you think will
+
+
+significantly impact AI inference
+
+
+scaling in the next few years? Uh so
+
+
+Philip you would like to go first with
+
+
+you. Sure. So I think like a few big
+
+
+ones. Number one is open source. Um,
+
+
+we've seen with Deep Seat coming out and
+
+
+with the rapid release of subsequent,
+
+
+you know, reasoning models like Quen's
+
+
+model, um, we're seeing that, you know,
+
+
+the the gap is not only closing, it's
+
+
+really closed. The new DeepSeek V3, for
+
+
+example, is one of the best
+
+
+non-reasoning models out there that came
+
+
+out a couple days ago. So, you now have
+
+
+a lot more choices for what you what you
+
+
+use for your models in production. Now
+
+
+from there like the other trend that is
+
+
+just as important here is these open
+
+
+models are not only coming out and
+
+
+getting better but they're getting
+
+
+smaller for the same performance. So if
+
+
+you were to take this is this is kind of
+
+
+back to what I was talking about at the
+
+
+beginning where you know if you're
+
+
+building a prototype you should just use
+
+
+the best model. And one of the great
+
+
+things is that if you just use the best
+
+
+model and you wait about 6 months or 12
+
+
+months, there's going to be some open-
+
+
+source model that's just as good that
+
+
+comes out um and is going to be not only
+
+
+just as good, you know, the just as good
+
+
+one might come out the same month, but
+
+
+it's going to be just as good and a
+
+
+tenth the size um cutting your cost
+
+
+substantially. So for the same level of
+
+
+intelligence, costs just plummet on, you
+
+
+know, the timeline of of months or, you
+
+
+know, even a couple years. And then the
+
+
+the final thing you know around this uh
+
+
+that's kind of a counteracting effect is
+
+
+you know we are seeing more reasoning
+
+
+models and more use cases around
+
+
+reasoning models. Reasoning models
+
+
+that's inference time compute scaling.
+
+
+So now inference becomes even more
+
+
+important than training in the amount of
+
+
+quality output you're able to get. Just
+
+
+running the model for longer is getting
+
+
+you higher quality output. Because of
+
+
+that, you know, everything we've talked
+
+
+about today around cost optimization
+
+
+from a performance angle matters even
+
+
+more. And as we see new hardware come
+
+
+out like the Blackwell uh GPUs, the
+
+
+B200s, the GB200's, being able to
+
+
+leverage, you know, these larger, higher
+
+
+capacity, higher throughput, more
+
+
+efficient systems is going to be massive
+
+
+for building realtime user experiences
+
+
+on top of these reasoning models.
+
+
+Interesting. Ammon, what are your
+
+
+thoughts on this? What are some trends
+
+
+that you feel will change the way? Yeah,
+
+
+I think few of the things that we spoke
+
+
+about like multi cloud hybrid approach
+
+
+and all. So, there are trends like how
+
+
+do you take that cost arbitrary uh
+
+
+benefits, right? How do you do that
+
+
+smarter routing? Uh you can still use
+
+
+all three different cloud providers or
+
+
+major providers and uh how do you do
+
+
+that smarter routing context routing
+
+
+that probably this is best to be uh
+
+
+routed to this one and this is handled
+
+
+well there. So that saves money to the
+
+
+business. Then it comes to uh like we
+
+
+have spoken about it in the earlier
+
+
+webinars as well like inference
+
+
+parallelism is a really great option to
+
+
+save or optimize your resources. Uh
+
+
+Philip showed about the scaling part. uh
+
+
+so that is going to become more and more
+
+
+uh more interesting signals will become
+
+
+uh I mean as we progress into newer
+
+
+hardware and newer uh deployment
+
+
+strategies there will be more signals
+
+
+that can help you do the autoscaling and
+
+
+scale downs
+
+
+because currently we are doing like more
+
+
+on the performance of the models but it
+
+
+could be more on the infrastructure side
+
+
+you can mix mix those signals like we
+
+
+have seen in the entire container space
+
+
+like we started with normal metrics then
+
+
+came custom metrics and then came like
+
+
+you can literally pick up metrics from
+
+
+anywhere in the world So similar things
+
+
+are going to happen in this space as
+
+
+well. Uh use more signals to make more
+
+
+uh intelligent decisions.
+
+
+Interesting. And you know to to I think
+
+
+sum up what what uh you know both Ammon
+
+
+and Philip said I think uh you know one
+
+
+one leaf that I would like to take away
+
+
+from this particular discussion on
+
+
+future trends would be you know
+
+
+basically waiting because your
+
+
+computational powers are doubling. You
+
+
+know we talk about M's law but then in
+
+
+the age of AI we there's no harm calling
+
+
+it the hyper mood's law because you know
+
+
+the computation power is just increasing
+
+
+at you know logarithmic scale and
+
+
+eventually you know the the models are
+
+
+also improving their performance. So you
+
+
+are now able to uh you know achieve the
+
+
+same level of you know power uh you know
+
+
+we could do it and uh the at the same
+
+
+time you know we are getting it at
+
+
+onetenth of the cost. Uh so I think with
+
+
+that uh you know we come to the end of
+
+
+our today's webinar and uh you know I
+
+
+would like to thank Philillip uh for
+
+
+spending his time giving us that uh you
+
+
+know really interesting yet short demo
+
+
+and uh you know I'll definitely try my
+
+
+best to get him on again sometime you
+
+
+know to do something more deep dive. Uh
+
+
+so thanks a lot Philip for joining us
+
+
+today. Thank you for having me. It was
+
+
+great talking to both of you. Thanks and
+
+
+thanks a lot Ammon you know for always
+
+
+being here with us.
+
+
+uh you know it's it's it's always great
+
+
+with you around. So yeah, with that you
+
+
+know we come to the end of today's
+
+
+webinar. Uh do scan this QR code on your
+
+
+screen. Uh you know we come up with more
+
+
+interesting AI webinars in the future.
+
+
+So scan this QR code so that you are
+
+
+notified and reminded of all our future
+
+
+webinars. And once again thank you for
+
+
+uh joining us today. I hope you had a
+
+
+really insightful time. Uh it was great
+
+
+learning for me. I'm sure going to go
+
+
+back and you know watch this recording
+
+
+again and uh probably reach out to
+
+
+Philillip again to you know help me
+
+
+learn more things. Uh so thank you so
+
+
+much and have a wonderful day and
+
+
+wonderful evening from wherever you are
+
+
+joining me from. Thank you. Bye-bye.

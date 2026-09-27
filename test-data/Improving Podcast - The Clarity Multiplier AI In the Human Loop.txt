@@ -1,0 +1,3319 @@
+Welcome to the improving edge. This is
+
+
+where we talk about how AI and
+
+
+technology is showing up in actual
+
+
+organizations. What works, what doesn't
+
+
+work, what we're learning along the way.
+
+
+I'm sharing conversations with
+
+
+individuals who are doing the work,
+
+
+turning innovation into outcomes. Today
+
+
+I have with me Clauddio Lasala, uh,
+
+
+technical director with us here at
+
+
+Improving and, uh, big personality in
+
+
+our AI practice, somebody I've known for
+
+
+a number of years. So, thank you for
+
+
+being here, Claudia.
+
+
+>> It's my pleasure.
+
+
+>> Yeah. So, today we're going to talk a
+
+
+little bit about um the AI, the
+
+
+leadership skill, right, of leading AI
+
+
+and and what that looks like.
+
+
+>> Yes. So there's um a lot of people that
+
+
+talk about and use this phrase human in
+
+
+the loop and you kind of push back on
+
+
+that a little bit and have an
+
+
+interesting perspective. So tell me
+
+
+more.
+
+
+>> Yeah. So uh thanks for uh that intro. So
+
+
+yeah, the way I've been thinking of it,
+
+
+it takes me back to when I started with
+
+
+it back 35 years ago now where I didn't
+
+
+get into computers because they were
+
+
+cool. I got into computers because they
+
+
+solved a real humans problem. Like long
+
+
+story short, uh I was in Brazil at the
+
+
+time living through hyperinflation
+
+
+and people had to pay their mortgage on
+
+
+payday, right? They would like rush to
+
+
+the office where I used to work to take
+
+
+their payments towards their mortgage.
+
+
+And the problem was that they would all
+
+
+be standing in line there, so many
+
+
+people to pay their their bills that
+
+
+day. And at the time we were building
+
+
+some software that would take what the
+
+
+old uh HP12C financial calculator would
+
+
+do to do the amortization calculation
+
+
+and all that.
+
+
+>> So instead of like manually doing that
+
+
+every time well we built some software
+
+
+that would do that for us.
+
+
+>> So saving time
+
+
+>> saving time from people because people
+
+
+would do that during their lunch breaks.
+
+
+So sometimes they would like they would
+
+
+miss lunch or they would get back to
+
+
+work late. So that was the the the the
+
+
+people's need. They need to pay their
+
+
+bills on payday. And the problem was
+
+
+that well they couldn't do that
+
+
+efficiently
+
+
+>> too much to try and get into that time
+
+
+frame
+
+
+>> too much. And then it's like well that's
+
+
+what we're using computers for. That was
+
+
+the problem being solved. So fast
+
+
+forward that to nowadays that's how I've
+
+
+been approaching AI thinking about it
+
+
+from the humans perspective. Not what AI
+
+
+can do but what can it do for us humans.
+
+
+So when I hear people putting too much
+
+
+emphasis on human in the loop, human in
+
+
+the loop, I push back to say, well,
+
+
+let's have AI in the human loop.
+
+
+>> Okay,
+
+
+>> it's a different perspective because as
+
+
+humans, we have our own loop
+
+
+>> and then when we decide, okay, where
+
+
+might AI help us? Well, over here,
+
+
+great. When it goes into its loop, then
+
+
+it feeds back into our loop. And I think
+
+
+that too many of us, they just stay
+
+
+stuck in that human in the loop thing
+
+
+and they forgot about the the bigger
+
+
+>> uh perspect.
+
+
+>> Well, and I love that perspective of
+
+
+pulling us back to the the human as the
+
+
+center of this, right? People.
+
+
+>> I know when we talk to executives at
+
+
+companies so often they say, you know,
+
+
+what's your most valuable asset? And
+
+
+they always say, oh, it's our people.
+
+
+Oh, it's our people. Right? Nobody,
+
+
+well, I shouldn't say nobody. Rarely do
+
+
+they say it's really our models. Those
+
+
+are our most valuable asset. Now,
+
+
+Anthropic and some of these other
+
+
+companies that might be the case, right?
+
+
+>> But I love that reframe to pull us back
+
+
+to people as the the source and the
+
+
+center of what it is we're trying to do
+
+
+from a problem solving perspective.
+
+
+>> Correct.
+
+
+>> And the AI being assistive in that. I
+
+
+know that I was just talking with one of
+
+
+our customers yesterday about that
+
+
+similar reframing where people who take
+
+
+identity from the tasks that they do.
+
+
+>> Yes.
+
+
+>> And not from the problems that they
+
+
+solve really struggle with AI
+
+
+>> because that feels like it's doing the
+
+
+thing that I do and and maybe robbing me
+
+
+of some identity where if we can reframe
+
+
+for our people to say, "No, you're a
+
+
+great problem solver. you're a great
+
+
+solution deliverer.
+
+
+>> It doesn't matter who does the task. It
+
+
+doesn't matter if I'm doing it and
+
+
+actually I become a 10x problem solver.
+
+
+>> Yes. I love that. And that's another
+
+
+thing that I've been kind of like
+
+
+pushing back on where if we focus too
+
+
+much on software development when people
+
+
+say, "Oh, you're a software developer."
+
+
+I said, "No, I'm not. I'm a solution
+
+
+developer." Right?
+
+
+>> The solutions that I develop, they may
+
+
+include the software part. They may not.
+
+
+first I need to understand what is the
+
+
+problem that I'm actually here to solve
+
+
+right so I love that framing
+
+
+>> yeah and so we know that that tends to
+
+
+be a big part of the use case right is
+
+
+developers right there's it's where we
+
+
+started it's where some of the companies
+
+
+that's almost their entire focus I me
+
+
+mentioned anthropic that's the segment
+
+
+of the market they've gone after
+
+
+>> right
+
+
+>> but really AI can help us across a
+
+
+multitude of tasks and a multitude of
+
+
+things and that kind of Um,
+
+
+brings me to like where are you seeing
+
+
+it show up in some of these other things
+
+
+like coaching and and the the more
+
+
+intrapersonal side of things.
+
+
+>> Oh, that's great. So, as I take that
+
+
+step back to think, okay, what is the
+
+
+human loop that I live in that I could
+
+
+leverage AI somehow and where would that
+
+
+be? Being u in a team that works with
+
+
+the scrum framework, the scrum is a
+
+
+human loop.
+
+
+>> Okay. Right.
+
+
+>> Tell me more. Yeah. So when we see the
+
+
+the typical like from the scrum.org that
+
+
+chart that graph that shows the sprint
+
+
+planning and then you get into the loop
+
+
+and you have your daily scrum and then
+
+
+you have your sprint review at the end
+
+
+and your sprint retro and then you start
+
+
+over. That's a human loop that we have
+
+
+very specific to solve our bigger
+
+
+problems.
+
+
+>> Right.
+
+
+>> Right. So when I first started like
+
+
+approaching AI not from the standpoint
+
+
+of like oh I need to generate more code
+
+
+faster like no I've done code generation
+
+
+in the past
+
+
+>> right
+
+
+>> that's been around for a long time
+
+
+>> right so I was like what else can I do
+
+
+and then I thought well right now where
+
+
+do we spend a lot of time well we spend
+
+
+a lot of time in conversations trying to
+
+
+extract the the problem that we are
+
+
+trying to solve here not to get
+
+
+requirements but to understand the
+
+
+problems we're trying to solve.
+
+
+and then write good stories that we can
+
+
+serve the team to say okay these are the
+
+
+stories that we're trying to tell once
+
+
+we're done with the implementation and
+
+
+that's where I thought well yeah AI can
+
+
+do a great job at that as long as we
+
+
+have good people in the room focused on
+
+
+the conversations right
+
+
+>> facilitating the conversations grabbing
+
+
+that content right the problem domain
+
+
+and then we have AI and say okay this is
+
+
+everything we have about this help us
+
+
+cut some stories Yeah,
+
+
+>> with proper guidance, right? And the way
+
+
+to lead into it the same way that I've
+
+
+been coaching teams over the years.
+
+
+Speaking of like writing user stories,
+
+
+we can get to my point about stories as
+
+
+well. I don't call them just user
+
+
+stories anymore, but that's what most
+
+
+people call them. People would think
+
+
+that, oh, user stories, that's the uh
+
+
+accountability, the responsibility of
+
+
+the product owner or the business
+
+
+analyst,
+
+
+>> right? That's that's their job.
+
+
+>> Yeah. And I've been coaching teams not
+
+
+to think about that. It's like it's
+
+
+everybody's job. Mhm.
+
+
+>> Right. Everybody on the team should
+
+
+collaborate on the what is the story
+
+
+that we are telling here, not the
+
+
+requirements. People don't go around
+
+
+telling others, oh, you got to check
+
+
+this out. I have to tell you some
+
+
+requirements.
+
+
+>> Yes.
+
+
+>> No. They say I got to tell you a story.
+
+
+What's that story?
+
+
+>> Yeah.
+
+
+>> Right. So, I've been coaching people on
+
+
+doing that. And because I had been
+
+
+practicing that skill with people, when
+
+
+it comes to AI, I don't just tell AI,
+
+
+here's some like transcript or some
+
+
+problem domain. Cut me some stories. No,
+
+
+this is how I think through decomposing
+
+
+that problem. This is how I identify the
+
+
+value of that story and to whom it
+
+
+matters. So when I tell you to write
+
+
+stories, you have to like think the way
+
+
+I do.
+
+
+>> Yeah.
+
+
+>> And that's where I get way better
+
+
+results. So that leadership skill, that
+
+
+facilitation skill, the same way we work
+
+
+with people, we can practice that on AI
+
+
+the same manner. And I like the way that
+
+
+you frame that because so often um
+
+
+whether it's software developers or
+
+
+other aspects of the business, we're
+
+
+talking about requirements. What are the
+
+
+requirements for this project? What are
+
+
+the you know the stories that go along?
+
+
+But it's really not about that. It's
+
+
+more about what is the need that you
+
+
+have and can you can you explain that
+
+
+need? Can you describe that need for me?
+
+
+and ultimately what is the value that
+
+
+you would see in a solution to that.
+
+
+>> And so you're using the the the AI to
+
+
+help say let's get some really good
+
+
+definition around this. You know, I
+
+
+think that that's an important point
+
+
+because as humans we there's so many
+
+
+things in our communication that are
+
+
+unclear. You know, uh the joke about
+
+
+England and the US are are two countries
+
+
+separated by a language, right? We we
+
+
+have the same language, English, and
+
+
+even, you know, you and I sitting in the
+
+
+room can use the same words and mean
+
+
+different things. And so, it's a way for
+
+
+us to to pull clarity out of the
+
+
+conversation to make sure are we are we
+
+
+doing the right things in order to be
+
+
+successful. Are we building the right
+
+
+things? Whether that's a an Excel sheet
+
+
+that we need for analysis or a codebase
+
+
+that we need for uh you know, a web
+
+
+application.
+
+
+>> Yeah. But it it exactly and it does boil
+
+
+down to understand like we all are or
+
+
+most of us are really uh terrible at
+
+
+explaining the problem that we have. We
+
+
+are good at telling people what we want
+
+
+but not why we need it or even if we
+
+
+need. So part of uh like a framework
+
+
+that I've been playing around in my mind
+
+
+is the need problem solution.
+
+
+>> Okay?
+
+
+>> Right? Don't tell me like what you want,
+
+
+tell me what you need. And most of us,
+
+
+we don't we are not that great at
+
+
+articulating our needs.
+
+
+>> Yes.
+
+
+>> Cuz like so let's stop right there.
+
+
+First we need to understand what the
+
+
+need is and then we need to understand
+
+
+why is it not being fulfilled,
+
+
+>> right?
+
+
+>> And then okay, that is a problem or is
+
+
+it still a a problem if you look at that
+
+
+need from another perspective like oh I
+
+
+hadn't thought about it that way. So no,
+
+
+it's not a problem actually at all. So
+
+
+there's no nothing to be solved there.
+
+
+But let's get to that need which then
+
+
+gets us to the why is that a need for
+
+
+you and then we step into the territory
+
+
+of like our needs come from our values
+
+
+from our identity.
+
+
+>> Yes.
+
+
+>> So we need to go down to that. So the
+
+
+way that I have the conversation with
+
+
+people with companies and with AI is to
+
+
+get to that like what is the need what
+
+
+is the aspiration what is your company
+
+
+you know company's ideas and values
+
+
+because when we talk about a story
+
+
+should convey business value is one of
+
+
+the five uh dimensions of value what do
+
+
+you consider a value because something
+
+
+that's a value for you may not be a
+
+
+value for me so we need to understand
+
+
+what that is
+
+
+>> and if we tell AI that that's the way we
+
+
+are thinking it will help us
+
+
+tremendously.
+
+
+>> So, I really like what you did in
+
+
+talking about that, you know, digging
+
+
+into the problem because I think that uh
+
+
+a lot of times we don't spend enough
+
+
+time figuring out what is the problem.
+
+
+We've reacted to something, told oursel
+
+
+a story, arrived at a solution, and
+
+
+especially as consultants, right? We
+
+
+show up and they ask us, "Hey, can you
+
+
+build this thing?" It was like, "Well,
+
+
+okay, why?"
+
+
+>> Right? And so like doing the five W's or
+
+
+whatever the approach is that you use to
+
+
+really dig down into what is that
+
+
+underlying need that is driving it
+
+
+rather than jumping all the way to the
+
+
+end like let's go back to the beginning
+
+
+and understand those needs and
+
+
+understand um where those come from and
+
+
+and I know some people are better about
+
+
+talking about their needs. Uh
+
+
+>> I know that um there's often times the
+
+
+joke about men versus women and you know
+
+
+men men we struggle sometimes to explain
+
+
+ourselves or maybe our our needs and our
+
+
+our feelings right
+
+
+>> but it is important to say let's dig
+
+
+into that underlying why
+
+
+>> so that we can approach the problem
+
+
+correctly if it if it is a problem. If
+
+
+it is a problem, that's the other thing,
+
+
+right? If we get to the need, it's like,
+
+
+okay, now that you have clarity, clarity
+
+
+of intent, human intent on that need,
+
+
+>> is that still a problem? Like, well,
+
+
+actually, no, because I can do this.
+
+
+Yeah, never mind.
+
+
+>> And we may have run past that in our
+
+
+efforts to go from, you know, ouch, uh,
+
+
+to, oh, solution, and you didn't
+
+
+actually think through that process. So,
+
+
+helping through that. So not everybody's
+
+
+been trained to lead and and now we're
+
+
+talking about leading you know not just
+
+
+people but AI right and and so leading
+
+
+this more mechanistic thing where
+
+
+oftentimes when you read a room right if
+
+
+if I say something to you I can see body
+
+
+language right they say a significant
+
+
+amount of communication is not the
+
+
+verbal part it's you know it's the
+
+
+nonver verbal parts
+
+
+>> and we don't have that necessarily with
+
+
+AI so what are some of the ways that
+
+
+maybe we're we're training people
+
+
+differently to be able to lead AI.
+
+
+>> I would even think of going the other
+
+
+way around where uh I've worked with so
+
+
+many people who they wanted to get into
+
+
+a leadership position, right? But if
+
+
+they haven't had experience, you are not
+
+
+going to like put together a team and
+
+
+say, "Okay, here go try leading this
+
+
+team
+
+
+>> practice on these people."
+
+
+>> Right? That does not happen
+
+
+>> but it does with AI
+
+
+>> right? You can think if you think of AI
+
+
+as your little agents as people that you
+
+
+are coordinating,
+
+
+it's a way to practice leadership so
+
+
+that by the time you actually show up
+
+
+with people, you've already practiced
+
+
+the muscles. Yes. AI does not have
+
+
+emotions or any of that. But it's not
+
+
+about that. It's about the karate kid,
+
+
+you know, just getting those
+
+
+>> wax on, wax off, do the things.
+
+
+>> Exactly. Because where a lot of uh times
+
+
+we fail is when we cannot be clear like
+
+
+leaders may fail if they are not clear
+
+
+with their vision with their intents to
+
+
+the team that they are leading and it's
+
+
+where usually AI fails right when we
+
+
+fail at communicating and we just say
+
+
+here do this why because I told you so
+
+
+>> that's it doesn't work
+
+
+>> it doesn't work right so we need to
+
+
+learn okay how do we decompose the
+
+
+problem how do we actually clearly
+
+
+articulate the vision the intents that
+
+
+we have and then we ask AI for help
+
+
+because maybe we don't know exactly how
+
+
+to break down that problem. So learning
+
+
+to articulate as much as we can of that
+
+
+vision that problem state statement that
+
+
+we might have into AI and say here's all
+
+
+I have this is what I know this is what
+
+
+I can do how can you help me with that
+
+
+collaborate with the the AI it's the
+
+
+same skill we should do with humans
+
+
+>> yes
+
+
+>> anyway so if we do that with AI and we
+
+
+say okay now that you help me identify
+
+
+the problem domain let's decompose that
+
+
+problem into smaller problems to be more
+
+
+effective again it's the same thing that
+
+
+we have to do with people with our
+
+
+teammates.
+
+
+>> Yeah. I've said before that, you know,
+
+
+utilizing a model when we use AI, we're
+
+
+doing delegation.
+
+
+>> Yes.
+
+
+>> And people generally are bad at
+
+
+delegation.
+
+
+>> Uh we give incomplete instructions. We
+
+
+we we maybe have a bunch of assumptions
+
+
+that that are un um unconscious
+
+
+assumptions or unintended assumptions
+
+
+and we tell them you know go do a thing
+
+
+like you said and then what comes back
+
+
+you're like that wasn't even close
+
+
+>> and I know for me one of the things that
+
+
+I found is like you were saying give it
+
+
+what I have what like is in in my brain
+
+
+>> and then the tail end of my prompt will
+
+
+be if I'm doing an interactive prompt is
+
+
+ask me qu clarifying questions, you
+
+
+know, uh help me to think through this
+
+
+further, but I also
+
+
+>> the the last part of the sentence is
+
+
+don't drag this out longer than we need
+
+
+to, right?
+
+
+>> Because it can ask you way more
+
+
+questions than we maybe need to and and
+
+
+maybe overengineer,
+
+
+>> but the solution, the ability to say,
+
+
+what are some of those boundary
+
+
+conditions or or some of those
+
+
+assumptions that I've put into what it
+
+
+is I've said? help me to elicitate that
+
+
+and help me to understand where those
+
+
+might be is really a powerful way to to
+
+
+make myself better, right? As a as a
+
+
+delegator.
+
+
+>> Yeah, absolutely. And it's uh even like
+
+
+from from a leader leadership
+
+
+perspective, like the way I've been
+
+
+coaching teammates over the years is
+
+
+like, okay, let me try to make my vision
+
+
+as clear as possible. Let me enable them
+
+
+with what they need to do the work. Let
+
+
+me ask them to plan out how they plan on
+
+
+achieving that. Let them roll with it. I
+
+
+will observe what they are doing, right?
+
+
+See where they stumble, where they go.
+
+
+Like I can see that they're spinning
+
+
+their wheels. Like let them do the
+
+
+thing, right?
+
+
+>> See if they will get there. If they do,
+
+
+how did you get there to learn how they
+
+
+are thinking, how they are problem
+
+
+solving. If you need to fill in some
+
+
+gap, then I know what to do. Then you
+
+
+tell them,
+
+
+>> you explain it to them and you have them
+
+
+like write down. like the direction that
+
+
+I gave you. Did you understand? Like say
+
+
+it back to me. Okay, that's great. Write
+
+
+it down in your own words. The way you
+
+
+think about this. So next time you know
+
+
+>> so that skill that I've been practicing
+
+
+on people for all these decades, I'm
+
+
+doing the same thing with AI, right? I
+
+
+tell it to do something. I watch it
+
+
+over. I see, oh, you're trying to look
+
+
+for this information over here and this
+
+
+thing over there and you're trying to
+
+
+solve. It's like, uh, okay. Why did you
+
+
+do that? I ask to see which path
+
+
+pathways it went through and then I give
+
+
+the direction and I tell it again I
+
+
+don't like write down the instructions
+
+
+for it. I say okay based on this based
+
+
+on what I told you how I've revealed the
+
+
+work
+
+
+>> rewrite your instructions let me see how
+
+
+you do it because it will write it
+
+
+optimized for an AI agent.
+
+
+>> Yes.
+
+
+>> And then I can look it over like does it
+
+
+make sense or doesn't make sense and
+
+
+then work from that. So that's the the
+
+
+leadership like coaching capabilities
+
+
+that I've been seeing in AI.
+
+
+>> Yeah. And it's really it's really an
+
+
+important piece that not saying well let
+
+
+me do that for you right?
+
+
+>> Yes.
+
+
+>> Especially like with our kids right well
+
+
+let me just do that for you. If I don't
+
+
+let you have the friction right there's
+
+
+no growth there's no learning. There's
+
+
+no advancement. And that's true for us
+
+
+as humans, but that's also true for
+
+
+outcomes with our models with with AI is
+
+
+it's we have to see how it's doing
+
+
+things so we understand maybe where are
+
+
+there's some hidden assumptions or some
+
+
+lack of clarity or some things that I
+
+
+know sometimes I'll give conflicting
+
+
+instructions, right? And maybe where I
+
+
+messed up and it needs it needs some
+
+
+correction because oh, I told it one
+
+
+thing over here and a second thing over
+
+
+there. Sometimes it finds something else
+
+
+that you didn't even know it's in a
+
+
+document in a like if it's someh
+
+
+you may tell it to do a thing and then
+
+
+it goes and does a research and finds a
+
+
+node dead body in the code and it uses
+
+
+that as a reference
+
+
+>> that you didn't remember like whoop
+
+
+sorry
+
+
+>> had this just happened with a friend we
+
+
+were talking about uh he had part of his
+
+
+accounting team and they he was showing
+
+
+them introducing them they're working on
+
+
+an AI adoption right they're kind of
+
+
+stage two trying to move towards stage
+
+
+three in terms of not just the the task
+
+
+but using it um for for doing work and
+
+
+the person had asked it for some
+
+
+accounting information and it gave the
+
+
+response and they're like none of that
+
+
+information's right well where did you
+
+
+get that gave them the link to the Excel
+
+
+file click on the Excel file it opens up
+
+
+not in the Excel file like you made this
+
+
+up where is it. Well, it said, "Oh, the
+
+
+first two tabs in the Excel file are
+
+
+hidden."
+
+
+And so went in, sure enough, right
+
+
+clicked and the first two tabs were
+
+
+hidden because the person had that had
+
+
+done it thought, "Oh, well, if I hide
+
+
+these tabs, then the data doesn't exist
+
+
+anymore." Well, it certainly does if
+
+
+you're a model, right? It doesn't if
+
+
+you're a human and you can't see it, but
+
+
+the model can see all kinds of things
+
+
+that we can't see to your point. And
+
+
+sure enough, it was like, "Oh my gosh,
+
+
+had to go delete those two tabs out of
+
+
+the file so that you weren't polluted
+
+
+with bad data."
+
+
+>> Um, but it was something that was an
+
+
+unintended consequence and not visible
+
+
+as a human, but very visible as a model.
+
+
+>> Exactly.
+
+
+>> So, you mentioned stories earlier and um
+
+
+you said before that the biggest
+
+
+multiplier is human stories.
+
+
+>> Yes.
+
+
+>> So, unpack that a little bit for me.
+
+
+>> Sure. uh this being a favorite topic of
+
+
+mine because I I come from the the
+
+
+waterfall days the big you know we use
+
+
+cases and all that stuff where you say
+
+
+you know the user clicks this the system
+
+
+does that the user fills out this thing
+
+
+the user does that that's when we used
+
+
+to create requirements we required the
+
+
+software to do this that and the other
+
+
+>> y and it was like this thick it was huge
+
+
+huge book of of requirements
+
+
+>> exactly right uh and then when we got
+
+
+into stories I I've had this realization
+
+
+that for one thing we we we refer to
+
+
+those stories as requirements. It's like
+
+
+oh the team is not producing the the
+
+
+value that we hope with that iteration
+
+
+in the software in that with that
+
+
+increment because the software does not
+
+
+do what we need it to do what the
+
+
+requirements say. We need to improve our
+
+
+stories. Let's put more requirements on
+
+
+the stories. So it's like we're
+
+
+conflating ideas like user stories are
+
+
+not requirements they are stories right.
+
+
+So it's for people to be able to
+
+
+articulate once we are done with this
+
+
+what is the story that our clients that
+
+
+our stakeholders will go out telling the
+
+
+world why this thing is great.
+
+
+>> Yeah
+
+
+>> right because good stories get retold
+
+
+>> right and people relate to stories
+
+
+that's how we connect.
+
+
+>> Yes not with requirements. So that's one
+
+
+thing like stories are not requirements.
+
+
+Now user stories well when we constrict
+
+
+it to user we are thinking of people
+
+
+only as it pertains to them using a
+
+
+computer system. It's like their lives
+
+
+go around being at a computer like this
+
+
+completely neglecting
+
+
+their realm.
+
+
+>> Yeah.
+
+
+>> Right. So if the person Yeah. They are
+
+
+using a computer but they in a very loud
+
+
+noisy distracting environment with like
+
+
+uh customers yelling at them in front of
+
+
+them. Well, that's why the UI the
+
+
+beautiful UX UI design didn't work
+
+
+because it didn't account for the fact
+
+
+that the person is distracted by
+
+
+somebody else.
+
+
+>> There were other inputs or other things
+
+
+interfering.
+
+
+>> Exactly. So that's why I say instead of
+
+
+thinking it of as in user story let's
+
+
+take a step back and think of the human
+
+
+story like what else is there around the
+
+
+humans when they are interacting with if
+
+
+the product is a computer software you
+
+
+know at that point so that's the kind of
+
+
+uh spot where I as I've created my
+
+
+agents that help me take transcripts
+
+
+from conversations with stakeholders
+
+
+that I've led I've facilitated the
+
+
+conversation to extract those pain
+
+
+points. Even instead of getting them to
+
+
+tell me what they want, I tell me I tell
+
+
+them to tell me their stories.
+
+
+>> Okay,
+
+
+>> tell me the story like a typical day,
+
+
+the typical pain points, what makes you
+
+
+go like tell me those experience. Just
+
+
+say it out loud. And then when I pipe
+
+
+that through my uh agents that do BA
+
+
+type of uh work, they go from that
+
+
+perspective. What is the human story?
+
+
+Where does the system come in? Okay.
+
+
+>> So, it's never technical. My stories are
+
+
+never technical. I don't want to
+
+
+prescribe, oh, there's going to be a
+
+
+button and a drop down there. No,
+
+
+there's going to be a way to place a
+
+
+purchase order.
+
+
+>> Okay,
+
+
+>> that's it.
+
+
+>> So, keeping it at that high level.
+
+
+>> Yes.
+
+
+>> So, you talked about these agents that
+
+
+you have that help you like give me an
+
+
+an example of like what was the most
+
+
+recent one that you wrote and how did it
+
+
+change your workflow? How did it help
+
+
+shift your stories? So,
+
+
+here's how I'm going to explain. It's a
+
+
+recent one that's a rehash of possibly
+
+
+the first one I created.
+
+
+>> Okay, great. So, you took you built one
+
+
+and then now you've revisited.
+
+
+>> Awesome. I love this.
+
+
+>> So, and it also calls back to the the
+
+
+thing about identity like if I'm a
+
+
+software developer who cares about
+
+
+opening closing curly braces and putting
+
+
+semicolons in the right space and is it
+
+
+tab or
+
+
+>> all the technical details,
+
+
+>> right? Then I would get stuck with that.
+
+
+But when I really started leveraging AI
+
+
+as a consultant, right, as a solution
+
+
+developer, the first thing I wrote was a
+
+
+little markdown file that had my
+
+
+instructions on how I write stories.
+
+
+>> Okay?
+
+
+>> Right? How do I identify the value? How
+
+
+how do I identify the persona, the
+
+
+context? How do I identify the
+
+
+acceptance criteria, the scenarios with
+
+
+given when then uh well described? So, I
+
+
+I put all of that in like the way I do
+
+
+it
+
+
+>> like a recipe.
+
+
+>> It's a recipe.
+
+
+>> A recipe for this is what a story looks
+
+
+like for my
+
+
+>> Yeah. This is how I've been coaching
+
+
+people over the years. And this is the
+
+
+thing because I've been blogging about
+
+
+that for years. I just told my AI, look
+
+
+at all these blog posts and write me
+
+
+this recipe. So, the next time I tell
+
+
+you to write stories, this is how I want
+
+
+you to think.
+
+
+>> Yeah. And I love your blog, by the way.
+
+
+We definitely if we have show notes I
+
+
+would love to put a link to that in
+
+
+there. Great great writing and very very
+
+
+helpful. So you had it go look at your
+
+
+blog posts and it actually helped build
+
+
+the recipe.
+
+
+>> Yeah, it build that recipe. It's a when
+
+
+we say oh it's an agent and isn't it?
+
+
+It's a text file, a markdown file that
+
+
+has those instructions. I give you a
+
+
+problem domain or I give you a a
+
+
+transcript of somebody telling me
+
+
+stories about their problem. This is how
+
+
+you structure the stories. So I built
+
+
+that for me. uh about two years ago,
+
+
+right?
+
+
+>> And that's been a huge multiplier,
+
+
+right? So when it gets to like are we
+
+
+writing the proper code, that's not the
+
+
+thing. The question is are we solving
+
+
+the right problem,
+
+
+>> right?
+
+
+>> Writing the good code. Yes. We get to
+
+
+that later.
+
+
+>> Are we delivering on the story?
+
+
+>> Yes.
+
+
+>> Yes.
+
+
+>> Right. Are we solving the right problem?
+
+
+So I got that and it's the one that has
+
+
+been yielding the most dividends for me
+
+
+for the last uh two years or so. a few
+
+
+weeks ago uh because I've been telling
+
+
+other improvers about this work that I
+
+
+do uh sometimes people ask, "Oh, can I
+
+
+have this thing that you have? Can I see
+
+
+your prompt?" So, we had one of our
+
+
+agile coaches in Houston. He asked me,
+
+
+"Hey, Clauddio, can you send me that
+
+
+thing so I can use?" And I had no idea
+
+
+what AI tools he's using.
+
+
+>> Okay.
+
+
+>> Based on his question, I thought, "Oh,
+
+
+I'm going to do you one better." I
+
+
+learned that he was using co-pilots. So
+
+
+I said I'm going to show you how to
+
+
+create that in your co-pilot so that you
+
+
+can reuse. So essentially going in
+
+
+copilot clicking there to say add an
+
+
+agent.
+
+
+>> Yep.
+
+
+>> Right here are the instructions. But
+
+
+instead of saying here are the
+
+
+instructions I had a communication. I
+
+
+said, "Hey, I need to create something
+
+
+that when I tell you, when I give you a
+
+
+problem statement, you're going to
+
+
+create me some stories and here's some
+
+
+links to blog posts that describe how I
+
+
+would like that to work. Do the thing."
+
+
+And then it builds this agent, which is
+
+
+again just something that has a series
+
+
+of instructions, right?
+
+
+>> That you can keep feeding the same kind
+
+
+of input and it will give you some sort
+
+
+of output. And then the coolest story
+
+
+part of that story is after I gave that
+
+
+to our fellow improver he had another
+
+
+problem that he thought oh I would like
+
+
+to create a solution for this. I said,
+
+
+"Well, use that thing that writes a
+
+
+story,
+
+
+>> right?
+
+
+>> Have the conversation with it. Turn like
+
+
+the dictation mode and start." And
+
+
+that's I sat with him and I said, "Just
+
+
+start describing your problem. Hit
+
+
+record." Yep.
+
+
+>> Right. Bloop. You done? Did you describe
+
+
+everything? Yeah. Those are the main
+
+
+things. Okay. Write stories.
+
+
+>> It came back with the stories.
+
+
+>> Okay.
+
+
+>> I said, "Okay, now we're going to take
+
+
+that story. We're going to click in
+
+
+copilot. Create a new agent. I want you
+
+
+to create a new agent to solve this
+
+
+problem stories. It created the agent
+
+
+for him.
+
+
+>> Really?
+
+
+>> Yeah.
+
+
+>> Okay.
+
+
+>> Yeah. So, it's like that. It's like if
+
+
+you have a way, a clear way to bring
+
+
+human intention, the clarity on that,
+
+
+you can use that to then feed AI and say
+
+
+this is what I'm trying to build solve.
+
+
+That's where the AI comes into the human
+
+
+loop because you're staying in that
+
+
+human focused context to say here's the
+
+
+you know here's the need
+
+
+>> here's the problem like let it help you
+
+
+develop that solution piece which in
+
+
+this case was an agent.
+
+
+>> Yeah.
+
+
+>> Um yeah and and I love um you know a lot
+
+
+of people ask what is what is an agent
+
+
+and you said it you know it's just a
+
+
+file. Um there's, you know, there's
+
+
+really the opportunity when we're
+
+
+building these agents. We're we're
+
+
+taking the broad
+
+
+training that these models have had
+
+
+right across this massive amount of
+
+
+context, this massive amount of
+
+
+information and telling it, we want you
+
+
+to focus on this. Yes.
+
+
+>> Right. And so we in the agent file, we
+
+
+maybe give it a name because we name our
+
+
+pets. Um name our dogs in our house. uh
+
+
+some people name their cats or um
+
+
+hamsters. And so you name it, but then
+
+
+you give it some some scoping context to
+
+
+say, I want you to focus in this problem
+
+
+area. For this one, it's storytelling. I
+
+
+want you to be a storyteller.
+
+
+>> Yeah.
+
+
+>> And then you give it these skills, these
+
+
+abilities, these recipes to say, "Here's
+
+
+how I want you to output things to me."
+
+
+And so it's really just a a canned
+
+
+prompt, but one that really is focused
+
+
+around the intention of delivering that
+
+
+value, that solution for that need. Uh
+
+
+yeah, that's great.
+
+
+>> Absolutely. Yeah. Yeah. I love that.
+
+
+Yeah. Thinking of the the agent like
+
+
+think of it as not something that you
+
+
+have to tell it how to do things, but
+
+
+you tell it what it should be capable of
+
+
+doing,
+
+
+>> right? And then you put some constraints
+
+
+like you should be able to do this and
+
+
+here's are some guard rails.
+
+
+>> Right.
+
+
+>> Right. Because otherwise it can get
+
+
+really creative
+
+
+>> and you can tell it definitely don't do
+
+
+this. Yeah. Not that. That wasn't good.
+
+
+>> Exactly. And I think that's where a lot
+
+
+of folks have an opportunity to don't
+
+
+just go in and rewrite the prompt, but
+
+
+have the conversation with the model
+
+
+because you're going to get a better
+
+
+outcome and you're going to move towards
+
+
+uh better outcomes in the future. If you
+
+
+just rewrite the prompt, then
+
+
+everything's staying in your head.
+
+
+>> Um and you need to externalize that in
+
+
+into the AI.
+
+
+>> Yeah, absolutely. 100%. And that makes
+
+
+me go back to like how that helps people
+
+
+practice leadership and mentorship,
+
+
+right? So the same way like if you're
+
+
+working with um you know maybe a senior
+
+
+maybe a junior consultants or developer
+
+
+instead of telling them simply oh just
+
+
+do this because I told you so like
+
+
+actually ask questions like do you
+
+
+happen to know a better way to do that
+
+
+or another way to do that? Oh yes, I
+
+
+think. Oh, tell me. Let me hear it.
+
+
+Maybe I don't know that. Doesn't matter
+
+
+like how senior I am to you. I want to
+
+
+hear that. So the same thing with AI.
+
+
+Instead of saying, "Oh, here just do it
+
+
+because I told you." It's like, "Okay,
+
+
+I'm telling you that this needs to get
+
+
+done. Maybe this is how I've done
+
+
+before. This is what I know, right?
+
+
+>> Do you know of a better way? Should I be
+
+
+looking at a different way to do that?"
+
+
+Like open up perspective. It's a
+
+
+leadership skill as well.
+
+
+>> It is. And and as much as it feels like
+
+
+we might be talking to something
+
+
+mechanical,
+
+
+yes, we are, but it's growing those
+
+
+skills in us, the critical thinking
+
+
+skills. Yes.
+
+
+>> The the ability to to challenge
+
+
+assumptions or even become aware of
+
+
+assumptions. Um, I know I just last
+
+
+night was working on a system uh that
+
+
+we're building and and uh Claude had
+
+
+made some recommendations on a couple
+
+
+frameworks to use and it was like well
+
+
+because of what I know like I don't know
+
+
+if that's the right framework. So I'm
+
+
+like, give me all the pros and cons of
+
+
+this framework,
+
+
+>> right?
+
+
+>> And two other frameworks that I should
+
+
+consider. And and so having that
+
+
+conversation, it was uh oh well, you're
+
+
+right. Maybe in this situation, this one
+
+
+would be a better approach. Um and then
+
+
+for one of the other frameworks, it was
+
+
+like, no, no, made the right choice from
+
+
+the get-go, but you still want to walk
+
+
+through the exercise of assessing and
+
+
+addressing where are the assumptions,
+
+
+what are the things um that I might not
+
+
+be considering. Yes.
+
+
+>> And I do that not because it's going to
+
+
+make, you know, it's not going to make
+
+
+Claude any better. Um, that's
+
+
+Anthropic's job. Makes me better at am I
+
+
+being clear with my intentions. Am I
+
+
+understanding what is the true need?
+
+
+Have I dug into that need before I just
+
+
+jump to the solution?
+
+
+>> Right.
+
+
+>> Going back to that framework from you.
+
+
+>> There you go. So, thinking back over the
+
+
+past week and uh you know all the the
+
+
+amount of time that you've been using
+
+
+AI, you're obviously fairly deep into it
+
+
+uh using it a significant amount. Yes.
+
+
+>> What was what was your biggest win
+
+
+personally this past week where you were
+
+
+like
+
+
+>> that felt good. I felt like felt like I
+
+
+almost grew with that.
+
+
+>> Oh, I love that question. I absolutely
+
+
+do love that question. So in my current
+
+
+project, we had some team changes right
+
+
+where the team member that I had with me
+
+
+um when he was with me right before AI
+
+
+started. So he learned the process as a
+
+
+junior at the time, he learned the
+
+
+process, he learned the the different
+
+
+skills that are necessary to get the job
+
+
+done. And then comes AI and we start
+
+
+introducing AI. So he had been helping
+
+
+me build some of these agents finding
+
+
+where AI might help. Great. And then he
+
+
+rolled off the projects and I had to on
+
+
+board two new people who didn't know the
+
+
+AI assistants that we had and they were
+
+
+not familiar with the process that we
+
+
+have. Okay. The practices the the the
+
+
+mindset and all that. But because we had
+
+
+been documenting like we have been
+
+
+recording every team interaction for the
+
+
+last eight months or so. Y
+
+
+>> every every conversation daily scrums
+
+
+conversations with stakeholders
+
+
+everything is transcribed and then we
+
+
+create good documentation out of it on
+
+
+the main decisions made and all. So for
+
+
+the new team members they're leveraging
+
+
+that a lot. So instead of just being a
+
+
+burden on me to try to get them up to
+
+
+speed as quickly as possible, they have
+
+
+the tools to figure stuff out on the by
+
+
+themselves and then when they come up to
+
+
+me with questions, they've already done
+
+
+the work. Yeah.
+
+
+>> And they are like already on track. I
+
+
+just come in and I fill in the gap.
+
+
+>> And to be clear, we making the
+
+
+documentation is not necessarily
+
+
+Clauddio is writing the documentation
+
+
+from all the transcriptions.
+
+
+>> Correct. It's it's uh derived from it.
+
+
+It's me prompting the AI to say okay
+
+
+these things that I've shared with the
+
+
+the team bring up the main questions
+
+
+they had the main challenges that they
+
+
+seem to have uh expressed and then I'll
+
+
+reprompt and say okay now you look at
+
+
+this document and this other document
+
+
+this other thing here create a
+
+
+comprehensive guide
+
+
+>> for a new team member that they can
+
+
+follow on their own bam
+
+
+>> and so it's leveraging AI to allow us to
+
+
+onboard these new people to bring them
+
+
+up to speed where it's not overly
+
+
+burdensome as as the lead to to be okay
+
+
+now it's got to be I got that's going to
+
+
+be my full-time job is getting these
+
+
+folks up to speed. We can balance that
+
+
+out which then also means you have the
+
+
+ability to kind of move to that next
+
+
+higher level of of challenge and and
+
+
+address the higher order issues. That's
+
+
+great.
+
+
+>> Yeah. So that's been great like that's
+
+
+that was an experience where this last
+
+
+sprints that we wrapped up on Friday
+
+
+that was a moment of pride because the
+
+
+new team members they were able to like
+
+
+contribute with important uh solutions
+
+
+to the business that we were serving
+
+
+right and a lot of it came from the the
+
+
+process that had had been grounded
+
+
+before AI and how we've been leveraging
+
+
+AI to really crank up that process to
+
+
+the you know so-called 10x
+
+
+levels, right? It's like how do we
+
+
+measure that? But it's that's the kind
+
+
+of things like brand new team members
+
+
+getting those values, showing up at
+
+
+sprint review saying this is what we
+
+
+have to deliver. This is the value that
+
+
+we brought to the business this time
+
+
+around. And then seeing
+
+
+>> the satisfaction from the stakeholders,
+
+
+you know, expressions like they're like,
+
+
+"Wow, wow, that's great." And the guys
+
+
+just joined and like Yeah. Well, and
+
+
+satisfaction from the new people too
+
+
+because you feel valuable and you're
+
+
+contributing like all of those
+
+
+meaningful things that you know if we do
+
+
+meaningful work actually give us a sense
+
+
+of pride.
+
+
+>> So that's great. It's a great example.
+
+
+>> Absolutely.
+
+
+>> So what are a couple of things that you
+
+
+would want uh listeners to take away
+
+
+from this episode? Uh so that's a a
+
+
+great question and something I would
+
+
+like people to think about is as we talk
+
+
+about oh the the 10x productivity 10 now
+
+
+everybody talks about 10x productivity
+
+
+like well how do you measure
+
+
+productivity
+
+
+>> yes
+
+
+>> right because lines of code it's one
+
+
+data point
+
+
+>> that's a bad measure by itself
+
+
+>> by itself
+
+
+>> by itself yes
+
+
+>> exactly and writing code faster more of
+
+
+it has never been the bottleneck the
+
+
+bottleneck and tools also have not been
+
+
+the bottleneck because you just kept
+
+
+getting better tools to write more code
+
+
+faster.
+
+
+>> Mhm.
+
+
+>> That has not been the the bottleneck.
+
+
+The bottleneck has been uh clarity of
+
+
+intent, humans intent.
+
+
+>> Okay.
+
+
+>> So like focus on that. So the main
+
+
+takeaway is if you're just approaching
+
+
+AI, interacting with AI to just look at
+
+
+the output and judging that output and
+
+
+measuring just that output on its own,
+
+
+that's not enough. like look back and
+
+
+think can I leverage AI to get to clear
+
+
+clear thinking sooner.
+
+
+>> Okay.
+
+
+>> So instead of like in a scrum team
+
+
+instead of showing up at sprint review
+
+
+showing something to the stakeholder and
+
+
+stakeholders like go like that's not at
+
+
+all what we meant.
+
+
+>> I've been in sprint reviews like that
+
+
+right?
+
+
+>> Yeah. team is busy, did a lot of work,
+
+
+the stakeholders go like
+
+
+>> that's not at all what we or like that's
+
+
+not at all what we want or it's like
+
+
+guys you gave us exactly what we told
+
+
+you that we wanted you follow the
+
+
+requirements now that we see it
+
+
+>> we don't want that
+
+
+>> that's not it.
+
+
+>> Yeah.
+
+
+>> So you want to have that clarity way
+
+
+earlier than by sprint review time.
+
+
+>> Yes.
+
+
+>> That would be the main takeaway. Okay,
+
+
+awesome. Well, thank you Clauddio for
+
+
+being here. My pleasure with you.
+
+
+>> Anytime.

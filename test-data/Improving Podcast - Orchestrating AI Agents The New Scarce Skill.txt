@@ -1,0 +1,3328 @@
+[music]
+
+
+>> Welcome to the Improving Edge. This is
+
+
+where we talk about how AI and
+
+
+technology show up in real
+
+
+organizations. What's working, what
+
+
+doesn't, what we're learning along the
+
+
+way. This is where we have conversations
+
+
+with people doing the real work,
+
+
+turning innovation into outcomes. Today
+
+
+I have Robin Fuentes,
+
+
+uh president of the Houston Enterprise,
+
+
+sometimes called South Texas inside of
+
+
+the organization. [laughter]
+
+
+Um but it's great to have you here,
+
+
+Robin. Thank you for joining me.
+
+
+>> Thanks for having me. You know, uh I've
+
+
+been telling people that our goal is to
+
+
+slowly dominate the world. So we're
+
+
+going to start with Houston, taking over
+
+
+Austin, and I think we're going to move
+
+
+into New Mexico next, you know, that's
+
+
+where I grew up. And uh then we're just
+
+
+going to move into Arizona and just keep
+
+
+keep going from there. So soon it's just
+
+
+going to be, you know, improving South
+
+
+America.
+
+
+>> That's right. Just keep spreading the
+
+
+improving love.
+
+
+>> Yeah. No, absolutely.
+
+
+>> All right, I love that approach. Uh
+
+
+especially starting with Texas, you
+
+
+know, that's
+
+
+>> that's my heart. So So today we're going
+
+
+to start talking about uh orchestration
+
+
+of agents, you know, agentic AI is a big
+
+
+big buzz. A lot of people are talking
+
+
+about it. Let's start out with kind of
+
+
+the basic distinction, like what is a
+
+
+generative AI versus agentic AI? Help us
+
+
+distinguish those.
+
+
+>> Man, that's a great question. Uh I don't
+
+
+even know if I can spell LLM these days,
+
+
+but agentic AI and and generative AI,
+
+
+they use some of the same basic
+
+
+principles, right? So in a LM or or a
+
+
+generative AI situation, you're going to
+
+
+be using like a chat GPT or copilot or
+
+
+something, you're just going to ask it
+
+
+questions, and it's using the World Wide
+
+
+Web and all of the information it's been
+
+
+fed to give you statistically probable
+
+
+correct answers.
+
+
+Asterisk. Um
+
+
+>> [laughter]
+
+
+>> Okay, well, hold on to that asterisk.
+
+
+We'll come back to that.
+
+
+>> Uh agentic AI is more purpose-focused,
+
+
+right? It is I need to solve a task, and
+
+
+it's not something that's clearly
+
+
+defined with ifs and thens statements
+
+
+that can be programmed easily. Um and
+
+
+it's going to be using contextual
+
+
+information, you whether it's your
+
+
+organization information, personal
+
+
+information, whatever it might be, and
+
+
+you want it to accomplish a thing. And
+
+
+ideally, in my world anyways, it is
+
+
+things I don't want to spend my time
+
+
+doing, right?
+
+
+>> Okay.
+
+
+>> Uh things that
+
+
+>> things.
+
+
+>> Yeah, boring things. Things that are
+
+
+just like mundane, I know what the
+
+
+outcome is every single time, I
+
+
+basically know what the input, and I can
+
+
+guide an AI to do it instead of me. So,
+
+
+that's kind of the world of agents, and
+
+
+it it's something that can run on its
+
+
+own for the most part. Uh not all of
+
+
+them can. There's a human in a loops
+
+
+element, uh but it is something that is
+
+
+should be completable via an agent
+
+
+that's operating leveraging AI and LLMs
+
+
+a lot of the kind a lot of the time.
+
+
+>> Okay. I like how you did that. I like
+
+
+how you kind of separated those.
+
+
+What was the asterisk?
+
+
+>> So, the asterisk uh the idea that AI is
+
+
+intelligent, which is ironic because
+
+
+artificial intelligence, right? Uh is
+
+
+just a misnomer. Most people don't
+
+
+understand that the statistical
+
+
+probability the answer isn't that it
+
+
+will search the web and went like, "Ooh,
+
+
+I found the answer." You give the
+
+
+answer. No, no, no. It's literally the
+
+
+statistical probable next word.
+
+
+>> Right.
+
+
+>> So, it doesn't have a concept of the
+
+
+like answer it gave you. It just
+
+
+understands that it gave you what it
+
+
+understood to be the right words.
+
+
+>> It guessed.
+
+
+>> Yeah, and totally it's totally guessing.
+
+
+>> It's totally guessing. It's a it's a
+
+
+fascinating it's a fascinating concept
+
+
+to me.
+
+
+>> Well, and and I say there's no
+
+
+creativity without biology, right? Like
+
+
+you've got to have that Although people
+
+
+look at it and they're like, "Oh my
+
+
+gosh, it created the solution." It was
+
+
+like, "Well, it math its way to one."
+
+
+And there's not creativity in math. You
+
+
+can ask anybody who is a serious
+
+
+mathematician, there's not a whole lot
+
+
+of creativity, you know, 1 + 1 is still
+
+
+two. Like there's not creative solutions
+
+
+to that.
+
+
+>> Not No, not really. It's funny. I was
+
+
+actually a math major in school and so
+
+
+math is of the basis that I really think
+
+
+of the world.
+
+
+Which helps and hurts in a lot of ways
+
+
+sometimes. But
+
+
+uh
+
+
+ChatGPT and a lot of these large large
+
+
+language models, they actually try to
+
+
+make it seem creative. So if you ask an
+
+
+LLM the same question twice, you get two
+
+
+different answers. Why? Isn't the
+
+
+statistical probable next word always
+
+
+the same statistical probable next word?
+
+
+Well, the answer is yes. But what they
+
+
+actually do is they say, "Okay, above
+
+
+generally 70% statistical probability,
+
+
+they randomize the answer above that."
+
+
+So that it appears creative. So it's
+
+
+interesting that that the people who are
+
+
+building these large language models are
+
+
+so interested in it being human-like to
+
+
+build that trust um so that it's more
+
+
+creative-appearing and more human-like
+
+
+appearing anyways.
+
+
+>> And so I'm going to take it a little
+
+
+nerdy for a second, right? Because we
+
+
+talk about deterministic outcomes and
+
+
+non-deterministic outcomes. And so
+
+
+deterministic is you have these inputs,
+
+
+you get the same output every single
+
+
+time. And non-deterministic is same
+
+
+inputs,
+
+
+not always the same output. And what
+
+
+you're telling me is they're doing it on
+
+
+purpose and saying, "No, we're
+
+
+intentionally going to have the
+
+
+non-deterministic outputs because we
+
+
+want it to feel more creative."
+
+
+>> Yep.
+
+
+>> So interesting.
+
+
+Now, going back to the other side of you
+
+
+know, not for the generative, the
+
+
+agentic side, like
+
+
+talk a little bit more about like how do
+
+
+you coordinate them? Because you're
+
+
+you're saying we're using an agent to to
+
+
+do a thing, maybe a boring thing, but a
+
+
+thing that has to get done. Like talk a
+
+
+little bit more about how does that
+
+
+work? Like how do you go about
+
+
+coordinating?
+
+
+>> I I I think the best way to break it
+
+
+down is to give an example.
+
+
+>> Okay.
+
+
+>> Um and I absolutely love this stuff, so
+
+
+I can talk about it all day. But for
+
+
+example, one of the things that I use it
+
+
+for is I have meeting transcripts,
+
+
+right? And it's funny cuz AI's actually
+
+
+made meeting transcripts way more
+
+
+popular.
+
+
+>> Right.
+
+
+>> Um and I have a series of steps. Now,
+
+
+some of them are just deterministic and
+
+
+some of them aren't. So, the first step
+
+
+is I want that meeting transcript to be
+
+
+in my OneDrive folder so that I can have
+
+
+it for a long period of time. So, this
+
+
+is the deterministic part, right? It's
+
+
+done, it's got summarized, which is an
+
+
+AI that actually does a
+
+
+non-deterministic step. That gets
+
+
+downloaded, which is deterministic, and
+
+
+there's just a very simple um automation
+
+
+that does that. But, then there's a
+
+
+bunch of non- deterministic steps. So,
+
+
+the first one would be I want to know
+
+
+what meeting that transcript was
+
+
+correlated to. I want you to go look at
+
+
+my calendar and based on the people in
+
+
+the conversation and based on the the
+
+
+topic of the conversation, go pull that
+
+
+meeting and grab the attendees and add
+
+
+it to the context of that conversation.
+
+
+Which you might seem to be
+
+
+deterministic, but think about it. You
+
+
+have a meeting and let's say ends at
+
+
+3:35. Was that associated to your
+
+
+meeting started at 3:30 or the one that
+
+
+ended at 3:30?
+
+
+AI can help you figure that out, right?
+
+
+>> Okay.
+
+
+>> Um and then you would go have all these
+
+
+pieces where I have 15 conversations a
+
+
+day and how who knows how many to do's I
+
+
+took out of that? Do I remember them
+
+
+all? Did I take notes of them all?
+
+
+Probably not.
+
+
+>> Right.
+
+
+>> So, you end up having a a bed of
+
+
+information that you can point at AI and
+
+
+at it and say, "Go read that and based
+
+
+on all of these rules, tell me what did
+
+
+I commit to? What did I actually tell
+
+
+somebody I was going to email them at
+
+
+the end of the day?" And go tell me
+
+
+like, "What am I waiting on from other
+
+
+people?"
+
+
+Um and that can then create a to-do list
+
+
+that can get hooked into whatever your
+
+
+favorite to-do system, mine is Todoist.
+
+
+Um which helps you me manage my own work
+
+
+and my commitments and it makes me a
+
+
+much more effective person at my my
+
+
+It also showed me just how many
+
+
+commitments I'm making on a daily basis.
+
+
+>> Right, something to keep an eye
+
+
+[laughter] on.
+
+
+>> Um and then you can do so much more with
+
+
+that. So, you end up with this full
+
+
+loop, everything from having the
+
+
+conversation, and the next thing I know,
+
+
+15 less than 15 minutes later, I've got
+
+
+to-do's popping up in my inbox being
+
+
+like, "Hey, you committed to sending
+
+
+this email. Hey, you committed to
+
+
+sending that document. Hey, you
+
+
+committed to having that conversation."
+
+
+Which is a beautiful loop that I no
+
+
+longer have to do manually. The concept
+
+
+of, "Hey, I'm sitting in a meeting and
+
+
+I'm struggling paying attention and
+
+
+writing notes at the same time." is
+
+
+gone.
+
+
+>> Yeah.
+
+
+>> I get to pay attention to the person I'm
+
+
+talking to the whole time. It's amazing.
+
+
+>> Well, that's a big deal, right? Cuz you
+
+
+could be more present in the
+
+
+conversation. You can know, you don't
+
+
+have to have that loop running in the
+
+
+back of your head as like, "Okay, what
+
+
+am I talking about? And what am I
+
+
+committing to? Oh, do I remember? Oh, do
+
+
+I Did I write it down? Did I not write
+
+
+it down?" Like, there's a lot of this uh
+
+
+multitasking, right? This this context
+
+
+juggling that often times we have to do.
+
+
+And now we can just offload all of that
+
+
+to, you know, something that's going to
+
+
+post process it for us.
+
+
+>> Yeah. Yeah, and you got to think about
+
+
+it as like mental load.
+
+
+>> Right.
+
+
+>> Right. We all carry some version of
+
+
+mental load. Oh, I've got to schedule my
+
+
+cat for a vet visit. I've got to do
+
+
+this. I've got to do that.
+
+
+I think one of the best ways, especially
+
+
+as executives, is to lower our mental
+
+
+load. It helps us be so much more
+
+
+present.
+
+
+>> David Allen calls it psychic weight,
+
+
+right? In getting things done, right?
+
+
+You don't even know it's there. It's
+
+
+just there. And you don't know it's
+
+
+there until it's gone and you're like,
+
+
+"Oh, dang!" Like, "Wow!
+
+
+This I feel free." Right? Like you said,
+
+
+"I feel free to be present in this
+
+
+meeting. I I feel confident that my
+
+
+to-do's
+
+
+are actually going to show up." The The
+
+
+commitments. Now, some of those I may
+
+
+look at and be like, "I'm going to
+
+
+delegate that." Cuz [laughter] I
+
+
+committed to too many things, but it's
+
+
+that psychic weight that gets lifted off
+
+
+of you that you didn't even know that
+
+
+was there.
+
+
+>> Yeah, and the and the world of
+
+
+possibilities is just now opening,
+
+
+right? So, some of the things that I've
+
+
+started to do is like, "Hey, help me
+
+
+plan my day. Go look at the
+
+
+conversations I had yesterday. Go look
+
+
+at the calendar I have. Go look at the
+
+
+goals that I have and help me piecemeal
+
+
+like what are what's my schedule for
+
+
+today going to look like?" Um but then
+
+
+another like tidbit that I found
+
+
+recently and I wish I could take credit
+
+
+for this, but but Jake Stevenson, one of
+
+
+my co-workers, he uh he created this
+
+
+this prompt that says, "Go look at the
+
+
+meetings I've had in the last week and
+
+
+give me feedback.
+
+
+>> Yeah.
+
+
+>> Tell me how I'm doing. Like, tell me how
+
+
+I'm grading grade me on my communication
+
+
+style. Grade me on how I'm managing
+
+
+people. Grade me on my communication
+
+
+skills." And it's it's a beautiful way
+
+
+to say
+
+
+quick feedback loop that hasn't really
+
+
+been available previously. Not quite so
+
+
+objectively.
+
+
+>> Well, objec- Yeah, objective being a big
+
+
+part of that, right? Because having
+
+
+something that can provide for you
+
+
+communication coaching, right? That
+
+
+feedback that you know it isn't because
+
+
+you want my job. It isn't because you
+
+
+are mad at me about how last week went
+
+
+or some of those other, you know, uh
+
+
+biological biases, right? The people
+
+
+biases that might show up if you were to
+
+
+ask somebody, "Hey, can you coach me on
+
+
+this?" You know, plus just the the
+
+
+vulner- -ability risk of asking
+
+
+somebody, "What blind spots do you see?"
+
+
+Like, what is it you see about me that
+
+
+you might say, "Uh you might want to
+
+
+work on that." Um and now you can take
+
+
+something and it can point to, "Here's
+
+
+where it is in the transcript." and say,
+
+
+"Here's where maybe you didn't steer the
+
+
+meeting as forcefully as you should
+
+
+have. Maybe you didn't bring it back to,
+
+
+all right, what are our committed
+
+
+actions?" And it can point those things
+
+
+out and you can have that coaching along
+
+
+the way. It's a great great use.
+
+
+>> I will say though, it cannot replace
+
+
+that conversation though.
+
+
+Because at the end of the day, it
+
+
+doesn't understand the emotional context
+
+
+of the person that you were talking to,
+
+
+and it doesn't really understand like
+
+
+how exactly did you come across that
+
+
+person because AI fundamentally doesn't
+
+
+understand the people in the room. Um
+
+
+and so don't let it be the replacement,
+
+
+but let it be an additive. And that I
+
+
+think is the overall theme of like what
+
+
+you do with AI today is is you add it to
+
+
+make yourself more effective, more
+
+
+present, more, but don't let it replace
+
+
+the human element.
+
+
+>> Great call out and and an important
+
+
+point. You know, it doesn't actually
+
+
+know intent. And I tried when I saw
+
+
+Jake's post as well, was like, "Huh." So
+
+
+I grabbed it something similar, crafted
+
+
+a prompt, and had it go assess a meeting
+
+
+I had done. Well, it was like, "Well,
+
+
+you should have done this, this, this,
+
+
+and this." And I was like, "Okay, first
+
+
+of all, you know, should should is a a
+
+
+[laughter] trigger word in in our
+
+
+organization." But it said that I should
+
+
+have led the meeting in this way. And it
+
+
+was like, "Well, wait, wait, wait, wait.
+
+
+That wasn't my meeting." Like it didn't
+
+
+have all of the context and the intent
+
+
+around the meeting. And so it made a
+
+
+number of assumptions in that coaching.
+
+
+Now, once I gave it more context, it
+
+
+shifted some of that feedback. So it's a
+
+
+great point to say, be careful with some
+
+
+of this, and don't assume that it's that
+
+
+it's always super accurate.
+
+
+>> We have
+
+
+a Friday call, right? So we have all the
+
+
+executives join a call, and the
+
+
+presidents or the leaders of different
+
+
+parts of the organization present kind
+
+
+of their annual review of what's going
+
+
+on.
+
+
+Um and so my presentation was what, a
+
+
+couple weeks ago?
+
+
+>> Right.
+
+
+>> And I added little anecdotes. Like I
+
+
+used a Fart Miner song to kind of make a
+
+
+point on the theme of the year. I had
+
+
+henna on my hand that I thought was like
+
+
+a cool little anecdote. And I asked AI
+
+
+feedback on that meeting. I was like,
+
+
+"How did I present this?" And it was
+
+
+like, uh "Those were distracting. Don't
+
+
+do that." And I'm like,
+
+
+"Uh I think I do want my personality to
+
+
+shine in those situations. So, I don't I
+
+
+think I disagree.
+
+
+>> I think [laughter] yeah, I think I want
+
+
+some personal touches on those sorts of
+
+
+things. That's important. I think it's
+
+
+important to to recognize too the way
+
+
+you're talking about this agentic work
+
+
+is take the whole of the task, break it
+
+
+down into its components, and then look
+
+
+at those individual components as steps
+
+
+or even opportunities to say, what is it
+
+
+that I need this step to look like? I
+
+
+think there's a lot of people that
+
+
+think, oh, I'm going to tell the agent
+
+
+like, go summarize my day. And it's
+
+
+like, I don't know what the heck you
+
+
+mean.
+
+
+>> It won't give you an answer.
+
+
+>> Yeah, it'll it'll make something up for
+
+
+you, right? Cuz it's a golden retriever.
+
+
+It's like, ah, I'm going to give you an
+
+
+[laughter] answer. Yay.
+
+
+Um, it and so it will do that, but what
+
+
+you're really looking for is, no, no,
+
+
+what I mean when I say summarize my day
+
+
+is look at my to-do list, look at my,
+
+
+you know, calendar, what are these
+
+
+appointments versus these meetings, look
+
+
+at the following data sources in the
+
+
+following ways with this context, and
+
+
+then return it to me.
+
+
+And probably return it to me in a
+
+
+certain format, right? Like, do it in
+
+
+markdown, give me a PDF, give me a
+
+
+PowerPoint presentation. Like, how do I
+
+
+want it or it's just going to randomly
+
+
+pick. This is how I'm going to return
+
+
+it.
+
+
+>> Yeah, and it's it's useful in two ways.
+
+
+Um, so the fact that it'll pick will
+
+
+give you a good idea of what you want
+
+
+and what you don't want. So, it's not
+
+
+bad to start that way necessarily. It's
+
+
+actually funny, my brother and I, he's
+
+
+one of my best friends and we travel a
+
+
+lot together.
+
+
+Uh, and anytime that we don't know what
+
+
+to do, like we don't know what food we
+
+
+want to do, we don't know if we want to
+
+
+go to that location or not, we'll look
+
+
+at each other and be like, I want a
+
+
+strong opinion.
+
+
+And the person will be like, I want to
+
+
+eat tacos. And the other person will be
+
+
+like, oh, I realize right now that I
+
+
+don't want tacos.
+
+
+>> want tacos.
+
+
+>> Yeah.
+
+
+Uh, and so the the fact that the AI will
+
+
+will just make up stuff does
+
+
+but you do have to be able to decide
+
+
+what exactly you do you want. Now, the
+
+
+example I used earlier about the
+
+
+breakdown of the the whole flow from the
+
+
+meeting transcript into
+
+
+my to-do's and all that stuff. I did
+
+
+start by trying to get it to do the
+
+
+whole thing, right?
+
+
+>> Yeah.
+
+
+>> I was like, these are the steps go to a
+
+
+b c d e f g
+
+
+and it tried.
+
+
+>> did that go?
+
+
+>> It tried. It tried and it tried and it
+
+
+tried. Luckily it was set up with tests
+
+
+so it ran against a bunch of different
+
+
+scenarios and gave me a percentage of
+
+
+like how successful it thought it was.
+
+
+>> Right.
+
+
+>> Uh and it was a struggle to get it to
+
+
+like be better. Um and so you really
+
+
+have to challenge yourself on a couple
+
+
+things of like what is the most finite
+
+
+task inside of this list, right? So the
+
+
+first one was how do I want the
+
+
+transcript to be summarized?
+
+
+Like what information do I care about,
+
+
+what format do I care about, what does
+
+
+that look like? Then the next one was
+
+
+like what are what happens if I can't
+
+
+find a meeting? Like how important is
+
+
+this to me? Um and how do I want to know
+
+
+if you can't find it? Then it's like,
+
+
+okay, I want you to find to-do's like
+
+
+how, which ones do I care about, which
+
+
+ones do I not care about? And once you
+
+
+are able to break down those, you're
+
+
+able to actually those are like those
+
+
+are the agents, those are the little
+
+
+pieces of work that are getting done and
+
+
+then the ability to start to tie them
+
+
+together. That's that's where it starts
+
+
+to become really powerful but each
+
+
+individual one is valuable in and of
+
+
+itself. So the trying to do too much
+
+
+becomes a problem.
+
+
+>> Yep.
+
+
+>> Um and I think one of the things that
+
+
+most people struggle with when it comes
+
+
+to working with AI is that they think
+
+
+that more is always better, all right?
+
+
+More context, more information.
+
+
+>> thing instead of little things.
+
+
+>> But it actually really struggles with
+
+
+that. It does very well on very small,
+
+
+very systematic like, this is the
+
+
+information, this is the output and then
+
+
+being able to collect that together. So
+
+
+back to my example which I'm going to
+
+
+use I think several times.
+
+
+Um each step has an output, right? So, I
+
+
+get the transcripts, I get the summary.
+
+
+The the attendees is actually another
+
+
+markdown file in the same folder. The
+
+
+to-do's is another markdown in the same
+
+
+folder. Then there's a review of the
+
+
+to-do's that happens that creates
+
+
+another piece of information that adds
+
+
+context, but very specific pieces of
+
+
+context to a specific context. So, if I
+
+
+want to then go reference that later via
+
+
+an LLM or something else, it has all
+
+
+that context very specifically there and
+
+
+is much more effective at helping me
+
+
+pull out information.
+
+
+>> So, take your thing and iterate is what
+
+
+I'm hearing.
+
+
+>> No kidding.
+
+
+>> So, I don't know how many times you got
+
+
+it to say, "You're right." That's always
+
+
+my favorite when it's first First words
+
+
+in the response are, "You're right." I'm
+
+
+like, "Oh, man. This is going to be a
+
+
+Yeah." This That's the That's the golden
+
+
+retriever, right? Where it's like, you
+
+
+know, wagging its tail, just looking for
+
+
+some pets.
+
+
+Um
+
+
+So, somebody that's listening is like,
+
+
+"Okay, cool. I hear you about agents,
+
+
+like how to break down this work, like I
+
+
+I I want to figure out how to How do I
+
+
+put this into my business? Like, what
+
+
+does the right structure look like?
+
+
+Like, how do I go about wrangling said
+
+
+agents? Like, talk to me a little bit
+
+
+about How do I think about this for my
+
+
+business?"
+
+
+>> There's tons of answers out there, and I
+
+
+think that that's also a hard part of
+
+
+the market today is that there's a tool
+
+
+for everything.
+
+
+Um, so there's a bunch of tools that can
+
+
+help you set up agents, that can help
+
+
+you script these things, that can help
+
+
+you even even help you create the
+
+
+prompt.
+
+
+Um, one of my personal favorites right
+
+
+now is Claude Code or Claude Co-work,
+
+
+which is the same tool. Um, and
+
+
+the advice that I would give businesses
+
+
+is be careful what you give your data,
+
+
+like give access to your data.
+
+
+>> Right.
+
+
+>> So, each
+
+
+product that's coming out, they're going
+
+
+to have different
+
+
+data privacy policies, and
+
+
+uh they'll they'll be sock two or
+
+
+compliant or these different types of
+
+
+things that make them more reliable. So,
+
+
+as an organization, I would say find
+
+
+tools that fit the need based on your
+
+
+platform. So, for example, if you're in
+
+
+the Google world and you want to use
+
+
+Gemini or if you're in the Microsoft
+
+
+world and you want to use Copilot or or
+
+
+you want to expand something like Claude
+
+
+that's inside of your organization,
+
+
+just make sure that the information
+
+
+you're providing it and the the policies
+
+
+that you're using or they're using are
+
+
+the right ones. Um
+
+
+and in general, the the other risk here
+
+
+is that like everybody's going to go buy
+
+
+their own tool and use their own email
+
+
+addresses and their information is going
+
+
+to end up everywhere. So, company
+
+
+policies and training and bring your
+
+
+people along are all going to be
+
+
+important things cuz at the end of the
+
+
+day, the tool isn't the hard part.
+
+
+The hard part is the people.
+
+
+>> Right.
+
+
+>> Right? Help them use it. Help them
+
+
+understand their risks. Help them like
+
+
+give them the tools so that they don't
+
+
+go find their own.
+
+
+>> Completely agree. Was actually reading a
+
+
+report this this weekend that was
+
+
+talking about their the organization,
+
+
+something like 64% of organizations that
+
+
+have said, "We are not adopting AI or
+
+
+don't have a a guidance in place." Their
+
+
+employees are using their personal
+
+
+accounts and feeding their company data
+
+
+into their personal accounts and I think
+
+
+they said on average 232 incidents a day
+
+
+of corporate data exposure through
+
+
+personal accounts are happening because
+
+
+the business just hasn't got on board or
+
+
+is like, "Eh, we're a little scared of
+
+
+of AI or we're just not sure. Like we
+
+
+haven't invested the time." It's like,
+
+
+"Your people are figuring this out." And
+
+
+and to your point, the problem is not
+
+
+necessarily the technology, the problem
+
+
+is people want to use it. People will
+
+
+the value and and the opportunity for
+
+
+reduction of that
+
+
+boring work that we talked about before.
+
+
+And so they're like, all right, I'm just
+
+
+going to figure a way around it and you
+
+
+end up with, you know, either a shadow
+
+
+IT or these these data exposures that
+
+
+are not good for the business.
+
+
+>> And I will say 399 is not free.
+
+
+Right?
+
+
+>> Right.
+
+
+>> So pay for the tools because any like
+
+
+the whole concept of like if you're not
+
+
+paying for the tool, you are the
+
+
+>> You are the product.
+
+
+>> the product, right? Your data is the
+
+
+product that they want because they're
+
+
+going to train their models on it and
+
+
+they they want that. So pay for the
+
+
+tools, make sure that you're paying for
+
+
+a tier that gets you that privacy.
+
+
+Um, and make sure that the people using
+
+
+the tool are logging in via your your
+
+
+corporate account so that you have
+
+
+control over that access.
+
+
+>> And so I want to go back to a point
+
+
+another point that you touched on was,
+
+
+uh, you know, it really is the people.
+
+
+Like you described a workflow that a lot
+
+
+of people be like, man, that would be
+
+
+awesome. Can you just give that to me
+
+
+and I'll just start using it, right? And
+
+
+it'll totally make my life better.
+
+
+>> I mean, I would love the world to agree
+
+
+with all my opinions. That'd be awesome.
+
+
+>> Yeah.
+
+
+>> [laughter]
+
+
+>> But I mean, that's that's the thing.
+
+
+>> No, honestly, that would be scary. But,
+
+
+um
+
+
+yes, I mean, some tools that people have
+
+
+built or prompts or agents or whatnot
+
+
+could be useful.
+
+
+Um, but you are adopting their opinions,
+
+
+right? You might care about very
+
+
+different things out of those
+
+
+transcripts than anybody else does. But
+
+
+that being said, it is an opportunity
+
+
+because companies have opinions, too.
+
+
+Organizations have an have opinions
+
+
+about what they care about. So there's
+
+
+there's a pro and a con here of, yeah, I
+
+
+can give you the stuff that I use as a
+
+
+starting point. I would warn you about
+
+
+blindly using it, but I also think that
+
+
+there's an opportunity to say, hey,
+
+
+like, what what do I as an organization
+
+
+care about? Um, and build stuff that
+
+
+your employees can use where they
+
+
+automatically adopt the organizations
+
+
+opinions.
+
+
+>> So we've got to find a balance here
+
+
+between all right, sharing our
+
+
+learnings, right? Oh, cool. Here's what
+
+
+I did. Here's, you know, how you might
+
+
+be able to leverage that and just
+
+
+assuming by building it that like
+
+
+everybody in the organization should be
+
+
+able to use it, right? Cuz it's the I
+
+
+can give you the hands, but you've got
+
+
+to acquire the head on your own, right?
+
+
+You kind of have to be in that mind
+
+
+space to think about how you're going to
+
+
+use it and not just blindly use it
+
+
+because it may not do what it is you're
+
+
+looking to do.
+
+
+>> Yeah, that that and everybody has access
+
+
+to different data or at least they
+
+
+should.
+
+
+Right.
+
+
+>> Ideally, ideally security works.
+
+
+>> And that's actually a little bit of a
+
+
+risk here, too. Like if you open up your
+
+
+entire document store to AI and now
+
+
+people are asking about everybody else's
+
+
+salaries, that's a problem. Right? So
+
+
+you
+
+
+>> If it's answering and giving you the
+
+
+spreadsheet that HR put together with
+
+
+everybody's comp in it, yeah, that's a
+
+
+little bit of a problem.
+
+
+>> They didn't put it in the right folder
+
+
+with the right access or or maybe you
+
+
+accidentally fed it in in a way that you
+
+
+didn't understand. So the the security
+
+
+around data is becoming more and more
+
+
+important. I I think we'd be surprised
+
+
+to find out how many companies have used
+
+
+like obfuscation as a way to keep data
+
+
+private. Like you just don't
+
+
+>> obscurity.
+
+
+>> Yeah.
+
+
+>> Doesn't work with agents.
+
+
+>> No, because like just because the
+
+
+agent's going to find it.
+
+
+>> Right.
+
+
+>> Right? Um and so paying attention to
+
+
+like what data is available and where
+
+
+and like how you give access to it. I
+
+
+know something that we've done at
+
+
+Improving recently is this like, you
+
+
+know, automatically have an agent that
+
+
+can search SharePoint.
+
+
+>> Mhm.
+
+
+>> Right?
+
+
+>> Right.
+
+
+>> But that's got the underlying problem,
+
+
+which means that every single SharePoint
+
+
+site that I have access to, I can now
+
+
+just ask questions. So if I want to be a
+
+
+little sneaky,
+
+
+>> [laughter]
+
+
+>> I might be able to do that. And so
+
+
+there's a lot of due diligence that
+
+
+needs to happen in in approaching this
+
+
+carefully, but I will say like don't
+
+
+make the fear of that stop you.
+
+
+Right? Cuz I think we're at more of a
+
+
+risk in most organizations of not doing
+
+
+this than doing this.
+
+
+>> So it sounds like we're moving from
+
+
+okay, I manage people to I manage
+
+
+agents.
+
+
+And it sounds like that maybe there's
+
+
+some parallels, maybe there's not. Like
+
+
+where where does that where is it
+
+
+analogous and where does it break down?
+
+
+>> The closest I know you can't believe I'm
+
+
+going to say this.
+
+
+Um
+
+
+the closest that you can you can kind of
+
+
+treat an agent is almost like a very
+
+
+very junior fresh out of college
+
+
+employee.
+
+
+>> Okay.
+
+
+>> Right? They don't really know a lot.
+
+
+They're going to make a lot of mistakes.
+
+
+Um they'll learn over time. There's a
+
+
+lot of the same kind of analogies to it.
+
+
+Um
+
+
+but again, like the thing that that
+
+
+humans can do that agents can't is a lot
+
+
+more of the human element. So the the
+
+
+the evolution on the of AI and its
+
+
+impact on organizations I'm actually
+
+
+very excited about because it's re
+
+
+it's reinforcing the need for human to
+
+
+human connection.
+
+
+Right? But
+
+
+the use of agents, the management of
+
+
+agents has some of the same things of
+
+
+like
+
+
+when do I need to be involved?
+
+
+>> Right.
+
+
+>> Right?
+
+
+>> There's a decision point here.
+
+
+>> Yeah. Uh
+
+
+what could you do that I really don't
+
+
+want you to do while I'm giving you
+
+
+permission to do these things because if
+
+
+you look at agents, the more that you
+
+
+automate, the more that you give an AI
+
+
+to do, the less you're paying attention.
+
+
+>> Right.
+
+
+>> But attention sometimes matters.
+
+
+So so is it a recreation of how to pull
+
+
+your attention? Is it a point in which
+
+
+where you make sure you always have a
+
+
+human in the loop? How you go about that
+
+
+is very important. Um
+
+
+but the humans need to figure out like,
+
+
+okay, my job is how to make the agents
+
+
+bring value to myself, to my
+
+
+organization, to my stakeholders.
+
+
+And that
+
+
+can't really be replaced by an AI. It
+
+
+can be helped in ideation and those
+
+
+types of things, but it can't be
+
+
+replaced.
+
+
+>> Or you can try and replace it and stand
+
+
+up something like Open Claw and just
+
+
+like give it access to all your social
+
+
+and all your, you know, whatever and
+
+
+just turn it loose.
+
+
+>> Good luck.
+
+
+>> And see what happens,
+
+
+>> [laughter]
+
+
+>> right? I I know there was
+
+
+a a fairly high-profile podcaster who uh
+
+
+used Open Claw recently just like
+
+
+threw some rage bait up there on X. And
+
+
+of course he gets all this blowback and
+
+
+he was like, "Wait, wait, wait, wait, it
+
+
+wasn't me. It was Open Claw." Like,
+
+
+uh it was like, "Well, it's our
+
+
+responsibility, right? You've you've
+
+
+given them keys to do all these things.
+
+
+Like when they step over the line, it's
+
+
+it and it it may happen, right? It it's
+
+
+a very real possibility because there
+
+
+isn't intuition, right? There isn't the
+
+
+the cognition at the same level with
+
+
+these agents.
+
+
+>> Yeah, one of my I
+
+
+I don't know if I could say favorite,
+
+
+but one of the oldest stories of AI and
+
+
+like why a human is so necessary in the
+
+
+loop was actually insurance.
+
+
+Right? So, one insurance is one of the
+
+
+industries that have been using AI for a
+
+
+long time for approving people to be
+
+
+insured and what their rate's going to
+
+
+be
+
+
+>> Right.
+
+
+>> uh based on the risk profile, right? Um
+
+
+and so, while they're using AI, they
+
+
+were running into like PII and like
+
+
+different types of limitations on what
+
+
+kind of personal information can be
+
+
+shared. And so, they ran through a bunch
+
+
+of models of like
+
+
+who should I who should I insure? Um and
+
+
+they when they took the resulting data
+
+
+and reassociated that to who the people
+
+
+were, they found that there was a heavy
+
+
+discrimination against people of color
+
+
+and like those types of things. Yeah.
+
+
+So, the reason for that had nothing to
+
+
+do with those people actually being
+
+
+higher risk, but because of the history
+
+
+of insurance,
+
+
+the insurance that they've offered to
+
+
+people has been primarily white people.
+
+
+And so it skewed the model. So, the
+
+
+human has to be the person that looks at
+
+
+and goes,
+
+
+"No, that's not what we want to do."
+
+
+And so
+
+
+>> So it was a data bias that then gets
+
+
+baked into the model and you end up with
+
+
+Yeah, I know there have been some other
+
+
+interesting use cases of models
+
+
+generating images that are completely
+
+
+never could have happened, right?
+
+
+And and just because it was a bias in
+
+
+the data. So, one of the things I've
+
+
+come to realize is as we're using these
+
+
+agents
+
+
+what it is we're doing is effectively
+
+
+delegation.
+
+
+And most people are really bad at
+
+
+delegation, right? They're like, "Go do
+
+
+a thing." And then you come back and
+
+
+they're like, "Not that thing." And
+
+
+that's super unhelpful, right? And so
+
+
+what we're having to to learn, right?
+
+
+The head part of this is how do I define
+
+
+a context? How do I describe what it is
+
+
+I want you to do and what what it is I
+
+
+want you to give me? Like being very
+
+
+very clear, right? Clear expectations
+
+
+clear outcome that I'm looking for. Like
+
+
+what does a good delegation look like?
+
+
+And I think I'm seeing that we're just
+
+
+not good at delegating
+
+
+and it shows up in the in the results
+
+
+that we get.
+
+
+>> Yes, 100% yes.
+
+
+It's amazing how many times I've
+
+
+realized that I don't know what I want.
+
+
+And I rely on somebody to just figure it
+
+
+out.
+
+
+>> Got you.
+
+
+>> And that's terrible, right?
+
+
+>> Or it's an evolution, right? And so
+
+
+that's the like how do we help people to
+
+
+evolve into being better delegators?
+
+
+>> Uh yeah, and there's there's several
+
+
+blocks in this, right? So, I'm going to
+
+
+talk about software developers for a
+
+
+second cuz they're
+
+
+they're a lot of the people I interact
+
+
+with on a daily basis.
+
+
+A lot of software developers take pride
+
+
+in the fact that like their craft is the
+
+
+code.
+
+
+>> Right.
+
+
+>> Right? Their ability to do that. But the
+
+
+outcome of code is not that code is
+
+
+written. The outcome of code is that
+
+
+there's a system that now solves a
+
+
+problem.
+
+
+>> Right.
+
+
+>> Business value.
+
+
+>> Yeah. Um and so you almost have to
+
+
+separate from yourself the emotional tie
+
+
+of
+
+
+the the thing that you're building,
+
+
+right? Being being part of your own
+
+
+value statement. Um and so that's a huge
+
+
+box for people where like, "No, I want
+
+
+to solve this problem." And like, "Well,
+
+
+let AI do it." And they're like, "But
+
+
+but I'm good at this."
+
+
+>> [laughter]
+
+
+>> It's my identity. What am I doing?
+
+
+>> Yeah.
+
+
+>> Yes.
+
+
+>> Um and then the other block is like
+
+
+trusting it.
+
+
+How how do I know it's going to give me
+
+
+the right output all the time? And
+
+
+the answer to that one is actually
+
+
+easier because you don't have to trust
+
+
+it immediately.
+
+
+What you can do is is use it with you in
+
+
+the loop as the approver
+
+
+constantly until you're like, "I am so
+
+
+sick of approving the right answer all
+
+
+the time." And you just go, "Okay."
+
+
+And this is something that I've done is
+
+
+like, "All right, if the confidence
+
+
+interval is over 90%
+
+
+uh just auto-approve it. Like I don't
+
+
+want to see it. Get it out of my face."
+
+
+But the I don't know if I would have
+
+
+gotten to that point without being
+
+
+annoyed by always clicking approve.
+
+
+>> Well, or you could claim it's smart
+
+
+trust, right? We talk about that. And
+
+
+and you said, "All right, here I'll
+
+
+trust you to here and now I'll trust you
+
+
+to here and now we'll see." Maybe not
+
+
+open claw yet, but
+
+
+uh you know, I'll give you more trust
+
+
+and just extending it slowly more for
+
+
+your own comfortability.
+
+
+And and as
+
+
+as much as it is anything else, it's
+
+
+really about you getting comfortable
+
+
+with where things are.
+
+
+>> Yeah, so we've broken down the levels of
+
+
+people who've like adopted AI and like
+
+
+how they've used it to evolve their own
+
+
+productivity. And it ranges everything
+
+
+from like I have I could spell AI to I
+
+
+I'm orchestra person. All the
+
+
+instruments are playing and all I got to
+
+
+do is wave my hands basically, which is
+
+
+extreme for today's situations. Um but
+
+
+it evolves, right? The first first level
+
+
+is going to be I use some large language
+
+
+model and LLM, ChatGPT, whatever to say
+
+
+ask it a question, get an answer. And
+
+
+another version of that in the coding
+
+
+world is I use Windsurf or
+
+
+um insert tool here to have it write the
+
+
+code for me, but it ultimately I'm still
+
+
+reviewing it and creating the pull
+
+
+request and doing all those pieces,
+
+
+right? And then it evolves to like, you
+
+
+know what? That's where the trust starts
+
+
+to show up of like I've done this so
+
+
+many times and it's and I've I've
+
+
+created the rules, I've created the
+
+
+structure. It's getting it right 99% of
+
+
+the time.
+
+
+>> context and boundaries surrounding it.
+
+
+>> Yeah, yeah. Um and so just just go ahead
+
+
+and do that next step for me.
+
+
+And and then it's like, well, the step
+
+
+after that is going to be this whole
+
+
+other process. Am I comfortable enough
+
+
+to like automate that and to be able to
+
+
+say
+
+
+"Hey, when you run into this problem,
+
+
+that's when I need to be involved." So
+
+
+this is where it starts to mirror
+
+
+delegation a lot.
+
+
+>> Right.
+
+
+>> And then you're able to kind of tie
+
+
+these tasks together. And so the the
+
+
+process of getting through those lines
+
+
+has has a combination of things. One is
+
+
+constantly challenging yourself to
+
+
+iterate on how you're using AI and
+
+
+agents. And the other one is to slowly
+
+
+build your own trust with the thing that
+
+
+is helping you do your job.
+
+
+And that is that smart trust, right?
+
+
+Just incremental day by day.
+
+
+>> So what are a couple of takeaways you
+
+
+want listeners to walk away from after
+
+
+listening to this?
+
+
+>> I think there's a comment for anybody
+
+
+and everybody out there
+
+
+who's listening to this, who's looking
+
+
+at using AI, who maybe is even scared of
+
+
+what AI is going to do to their job.
+
+
+Similar to when you are living or own a
+
+
+house, it is immensely beneficial to
+
+
+understand basics of woodworking, of
+
+
+plumbing, of electric, of these things.
+
+
+Um
+
+
+being able to leverage AI and being able
+
+
+to understand just the basics of these
+
+
+things is going to be the same level of
+
+
+beneficial not just because
+
+
+it solves a task or it creates a to-do
+
+
+list but because it helps you identify
+
+
+the the places where it can be useful
+
+
+and the things that you should go call
+
+
+an expert or you could just do it
+
+
+yourself.
+
+
+>> Yeah, I don't work in the big gray box
+
+
+that's in the garage. Like that's
+
+
+massive electricity that I don't need to
+
+
+mess with. So I'm with you.
+
+
+>> And and I think [snorts] I've shocked
+
+
+myself enough times to learn when I need
+
+
+to call the electrician. [laughter]
+
+
+Um and I think the other one is as
+
+
+organization leaders, there is a lot of
+
+
+fear even
+
+
+the risk I mean we talked about data
+
+
+risk, we talked about bleeding, we
+
+
+talked about all this stuff.
+
+
+Um and the risk is there
+
+
+but the risk is also there and the fear
+
+
+is also there for your people.
+
+
+>> Right.
+
+
+>> Um and it doesn't matter what department
+
+
+we're talking about, counting, finance,
+
+
+ops, they're all looking at the same
+
+
+curve and there's going to be a lot of
+
+
+them who are going to be resistant to
+
+
+adopting this because of the same fear
+
+
+we're talking about earlier. I take
+
+
+pride in the fact that my job is this
+
+
+and that I output this thing.
+
+
+And so if you don't help them evolve
+
+
+you're going to end up replacing your
+
+
+people. The the story is not AI is going
+
+
+to replace your job, the person who's
+
+
+using AI is. So why not help your people
+
+
+be the people who are leveraging AI and
+
+
+help them do it well. Not only is that
+
+
+going to make a difference for your
+
+
+organization, but it helps you lean into
+
+
+the people that you know, love, and
+
+
+cherish that already work inside your
+
+
+organization.
+
+
+>> That's great. Thank you, Robin.
+
+
+>> Absolutely. It's great talking
+
+
+>> Thank you for joining us.
+
+
+>> It's been fun.
+
+
+>> Awesome.
+
+
+>> [music]
+
+
+[music]

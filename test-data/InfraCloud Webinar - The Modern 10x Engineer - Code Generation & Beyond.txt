@@ -1,0 +1,4741 @@
+hi there and welcome to yet another
+
+
+episode of AI Explorer where we discuss
+
+
+ai ai infra gen and everything related
+
+
+to AI 2024 has been a really amazing
+
+
+year for all of us at infac Cloud we
+
+
+have seen a lot more of exciting things
+
+
+that's happening in the field of AI we
+
+
+also built our own AI lab as well also
+
+
+we did a lot of interesting webinars on
+
+
+platform engineering at the start of the
+
+
+year so in short we have been quite busy
+
+
+and busy
+
+
+well in today's webinar we would
+
+
+essentially be looking at something
+
+
+called as 10x engineer but before I deep
+
+
+dive into that I am your host in case
+
+
+you don't know me I Atul pra Sharma a
+
+
+senior developer Advocate at infac Cloud
+
+
+where I help individuals and
+
+
+organizations adopt open source tools
+
+
+and Technologies by helping them build
+
+
+poc's create content and do webinars
+
+
+like
+
+
+these if you are new to our webinar if
+
+
+this is your first time here make sure
+
+
+to scan this QR code to go to our
+
+
+YouTube playlist where you can watch our
+
+
+previous webinars that we have done on
+
+
+AI you can also go through our previous
+
+
+platform engineering webinars as well
+
+
+and while you're on YouTube why don't
+
+
+you take a second and hit that subscribe
+
+
+Button as well so like I said today's
+
+
+discussion point is about the modern 10x
+
+
+engineer code generation and Beyond and
+
+
+by 10x engineer none of us here today
+
+
+mean that you need to spend 10x hours
+
+
+more in your current work the 10x
+
+
+engineer is definitely a superhero we'll
+
+
+get more into that and like I always do
+
+
+I'm not here alone so you won't be
+
+
+listening to me for the next 45 minutes
+
+
+thank God I have some amazing speakers
+
+
+with me today and let me quickly bring
+
+
+them up on to your screen so I have Arin
+
+
+joining in us from Cod rabbit and we
+
+
+have Samir from infra Cloud hi Arn Hi
+
+
+Sam thank you so much for joining
+
+
+in hello hello
+
+
+everyone hey good to see you all so we
+
+
+have a tradition here where I don't
+
+
+introduce the guest because I'm always
+
+
+afraid that I'll miss out on something
+
+
+that they really want to talk about
+
+
+themselves so I give this hus to the
+
+
+speakers to the guests to introduce
+
+
+themselves
+
+
+so Arin why don't you go first and you
+
+
+know tell our audience about who you are
+
+
+what you do where are you from and uh
+
+
+yeah what are your hobbies what do you
+
+
+do outside of
+
+
+work well uh thanks aul I think uh I
+
+
+mean this is my first time in in infra
+
+
+Cloud uh you know uh webinar but then
+
+
+I've been I think uh looking at infra
+
+
+Cloud Community grow uh and and and all
+
+
+of these uh event Etc thanks for doing
+
+
+this uh I'm AR if for the folks who
+
+
+might not have heard my name or like
+
+
+what I do it's quite possible uh I work
+
+
+in the you know developer communities uh
+
+
+I wear different hats sometimes like a
+
+
+support engineer sometimes like a
+
+
+product manager uh sometimes helping
+
+
+with partnership sometimes just like a
+
+
+tutor uh trying to help developers so my
+
+
+goal is to help developers solve their
+
+
+problems I currently work at code rabbit
+
+
+as a developer goto Market person I help
+
+
+them with building the developer option
+
+
+and more of that code rabbit is an
+
+
+awesome Tool uh they do AI code reviews
+
+
+uh I mean a part from the AI code
+
+
+reviews is like you know it's an
+
+
+interesting Pro uh problem or like an
+
+
+interesting thing for all of us right uh
+
+
+as developers so I'm so excited to talk
+
+
+more about you know uh how engineering
+
+
+is going to change uh and then what
+
+
+what's the impact of all of that and
+
+
+basically I'm I'm from India I live in I
+
+
+live in different places altoe travel a
+
+
+lot but otherwise uh quite happy to be
+
+
+on this stream today from Indian time
+
+
+zone yes it's very difficult to catch IR
+
+
+in Indian time zone and we were able to
+
+
+do that right around the end of the year
+
+
+thank you so much for Arin for joining
+
+
+in and uh when Arin spoke about
+
+
+engineering and Engineering career I
+
+
+think the first person at INF Cloud
+
+
+whose name that comes to my mind is
+
+
+Samir so over to Samir who is an expert
+
+
+here but then I would let him do the
+
+
+honors to introduce
+
+
+himself
+
+
+sure uh so thanks adul um
+
+
+so I've been i' I've come from uh
+
+
+developer background uh I've done
+
+
+development for about 10 12 years and uh
+
+
+recently even since I've joined infra
+
+
+Cloud I've uh uh started working on
+
+
+cloud native applications and uh in my
+
+
+career of around 16 years plus uh I have
+
+
+uh worn uh multiple hats so uh right now
+
+
+I'm working at INF Cloud as a principal
+
+
+engineer uh with I help multiple
+
+
+projects uh with different aspects of
+
+
+their problems you know sometimes
+
+
+architecting uh their Solutions or uh
+
+
+even uh executing multiple projects
+
+
+mentoring them making sure everything
+
+
+stays on track and also helping uh the
+
+
+developers uh uh in either my project or
+
+
+uh in infra Cloud uh to solve and
+
+
+brainstorm on different Pro problems and
+
+
+uh you know uh come up with uh Solutions
+
+
+uh over there
+
+
+yeah interesting so we have quite a
+
+
+diverse panel we have a developer GTM
+
+
+and our own GTE go to engineer at infra
+
+
+Cloud so I'm sure this is going to be a
+
+
+very interesting uh discussion so uh I
+
+
+was at cubec con uh a few months back
+
+
+and even a few weeks back here in India
+
+
+and uh you know one of the things that I
+
+
+saw there over was a a flood of AI tools
+
+
+right and all of the tools actually
+
+
+promising all of us to become Superstar
+
+
+developers you know some of them helping
+
+
+us write code some of them helping us
+
+
+you know find patterns in our
+
+
+observability logs and some of them help
+
+
+us helping us review code and you know
+
+
+deploy it further so before I you know
+
+
+actually Deep dive into the meat of the
+
+
+webinar let us demystify this whole 10x
+
+
+engineering thing according to me it's
+
+
+more about the impact that a person does
+
+
+as a developer that's what I feel what
+
+
+10x engineer is but then let me pick the
+
+
+brains of Arin and Samir to understand
+
+
+their perspective of what a 10x engineer
+
+
+is so Arin why don't you go first and
+
+
+tell us what your ideology or thought
+
+
+about a 10x engineer
+
+
+is you are on mute I'm on mute yes okay
+
+
+I hope I hope I'm audible so again I
+
+
+think uh I know that a lot many people
+
+
+think that oh it's so cringe that
+
+
+they're talking about 10x engineer why
+
+
+does it matter right I I'm in the same
+
+
+bucket um I I I know that there is like
+
+
+a mythical 10x engineer like some sort
+
+
+of like a angel or someone who does like
+
+
+crazy stuff uh like an individual who
+
+
+consistently delivers 10 times the
+
+
+output or like you know compared to like
+
+
+X engineer and then you know exceptional
+
+
+level of productivity and Effectiveness
+
+
+able to prioritize things big things
+
+
+that are like doable and like you know
+
+
+me everything that a project manager or
+
+
+engineering manager would want uh but I
+
+
+think like you know end of the day I
+
+
+think this is what we are all thinking
+
+
+about but I would always look at a 10x
+
+
+engineer is someone who could see the
+
+
+bug or the pattern or a cord smell from
+
+
+very far and who could imagine what
+
+
+could go wrong if you follow this
+
+
+pattern or if you dive down this sort of
+
+
+like you know allocating a memory or
+
+
+deating a memory uh or like probably
+
+
+making a call to a specific API or
+
+
+handling concurrent users in a specific
+
+
+method right I think these are people
+
+
+who could probably tell us like how to
+
+
+really make programming and art and uh
+
+
+not just the science or a rule engine
+
+
+system so I would say more of that area
+
+
+and then these are 10x Engineers who
+
+
+live around us like they they maybe it's
+
+
+specific to a Project Specific to a
+
+
+client sometimes more specific to like
+
+
+you know a sector uh it depends on where
+
+
+they work but uh right now that that
+
+
+level is like you know uh equalized and
+
+
+uh I we would talk more about it but
+
+
+then that's what is TX engineer is to me
+
+
+is like someone who would really know
+
+
+what they are doing and could Mentor
+
+
+many people and make them more super
+
+
+super
+
+
+efficient interesting I think on a
+
+
+lighter note what irin tried to say was
+
+
+that while a 10x engineer is writing the
+
+
+code they can look at the semicolon and
+
+
+say that okay this is going to you know
+
+
+uh fail in production
+
+
+so that's a lighter take but yeah I I I
+
+
+agree you know someone who who can
+
+
+actually smell uh you know
+
+
+issues like you said or identify
+
+
+interesting patterns of things you know
+
+
+that that are happening around I think
+
+
+that's a good way to put a 10x engineer
+
+
+over to you Samir what are your thoughts
+
+
+around
+
+
+this uh yeah so uh like you guys were
+
+
+mentioning right TX engineer uh the
+
+
+mythical TX engineer uh in prei Era if
+
+
+you ask me it was uh very difficult to
+
+
+uh come across such a personality
+
+
+because that would mean uh seeing on
+
+
+working with someone who consistently is
+
+
+producing uh you know a large amount of
+
+
+outcome uh you know uh whether you would
+
+
+call it a 10x or you know a few X or not
+
+
+you know that depends of course on you
+
+
+know your lens but uh the person uh is
+
+
+supposed to be you know working very
+
+
+hard and you
+
+
+know getting output in a short time for
+
+
+uh a very large amount and that was very
+
+
+uh SC rare to come by but uh with the
+
+
+Advent of AI uh this definition itself
+
+
+has changed because a lot of things that
+
+
+that person would get done in short
+
+
+amount of time because of either his uh
+
+
+uh skill level or his knowledge uh those
+
+
+things you uh can get very easily out of
+
+
+AI so with the Advent of AI
+
+
+uh this uh uh this definition of 10x
+
+
+engineer has evolved a bit so uh now if
+
+
+you want to be a 10x engineer there are
+
+
+a few things that uh you have to uh
+
+
+understand first and then you know make
+
+
+sure you know you work towards achieving
+
+
+those and then definitely you know many
+
+
+of us or you know even all of us can
+
+
+become uh get to that 10x engineer uh uh
+
+
+persona
+
+
+so uh some of those could be you know uh
+
+
+first of all you absolutely have to have
+
+
+uh Mastery over AI power tools okay
+
+
+because that is how you increase your
+
+
+uh uh productivity uh by
+
+
+multia uh but that itself is not enough
+
+
+you also have to have a problem solving
+
+
+and Innovative uh uh mind uh that you
+
+
+have to develop uh uh in addition to
+
+
+that you have have to be uh a critical
+
+
+thinker a decision maker so you have to
+
+
+have uh the entire life cycle of the uh
+
+
+product planned in your head uh the
+
+
+design of design for that product the uh
+
+
+implementation approaches testing
+
+
+approaches all of that you have to have
+
+
+uh thought of well in advance so that
+
+
+you know you can make use of these AI
+
+
+tools and the capabilities that it
+
+
+offers you uh in a effective manner so
+
+
+that you can get to that
+
+
+uh uh 10x productivity uh without
+
+
+getting bogged down by smaller
+
+
+details interesting I think Samir has
+
+
+given us an all round uh you know
+
+
+definition of a 10x engineer who is
+
+
+supposed to be all round right uh you
+
+
+know be it a critical thinker or you be
+
+
+good at development finding identifying
+
+
+patterns one thing that Samir actually
+
+
+mentioned while he was you know talking
+
+
+about this was the pre-i era and the
+
+
+post or the current ER it's not post I
+
+
+cannot say post but then the prea era
+
+
+and the current ERA and uh you know one
+
+
+of the things that has changed over the
+
+
+past is the sdlc your the your typical
+
+
+software development life cycle uh I
+
+
+remember back in college we studied
+
+
+about the waterfall model or the agile
+
+
+model and you know all the various steps
+
+
+that are involved in sdlc and how they
+
+
+actually progress to build a particular
+
+
+application or you know release a
+
+
+particular feature now there has been
+
+
+quite a change like uh like Samir and
+
+
+Arin both pointed out and this change
+
+
+has not taken a million years or so it's
+
+
+just been like say five years or four
+
+
+years and this cycle keeps on changing
+
+
+every year because the landscape changes
+
+
+you know the demands of your customers
+
+
+changes everyone wants things to be more
+
+
+agile more flexible right so before we
+
+
+actually get into the AI part let us
+
+
+look at how the whole process earlier
+
+
+was and what are the various issues that
+
+
+came along uh you know with the
+
+
+traditional uh way of working so I would
+
+
+go first uh you know because I'm the
+
+
+host so I'll take that you know leverage
+
+
+uh so I I have been a tester for a large
+
+
+part of my career initially and one of
+
+
+the major hurdles that I used to face
+
+
+during the uh you know pre- AI era if I
+
+
+can use that word was always around the
+
+
+quality you know the every time I used
+
+
+to get a build or a feature Shi from my
+
+
+developer either the unit test was uh
+
+
+you know missing or some feature that
+
+
+they while testing uh and you know
+
+
+something that was not implemented and
+
+
+it was probably not in line with what
+
+
+the story was supposed to be right uh
+
+
+and I'm sure a lot of other folks who
+
+
+have joined into to this webinar right
+
+
+you would have also been a part of the
+
+
+entire sdlc or maybe at some point where
+
+
+you are either uh you know build writing
+
+
+code or you are fixing code or you're
+
+
+are you know probably looking at
+
+
+observability and figuring out what's
+
+
+going on what's going wrong in your uh
+
+
+you know pipeline and so on and so forth
+
+
+so there are a lot of challenges that
+
+
+were involved you know early on and here
+
+
+are some that that I have put you know
+
+
+apart from highlighting the quality
+
+
+issues uh so Sam from since since you
+
+
+have spent about a decade you know
+
+
+building applications from your
+
+
+experience uh what are some significant
+
+
+uh changes or significant challenges
+
+
+sorry that you have come across uh you
+
+
+know earlier the the pre AI era as you
+
+
+mentioned definitely yeah so uh the
+
+
+software development life cycle has
+
+
+changed uh fundamentally since the AI
+
+
+tools have become core part of the
+
+
+workflows so before uh so much of the
+
+
+process in the sdlc relied on manual
+
+
+efforts so like uh uh uh the development
+
+
+which is the large part of your uh
+
+
+sdlc uh most of it uh used to spend on
+
+
+writing boiler plate code or uh getting
+
+
+uh manage uh managing and writing
+
+
+repetitive tasks uh troubleshooting
+
+
+issue issues and that too after the
+
+
+surfaced uh now that led to inconsistent
+
+
+uh quality as well because even when it
+
+
+comes to reviews uh it largely depended
+
+
+on uh the individuals uh either
+
+
+capabilities his skills and of course
+
+
+you know the available uh bandwidth
+
+
+depending on you know the situation or
+
+
+you know the timing in which you are uh
+
+
+in the sdlc uh for releasing your uh
+
+
+product
+
+
+uh
+
+
+uh so this was a mostly reactive process
+
+
+uh where the problems used to be
+
+
+identified quite late and then uh you
+
+
+know fixing those would take uh large
+
+
+amount of time uh as opposed to you know
+
+
+they were were uh they were identified
+
+
+before and what this used to lead to was
+
+
+to uh uh having the
+
+
+uh best practices tasks you know for
+
+
+example writing a proper documentation
+
+
+writing uh sufficient amount of unit
+
+
+tests or even you know uh small task
+
+
+like you know uh maintaining and writing
+
+
+good commit messages so these kind of
+
+
+task they used to take a back seat now
+
+
+uh with the AI tools uh most of these
+
+
+tasks which uh either are repetitive or
+
+
+uh the uh best practices sort of tasks
+
+
+they you can automate them and you know
+
+
+get them done very quickly so that LE uh
+
+
+that actually relieves you a lot of the
+
+
+burden that you used to have and then uh
+
+
+uh that helps you uh focus on the core
+
+
+or the Crux of the uh product and uh
+
+
+making sure that that gets delivered uh
+
+
+to the highest
+
+
+quality sure I think what I'll probably
+
+
+pick uh from from from what you said was
+
+
+initially it was more of a reactive
+
+
+process and uh only when something went
+
+
+wrong we would start trying to figure
+
+
+out what actually went wrong where it
+
+
+went wrong and now I think with with the
+
+
+Advent of AI a lot of process is
+
+
+becoming Proactive Plus like you you
+
+
+know touched upon a few things which
+
+
+focused on how to improve the process
+
+
+right and uh this is where you know here
+
+
+are some you know key benefits that we
+
+
+felt uh are you know are largely
+
+
+contributed by AI uh but then Arin what
+
+
+are your thoughts on terms of the
+
+
+various pain points that the that AI can
+
+
+help solve when it comes to a
+
+
+traditional sdlc so what are some pain
+
+
+points that AI
+
+
+solves see I think uh end of the day uh
+
+
+a lot many times when we try to build
+
+
+our code let us talk like a developer
+
+
+right we we pick up a ticket or
+
+
+something and then we try to make sense
+
+
+research about it think of a flow write
+
+
+the sub code and then you know probably
+
+
+check with somebody can I can I do this
+
+
+in this project do this way because I I
+
+
+have no clue if I have to implement it
+
+
+that way because I'm touching a new code
+
+
+or like you know writing a new feature
+
+
+right there's a lot of research it's
+
+
+it's very subjective to each project
+
+
+that each developer does it might be a
+
+
+legacy banking system it could be
+
+
+something like very
+
+
+flashy people might be using nexts to do
+
+
+something or react to write custom stuff
+
+
+right so but we all do a lot of research
+
+
+I think that research time has reduced
+
+
+right now you could find things very
+
+
+faster but also there is an edge case
+
+
+that we can all discuss right now but
+
+
+then the point being uh your research
+
+
+task is so less you get information so
+
+
+faster you should all use that for sure
+
+
+so that is the major benefit when it
+
+
+comes to uh AI right I mean using the
+
+
+generative AI using Code generation or
+
+
+any of these things right you could go
+
+
+out and search what is like the how do I
+
+
+understand like you know promises and
+
+
+then what are the bad practices using
+
+
+promises in in in the react ecosystem or
+
+
+something or you would want to see what
+
+
+is the if someone gave you a system to
+
+
+hey we need to go off this o system and
+
+
+try to implement our own o how do I
+
+
+build an O system and then you know
+
+
+probably what are the basic things good
+
+
+bad ugly and then if there is any open
+
+
+source library that I could use so I
+
+
+think those are the things that uh
+
+
+people could literally do research task
+
+
+is simply simply simply simply easy so
+
+
+so yeah I think that uh that that's
+
+
+that's more important yeah in
+
+
+general y I think I'll totally uh you
+
+
+know agree with you uh on the research
+
+
+part or you know in in general also
+
+
+focusing more on the learning curve I
+
+
+think with with a lot of AI tools now
+
+
+available it's it's very easy for a
+
+
+developer to take on a new framework or
+
+
+understand a new language or a new tool
+
+
+because uh you know AI is there to
+
+
+assist it's it's like everyone says that
+
+
+you have someone else sitting next to
+
+
+you who is guiding you to go you know do
+
+
+stuff at 10x the speed right so uh I I
+
+
+definitely you know agree to that
+
+
+research bit uh also you know it it
+
+
+reduces a lot of manual effort like like
+
+
+we have pointed out and like Samir
+
+
+mentioned earlier you know a lot of
+
+
+repetitive task that you did earlier you
+
+
+know maybe it was as simple as checking
+
+
+out your code and pushing a pushing a
+
+
+commit or uh you know maybe writing a
+
+
+read me file for you so a lot of these
+
+
+things have been taken care of by the AI
+
+
+applications that we have and that
+
+
+eventually leads to a lot of time
+
+
+savings as well and which eventually
+
+
+improves the productivity of a developer
+
+
+as well as you know improves the quality
+
+
+of the features that we ship so well
+
+
+these are the benefits let us touch upon
+
+
+some reasons as to why you should be
+
+
+using these tools in your uh you know
+
+
+dat task as a developer uh you know for
+
+
+for some developers it would be like hey
+
+
+I can sit and write my own function but
+
+
+for others it would be like hey no I
+
+
+need code completion because that allows
+
+
+me to do things faster and build
+
+
+features faster right so uh this this is
+
+
+this is one uh debate some folks might
+
+
+might have uh we we do have some
+
+
+pointers here on the screen but I would
+
+
+like to hear from you Samir what are
+
+
+some maybe couple of reasons why you
+
+
+feel someone should use an AI tool in
+
+
+the day-to-day uh development
+
+
+workflow uh definitely I mean uh the
+
+
+points that I mentioned before that you
+
+
+also touched upon uh doing the
+
+
+repetitive tasks and you know just
+
+
+getting AI to do those for you I think
+
+
+that's a huge help and that's a huge
+
+
+reason why anyone should uh go to AI Dev
+
+
+tools but that's not that's not the only
+
+
+reason right you know uh I'm sure uh you
+
+
+know you you to as well as many of our
+
+
+listeners would have also experienced
+
+
+this where you know uh you are you have
+
+
+a tight deadline and uh you are putting
+
+
+in extra efforts right uh what you're
+
+
+doing at that point of time is you know
+
+
+just sitting at your desk uh focusing on
+
+
+your work and then making sure that uh
+
+
+whatever tasks you are uh assigned with
+
+
+they get done uh in that you know 10 12
+
+
+hours of time that you have
+
+
+spent uh but what happens is even if
+
+
+even though you are uh just sitting at
+
+
+your desk and you know uh working which
+
+
+is not a very physically intensive task
+
+
+you would feel uh drained out at the end
+
+
+of the day right and that is mostly
+
+
+because you know the thinking that
+
+
+you're doing you know that uh drains out
+
+
+your energy quite a lot but uh with AI
+
+
+uh you can leave uh the uh uh you can
+
+
+leave the bulk of the uh tasks to Ai and
+
+
+then get the same amount of stuff done
+
+
+in a very less amount of time so that uh
+
+
+is a huge uh help to you in terms of you
+
+
+know saving your
+
+
+energy uh and uh that is one of the
+
+
+biggest reason I would consider AI D
+
+
+tools uh it it is also uh uh a way of uh
+
+
+overcoming mental blocks so many times
+
+
+you know we would find ourselves you
+
+
+know thinking and racking our brains as
+
+
+to know how would I uh overcome this
+
+
+problem uh it could be writing a complex
+
+
+algorithm for uh uh the uh the uh
+
+
+feature that you're implementing or it
+
+
+could be you know even something as
+
+
+small as you know uh WR making sure that
+
+
+the tests that you're writing work right
+
+
+so any of these tasks if you are having
+
+
+a mental block AI can come and help you
+
+
+to you know suggest different things
+
+
+different approaches and you know just
+
+
+uh speed speed along the uh overcoming
+
+
+those blocks so those are the few of the
+
+
+biggest reasons uh in my opinion
+
+
+interesting uh points there Samir I
+
+
+think I I totally e your thoughts when
+
+
+it comes to you know overcoming mental
+
+
+blocks and you know writing some uh
+
+
+initial stuff that you need so that it
+
+
+it it you know it speeds of your entire
+
+
+development process uh coming to irin I
+
+
+know the kind of work that you do I've
+
+
+seen you wear many hats and do different
+
+
+things and I know that you interact with
+
+
+a lot of different people you interact
+
+
+with people of different uh you know
+
+
+from different backgrounds different uh
+
+
+you know experiences different personas
+
+
+and what I want you to help our audience
+
+
+and me
+
+
+understand using a Dev AI Dev tool from
+
+
+a perspective of a junior engineer who
+
+
+just joined the team versus someone who
+
+
+has been who who Samir for example right
+
+
+you have Samir at one land who has spent
+
+
+12 years building applications and other
+
+
+side you have let's say me who has just
+
+
+joined the team and I'm I'm barely two
+
+
+years now so with these two personas in
+
+
+mind how do you uh suggest them why
+
+
+should they be using AI
+
+
+tools I think cut across I mean if you
+
+
+looking at like why does it make give
+
+
+productivity to different people like
+
+
+maybe it gives productivity to someone
+
+
+like a junior engineer it gives how does
+
+
+it help senior devs uh I have two
+
+
+perspectives like I think I have met
+
+
+very recently a lot of senior devs who
+
+
+don't really find Value in AI at the
+
+
+same point of time I met a person who's
+
+
+been uh working with life of WhatsApp
+
+
+and apple and been maintaining I think
+
+
+it's it's the podcast that I'm talking
+
+
+about that I did with it founder George
+
+
+nashman and um he's been working on that
+
+
+project for 23 years he founds AI to be
+
+
+extremely productive uh which is
+
+
+something that I like did not expect him
+
+
+to say that but then he finds CH GP
+
+
+interesting so I think there are all
+
+
+sorts of people all sorts of buckets uh
+
+
+some are some are in or some in working
+
+
+in specific Niche and like specific
+
+
+areas might not really find it effective
+
+
+because it doesn't really move the
+
+
+needle like
+
+
+from 40 to 70 uh for some it does move
+
+
+needle from 20 to 70 right so so I think
+
+
+uh I think end of the day uh be a junior
+
+
+developer uh who's learning the skill on
+
+
+the job and or a senior developer it AI
+
+
+is helping them end of the day so if you
+
+
+look at it from that level uh but but
+
+
+what I've seen senior developers more
+
+
+consciously looking at it is they
+
+
+actually rigorously check the output
+
+
+they do really rigorous verification of
+
+
+whether is it real uh and if then they
+
+
+really make fun of it well when it
+
+
+doesn't work and then they start
+
+
+developing that contrary notion of like
+
+
+oh this one that way right like same
+
+
+thing that you have with linters right
+
+
+when linters find issues which are
+
+
+trivial in nature that you know it is
+
+
+not an issue and then it still flags
+
+
+that hey can this be null like you know
+
+
+why don't you do a null check so so
+
+
+things like that right uh and then you
+
+
+know maybe they're very curious but then
+
+
+also like be cautious and they always
+
+
+encourage like you know being in the
+
+
+loop right so senior developers always
+
+
+have that
+
+
+feeling that I keep noticing and uh but
+
+
+then I think Junior developers are a bit
+
+
+like on the other end Sometimes some are
+
+
+very good but then sometimes they
+
+
+probably think that okay this is it I
+
+
+I've done I'm done with this one uh but
+
+
+in the long term if you don't challenge
+
+
+AI confirms your bias and then it is not
+
+
+just giving a lot of contrary feedback
+
+
+so so I would say that it is helpful to
+
+
+both spectrums or different different
+
+
+sort of users it's how you probably like
+
+
+know make your way through and how do
+
+
+you probably prompt and that's why I
+
+
+think I've been also trying to work on a
+
+
+specific guide uh or or things that how
+
+
+do you prompt prompt engineer a code
+
+
+generation model to get what you want
+
+
+how do you probably ask questions to
+
+
+your code generation model so that it
+
+
+yields the right sort of results so it's
+
+
+most probably for everyone right
+
+
+including senior developers
+
+
+as interesting I think the the point
+
+
+that you made about moving the needle
+
+
+from 40 to 70 and 20 to 70 and that
+
+
+really depends on on the use case and
+
+
+how they actually perceived and uh the
+
+
+whole fact that you know doing a fact
+
+
+check of what AI generates right when I
+
+
+ask AI to write me a complex function a
+
+
+junior Dev like you rightly pointed out
+
+
+might just take it and paste it and say
+
+
+hey I'm done but a senior day would
+
+
+probably look at it and say okay this
+
+
+might lead to some memory leak somewhere
+
+
+or it might you know it might affect
+
+
+some of the other function that I have
+
+
+so I think uh the reason for using is
+
+
+clear but then how do you use it is also
+
+
+you know I and with the question of how
+
+
+I think I would like to ask all our
+
+
+audience you know who have joined in
+
+
+that how do you use uh you know your AI
+
+
+to it's a you know do do put in the
+
+
+comments in terms of what are the tools
+
+
+that you use and how you use them uh you
+
+
+know we would be discussing about
+
+
+various tools and various different
+
+
+steps where you can use them uh but we
+
+
+would like to hear from you what are the
+
+
+tools that you use and why do you use AI
+
+
+so uh I'll take the first chance I'll
+
+
+put my use case in the comments and and
+
+
+I would expect folks to do uh the same
+
+
+as well now let us now we we since we
+
+
+already discussed about sdlc then and
+
+
+now and we spend a lot of time on
+
+
+understanding uh the benefits that AI
+
+
+bring to the table especially in the
+
+
+development life cycle and like Samir
+
+
+earlier also mentioned right AI can be
+
+
+plugged into every step of your sdlc and
+
+
+it can help you offload a lot of Burden
+
+
+from a developer so you know some of the
+
+
+task that it can really help with the SC
+
+
+generation I think a lot of us uh you
+
+
+know including me use it to generate
+
+
+code uh you know infrastructure
+
+
+configuration or when it comes to
+
+
+writing your documentation or
+
+
+configuring some security settings even
+
+
+doing code review right so these are
+
+
+some larger areas and I think over the
+
+
+next uh seven to eight minutes I will
+
+
+let Samir and Arin walk through each of
+
+
+these areas uh and probably talk about
+
+
+some tools that they have used for each
+
+
+specific uh task and uh how has their
+
+
+experience been using those tools or in
+
+
+general using the AI Tools in that
+
+
+particular space so let us start by
+
+
+talking about code generation and
+
+
+assistance so Samir uh over to you sure
+
+
+yeah so I think this has been the most
+
+
+talked about area uh in my experience
+
+
+and uh there are a bunch of tools over
+
+
+here uh who have been in the news uh in
+
+
+the uh discussions quite a lot uh so
+
+
+cursor uh has been gaining a lot of
+
+
+traction in when it comes to code
+
+
+generation and I myself have been using
+
+
+cursor for a long time uh the
+
+
+capabilities that uh cursor uh brings to
+
+
+a developer they are just amazing
+
+
+um uh especially if you talk about the
+
+
+composer feature of cursor uh I like
+
+
+that quite a lot and if you have uh I
+
+
+mean if you follow the best practices of
+
+
+using uh AI tools especally the AI code
+
+
+generation tools it can be a very very
+
+
+powerful tool in Your Arsenal if you ask
+
+
+me uh but that's not only uh that's not
+
+
+the only uh tool of course you know
+
+
+there are open source alternatives to it
+
+
+as well AER uh I have used for some time
+
+
+and a few of my colleagues also have uh
+
+
+been using it uh so the good part about
+
+
+AER is uh you don't have to purchase any
+
+
+license uh as long as you have access to
+
+
+some llm uh and you can get an API key
+
+
+for it you can just use that with AER
+
+
+and uh you're all
+
+
+set uh an amazing part of uh AER is uh
+
+
+every time you look at the change log of
+
+
+ader you would see how much of the AER
+
+
+itself has been written by using ader so
+
+
+uh the last release if I'm not wrong has
+
+
+uh the seven 70 to 72% of the uh latest
+
+
+release code has been written by AER
+
+
+itself so that's how uh powerful uh
+
+
+these code generation uh tools and
+
+
+assistants uh have
+
+
+been interesting Arin have you found uh
+
+
+or what's your favorite when it comes to
+
+
+coach generation and assistance I've
+
+
+been following cursor right from the day
+
+
+one when they announced on Hacker News
+
+
+or something uh and then I I really love
+
+
+uh the way that the entire ID space has
+
+
+majored I'm I'm a IDE junkie been using
+
+
+different ID like uh not just jet brains
+
+
+I don't know how many of them remember
+
+
+net beans uh in the Java side of things
+
+
+right and a lot of these IDs like I
+
+
+worked on IBM rad Ral application
+
+
+developer and Lotus Notes kind of IDs so
+
+
+I I kind of like like a lot of these
+
+
+things so this is like a fantastic it's
+
+
+it's like a toy store for me at this
+
+
+moment uh and then I I kind of like use
+
+
+uh code uh I I I I I used to like find
+
+
+it okay but now with co-pilot and other
+
+
+extensions over the years I I find it
+
+
+like yeah I could probably use it uh I
+
+
+intellig ID is like my favorite one but
+
+
+then they don't have a lot of AI or
+
+
+really don't seem to B uh but then in
+
+
+general when it comes to code
+
+
+Generations I I kind of like use none of
+
+
+these IDs more prominently uh I probably
+
+
+use it for stop coding uh like just to
+
+
+generate that boiler plate um and
+
+
+probably get it reviewed by code rabit
+
+
+or something to just see if there are
+
+
+any issues but um but on on the top
+
+
+maybe I'm I'm more interested in like
+
+
+you know trying to find out more
+
+
+specific using Cloud give more context
+
+
+to Cloud I I I have cloud and like you
+
+
+know also chat GPT subscription so I
+
+
+kind of like try to spar around and then
+
+
+see what's better uh is it better like
+
+
+for example I I kind of like generated a
+
+
+code using cursor and then it's just C's
+
+
+fault in general like it generated more
+
+
+Super buggy code the code that would
+
+
+probably go in a linear fashion to go
+
+
+and get the list items from an API right
+
+
+it's a open it's a service like it and
+
+
+then I just asked can you do it better
+
+
+and then uh it suggested a much better
+
+
+way of like using threads and
+
+
+I but if I don't ask right these IDs
+
+
+would give me something that I probably
+
+
+know so so I think like ID is a is like
+
+
+a hammer and and your problem is your
+
+
+nail so I I kind of like find it very
+
+
+exciting uh but then also like the
+
+
+methods so agentic experience is
+
+
+something that I'm really interested in
+
+
+so both cursor and wind Surf and another
+
+
+ID from codium are like really into it
+
+
+there are so many IDs WR everybody every
+
+
+day there's a new ID so I think I'm I'm
+
+
+more excited at at least like trying out
+
+
+a couple of them and then see which one
+
+
+has more agentic experience but then end
+
+
+of the day not just because I work for
+
+
+COD rabbit but in general like you know
+
+
+it's good to get it reviewed to have an
+
+
+alternative perspective of like what
+
+
+things go go
+
+
+wrong yep I think so all these ID
+
+
+companies are keeping arind on his
+
+
+stores with a new new ID coming every
+
+
+day arind is always on his stores to try
+
+
+out what's what's happening new uh
+
+
+talking about new I think uh you know
+
+
+GitHub co-pilot yesterday they just uh
+
+
+released a free plan uh you know if you
+
+
+for for a certain uh number of prompts
+
+
+and certain number of minutes with uh vs
+
+
+code so yeah if you're using that you
+
+
+have a good option with you uh moving on
+
+
+to documentation yes Ian take us through
+
+
+on what are your tools that you have
+
+
+used um yeah so uh I myself has uh have
+
+
+been a uh developer for most of my
+
+
+career and even nowadays uh I've I do
+
+
+develop uh few things here and there so
+
+
+what I I'm saying is documentation is
+
+
+not my 4 but still I have tried a couple
+
+
+of
+
+
+uh uh documentation tools here uh so dog
+
+
+GPT if you guys uh don't know that is a
+
+
+uh tool for integrating AI assistants
+
+
+into uh Google Docs uh so I have tried
+
+
+that a few times and uh if you are more
+
+
+into writing product documentation
+
+
+mentaly writer uh is uh uh a great tool
+
+
+that uh can help you write and publish
+
+
+product documentation guides API docs
+
+
+and a bunch of things and can it can
+
+
+even help you publish uh those documents
+
+
+so uh but uh some tools uh in this
+
+
+uh in this are you know multi-tools for
+
+
+example uh the ID that we were just
+
+
+talking about right you know they uh
+
+
+serve multiple purposes so uh I have
+
+
+been using uh the same tools uh same s
+
+
+uh cursor and others uh to write unit
+
+
+test as well and uh they
+
+
+turn they they turned out to be great uh
+
+
+so uh they do job for you right yeah
+
+
+yeah I mean uh provided that you uh give
+
+
+it the right prompt the right context it
+
+
+can turn out it can write amazing unit
+
+
+test for you uh without you having to
+
+
+get too much involved in it yeah I think
+
+
+I think promp
+
+
+is the is the key here that arind also
+
+
+pointed out earlier AR anything from
+
+
+your side any specific tools that you
+
+
+have been using for documentation and
+
+
+testing
+
+
+specifically I did I did use one tool
+
+
+called doc e back in the day uh it used
+
+
+to generate uh do Ai and it used to
+
+
+generate multiple of these uh language
+
+
+specific framework specific
+
+
+documentation when you give um sort of
+
+
+indexing and stuff like that but then
+
+
+there are many many tools nowadays like
+
+
+I I know that there are people who are
+
+
+working not just generating Docks but
+
+
+also like answering questions on docks
+
+
+like Kaa AI in in keep which anthropic
+
+
+users you could go to docs. anthropy and
+
+
+then maybe search for it I think you
+
+
+would find a lot of these uh there are
+
+
+more customer service tools that I find
+
+
+more interesting that could generate
+
+
+documentation more of looks like b2c
+
+
+they clear feed AI uh in keep I I mean
+
+
+no sorry what is that anr AI um so some
+
+
+of them they could probably use so it's
+
+
+it's very interesting uh to see the
+
+
+different sort of approaches that people
+
+
+are taking to kind of like answer
+
+
+because end of the day it's not just
+
+
+about generating dos also like a of
+
+
+answering questions on the Dos people
+
+
+come to Dos to find API or like to find
+
+
+read understand so this is also like a
+
+
+chat GPT on your dogs kind of a
+
+
+thing interesting interesting I think
+
+
+when when it comes to infrastructure I'm
+
+
+sure you know it's it's while it might
+
+
+sound easy but then we know how complex
+
+
+infrastructure can get right and uh that
+
+
+there are some GPT you know let's say
+
+
+talk about terraform GPT or infra GPT
+
+
+that are out there and also you know the
+
+
+co-pilot and cursor will actually help
+
+
+you uh you know generate your
+
+
+infrastructure code or maybe you know
+
+
+even simplify the uh management task but
+
+
+uh Sam do you have a pick here or
+
+
+anything uh interesting that you have
+
+
+tried which actually makes our life
+
+
+easier um yeah I mean uh for
+
+
+infrastructure uh I believe most of the
+
+
+tools that I have come across uh they're
+
+
+just up and coming they're not uh up to
+
+
+the level of code assistance if you ask
+
+
+me uh but still uh you know you can
+
+
+again use the same multi-tools uh like
+
+
+we have been discussing uh and uh you
+
+
+can even get uh your infrastructure
+
+
+configurations out of that uh there are
+
+
+only a few areas like uh you know for UI
+
+
+development as such where you can find
+
+
+uh specific tools like V zero uh that uh
+
+
+is specialized tool for it but otherwise
+
+
+uh you know uh uh the code assistants
+
+
+are you know great at multiple things uh
+
+
+like we have been
+
+
+saying interesting v0 is what what you
+
+
+mentioned probably I'll have to go and
+
+
+check Arin do you have anything here or
+
+
+you also in the code assistance uh you
+
+
+know uh part that actually helps you do
+
+
+all these things as well yeah uh I mean
+
+
+uh when it comes to this sort of area
+
+
+generating configs uh there are I mean
+
+
+obviously you could use these uh code
+
+
+generation tools which can also generate
+
+
+some of this uh but the sample set might
+
+
+be very small I'm I'm just thinking that
+
+
+you know there's more that needs to be
+
+
+done there are people who do terraform
+
+
+test uh terraform test is a target that
+
+
+you could run on your terraform scripts
+
+
+uh so I guess like more people who are
+
+
+in the config space could do something
+
+
+more interesting because they have data
+
+
+and uh and then and then then uh I think
+
+
+until then it's just like the normal
+
+
+chat GPT and all of that uh so that
+
+
+that's what I feel there is uh there is
+
+
+like you know more Tools in this space
+
+
+that are to validate or like you know
+
+
+verify if a build is passing or or like
+
+
+you know what is a c c notation that
+
+
+would probably bring down your network
+
+
+or things like that when you compare so
+
+
+there's a contextual analysis or like
+
+
+you know making the decision based on
+
+
+that so I I'm more interested in that
+
+
+but generation is still again the same
+
+
+same lot in general the same it's the
+
+
+same yeah I think I I completely agree
+
+
+you know what you mentioned about
+
+
+validation I think when you're putting
+
+
+certain values especially when it comes
+
+
+to let's say dealing with the AML files
+
+
+or terraform files right a single value
+
+
+can break make or break stuff right and
+
+
+I think if if if you have certain tools
+
+
+that can validate what's what might
+
+
+happen with something of this sort or if
+
+
+this might just go and uh you know bring
+
+
+down your entire infra I think that's
+
+
+that's going to be really uh very
+
+
+helpful and I think with that is a good
+
+
+Segway to get into the security and
+
+
+scanning side of things and uh you know
+
+
+while while there are uh quite a few
+
+
+tools that we have already focused or
+
+
+discussed about you know in the earlier
+
+
+stuff right so uh you know we spoke
+
+
+about uh the various code assistance
+
+
+tool itself who can actually help you
+
+
+with uh you know basic level of scanning
+
+
+when it comes to your code repo or when
+
+
+your infra code uh but then things like
+
+
+uh you know snake probably that we have
+
+
+mentioned or check marks you know as
+
+
+Samir because Samir is the one who has
+
+
+who has you know put this tool in so I'm
+
+
+assuming you know he has you know
+
+
+definitely uh you know tried either uh
+
+
+one of these so Samir any any thoughts
+
+
+on these if there is your personal
+
+
+favorite or what are the things that you
+
+
+want to uh you know see when it comes to
+
+
+uh security side of
+
+
+things yeah so uh for security uh
+
+
+there's a uh these tools uh sneak or
+
+
+check marks they are primarily
+
+
+tools uh that is static application
+
+
+security testing and uh uh sneak is now
+
+
+powered by Deep Codi uh so that uh helps
+
+
+you uh do a much uh
+
+
+deeper uh s uh of thep code you know
+
+
+that is static application security
+
+
+testing and uh check marks AI I uh
+
+
+haven't tried myself but um I've seen
+
+
+some uh posts about it which are very
+
+
+promising yeah interesting so check
+
+
+marks is something that Samir is going
+
+
+to be you know giving giving it a you
+
+
+know try so moving on to the code review
+
+
+and quality which which is again very
+
+
+close to me because I started as a
+
+
+manual tester rolled up into an
+
+
+automation tester so quality has been
+
+
+something that just that just comes to
+
+
+me and uh I don't know if it's right but
+
+
+I have an eye for bugs and I for details
+
+
+sort of so uh you know I I do agree that
+
+
+you know a lot of this actually helps
+
+
+you improve the quality you know because
+
+
+they have a lot of uh you know huge data
+
+
+set provided where they can help us
+
+
+actually uh improve our code review our
+
+
+code and things like that so uh I think
+
+
+this this brings me to the uh Essence
+
+
+that the code quality is extremely
+
+
+important and that is one major area
+
+
+where uh you know AI can actually help
+
+
+uh reach the productivity that you want
+
+
+as well as the quality that you want and
+
+
+uh I would probably hand it over to Arn
+
+
+to discuss more on on this this side of
+
+
+things because uh you know he has been
+
+
+working in this space for quite uh quite
+
+
+some time now and I think he would be
+
+
+the uh right person to tell us on the
+
+
+trends that he has seen and how uh you
+
+
+know we can uh we we we can work with
+
+
+various tools to improve the
+
+
+quality yeah I think uh if you don't
+
+
+mind I think like maybe uh can I start
+
+
+showing the screen and then like you
+
+
+know sharing more information about like
+
+
+what I what I think about this specific
+
+
+case and like Show an example more
+
+
+interestingly so that would come that
+
+
+would tell the value a bit better
+
+
+absolutely yeah so I just go down and
+
+
+get your screen up and meanwhile we have
+
+
+goam saying how does he uses Chad GP so
+
+
+by the time we have irin screen coming
+
+
+up let us see what Gotham has to say so
+
+
+Gotham says uses CH GPT 01 to solve
+
+
+complex problems understanding insights
+
+
+of tools how they work efficient code
+
+
+generation troubleshooting code improve
+
+
+code with less interactions
+
+
+mostly yeah so that's that's uh that's a
+
+
+very uh you know uh powerful yet very
+
+
+useful uh you know use case that you're
+
+
+doing and then we have Sunil who who who
+
+
+mentioned about terraform GPT that he is
+
+
+using for his uh terraform files and now
+
+
+let us get back to what Arin has to show
+
+
+us yeah I mean just just like maybe two
+
+
+minutes I would take to show is what it
+
+
+is so I have this um specific uh app
+
+
+that is fully generated from cursor and
+
+
+I don't have in single I think I all
+
+
+prompted it and probably nudged it to do
+
+
+something as as a name suggest like this
+
+
+is not like uh us an invalidator what I
+
+
+want to do is like you know get all the
+
+
+star the repositories we all have stars
+
+
+right we press on like Star button maybe
+
+
+like multiple times a day if not at
+
+
+least like 10 times a month right at
+
+
+least so all of them have all of us have
+
+
+the Stars stored somewhere and there's
+
+
+nice list also that gith has provide
+
+
+that you could probably uh like know
+
+
+segregate into different categories but
+
+
+end of the day we are all like lazy
+
+
+people Dev are lazy so if we just start
+
+
+it we probably not even have created
+
+
+even if you have created something that
+
+
+we Peaks interest and then we want to
+
+
+work on it later but we never do it
+
+
+right we don't look at like a uh
+
+
+organized method like unless there is a
+
+
+project manager doing it but end of the
+
+
+day they generated this fully so that's
+
+
+why you see username validator instead
+
+
+of like star categorizer or something
+
+
+like that and uh like here I could
+
+
+probably give aru the just the username
+
+
+and it'll get me all the stuff I'm not
+
+
+going to demo this project like it's
+
+
+it's properly working uh but then I rais
+
+
+this this this is like a report that you
+
+
+could find automatically on start
+
+
+categorizer and then what I did is like
+
+
+you know I kind of like raised a PR
+
+
+because I just want to understand I I
+
+
+wrote the basic stop code and then I I
+
+
+made some small changes and see if there
+
+
+is any issues in this without doing
+
+
+anything uh if I used Ai and then like
+
+
+you know get it reviewed by AI like
+
+
+using llm or AI as a judge for another
+
+
+Ai and then remember like code rabbit is
+
+
+more reason it also does all the linters
+
+
+and more interesting stuff that you
+
+
+could all check by yourself using docs
+
+
+but then ideally like it does all of
+
+
+this like walkthroughs and things like
+
+
+that uh like see currently the I have a
+
+
+sample app I have a GitHub form
+
+
+component I have like an API that kind
+
+
+of like you know uh uh like you know
+
+
+that sends the data prints the data from
+
+
+the GitHub and then you know and then I
+
+
+send it to anthropic Cloud for
+
+
+categorizing them and then I send it to
+
+
+the display to display all of that right
+
+
+that's the that's of the entire thing
+
+
+and there is like whatever I have
+
+
+changed and what components I have at it
+
+
+but interestingly there seems to be a
+
+
+lot of like um St Cod or like you know
+
+
+code that kind of like I written that's
+
+
+maybe not really maintainable and
+
+
+probably I not even think thought about
+
+
+like bounds
+
+
+and which in ideal case you would do
+
+
+right you would always think about
+
+
+should it be 100 or should it be
+
+
+thousand at least like or it will be
+
+
+form uh when you try to you test it
+
+
+right so rate limiting is one of the
+
+
+suggestion that you know uh it does at
+
+
+the same point of time I also have like
+
+
+you know in here to single
+
+
+responsibility principle like maybe I'm
+
+
+I'm sending like you know mixing it
+
+
+mixing two things and probably not
+
+
+uh handling responds well in general
+
+
+right so there's a commentable
+
+
+suggestion also like it tells me like
+
+
+how do I make it a bit better so it
+
+
+seems to be very interesting to me uh
+
+
+and also like you know more how does how
+
+
+do I like you know play up with this API
+
+
+key and all so it seems that whenever I
+
+
+make all these code changes it seems not
+
+
+everything is so well done and there's
+
+
+more work that I need to do and this is
+
+
+like the first pass right I think if I
+
+
+grill it a bit more deeper probably I'm
+
+
+going to get more interesting insights
+
+
+out of this
+
+
+and then I haven't done like there are
+
+
+more nitpick comments that it is trying
+
+
+to do which is out of the scope maybe
+
+
+and then you know see it is saying that
+
+
+and then I I kind of like you know uh
+
+
+did not care for it but I also have a
+
+
+chill profile like you know which says
+
+
+that you know make it very simple don't
+
+
+don't try to make it more aggressive and
+
+
+don't try to there are more features
+
+
+like this so so the point being it's not
+
+
+about just code rabbit it's about like
+
+
+the AI code generation or like even
+
+
+generally when you write code you might
+
+
+have might not have all the time a
+
+
+perspective which a human brings in in a
+
+
+code review or validation point of view
+
+
+so that's where I think uh all of this
+
+
+is going to help you and that's where I
+
+
+think um uh AI could help each other but
+
+
+are your regular processes could help
+
+
+help each other like you're unit testing
+
+
+so it's more important that we give
+
+
+value to all of these things than ever
+
+
+in the from the previous we also have
+
+
+similar report that if you want to check
+
+
+like there's something called codra
+
+
+prview you could just raise the prv on
+
+
+this report with with a sub quod it's
+
+
+open source report and like for example
+
+
+aul recently made an OS quod it's a
+
+
+simple login page app and then you can
+
+
+simply find a bunch of OS issues of
+
+
+course he purposefully generated some of
+
+
+them but then there are more interesting
+
+
+issues about libraries about how do you
+
+
+manage that a lot of this pretty
+
+
+interesting actually you should just for
+
+
+fun so so I think I would leave this
+
+
+link in the comments but otherwise I
+
+
+would want you to test it for fun right
+
+
+why don't you try that Cod rabbit hyen
+
+
+PR hyen review just give it a
+
+
+shot thank you so much irin for that and
+
+
+what we just uh witnessed was a very
+
+
+cool uh yet insightful intro to code
+
+
+rabbit and uh I've been fortunate enough
+
+
+to give it a try to give it a shot and
+
+
+uh you know it has been quite uh
+
+
+interesting uh you know arind has shared
+
+
+a link for that as well the the pr
+
+
+reviewer that we have so you can you
+
+
+know go ahead and check it out it's
+
+
+there in the comments as well uh so it
+
+
+has given me a lot of insights in terms
+
+
+of how to write better code as well and
+
+
+I think two things that stand out for me
+
+
+is the the the sequence diagram that it
+
+
+generates I think that's just blows my
+
+
+mind always I I create an application
+
+
+with multiple files with multiple
+
+
+modules you know different classes and
+
+
+just raise a PR and it's there it tells
+
+
+me that okay hey this function is
+
+
+interacting with this particular actor
+
+
+and this is what it's doing so I think
+
+
+it gives me a good uh you know overview
+
+
+of it and then secondly I think uh it's
+
+
+it's very configurable so I've been
+
+
+pointed out at one place that he has
+
+
+given the review profile to be chill and
+
+
+you know that's where you can play
+
+
+around and configure the whole you know
+
+
+review process if you think uh you know
+
+
+you are a Superman and you can take
+
+
+every you know possible comment that can
+
+
+come just change the profile from chill
+
+
+and then you will get the real answer of
+
+
+how how how an actual you know code
+
+
+review actually takes place so do check
+
+
+it out it's it's been a fun tool that I
+
+
+have used and uh I think now it's now
+
+
+it's fair enough that we have spoke
+
+
+about a lot of tools a lot of processes
+
+
+uh where different tools can be used
+
+
+different areas we heard from users how
+
+
+they are using various tools it's
+
+
+important to understand the pitfalls of
+
+
+this because when there are a lot of
+
+
+people talking about tools I'm sure that
+
+
+you know a lot of people who joined the
+
+
+webinar today got to know about a lot of
+
+
+tools and
+
+
+if I'm not wrong maybe 90% of those
+
+
+people will actually just go there and
+
+
+you know just Google that tool configure
+
+
+it and start using it without probably
+
+
+giving a heed on you know how how things
+
+
+happen or how it works so I think it's
+
+
+important to understand or discuss what
+
+
+are the common pitfalls that that occur
+
+
+when people adopt uh you know AI tools
+
+
+and then what are the best practices to
+
+
+uh you know avoid them so uh there are a
+
+
+few points here but then uh Arn what
+
+
+what are your thoughts on some pitfalls
+
+
+uh you know that that people uh you know
+
+
+actually get into when they are adopting
+
+
+new
+
+
+tools I think uh I would still want to
+
+
+say that you know please be please
+
+
+please uh think like cross question
+
+
+think it like a legal drama right when
+
+
+you ask a prompt uh and then like it
+
+
+gives you a code or something especially
+
+
+with code right or any configuration or
+
+
+anything that you're generating even
+
+
+dogs right even if you're trying to
+
+
+verify some normal information try to
+
+
+cross check are you sure or like you
+
+
+know uh does it solve this so that's
+
+
+such sort of like cross verification and
+
+
+reasoning it with is very important uh
+
+
+AI confirms your bias it's very
+
+
+important statement like you know it it
+
+
+confirms it it it add the plus one to
+
+
+you and then just just remember that you
+
+
+know you might want want to do that over
+
+
+and over and then uh and it also like
+
+
+you know probably gives you what it can
+
+
+do in like the limited set of thing if
+
+
+you have perfect Ed a prompt and ask
+
+
+something really interesting then I
+
+
+think um then I think like you know it's
+
+
+a different challenge altogether but
+
+
+otherwise most of the times we just ask
+
+
+like you know uh questions like you know
+
+
+can you generate a palindrome and then
+
+
+it generates palindrome code so but we
+
+
+know that we don't ask our asks are more
+
+
+complex right so just remember like all
+
+
+the points that are on slide we all
+
+
+discussing we we put it together um so
+
+
+just remember that you know while all of
+
+
+them are important that's the major one
+
+
+blind trust proper pro products it it
+
+
+gives you a lot of adrenaline rush
+
+
+adrine rush to code with AI and I've
+
+
+been experiencing it like for the past
+
+
+one year and um I kind of like couldn't
+
+
+ask for
+
+
+more yeah I think I I I I've fallen into
+
+
+this trap you know talk about premature
+
+
+jump to Development I've been there like
+
+
+hey quickly generate something and I
+
+
+directly use it or you talk about
+
+
+spaghetti code that we use here because
+
+
+uh my role I usually am spending time
+
+
+writing building different use cases
+
+
+different applications and uh very often
+
+
+I don't actually look at things or maybe
+
+
+I don't I didn't used to look at things
+
+
+now I definitely you know do a careful
+
+
+consideration but then uh you know back
+
+
+in the day it used to be like okay hey
+
+
+build me a login page and just just you
+
+
+know uh get done over with it
+
+
+now how do you avoid this uh Pitfall so
+
+
+some would you want to give some few
+
+
+tips your few quick hand tip that people
+
+
+can take back and to to avoid such
+
+
+common
+
+
+pitfalls sure um I think the biggest one
+
+
+uh that people must follow uh to use any
+
+
+AI to you know just not not the AI tools
+
+
+that we have discussed in the uh webinar
+
+
+so far but you know even if you are just
+
+
+you know chatting with uh chat GPT uh
+
+
+and uh expect a good outcome or you know
+
+
+a relevant outcome uh one thing that
+
+
+everyone must do is uh prompt
+
+
+engineering and learn how how to do that
+
+
+so uh what happens is when we are
+
+
+developing right you know like you
+
+
+mentioned before uh premature jump to
+
+
+development uh we are all guilty of that
+
+
+and what happens is the picture is kind
+
+
+of clear in our mind at that point but
+
+
+what we end up doing is you know you we
+
+
+just uh be very stingy with the words
+
+
+that we use with the AI and uh that of
+
+
+course is not going to convey the full
+
+
+picture of you know what you want uh to
+
+
+get out of uh EI so that of course uh
+
+
+will generate something for you based on
+
+
+uh its own algorithm but then uh more
+
+
+often than not it will not match what
+
+
+you were expecting out of it so it is
+
+
+very essential that uh whatever your
+
+
+thoughts are you know you have to put
+
+
+them uh in in the prompt and in a proper
+
+
+format uh so that is why prompt
+
+
+engineering is a must have if you ask me
+
+
+for everyone who is using uh AI
+
+
+tools uh secondly uh uh like I also
+
+
+mentioned in the beginning uh of this
+
+
+webinar that you know having a full
+
+
+picture in your mind is also very
+
+
+important so if you have thought of all
+
+
+the aspects you have uh decided as you
+
+
+know what design approach you're going
+
+
+to take what are the libraries or
+
+
+Frameworks that that you're going to use
+
+
+what is the approach you're going to
+
+
+take for uh a particular piece of uh
+
+
+feature that you're writing so if you
+
+
+have that Clarity in your mind and you
+
+
+convey that uh to AI then it can follow
+
+
+that uh uh and give you a uh much better
+
+
+much uh error free code uh than if you
+
+
+were not to give that to it and of
+
+
+course you know uh reviewing that code
+
+
+is also very important because uh it is
+
+
+known to be prone to hallucinations so
+
+
+making sure that whatever outcome you're
+
+
+getting you have to verify that yourself
+
+
+otherwise you know you might end up uh
+
+
+far very far away from what you actually
+
+
+expected to be absolutely yeah I mean uh
+
+
+never trust blindly anything that you
+
+
+see uh you know have the the better the
+
+
+prompts are the better the responses you
+
+
+know that you will get so I think these
+
+
+slides will be available this webinar is
+
+
+recorded so you can definitely go back
+
+
+uh and see what we discussed uh we are
+
+
+at the top of the year and uh if you
+
+
+have any questions we can take them I
+
+
+think there was one uh which I guess
+
+
+arind has responded to but I'll still
+
+
+flash it on the screen for our viewers
+
+
+and would want Arin to respond to that
+
+
+on the uh speed as well so Ali haar
+
+
+asked does the pr reviewer cover the
+
+
+code coverage and percentage coverage
+
+
+and also ensures whether UTS are being
+
+
+covered or
+
+
+not you are on
+
+
+mutein okay I keep today code rabbit is
+
+
+more like you know um informally
+
+
+generate unit tests over the pr for
+
+
+validation and all but it's not like a
+
+
+formal command which we which we really
+
+
+intend to uh do more of like you know
+
+
+documentation generation and then new
+
+
+test generation it's very exciting place
+
+
+to be in because like you know there are
+
+
+50,000 open source projects that use
+
+
+code rabbit uh and then you you would
+
+
+see half a million PRS on GitHub itself
+
+
+open source PRS that Cod rabbit has
+
+
+reviewed and then you have reviewed more
+
+
+than 5 million PRS and installed it more
+
+
+than a million reports so so I think it
+
+
+could adequately with all the context
+
+
+and interesting information I think it
+
+
+definitely with HPR it can do that but
+
+
+then I would it is not like a formal
+
+
+feature uh what it shs I mean that prv
+
+
+or science is like you know taking a
+
+
+first pass and then you know uh giving
+
+
+more code quality and security focused
+
+
+comments uh giving more refactor
+
+
+suggestions that are interesting so more
+
+
+of that sort of a thing right I think
+
+
+that would be really useful and uh
+
+
+definitely uh more features the
+
+
+community is very active in our Discord
+
+
+and then you know I'd also drop the
+
+
+Discord thing please please join our
+
+
+server and ask any Fe any feature
+
+
+requests you have uh would love to get
+
+
+get to know more uh from you as well I
+
+
+mean what you are thinking about what
+
+
+are your issues in general when it comes
+
+
+to uh you know code generation or like
+
+
+you using this AI
+
+
+tools yep I think uh Ali you should
+
+
+probably give this a try because Ive
+
+
+tried it and uh uh you know definitely
+
+
+it's it's very easy to set up I mean
+
+
+just a two click and it's it's there
+
+
+with my repo and you know that's how
+
+
+buil I built that over use case and I
+
+
+was able to do it uh Ali does have few
+
+
+suggestions so I think you know Arin
+
+
+would probably uh you know discuss in
+
+
+chat but then there's the Discord link
+
+
+uh if you if you want to know more about
+
+
+Cod rabbit and how things are going
+
+
+there and how you can use it uh please
+
+
+feel free to check out the Discord
+
+
+channel uh so with that we come to the
+
+
+end of this webinar I think we spent
+
+
+quite a lot of time uh you know
+
+
+understanding uh the then versus now in
+
+
+the whole AI landscape and how it is
+
+
+changing and I think it was important as
+
+
+well uh because you know setting the
+
+
+right context is is very critical before
+
+
+you uh get into what's happening now uh
+
+
+so thank you so much Arin and Samir for
+
+
+your time uh it was a wonderful uh
+
+
+discussion I had I got to learn uh about
+
+
+a lot of tools and processes uh I'm sure
+
+
+that uh you know even our audience would
+
+
+have gotten something else so any
+
+
+parting things that you would like to
+
+
+add on before we close this webinar Arn
+
+
+we'll start with
+
+
+you uh well I think don't stop coding
+
+
+with AI I think uh as as developers we
+
+
+are at definitely at an exciting time
+
+
+and give it a shot try it like a toy
+
+
+store and uh don't hold back I know that
+
+
+we when it comes to code we a lot of
+
+
+things come come to our mind uh like you
+
+
+know should I use it on Enterprise code
+
+
+don't use it on of course like your
+
+
+Enterprise code Bas on something just I
+
+
+mean your company's codebase or client's
+
+
+codebase of course use it on your own
+
+
+thing try to your personal report GitHub
+
+
+is free there are so many free tools out
+
+
+there so just give it a shot this is not
+
+
+like any other bot or any other thing
+
+
+that will come and go away becomes
+
+
+targeted one this is like addressing a
+
+
+large surface area if we are with it we
+
+
+are going to be like know we going to be
+
+
+like you know grow and Bubble Up well
+
+
+with AI it's going to help us a lot of
+
+
+productivity and all yeah we'll be 10x
+
+
+Engineers yeah I mean I don't want to
+
+
+use
+
+
+10x 10x mod 10x engineer is here already
+
+
+right right uh Samir any any quick
+
+
+closing remarks from
+
+
+you um yeah I mean I would just Echo
+
+
+what Arin mentioned right you know AI is
+
+
+a very prominent area and it is going to
+
+
+be even more useful than what we have
+
+
+been seeing so far so uh using AI tools
+
+
+for uh development uh is a must if you
+
+
+ask me and there are some catches like
+
+
+we were discussing at the end uh there
+
+
+are some uh that we need to watch out
+
+
+for uh but as long as we uh do watch out
+
+
+for them try to avoid them and uh use
+
+
+these tools uh to best of their
+
+
+capabilities I think this this will help
+
+
+everyone of us to uh you know increase
+
+
+our productivity quite a
+
+
+lot yes so I think the the the one thing
+
+
+is go and give these tools a try uh see
+
+
+how they work for you and then figure
+
+
+out which tool works best for you which
+
+
+which use case you want to use and then
+
+
+just make it your ally so once again
+
+
+thank you so much Arin and Samir for
+
+
+your time and thanks to all our
+
+
+wonderful audience for your questions
+
+
+and discussions uh you know me Arn Samir
+
+
+we all would be going through the
+
+
+LinkedIn questions or comments that we
+
+
+might have missed and interact with you
+
+
+all uh this webinar is recorded so you
+
+
+can very well watch it on our YouTube
+
+
+channel that would be uh going up
+
+
+tomorrow so thank you once again uh have
+
+
+a wonderful uh you know uh 2024 the the
+
+
+few weeks that we have and wishing you
+
+
+all a Happy New Year in advance so see
+
+
+you all in
+
+
+2025 bye-bye thank
+
+
+you thank you byebye thank you

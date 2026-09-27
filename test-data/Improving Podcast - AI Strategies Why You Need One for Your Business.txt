@@ -1,0 +1,2569 @@
+[music]
+
+
+Welcome to the improving edge. This is
+
+
+where we talk about how AI and
+
+
+technology are showing up in
+
+
+organizations, what works, what doesn't,
+
+
+what we're learning along the way. I'm
+
+
+sharing conversations with the people
+
+
+doing the work, turning innovation into
+
+
+outcomes. Today we're talking about AI
+
+
+strategies and why you need one for your
+
+
+business. I have with me Devlin, the
+
+
+chief consulting officer at Improving.
+
+
+Thank you for joining me.
+
+
+>> I appreciate being here, man. This is
+
+
+going to be fun.
+
+
+>> So, for somebody new to AI, what is AI
+
+
+strategy? What does that mean?
+
+
+>> Uh, so it's the difference between
+
+
+knowing what you want to go buy when
+
+
+you're like furnitureing and designing
+
+
+your house versus just showing up at the
+
+
+store and buying whatever looks nice.
+
+
+like it's having intent behind it and
+
+
+having a plan behind it typically means
+
+
+that you end up with less scattershot
+
+
+and less waste as you look at adopting
+
+
+these things. Okay, so for somebody
+
+
+practical like give me a little bit more
+
+
+like what might it look like if I had
+
+
+one today?
+
+
+>> AI is a tool just like any other whether
+
+
+it's a shovel, whether it's a drill,
+
+
+whether it's AI, it was built to make a
+
+
+job or a task faster, simpler, cheaper.
+
+
+>> Okay. Um, and so if I start with I want
+
+
+to buy this tool and then find a job to
+
+
+do with it, right?
+
+
+>> That's going to be expensive.
+
+
+>> Have a hammer looking for nails.
+
+
+>> Exactly.
+
+
+>> Um, and so what we typically do when we
+
+
+talk about AI strategy is go where do
+
+
+you spend a lot of time in your business
+
+
+today that is computer centric? So
+
+
+digital native workflows and stuff like
+
+
+that typically work better. U but you go
+
+
+all right here's where I spend all my
+
+
+time. Here's what's easily computered
+
+
+today, right? It's in software. it's in
+
+
+an ERP system, it's in a CRM system,
+
+
+whatever. Start there. Get your gains
+
+
+there. That's going to be your fastest
+
+
+return, those kind of things,
+
+
+>> right? So, you start by mapping that out
+
+
+and you go, "All right, now let's map
+
+
+that against the freely available
+
+
+tools." Now, that's not meaning
+
+
+offtheshelf or uh open source, but
+
+
+things that can be acquired that are
+
+
+data private, IP safe, all these things.
+
+
+Typically, that's going to our advice is
+
+
+going to be near where you already do
+
+
+work today. So if you're in Microsoft,
+
+
+stay in Microsoft. This is Copilot.
+
+
+Copilot Studio, the Power Automate
+
+
+platform, right? If you're in Google,
+
+
+it's Gemini and Gemini for Workspace and
+
+
+Appcripts and agent space like and so
+
+
+you stay close to where you are and you
+
+
+map the tools to the work.
+
+
+>> We we talk about this as boxes and
+
+
+arrows on a whiteboard.
+
+
+>> You start by going, "All right, here's
+
+
+the department I'm spending a ton of
+
+
+labor that's high likelihood of being
+
+
+able to be automatable, etc."
+
+
+map out the boxes and arrows on a
+
+
+whiteboard and then you start tackling
+
+
+through each of the boxes. Ignore the
+
+
+arrows for right now. You don't want
+
+
+fully automated end to end, right? Start
+
+
+with the boxes.
+
+
+>> Okay, so that sounds very
+
+
+straightforward and like something it's
+
+
+an exercise we can totally do and yet
+
+
+like something like 60 or 80% of
+
+
+organizations like fall down on their
+
+
+face when they start their AI projects
+
+
+and and they're not achieving what it is
+
+
+they're looking for. what are they
+
+
+getting wrong? So really great stats and
+
+
+studies have come out in this space and
+
+
+I say great because they give us the
+
+
+intelligence to do it differently in the
+
+
+future not because the results are
+
+
+terrible results
+
+
+>> terrible results good data good learning
+
+
+um and so like the MIT report the
+
+
+Mckenzie reports all of them point to a
+
+
+couple of key failures uh one is that it
+
+
+was tool centric not problem centric
+
+
+these companies were like hey we're
+
+
+getting big pressure from the board
+
+
+we're getting big pressure from the
+
+
+market I got to have AI got to do AI AI
+
+
+>> do the AI things yeah Okay. And so they
+
+
+were trying to apply tools where there
+
+
+was really no economic value. Um because
+
+
+if I make something I do once a quarter
+
+
+a little faster, that's not going to be
+
+
+a huge impact unless that can drive
+
+
+topline growth for my company. Whereas
+
+
+if I'm doing the thing I do every day
+
+
+10% faster, that's going to have some
+
+
+significant economic returns. And so
+
+
+McKenzie their study said 80% of
+
+
+projects that they were reporting on at
+
+
+their last conference were net negative
+
+
+to the business. doesn't mean that they
+
+
+hurt the business, but that what they
+
+
+spent on the project didn't overcome. It
+
+
+wasn't overcome with value. Gotcha. The
+
+
+MIT report said 95% of AI projects never
+
+
+make it out of pilot. That actually
+
+
+points at the second problem, okay?
+
+
+>> Which is these folks are building for
+
+
+demoare, building for pilot wear, not
+
+
+building for production, not building
+
+
+for a system that will actually change
+
+
+the way people work.
+
+
+>> Okay? So, this is just something cool
+
+
+and flashy that looks good, that
+
+
+impresses somebody, but then maybe
+
+
+doesn't scale the way that we need it to
+
+
+or or achieve the things that we're
+
+
+looking for. That and we're talking
+
+
+about changing the way people work. Um,
+
+
+and this becomes a psychology problem,
+
+
+not a technology problem. Uh, if I ask
+
+
+somebody like, "Hey, what do you do for
+
+
+a living?" And they and they build
+
+
+software, what they will tell me
+
+
+typically is, "I am a software
+
+
+developer."
+
+
+>> Right? It's identity.
+
+
+>> That's identity. Yeah, it's attaching
+
+
+who I am to the work I do. Well, then
+
+
+when I move your cheese, well, now I've
+
+
+taken away some of your identity. And
+
+
+so, it's actually an identity shift from
+
+
+the thing you do to the output you
+
+
+produce. So, there's organizational
+
+
+change management that has to play into
+
+
+that strategy. There's bringing the team
+
+
+along like you don't just get to buy a
+
+
+tool and skip a bunch of steps in
+
+
+maturity,
+
+
+>> right? And so that creates a lot of the
+
+
+the things that happen in that strategy
+
+
+is by picking the department, mapping
+
+
+out what they do today, bringing the
+
+
+team along boxes and arrows, they can
+
+
+see that progression and evolution where
+
+
+buying a tool unless you're a new
+
+
+company with no existing kind of
+
+
+cultural nuances to play around with and
+
+
+people who haven't done it differently,
+
+
+you're going to have to overcome that in
+
+
+a different way. Whereas a startup,
+
+
+yeah, they can they can go fast and
+
+
+break things because they don't have any
+
+
+existing process,
+
+
+>> right? You have no anchors. Yeah. What
+
+
+I'm hearing from you is that in these AI
+
+
+strategies, there's a really big people
+
+
+component to this, right? Because AI,
+
+
+while the the fears are, oh, it's
+
+
+replacing people. It's it's, you know,
+
+
+getting rid of jobs and it's going to
+
+
+take over all the things. The reality is
+
+
+it's simply impacting us as people and
+
+
+we need to learn how to evolve and use
+
+
+it in a different form and in a
+
+
+different fashion.
+
+
+>> Yeah. And something that we point out in
+
+
+this because you're right, it's the
+
+
+people are still going to be a critical
+
+
+part of the equation. If you look at
+
+
+some of the uh MIT Sloan review data
+
+
+from 2024 2025,
+
+
+uh what we see is that AI by itself
+
+
+running autonomously fails about a
+
+
+quarter of the time on complex tasks.
+
+
+>> Okay? Humans left by themselves with no
+
+
+automation or tooling fail about 15% of
+
+
+the time on fully complex tasks. The
+
+
+combination of them fail less than 5% of
+
+
+the time.
+
+
+>> Okay.
+
+
+>> And so the gain isn't one or the other.
+
+
+It it's really is going to be hybrid
+
+
+intelligence.
+
+
+>> We're going to add the H, add the A,
+
+
+>> and here we go.
+
+
+>> Yeah.
+
+
+>> Huh.
+
+
+>> I was going AI.
+
+
+>> Oh, AI. Okay. We'll do Yeah, we can do
+
+
+AI. I think also what I'm hearing from
+
+
+you in those statistics is it's
+
+
+oftentimes the people part of the AI
+
+
+strategy that leads towards that
+
+
+failure, right? Things not getting out
+
+
+of pilot might be assumptions that we're
+
+
+making. Uh lack of tool usage might be
+
+
+training that we're missing, right? That
+
+
+mindset shift hasn't happened. You know,
+
+
+hey, I gave you all these great AI
+
+
+tools. What are you doing with them? And
+
+
+people are like, I I don't know. So, how
+
+
+do you plan into your strategy to keep
+
+
+from falling in uh that pit?
+
+
+>> It's a really good question. Um, we we
+
+
+find this kind of interesting dichotomy
+
+
+of over reliance or under reliance.
+
+
+>> So, over reliance is believing AI is
+
+
+magic and it'll never make mistakes. And
+
+
+so, when you pilot building that way,
+
+
+you end up
+
+
+missing a bunch of the mistakes. You
+
+
+haven't educated the the team that's
+
+
+going to be managing it. And AI makes
+
+
+different mistakes than humans make. And
+
+
+so if I've been managing a group of
+
+
+people doing that job for 5 10 years,
+
+
+then I know the mistakes they're likely
+
+
+to make and those are the ones I check
+
+
+for and we're good. AI is introducing
+
+
+new mistakes and so we have to change
+
+
+our quality and check patterns and those
+
+
+kind of things. If I go under reliance,
+
+
+I'm being so hyper specific to AI that
+
+
+I'm actually losing a lot of the
+
+
+efficiency gain by doing things like
+
+
+hard coding specific structures and like
+
+
+when I'm reading a document, I'm like,
+
+
+"Oh, only this one type of document
+
+
+versus having a more generic toolkit
+
+
+that's going to allow me to move forward
+
+
+or prompting every time instead of
+
+
+capturing those learnings into agents
+
+
+and then being able to leverage them
+
+
+repeatedly and share them between
+
+
+people. That's an under reliance thing
+
+
+where AI's got tools that can help me.
+
+
+I'm not using them. Those are the two
+
+
+big categories of errors and they have
+
+
+to be approached differently with the
+
+
+people. If I'm overreliant, I actually
+
+
+have to start walking back to what are
+
+
+the errors you're worried about? What
+
+
+are the things that are going to hurt if
+
+
+this gets it wrong? And we start
+
+
+building protection for that into the
+
+
+map of that. That's the protection
+
+
+typically lives in the arrows when we
+
+
+talk boxes and arrows.
+
+
+>> Gotcha. Okay.
+
+
+And under reliance is well I I haven't
+
+
+actually started extracting all of the
+
+
+stuff from what I'm prompting and
+
+
+questions I'm asking into the boxes and
+
+
+going how do I make this repeatable so I
+
+
+don't have to remember all the things to
+
+
+tell it.
+
+
+>> Yeah the learnings capturing those
+
+
+learnings.
+
+
+>> Walk us through a realworld example
+
+
+where you've seen a company put an AI
+
+
+strategy in place and start down that
+
+
+path.
+
+
+>> Absolutely. So let's let's start by
+
+
+saying that your your company strategy
+
+
+is going to be a combination of
+
+
+departmental strategies. Okay? You're
+
+
+not going to have a company AI maturity.
+
+
+You're going to have departmental
+
+
+maturity. That's because of two things.
+
+
+One is the work and the tools you're
+
+
+using to do the work are going to
+
+
+constrain what kind of AI and automation
+
+
+that you can apply to it. U the the
+
+
+second one is that not all work deserves
+
+
+to be automated in the same way. And so
+
+
+the first step down this path is going
+
+
+to be doing a departmental audit
+
+
+effectively assessment if you would
+
+
+where you map out the work that's being
+
+
+done every day. How frequently is it
+
+
+being done and what level of precision
+
+
+is required? I know we all want to say
+
+
+that we do excellence in everything but
+
+
+sometimes average work is enough. Right?
+
+
+My expense report notes get average work
+
+
+from me.
+
+
+>> AI could help with that. AI could help
+
+
+move it to above average. Yeah.
+
+
+>> Probably doesn't need excellence,
+
+
+>> right? Where's the ROI on that?
+
+
+>> Exactly.
+
+
+>> Okay. And so you go through and you map
+
+
+out the tasks that make up the different
+
+
+roles, scoring them on what kind of
+
+
+precisions required, how much volume of
+
+
+that task is happening, and that creates
+
+
+kind of a hit list for those different
+
+
+workflows that will then box those and
+
+
+arrows out. So you do that by roll, roll
+
+
+it up into by department, and that's
+
+
+going to have very different tooling
+
+
+strategies because my accounting team,
+
+
+that strategy is going to be in our ERP
+
+
+or our financial system. It's going to
+
+
+be in our Excel spreadsheet processes,
+
+
+>> lot of Excel,
+
+
+>> all the business. Yeah.
+
+
+>> Uh but then if my IT group, that's going
+
+
+to be very different tooling, very
+
+
+different workflows and approaches. So
+
+
+you're not going to have one giant
+
+
+toolkit for a company.
+
+
+>> Right.
+
+
+>> Right. You're going to have individual
+
+
+mental toolkits. You'll probably have
+
+
+one place you come together for the
+
+
+generic work that every company has
+
+
+these problems and they're really
+
+
+average. got
+
+
+>> like document searching across wherever
+
+
+you store documents and chat systems
+
+
+like Teams or Slack or Google Hangout or
+
+
+whatever. Um, and so you're going to end
+
+
+up with these generic ones, but then
+
+
+you're going to end up with
+
+
+departmentally specific ones. And so the
+
+
+the really the assessment is there to
+
+
+map all that out, find out where your
+
+
+ROI zones live, and then what the
+
+
+toolkits integrate across all those to
+
+
+put together a 12-month road map. Now
+
+
+that strategy that comes out of that
+
+
+road map also includes the and when do
+
+
+we revisit because this isn't a static
+
+
+market. AI is progressing the tools are
+
+
+progressing stuff that can't be done
+
+
+today or is expensive to do today is
+
+
+going to get cheaper tomorrow.
+
+
+>> Yeah.
+
+
+>> And so how do we go about targeting the
+
+
+things that are valuable today and
+
+
+creating a recurring learning culture
+
+
+that's going to engage with this over
+
+
+the next 5 to 10 years? Because we're
+
+
+not in year three of a 5year cycle.
+
+
+We're in year three of a 15-year cycle.
+
+
+>> Gotcha. So, like as you're describing
+
+
+that, I have this like mental image is
+
+
+like it's a skyline model, right? Like
+
+
+there's the roads, the generic stuff
+
+
+that's downtown, but then there's these
+
+
+buildings that are the specializations
+
+
+of different tools. But then I got to be
+
+
+careful cuz like you don't want to keep
+
+
+remaking buildings. That sounds
+
+
+terrible. So the analogy breaks down a
+
+
+little bit because we do want to keep
+
+
+remaking those buildings because
+
+
+somebody's going to solve something in a
+
+
+novel way or provide something where the
+
+
+model is a competitive advantage. We
+
+
+want to take advantage of that and and
+
+
+leverage that in our business. So how do
+
+
+you help people? Cuz what you're talking
+
+
+about I keep going back to the people
+
+
+side of of these things. It's hard.
+
+
+People say, "Oh, I like change." And
+
+
+what they mean is I would like you to
+
+
+change, not I actually like the pain and
+
+
+difficulty that it is to learn something
+
+
+new and to change. So like are there
+
+
+ways that we can um I don't know create
+
+
+systems or things that we can put in
+
+
+place to help with that can that pattern
+
+
+of revisiting that understanding because
+
+
+I agree with you like we are early on in
+
+
+this and it's ridiculously fast right
+
+
+now trying to keep up with all of the
+
+
+innovations all that's going on like
+
+
+what is it we put in place to make sure
+
+
+that we do stay on top of that. It
+
+
+sounded harder to me than it actually
+
+
+has turned out to be if approached
+
+
+people centric. If we approach it tool
+
+
+or building centric to use your analogy,
+
+
+it becomes very difficult, right?
+
+
+Because if I'm building up this massive
+
+
+skyscraper and then tearing it down
+
+
+every 3 years, people are going to be
+
+
+very upset with how I'm spending time
+
+
+and money. But imagine sitting down
+
+
+with, you know, a friend who just bought
+
+
+a new house and going, "What do you love
+
+
+about it? What would you like to
+
+
+change?"
+
+
+>> Yep.
+
+
+>> Right. And they go, "Well, I really hate
+
+
+my kitchen." You go, "Awesome. You need
+
+
+to buy a new house."
+
+
+>> Yeah.
+
+
+>> Probably not.
+
+
+>> Not not a good friend. But hey, what do
+
+
+you not like about the kitchen? Well,
+
+
+you know, the cabinetry, the storage,
+
+
+whatever.
+
+
+>> Yeah.
+
+
+>> It's like, awesome. Let's remodel the
+
+
+kitchen, and here's what we can do. And
+
+
+hey, there's some new cabinetry that
+
+
+actually makes that really cheap and
+
+
+easy. So, remodeling the kitchen's half
+
+
+of what you thought it would be. That's
+
+
+that's the overarching feel that you're
+
+
+trying to build. Gotcha. And now that
+
+
+requires that you build on a platform
+
+
+that allows you to do this, right? And
+
+
+that's where external expertise matters
+
+
+a lot because we're going to have
+
+
+knocked our knees on way more cabinets
+
+
+as an external than most full-time
+
+
+employees will
+
+
+>> and probably know about a number of
+
+
+things that you don't even have
+
+
+visibility to or wouldn't otherwise.
+
+
+And we'll be like, "Hey, there's this
+
+
+really cool new thing that they do for
+
+
+kitchens that you really should
+
+
+consider."
+
+
+>> Absolutely. And so that's where you get
+
+
+that, all right, we're not talking about
+
+
+bu, you know, tearing down buildings and
+
+
+rebuilding them every couple years.
+
+
+we're talking about remodeling the
+
+
+kitchen and then the bathroom and then
+
+
+the upstairs and so it's a much easier
+
+
+thing to engage with as long as it's
+
+
+been approached correctly with the
+
+
+workforce and the people centric in this
+
+
+um and the reason for that is if you
+
+
+have a workforce a group of people that
+
+
+you're forcing AI upon right they become
+
+
+saboturs whether intentionally or not
+
+
+maliciously or not they will point out
+
+
+everywhere they could have done it
+
+
+better than the AI. They will point out
+
+
+how much time it takes them to fact
+
+
+check the AI.
+
+
+>> Mhm.
+
+
+>> I was like, "Yeah, I get it." Now, if I
+
+
+bring them along and I start by eating
+
+
+away the parts of their job they don't
+
+
+enjoy today anyway, right?
+
+
+>> Making those easier, they're like, "Oh,
+
+
+AI is a friend of mine. I kind of like
+
+
+this.
+
+
+>> I like this."
+
+
+>> And then you go into, "All right, now
+
+
+how do we speed up the parts of your job
+
+
+you do like without making you
+
+
+miserable?"
+
+
+>> Right? How do we expand your role,
+
+
+greater responsibilities, bigger impact?
+
+
+like these kind of things because AI is
+
+
+a tool. It's going to dig a hole. It's
+
+
+going to drill a wall. Like it's it's
+
+
+going to do a thing. It's an
+
+
+amplification of human intent. And so
+
+
+the human intent then becomes shaped not
+
+
+by write the code or publish the thing,
+
+
+but help the customer deliver an
+
+
+outcome. And that's where you were
+
+
+talking in the intro,
+
+
+>> innovation to outcomes. AI is pushing us
+
+
+more customer centric because it's
+
+
+speeding up the work behind that.
+
+
+>> And I've been talking a lot about this.
+
+
+You know what I've come to realize is
+
+
+using these models. It's delegation.
+
+
+>> And delegation is something that like
+
+
+people are not generally good at. I know
+
+
+I'm not generally good at it. Like I'm
+
+
+like I want a thing
+
+
+>> and you know playing not that rock game
+
+
+is not all that fun. Go get me a rock.
+
+
+you bring in they're not that rock and
+
+
+they try again and again.
+
+
+>> But I do that and and because I'm not
+
+
+specific about the outcomes that I'm
+
+
+looking for. I'm not specific about my
+
+
+expectations
+
+
+or the guidance and and the guard rails
+
+
+that that go around this thing I'm
+
+
+asking you to do. And so if I can get
+
+
+that right, then ultimately I'm a lot
+
+
+happier with what it is that the AI is
+
+
+producing. Absolutely. And this is this
+
+
+is the fun one to me when I look at
+
+
+these types of evolution and looking at
+
+
+the business strategy side of it is
+
+
+Excel didn't remove accountants, right?
+
+
+Some accountants are amazing in Excel.
+
+
+Some are not.
+
+
+>> Yeah, that's okay. Now, you would expect
+
+
+every accountant to be able to use
+
+
+Excel.
+
+
+>> Yeah.
+
+
+>> Right. But I don't expect them all to be
+
+
+Excel experts. That's okay. And so AI,
+
+
+we're not expecting everybody to become
+
+
+these wizards with AI and learn Python
+
+
+programming. And that's not the goal.
+
+
+The goal is move them along the curve to
+
+
+maturity that speeds them up, makes them
+
+
+more efficient, allows them to kind of
+
+
+meet the the growing demand and need for
+
+
+the the market.
+
+
+They're not hearing that story publicly.
+
+
+And so your strategy has to include
+
+
+communication plans to tell that story
+
+
+internally because what they're hearing
+
+
+publicly is folks who are trying to
+
+
+raise trillions of dollars in funding
+
+
+saying this is going to get rid of all
+
+
+software developers and attorneys and
+
+
+accountants worldwide.
+
+
+>> Right? Just like robotics and
+
+
+manufacturing got rid of all humans in
+
+
+manufacturing worldwide. Literally, this
+
+
+was a published article in 1974 said in
+
+
+the next 50 years we'll remove all
+
+
+humans from manufacturing on the planet.
+
+
+And it turns out that didn't happen.
+
+
+Yeah. So,
+
+
+>> not so much.
+
+
+>> We we have these hype cycles and if you
+
+
+don't explicitly include communication
+
+
+around the intent, why you're doing it,
+
+
+what you're trying to do, they're going
+
+
+to assume what they hear on the news is
+
+
+real.
+
+
+>> Yeah. So, be a better source than the
+
+
+news, which is not a high bar to clear
+
+
+nowadays. Um, but do do a better job of
+
+
+communicating intent.
+
+
+>> And some of that comes down to leaders
+
+
+change first.
+
+
+Yeah. And how are you using AI and how
+
+
+are you failing to use AI? Um when we
+
+
+started a lot of our AI collaboration
+
+
+channels and stuff like that and
+
+
+improving, right, it was share your
+
+
+experiments, not your success stories.
+
+
+>> Yes.
+
+
+>> Here's what I'm trying to use and it's
+
+
+failed here, here, and here. Or here's
+
+
+what I tried to use it and it succeeded.
+
+
+And we wanted a pretty even balance
+
+
+between successes and failures. And we
+
+
+started with the executive team and then
+
+
+we rolled it out across to a much
+
+
+broader group. But that experimentation
+
+
+ilk was important because the leaders
+
+
+were the first ones to share where
+
+
+they'd failed. So while Simon Senk would
+
+
+say leaders eat last, leaders use AI
+
+
+first. So make sure that you're stepping
+
+
+in and that you're taking some of the
+
+
+taking some of the learnings, taking
+
+
+some of the brunt of that um and
+
+
+learning. So where are you failing to
+
+
+use AI today?
+
+
+So, this literally got pointed out to me
+
+
+and I felt so dumb. So dumb. I was I was
+
+
+filling out an expense report and I was
+
+
+griping because it was three days late
+
+
+and I was getting uh the follow-up
+
+
+emails. Oh, I know the emails. Well, uh
+
+
+and literally one of the the folks in
+
+
+Houston cuz I work out of our Houston
+
+
+office goes, "Well, don't you have an AI
+
+
+agent that could do that for you?"
+
+
+Literally, it had never occurred to me.
+
+
+I was like, "Wait, we can? I have that."
+
+
+So, I literally punched up Cloud
+
+
+Co-work, plugged it into the the Chrome
+
+
+connection.
+
+
+>> Yeah. And let it drive the browser
+
+
+>> based on all my emails and my schedules
+
+
+and all the receipts that I had emailed
+
+
+to me. Go prefill everything in my
+
+
+expense report that you can. [laughter]
+
+
+It was like, "Oh, wow. I should have
+
+
+thought of this.
+
+
+>> I now have a to-do for later this."
+
+
+>> No, no, no, no. That's I I'm I'm failing
+
+
+all the time as well. And it's been
+
+
+really interesting for me to see where
+
+
+those corners are because when I'm
+
+
+reflective on them, it's my shortcoming,
+
+
+>> right? Like it's literally doing what I
+
+
+asked it to because I asked it either
+
+
+too broad or I asked it uh you know,
+
+
+just asked it in an odd way. Um, I I've
+
+
+found that my conversational tone, while
+
+
+I would love to be able to just talk to
+
+
+Claude, my conversational tone can
+
+
+sometimes indicate things that I didn't
+
+
+intend. Um, and so that was that was a
+
+
+bit bit of an aha where I was like, it
+
+
+seems like it'd be really great to talk
+
+
+to. And I know a lot of people that talk
+
+
+to their their models. Um, but for me,
+
+
+I've actually hit a few sharp corners on
+
+
+that that I was like, hm, that's
+
+
+interesting.
+
+
+>> Yeah. I so I talk to mine a lot. You and
+
+
+I have talked about this in the past.
+
+
+>> Um, interestingly enough, I actually
+
+
+have had to create a thing that
+
+
+translates me into robot.
+
+
+>> Um, and so as a part of like the agent
+
+
+guidance and stuff when I'm talking to
+
+
+it, I've given it my conversational tone
+
+
+and terms I use regularly that um, like
+
+
+I'll I'll say things like make sense
+
+
+>> to fill in. I wasn't going to say that
+
+
+in front of you, but I I know that one.
+
+
+Yeah. And so I was like, literally
+
+
+filter all this out as as we're talking,
+
+
+right? Because it's it's medicine tactic
+
+
+variables or it's filler. It's these
+
+
+kind of things. And I don't want it
+
+
+skewing what you're operating on.
+
+
+>> And I don't want to pay for the tokens
+
+
+cuz you're not going to do anything with
+
+
+makes sense.
+
+
+>> Yeah.
+
+
+>> Right.
+
+
+>> That makes sense.
+
+
+>> That was one that that I saw showing up
+
+
+regularly was please and thank you.
+
+
+>> Yeah. where it was like please and thank
+
+
+you like north of $30 million of cost
+
+
+just for open AI for people saying
+
+
+please and thank you last year.
+
+
+>> I'm like I get being kind but that's a
+
+
+cost. It's a very real cost and this is
+
+
+where like your strategy has to be cost
+
+
+aware at this point because the token
+
+
+economics while they're getting better
+
+
+are still incredible. So our super users
+
+
+these are the folks in the forefront.
+
+
+These are the folks who are doing
+
+
+multi-RO orchestration and using all the
+
+
+tools to the fullest. They're costing us
+
+
+between 500 and two grand a month in
+
+
+additional token costs. That's material.
+
+
+>> That's material. Like that's huge
+
+
+percentages of salaries,
+
+
+>> right?
+
+
+>> And so at some point you like if I'm
+
+
+offsetting cost, it's like well I'm
+
+
+replacing with digital cost and those
+
+
+digital costs are heavily subsidized
+
+
+right now by VC spending, right? Which
+
+
+means they're likely to go up. So I
+
+
+might be able to like trim down my
+
+
+accounting team and only spend 200 grand
+
+
+in technology instead of 600 grand in
+
+
+people and then the prices go up and now
+
+
+I'm spending 800 grand in technology and
+
+
+I don't have the trained people. This is
+
+
+actually one of the reasons the strategy
+
+
+is people first for us. People first
+
+
+cost aware because you have to be Yeah.
+
+
+And you don't need the best newest
+
+
+thinking models to do basic tasks.
+
+
+>> Yeah. Tone it down. Doesn't have to be
+
+
+opus every single time. like it's okay.
+
+
+Haiku will get it done for you.
+
+
+>> So we had we had a an internal guy that
+
+
+was working with our our dev tooling and
+
+
+he literally the the thinking fast
+
+
+model, right? So the thinking model but
+
+
+like super fast hardware 15 times the
+
+
+cost of a be a basic model. And so in 4
+
+
+days he used 10 people's allocation of
+
+
+budget. Ouch. For a month it was like
+
+
+Yep. So there's some retraining to cost
+
+
+awareness that has to happen. Yeah. So
+
+
+again, we've got more people problems
+
+
+than we do technology problems.
+
+
+Technology, it's awesome that we have
+
+
+access to something like that for very,
+
+
+very meaningful work, but then we've got
+
+
+people who are like my son and leave the
+
+
+lights on when they leave the house. And
+
+
+I'm like, what is wrong with you? Like
+
+
+turn out the lights when you leave room.
+
+
+>> When I'm going through our cost reports,
+
+
+I do feel like the old guys shouting
+
+
+like, "Get off my lawn. Turn off the
+
+
+lights.
+
+
+>> Turn off the lights. Stop flushing the
+
+
+toilet so much." Yeah. Sounds
+
+
+>> Does the hose need to be on? like right
+
+
+I I do feel somewhat like that guy but
+
+
+you need that as a part of the structure
+
+
+if you're going to do this well because
+
+
+the cost awareness of reviewing those on
+
+
+a regular basis and detecting where you
+
+
+haven't quite educated enough is
+
+
+important and I've also on the flip side
+
+
+heard it said if you really care about
+
+
+the tokconomics
+
+
+your ROI [snorts] probably isn't there
+
+
+or it's not being applied in a place
+
+
+where the ROI isn't there So like think
+
+
+about it in terms of cost, but like if
+
+
+cost is your main driver, you're
+
+
+probably tackling the wrong problem,
+
+
+right? We talk about you should be
+
+
+looking at ROI somewhere between 5 and
+
+
+10x
+
+
+>> in the first year.
+
+
+>> In the first year, well, and if my cost
+
+
+was, you know, was so high, it probably
+
+
+is because I'm on the lower end of that
+
+
+ROI and and I'm concerned about that.
+
+
+It's on the lower end of that ROI versus
+
+
+I'm getting a 10x ROI. I'm cool with
+
+
+burning the tokens to get us there.
+
+
+>> And this is where yes and no, right?
+
+
+Yes, that's probably the case in most
+
+
+cases. But take this instance that we
+
+
+were talking about. This was literally
+
+
+two days ago at improving.
+
+
+>> Yeah.
+
+
+>> In 3 days burned 10 times the monthly
+
+
+allocation.
+
+
+>> But what was he doing?
+
+
+>> Just software development. Okay.
+
+
+>> But had locked in on the most expensive
+
+
+model.
+
+
+>> Gotcha. And so in this case, I could
+
+
+have destroyed a 10x ROI
+
+
+>> because of token economics. So if you're
+
+
+worried about like basic usage, right?
+
+
+Yes. But you need exception detection
+
+
+because the cost difference between the
+
+
+most basic model and the top model right
+
+
+now is about 130x.
+
+
+>> So like the software engineering model
+
+
+as 1,
+
+
+>> yes,
+
+
+>> is 130 times cheaper than Opus 46
+
+
+thinking fast. And so like it'd be just
+
+
+like somebody going, "Hey, it's Pinto,
+
+
+Cadillac, Ferrari, Lambo. Your choice
+
+
+doesn't matter." It's like, "No, no,
+
+
+cost matters."
+
+
+>> It does. Okay, got it. So, in the
+
+
+general,
+
+
+you shouldn't be overly focused on the
+
+
+tokconomics, but order of magnitude
+
+
+problems.
+
+
+>> Yeah, certainly looking at where where
+
+
+this thing goes off the rails. Like, you
+
+
+want to catch that before it goes off
+
+
+the rails. And so many of our clients
+
+
+experience this with the cloud, right?
+
+
+Moving to the cloud and they're like,
+
+
+"Well, I didn't know that all the devs
+
+
+were going to spin up VMs and just leave
+
+
+them running." Like the lights on in,
+
+
+you know, uh, example earlier, they just
+
+
+leave them running and then you get the
+
+
+bill from AWS at the end of the month
+
+
+and are like, "Uh, we have a problem."
+
+
+Um, same sort of thing.
+
+
+>> Yeah, it was it was pretty funny. I was
+
+
+walking through with one of our, uh,
+
+
+delivery leads. It was talking about um
+
+
+so we bill through like the token usage
+
+
+and stuff like that for AI tooling um
+
+
+for customers that are on time and
+
+
+materials because it's materials, right?
+
+
+>> Right.
+
+
+>> Um and they got the bill and they're
+
+
+like, "Hey, that's that's too many
+
+
+tokens." Like,
+
+
+>> but here's what was produced and they
+
+
+went, "Oh, never mind." Like, "Got it.
+
+
+ROI."
+
+
+>> Yeah. ROI is good. Yeah. But you do want
+
+
+to constantly be looking at that ROI
+
+
+because you can easily fall into the
+
+
+McKenzie and MIT side of this where it's
+
+
+net negative and I'm failing to get out
+
+
+of pilot because I have misapplied and
+
+
+destroyed an ROI that should have been
+
+
+there cuz I used the wrong model or
+
+
+architected incorrectly. That's where
+
+
+having a a a knowledgeable person who's
+
+
+banged their knee a couple of times on
+
+
+it is going to help.
+
+
+>> That's those are the potholes that that
+
+
+you can potentially help avoid.
+
+
+uh falling into.
+
+
+>> So Devlin, what are some key takeaways
+
+
+that you would want someone listening to
+
+
+this session to walk away with?
+
+
+>> AI is a tool. It is a means. It is not
+
+
+an end. The end is the business outcome.
+
+
+>> Yes. And if you can wrap your strategy
+
+
+around how do we make that faster,
+
+
+cheaper, more effective, higher quality,
+
+
+whatever the differentiators for your
+
+
+business are, that's going to be a
+
+
+significantly better starting point for
+
+
+a strategy than, hey, let's go
+
+
+crowdsource a 100 different things that
+
+
+AI could do in our business because what
+
+
+we see the biggest waste comes from the
+
+
+everybody's got ideas and so we're doing
+
+
+the top 30 of them. It's like, how about
+
+
+we start with what are the five biggest
+
+
+problems we have? Go from there.
+
+
+>> Yeah.
+
+
+>> And so if you're looking one thing,
+
+
+start with the problems. Don't start
+
+
+with the tools.
+
+
+>> Excellent. Thank you so much. Thank you
+
+
+for the time. Appreciate you being here.
+
+
+It
+
+
+>> was a great conversation. Thank you.
+
+
+[music]
+
+
+>> [music]

@@ -1,0 +1,4015 @@
+[music]
+
+
+>> Welcome to the Improving Edge.
+
+
+This is where we talk about how AI and
+
+
+technology are showing up in real
+
+
+organizations. What works, what doesn't,
+
+
+what we're learning along the way.
+
+
+I'll be having conversations with folks
+
+
+actually doing the work, turning
+
+
+innovations into outcomes.
+
+
+Like Nick Larson here. So, Nick is a VP
+
+
+of technology for us here at Improving.
+
+
+And today we're going to be talking
+
+
+about
+
+
+AI ready data and what that means inside
+
+
+of the enterprise. Thanks for being
+
+
+here, Nick.
+
+
+>> Oh, thanks for having me. It's going to
+
+
+be fun.
+
+
+>> Yeah, looking forward to the
+
+
+conversation.
+
+
+>> I think so. Yeah, that should be good.
+
+
+>> So,
+
+
+AI ready data is almost a buzzword at
+
+
+this point. Like, make it concrete for
+
+
+us. Like, what is it really What does it
+
+
+really mean? What does it really look
+
+
+like?
+
+
+>> know that it's like a specific It's not
+
+
+a format that your data has to be like.
+
+
+It has to have this schema or these
+
+
+values or these properties. It's more or
+
+
+less making it so your data is available
+
+
+for one. Like, that's a big thing. And
+
+
+when it's available, it has to be
+
+
+understood by these these models that
+
+
+are able to translate and generate text
+
+
+or take action on the data that's coming
+
+
+in. So,
+
+
+uh if you think about any sort of data
+
+
+that's labeled properly, like if you
+
+
+have customer numbers for example, like
+
+
+does it know that it's a member or a
+
+
+customer or an internal customer, an
+
+
+online customer? What's the difference?
+
+
+So, it can take proper action to it. So,
+
+
+it's not necessarily defining it down to
+
+
+a specific spec. It's making sure that
+
+
+it's
+
+
+knowable by what's going on in your
+
+
+system.
+
+
+>> So, I heard a couple of things in there.
+
+
+Like, obviously access, like can we get
+
+
+to the data? Do we know what the data
+
+
+is? So, there's some understanding
+
+
+around it.
+
+
+>> like semantics of it.
+
+
+>> Yeah, and maybe even vocabulary, right?
+
+
+Like, okay, what does customer mean or
+
+
+what does member or what What do we call
+
+
+this in our organization?
+
+
+>> of that comes down to, I mean, a big
+
+
+thing with LLMs and AI in general is
+
+
+just context. What that context of that
+
+
+data looks like for the meaning that
+
+
+it's going after at that moment. In
+
+
+addition to the context, the
+
+
+availability, and all that, we all it
+
+
+also has to be governed. Like, we have
+
+
+to make sure that it has the proper
+
+
+access, so the systems that are
+
+
+accessing it aren't just grabbing, you
+
+
+know, PII data or anything and and
+
+
+leaking that data across the
+
+
+organization or across your
+
+
+applications. So, it's very important to
+
+
+have that structure and that that piece
+
+
+down. Um a lot of companies today, they
+
+
+they
+
+
+they have a lot of those working, but
+
+
+they don't have it refined properly.
+
+
+>> Okay.
+
+
+>> I look at like agentic work and it's
+
+
+like, imagine you have 500 people being
+
+
+able to look at the data and work on it
+
+
+simultaneously. That's kind of what
+
+
+we're after, instead of one person
+
+
+getting something and being like, "Oh,
+
+
+yeah, that works. Go ahead and pass it
+
+
+on." or open up a ticket. You're having
+
+
+500 people doing it at once, or
+
+
+thousands of people doing it at once.
+
+
+So, your data needs to be refined in a
+
+
+sense where it makes sense or those
+
+
+split-second decisions, so it doesn't
+
+
+hallucinate or
+
+
+say the wrong thing.
+
+
+>> Right. And having that many, like, 500
+
+
+all at once, and you don't want them
+
+
+interpreting it differently.
+
+
+>> Right. You want to you want to be it's
+
+
+Hard part is none of it's deterministic.
+
+
+>> Yeah.
+
+
+>> Right? And so, like,
+
+
+you want it to be as close to probable
+
+
+outcomes as possible. So, a lot of
+
+
+that's through prompting, but a lot of
+
+
+most of it's from your data.
+
+
+>> Yeah. So, yeah, the non-deterministic
+
+
+behavior, right? I can take the same
+
+
+prompt and even with a single model, put
+
+
+it in five times, and I'm going to get
+
+
+five different answers.
+
+
+It's like, "Well, okay, but are all five
+
+
+right?" And like, "Is that what I'm
+
+
+looking for?"
+
+
+>> Yeah, and some
+
+
+Go ahead. I was just going to say some
+
+
+of that gets into how your systems are
+
+
+built and how fast the data's coming in
+
+
+or what type of data's going there. But,
+
+
+a lot of it is does it understand it?
+
+
+Can it take the appropriate actions
+
+
+based on the prompt that these things
+
+
+are given?
+
+
+>> Yeah, so you used the word governance
+
+
+earlier, right? So, talk a little bit
+
+
+more about what does that look like
+
+
+though? So, governance is it is it is it
+
+
+categorized right? Is it accessible
+
+
+right? Is it is it formatted in the
+
+
+moment in the way that it needs to be
+
+
+done?
+
+
+That's all very very important for for
+
+
+for that to happen. Security is a big
+
+
+piece of that as well. Kind of some of
+
+
+those guardrails
+
+
+are are are
+
+
+tables named right? Are topics named
+
+
+right? Is it coming in proper? Is it
+
+
+fitting to your format? Like
+
+
+all of that from your standards making
+
+
+sure that it's met.
+
+
+>> Got you. So, there's some consistency we
+
+
+have to make sure is in place
+
+
+as part of that governance. But, then
+
+
+also
+
+
+you mentioned security and access,
+
+
+right?
+
+
+Do the right people have the right level
+
+
+of access and and not access to the
+
+
+things that they should.
+
+
+>> in general, we get down to almost like
+
+
+row level security type stuff and
+
+
+you have to remember that these agents
+
+
+need that same sort of thing. It's just
+
+
+like a person querying it. A lot of
+
+
+times it gets systems are given like all
+
+
+the system can do whatever they want,
+
+
+right? When we're writing applications
+
+
+to do these sorts of things. There are
+
+
+that level of well, Nick can see this,
+
+
+David can see that. The system can kind
+
+
+of see both. You need to make sure
+
+
+that's properly handled that way because
+
+
+it is just like a person doing it. It's
+
+
+going to take action. It could expose
+
+
+data because it's not deterministic of
+
+
+what's coming out of there. You can try
+
+
+to force it and coerce it into a schema
+
+
+that's coming out. But, if it's exposing
+
+
+somebody's
+
+
+address or something where it shouldn't
+
+
+just because it says, "Oh, this is
+
+
+valuable information." Right? That's
+
+
+difficult and you have to be able to
+
+
+catch that and shut that down. So, if it
+
+
+can't read that data, anything you don't
+
+
+want to be put out, you don't want it to
+
+
+be able to read. You kind of trust
+
+
+people to do some of that.
+
+
+The AI's harder to trust cuz you can't
+
+
+see it on an in in an individual basis.
+
+
+>> Yeah. So, part of your governance
+
+
+I like how you said treat it like a
+
+
+person, right? You wouldn't give the
+
+
+person access to this and
+
+
+um, then you need to be able to have
+
+
+some of those same sort of controls in
+
+
+place.
+
+
+>> Correct. Yeah, and a good example is
+
+
+like the row level access where if they
+
+
+need that level of granularity, you have
+
+
+to confine them to that level because
+
+
+>> Or you give them wide open access,
+
+
+that's how you nuke a production
+
+
+database in 9 seconds or whatever it
+
+
+Or it was like
+
+
+>> You know, prompt injection uh
+
+
+and and just other types of data leakage
+
+
+problems are huge because people just
+
+
+are like, oh,
+
+
+we'll just stand an LLM up against what
+
+
+we got and just feed it everything and
+
+
+see what spits out. Well, that's a good
+
+
+way to like crash your company, give
+
+
+away your secrets, expose somebody's
+
+
+personal information.
+
+
+>> Do something horrible.
+
+
+>> Do something horrible. Yes, and we don't
+
+
+want that.
+
+
+>> the the best way to clean the data is
+
+
+we'll just delete it. Now [laughter]
+
+
+it's clean. They're like, no, no, no,
+
+
+that's not what I wanted. Okay.
+
+
+Um, [snorts] you know, when we talk to
+
+
+when we talk to customers, often times
+
+
+they are um, maybe overly generous in
+
+
+their self-assessment of where they are
+
+
+in this journey. Like, oh, yeah, we're
+
+
+great, we're our data's totally good,
+
+
+we're clean. Like,
+
+
+how do we go about walking alongside
+
+
+them in those conversations to help them
+
+
+kind of take a true view of where they
+
+
+are and what that roadmap needs to look
+
+
+like for them.
+
+
+>> I think I think this all comes down to
+
+
+stuff we've been working on for the last
+
+
+decade, approximately.
+
+
+Modern data platforms, it's it's
+
+
+something that we've been kind of
+
+
+focused on over the last 5 to 10 years,
+
+
+dealing with data as it's coming in and
+
+
+and and coursing it into the platform so
+
+
+it's available and ready across
+
+
+everything. I think those are kind of
+
+
+table stakes for having good AI
+
+
+problems. So, we have a bunch of
+
+
+customers that we've helped kind of get
+
+
+from source to some sort of analytical
+
+
+engine, but what about the stuff in
+
+
+between? They kind of skip over some of
+
+
+that. So,
+
+
+defining what your data is as AI ready
+
+
+is depending on what you want to do with
+
+
+it, right? Um, as far as being
+
+
+available, if you need to do fraud
+
+
+detection or something along those
+
+
+lines. You can't do that from a batch
+
+
+process that runs nightly, right? I need
+
+
+to know within milliseconds of when a
+
+
+record comes in, is this is this fraud?
+
+
+Uh so, you have to have some sort of
+
+
+streaming data, for example. I spent a
+
+
+lot of time over the last decade in
+
+
+streaming data and building systems to
+
+
+do that, and that's what I see as kind
+
+
+of part of a modern platform. It's not
+
+
+just putting something into storage
+
+
+somewhere, so I can run models on it and
+
+
+build dashboards and, you know,
+
+
+get percentages of how many people
+
+
+clicked through or how many customers
+
+
+bought yesterday. It's somebody's buying
+
+
+something now. What do I recommend to
+
+
+them? Is their credit card valid? All
+
+
+these sorts of things are happening in
+
+
+real time, and that sort of data that
+
+
+maturity is, I think, where AI really is
+
+
+is can really take hold.
+
+
+>> Yeah.
+
+
+So, the I hear you saying like as we're
+
+
+helping them figure out their data
+
+
+strategy, it really starts with what are
+
+
+your business outcomes, right? Like what
+
+
+are you trying to accomplish and then
+
+
+work backwards into, all right, what
+
+
+data do we need access to? Right. What
+
+
+what level of of clarity do we need
+
+
+around that data so that we can get the
+
+
+business outcomes?
+
+
+>> Yeah, like if you don't have those
+
+
+business outcomes defined, you're not
+
+
+you're not setting your data up for the
+
+
+right
+
+
+method of exposure and the right
+
+
+frequency even. So, you have to know
+
+
+that of what you want out of it is how
+
+
+you need to set that up. Um as we help
+
+
+customers journey to a modern platform,
+
+
+a modern data platform, there's a
+
+
+variety of tools we use. We kind of use
+
+
+any across the board. We don't have any
+
+
+that we're like, you have to use this
+
+
+tool or that tool. Um but there has to
+
+
+be key elements to it of
+
+
+if data needs to be seen, we need to
+
+
+have the off-ramp here. If it's fine for
+
+
+this sort of use case, we need to have
+
+
+the ETL processes here. If we need to
+
+
+have that data in more real time, we
+
+
+need to have it here.
+
+
+Things along those ways.
+
+
+>> Okay. So, you talked a little bit about,
+
+
+you know, streaming data. You mentioned
+
+
+agentic AI previously. What have been
+
+
+some interesting implementations of
+
+
+agents that you've seen in those
+
+
+streaming
+
+
+>> That's a good That's a good question
+
+
+because
+
+
+it's really when you've worked in it so
+
+
+long, it's kind of just another step of
+
+
+along the way. I don't know that it
+
+
+fundamentally changes how we've done a
+
+
+lot of things over the last 5 or 6
+
+
+years. It's just the systems that you
+
+
+write are now agentic and they're like
+
+
+taking information in real time and
+
+
+making decisions on them, not just
+
+
+reading them and generating something
+
+
+new. The same way that a microservice
+
+
+would in the past. It's just that now it
+
+
+can without writing all the hooks from
+
+
+this microservice is a
+
+
+a triage microservice for example from
+
+
+from customer data coming in and
+
+
+sentiment analysis and things along
+
+
+those lines. Instead of it just being
+
+
+like, "Oh, I need to open a ticket." and
+
+
+then it puts a message on another queue
+
+
+and then it opens a ticket through
+
+
+some ticketing service and then somebody
+
+
+picks it up and works it. Those agents
+
+
+can now do all those steps. It can open
+
+
+that ticket and say, "This customer's
+
+
+probably having a problem. I should
+
+
+probably do something else with it." So,
+
+
+that That's That's very interesting as
+
+
+far as, you know, specifics.
+
+
+>> We've got a few where we're
+
+
+One of my favorite one is we had error
+
+
+queues like a dead letter queue.
+
+
+And the customer
+
+
+was like, "We have 400,000 records in
+
+
+this dead letter queue. Why are we not
+
+
+figuring this out?" It's like, "Well,
+
+
+that's a perfect example to just put
+
+
+that agentic process on there.
+
+
+It can help you weed out what's really
+
+
+like a system error, what's a personal
+
+
+error, what's what's going on with this
+
+
+customer and then either surface it
+
+
+through an email or triage it to a
+
+
+ticket or
+
+
+have it send a personal email to them
+
+
+and be like, "Could you try this again?"
+
+
+Something along those lines.
+
+
+>> So, I hear you saying it's it's
+
+
+simplifying some of the systems that
+
+
+we're building because
+
+
+it can make a little bit more of those
+
+
+decisions. You don't have to be quite as
+
+
+prescriptive.
+
+
+>> Yeah, the systems are still robust.
+
+
+There are many systems that are talking
+
+
+to each other, but the inlet to it's not
+
+
+the fine weaving between everything.
+
+
+It's kind of like, "I've built this. It
+
+
+can talk to 17 other systems. It kind of
+
+
+knows how to handle that stuff on and
+
+
+it's figuring out, right? Um, you know,
+
+
+the the rage right now in AI is all like
+
+
+how it's helping developers.
+
+
+>> Right.
+
+
+>> Because it's like I can do this that
+
+
+much faster. I don't know that agentic
+
+
+uh
+
+
+agents, excuse me, agentic agents are
+
+
+that much
+
+
+faster or going to speed your business
+
+
+up that much faster. Except it's just
+
+
+easier to produce them and build them.
+
+
+>> Got you.
+
+
+>> Because the systems are talking
+
+
+together. You don't have to wire every
+
+
+scenario coming out of system A so
+
+
+system B can handle it. It's just like,
+
+
+well, I have a system that can handle
+
+
+something like this.
+
+
+Let's go ahead and do that.
+
+
+>> See, yeah. Just try it out and see see
+
+
+how it goes.
+
+
+>> is very scary, too, right? Because this
+
+
+is where your data is very important
+
+
+because if it's leading to I need to
+
+
+highlight this customer and open a
+
+
+ticket or refund their money.
+
+
+Uh you don't want to do that in error.
+
+
+>> Right. Yeah, if refunds go bad, like
+
+
+business can go bad.
+
+
+And we've talked before about how, you
+
+
+know, agents can because they can do
+
+
+things faster, they can do the wrong
+
+
+things faster, too. And so then it going
+
+
+back to the governance that you were
+
+
+talking about earlier, like how do I
+
+
+know if something bad has happened and I
+
+
+want to know on the like third time it
+
+
+happens, not the 103rd time it happens.
+
+
+>> uh
+
+
+some bit about the observability of it
+
+
+as well and understanding what's going
+
+
+on and that's super important in this
+
+
+world, too, is
+
+
+as soon as you have a something agentic
+
+
+evaluate a message or
+
+
+an event or whatever it is, some some
+
+
+line of data coming in,
+
+
+it's usually generating something else.
+
+
+>> Right.
+
+
+>> another event that's coming out of this
+
+
+thing. So you need to know all of that
+
+
+and you need to be able to trace that
+
+
+back. Especially as you're building
+
+
+these things new because you need to
+
+
+cure that fast if you have problems,
+
+
+right?
+
+
+>> pull the lever if it's going wrong, like
+
+
+stop.
+
+
+>> needs to be there. You want it to be
+
+
+able to run without the human in the
+
+
+loop, but while you're trying while
+
+
+you're getting going, I think that's the
+
+
+scariest part is like, can we trust our
+
+
+business, you know? I trust my
+
+
+to get out there and code 20 times
+
+
+faster. That's awesome. I don't know
+
+
+that any of the LLMs write better code
+
+
+than any of our developers. They just do
+
+
+it faster. Right. We still need our
+
+
+developers and our engineers to be there
+
+
+and review it to make it better. It's
+
+
+the same way with agentic AI
+
+
+processes, right?
+
+
+It's probably not better than the human
+
+
+that's worked in the industry for 25
+
+
+years sitting there and being like that
+
+
+claim should be paid or that customer
+
+
+needs a refund. It just does it faster.
+
+
+>> And it doesn't take PTO and all the
+
+
+other the other things that folks are
+
+
+looking at for
+
+
+for reasons why agents can can help them
+
+
+in the bottom line.
+
+
+>> Well, we did talk earlier about what
+
+
+makes good AI data and there's there's
+
+
+ways of like if you is your data to
+
+
+ready to be AI ready? I think one good
+
+
+test is if you had a new analyst start,
+
+
+could they figure out what the data set
+
+
+is and all the questions it knows about
+
+
+it within two weeks of sitting down like
+
+
+an AI has to do that in seconds.
+
+
+And it's looking at it the same way
+
+
+somebody would, right? You give it as
+
+
+much context and as much of information
+
+
+about that data. So, when they sit when
+
+
+a human sits down and looks at it it
+
+
+take them two weeks to be like this is a
+
+
+customer.
+
+
+Why can't I do this? And then so-and-so
+
+
+comes in and they're like, "Well, that's
+
+
+that's external customers. They don't
+
+
+have an account, you know, they're
+
+
+they're blind customers. They don't have
+
+
+any relation to us." I'm like, "How did
+
+
+I know that from that data?" "You can't
+
+
+you can't store a credit card for them.
+
+
+They don't have an account to store a
+
+
+credit card on their account."
+
+
+>> Got you.
+
+
+>> Like
+
+
+>> So, as companies are are layering this
+
+
+you know, these agents on top of you
+
+
+know, an existing data architecture,
+
+
+how do we help them? Often times they
+
+
+can see this as, "Okay, cool. Now,
+
+
+things are things are great." When
+
+
+really it's meant to be more of a
+
+
+bridge, right? Not it's a band-aid
+
+
+to get us to a different place. Like,
+
+
+how do we help move them along in that
+
+
+journey?
+
+
+>> Yeah, that's that's a good question
+
+
+because anytime you start piling
+
+
+anything on top of each other. Just
+
+
+adding AI to anything is not going to
+
+
+make it better.
+
+
+It's AI on top of it.
+
+
+>> not going to make you more money. It's
+
+
+not
+
+
+It's not going to be easier to run. It's
+
+
+actually probably even worse. It's not
+
+
+going to cost less, right? Like it's not
+
+
+going to cost less than the developer
+
+
+sitting there to have some AI AI
+
+
+process running this thing.
+
+
+It's It is really just stacking up. And
+
+
+I I feel when companies are doing that,
+
+
+they're just kind of wetting their their
+
+
+feet and kind of figuring out what's
+
+
+going on. I don't believe that would be
+
+
+production sustainable.
+
+
+>> Yeah.
+
+
+>> I think it goes back to what we talked
+
+
+about earlier. It's like
+
+
+that the last decade I've worked on is
+
+
+really been about modern data platforms
+
+
+and like getting your data
+
+
+to fit the availability availability
+
+
+needs of what your processes need to do.
+
+
+If you're a financial institution and
+
+
+you want to stop fraud, you need to do
+
+
+that as fast as possible.
+
+
+I wouldn't trust my bank if they didn't
+
+
+send me a fraud alert when I charged
+
+
+something and it was 3 days later and
+
+
+they said, "This was fraud." Like,
+
+
+"Well, why didn't Well,
+
+
+>> Yeah, what are you going to do about it
+
+
+now?"
+
+
+>> Yeah, why didn't you Why didn't you do
+
+
+it then?
+
+
+>> I can't remember 10 years ago. It's like
+
+
+every time I had a fraudulent
+
+
+transaction, it was cancel my card.
+
+
+Give me a new one. I don't I don't
+
+
+Somebody's got it. I'm I need to change
+
+
+that. We don't do that anymore. They're
+
+
+just like, "Oh, we stopped it."
+
+
+>> Yeah.
+
+
+>> That's awesome.
+
+
+>> Well, then it's interesting like I think
+
+
+that as consumers of the the systems, we
+
+
+have started to expect faster and
+
+
+faster. Like the the attention span
+
+
+keeps going narrower and narrower.
+
+
+Um but then how do we make sure like
+
+
+what are some of the things that we put
+
+
+in place to make sure that we don't sit
+
+
+on this bad data and and start feeding,
+
+
+you know, the these negative events
+
+
+because like you said before, there
+
+
+there's got to be trust built up in the
+
+
+system. Right? And obviously, bad data
+
+
+can degrade that trust. So, like what
+
+
+are some of the guardrails that you can
+
+
+put in that will help with that?
+
+
+>> talked a little bit about it. That that
+
+
+observability, that traceability of the
+
+
+results coming out of there. That's one
+
+
+thing. Feed that back in the system.
+
+
+There should be tests going about this.
+
+
+There should be almost an agent that
+
+
+triages the outcomes of that that are
+
+
+coming through or at least some human
+
+
+somewhere that can look at things.
+
+
+You're kind of like dog fooding your
+
+
+data at that point. You put something
+
+
+out there. It spits something out. It's
+
+
+like, "Oh, that's now data. What do I do
+
+
+with that?" I need to grade how well how
+
+
+well this is coming out. Um I saw
+
+
+something
+
+
+on the on the car ride
+
+
+home from work the other day and I was
+
+
+like somebody's like, "Oh, I had We
+
+
+process 100,000 transactions a day and
+
+
+it's 90% accurate." And what is that?
+
+
+That's 1,000 errors.
+
+
+>> Right.
+
+
+>> A day. Well, if we do 100,000 and we
+
+
+make it 95% accurate, that's still 5,000
+
+
+errors or something. My math probably be
+
+
+wrong on that. But the idea is
+
+
+getting better more efficient over more
+
+
+data doesn't mean less problems.
+
+
+>> Right.
+
+
+>> So, you still need to know that and
+
+
+understand that that's
+
+
+what's coming out of these systems. It's
+
+
+going to make mistakes. You have to have
+
+
+those those catches there to to to fix
+
+
+that. Now, I don't know that there's a
+
+
+specific use this tool and all those
+
+
+problems go away or use this tool and
+
+
+this is how you catch all the errors.
+
+
+You have to understand what your
+
+
+business cases are to understand what's
+
+
+out of balance for them.
+
+
+>> Right.
+
+
+>> And then you refine your model. You
+
+
+train that or you train your prompts a
+
+
+little bit better, put better
+
+
+expectancies around it and just keep it
+
+
+going the same way you would any
+
+
+standard microservices. Like this thing
+
+
+keeps throwing errors. Well, oh, there's
+
+
+a bug in this edge case. This is what's
+
+
+happening.
+
+
+>> Yeah.
+
+
+>> Fix it.
+
+
+>> And I think there's a lot of expectation
+
+
+that you know, agentic systems are are
+
+
+perfect. And like, "Wait a minute. The
+
+
+people doing the job aren't perfect."
+
+
+Right? Like how many errors does this
+
+
+person make on a daily or weekly basis?
+
+
+And and yet we look at the these systems
+
+
+and we're like, "Well, they should be
+
+
+100%." Well,
+
+
+>> Well, they're not self-healing either.
+
+
+They don't I mean, they can get better
+
+
+if you feed them through. I mean, if
+
+
+they're a whole bunch of connected
+
+
+systems.
+
+
+>> Right.
+
+
+>> Technically, I guess they could learn
+
+
+from themselves. But for the most part,
+
+
+they're still just services sitting
+
+
+there dealing with your data and making
+
+
+decisions on it the same way they have
+
+
+been for the last 10 years.
+
+
+>> And we can we can get better and better,
+
+
+but we're not going to hit perfection.
+
+
+And so, the perfection expectation is is
+
+
+definitely out of bounds.
+
+
+So, walk me through
+
+
+um kind of thinking about the most
+
+
+recent uh or one of our recent
+
+
+engagements, right? Where we've been
+
+
+able to walk in kind of greenfield with
+
+
+a customer and and take them through one
+
+
+of these data enablements, right? Where
+
+
+we're moving them to be more AI ready.
+
+
+>> Yeah.
+
+
+>> Like, what does that process look like?
+
+
+>> It's it's often um eye-opening how hard
+
+
+it is okay cuz it's not simple. There's
+
+
+a lot of different scenarios that
+
+
+your data has to handle. Um one of the
+
+
+most recent ones we were talking through
+
+
+is like, we don't need this real time.
+
+
+We need this
+
+
+just tomorrow's good enough. Well, until
+
+
+you go back it was an online it was like
+
+
+a a store online store. Cool. Why
+
+
+wouldn't you want it on like that's
+
+
+where you're going to save your money.
+
+
+Running all these models and running all
+
+
+these systems cost you more and more
+
+
+money.
+
+
+Getting rid of your developers doesn't
+
+
+make your system run better. Like,
+
+
+somewhere your your money crunches
+
+
+somewhere. So, you need to save it
+
+
+faster.
+
+
+>> Okay.
+
+
+>> And so, so then then it comes into like,
+
+
+well, okay, then how do we design for it
+
+
+in more real-time system and still get
+
+
+it over to the other side. So, it
+
+
+becomes this huge journey map of the
+
+
+data that's going through the system.
+
+
+And then it's comes down to tools and
+
+
+what you what fits your expertise of
+
+
+your your your teams and uh and and and
+
+
+getting that data
+
+
+available as kind of more of a data
+
+
+product. Like, the idea usually shifts
+
+
+from I just need data in tables to this
+
+
+is a data product. And the data
+
+
+product's awesome because it's like, now
+
+
+we have a contract. We have some sort of
+
+
+SLA. We understand what the data is.
+
+
+There's a schema. Can enrich it.
+
+
+Somebody owns it for example, right? So,
+
+
+they can give access and and you have
+
+
+somebody to go to to understand what
+
+
+this means. But, it doesn't just live in
+
+
+a table like it used to be. It used to
+
+
+be data products were just like, oh,
+
+
+that's the customer table. Right?
+
+
+>> Right.
+
+
+>> Now there's
+
+
+17 ways of consuming that customer, how
+
+
+fast you need it, where it lives at.
+
+
+It's coming from 22 different systems,
+
+
+things along those lines.
+
+
+>> So I hear you saying we have to think
+
+
+about the data in a different fashion
+
+
+where historically it's been more of
+
+
+like just save it off somewhere and and
+
+
+if we need to go look stuff up we can go
+
+
+look it up. We know where it is. We'll
+
+
+go find it to more of a product mindset
+
+
+>> about
+
+
+what is this data tell us about the
+
+
+business or what does it inform about
+
+
+our customers or our our products
+
+
+ourselves and thinking of it more from
+
+
+that mindset you you actually change
+
+
+your relationship with it.
+
+
+>> Correct.
+
+
+>> Say a little bit more about that.
+
+
+>> a good example is customers and orders,
+
+
+right? Orders are coming through. Every
+
+
+order has a customer tied to it. Like
+
+
+that data is related, but they're
+
+
+different products necessarily, but you
+
+
+can glean a lot of information from an
+
+
+order. You can glean how much
+
+
+how many times a a customer has ordered
+
+
+a certain product. You can you can
+
+
+extract how many of those specific
+
+
+products have been ordered over the last
+
+
+hour, minute,
+
+
+second. Uh you can determine possibly
+
+
+link it to an inventory system and
+
+
+determine how many you have in stock,
+
+
+whether you need to
+
+
+adjust prices, shut it off the website
+
+
+because we don't have any more left,
+
+
+things along those lines. Each of those
+
+
+are a product that somebody else owns
+
+
+and understands what that piece of data
+
+
+means to the company. And they can tell
+
+
+you a lot of different insights around
+
+
+what's going on as far as your process,
+
+
+as far as how how popular things are,
+
+
+how well your systems are running. Uh
+
+
+>> Behaviors.
+
+
+>> behaviors of the system and and what
+
+
+your business needs to know, not just
+
+
+this is customer XYZ or John Doe.
+
+
+>> Okay.
+
+
+>> And and people
+
+
+>> behaviors, business behaviors, system
+
+
+behaviors.
+
+
+>> Yeah, everything.
+
+
+>> That's yeah.
+
+
+>> It's kind of driven from that. And when
+
+
+you can we can put those down to a
+
+
+product and it's exposable, I think is
+
+
+the biggest thing. It's like if you have
+
+
+a new use case, and this is where a
+
+
+modern data platform really shines, is I
+
+
+have a new use case and I need to know
+
+
+every time we have more than 200,000
+
+
+orders a second or a minute or whatever
+
+
+you whatever you have, so we can
+
+
+raise a flag or this is wrong or
+
+
+something's going on or some some person
+
+
+needs to be in this loop to where that's
+
+
+super important. And you need to be able
+
+
+to do that just because yesterday that
+
+
+happens. Like I want to know if that
+
+
+ever happens again. If your data's in
+
+
+such a way where you can get to it, it's
+
+
+accessible and it's kind of a product
+
+
+like that, I should be able to write a
+
+
+system to tap into that and just do that
+
+
+job.
+
+
+>> Okay.
+
+
+>> Um you know, legacy platforms are always
+
+
+like, all right, a customer comes in and
+
+
+creates a new account and then it goes
+
+
+through this other process and then it
+
+
+has to go through verifications and then
+
+
+it has to go through this and that's
+
+
+when you get access to it. Wouldn't it
+
+
+be faster to know if they already have
+
+
+an account if you looked at it from when
+
+
+they first submitted the form, not
+
+
+necessarily after it's already created a
+
+
+second account? Things along those
+
+
+lines.
+
+
+>> So you've used the term modern data
+
+
+platform a couple of times. Like shape
+
+
+that for me. Like what is what is a
+
+
+modern data platform versus a legacy
+
+
+>> It's really ambiguous because it means
+
+
+something different to every single
+
+
+company, but the idea
+
+
+>> Give me Nick's definition.
+
+
+>> my my my definition is we you have
+
+
+source of data and often coming from
+
+
+multiple different things from multiple
+
+
+different sources. Need to get all that
+
+
+data into a single location and then
+
+
+serve it for whatever purpose it is.
+
+
+Like
+
+
+like I said, I've spent a lot of time
+
+
+kind of the data streaming world, so I
+
+
+have a lot of this is real-time data.
+
+
+Like what is a person in real-time? As
+
+
+they update their address, I want to
+
+
+know what that looks like. And every
+
+
+time an address is updated, I need to be
+
+
+able to consume that. Another consumer
+
+
+of that could be the data analytics side
+
+
+where they want to know, you know,
+
+
+slowly change dimension of this data as
+
+
+it comes into their system so they can
+
+
+put it build dashboards and reports. But
+
+
+the idea is it kind of supports both the
+
+
+operational and the analytical side of
+
+
+the house, right? There's kind of that
+
+
+Traditionally, they're separate.
+
+
+Business can make make uh
+
+
+decisions based on the operational data.
+
+
+Management can make decisions based on
+
+
+these analytical dashboards. But there's
+
+
+a delay in one of them or the data's too
+
+
+slow in one of them or it doesn't work
+
+
+to build a dashboard that supports
+
+
+real-time data if you want to see daily
+
+
+statistics added up over a day, right?
+
+
+It makes more sense to do that in some
+
+
+structured
+
+
+um
+
+
+data landscape that they can pull that
+
+
+data and build some BI BI reports off of
+
+
+that. So, but a modern data platform
+
+
+actually serves both, whether it feeds
+
+
+in, you can grab it. And and it and it
+
+
+really comes down to the accessibility
+
+
+of the data is what I believe is if I am
+
+
+owning this data and you need it, how do
+
+
+you get it? What format do you want it
+
+
+in? I should have a way that's Oh, you
+
+
+just want it pushed through a view? I
+
+
+can give you that.
+
+
+>> And the richness of the inputs, right?
+
+
+The sources, which could be a website,
+
+
+they could be other systems, it could be
+
+
+>> Correct.
+
+
+>> third party
+
+
+>> But it baked into all of that is the
+
+
+accessibility that I talked about
+
+
+earlier, the governance, knowing what
+
+
+the data is, what the schema is,
+
+
+uh
+
+
+what the context of that data is, the
+
+
+security, who has access to what rows or
+
+
+what what states of person of people or
+
+
+anything along those lines, and then
+
+
+just uh
+
+
+Yeah, the ability to get at that as
+
+
+needed.
+
+
+>> And get it get it in there, get the
+
+
+metadata around it so that you can in
+
+
+you know, increase the richness of that.
+
+
+>> With SLAs, with whatever. You If I own
+
+
+the product, you can you can trust me
+
+
+that my customer data is up-to-date
+
+
+within 15 milliseconds with these
+
+
+things, right? Or I might be my my SLA
+
+
+is 2 days. I don't know. Like
+
+
+>> Well, but that's the business that's the
+
+
+business decision of okay, well, what's
+
+
+right
+
+
+>> Everybody wants to talk about Oh, it's
+
+
+the fastest the fast
+
+
+>> Shouldn't always be fast.
+
+
+>> No, fast isn't always the good
+
+
+>> Yeah, so there's a there's a cost to
+
+
+speed, right? And so, what's your
+
+
+balance of like do we really need it
+
+
+that fast? Cuz here's how much it's
+
+
+going to cost. Or we can lower that and
+
+
+and and then it's not going to be as
+
+
+expensive.
+
+
+>> Yeah.
+
+
+>> Um and maybe not expensive just in terms
+
+
+of dollars, but in terms of
+
+
+>> business, yeah.
+
+
+>> computer resources, whatever that case
+
+
+may be.
+
+
+>> Business liability even. Just like what
+
+
+does it cost us to not know that about
+
+
+that person?
+
+
+>> Right.
+
+
+>> Got you. That's another Yeah, business
+
+
+liability.
+
+
+>> Yeah. Like
+
+
+>> Awesome.
+
+
+>> with with uh AI-ready data
+
+
+>> Yeah.
+
+
+>> uh some bad things that can happen is if
+
+
+you don't have the context there.
+
+
+>> Yeah.
+
+
+>> It's going to make up something, right?
+
+
+Like if it doesn't know that a certain
+
+
+customer is is not a tied to a state,
+
+
+they just see the customer or in the
+
+
+medical field for example, if you have a
+
+
+claim in a state.
+
+
+>> Yeah.
+
+
+>> The laws in that state might be
+
+
+different than another state. If you
+
+
+don't If it's not labeled with the
+
+
+proper state, it could just see like,
+
+
+"Oh, this person has a $100,000 claim
+
+
+outstanding. Need to cancel it because
+
+
+that's too big." Or
+
+
+need to need to pay it because that's a
+
+
+lot of money.
+
+
+>> Yeah.
+
+
+>> Something along those lines. The absence
+
+
+of data can have just as adverse of
+
+
+effects as having wrong data in there.
+
+
+So,
+
+
+>> Because these AI models
+
+
+>> They're just generating
+
+
+>> I've I've joked I've joked earlier
+
+
+they're they're like golden retrievers.
+
+
+>> Correct.
+
+
+>> Right? They just want to give you an
+
+
+answer. Every Oh, yeah.
+
+
+>> [laughter]
+
+
+>> Let me give you an answer. I'll make it
+
+
+up.
+
+
+>> Yeah.
+
+
+>> And it's like, "I'm sorry. You're right.
+
+
+You know, I made that up." And you're
+
+
+like, "Whoa, don't make things up." Like
+
+
+medical claims, please don't make things
+
+
+up.
+
+
+>> make any anything if you don't know what
+
+
+to do.
+
+
+You're better off just passing it and
+
+
+fla- flag it, right?
+
+
+>> Right.
+
+
+>> And we can have some other sort of
+
+
+>> how do you put in some of those sorts of
+
+
+guidance, those
+
+
+guardrails in the governance?
+
+
+>> cuz like
+
+
+I think that comes back to where the
+
+
+context matters a lot. And then AI-ready
+
+
+data I feel has more context than just
+
+
+regular than regular data like needed
+
+
+for dashboarding or even just events
+
+
+coming through is
+
+
+what this is, what valid values are of
+
+
+this in the schema. And then as you get
+
+
+into like the prompting and building
+
+
+your agents of what to do, you have to
+
+
+be very specific about some of those
+
+
+edge cases and lots of testing, lots of
+
+
+harnesses built around that to
+
+
+understand what's going on
+
+
+when that data comes in that it doesn't
+
+
+do the wrong thing. You have to be
+
+
+fairly explicit.
+
+
+>> Yeah, so how do you get to that level of
+
+
+granularity? You mentioned you know, you
+
+
+keep mentioning context. We got to put
+
+
+context
+
+
+>> fail about a hundred times first because
+
+
+you don't have it and it's like what is
+
+
+going on and
+
+
+>> Okay, so we iterate towards good
+
+
+context.
+
+
+>> We're still so new into all of this.
+
+
+Everybody's like, oh, I've got it
+
+
+figured out. We're fastest and like
+
+
+that's
+
+
+that's insane to think like how long the
+
+
+internet was around before we could
+
+
+actually order a pizza on it, right?
+
+
+>> Right.
+
+
+>> Now we're what? Two years into this
+
+
+thing, three, maybe well, I mean
+
+
+technically probably five, but really
+
+
+like big time just the last couple
+
+
+years.
+
+
+And
+
+
+two years into the internet, we were
+
+
+kind of like
+
+
+Now, it makes a pretty cool website
+
+
+where I can host my logo on it and be
+
+
+able to click and send a form that I
+
+
+want to talk to you, but
+
+
+>> Yeah, being the old guy from the '90s, I
+
+
+remember making websites then in the
+
+
+'90s. And if you put your credit card on
+
+
+the web in the '90s, like you were a
+
+
+ And you were definitely going to
+
+
+get what you deserved. It was a bad
+
+
+plan. Um and so we have we have come a
+
+
+long way, right? Where Amazon now has
+
+
+all of my credit cards on the regular.
+
+
+>> Yep.
+
+
+>> And uh and so I think we'll see that as
+
+
+well, but it's it's going to take some
+
+
+time to to mature.
+
+
+>> And even the companies that are doing
+
+
+this really, really well, the big ones
+
+
+that are, you know, they they've been
+
+
+built in the digital age, so they
+
+
+already have their data's already
+
+
+flowing fast. It's already available and
+
+
+accessible. And if you want access to
+
+
+it, there's a way to just grab it for
+
+
+your process and they
+
+
+as long as you adhere to their
+
+
+standards, you're good to go with it.
+
+
+All of a lot of those, they've all
+
+
+failed millions of times over the last
+
+
+couple years just trying to do something
+
+
+like this. They just have safeguards in
+
+
+place to help do some of that. Some of
+
+
+them don't have safeguards, but it you
+
+
+know, they're not putting it out to
+
+
+their
+
+
+to everything they need to do, but the
+
+
+failure the failure and the iterative uh
+
+
+pieces of this I think is very
+
+
+important. Um
+
+
+as we talk to our customers, you're
+
+
+you're never going to get it right the
+
+
+first time, especially if you're coming
+
+
+from I have 47 SQL databases sitting
+
+
+there. I want to be able to use AI on
+
+
+top of them for every time a customer
+
+
+orders something. It's like, well,
+
+
+boy, you're in for a world of hurt
+
+
+because
+
+
+that doesn't work. I mean, you can do
+
+
+things with it, but
+
+
+if your business case needs to be like
+
+
+real-time
+
+
+functions that happen when a customer
+
+
+does a certain action, like
+
+
+you've got a lot of infrastructure build
+
+
+out to get to
+
+
+>> lot of work before you get
+
+
+>> Correct. Yeah.
+
+
+>> Yeah.
+
+
+>> You know, just slopping an an AI on AI
+
+
+agent on an agentic agent on top of
+
+
+uh some data isn't going to work for
+
+
+that.
+
+
+>> So, we talked earlier about how, you
+
+
+know, with um
+
+
+with this data, you start to be able
+
+
+especially real-time data and agents,
+
+
+you start to be able to make decisions
+
+
+faster. But, you also can see behaviors
+
+
+and these interesting things. So, it
+
+
+sounds like your data has almost become
+
+
+a potential moat for your business.
+
+
+>> So, what have you seen in terms of how
+
+
+customers are leveraging that moat to
+
+
+say, "We're going to be more competitive
+
+
+>> Yeah. Because of our data."
+
+
+>> Well, I I think this gets into just like
+
+
+the models in general. They're pretty
+
+
+much a commodity, right? Like anybody
+
+
+can access any of the models. So, it's
+
+
+like
+
+
+>> Yeah, for 200 bucks a month, everybody
+
+
+gets it.
+
+
+>> Everybody gets it. Yeah. And and if you
+
+
+you're most places aren't going to build
+
+
+their own models to do some of that. I
+
+
+mean,
+
+
+that you're you're quite a ways behind
+
+
+if you're just starting that now. And
+
+
+some of these models are so well trained
+
+
+that
+
+
+>> Why bother?
+
+
+>> Yeah, why bother?
+
+
+>> Yeah.
+
+
+>> So, your data becomes the the gas for
+
+
+that engine necessarily. That that's how
+
+
+you're going to make your differentiator
+
+
+is you have the data that happens and
+
+
+you understand it well enough
+
+
+to do what you need to do. And so,
+
+
+protecting that data is super important.
+
+
+Understanding how that data works is
+
+
+super important. Getting it ready to be
+
+
+able to
+
+
+What's the right word? Uh
+
+
+trial, uh you know,
+
+
+My mind just blanks as I sit talking.
+
+
+Experiment. As you want to experiment
+
+
+with different pieces of data to do
+
+
+different things, right? Like that
+
+
+becomes super powerful for the company
+
+
+that's like, "Well, we're doing fraud
+
+
+detection. Wouldn't it be awesome if we
+
+
+could do also this on top of that?"
+
+
+Like, "Okay, we'll try that."
+
+
+>> Yeah, what else?
+
+
+>> do it in in line, right? Yeah, what else
+
+
+can this data do? That's where, you
+
+
+know,
+
+
+companies like Uber or something along
+
+
+those lines where they their data's
+
+
+already there. They can come up with a
+
+
+new use case in minutes and deploy it
+
+
+just because they know their data. They
+
+
+understand the data. They have all their
+
+
+data flowing through.
+
+
+And it just works. I
+
+
+probably shouldn't have said the name of
+
+
+a company, I guess, but I don't know
+
+
+exactly how it works there. But I never
+
+
+been working there, but I would imagine
+
+
+based on the way they do things, that's
+
+
+that's how I would do it is like, "Oh,
+
+
+yeah, I want to know every time I Now,
+
+
+all of a sudden a customer's zip code
+
+
+changes super important to me."
+
+
+>> Why the hell would that be important to
+
+
+anybody?
+
+
+>> Right. Cuz I have a new thing I want to
+
+
+try out, you know.
+
+
+>> Well, and as executives, we need to be
+
+
+thinking about it as a business
+
+
+differentiator. We had a customer that
+
+
+came to us and had the rights to this
+
+
+guy's photographs.
+
+
+>> Okay.
+
+
+>> And nobody else has the rights to these
+
+
+photographs. So, you could go onto one
+
+
+of the models, right? And say, "Claude,
+
+
+make me an image in the style of Ansel
+
+
+Adams."
+
+
+>> Yeah.
+
+
+>> You know, which is out there in public.
+
+
+And it could do it. And and you could
+
+
+have an image that's kind of in in that
+
+
+style. This one,
+
+
+no models been trained on it, so we
+
+
+built a model, trained it on that
+
+
+specifically because that data set was
+
+
+unique. And now he has the only one. If
+
+
+you want to do a image in the style of
+
+
+>> Yeah.
+
+
+>> you have to license it, you have to use
+
+
+his model, you have to go through him.
+
+
+So, there becomes some of these
+
+
+opportunities
+
+
+>> Yeah.
+
+
+>> if you think about your data in the
+
+
+right way to set up maybe a a
+
+
+differentiator in your business.
+
+
+>> Yeah, I mean that that likens me back to
+
+
+I've been around for quite a while, you
+
+
+know, through a lot of different systems
+
+
+pre-AI and pre-almost web as well. And
+
+
+so, it's like people that were a
+
+
+shipping company are now just a
+
+
+telematics company, right? Cuz they're
+
+
+like, "Well, I can make make way more
+
+
+money selling my product of how I track
+
+
+my trucks than actually shipping stuff
+
+
+on trucks." Things along those lines.
+
+
+Like
+
+
+the ability to AI to help you pivot a
+
+
+business like that is is very
+
+
+intriguing, I think, to me and as a
+
+
+business leader and a an executive, that
+
+
+is where you need to be looking. Like
+
+
+>> Probably could be pretty scary, too.
+
+
+>> imagine you know nothing about it, but
+
+
+if you
+
+
+>> yeah. We might become something that we
+
+
+are not.
+
+
+>> Correct.
+
+
+>> That might be where you can go
+
+
+>> Correct.
+
+
+>> uh to to keep your business from getting
+
+
+commoditized.
+
+
+>> Yeah, it is amazing how businesses they
+
+
+either competition kills them or they
+
+
+adapt and they go to do something
+
+
+different. So,
+
+
+>> Like Netflix, right? No more DVDs.
+
+
+>> [laughter]
+
+
+>> They're not shipping you DVDs, now we're
+
+
+streaming.
+
+
+>> Yeah, I mean I mean I remember when that
+
+
+happened. I was just like, "What? Why
+
+
+would I Who's going to stream all this
+
+
+stuff? Like, why would I ever not have a
+
+
+disc?" Turns out all of us.
+
+
+>> Everybody does.
+
+
+>> They were right.
+
+
+>> Yeah, you know, we kind of talked about
+
+
+we're in the infancy of of all of this.
+
+
+I
+
+
+That's the That's a very good example of
+
+
+someone forward-thinking and
+
+
+understanding what's going on there.
+
+
+>> Well
+
+
+>> Just trying.
+
+
+>> Yeah, and and I think that there's a a
+
+
+lot to come as like you were saying,
+
+
+more people get their data sorted out
+
+
+and there's more and more opportunities
+
+
+and more and more
+
+
+observations of about that data for us
+
+
+to do something meaningful with, there's
+
+
+going to be shifts in the business.
+
+
+>> Yeah, it's hard to it's hard to pivot in
+
+
+a new direction if your foundation isn't
+
+
+stable to expose that data in a way that
+
+
+you can pivot or make new discoveries
+
+
+about your data.
+
+
+Like if
+
+
+goes back to what we've been working on
+
+
+the last 10 years, right? Like it's the
+
+
+same thing. It's just a different type
+
+
+of resource that's grabbing your data.
+
+
+Not necessarily you need to change all
+
+
+your data. But if you had garbage data
+
+
+coming out before
+
+
+putting an an agent on it is not going
+
+
+to make it good data. So
+
+
+>> Right.
+
+
+>> just going to make you think like oh,
+
+
+the AI
+
+
+did something with this data, I can
+
+
+trust it cuz our AI is the best, you
+
+
+know.
+
+
+>> And then maybe that's a big business
+
+
+card and
+
+
+>> [laughter]
+
+
+>> That's a big business card.
+
+
+So, what are a couple of takeaways as we
+
+
+wrap up that you would love for the
+
+
+listeners to walk away with from our
+
+
+conversation?
+
+
+>> Yeah, I think that just understanding
+
+
+where you're at
+
+
+on this journey to being able to
+
+
+leverage your data on AI is subjective
+
+
+to to who you are and what your company
+
+
+is.
+
+
+Uh, I I personally would strive to get
+
+
+things as as close to real time as
+
+
+possible for a lot of different
+
+
+scenarios. I think that's very
+
+
+important, especially if you want to
+
+
+make decisions on on your data as close
+
+
+to when things happen. Um
+
+
+you want to serve your customers in such
+
+
+a way as soon as things happen, you want
+
+
+to be able to help them, whether that's
+
+
+they're having problems, they made an
+
+
+order, you want to ship it faster, they
+
+
+updated their address, you want to be
+
+
+able to update that faster, they submit
+
+
+a claim.
+
+
+Uh, what whatever it is, I think being
+
+
+able to to have that solid foundation is
+
+
+what you should strive for, not
+
+
+necessarily jumping to having all your
+
+
+workloads going through AI. I think that
+
+
+is a secondary come on to this to where
+
+
+it's like we trust our data, it's well
+
+
+enough formatted and good enough we can
+
+
+try to do some of this and hope that
+
+
+that's where you find your savings.
+
+
+I do think though that it's not cheap.
+
+
+Like you can't just be like this is
+
+
+going to save us billions of dollars a
+
+
+year by by having a modern data platform
+
+
+and we're just going to have AI do
+
+
+everything and the agents are going to
+
+
+take care of handling tying all these I
+
+
+won't have to have full teams developed
+
+
+to to pushing data to a ticketing
+
+
+system. It's like well
+
+
+that's one thing but if your data's
+
+
+garbage going in you're going to have
+
+
+full teams of support people helping
+
+
+people and they don't have problems.
+
+
+>> No.
+
+
+>> And so
+
+
+I think just understanding where that is
+
+
+and understanding that uh you're
+
+
+probably behind.
+
+
+My guess is most companies are behind
+
+
+unless you were digital born like born
+
+
+in the age of the cloud.
+
+
+>> Right.
+
+
+>> Uh there's going to be growing pains but
+
+
+having a big picture of what's going on
+
+
+can really help and understand that it's
+
+
+a step-by-step process and it never's
+
+
+going to go as fast as you think it is
+
+
+but there's time to catch up. Luckily
+
+
+you don't have to we talked about the
+
+
+models being a commodity now like
+
+
+you don't have to worry about that. If
+
+
+that was your
+
+
+your your
+
+
+hope like you're probably too far
+
+
+behind. You know, I mean unless you have
+
+
+some really good data that nobody else
+
+
+has for example like the the the
+
+
+in the style of picture guy. Uh but
+
+
+yeah I I I think with the models being
+
+
+more commoditized you have your data
+
+
+leverage them. Like even the open source
+
+
+ones are
+
+
+less than a year behind the main ones
+
+
+for the most part like they'll do just
+
+
+as good so
+
+
+it's relatively inexpensive to try some
+
+
+of it. Um but your data has to be in the
+
+
+right model and the right format first
+
+
+so
+
+
+>> Awesome.
+
+
+>> Yeah.
+
+
+>> Well thank you Nick. Thank you for
+
+
+coming.
+
+
+>> Thank you for having me. It was great.
+
+
+>> [music]
+
+
+[music]
+
+
+>> Woo!

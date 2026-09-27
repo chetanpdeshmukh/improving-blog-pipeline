@@ -1,0 +1,2782 @@
+[music]
+
+
+>> Welcome to the Improving Edge.
+
+
+This is where we talk about how AI and
+
+
+innovation show up in real
+
+
+organizations. What works, what doesn't
+
+
+work, what we're learning along the way.
+
+
+I'm having conversations with people
+
+
+actually doing the work, turning
+
+
+innovation into outcomes. Today I have
+
+
+with me David Sandoval, president of our
+
+
+Improving Mexico operations. Thanks for
+
+
+being here, David. So, when we think
+
+
+about the nearshore delivery model, how
+
+
+is AI impacting that right now? What are
+
+
+you seeing?
+
+
+>> Uh that's a great question. First of
+
+
+all, thank you David for having me. I
+
+
+think nearshore has uh shifted a little
+
+
+bit in the mindset of organizations
+
+
+worldwide. You know, 10 20 years ago,
+
+
+the whole value promise of nearshore was
+
+
+very much reduced to the value
+
+
+proposition, the cost structure, uh kind
+
+
+of how the labor arbitrage played a a
+
+
+role into how organizations saw value
+
+
+from nearshore and teams in distributed
+
+
+locations. So, I believe now with AI
+
+
+that has provided a whole
+
+
+different set of uh opportunities. And
+
+
+there's a profound change in how teams
+
+
+in distributed places can actually bring
+
+
+value to a business and really focus on
+
+
+the business outcomes, the value that
+
+
+they can bring with a good workflow,
+
+
+with a good culture, with a good
+
+
+understanding of the business goals, and
+
+
+and how they can actually
+
+
+uh add to that outcome uh as a team
+
+
+instead of just focusing on the cost
+
+
+thing. I think that's the major shift,
+
+
+in my opinion.
+
+
+>> Okay. So, you said there's lots of
+
+
+opportunities that we're seeing. Like,
+
+
+talk a little bit more about what are
+
+
+some of those opportunities, ways that
+
+
+that our nearshore teams can leverage AI
+
+
+and see those benefits?
+
+
+>> Yeah, I mean,
+
+
+uh if you think about it, the the
+
+
+nearshore value proposition that when we
+
+
+started Improving Mexico uh 15 years
+
+
+ago, we're looking at intersecting the
+
+
+capability of a team in a different
+
+
+location that was not necessarily the US
+
+
+market and for instance as a context
+
+
+Mexico produces about 130,000 stem
+
+
+graduates a year. So that's a big
+
+
+untapped market. People it's a lot of
+
+
+people and not a lot of organizations
+
+
+have that type of mind. So with that and
+
+
+intersecting that with the capabilities
+
+
+of bringing in the the best practices is
+
+
+the the tools that are now worldwide
+
+
+available
+
+
+they can actually really become part of
+
+
+that workflow of that whole formula for
+
+
+success of companies. So I would say
+
+
+big opportunity for a lot of
+
+
+organizations is how can I incorporate
+
+
+that whole strategy and looking into not
+
+
+just playing to the labor arbitrage but
+
+
+also looking to okay, how can these
+
+
+capabilities these people this ability
+
+
+for them to be in the same work day
+
+
+conversation really becomes a
+
+
+differentiator for companies to achieve
+
+
+their their outcomes much faster.
+
+
+>> Yeah, I can see I mean with a you know
+
+
+130,000 people and you add AI on top of
+
+
+that like there's a massive amount of
+
+
+potential there right a lot of potential
+
+
+that I could potentially use in my
+
+
+organization. So as an executive like
+
+
+how should I be thinking about forming
+
+
+teams in in a nearshore environment to
+
+
+take advantage of that. What would that
+
+
+look like?
+
+
+>> Yeah, it's it's a good question. I think
+
+
+it really changes company to company and
+
+
+and depending on the needs of of the
+
+
+business
+
+
+full teams really make ton of sense what
+
+
+we have people that are really
+
+
+experienced they understand how to
+
+
+collaborate with
+
+
+worldwide
+
+
+teams and and professionals but also
+
+
+they can bring in people with less
+
+
+experience but also eager to to to learn
+
+
+and to bring in this best practices into
+
+
+a good streamline workflow that has this
+
+
+AI engineering framework on top of it.
+
+
+So so that helps really bring in a good
+
+
+alignment
+
+
+a really strong understanding of how
+
+
+they're going to evaluate the quality of
+
+
+the output they produce and really keep
+
+
+control of the risk that could come out
+
+
+of of bringing in AI into a workflow.
+
+
+>> Yeah. So I could definitely see what
+
+
+you're saying in terms of it bringing
+
+
+along our people in a more rapid
+
+
+fashion, right? Because they have this
+
+
+this bundle of knowledge that I can tap
+
+
+into no matter who I am on the team.
+
+
+That's cool to hear. I know that the
+
+
+thing that we hear companies sometimes
+
+
+push back on with nearshore teams is
+
+
+communication. Maybe the communication
+
+
+barrier or what does good communication
+
+
+look like? How is AI helping with that
+
+
+communication piece?
+
+
+>> Yeah, that's a great question. First of
+
+
+all, I think the communication gap is
+
+
+not as profound as some people may
+
+
+think. A lot of teams across Latin
+
+
+America,
+
+
+it's really common for professionals in
+
+
+IT to have bilingual capabilities. So
+
+
+that on one hand, but also AI
+
+
+has really brought in a profound shift
+
+
+and and and I think advantages and
+
+
+lowering those barriers even more,
+
+
+right? Because we have
+
+
+things like AI summarization of
+
+
+meetings. So you can then have a good um
+
+
+concise set of action item for the team
+
+
+if they have some sort of
+
+
+um time zone difference or there's a
+
+
+a tax that has been paid when it comes
+
+
+to context awareness.
+
+
+That really brings
+
+
+an opportunity for them to bring in
+
+
+those tools and then have a ways to pass
+
+
+along that context in a more efficient
+
+
+way. So summarization of meetings the
+
+
+conversation
+
+
+all that. Yeah, good good understanding
+
+
+of the goals and and the next steps to
+
+
+to be taken. So really focus on what the
+
+
+software delivery life cycle
+
+
+tasks are the most valuable ones are are
+
+
+going to be for that team and and
+
+
+worry less about the the context
+
+
+sharing.
+
+
+>> Yeah. Well, and worry less just about
+
+
+the communication specifically itself,
+
+
+you know.
+
+
+>> Yeah. I know a lot of people they'll get
+
+
+sensitive about their accent. Uh yours
+
+
+is really great.
+
+
+>> Thank you. Appreciate it. Appreciate it.
+
+
+>> but, you know, often times and and it
+
+
+doesn't matter, you know, uh any
+
+
+different countries. I was talking with
+
+
+somebody from uh she was from Ukraine uh
+
+
+just yesterday and her accent was super
+
+
+heavy. And um
+
+
+and not to the point that I couldn't
+
+
+understand her, not a problem, but it
+
+
+varies from person to person, both the
+
+
+the speaker and and the listener. And
+
+
+so, having that ability to synthesize to
+
+
+a shared understanding definitely has
+
+
+has been advantageous.
+
+
+>> Yeah, additionally, I think there is are
+
+
+ways to use the tools that already
+
+
+exist, like the repositories, their
+
+
+their
+
+
+GitHubs, the whatever they're already
+
+
+using, and put AI tools on top of those.
+
+
+So, then it becomes even more clear what
+
+
+teams need to focus on. So, you get that
+
+
+full value chain happening at
+
+
+globally. So, you can have your teams
+
+
+sitting in the same room or sitting in a
+
+
+different country, and this you can
+
+
+still get the full
+
+
+um
+
+
+the full value of
+
+
+same work day collaboration.
+
+
+>> Got you. So, I am a little curious, you
+
+
+know, language. It feels to me and and
+
+
+this might just be my perspective that
+
+
+the bias on the models is towards
+
+
+English.
+
+
+So, have you seen personal use-wise,
+
+
+like when you're using it, like have you
+
+
+seen any challenges
+
+
+using it in a different language that's
+
+
+not English? Do you tend to use it in
+
+
+English? Like talk to me a little bit
+
+
+about what does that look like from a
+
+
+language perspective?
+
+
+>> Well, for for me personally, I think I'm
+
+
+very comfortable using it in English.
+
+
+Although when I do need to
+
+
+maybe have a meeting which is my
+
+
+immediate team back home, I would then
+
+
+prompt it in Spanish and then get
+
+
+a document to outline an agenda for a
+
+
+meeting or or some some sort of
+
+
+summarization of a set of hard points or
+
+
+something that I need to use then to
+
+
+have a more efficient planning strategy
+
+
+session. So, that I think has been
+
+
+pretty much transparent. I haven't seen
+
+
+any any major differences. Although from
+
+
+a technical standpoint, you might want
+
+
+to be wary of the terms you use, the
+
+
+type of
+
+
+of syntax you're using in your projects.
+
+
+That might
+
+
+very much have a factor into the outputs
+
+
+if you're not careful how you're
+
+
+prompting it and then what do you expect
+
+
+out of it.
+
+
+>> Yeah, I don't I don't want to
+
+
+accidentally have it translate and like
+
+
+say I have a cat in my hair or or
+
+
+something horrible like that. But you
+
+
+haven't seen any issues moving between
+
+
+languages, which could actually be an
+
+
+advantage, right? Because if I'm able to
+
+
+draft using the model, I draft in
+
+
+English and say,
+
+
+you know, convert this to Spanish. I
+
+
+don't know is that something that we're
+
+
+seeing the teams use and leverage?
+
+
+>> Uh yes, I think that's that could be
+
+
+common. I've seen that very much
+
+
+happening with
+
+
+document translation. A lot of that
+
+
+takes place of of course, right? Or if
+
+
+you want to send a very polished email,
+
+
+of course that that can be
+
+
+that can be helpful. But I think that
+
+
+the the major the the bulk of the value
+
+
+is really is is in the in
+
+
+having a good evaluation of the project,
+
+
+the the documentation that they have,
+
+
+the
+
+
+code writing of course, producing the
+
+
+the right code for for the project. And
+
+
+also how do you test it? How do you
+
+
+evaluate? How do you monitor the quality
+
+
+of the the code produced? So
+
+
+>> Yeah, you still got to have good data.
+
+
+>> Right, we always got to have good data.
+
+
+But if it can help you in some of these
+
+
+moves,
+
+
+uh I can see where that would actually
+
+
+bring the teams closer together.
+
+
+>> Yeah.
+
+
+>> Because the the uh translation
+
+
+capability is being handled I know I use
+
+
+it for like I use Grammarly every single
+
+
+day. You know,
+
+
+as a native English speaker, it makes my
+
+
+English better. So, I can only imagine
+
+
+as a non-native English speaker how much
+
+
+that could advance
+
+
+uh your ability to clearly communicate
+
+
+with with your team, with your clients,
+
+
+that sort of thing. So, what are you
+
+
+seeing that organizations are getting
+
+
+wrong about AI's impact in into
+
+
+nearshore delivery?
+
+
+>> That's a good question. I think
+
+
+if you assume that just by giving out
+
+
+licenses, you're going to get the value
+
+
+and
+
+
+and just make it works. I don't think
+
+
+that's the case.
+
+
+>> AI on everybody here.
+
+
+>> I don't think that's the case. I I think
+
+
+uh it's very easy to go token maxing on
+
+
+these things. You can you can blow the
+
+
+budget right
+
+
+right very quickly. So, I think some
+
+
+companies have real realizing that, so
+
+
+they're very be very careful on how they
+
+
+introduce these tools into a workflow.
+
+
+But, I believe that's really where the
+
+
+the the promise of of good AI
+
+
+implementation really lies in the
+
+
+workflow. Make sure that we leverage the
+
+
+good understanding of the people that we
+
+
+already have.
+
+
+Um strengthen that whole layer of the of
+
+
+the team and how they're collaborating.
+
+
+And then bring in the AI to enhance
+
+
+whatever they're already doing. Cuz AI
+
+
+is going to play it's going to sort of
+
+
+serve as a as a mirror to whatever
+
+
+already is is already happening in the
+
+
+in the culture of the team and then
+
+
+their activities. And if you focus on
+
+
+then how can AI
+
+
+enhance that workflow and compress the
+
+
+the the tasks that are compressible,
+
+
+then you're only left with really
+
+
+valuable really valuable actions that
+
+
+can speed up the outcomes for the
+
+
+business.
+
+
+>> And by doing that compression, like you
+
+
+said, it's it's intensifying. So, if
+
+
+things are healthy, great. And if
+
+
+they're not, oh, wow, we're going to
+
+
+have a whole lot of exposure to
+
+
+>> And you're going to You're going to see
+
+
+that play out real quickly.
+
+
+>> Yeah.
+
+
+So, then let's talk a little bit, like
+
+
+what are some of the risks of using AI
+
+
+as we are engaging in it in nearshore
+
+
+model?
+
+
+By introducing that AI, what are those
+
+
+risks?
+
+
+>> I mean, I think risks are
+
+
+very much what you would expect from
+
+
+an immature team. If you are not having
+
+
+a good team
+
+
+uh dynamics already in place, then you
+
+
+could have
+
+
+an uneven use of AI, right? So, somebody
+
+
+that's very comfortable with the tools,
+
+
+very comfortable with implementing those
+
+
+tools, you could see them bringing in
+
+
+new practices into the team, but if
+
+
+they're not not that adopted by the rest
+
+
+of the team, then you're going to see
+
+
+uneven results.
+
+
+Uh maybe bringing in
+
+
+uh some some security risks as a result
+
+
+of that, cuz maybe people are not
+
+
+checking the outcomes or the the output
+
+
+>> Right.
+
+
+>> of of that of that tool. So, you'll see
+
+
+then potentially things that if if
+
+
+you're not careful, then it can
+
+
+introduce and inject just risks across
+
+
+the entire entirety of the product. So,
+
+
+looking into how that's
+
+
+implemented and also uh potentially the
+
+
+the the engineering framework around it.
+
+
+If you don't have a good engineering
+
+
+framework around the team, whether
+
+
+they're distributed or local, then you
+
+
+are really
+
+
+uh increasing the risk of uh
+
+
+the
+
+
+the budget of for tokens being blown out
+
+
+right away. Or just
+
+
+unintended things that you're not really
+
+
+think about thinking about because those
+
+
+were not real situations before AI.
+
+
+>> Yeah. So, making sure you have
+
+
+standards, uh you've got governance in
+
+
+place.
+
+
+>> Um you've got observability, visibility,
+
+
+right, into
+
+
+um you know, where is our money going?
+
+
+What are we getting for our money? I
+
+
+know that's a lot of the conversation,
+
+
+you know, token maxing uh being a thing,
+
+
+right? Where I'm going to blow out all
+
+
+my tokens, but it was like, all right,
+
+
+what did we get for that? Like, that's
+
+
+fantastic, but was that like actual
+
+
+business value or did your side project
+
+
+just get spun up and now we have a Candy
+
+
+Crush competitor?
+
+
+Um, definitely not not things that you
+
+
+necessarily want. So, we were talking
+
+
+about collaboration, you know,
+
+
+collaboration maybe between an onshore
+
+
+team and a nearshore team. And what are
+
+
+some of the ways that you're seeing AI
+
+
+systems impact that collaboration?
+
+
+Uh, how are we leveraging that?
+
+
+>> I think uh on the positive side, they're
+
+
+they're impacting
+
+
+um by reducing the
+
+
+the intangible barriers that come across
+
+
+with context sharing. So, understanding
+
+
+what was done by a particular team and
+
+
+how was that handed off or or passed
+
+
+along to other different team and that
+
+
+works at a global scale. But also I I
+
+
+think most organizations are now in the
+
+
+in the conversation of how do I
+
+
+implement AI and for what purpose? I see
+
+
+it as a as a pendulum, right? On one
+
+
+hand you have um, the the status quo of
+
+
+a couple years ago. You got the full
+
+
+teams working uh together maybe are
+
+
+there on site or distributed. Uh, and
+
+
+then on the other side you got full
+
+
+automation as much as much cost saving
+
+
+as you can with with your workforce, but
+
+
+then everything is invested into tokens.
+
+
+the currency that you're you're focusing
+
+
+on. Where does that pendulum live for
+
+
+most organizations? Do we Do we then uh
+
+
+look into automate and and at what
+
+
+expense when it comes to culture, when
+
+
+it comes to awareness, when it comes to
+
+
+alignment and collaboration, and it's
+
+
+all on on the automation side on on just
+
+
+full side of the pendulum or you stay at
+
+
+the status quo and not don't bring a lot
+
+
+of the the benefits and the value of
+
+
+this tools your business,
+
+
+I feel like it's somewhere in between
+
+
+for a lot of organizations.
+
+
+>> Okay.
+
+
+>> And if you bring in the perspective on
+
+
+then nearshore or global teams, that
+
+
+brings a different dimension cuz the end
+
+
+you can then
+
+
+continue leveraging the culture, the
+
+
+alignment, the capabilities, the
+
+
+capacity of a lot of these places, and
+
+
+still get your costs down.
+
+
+And if those teams are well versed in in
+
+
+AI usage, you got a good working model,
+
+
+operating model, then you got a full
+
+
+benefit of all best of all worlds, I
+
+
+would say.
+
+
+>> Right.
+
+
+So, you mentioned culture. Where where
+
+
+are you seeing this like elevate culture
+
+
+cuz there's cultural differences, right?
+
+
+Um
+
+
+but where is it elevating that and and
+
+
+like where is it maybe shifting that?
+
+
+>> Nearshore by itself and and a lot of
+
+
+this global models,
+
+
+they
+
+
+they're now in a better place now than
+
+
+10, 20 years ago. I think the world has
+
+
+become a much more globalized way when
+
+
+it comes to work work dynamics and team
+
+
+dynamics. So, I'd say that provides a
+
+
+much more welcoming environment for a
+
+
+lot of the teams that are not on site to
+
+
+be very much transparent, plug and play,
+
+
+really get hit the ground running, so to
+
+
+say.
+
+
+>> Yeah.
+
+
+>> Jump right in.
+
+
+And in some of these places then you can
+
+
+leverage
+
+
+sort of the next step in cultural
+
+
+alignment. A lot of the folks in Latin
+
+
+America, for instance, people grew up
+
+
+with the same things, the same same
+
+
+cultural affinities, right? Sports,
+
+
+movies, music, all those things.
+
+
+You can build a relationship with your
+
+
+teams
+
+
+sort of offline and then have that that
+
+
+dynamic be much more effective when
+
+
+they're working.
+
+
+>> Well, we know when you have those types
+
+
+of connections and those types of
+
+
+interactions, right? And the the
+
+
+humanification, right, of your
+
+
+co-workers, uh that it really does
+
+
+create a stronger culture, right?
+
+
+Creates more intimate bonds, and we know
+
+
+that when you
+
+
+when you like somebody that you work
+
+
+with, you are sick less often, you show
+
+
+up and are actually more productive at
+
+
+work, you're less likely to leave your
+
+
+job. Like there's all of these positive
+
+
+benefits that you have just because you
+
+
+got that you got that connection.
+
+
+>> So, one of the things that gets talked
+
+
+about is how AI's being leveraged for
+
+
+um
+
+
+interviews. And maybe, you know, maybe
+
+
+some of the shadow side of how people
+
+
+are using AI to fake their interviews or
+
+
+to to
+
+
+be disingenuous about what they know.
+
+
+>> Mhm.
+
+
+>> Obviously, when you're talking about a
+
+
+nearshore team, there's not a way you
+
+
+can pull them in in person and make sure
+
+
+are you actually know the things you're
+
+
+telling me,
+
+
+you're not reading it off a screen or
+
+
+having Claude listen to us and and give
+
+
+you answers. Like, what are some of the
+
+
+things that we're having to do to make
+
+
+sure that that we're, you know, getting
+
+
+the right people that actually know the
+
+
+things that they claim. Like, what are
+
+
+some of those practices that we're
+
+
+having to evolve in our organization?
+
+
+>> That's that's a great question. Um
+
+
+we you know, we've been going through
+
+
+that for the past I think 3-4 years
+
+
+since this this model started to really
+
+
+become become global and since ChatGPT
+
+
+came to the market, people have started
+
+
+using it to to trick all sorts of
+
+
+things, right? So, I think
+
+
+uh in our experience, in my experience
+
+
+specifically, what I've seen is that the
+
+
+shift has been more going back to the
+
+
+basics. The The basic skills of a
+
+
+programmer or somebody that understands
+
+
+the the foundational
+
+
+behaviors and and skills that that make
+
+
+you a good developer, a good engineer.
+
+
+Those things need to be
+
+
+um checked first, need to be talked
+
+
+about first, a good conversation around
+
+
+those skills.
+
+
+>> Yeah.
+
+
+>> And then recognizing also that these AI
+
+
+tools are going to be part of your
+
+
+day-to-day. So it's not that we don't
+
+
+want people to know how to use AI
+
+
+effectively, is that they can do well
+
+
+if AI is not available.
+
+
+>> Yeah.
+
+
+>> Uh
+
+
+>> We don't want them to cheat.
+
+
+>> Exactly. Exactly. So I think
+
+
+having a good
+
+
+first cultural alignment, make sure that
+
+
+you you want to work with those people.
+
+
+That's the first question, right? Is
+
+
+this somebody that I I see myself having
+
+
+a healthy
+
+
+confrontation and and a good career
+
+
+growth conversation around? Like can I
+
+
+can I help this person grow? Can this
+
+
+person help me grow as an engineer, as a
+
+
+professional? So having that sort of be
+
+
+the first thing that you want to
+
+
+validate and then moving on to the the
+
+
+basics of engineering, the the
+
+
+architectural mindset of a solution
+
+
+enterprise grade solution. That's what
+
+
+we're looking for. And then how they use
+
+
+AI to be more effective at that.
+
+
+>> Yeah.
+
+
+Well, and I know we've, you know, we've
+
+
+seen an acceleration of this type of
+
+
+stuff cuz it happened during COVID,
+
+
+right?
+
+
+I know we've joked in our office about
+
+
+we had one of our candidates that
+
+
+he was just lip-syncing.
+
+
+He was doing this and you could tell
+
+
+someone off screen was actually
+
+
+answering the questions. So it's not a
+
+
+new thing, right? It it's been going on
+
+
+for a little while. But I also know that
+
+
+there are AI tools that can even help
+
+
+with this.
+
+
+>> Yes.
+
+
+>> Things
+
+
+I think I heard ropes was one.
+
+
+>> There's a good solution called Ropes AI
+
+
+for a lot of organizations that want to
+
+
+use that and then configure it in a way
+
+
+that is specific to the profile, the
+
+
+type of skills you're looking for. That
+
+
+can definitely be done.
+
+
+>> Yeah.
+
+
+>> Those tools like that
+
+
+really help you also with uh kind of
+
+
+validations around is this person
+
+
+cheating, is this person taking a screen
+
+
+capture, is there something running in
+
+
+the background? All those things uh can
+
+
+be spotted by these tools.
+
+
+Uh minus it could maybe it's not 100%
+
+
+effective, but it gives you a good
+
+
+starting point for confidence and trust
+
+
+building.
+
+
+>> Yeah, not not making a tools this is not
+
+
+a tool show or anything like that, but I
+
+
+know those sorts of things exist out
+
+
+there to help Yeah. to just try and and
+
+
+you know, level the playing field. Make
+
+
+sure people aren't cheating
+
+
+um especially when as we've continued to
+
+
+grow in this distributed world.
+
+
+>> Mhm.
+
+
+>> So, thinking about some of the
+
+
+the many teams that we have like
+
+
+what's an example of a team that's done
+
+
+a really great job of leveraging AI both
+
+
+for uh for a team acceleration, but also
+
+
+for a value delivery acceleration?
+
+
+>> Yeah, um a few come to mind, but the the
+
+
+first one is
+
+
+So, we have this this client uh in the
+
+
+States in Dallas. It's a big pharma
+
+
+company.
+
+
+>> Yep.
+
+
+>> You might be familiar with them. Uh they
+
+
+they are uh in the logistics uh
+
+
+part of the of the pharma industry and
+
+
+we have a few teams that are working
+
+
+with them since uh several months ago.
+
+
+And one of them was chosen to implement
+
+
+AI in their workflow.
+
+
+>> Okay.
+
+
+>> Full stop. Let's let's try to use AI in
+
+
+everything they can
+
+
+>> And and as much as we can.
+
+
+>> As much as they can and then compare
+
+
+that use this as a as an experiment as a
+
+
+test uh against the rest of the teams
+
+
+and see where the real gains were. Um
+
+
+and basically going through all the the
+
+
+process of understanding
+
+
+uh the the the task, going through um
+
+
+releases, monitor it, quality test,
+
+
+verification, all that. So, we saw um
+
+
+that the this team had a really good
+
+
+I would say will to try and experiment
+
+
+and challenge assumptions. And by doing
+
+
+that they started implementing a lot of
+
+
+this
+
+
+I would say an engineering framework
+
+
+using AI within their operating model.
+
+
+So, the the gains were
+
+
+were massive.
+
+
+Top of my head, probably uh 50-60% gains
+
+
+for for some of the
+
+
+>> Wow.
+
+
+>> the team members. Now, they were not
+
+
+even some folks would have
+
+
+uh better results than others. But
+
+
+ultimately, what it allowed us to do
+
+
+is to then uh shift that to a specific
+
+
+use case. So, they built an AI agent
+
+
+that integrated into their support
+
+
+ticketing system.
+
+
+And with that, they they created this
+
+
+CLI, this command line interface uh
+
+
+agent that was basically reading tickets
+
+
+from their system, was providing all the
+
+
+context awareness, was providing all the
+
+
+the actions that to be taken, that was
+
+
+creating an email that was sent to
+
+
+stakeholders with specific actions to be
+
+
+taken. And all of that basically reduced
+
+
+I want to say a 40-minute uh time uh for
+
+
+to respond and to resolve a ticket uh in
+
+
+the beginning to a 4-minute timeline.
+
+
+>> Wow.
+
+
+>> So, a 10x reduction.
+
+
+>> 10x reduction. Which goes to the, you
+
+
+know, the use cases when we typically
+
+
+talk about you're looking for a 5 to 10x
+
+
+uh benefit when when you're doing it.
+
+
+And I mean, it really happened.
+
+
+>> It did. Yeah.
+
+
+>> That's awesome. So, we talked earlier
+
+
+about um
+
+
+trust and and needing to put up
+
+
+guardrails and some of those sorts of
+
+
+things. Like
+
+
+when you have a distributed system, like
+
+
+are those guardrails different? Like how
+
+
+do you build trust uh across the team,
+
+
+but also with ultimately the client?
+
+
+>> Yeah, that's a that's a great question.
+
+
+That's
+
+
+um something we worked on every day. I
+
+
+think you want to have the folks
+
+
+understanding, first of all, what
+
+
+they're there for, right? What's the
+
+
+purpose of the the team that that you
+
+
+have?
+
+
+>> Clear expectations.
+
+
+>> Exactly. What is is a shared
+
+
+understanding of the the the
+
+
+expectations for for the outcomes of
+
+
+each one of their roles okay and the the
+
+
+way that they're contributing to the
+
+
+business goals. So good understanding of
+
+
+those roles, good understanding of the
+
+
+foundational
+
+
+behaviors around
+
+
+how do we show up? What's the the right
+
+
+way to to ask for for help? What's the
+
+
+the best way to use these tools in a way
+
+
+that is
+
+
+I would say approved by the rest of the
+
+
+team that you're actually doing
+
+
+something that is not going to introduce
+
+
+just noise to to other somebody else's
+
+
+work. So having a good set of best
+
+
+practices and a good operating model
+
+
+really brings in
+
+
+a good foundation for trust cuz you want
+
+
+to have
+
+
+those teams
+
+
+really
+
+
+creating alignment so therefore AI can
+
+
+enhance it
+
+
+cuz if you don't have the alignment to
+
+
+begin with then AI is not going to do
+
+
+much right it's going to reveal it that
+
+
+the lack of alignment you
+
+
+didn't have. So
+
+
+>> Well then and you said that earlier
+
+
+right where it was like whatever
+
+
+whatever your
+
+
+culture is like or your context is like
+
+
+it's going to intensify it and if it's
+
+
+not there
+
+
+it's yeah
+
+
+not much you can do about it.
+
+
+>> Yeah absolutely.
+
+
+>> So as you look ahead um
+
+
+for AI's impact on nearshore delivery
+
+
+like does it does it flatten global
+
+
+delivery? Like what does it do to
+
+
+the model?
+
+
+>> I think it it does
+
+
+from some perspective. I think it it
+
+
+moves collaboration higher up in the
+
+
+value chain.
+
+
+>> Okay.
+
+
+>> I think it does create this opportunity
+
+
+for the the teams with a good operating
+
+
+model to to be the winners the companies
+
+
+and organizations that choose
+
+
+to
+
+
+provide that sort of expectations in a
+
+
+way that works ideally in the same work
+
+
+day collaboration type of
+
+
+operating model or maybe have global
+
+
+teams, how that plays into okay, where
+
+
+do I need to have the the teams more um
+
+
+effective when it comes to where the
+
+
+thinking needs to happen and where do I
+
+
+need to be more explicit and and
+
+
+elaborate more on the tasks to be done.
+
+
+So so I think that helps kind of
+
+
+deciding where in the globe your team
+
+
+should be located and how that cost
+
+
+structure really plays into that the
+
+
+role that I was I was telling about that
+
+
+pendulum, right?
+
+
+>> Right.
+
+
+>> How do you define where the the best
+
+
+place for you as an organization lives
+
+
+in that in that pendulum? Do I try to
+
+
+optimize as much as I can and then rely
+
+
+on a good reasonable use of the of the
+
+
+token budget
+
+
+or do I
+
+
+rely in in a better on my team to then
+
+
+grow and and bring as much as much value
+
+
+as I can to the organization
+
+
+or do I find a good place in the middle
+
+
+that can then really take my company to
+
+
+the next level?
+
+
+>> Got you.
+
+
+So you you mentioned the economics a
+
+
+little bit and and you know, the
+
+
+nearshore model has historically been a
+
+
+value play, right? The the arbitrage
+
+
+between
+
+
+people costs cuz people are the most
+
+
+important asset
+
+
+of delivery.
+
+
+So
+
+
+we got to talk about like how is this
+
+
+impacting pricing? How is this impacting
+
+
+that push? You know, it's always a give
+
+
+and a take where it's always they want
+
+
+to take and want us to give
+
+
+typically. But like what are we seeing
+
+
+from a business model perspective in
+
+
+terms of the expectations of customers
+
+
+and the impact on pricing that AI would
+
+
+make for a
+
+
+a nearshore delivery team?
+
+
+>> Yeah, I think if you're
+
+
+if you as an organization are only
+
+
+looking into how is this going to how
+
+
+much is it going to cost me per hour
+
+
+that's probably not going to be the the
+
+
+best play for a pure nearshore team cuz
+
+
+nearshore is not going to be the
+
+
+cheapest model you can find out there.
+
+
+However, if you factor that in into the
+
+
+a good use of of a of a set of tokens
+
+
+that can get you to
+
+
+a good outcome, then you can I think
+
+
+find a twist a sweet spot that works for
+
+
+your company. So, I would say maybe
+
+
+finding a way to configure your teams
+
+
+where people are local, they're on-site,
+
+
+they're in the
+
+
+in your region that have a closest
+
+
+proximity and understanding of your
+
+
+business.
+
+
+>> Right.
+
+
+>> Uh and also have the the team
+
+
+ideal in the same work day um
+
+
+alignment so they can um
+
+
+really use the and take advantage of the
+
+
+the benefits that this AI tools bring so
+
+
+they can focus on the tasks that are
+
+
+going to bring the most value to the
+
+
+business. So, instead of focusing them
+
+
+on the metric that tells you, "This is
+
+
+my cost per hour." you're looking at the
+
+
+cost per outcome.
+
+
+>> So, really tie it more to what is the
+
+
+value I'm getting, not necessarily,
+
+
+which
+
+
+>> Mhm.
+
+
+>> I I think the business definitely
+
+
+understands. Procurement might be a
+
+
+little bit harder to get them to wrap
+
+
+their heads around like stop looking at
+
+
+dollars to dollars because that's that's
+
+
+kind of their job.
+
+
+Um
+
+
+>> Yeah.
+
+
+>> So, if I'm if I'm a development manager,
+
+
+I'm an executive at an organization, and
+
+
+I'm looking for a nearshore partner,
+
+
+like what are the characteristics
+
+
+in this AI-enabled world that really
+
+
+make a great partner for nearshore
+
+
+delivery?
+
+
+>> I think you want to find the the partner
+
+
+that can take it to the next level when
+
+
+it comes to AI adoption.
+
+
+A lot of companies out there are trying
+
+
+to figure this out. And
+
+
+most companies organizations that are
+
+
+not doing this intentionally enough
+
+
+in-house, then they have to look outside
+
+
+to get the right partner that to can
+
+
+take you there. So, a partner that's
+
+
+already been
+
+
+finding or creating some sort of
+
+
+structure for upskilling. How do I take
+
+
+my my team and make sure that they're
+
+
+not just comf- comfortable with these
+
+
+tools, but also
+
+
+um they're efficient and their their
+
+
+level of autonomy grows as they they
+
+
+understand how to incorporate those into
+
+
+their workflow.
+
+
+>> Right.
+
+
+>> Those best practices, those uh
+
+
+learnings,
+
+
+um you want to you want to look for in a
+
+
+partner. Somebody that's already done
+
+
+the the the work to to progress ahead
+
+
+and to find uh kind of what works and
+
+
+what doesn't work and can get your
+
+
+business sort of to the next level much
+
+
+faster.
+
+
+>> So, what's the main takeaway you would
+
+
+like listeners to have from this
+
+
+discussion?
+
+
+>> You know, I think
+
+
+one one thing I would say is
+
+
+AI can be definitely revolutionary. I
+
+
+think the gains are there, but they're
+
+
+uneven at this point. So, you want to
+
+
+find ways to look at how teams
+
+
+collaborate
+
+
+and focus on that workflow. Focus on
+
+
+that engineering framework on top of
+
+
+your team. So, then
+
+
+you can decide as a business
+
+
+what do I do with my team? Do I then
+
+
+kind of just give them tools to to reach
+
+
+outcomes faster,
+
+
+do sort of more with more, or do I look
+
+
+for ways to do more with less and maybe
+
+
+that looks uh
+
+
+sort of in a as a combination of maybe
+
+
+maybe global teams, maybe automation,
+
+
+maybe a mix of both. I think finding
+
+
+your place in that pendulum, I think is
+
+
+probably the best smartest action for a
+
+
+lot of companies uh right now to decide
+
+
+how they want to play this. Cuz you also
+
+
+are looking into a culture tax, a
+
+
+context uh tax as well.
+
+
+>> Right.
+
+
+>> So, all those different things that uh
+
+
+they might
+
+
+um um
+
+
+not be as evident at this point, but as
+
+
+your team and your company grows
+
+
+and these tools are as we said enhancing
+
+
+this potential fallbacks, then well,
+
+
+you want to be wary of the the potential
+
+
+outcomes of that.
+
+
+>> Yeah, I like that pendulum analogy. I
+
+
+think that's very helpful. Thank you.
+
+
+>> Thank you.
+
+
+>> [music]
+
+
+[music]
