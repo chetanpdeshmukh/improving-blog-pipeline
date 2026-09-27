@@ -1,0 +1,341 @@
+I'll analyze this transcript using the Phase 1 skill and produce the full outline.
+
+---
+
+## 1. The Villain
+
+Companies are abandoning their core business identity and shoehorning AI solutions because competitors announced something or a headline demanded it — implementing AI as an end in itself rather than as an amplifier of what already makes them valuable. The result is sub-optimal deployments, security exposure, and workforce resistance, all while the company drifts away from the DNA that built them.
+
+---
+
+## 2. War Stories Extracted
+
+**War Story 1: The Education Company's Unsearchable Content Vault**
+- **Setup:** A large education company sits on a massive corpus of unstructured material — videos, PowerPoint decks, classroom aids — built up over years.
+- **Pressure:** Clients couldn't find or access the material they needed. It existed but was effectively invisible. No existing tooling could index it usefully.
+- **Decision:** Improving used AI to ingest, index, and make the unstructured content searchable in ways that were previously technically impossible.
+- **Outcome:** Content that was inaccessible became locatable and usable by clients. John frames this as proof of the AI sweet spot: processing and surfacing unstructured information at scale.
+- **Story quality:** Solid setup, clear outcome, no specifics on scale or adoption rate. Could be strengthened with a before/after metric.
+
+**War Story 2: The Food Science Company's Ingredient Discovery Problem**
+- **Setup:** A food science company developing new products needs to surface obscure ingredient and flavor combinations from a deep internal knowledge base.
+- **Pressure:** No human could hold enough product knowledge to know what combinations were even possible.
+- **Decision:** AI system pulls the relevant knowledge into context at the right moment during product development.
+- **Outcome:** Better product development speed and idea generation.
+- **Flag:** This story was introduced by the interviewer, not John — John confirmed it but added little. Details are thin. Treat as a supporting example, not a primary war story.
+
+**War Story 3: The HVAC/Roofing AI Targeting Startup**
+- **Setup:** A startup helping trade businesses (HVAC, roofing) — decidedly non-tech companies.
+- **Pressure:** Roofers have no good way to predict or target where hail damage has created demand.
+- **Decision:** The startup used AI to analyze weather patterns and hailstorm data to identify where roofing demand would spike, then contracted with roofers to target that geography.
+- **Outcome:** Better marketing targeting for companies that would never think of themselves as AI-enabled.
+- **Why this matters:** This is the article's best illustration of the "AI for your DNA, not AI as your identity" point. A roofing company isn't becoming a tech company — they're just finding customers better.
+
+**War Story 4: The Credit Card Chatbot Resolution**
+- **Setup:** John missed a payment — first time ever.
+- **Pressure:** Unexpected late fee, needed resolution quickly.
+- **Decision:** Used the company's AI chatbot, explained the situation.
+- **Outcome:** The chatbot autonomously refunded the late charge with no human involvement. John was genuinely surprised it had that authority.
+- **Contrast:** John immediately pairs this with the opposite experience — chatbots that loop endlessly until you give up. Both are real, current AI customer service outcomes. He does not resolve the tension.
+- **This is the article's opening anecdote candidate.** It's concrete, relatable, and immediately illustrates both the promise and the current inconsistency.
+
+**War Story 5: The ChatGPT Data Dump (Referenced Cautionary Tale)**
+- **Setup:** Someone in a business grabs a data report, pastes it into chat.openai.com to get insights.
+- **Pressure:** It's fast, it works, nobody told them not to.
+- **Outcome:** That data leaves the company's control. It goes outside the network. If it's a free account, it can be trained on. John calls this a "cautionary tale" and notes you can find horror stories about proprietary information being surfaced from models trained on it.
+- **Gap:** No specific Improving client example here — this is pattern-level knowledge, not a named engagement.
+
+---
+
+## 3. Controversy & Counter-Intuitive Points
+
+**Conflict 1: The Fundamental Change Misconception**
+Industry says: "AI is fundamentally transforming how enterprises operate — every business model needs to be rethought around AI."
+John says: "AI doesn't fundamentally change how enterprises run. Human connections, service delivery, delivering value to customers — that hasn't changed. AI changes how fast and well you do those things, not what you're doing."
+Evidence: "I don't think it fundamentally changes how the enterprises of today run, right? It's human connections, it's service providing..."
+Shareable potential: **High** — directly contradicts the dominant narrative in every CIO publication.
+
+**Conflict 2: Mandated AI Adoption Kills Adoption**
+Industry says: "Set AI usage targets, track adoption metrics, and require AI tool use to drive organizational change."
+John says: "Mandates for AI have had the negative effect — 'you must use this or hit these metrics' creates resistance. Framing AI as additional capability, not a requirement, is what actually drives adoption."
+Evidence: "Some of the mandates for AI have maybe had the negative effect of 'you must use this'... phrasing it as an additional capability, not a mandate, is a huge thing for adoption internally."
+Shareable potential: **High** — this is directly actionable for any CTO rolling out an AI policy right now.
+
+**Conflict 3: The Outer Fence Fallacy in AI Security**
+Industry says: "AI data security is about preventing data leakage to models and protecting your perimeter."
+John says: "Perimeter security is necessary but not sufficient. The inner ring fences — who inside your organization can access what data through AI — are the problem most companies haven't solved."
+Evidence: "Often times when you talk about data security with folks, they're thinking about like the outer... but then you also need to have some inside ring fences... you don't return and surface all of your compensation data to the marketing team."
+Shareable potential: **High** — this reframes a conversation most security teams are having incompletely.
+
+**Conflict 4: AI Speed in Development Creates Security Risk, Not Just Velocity Gain**
+Industry says: "AI coding tools dramatically accelerate software delivery — adopt them for competitive advantage."
+John says: "That speed has opened massive security risk. Coding agents hard-code API keys in frontends. The good security practices built over decades are more critical now, not less, because you can get to a testable product much faster and skip the discipline that used to slow you down enough to catch mistakes."
+Evidence: "We've seen with that is opened up massive security risk... the coding agent or the LLM decided, you know what, it's easier if I hard code this key in the front end."
+Shareable potential: **High** — engineers and engineering leaders will recognize this immediately.
+
+**Conflict 5: Competitive AI Chasing Is a Strategy Risk, Not Just a Distraction**
+Industry says: "Watch your competitors' AI announcements and respond — if they ship a chatbot, you ship a chatbot."
+John says: "Chasing competitors can drive you into a sub-optimal direction for your specific business. The question isn't what your competitor did — it's whether that capability amplifies your DNA."
+Evidence: "There's certainly a competitive edge to this watching what your competitors are doing... but if you just start chasing the new headline, you could get yourself into some trouble."
+Shareable potential: **Medium** — well-known tension, but John's framing via "DNA" makes it more citable than the generic version.
+
+**Conflict 6: Enterprise AI Agreement ≠ Consumer AI Tool (Most People Don't Know the Difference)**
+Industry says/common behavior: "ChatGPT is ChatGPT — whether I use it at home or at work, it's the same tool."
+John says: "chat.openai.com is fundamentally different from enterprise Azure OpenAI or an enterprise Anthropic account. The agreement governing data use is completely different. Most employees don't know this distinction."
+Evidence: "Understanding foundationally that chat.openai.com is different than interacting with an enterprise Azure OpenAI... than just hey, this great new tool can answer this question and I'm going to copy paste a table of data in here."
+Shareable potential: **High** — this is actionable and something most non-technical executives genuinely do not know.
+
+---
+
+## 4. Exclusion List
+
+**Do not include any of the following:**
+
+- Workforce displacement statistics or AI job replacement projections — John briefly acknowledged fear of job loss but his point was about change management framing, not the underlying labor economics. Adding displacement data would undercut the "AI as enhancement" thesis.
+- Technical explanations of how large language models work (transformer architecture, training data, etc.) — the target audience is CTO/VP level; they don't need this and it dilutes the strategic focus.
+- Vendor comparison or model benchmarking — John named Azure OpenAI, Anthropic, and Google as enterprise options but did not rank them or advise switching between them.
+- The "40% of companies have an AI policy" statistic and "232 incidents per day" figure — these were stated by the interviewer, not John, and the source was not named. They cannot be used as cited facts without verification.
+- Generic AI governance framework checklist content — John never addressed this; adding it would be filler that contradicts the "amplify your DNA" thesis.
+- AI regulation and compliance law summaries — adjacent and important, but not what John addressed.
+- ROI modeling methodology or financial justification frameworks for AI — mentioned implicitly but not covered.
+- Pure automation use cases — the interview explicitly distinguishes AI-driven from automation-driven; conflating them undercuts the opening framing.
+- The suggestion that every company needs to become an AI company — this is the villain.
+
+---
+
+## 5. Gap Analysis
+
+**GAP [CRITICAL]:** The maturity model is referenced but never defined with enough precision to use. John describes "Level 1" (ChatGPT prompt users), "Level 2" (integrated data, siloed and secured), and "Level 3" (agents doing work), and says "nobody's at Level 8." But the levels are named in passing, not structured. An article that uses this framework as a reader self-assessment tool (which is its highest value) requires a defined set of levels with clear criteria. Without it, the framework section becomes vague aspiration. **What the draft loses:** The article cannot include a usable self-assessment framework — one of its most actionable and citable components.
+
+**GAP [CRITICAL]:** John says companies need data architecture — cataloging data, knowing where it lives, tagging it, understanding access — but never describes what the process of getting there actually looks like. A CTO reading this will ask: "Okay, but how do we start?" and the article has no answer. John acknowledges "some people have a great handle on that, others don't" but doesn't bridge to what those who don't should do. **What the draft loses:** The data architecture section risks reading as "you should do this" without "here's how," which is the exact failure mode the article critiques in AI adoption generally.
+
+**GAP [CRITICAL]:** The interviewer asked directly — "How do you maintain the balance between security and speed?" — and John pivoted to developer security risks without answering the balance question. The tension between AI-enabled speed and security discipline is one of the article's most important conflict points, but there is no resolution or heuristic offered. **What the draft loses:** The article raises the security/speed tradeoff prominently but cannot resolve it, leaving CTOs with a problem identified but no framework for the tradeoff decision.
+
+**GAP [NICE-TO-HAVE]:** What does an enterprise Azure OpenAI or enterprise Anthropic agreement actually protect against versus a consumer account? John asserts the distinction matters, but does not explain what specific protections exist, what the residual risks are, or how a company verifies compliance. A CTO making a purchasing decision needs this. **What the draft loses:** The enterprise agreement point is currently "trust them to honor it" — which is thinner than the article needs.
+
+**GAP [NICE-TO-HAVE]:** No concrete example of a company that chased AI poorly and what happened. John alludes to it ("drive yourself into a sub-optimal direction") but offers no client-side cautionary example to match the success stories. The article argues against a behavior without evidence that it causes harm in practice. **What the draft loses:** The villain claim is asserted without a war story to anchor it; the cautionary side is weaker than the success-story side.
+
+**GAP [NICE-TO-HAVE]:** The customer service chatbot observation — some experiences are great, some are terrible — is left unresolved. John does not offer any heuristic for when to deploy AI customer service and when not to. The credit card story is compelling; the "runs you in circles" counter-experience is real. But there's no decision framework offered. **What the draft loses:** A missed opportunity to provide a practical signal for when agentic customer service is ready versus when it still needs human backup.
+
+---
+
+## 6. Competitive Landscape
+
+Based on existing coverage of "AI business strategy" and "AI adoption for enterprises":
+
+**What already exists:**
+- McKinsey/Gartner frameworks for AI adoption maturity (usually presented as abstract stages without practitioner texture)
+- "Top AI use cases by industry" roundup articles (surface-level, no security or adoption nuance)
+- "How to build an AI governance framework" checklists (almost entirely focused on perimeter security; inner access controls are rarely addressed)
+- Thought leadership from hyperscalers (Azure, AWS, Google) that predictably recommends their own stack
+- "AI is replacing jobs" and "AI is creating jobs" binary takes (no acknowledgment of John's nuanced "AI enhances the human" framing)
+
+**What those articles miss:**
+- The "don't lose your DNA" thesis — almost all AI strategy content assumes you should redesign around AI
+- The inner ring fence security conversation (data access controls within the organization)
+- The specific risk that AI development speed creates new security holes by bypassing established practices
+- Honest practitioner admission that "nobody's at Level 8 yet" — most content implies maturity is achievable quickly
+- The adoption paradox: mandated AI use reducing adoption
+
+**How this article differs:**
+This is practitioner-voice content from someone doing AI consulting engagements, not analyst or vendor content. It carries the specific credibility of "this is what we've seen happen with real clients" — not "here's a framework we designed."
+
+**Potential H2s for featured snippets:**
+- "Why do AI initiatives fail?" (captures high-volume informational query)
+- "What does an AI maturity model look like?" (captures self-assessment searches)
+
+**Primary search intent:** A CTO or VP at an established non-tech company searching for practical guidance on starting or expanding AI adoption without disrupting the business — not a startup building AI-first.
+
+---
+
+## 7. The Outline
+
+### Opening Narrative (not a section header — editorial note)
+Open with the credit card chatbot story. Instant resolution, no human. Then immediately: contrast with an employee who pasted their quarterly report into a free ChatGPT account at the same time. Same week. Two companies. Two completely different outcomes from "using AI." That tension is the whole article.
+
+---
+
+### H2: AI won't change what your business is — it will change how well you do it
+
+**Section note:** Establish the core thesis immediately. AI is an amplifier, not an identity replacement. The businesses winning with AI are not businesses that became AI companies.
+
+- **H3: The trap: chasing the headline instead of the value**
+  - What happens when adoption is driven by competitor announcements rather than specific business need
+  - The study the host referenced: productivity gains for tasks AI is suited for, losses for tasks it isn't — net depends entirely on where you deploy
+  - John's framing: "What is the DNA of your company? What are you trying to deliver to your customers? Then make decisions on where AI can drop in and make that better."
+
+- **H3: Three companies that got this right**
+  - Education company: massive unstructured content corpus, impossible to surface — AI indexing made it searchable for the first time
+  - Food science company: ingredient/flavor knowledge surfaced at the right moment during product development
+  - HVAC/roofing startup: AI analyzing weather patterns to time and target marketing for trade contractors — no AI-enabled shingles required
+  - What all three share: AI was applied to a specific friction point in an existing value delivery chain, not grafted onto the business model as a new identity
+
+  `[INSERT DIAGRAM: Before/After showing how each company's value delivery chain changed — same core business, different information flow speed and coverage]`
+
+---
+
+### H2: Why most AI initiatives fail before they start: the data architecture problem
+
+**Section note:** This is the foundational enabler section. Without solving this, AI either can't find what it needs or surfaces what it shouldn't. Both failure modes are common.
+
+- **H3: You can't surface what you can't find — and you can't hide what you haven't tagged**
+  - Knowing where data lives: SharePoint, third-party HR platforms, on-prem systems
+  - Knowing how data is tagged: is anything marked sensitive? Does anyone know?
+  - The AI's access scope is only as good as your data catalog
+
+- **H3: The two failure modes**
+  - Failure Mode 1: AI surfaces wrong information because data is incomplete or untagged — the hallucination risk compounds on dirty data
+  - Failure Mode 2: AI surfaces the right information to the wrong person — compensation data to the marketing team, strategic plans to a customer-facing portal
+  - Both are real production incidents. Neither requires a sophisticated attack.
+
+  `[INSERT DIAGRAM: Enterprise data estate map — what lives where, access tier labels, what an AI tool with broad permissions can reach vs. what it should reach]`
+
+- **H3: What "data architecture" actually means in practice**
+  - Not a technology implementation — it's a cataloging exercise first
+  - Catalog what you have → classify by sensitivity → define access tiers → then design AI access
+  - **GAP NOTE:** The actual process Improving uses with clients to do this work is not captured in the transcript. If John can describe a typical engagement structure here, this section becomes a genuine differentiator.
+
+---
+
+### H2: The security conversation most AI strategies are having incompletely
+
+**Section note:** The outer fence is necessary but not sufficient. The inner ring fences are where the more interesting (and less-discussed) risk lives. Also: consumer tools vs. enterprise agreements is a gap in employee understanding.
+
+- **H3: Everyone worries about the outer fence. Almost nobody worries about what's inside it.**
+  - The external security conversation: is my data being used to train models? Is it leaving my network?
+  - The internal security gap: can a CEO-level AI query surface salary data? Can a customer-facing AI surface internal strategic plans?
+  - The inner ring fence: role-based data access applied to AI tool permissions, not just human access controls
+
+  `[INSERT DIAGRAM: Three concentric rings — outer enterprise perimeter, internal role-based data access controls, third-party integration boundary — with example data types in each ring]`
+
+- **H3: Consumer tool vs. enterprise agreement — a distinction most employees don't know**
+  - chat.openai.com vs. enterprise Azure OpenAI vs. enterprise Anthropic: the data agreement is fundamentally different
+  - Free tier: data can be used for training. Enterprise agreement: it cannot (with residual trust caveats)
+  - "If you're not paying for the product, you are the product" — and your data is the specific product
+  - The host's statistic (unverified source — confirm before publishing): something on the order of hundreds of incidents daily of employees using personal AI accounts for company work
+  - What a company AI policy actually needs to specify to close this gap
+
+---
+
+### H2: How AI-accelerated development is quietly widening your attack surface
+
+**Section note:** Counter-intuitive and specific — the exact kind of point this audience will find citable. AI speeds up coding, but it also speeds past the discipline that used to catch security mistakes organically.
+
+- **H3: The hard-coded key problem: what happens when the agent takes a shortcut**
+  - Coding agents optimize for "working code." Security is not always the primary optimization target.
+  - Pattern: LLM takes the path of least resistance — hard-coded API key in the frontend, credentials in a config file, open API endpoints that should be authenticated
+  - This isn't the agent "making a mistake" — it's the agent completing the task as specified, without the security stance as an explicit constraint
+
+- **H3: The code review practices from five years ago matter more than ever**
+  - You can get to a testable website faster than ever. That's also how you ship a vulnerability faster than ever.
+  - Static analysis, security scans, authentication reviews, penetration testing — these existed before AI-assisted development. They're not optional now.
+  - The discipline is the same; the velocity of reaching the point where discipline is required has accelerated
+  - When selecting coding agents: does it have a security stance built in? Is it checking for known vulnerability patterns?
+
+---
+
+### H2: Why mandating AI use is the fastest way to kill AI adoption
+
+**Section note:** Highly actionable for CTO readers rolling out AI policies right now. John's framing of "buffet vs. mandate" is the differentiator here.
+
+- **H3: What happens when "you must use AI" hits the floor**
+  - Fear is already present: "Is this taking my job? How is my world changing?"
+  - Mandatory adoption with usage metrics adds a layer of surveillance anxiety on top of existential anxiety
+  - Result: performative adoption (using the tool to hit the metric, not to improve the work) or active resistance
+
+- **H3: The "buffet of options" model**
+  - Improving's internal framing: here are the tools under enterprise agreements; here are the guardrails; here's what each one can do for your specific role
+  - Goal is to give employees agency to find where AI fits their work, not to impose a single workflow
+  - "Phrasing it as an additional capability, not a mandate, is a huge thing for adoption internally"
+  - What the internal communication should actually say vs. what most AI policy announcements say
+
+  `[INSERT DIAGRAM: Side-by-side — "Mandate Model" vs. "Buffet Model" showing employee journey and adoption rate implications]`
+
+---
+
+### H2: Where you are on the maturity spectrum — and why nobody's at Level 8
+
+**Section note:** Normalize where readers actually are. Most CTOs feel behind. This reframes the competitive anxiety. CRITICAL GAP HERE — the level definitions need to be made precise before drafting.
+
+- **H3: The three-level framework (as described by John)**
+  - Level 1: Using AI conversationally — prompting, getting answers, learning what it can do
+  - Level 2: Data integration — AI connected to structured, secured data within a defined scope, surfacing insights
+  - Level 3: Agentic — AI acting autonomously or semi-autonomously, completing tasks, not just answering questions
+  - **GAP NOTE:** These levels are named loosely in the transcript. John referenced "Level 8" as a hypothetical ceiling. The actual criteria for each level need to be defined by John before this section can be drafted.
+
+- **H3: The right next step is one level up — not Level 8**
+  - "Everyone is at the beginning of this journey" — including the practitioners
+  - The mistake: seeing a peak-capability AI deployment and benchmarking against it
+  - The correct move: know your current level, identify the foundation gap preventing the next level (usually data architecture or security), and close that gap
+  - "Don't beat yourself up of 'I see this level eight of everything is just run for me.' Nobody's there yet."
+
+---
+
+### H2: The counterargument — but my competitors are already doing this
+
+**Section note:** Skeptic's view. The counterargument is real and must be taken seriously. Companies with genuine AI-native competitors face a different calculus. This section earns trust by acknowledging the tension rather than dismissing it.
+
+- The legitimate version: In some industries (financial services, e-commerce, SaaS), AI-native competitors have real structural advantages. Waiting is a real risk.
+- John's position doesn't argue for slow adoption — it argues for purposeful adoption. The pace should match the strategic opportunity, not the competitor's press release cadence.
+- The companies John describes as ahead (tech, software product companies) are ahead because AI directly amplifies their core delivery mechanism. If your competitor's AI announcement doesn't map to your core delivery mechanism, it may not be a threat yet.
+- The HVAC/roofing example is the counterpoint: a traditional trade business can use AI for targeted marketing without competing on AI as a product. The competitor's chatbot is irrelevant; the competitor's ability to find hail-damaged customers first is relevant.
+- The question to ask: "Does this capability directly amplify what makes us valuable to our customers?" If yes, move fast. If it's a peripheral feature, move deliberately.
+
+---
+
+## 8. Recommended Title Options
+
+**Ranked:**
+
+1. **"Don't Lose Your DNA: How Established Businesses Should Actually Adopt AI"**
+Strongest. "DNA" is John's own language from the closing. It's specific, opinionated, and signals a contrarian take. The word "actually" implies most companies are doing it wrong. This will resonate with CTO/VP readers who feel the mandate pressure.
+
+2. **"Why the Smartest AI Strategy Starts With What You Already Do Well"**
+Clean and direct. Good for LinkedIn where the framing lands in the preview. Slightly less provocative than option 1 but broader reach.
+
+3. **"The Inner Ring Fence: What Most AI Security Strategies Get Wrong"**
+Narrower angle — leads with the security thread rather than the business strategy thread. Use this if Improving wants to target a security-conscious audience specifically, or as a companion piece splitting the security content into its own article.
+
+---
+
+## 9. Primary Search Intent
+
+A CTO, VP of Engineering, or senior operations leader at an established non-tech company searching for practical, credible guidance on starting or scaling AI adoption without gutting their business model, exposing their data, or triggering workforce resistance. They are not building an AI startup. They want to know: "Where should we actually start, and what should we not do?"
+
+Secondary intent: Security and IT leaders searching for AI data governance guidance who have solved the perimeter security question but haven't addressed internal data access controls.
+
+---
+
+## 10. Questions for the SME
+
+These are required before drafting begins. Critical gaps cannot be resolved from the transcript.
+
+1. **Maturity model definition (CRITICAL):** Can you define the maturity levels with specific criteria? What does a company need to have in place to move from Level 1 to Level 2? Level 2 to Level 3? And what does a realistic Level 4 or 5 look like — you mentioned Level 8 as a ceiling nobody's reached; what would Level 8 actually require?
+
+2. **Data architecture process (CRITICAL):** When Improving starts a client engagement around AI enablement and the client doesn't have a data catalog or access governance model in place, what does the first 30-60 days actually look like? What's the starting question you ask?
+
+3. **The security/speed tradeoff (CRITICAL):** The interviewer asked how you balance security and speed in an AI-first development environment. You pivoted to developer security risks — which is great — but did not offer a heuristic for the balance decision. How do you actually advise engineering teams on that tradeoff? Is there a rule of thumb?
+
+4. **Enterprise agreement protections:** What specific protections does an enterprise Azure OpenAI or enterprise Anthropic agreement actually provide? And what residual risks remain even with those agreements in place? How should a CTO verify their vendor is honoring the agreement?
+
+5. **Cautionary example (NICE-TO-HAVE):** Do you have a client-side example (anonymized) of a company that chased AI poorly — deployed something because a competitor did it — and what specifically went wrong or failed to deliver? The article argues against this behavior but has no failure-mode war story to anchor it.
+
+---
+
+```json
+{
+  "title": "Don't Lose Your DNA: How Established Businesses Should Actually Adopt AI",
+  "introduction": "For CTOs and senior leaders at established companies, this article reframes AI adoption away from wholesale reinvention and toward strategic amplification of existing strengths, using real client examples and hard-won lessons from practitioners in data architecture, security, and organizational change.",
+  "problem_statement": "Companies are abandoning their core business identity and shoehorning AI solutions because competitors announced something or headlines demanded it, rather than deploying AI where it specifically amplifies what they already do well — producing security exposure, workforce resistance, and sub-optimal outcomes.",
+  "takeaway": "Your business does not need to become an AI company; it needs to use AI to become a faster, smarter version of the company you have already built — and that starts with knowing your data, securing both the outer perimeter and the inner rings, and framing AI as a capability uplift rather than a mandate.",
+  "body_sections": [
+    { "heading": "AI won't change what your business is — it will change how well you do it" },
+    { "heading": "Why most AI initiatives fail before they start: the data architecture problem" },
+    { "heading": "The security conversation most AI strategies are having incompletely" },
+    { "heading": "How AI-accelerated development is quietly widening your attack surface" },
+    { "heading": "Why mandating AI use is the fastest way to kill AI adoption" },
+    { "heading": "Where you are on the maturity spectrum — and why nobody's at Level 8" },
+    { "heading": "The counterargument — but my competitors are already doing this" }
+  ]
+}
+```

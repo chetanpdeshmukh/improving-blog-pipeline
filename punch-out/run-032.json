@@ -1,0 +1,6 @@
+{
+  "runId": "run-032",
+  "step": "draft-check",
+  "reason": "Draft failed validation: Placeholder text found matching pattern: /\\[insert\\b[^\\]]*\\]/i",
+  "timestamp": "2026-09-27T19:29:48.789Z"
+}
