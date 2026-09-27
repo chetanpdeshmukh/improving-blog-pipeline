@@ -76,6 +76,15 @@ const ROOT          = path.resolve(__dirname, '..');
 const PROMPTS_DIR   = path.join(ROOT, 'prompts');
 const RUNS_DIR      = path.join(ROOT, 'runs');
 const PUNCH_OUT_DIR = path.join(ROOT, 'punch-out');
+const FAILURES_DIR  = path.join(ROOT, 'failures');
+
+// Tracks the active run's id/dir so the top-level catch handler (which fires
+// on ANY uncaught error, including a CLI spawn crash mid-step) can attribute
+// a failure record to the real run instead of writing a generic "unknown"
+// placeholder. Set as soon as main() claims a run folder; null before that
+// (e.g. a bad CLI argument) and after main() returns normally.
+let activeRunId = null;
+let activeRunDir = null;
 
 // ---------------------------------------------------------------------------
 // Dependencies
@@ -137,7 +146,16 @@ function saveArtifact(runDir, filename, content) {
   fs.writeFileSync(path.join(runDir, filename), content, 'utf8');
 }
 
-/** Trigger punch-out: write record, log it, exit 1. */
+/**
+ * Trigger punch-out: write record, log it, exit 1.
+ *
+ * Reserved for a guardrail (deterministic check or the adversarial-review
+ * agent, blog-qa-reviewer) catching a REAL content/quality problem that
+ * needs a human's judgment call — per the Stage 4 framework, "a decision
+ * which should not be left to an AI alone." This is deliberately separate
+ * from failWorkflow() below: a malformed/broken technical output is a
+ * failure, not a question for a human to weigh in on.
+ */
 function punchOut(runId, runDir, step, reason) {
   fs.mkdirSync(PUNCH_OUT_DIR, { recursive: true });
   const record = JSON.stringify({ runId, step, reason, timestamp: new Date().toISOString() }, null, 2);
@@ -148,6 +166,31 @@ function punchOut(runId, runDir, step, reason) {
   logStep(runDir, entry);
 
   console.error(`\n[PUNCH-OUT] ${runId} → step "${step}": ${reason}`);
+  process.exit(1);
+}
+
+/**
+ * Trigger a workflow FAILURE: write record, log it, exit 1.
+ *
+ * Reserved for a technical/mechanical breakage — a CLI spawn error, an
+ * unparseable structured artifact (e.g. the outline JSON missing required
+ * fields), an uncaught exception — where there is no content judgment for
+ * a human to make, just a broken step to investigate and rerun. Kept in a
+ * separate `failures/` folder from `punch-out/` so the punch-out evidence
+ * stays pure human-escalation evidence, per the Stage 4 framework's
+ * explicit separation of "fail workflow" (automated) from "punch to human"
+ * (manual).
+ */
+function failWorkflow(runId, runDir, step, reason) {
+  fs.mkdirSync(FAILURES_DIR, { recursive: true });
+  const record = JSON.stringify({ runId, step, reason, timestamp: new Date().toISOString() }, null, 2);
+  if (runDir) saveArtifact(runDir, 'failure.json', record);
+  fs.writeFileSync(path.join(FAILURES_DIR, `${runId ?? 'unknown'}.json`), record, 'utf8');
+
+  const entry = guardrailEntry(runId ?? 'unknown', step, 'fail', reason);
+  if (runDir) logStep(runDir, entry);
+
+  console.error(`\n[FAIL] ${runId ?? 'unknown'} → step "${step}": ${reason}`);
   process.exit(1);
 }
 
@@ -318,6 +361,8 @@ async function main() {
   const runId  = resolveRunId();
   const runDir = path.join(RUNS_DIR, runId);
   fs.mkdirSync(runDir, { recursive: true });
+  activeRunId  = runId;
+  activeRunDir = runDir;
 
   let outlineText;
 
@@ -365,7 +410,10 @@ async function main() {
       outlineResult.pass ? 'pass' : 'fail',
       outlineResult.pass ? 'outline valid' : outlineResult.errors.join('; ')));
     if (!outlineResult.pass) {
-      punchOut(runId, runDir, 'outline-check', `Outline failed validation: ${outlineResult.errors.join('; ')}`);
+      // Malformed structured handoff artifact (missing required fields) is a
+      // technical failure, not a content judgment call for a human — see
+      // failWorkflow()'s doc comment.
+      failWorkflow(runId, runDir, 'outline-check', `Outline failed validation: ${outlineResult.errors.join('; ')}`);
     }
   }
 
@@ -667,14 +715,18 @@ async function main() {
 if (require.main === module) {
   main().catch(err => {
     console.error('\n[FATAL]', err.message ?? err);
+    // A CLI spawn crash, an uncaught exception mid-step, etc. — a technical
+    // breakage, not a human decision point. Route to failWorkflow() so it
+    // lands in failures/, not punch-out/ (see failWorkflow()'s doc comment).
+    // Uses activeRunId/activeRunDir when a run was already claimed (the
+    // common case — most errors happen mid-step, not before argument
+    // parsing), falling back to an unattributed record only for an error
+    // that occurs before resolveRunId() runs.
     try {
-      fs.mkdirSync(PUNCH_OUT_DIR, { recursive: true });
-      fs.writeFileSync(
-        path.join(PUNCH_OUT_DIR, 'unknown-fatal.json'),
-        JSON.stringify({ runId: 'unknown', step: 'orchestrator', reason: err.message ?? String(err), timestamp: new Date().toISOString() }, null, 2),
-        'utf8'
-      );
-    } catch (_) { /* swallow */ }
+      failWorkflow(activeRunId, activeRunDir, 'orchestrator', err.message ?? String(err));
+    } catch (_) { /* failWorkflow already calls process.exit(1); this only
+                     guards the rare case where it itself throws before
+                     exiting (e.g. disk full) */ }
     process.exit(1);
   });
 }
