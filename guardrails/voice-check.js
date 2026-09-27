@@ -16,7 +16,7 @@ const BANNED_PHRASES = [
   { phrase: 'It is worth noting',           pattern: /it is worth noting/i,              reason: 'hollow affirmation' },
   { phrase: 'In conclusion',                pattern: /^In conclusion[,\s]/im,            reason: 'AI essay closer' },
   { phrase: 'Delve into',                   pattern: /\bdelve into\b/i,                  reason: 'AI cliché verb' },
-  { phrase: 'Leverage (as verb)',           pattern: /\bleverage\b(?=\s+(?:this|the|a|an|your|our|their|its|AI|data|cloud|machine|deep|technology|tool|platform|approach|strategy|framework))/i, reason: 'marketing verb overuse' },
+  { phrase: 'Leverage (as verb)',           pattern: /\bleverage\b(?=\s+(?:this|the|a|an|your|our|their|its|AI|data|cloud|machine|deep|technology|tool|platform|approach|strategy|framework)\b)/i, reason: 'marketing verb overuse' },
   { phrase: 'Game-changer',                 pattern: /\bgame[- ]changer\b/i,             reason: 'hollow superlative' },
   { phrase: 'Moreover (sentence opener)',   pattern: /^Moreover[,\s]/im,                 reason: 'AI transition word' },
   { phrase: 'Furthermore (sentence opener)',pattern: /^Furthermore[,\s]/im,              reason: 'AI transition word' },

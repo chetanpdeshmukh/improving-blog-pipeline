@@ -23,8 +23,8 @@ const MAX_REVISIONS = 2;
  * }}
  */
 function gradeGate(smellTestOutput, revisionCount = 0) {
-  // Parse grade — expect format "Grade: X" anywhere in the output
-  const match = smellTestOutput.match(/Grade:\s*([A-F][\+\-]?)/i);
+  // Parse grade — handles "Grade: X" and "**Grade:** X" (bold markdown from ai-smell-test)
+  const match = smellTestOutput.match(/\*{0,2}Grade:\*{0,2}\s*([A-F][\+\-]?)/i);
 
   if (!match) {
     // Cannot parse grade — treat as worst case, trigger revision

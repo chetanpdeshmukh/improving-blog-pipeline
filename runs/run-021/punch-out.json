@@ -1,0 +1,6 @@
+{
+  "runId": "run-021",
+  "step": "draft-check",
+  "reason": "Draft failed validation: Word count too high: 2104 words (maximum 1800)",
+  "timestamp": "2026-09-27T16:19:12.027Z"
+}

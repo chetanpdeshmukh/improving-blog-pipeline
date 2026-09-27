@@ -1,0 +1,6 @@
+{
+  "runId": "run-018",
+  "step": "draft-check",
+  "reason": "Draft failed validation: Word count too low: 29 words (minimum 800); Only 0 H2 heading(s) found — minimum 3 required",
+  "timestamp": "2026-09-27T16:03:03.068Z"
+}

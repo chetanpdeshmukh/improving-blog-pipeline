@@ -1,0 +1,1 @@
+Waiting for you to approve writing the draft file to `runs/run-018/02-draft.md`. Once you approve, the file will be saved and I'll give you a summary of what's in it.

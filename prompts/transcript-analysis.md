@@ -139,7 +139,7 @@ something the market doesn't already have.
 
 ### Depth Target
 
-Outline must support 1,500–3,000 words.
+Outline must support 800–1,800 words.
 
 ### Structure Rules
 

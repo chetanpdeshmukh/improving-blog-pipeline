@@ -33,20 +33,14 @@ function resolveClaude() {
   // 1. Explicit override
   if (process.env.CLAUDE_BIN) return process.env.CLAUDE_BIN;
 
-  // 2. Standard PATH locations
-  for (const fn of [
-    () => execSync('zsh -i -c "which claude"', { encoding: 'utf8', stdio: ['pipe','pipe','pipe'] }).trim(),
-    () => execSync('which claude',              { encoding: 'utf8', stdio: ['pipe','pipe','pipe'] }).trim(),
-  ]) {
-    try { const p = fn(); if (p && fs.existsSync(p)) return p; } catch (_) {}
-  }
-
-  // 3. Claude desktop app install locations (macOS) — glob latest version dir
+  // 2. Claude desktop app install locations (macOS) — glob latest version dir.
+  // We skip `which claude` / PATH lookups intentionally: the npm-installed claude
+  // at /opt/homebrew/bin/claude may be present but broken (missing native binary),
+  // while the desktop app ships a working native binary.
   const home = process.env.HOME || '';
   const searchRoots = [
     path.join(home, 'Library', 'Application Support', 'Claude', 'claude-code'),
     path.join(home, 'Library', 'Application Support', 'Claude', 'claude-code-vm'),
-    '/usr/local/bin', '/opt/homebrew/bin',
   ];
   for (const root of searchRoots) {
     if (!fs.existsSync(root)) continue;
@@ -148,12 +142,12 @@ function callModel(systemPrompt, userContent) {
 
   const result = spawnSync(
     CLAUDE_BIN,
-    ['--print', '--model', MODEL, '--output-format', 'json'],
+    ['--print', '--model', MODEL, '--output-format', 'json', '--tools', 'none'],
     {
       input:     combinedPrompt,   // fed to claude's stdin
       encoding:  'utf8',
       maxBuffer: 20 * 1024 * 1024, // 20 MB — enough for any blog step output
-      timeout:   300_000,          // 5 minutes per step
+      timeout:   600_000,          // 10 minutes per step
     }
   );
 
@@ -187,6 +181,35 @@ function callModel(systemPrompt, userContent) {
 }
 
 /**
+ * Extract the actual smell-test report from ai-smell-test output.
+ * The skill runs with --tools none, so it outputs tool call XML wrapping the report.
+ * Pull the content out of the <parameter name="content"> block when present,
+ * otherwise strip all XML tags and return what remains.
+ */
+function extractSmellTestReport(text) {
+  // Try to pull content from <parameter name="content">...</parameter>
+  const match = text.match(/<parameter name="content">([\s\S]*?)<\/parameter>/);
+  if (match) return match[1].trim();
+  // Fallback: strip XML-style tags
+  return text.replace(/<[^>]+>/g, '').trim();
+}
+
+/**
+ * Strip model preamble/postamble from blog draft output.
+ * Keeps only content from the first # heading onwards and removes any
+ * trailing "Draft complete" meta-commentary after the last blog section.
+ */
+function stripDraftMetaCommentary(text) {
+  const lines = text.split('\n');
+  const firstHeadingIdx = lines.findIndex(l => /^#/.test(l));
+  if (firstHeadingIdx === -1) return text;
+  let stripped = lines.slice(firstHeadingIdx).join('\n');
+  stripped = stripped.replace(/\n---\s*\nDraft complete[\s\S]*$/i, '');
+  stripped = stripped.replace(/\n\nDraft complete[\s\S]*$/i, '');
+  return stripped.trim();
+}
+
+/**
  * Run one AI step, log it, and save the artifact.
  * Returns the raw text output.
  */
@@ -207,51 +230,80 @@ async function runStep({ runId, runDir, stepName, artifactFile, systemPrompt, us
 // ---------------------------------------------------------------------------
 
 async function main() {
-  const transcriptPath = process.argv[2];
-  if (!transcriptPath) {
+  // --outline <path>  skips step 1 and reuses an existing transcript-analysis output.
+  // Useful for testing steps 2-6 without waiting for the slow analysis step.
+  const outlineFlag = process.argv.indexOf('--outline');
+  const outlinePath = outlineFlag !== -1 ? process.argv[outlineFlag + 1] : null;
+  // Only treat argv[2] as a transcript if --outline was NOT passed
+  const transcriptPath = outlinePath ? null : process.argv[2];
+
+  if (!transcriptPath && !outlinePath) {
     console.error('Usage: node workflow/run-workflow.js <path/to/transcript.txt>');
-    process.exit(1);
-  }
-  if (!fs.existsSync(transcriptPath)) {
-    console.error(`File not found: ${transcriptPath}`);
+    console.error('       node workflow/run-workflow.js --outline <path/to/01-outline.json>');
     process.exit(1);
   }
 
-  const transcript = fs.readFileSync(transcriptPath, 'utf8');
-  const runId      = resolveRunId();
-  const runDir     = path.join(RUNS_DIR, runId);
+  const runId  = resolveRunId();
+  const runDir = path.join(RUNS_DIR, runId);
   fs.mkdirSync(runDir, { recursive: true });
 
-  console.log(`\n=== Blog Pipeline — ${runId} ===`);
-  console.log(`Transcript: ${path.basename(transcriptPath)}\n`);
+  let outlineText;
 
-  // ── Step 1: transcript-analysis ──────────────────────────────────────────
-  console.log('[1/6] transcript-analysis');
-  const outlineText = await runStep({
-    runId, runDir,
-    stepName:     'transcript-analysis',
-    artifactFile: '01-outline.json',
-    systemPrompt: readPrompt('transcript-analysis'),
-    userContent:  `Here is the SME interview transcript:\n\n${transcript}`,
-  });
+  if (outlinePath) {
+    // ── Skip step 1: load existing outline ───────────────────────────────────
+    if (!fs.existsSync(outlinePath)) {
+      console.error(`Outline file not found: ${outlinePath}`);
+      process.exit(1);
+    }
+    outlineText = fs.readFileSync(outlinePath, 'utf8');
+    console.log(`\n=== Blog Pipeline — ${runId} (resume from outline) ===`);
+    console.log(`Outline: ${path.basename(outlinePath)}\n`);
+    console.log('[1/6] transcript-analysis — SKIPPED (using provided outline)');
+    saveArtifact(runDir, '01-outline.json', outlineText);
+    logStep(runDir, guardrailEntry(runId, 'outline-check', 'pass', 'outline loaded from prior run (skip)'));
+  } else {
+    // ── Step 1: transcript-analysis ──────────────────────────────────────────
+    if (!fs.existsSync(transcriptPath)) {
+      console.error(`File not found: ${transcriptPath}`);
+      process.exit(1);
+    }
+    const transcript = fs.readFileSync(transcriptPath, 'utf8');
+    console.log(`\n=== Blog Pipeline — ${runId} ===`);
+    console.log(`Transcript: ${path.basename(transcriptPath)}\n`);
 
-  const outlineResult = outlineCheck(outlineText);
-  logStep(runDir, guardrailEntry(runId, 'outline-check',
-    outlineResult.pass ? 'pass' : 'fail',
-    outlineResult.pass ? 'outline valid' : outlineResult.errors.join('; ')));
-  if (!outlineResult.pass) {
-    punchOut(runId, runDir, 'outline-check', `Outline failed validation: ${outlineResult.errors.join('; ')}`);
+    console.log('[1/6] transcript-analysis');
+    outlineText = await runStep({
+      runId, runDir,
+      stepName:     'transcript-analysis',
+      artifactFile: '01-outline.json',
+      systemPrompt: readPrompt('transcript-analysis'),
+      userContent:  `Here is the SME interview transcript:\n\n${transcript}`,
+    });
+
+    const outlineResult = outlineCheck(outlineText);
+    logStep(runDir, guardrailEntry(runId, 'outline-check',
+      outlineResult.pass ? 'pass' : 'fail',
+      outlineResult.pass ? 'outline valid' : outlineResult.errors.join('; ')));
+    if (!outlineResult.pass) {
+      punchOut(runId, runDir, 'outline-check', `Outline failed validation: ${outlineResult.errors.join('; ')}`);
+    }
   }
 
   // ── Step 2: blog-draft-writer ─────────────────────────────────────────────
   console.log('[2/6] blog-draft-writer');
-  const draftText = await runStep({
+  const rawDraftText = await runStep({
     runId, runDir,
     stepName:     'blog-draft-writer',
     artifactFile: '02-draft.md',
     systemPrompt: readPrompt('blog-draft-writer'),
-    userContent:  `Here is the approved outline:\n\n${outlineText}`,
+    userContent:  `Here is the approved outline:\n\n${outlineText}\n\n---\nIMPORTANT: Write the full blog draft now. Output ONLY the blog article — no preamble, no commentary, no "Draft complete" lines. Start directly with the # title heading. Hard limit: 800–1,500 words maximum. Do NOT exceed 1,500 words.\n\nCRITICAL AI-SMELL BAN: Do NOT use contrast-negation structures ("X doesn't Y. It Z." / "Not X — Y." / "The question isn't X. It's Y."). These are the #1 AI writing tell and will cause an automatic D grade. Rewrite any such sentence as a direct positive claim.`,
   });
+
+  // Strip any model preamble/postamble before guardrail check
+  const draftText = stripDraftMetaCommentary(rawDraftText);
+  if (draftText !== rawDraftText) {
+    saveArtifact(runDir, '02-draft.md', draftText);
+  }
 
   const draftResult = draftCheck(draftText);
   logStep(runDir, guardrailEntry(runId, 'draft-check',
@@ -272,7 +324,7 @@ async function main() {
   // eslint-disable-next-line no-constant-condition
   while (true) {
     // Step 3: anti-ai-voice
-    cleanedText = await runStep({
+    const rawCleanedText = await runStep({
       runId, runDir,
       stepName:     'anti-ai-voice',
       artifactFile: `03-cleaned${revisionCount > 0 ? `-rev${revisionCount}` : ''}.md`,
@@ -281,10 +333,18 @@ async function main() {
       attempt:      revisionCount + 1,
     });
 
+    // Strip any model preamble/postamble before saving/grading — same leak
+    // pattern as the raw blog-draft-writer output (e.g. "Let me scan for
+    // banned words..." narration ahead of the actual article).
+    cleanedText = stripDraftMetaCommentary(rawCleanedText);
+    if (cleanedText !== rawCleanedText) {
+      saveArtifact(runDir, `03-cleaned${revisionCount > 0 ? `-rev${revisionCount}` : ''}.md`, cleanedText);
+    }
+
     const voiceResult = voiceCheck(cleanedText);
     logStep(runDir, guardrailEntry(runId, 'voice-check',
       voiceResult.pass ? 'pass' : 'fail',
-      voiceResult.pass ? 'voice clean' : `${voiceResult.matches?.length ?? 0} banned phrases found`));
+      voiceResult.pass ? 'voice clean' : `${voiceResult.violations?.length ?? 0} banned phrases found`));
     // voice-check failure is a warning, not a hard stop — grade-gate catches quality issues
 
     // Step 4: ai-smell-test
@@ -298,27 +358,50 @@ async function main() {
       attempt:      revisionCount + 1,
     });
 
-    const gradeResult = gradeGate(gradedText, revisionCount);
+    // Extract clean report text (strips tool-call XML that ai-smell-test emits with --tools none)
+    const gradeReport = extractSmellTestReport(gradedText);
+
+    const gradeResult = gradeGate(gradeReport, revisionCount);
     logStep(runDir, guardrailEntry(runId, 'grade-gate',
-      gradeResult.pass ? 'pass' : (gradeResult.punchOut ? 'punch-out' : 'fail'),
+      gradeResult.decision === 'proceed' ? 'pass' : (gradeResult.decision === 'punch-out' ? 'punch-out' : 'fail'),
       `Grade: ${gradeResult.grade ?? '?'} | revisions: ${revisionCount}`));
 
-    if (gradeResult.pass) {
+    if (gradeResult.decision === 'proceed') {
       // Save final cleaned artifact with canonical name
       saveArtifact(runDir, '03-cleaned.md', cleanedText);
-      saveArtifact(runDir, '04-graded.md', gradedText);
+      saveArtifact(runDir, '04-graded.md', gradeReport);
       break;
     }
 
-    if (gradeResult.punchOut || revisionCount >= MAX_REVISIONS) {
+    if (gradeResult.decision === 'punch-out' || revisionCount >= MAX_REVISIONS) {
       punchOut(runId, runDir, 'grade-gate',
         `Grade ${gradeResult.grade ?? '?'} after ${revisionCount + 1} attempt(s) — max revisions reached`);
     }
 
-    // Revision: feed graded output back into draft for next attempt
+    // Revision: send to blog-refinement with targeted smell-fix instructions.
+    // blog-refinement is scoped here to pattern fixes only — no SEO, no publish kit.
     revisionCount += 1;
-    console.log(`  [grade-gate] Grade ${gradeResult.grade} — revising (attempt ${revisionCount + 1}/${MAX_REVISIONS + 1})`);
-    currentDraft = `${cleanedText}\n\n---\nGRADE FEEDBACK:\n${gradedText}`;
+    console.log(`  [grade-gate] Grade ${gradeResult.grade} — targeted smell-fix via blog-refinement (attempt ${revisionCount + 1}/${MAX_REVISIONS + 1})`);
+    const smellFixText = await runStep({
+      runId, runDir,
+      stepName:     'blog-refinement',
+      artifactFile: `04b-smell-fix-rev${revisionCount}.md`,
+      systemPrompt: readPrompt('blog-refinement'),
+      userContent:  [
+        'TARGETED REVISION ONLY — do NOT produce a publish kit, SEO metadata, URL slug, or social teaser.',
+        'Return ONLY the corrected article markdown. Do not add or remove sections.',
+        '',
+        'Fix each flagged pattern below and nothing else. The smell test grader will re-score the output.',
+        '',
+        '## Smell-test findings to fix',
+        gradeReport,
+        '',
+        '## Draft to fix',
+        cleanedText,
+      ].join('\n'),
+      attempt: revisionCount,
+    });
+    currentDraft = smellFixText;
   }
 
   // ── Step 5: blog-qa-reviewer (adversarial gate) ───────────────────────────

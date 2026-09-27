@@ -7,8 +7,8 @@
 
 'use strict';
 
-const MIN_WORDS = 1500;
-const MAX_WORDS = 3000;
+const MIN_WORDS = 800;
+const MAX_WORDS = 1800;
 const MIN_H2_HEADINGS = 3;
 
 const PLACEHOLDER_PATTERNS = [
