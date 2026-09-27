@@ -38,8 +38,20 @@ You can remove 10–20% of the words if it makes the piece tighter.
 
 ## Step 1: Banned Word & Phrase Sweep
 
-Before any other editing, scan the full text and remove every instance of the words and
-phrases listed in `references/banned-words.md`. None of them can appear in the final version.
+Before any other editing, scan the full text and remove every instance of these banned
+words and phrases. None of them can appear in the final version:
+
+AI buzzwords: leverage (as a verb), seamless/seamlessly, cutting-edge, state-of-the-art,
+next-generation/next-gen, game-changer/game-changing, transformative, revolutionary,
+innovative, synergistic, ecosystem, robust, holistic, end-to-end, best-in-class, world-class,
+best practice(s).
+Corporate fluff: empower/empowerment, enable (when vague), facilitate, unlock the potential.
+Hollow affirmations: it is important to note, it is worth noting, it's worth mentioning,
+it should be noted that.
+AI essay openers/closers: in today's fast-paced [world/environment], in conclusion, in summary,
+moreover (as a sentence opener), furthermore (as a sentence opener).
+Do not just swap in a synonym from this same list — rewrite the sentence so it says something
+concrete instead.
 
 When you remove a banned word, do not just swap in a synonym. Rewrite the sentence so it
 says something concrete. If the sentence has nothing concrete to say without the banned word,
@@ -184,7 +196,7 @@ value, remove it.
 
 After the full rewrite, do a second sweep:
 
-1. **Banned word check** — re-read `references/banned-words.md` and verify zero matches
+1. **Banned word check** — re-scan the edited text against the banned list from Step 1 and verify zero matches
 2. **Pattern check** — scan for any banned structures that crept back in during rewriting
 3. **Voice check** — read the first three paragraphs aloud mentally. Do they sound like a
    person talking about their work, or a language model producing content?
@@ -206,7 +218,9 @@ After the full rewrite, do a second sweep:
 
 ## Output
 
-Return only the edited text, clean and ready for review.
+Return only the edited text, clean and ready for review. Do not print the banned-word list,
+your scan notes, or any other reference material — those are for your own use while editing,
+never part of the output. Start directly with the article's own title heading.
 
 If the user asks for a comparison or explanation of changes, provide it separately —
 never inline with the edited content.

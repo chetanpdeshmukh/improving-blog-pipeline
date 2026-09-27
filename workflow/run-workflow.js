@@ -82,6 +82,7 @@ const PUNCH_OUT_DIR = path.join(ROOT, 'punch-out');
 // ---------------------------------------------------------------------------
 const { logStep, aiStepEntry, guardrailEntry } = require('../monitoring/audit-logger');
 const { outlineCheck }  = require('../guardrails/outline-check');
+const { contrastNegationCheck } = require('../guardrails/contrast-negation-check');
 const { draftCheck }    = require('../guardrails/draft-check');
 const { voiceCheck }    = require('../guardrails/voice-check');
 const { gradeGate }     = require('../guardrails/grade-gate');
@@ -291,26 +292,50 @@ async function main() {
 
   // ── Step 2: blog-draft-writer ─────────────────────────────────────────────
   console.log('[2/6] blog-draft-writer');
-  const rawDraftText = await runStep({
-    runId, runDir,
-    stepName:     'blog-draft-writer',
-    artifactFile: '02-draft.md',
-    systemPrompt: readPrompt('blog-draft-writer'),
-    userContent:  `Here is the approved outline:\n\n${outlineText}\n\n---\nIMPORTANT: Write the full blog draft now. Output ONLY the blog article — no preamble, no commentary, no "Draft complete" lines. Start directly with the # title heading. Hard limit: 800–1,500 words maximum. Do NOT exceed 1,500 words.\n\nCRITICAL AI-SMELL BAN: Do NOT use contrast-negation structures ("X doesn't Y. It Z." / "Not X — Y." / "The question isn't X. It's Y."). These are the #1 AI writing tell and will cause an automatic D grade. Rewrite any such sentence as a direct positive claim.`,
-  });
+  const MAX_DRAFT_REDRAFTS = 2;
+  let draftText;
+  let draftUserContent = `Here is the approved outline:\n\n${outlineText}\n\n---\nIMPORTANT: Write the full blog draft now. Output ONLY the blog article — no preamble, no commentary, no "Draft complete" lines. Start directly with the # title heading. Hard limit: 800–1,500 words maximum. Do NOT exceed 1,500 words.\n\nCRITICAL AI-SMELL BAN: Do NOT use contrast-negation structures ("X doesn't Y. It Z." / "Not X — Y." / "The question isn't X. It's Y." / bare ", not a/the ..." tails / "rather than" substitutions). These are the #1 AI writing tell and will cause an automatic D grade. Rewrite any such sentence as a direct positive claim.`;
 
-  // Strip any model preamble/postamble before guardrail check
-  const draftText = stripDraftMetaCommentary(rawDraftText);
-  if (draftText !== rawDraftText) {
-    saveArtifact(runDir, '02-draft.md', draftText);
-  }
+  for (let draftAttempt = 1; draftAttempt <= MAX_DRAFT_REDRAFTS + 1; draftAttempt++) {
+    const rawDraftText = await runStep({
+      runId, runDir,
+      stepName:     'blog-draft-writer',
+      artifactFile: `02-draft${draftAttempt > 1 ? `-rev${draftAttempt - 1}` : ''}.md`,
+      systemPrompt: readPrompt('blog-draft-writer'),
+      userContent:  draftUserContent,
+      attempt:      draftAttempt,
+    });
 
-  const draftResult = draftCheck(draftText);
-  logStep(runDir, guardrailEntry(runId, 'draft-check',
-    draftResult.pass ? 'pass' : 'fail',
-    draftResult.pass ? 'draft valid' : draftResult.errors.join('; ')));
-  if (!draftResult.pass) {
-    punchOut(runId, runDir, 'draft-check', `Draft failed validation: ${draftResult.errors.join('; ')}`);
+    // Strip any model preamble/postamble before guardrail check
+    const stripped = stripDraftMetaCommentary(rawDraftText);
+    if (stripped !== rawDraftText) {
+      saveArtifact(runDir, `02-draft${draftAttempt > 1 ? `-rev${draftAttempt - 1}` : ''}.md`, stripped);
+    }
+    draftText = stripped;
+
+    const draftResult = draftCheck(draftText);
+    logStep(runDir, guardrailEntry(runId, 'draft-check',
+      draftResult.pass ? 'pass' : 'fail',
+      draftResult.pass ? 'draft valid' : draftResult.errors.join('; ')));
+    if (!draftResult.pass) {
+      punchOut(runId, runDir, 'draft-check', `Draft failed validation: ${draftResult.errors.join('; ')}`);
+    }
+
+    // Deterministic pre-check for contrast-negation density — catches the
+    // habit at the source, before spending an anti-ai-voice + smell-test
+    // cycle on a draft that's going to plateau at C regardless.
+    const contrastResult = contrastNegationCheck(draftText);
+    logStep(runDir, guardrailEntry(runId, 'contrast-negation-check',
+      contrastResult.pass ? 'pass' : 'fail',
+      contrastResult.pass ? 'contrast-negation density acceptable' : `${contrastResult.hits.length} contrast-negation hits found`));
+
+    if (contrastResult.pass || draftAttempt > MAX_DRAFT_REDRAFTS) {
+      break;
+    }
+
+    console.log(`  [contrast-negation-check] ${contrastResult.hits.length} hits — sending back to blog-draft-writer (attempt ${draftAttempt + 1}/${MAX_DRAFT_REDRAFTS + 1})`);
+    const flaggedList = contrastResult.hits.map((h, i) => `${i + 1}. [${h.reason}] "${h.excerpt}"`).join('\n');
+    draftUserContent = `Here is the approved outline:\n\n${outlineText}\n\n---\nYour previous draft used contrast-negation / substitution-framing sentences ${contrastResult.hits.length} times. Rewrite the full blog draft from scratch using the SAME outline, but avoid this sentence shape entirely. Flagged instances from the previous attempt:\n\n${flaggedList}\n\nOutput ONLY the blog article — no preamble, no commentary. Start directly with the # title heading. Hard limit: 800–1,500 words maximum.\n\nCRITICAL AI-SMELL BAN: Do NOT use contrast-negation structures ("X doesn't Y. It Z." / bare ", not a/the ..." tails / "rather than" substitutions / "is not a/the X" claims). State claims directly and positively instead.`;
   }
 
   // ── Step 3 + 4: anti-ai-voice → ai-smell-test (revision loop) ────────────
