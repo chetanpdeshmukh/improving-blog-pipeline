@@ -159,6 +159,8 @@ Flag any sentence that lectures the reader.
 
 These bands mirror guardrails/draft-check.js exactly (3% of the nearest boundary is a warn-only zone on BOTH sides, not just the over-max side) so a draft draft-check already let through with a warning isn't then hard-failed here for the same reason.
 
+**IMPORTANT — 4A never blocks publication, even at FAIL.** Word count is a mechanical number, not a concrete technical defect, and the pipeline's qa-gate is coded to ignore this checkpoint's status entirely when deciding whether to escalate to human review — a 4A FAIL is logged for visibility only. Score it honestly (FAIL if genuinely under 776 or over 1,648) so the number is accurate in the report, but do not let a 4A FAIL affect your overall Verdict line — the Verdict reflects the OTHER checkpoints only.
+
 ### 4B: Real Trade-Offs Discussed
 - At least one section must acknowledge costs, risks, or downsides
 - A Skeptic's View section should be present and credible
@@ -258,9 +260,9 @@ Starts with "In today's…" or similar → **FAIL**.
 
 ### Verdict: [PASS / CONDITIONAL PASS / FAIL]
 
-**PASS** = Publish-ready. Zero FAIL items.
-**CONDITIONAL PASS** = WARNs only. Publishable but would benefit from fixes.
-**FAIL** = Must address FAIL items before publishing.
+**PASS** = Publish-ready. Zero FAIL items outside of 4A (word count never counts toward the Verdict — see 4A note above).
+**CONDITIONAL PASS** = WARNs only (again excluding 4A, which never counts). Publishable but would benefit from fixes.
+**FAIL** = Must address FAIL items before publishing. A 4A FAIL alone, with every other checkpoint PASS/WARN, is NOT a FAIL verdict — score it CONDITIONAL PASS or PASS depending on the rest.
 
 ### Summary
 2–3 sentences: article's core strengths and primary issues.

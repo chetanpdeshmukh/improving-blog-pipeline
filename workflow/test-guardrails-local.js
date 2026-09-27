@@ -256,7 +256,7 @@ test('unparseable grade text triggers revise then punch-out', () => {
 console.log('\n=== qa-gate ===');
 
 test('field name is "decision" not "punchOut" (regression: orchestrator read qaResult.punchOut, which never existed, so qa-gate silently never punched out on real content)', () => {
-  const text = '## Verdict: FAIL\n\n| 4A | Word count | FAIL | too short |';
+  const text = '## Verdict: FAIL\n\n| 4B | Trade-offs discussed | FAIL | none present |';
   const result = qaGate(text);
   assert.ok(['proceed', 'punch-out'].includes(result.decision), 'result.decision must be one of the two enum values');
   assert.strictEqual(result.punchOut, undefined, 'result.punchOut should not exist — reading it in run-workflow.js was the bug');
@@ -288,9 +288,25 @@ test('real table-row WARN (e.g. 4A word count within the 3% tolerance band) is c
   assert.strictEqual(result.warnCount, 1, `expected the table-row WARN to be counted, got warnCount=${result.warnCount}`);
 });
 
-test('real blog-qa-reviewer table-row FAIL triggers punch-out (regression: table format never matched)', () => {
+test('real blog-qa-reviewer table-row FAIL (non-word-count) triggers punch-out (regression: table format never matched)', () => {
   const text = [
     '## Verdict: FAIL',
+    '',
+    '| # | Checkpoint | Status | Notes |',
+    '|---|-----------|--------|-------|',
+    '| 4A | Word count | FAIL | ~745 words; under 800 minimum |',
+    '| 4B | Trade-offs discussed | FAIL | every section says the approach is great |',
+  ].join('\n');
+  const result = qaGate(text);
+  assert.strictEqual(result.decision, 'punch-out');
+  assert.ok(result.failItems.some(i => /4B/.test(i)), 'the 4B FAIL should be in the blocking failItems');
+  assert.ok(!result.failItems.some(i => /4A/.test(i)), 'the 4A FAIL should NOT be in the blocking failItems');
+  assert.strictEqual(result.wordCountFailItems.length, 1, 'the 4A FAIL should be surfaced separately as non-blocking');
+});
+
+test('word count (4A) alone, even at FAIL, never triggers punch-out (Chetan\'s direction, session 11: mechanical word-count miss is not a concrete technical issue)', () => {
+  const text = [
+    '## Verdict: CONDITIONAL PASS',
     '',
     '| # | Checkpoint | Status | Notes |',
     '|---|-----------|--------|-------|',
@@ -298,8 +314,9 @@ test('real blog-qa-reviewer table-row FAIL triggers punch-out (regression: table
     '| 4B | Trade-offs discussed | PASS | fine |',
   ].join('\n');
   const result = qaGate(text);
-  assert.strictEqual(result.decision, 'punch-out');
-  assert.ok(result.failCount >= 1);
+  assert.strictEqual(result.decision, 'proceed', 'a 4A-only FAIL must not punch out');
+  assert.strictEqual(result.failCount, 0);
+  assert.strictEqual(result.wordCountFailItems.length, 1, 'the 4A FAIL should still be surfaced, just non-blocking');
 });
 
 test('real blog-qa-reviewer clean table (all PASS/WARN cells) proceeds', () => {

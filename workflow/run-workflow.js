@@ -440,11 +440,19 @@ async function main() {
 
     if ((contrastResult.pass && !wordCountNeedsRedraft) || draftAttempt > MAX_DRAFT_REDRAFTS) {
       if (wordCountNeedsRedraft) {
-        // Redraft budget spent and still outside tolerance — this is now
-        // the same outcome as before this fix, just reached after giving
-        // the writer a real chance to trim/expand first.
-        punchOut(runId, runDir, 'draft-check',
-          `Word count still out of range after ${MAX_DRAFT_REDRAFTS} redraft attempt(s): ${wordCountIssue.message}`);
+        // Word count is never a punch-out condition (Chetan's direction,
+        // 2026-09-27, session 11): a mechanical word-count miss is not "a
+        // concrete technical issue" and should never withhold a blog from
+        // the requester. After the full redraft budget (3 attempts total)
+        // is spent without landing in range, flag it for human review and
+        // let the pipeline proceed with the draft as-is — someone can read
+        // the flag and supply an updated transcript/outline if the length
+        // problem is actually a content-thinness problem. Structural/content
+        // defects (placeholders, contrast-negation, banned words, grade)
+        // still punch out — this exception is scoped to word count only.
+        logStep(runDir, guardrailEntry(runId, 'draft-check',
+          'warn', `Word count still out of range after ${MAX_DRAFT_REDRAFTS} redraft attempt(s) — proceeding anyway, flagged for review: ${wordCountIssue.message}`));
+        console.log(`  [draft-check] WARN: ${wordCountIssue.message} (redraft budget spent — proceeding, NOT punching out; flagged for review)`);
       }
       break;
     }
