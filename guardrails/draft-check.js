@@ -16,7 +16,9 @@ const PLACEHOLDER_PATTERNS = [
   /\bINSERT HERE\b/i,
   /\bTODO\b/i,
   /\[placeholder\]/i,
-  /\[insert\b[^\]]*\]/i,
+  // [INSERT DIAGRAM: ...] / [INSERT TABLE: ...] are the sanctioned visual-callout
+  // convention from blog-draft-writer.md, not a leftover template gap — excluded here.
+  /\[insert(?!\s+(diagram|table|chart|image|graphic|screenshot)\b)[^\]]*\]/i,
   /\bXXX\b/,
 ];
 

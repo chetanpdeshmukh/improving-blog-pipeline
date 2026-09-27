@@ -428,6 +428,49 @@ async function main() {
       voiceResult.pass ? 'voice clean' : `${voiceResult.violations?.length ?? 0} banned phrases found`));
     // voice-check failure is a warning, not a hard stop — grade-gate catches quality issues
 
+    // Deterministic re-check for contrast-negation density on THIS pass's output.
+    // run-034 showed blog-refinement's targeted smell-fix can reintroduce this
+    // pattern in a draft that was previously clean, and because the original
+    // contrast-negation-check only ran once (right after blog-draft-writer),
+    // the reintroduction went undetected until the expensive ai-smell-test call
+    // — by then the revision budget was spent and the run punched out at a
+    // worse grade than it started with. Re-running the same deterministic gate
+    // on every pass through this loop catches that at the source again.
+    const contrastLoopResult = contrastNegationCheck(cleanedText);
+    logStep(runDir, guardrailEntry(runId, 'contrast-negation-check',
+      contrastLoopResult.pass ? 'pass' : 'fail',
+      contrastLoopResult.pass ? 'contrast-negation density acceptable' : `${contrastLoopResult.hits.length} contrast-negation hits found (post-refinement)`));
+
+    if (!contrastLoopResult.pass) {
+      if (revisionCount >= MAX_REVISIONS) {
+        punchOut(runId, runDir, 'contrast-negation-check',
+          `${contrastLoopResult.hits.length} contrast-negation hits reintroduced post-refinement, max revisions reached`);
+      }
+      revisionCount += 1;
+      console.log(`  [contrast-negation-check] ${contrastLoopResult.hits.length} hits reintroduced post-refinement — targeted fix via blog-refinement (attempt ${revisionCount + 1}/${MAX_REVISIONS + 1})`);
+      const flaggedList = contrastLoopResult.hits.map((h, i) => `${i + 1}. [${h.reason}] "${h.excerpt}"`).join('\n');
+      currentDraft = await runStep({
+        runId, runDir,
+        stepName:     'blog-refinement',
+        artifactFile: `04c-contrast-fix-rev${revisionCount}.md`,
+        systemPrompt: readPrompt('blog-refinement'),
+        userContent:  [
+          'TARGETED REVISION ONLY — do NOT produce a publish kit, SEO metadata, URL slug, or social teaser.',
+          'Return ONLY the corrected article markdown. Do not add or remove sections.',
+          '',
+          'Fix ONLY the contrast-negation / substitution-framing sentences flagged below. Do not touch anything else in the draft — no other rewrites, no additional polish.',
+          '',
+          '## Flagged contrast-negation instances',
+          flaggedList,
+          '',
+          '## Draft to fix',
+          cleanedText,
+        ].join('\n'),
+        attempt: revisionCount,
+      });
+      continue; // restart loop: re-run anti-ai-voice on the fixed draft before grading
+    }
+
     // Step 4: ai-smell-test
     console.log('[4/6] ai-smell-test');
     gradedText = await runStep({

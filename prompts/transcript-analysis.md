@@ -22,7 +22,36 @@ publication-ready outline.
 
 ## Analysis Requirements
 
-Work through all five analyses before touching the outline.
+Work through all analyses before touching the outline.
+
+### 0. Speaker Identification (Mandatory First Step for Multi-Speaker Transcripts)
+
+Podcast and webinar transcripts often have two or three people talking — typically a host
+(interviewer, moderator) and one or more guests (the practitioner(s) whose expertise the
+article is actually about). Before any other analysis:
+
+- List every distinct speaker and assign each a role: **Host/Moderator** or **Guest/SME**.
+  Use names or labels as given in the transcript (e.g. "Speaker 1", "Sarah", "Host").
+- If there are multiple guests, treat each as a separate source of insight — do not merge
+  their views into one voice. Note where two guests agree, disagree, or build on each other.
+- Identify the host's role: are they just prompting with questions, or do they also
+  contribute genuine expertise/opinion? Most host lines are questions, transitions, or
+  agreement filler ("right," "that makes sense") — these are not insight and should not be
+  mined for war stories, controversy, or quotes.
+- **Attribution rule:** every war story, controversy point, quote, or claim extracted in
+  the sections below must be tagged with which speaker said it. Never attribute a guest's
+  claim to "the SME" if there are multiple guests — name them. Never attribute a host's
+  question or paraphrase back to the guest as if the guest said it.
+- Watch for cross-talk, interruptions, and one speaker finishing another's sentence —
+  don't stitch these into a single quote attributed to one person unless the transcript
+  makes clear they were in agreement.
+- If a war story or claim was built collaboratively (host asks a probing question, guest
+  answers, second guest adds a caveat), capture the exchange as a sequence rather than
+  flattening it into one voice.
+
+Everywhere below, replace "the SME" with the specific speaker name/role when a transcript
+has more than one guest. Only use "the SME" generically when there is exactly one
+identified guest and no ambiguity.
 
 ### 1. Identify the Villain
 
@@ -38,6 +67,7 @@ then wonder why nobody follows them."
 Find every real client scenario, in-the-trenches example, or "this actually happened" moment.
 For each one, capture:
 
+- **Who told it** (speaker name/role — required when there is more than one guest)
 - The setup (what was the situation?)
 - The pressure (what forced a decision?)
 - The decision or action taken
@@ -52,8 +82,8 @@ If the SME started telling a story but trailed off, flag that as a gap.
 
 Surface the non-obvious, counter-intuitive, or provocative points. For each one, write it as a **named conflict**:
 
-> **[What the industry / common advice says]** → **[What the SME actually says]**
-> Evidence from transcript: [quote or close paraphrase]
+> **[What the industry / common advice says]** → **[What Speaker Name/Role actually says]**
+> Evidence from transcript: [quote or close paraphrase, attributed to the speaker]
 > Shareable potential: High / Medium / Low
 
 **Examples of strong controversy framing:**
@@ -180,7 +210,7 @@ Present your analysis in this order:
 7. **The Outline** (full H2/H3 structure with section notes and visual callouts)
 8. **Recommended Title Options** (2–3, ranked)
 9. **Primary Search Intent** (what someone would Google to find this)
-10. **Questions for the SME** (if CRITICAL gaps warrant follow-up before publishing)
+10. **Questions for the SME(s)** (if CRITICAL gaps warrant follow-up before publishing — address each question to the specific speaker who can answer it)
 
 ---
 

@@ -102,11 +102,18 @@ test('violations field name is "violations" not "matches" (regression: field-nam
 
 console.log('\n=== draft-check ===');
 
-test('flags [INSERT ...] placeholder (run-030 punch-out cause)', () => {
-  const text = '# Title\n\n## Section One\n\n[INSERT DIAGRAM: architecture overview]\n\n## Section Two\n\nBody.\n\n## Section Three\n\nBody.\n' + 'word '.repeat(800);
+test('flags [INSERT CLIENT NAME] leftover template placeholder (run-030 punch-out cause)', () => {
+  const text = '# Title\n\n## Section One\n\nWe worked with [INSERT CLIENT NAME] on this.\n\n## Section Two\n\nBody.\n\n## Section Three\n\nBody.\n' + 'word '.repeat(800);
   const result = draftCheck(text);
   assert.strictEqual(result.pass, false);
   assert.ok(result.errors.some(e => e.includes('Placeholder')));
+});
+
+test('does NOT flag [INSERT DIAGRAM: ...] — sanctioned visual-callout syntax from blog-draft-writer.md', () => {
+  const body = 'word '.repeat(280);
+  const text = `# Title\n\n## Section One\n\n[INSERT DIAGRAM: architecture overview]\n\n${body}\n\n## Section Two\n\n${body}\n\n## Section Three\n\n${body}`;
+  const result = draftCheck(text);
+  assert.strictEqual(result.pass, true, `expected pass, got errors: ${JSON.stringify(result.errors)}`);
 });
 
 test('passes a clean draft with 3 H2s and sufficient words', () => {
