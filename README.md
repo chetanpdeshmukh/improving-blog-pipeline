@@ -1,4 +1,4 @@
-# Blog Pipeline — Stage 4 Certification Submission
+# Improving Blog Pipeline
 
 A 6-step agentic workflow that turns a raw podcast/webinar transcript into a
 publication-ready blog article with an SEO kit, gated end-to-end by
