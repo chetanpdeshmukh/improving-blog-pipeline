@@ -50,9 +50,11 @@ Last audited: 2026-09-27 (session 13; §1's two partial items closed this sessio
 > end-to-end number — not just per-step accuracy. If you don't know your end-to-end
 > number, you haven't reached Stage 4."
 
-- [x] **`results/e2e-success-rate-report.md` (or equivalent)** — added session 12. Full run-by-run table (`run-001` through `run-058`), outcome, grade, cost, plus a reproducibility re-check of every run that reached `qa-gate` against today's fixed code.
-- [x] **The end-to-end number specifically, not just per-step** — headline: **24/31 substantive real runs (77.4%) reached the correct terminal state** under a reproducibility-checked count (2 confirmed clean PASS + 22 correct PUNCH-OUT), down from a naive 25/31 (80.6%) before the qa-gate.js re-check caught 3 stale PASSes — see the report's Headline section for the full reasoning.
-- [x] **Trend showing stability or improvement over time** — report §5 narrates the pre-fix era (run-013→030, zero clean passes, mostly code-bug punch-outs) vs. post-fix era (run-033→040, real content-quality punch-outs), plus the second fix layer found during the bypass test (session 12).
+- [x] **`results/e2e-success-rate-report.md` (or equivalent)** — added session 12, updated through session 14. Full run-by-run table (`run-001` through `run-066`), outcome, grade, cost, plus a reproducibility re-check of every run that reached `qa-gate` against today's fixed code.
+- [x] **The end-to-end number specifically, not just per-step** — headline: **29/36 substantive real runs (80.6%) reached the correct terminal state**, including 3 confirmed clean PASS (`033`, `037`, `066`) — see the report's Headline and §10 for the full reasoning.
+- [x] **Trend showing stability or improvement over time** — report §5 narrates the pre-fix era (run-013→030, zero clean passes, mostly code-bug punch-outs) vs. post-fix era (run-033→040, real content-quality punch-outs), the second fix layer found during the bypass test (session 12), and (§10, session 14) a real `qa-gate.js` bug found live on `run-065`, fixed same-session, with `run-066` — a genuine full production-length, first-attempt clean PASS — landing on the very next real run.
+
+**Session 14 update (2026-09-28): the genuine full production-length clean PASS is now in hand.** `run-066` cleared every step on the first attempt with zero revision loops (Grade B, QA verdict CONDITIONAL PASS, 0 blocking FAILs), independently reconfirmed against the fixed `qaGate()`. This was the last real evidence gap this checklist was tracking (previously only 2 confirmed-clean PASSes existed, both non-production-length shortcuts). All 5 required Stage 4 artifacts are now substantively complete with a genuinely representative PASS backing them.
 
 ## 5. Audit Trail
 

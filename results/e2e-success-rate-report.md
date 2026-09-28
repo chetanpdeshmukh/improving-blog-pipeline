@@ -12,6 +12,11 @@ any time new runs are added — do not hand-edit the numbers below.
 
 ## Headline number
 
+**run-066 is the project's first genuine, full production-length, first-attempt
+clean PASS** (2026-09-28, session 14) — see §10. Combined with the run history
+below, this closes the last real evidence gap the pre-submission checklist was
+waiting on (c12).
+
 **25 of 31 substantive real runs (80.6%) reached a terminal state as-recorded at the
 time** — either a PASS or a guardrail escalating to PUNCH-OUT. **After a
 reproducibility check against today's fixed `qa-gate.js`, the confirmed-correct
@@ -29,6 +34,23 @@ unrelated real issues (banned-word overuse + near-verbatim restatement in `062`;
 banned-word overuse + mirror-structure repetition in `063`). None of the three is
 the genuine production-length PASS the project still needs as its
 certification-representative run; see §8–§9.
+
+**Updated 2026-09-28 (session 14) with `run-065` and `run-066`** — `run-065`
+(`test-data/Improving Podcast - Orchestrating AI Agents The New Scarce Skill.txt`,
+full production length) exposed and confirmed a real `qa-gate.js` bug: the
+reviewer bolded a genuine FAIL cell (`| 3A | POV consistency | **FAIL** | ... |`)
+and the FAIL-row regex only matched an unbolded `| FAIL |` cell, so the run was
+incorrectly waved through to `06-publish-kit.md` when it should have punched out.
+Fixed same-session (commit `295aa7a`), regression-tested, and confirmed against
+the real saved report. `run-065`'s publish-kit output is NOT a valid PASS — see
+`runs/run-065/BUG-NOTE.md`. **`run-066`**, run immediately after with the fix
+live (`test-data/Improving Podcast - The Nearshore Advantage Building Teams That
+Scale 10x.txt`), is a genuine clean PASS: every step passed on the first attempt
+with zero revision loops, Grade B, QA verdict CONDITIONAL PASS with 0 blocking
+FAILs, independently reconfirmed against the fixed `qaGate()`. **36 substantive
+real runs total; the confirmed-correct terminal-state count rises to 29/36
+(80.6%), and confirmed clean PASS rises to 3 (`033`, `037`, `066`) — the first of
+those three at genuine, unshortened production length.**
 
 The gap between those two numbers is itself a real finding, not rounding: 3 of the
 5 historically-logged PASSes (`run-035`, `run-038`, `run-040`) ran before a same-day
@@ -126,10 +148,18 @@ forward: `punch-out/bypass-test-evidence.md` §4–§5.
 | run-045 | PUNCH-OUT | — | draft-check | 0.21 |
 | run-046 | PUNCH-OUT | B | qa-gate | 0.33 |
 | run-048 | INTERRUPTED | — | outline-check | 0.00 |
+| run-061 | PUNCH-OUT | C | grade-gate | ~0.45 |
+| run-062 | PUNCH-OUT | B | qa-gate | ~0.60 |
+| run-063 | PUNCH-OUT | B | qa-gate | ~0.65 |
+| run-065 | PUNCH-OUT (mis-routed to publish-kit by a since-fixed bug — see §10) | B | qa-gate (real terminal state) | ~0.70 |
+| **run-066** | **PASS (confirmed, genuine production-length)** | **B** | blog-refinement | 0.46 |
 
-Total estimated real-run cost across these 31 runs: **~$6.87** (token-estimate based,
-per `monitoring/audit-logger.js`'s 1-token≈4-char heuristic — not billed API cost,
-since these runs used the `claude` CLI's own subscription auth, not a metered key).
+Total estimated real-run cost across the original 31 runs: **~$6.87** (token-estimate
+based, per `monitoring/audit-logger.js`'s 1-token≈4-char heuristic — not billed API
+cost, since these runs used the `claude` CLI's own subscription auth, not a metered
+key). `run-061`/`062`/`063`/`065`/`066` (session 13–14, full production-length runs,
+added above) bring the running total across all 36 substantive real runs to
+**~$9.73**.
 
 ## 4. On the INTERRUPTED category
 
@@ -239,3 +269,48 @@ consistent with the pipeline working as designed rather than a fluke. Net read: 
 targeted fix appears to be working; the still-missing genuine PASS may need either a
 cleaner source transcript or a next round of draft-writer instructions targeting
 banned-word density and structural mirroring specifically.
+
+## 10. A real qa-gate bug found live, fixed, and the first genuine production-length PASS (session 14, 2026-09-28)
+
+`run-065` — `test-data/Improving Podcast - Orchestrating AI Agents The New Scarce
+Skill.txt`, full production length, banned-word tiered revision fix (`bf0288e`)
+live for its first real test. Took the full 3-attempt draft budget (contrast-negation,
+then word count), one grade-gate revision (contrast negation reintroduced during
+`blog-refinement`, fixed via a second targeted pass), then cleared `grade-gate`
+at Grade B. Reached `06-publish-kit.md` — but this was wrong. `05-qa.md`'s own
+report says `### Verdict: FAIL`, with a real checkpoint 3A (POV consistency) FAIL:
+podcast transcript language ("the host cited a report") leaked into the article
+instead of the SME's name. `qa-gate.js`'s audit-trail entry read
+`qa-gate | pass | all checks PASS/WARN` — wrong, because the reviewer bolded that
+row's FAIL cell (`| 3A | POV consistency | **FAIL** | ... |`) and the FAIL-row
+regex only matched an unbolded `| FAIL |` cell. Same class of bug as the session-10
+finding (n20), recurring under a new markdown-formatting variant the reviewer had
+never used before.
+
+**Fixed same session** (`guardrails/qa-gate.js`, commit `295aa7a`): FAIL_PATTERNS
+(and the informational WARN pattern) now tolerate `*`/`_` emphasis around the cell
+value. Added a regression test using `run-065`'s exact row; independently verified
+by running the fixed `qaGate()` directly against `runs/run-065/05-qa.md` — now
+correctly returns `decision: 'punch-out'`. Local suite: 40/40. `run-065`'s
+`06-publish-kit.md` is kept as evidence but is **not a valid PASS** — see
+`runs/run-065/BUG-NOTE.md`.
+
+`run-066` — `test-data/Improving Podcast - The Nearshore Advantage Building Teams
+That Scale 10x.txt`, run immediately after with the fix live. Every step passed on
+the **first attempt with zero revision loops**: draft-check, contrast-negation,
+voice-check, and grade-gate (Grade B, 7.65 weighted) all clean on attempt 1. Word
+count 1,617 (within the 3% tolerance band above the 1,600 ceiling). QA verdict:
+**CONDITIONAL PASS**, 0 blocking FAIL items, 7 non-blocking WARNs (two `[NEEDS
+SOURCE]`-flagged stats, some rhetorical-pattern notes — none of them defects the
+gate needs to block on). Independently reconfirmed by running the fixed
+`qaGate()` directly against the real `05-qa.md`: `decision: 'proceed'`,
+`failCount: 0` — confirming this is a genuine pass under the just-fixed gate, not
+a repeat of the `run-065` bug. Reached `06-publish-kit.md` with a real refined
+article and SEO kit. Total cost: $0.46.
+
+**This is the certification-representative run the project has been missing since
+session 12.** It is the first genuinely clean, full production-length, no
+`--draft`/`--short` pass in the project's history, obtained on the very next
+attempt after fixing a real bug the previous attempt exposed — itself exactly the
+kind of "found a real problem, fixed it, proved the fix" iteration evidence the
+Stage 4 framework asks to see.
