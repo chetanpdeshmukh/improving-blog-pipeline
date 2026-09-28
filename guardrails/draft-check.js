@@ -28,6 +28,12 @@ const PLACEHOLDER_PATTERNS = [
   // convention from blog-draft-writer.md, not a leftover template gap — excluded here.
   /\[insert(?!\s+(diagram|table|chart|image|graphic|screenshot)\b)[^\]]*\]/i,
   /\bXXX\b/,
+  // NOTE: [NEEDS SOURCE: ...] is a second sanctioned callout (blog-draft-writer.md's
+  // Statistic & Attribution Discipline) for a stat the SME cited without a source at
+  // draft time. It doesn't start with "insert" so none of the patterns above catch it —
+  // no exclusion needed, but flagging here so a future stricter placeholder pattern
+  // doesn't accidentally reintroduce a block on it. blog-qa-reviewer.md's Checkpoint 2A
+  // scores a tagged stat WARN, not FAIL.
 ];
 
 const GENERIC_OPENERS = [

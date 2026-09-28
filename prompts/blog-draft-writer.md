@@ -52,25 +52,36 @@ uncredentialed named experts are the most common reason a draft plateaus at Grad
 Prevent this at the source instead of relying on a later revision pass to catch it:
 
 - **Every statistic, percentage, or multiplier in the draft must trace to the
-  transcript.** If the SME stated a number, use it and attribute it the way they framed
-  it (their own data, an industry figure they cited, a rough estimate). Never invent or
-  round out a number that "sounds about right" for the topic — a plausible-sounding
-  unsourced stat (e.g. "studies show 60% of pilots fail") is exactly the kind of generic
-  content this gate exists to catch, whether or not the number is true in general.
-- **If the SME made a claim without a hard number, do not manufacture one to make the
-  prose more concrete.** Either keep the claim qualitative ("most pilots we see stall
-  before production," not "73% of pilots stall") or frame it explicitly as the SME's own
-  experience/estimate rather than presented as external research: "In [SME]'s experience
-  advising these programs, most pilots stall before reaching production" — not "Industry
-  data shows most pilots stall."
+  transcript.** Never invent or round out a number that "sounds about right" for the
+  topic — a plausible-sounding unsourced stat (e.g. "studies show 60% of pilots fail")
+  is exactly the kind of generic content this gate exists to catch, whether or not the
+  number is true in general.
+- **This pipeline's source material is podcast and webinar transcripts — the SME
+  almost always cites a number from memory, with no citable source at draft time.**
+  When that happens, resolve it one of two ways; never invent a citation and never
+  silently drop the number:
+  1. **Attribute it as the SME's own experience/estimate**, not external research:
+     "In [SME]'s experience advising these programs, most pilots stall before
+     reaching production" — not "Industry data shows most pilots stall" and not
+     "73% of pilots stall" (a number the SME never actually gave).
+  2. **If the number is stated as if it were a citable external fact** (an industry
+     study, a named benchmark) but the SME didn't give a source, keep the number
+     and tag it inline with `[NEEDS SOURCE: <one-line note of what to verify with
+     the speaker>]` immediately after the sentence — e.g. "...only 30% of AI value
+     shows up in cost savings *[NEEDS SOURCE: confirm whether this is Marcus's own
+     estimate or a study he's citing from memory]*." This is a sanctioned callout
+     (same convention as `[INSERT DIAGRAM: ...]`) that flags the item as a concrete
+     action for a human to follow up on with the speaker — it will not trip
+     `draft-check`'s placeholder gate, and `blog-qa-reviewer` scores a tagged stat
+     WARN rather than FAIL. Do not use this as a shortcut for every number — reach
+     for option 1 whenever the claim can honestly be framed as the SME's own
+     experience; reserve the tag for numbers genuinely presented as external fact.
 - **The first time a named person (the SME or anyone else) appears in the draft, give
   them a one-clause credential** drawn from the transcript or outline — title, firm, or
   relevant context. A reader has no basis for trusting a stat or claim attributed to an
   unintroduced name. ("Marcus Velez, who advises enterprise AI programs on ROI
-  measurement, ..." — not just "Marcus Velez says...".)
-- If the transcript doesn't supply a credential, name, or number for something the
-  article needs, flag it as a gap in your output rather than inventing one — this is the
-  same discipline already required elsewhere in this skill (see "What NOT to Do").
+  measurement, ..." — not just "Marcus Velez says...".) If the transcript doesn't give
+  a credential, use the `[NEEDS SOURCE: ...]` tag rather than inventing a title.
 
 ## Contrast-Negation Avoidance (Non-Negotiable)
 

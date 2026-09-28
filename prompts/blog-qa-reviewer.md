@@ -81,8 +81,21 @@ Fix directive for unlinked stats:
 3. If the original source cannot be located, either:
    - Replace with a verifiable, linked alternative from an authoritative source, OR
    - Reframe as an observational pattern: "Across engagements, Improving's teams
-     consistently see AI projects stall before delivering measurable value."
+     consistently see AI projects stall before delivering measurable value." or, if
+     the number is specifically the SME's own figure, "In [SME]'s experience
+     advising these programs, ..." (see `blog-draft-writer.md`'s Statistic &
+     Attribution Discipline).
 4. Do not leave the stat unlinked under any circumstance.
+
+**Exception — a stat tagged `[NEEDS SOURCE: ...]` is WARN, not FAIL.** Podcast and
+webinar transcripts routinely have the SME cite a number from memory with no source
+citable at review time. `blog-draft-writer.md` is instructed to tag exactly these
+cases with a `[NEEDS SOURCE: <what to verify with the speaker>]` callout rather than
+inventing a citation or silently dropping the number. Score this checkpoint **WARN**
+(not FAIL) when the sentence carries that tag — it's a legitimate flagged action item
+for a human to follow up with the speaker post-publication, not an unacknowledged
+gap. An unlinked stat with NO such tag and no attribution framing is still FAIL as
+above; the tag is the only thing that downgrades it.
 
 ### 2B: No Invented Examples
 Check for:
