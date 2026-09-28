@@ -18,6 +18,15 @@ reproducibility check against today's fixed `qa-gate.js`, the confirmed-correct
 figure is 24/31 (77.4%): 2 confirmed clean PASS (6.5%), 22 correct PUNCH-OUT (71.0%),
 and 6 INTERRUPTED (19.4%, unchanged).**
 
+**Updated 2026-09-27/28 (session 13) with `run-061`** — the first attempt at a real,
+full production-length (no `--draft`/`--short`) run against all the session-11/12
+fixes: **25 of 32 (78.1%)** reach a confirmed-correct terminal state. `run-061`
+correctly PUNCHED OUT at `grade-gate` (Grade C, plateaued after 1 revision through
+blog-refinement) — a real content-quality catch (unsourced statistics, an
+uncredentialed named expert, unresolved diagram placeholders), not a bug. This is
+still not the genuine production-length PASS the project needs as its
+certification-representative run; see §8.
+
 The gap between those two numbers is itself a real finding, not rounding: 3 of the
 5 historically-logged PASSes (`run-035`, `run-038`, `run-040`) ran before a same-day
 `qa-gate.js` regex fix (commit `67eb667`) that corrected FAIL detection — under that
@@ -178,3 +187,23 @@ but were never tested do NOT qualify"). Full before/after writeup, including the
 specific defect used, the unsafe pass-through in `058`, the correct punch-out in
 `059`, and the `qa-gate.js` findings/fixes this test uncovered (§4–§5 above), is in
 `punch-out/bypass-test-evidence.md`.
+
+## 8. First real production-length run post-fixes (session 13)
+
+`run-061` — `test-data/AI ROI and Business Value Measuring What Actually Matters.txt`,
+full production word count (800–1,600, no `--draft`/`--short` shortcut) — is the
+first attempt at the genuine certification-representative run this project has been
+missing since session 12's wrap-up. Result: **PUNCH-OUT at `grade-gate`**, Grade C
+on the first pass, one revision through `blog-refinement` (targeted smell-fix),
+still Grade C, correctly stopped at the 2-attempt cap. `ai-smell-test`'s own report
+(`runs/run-061/04-graded.md`) names concrete, real content defects — four unsourced
+statistics (including the headline "70%" claim), the named expert (Marcus Velez)
+never credentialed, and two unresolved `[INSERT DIAGRAM]` placeholders — not a
+guardrail or parsing bug. This is a correct, valid terminal state and real evidence
+the pipeline works end-to-end on production-length content, but it is a PUNCH-OUT,
+not the PASS still needed. Next attempt should try a different transcript from the
+still-pending validation batch (3 of 5 InfraCloud webinars, 4 of 5 Improving Podcast
+transcripts never run — see the KB's session-12 note) rather than retrying this one,
+since this transcript's source material itself (unattributed stats, uncredentialed
+expert) is the likely root cause, not something a redraft can fix without editing
+the transcript.
