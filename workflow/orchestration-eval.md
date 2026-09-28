@@ -38,18 +38,21 @@ evidence, cited in `workflow/workflow-definition.md`). This evaluates:
 
 ## 2. Method A — `workflow/test-guardrails-local.js` (unit-level, zero cost)
 
-33 assertions, deterministic, runs in under a second, no `claude` CLI involved. Covers
-every guardrail function's pure input→output behavior in isolation:
-`contrast-negation-check` (including the position-aware title/opening zero-tolerance
-fix), `voice-check`, `draft-check` (including the corrected 800–1,600 word ceiling and
-the `--short` override), `grade-gate` (including the `decision` field-name regression
-that once made A/B grades never break the loop), `qa-gate` (including the table-row
-FAIL/WARN parsing regression and the word-count exclusion), `extractSmellTestReport`,
-and `stripDraftMetaCommentary`. Every assertion encodes a real bug found during
+44 assertions (updated session 14; was 33), deterministic, runs in under a second, no
+`claude` CLI involved. Covers every guardrail function's pure input→output behavior in
+isolation: `contrast-negation-check` (including the position-aware title/opening
+zero-tolerance fix), `voice-check`, `draft-check` (including the corrected 800–1,600
+word ceiling and the `--short` override), `grade-gate` (including the `decision`
+field-name regression that once made A/B grades never break the loop), `qa-gate`
+(including the table-row FAIL/WARN parsing regression, a bolded-FAIL-cell miss found
+live on `run-065` and fixed session 14, and the word-count exclusion),
+`extractSmellTestReport`/`extractCleanContent` (including the literal
+`{"type":"write_file",...}` JSON-blob variant found live on `run-065`/`066`, session
+14), and `stripDraftMetaCommentary`. Every assertion encodes a real bug found during
 development, so this suite is also a live regression log, not just a spec.
 
-Run: `node workflow/test-guardrails-local.js` → **33 passed, 0 failed** (current as of
-this writeup).
+Run: `node workflow/test-guardrails-local.js` → **44 passed, 0 failed** (current as of
+session 14, 2026-09-28 — re-run this and update the count any time the suite changes).
 
 This method proves each guardrail *function* is correct in isolation. It does not
 prove the *orchestrator* actually calls them in the right order with the right data —
