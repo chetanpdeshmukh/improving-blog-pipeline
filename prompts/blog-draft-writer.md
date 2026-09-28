@@ -44,6 +44,58 @@ Real practitioners respect honesty about what isn't settled.
 
 ---
 
+## Statistic & Attribution Discipline (Non-Negotiable)
+
+The downstream `ai-smell-test` gate weights "generic content & fake specifics" at 25% —
+the single highest-weighted category — specifically because unsourced numbers and
+uncredentialed named experts are the most common reason a draft plateaus at Grade C.
+Prevent this at the source instead of relying on a later revision pass to catch it:
+
+- **Every statistic, percentage, or multiplier in the draft must trace to the
+  transcript.** If the SME stated a number, use it and attribute it the way they framed
+  it (their own data, an industry figure they cited, a rough estimate). Never invent or
+  round out a number that "sounds about right" for the topic — a plausible-sounding
+  unsourced stat (e.g. "studies show 60% of pilots fail") is exactly the kind of generic
+  content this gate exists to catch, whether or not the number is true in general.
+- **If the SME made a claim without a hard number, do not manufacture one to make the
+  prose more concrete.** Either keep the claim qualitative ("most pilots we see stall
+  before production," not "73% of pilots stall") or frame it explicitly as the SME's own
+  experience/estimate rather than presented as external research: "In [SME]'s experience
+  advising these programs, most pilots stall before reaching production" — not "Industry
+  data shows most pilots stall."
+- **The first time a named person (the SME or anyone else) appears in the draft, give
+  them a one-clause credential** drawn from the transcript or outline — title, firm, or
+  relevant context. A reader has no basis for trusting a stat or claim attributed to an
+  unintroduced name. ("Marcus Velez, who advises enterprise AI programs on ROI
+  measurement, ..." — not just "Marcus Velez says...".)
+- If the transcript doesn't supply a credential, name, or number for something the
+  article needs, flag it as a gap in your output rather than inventing one — this is the
+  same discipline already required elsewhere in this skill (see "What NOT to Do").
+
+## Contrast-Negation Avoidance (Non-Negotiable)
+
+Contrast negation — "X is not Y. It is Z.", "Not X, but Y.", or a bare mid-sentence
+tail like "...a rounding error, not a tradeoff" — is the single highest-frequency AI
+tell the smell test finds (concentrated in openings and closings), and it is far
+cheaper to simply not write it than to have a later pass strip it back out. Write the
+direct claim instead of the contrastive frame from the first draft:
+
+> **Don't write:** "The bottleneck isn't the model. It's the orchestration layer."
+> **Write instead:** "The orchestration layer is the bottleneck."
+>
+> **Don't write:** "That's not a tradeoff — it's a rounding error."
+> **Write instead:** "That's a rounding error."
+
+This applies with zero tolerance to the title and the article's opening and closing
+paragraphs — the smell test scores a single instance there as CRITICAL regardless of
+how clean the rest of the piece is. Elsewhere in the body, a rare, deliberate contrast
+that resolves into a specific named fact or number (used once or twice, not as a
+reflexive habit) is acceptable rhetoric — but if you notice yourself reaching for this
+shape more than once or twice in the whole draft, that's a sign to go back and state
+the claims directly instead.
+
+---
+
 ## The 9 Practitioner Voice Patterns
 
 Apply these during drafting. They come from studying the most trusted technical
@@ -208,6 +260,8 @@ This is the difference between prescriptive writing (weak) and consequential wri
 8. **Look for naming opportunities** (Pattern 2) — did the SME describe something worth naming?
 9. **For every recommendation:** add one sentence on what breaks if the reader ignores or misapplies it (Failure Mode Requirement)
 10. **Check the Tradeoff Mandate** — every H2 section must have an explicit When/When-not framing
+11. **Check Statistic & Attribution Discipline** — every number traces to the transcript, and every named person is credentialed on first mention
+12. **Check Contrast-Negation Avoidance** — grep your own draft for "isn't|wasn't|doesn't|not a |not the |it's not|that's not|rather than|, not |not because" and rewrite any hit into a direct claim, with zero tolerance in the title/opening/closing
 
 ---
 
@@ -242,6 +296,9 @@ This is the difference between prescriptive writing (weak) and consequential wri
 - Do not pad short sections for visual balance
 - Do not skip the war story beats — a story without Setup, Pressure, Decision, and Outcome is a bullet point
 - Do not write a section without a tradeoff — "when this works / when it fails" is mandatory per H2
+- Do not state a statistic, percentage, or multiplier that isn't in the transcript, even if it sounds plausible for the topic
+- Do not let a named person's claim stand without a one-clause credential on first mention
+- Do not write "X is not Y, it's Z" / "not X, but Y" / a bare "..., not Y" tail — state the claim directly instead
 
 ---
 
