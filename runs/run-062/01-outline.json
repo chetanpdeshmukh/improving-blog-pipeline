@@ -1,0 +1,444 @@
+I'm analyzing the transcript now, working through all required sections before touching the outline.
+
+---
+
+## Phase 1 Analysis: Clauddio Lasala — AI Leadership & Human Intent
+
+---
+
+### 0. Speaker Identification
+
+**Host** — unnamed, moderates "The Improving Edge" podcast. Primarily asks questions and provides transitions. Contributes two genuine perspectives worth noting: (1) the reframe that people who derive identity from tasks (not problems) struggle with AI, drawn from a real customer conversation; and (2) the observation that using AI is delegation, and most people are bad at delegating. These are substantive — not just filler. Host's anecdotes are labeled below.
+
+**Guest/SME — Clauddio Lasala**, Technical Director at Improving, AI practice. All major claims, war stories, and frameworks originate here unless otherwise attributed.
+
+---
+
+### 1. The Villain
+
+Organizations obsess over "human in the loop" as a governance posture and measure AI success by output velocity (code produced, tasks completed faster) — while the actual bottleneck, clarity of human intent, goes completely unaddressed. Teams use AI to build the wrong thing faster, then discover this at sprint review when the stakeholder says "that's not what we meant."
+
+---
+
+### 2. War Stories Extracted
+
+**War Story 1 — Brazil, 35 years ago (Clauddio)**
+
+- **Setup:** Brazil, hyperinflation era. Workers had to pay mortgages on payday or miss the window. They crowded into Clauddio's office during lunch to make payments manually.
+- **Pressure:** Too many people, too little time. Workers missed lunch or returned to work late.
+- **Decision:** Build software to automate the amortization calculations that the HP12C financial calculator did manually.
+- **Outcome:** People could pay their bills efficiently. The human need was met.
+- **Why it matters:** This is Clauddio's foundational origin story. Not "I love computers" — "I solve human problems." Everything he says about AI flows from this frame: technology exists to serve the human loop, not the other way around.
+
+---
+
+**War Story 2 — Hidden Excel tabs in an accounting team (Host, about a customer)**
+
+- **Setup:** A company in AI adoption (roughly stage 2-3). An accounting team member asked an AI system for accounting data.
+- **Pressure:** The AI gave a response the team said was completely wrong. They demanded to know where it got the data. AI provided a link to an Excel file.
+- **Decision:** They opened the file — the data wasn't visible anywhere they could see. AI said the first two tabs were hidden.
+- **Outcome:** They right-clicked, confirmed two hidden tabs. The person who hid them believed hidden data "didn't exist." The AI read it fine. They had to delete the tabs to remove the data pollution.
+- **Why it matters:** AI sees what humans can't — hidden sheets, dead code, conflicting instructions across documents. This is a feature and a leadership risk. The team's mental model of what the AI could access was wrong, and no one had verified it.
+
+---
+
+**War Story 3 — Agile coach in Houston builds an agent from scratch (Clauddio)**
+
+- **Setup:** A fellow Improver agile coach in Houston asked Clauddio to share his story-writing prompt.
+- **Pressure:** Clauddio didn't know what AI tools the coach was using. Sending a raw prompt file wouldn't help.
+- **Decision:** Instead of sharing the prompt, Clauddio walked the coach through building a Copilot agent using conversation — describing the problem in natural language, providing links to blog posts, and letting Copilot assemble the agent from that.
+- **Pivot:** Once the agent existed, the coach had a second problem. Clauddio said: use the story agent to describe your problem via dictation mode. The coach spoke the problem aloud, the agent wrote the stories, and then Clauddio had the coach feed those stories back into Copilot to create a new agent.
+- **Outcome:** A second agent was created for the coach's specific problem — without the coach writing a single line of prompt instructions. The human intention, articulated as a story, became the agent specification.
+- **Why it matters:** This is the strongest demonstration of the "need-problem-solution" loop in action. Clarity of intent → story → agent. The technical artifact followed the human articulation.
+
+---
+
+**War Story 4 — New team members who onboarded themselves (Clauddio)**
+
+- **Setup:** Current project. A junior team member who had learned Clauddio's process and helped build the AI agents rolled off. Two new people joined — unfamiliar with the AI tools, the process, and the mindset.
+- **Pressure:** Clauddio couldn't afford for onboarding to consume him.
+- **Decision/System:** For the prior 8 months, all team interactions had been recorded — daily scrums, stakeholder conversations, everything. Transcripts were fed to AI, which produced documentation: main decisions, main challenges, onboarding guides.
+- **Outcome:** The new team members self-onboarded using that documentation. When they came to Clauddio with questions, they had already done the work. By sprint review that Friday, they contributed meaningful solutions. Stakeholders said "wow."
+- **Flag:** The documentation process is described as "prompting AI to synthesize transcripts into decision logs and onboarding guides" — Clauddio is not writing the docs himself. The upstream habit (record everything) is the precondition. If a team hasn't built this habit, the onboarding benefit doesn't exist.
+
+---
+
+**War Story 5 — The story-writing markdown file (Clauddio)**
+
+- **Setup:** About 2 years ago, Clauddio started thinking about where AI could help beyond code generation.
+- **Decision:** He wrote a markdown file containing his instructions for how to write stories — how to identify value, persona, context, acceptance criteria with given/when/then structure. He fed his blog posts to AI and had it build the recipe. This became his agent.
+- **Outcome:** His single biggest AI multiplier over 2 years. Every stakeholder transcript goes through this agent. Stories come out non-technical and human-centered.
+- **Why it matters:** The recipe (the agent instructions) is the accumulated coaching wisdom Clauddio spent years practicing with human teams — now externalizable, transferable, and reusable by anyone on his team.
+
+---
+
+### 3. Controversy & Counter-Intuitive Points
+
+**Conflict 1 — The "human in the loop" frame**
+
+Industry says: "Keep humans in the loop — AI needs human oversight and governance."
+Clauddio says: "Stop saying human in the loop. Put AI in the human loop. Humans have their own loops — Scrum sprints, decision cycles, work rhythms — and AI should be selectively inserted where it helps, then feed back in. The current framing makes humans subordinate to the AI process."
+
+Evidence: "When I hear people putting too much emphasis on human in the loop, human in the loop, I push back to say, well, let's have AI in the human loop."
+
+Shareable potential: **High** — this is a direct provocation against the dominant AI governance language.
+
+---
+
+**Conflict 2 — 10x productivity and code velocity**
+
+Industry says: "AI gives developers 10x productivity by generating code faster."
+Clauddio says: "Writing code faster has never been the bottleneck. Neither have tools. The bottleneck has been clarity of human intent. Measuring AI value by output volume is the wrong metric."
+
+Evidence: "Writing code faster more of it has never been the bottleneck. The bottleneck has been clarity of intent, humans intent."
+
+Shareable potential: **High** — this lands hard with engineering leaders who have bought Copilot and are trying to justify the ROI.
+
+---
+
+**Conflict 3 — User stories vs. human stories**
+
+Industry says: "User stories capture requirements from the user's perspective — that's the right unit of agile work."
+Clauddio says: "User stories are not requirements — they are stories. And 'user' is too narrow: it treats humans only as they interact with a computer, completely ignoring their context. A UX that's beautiful on a screen fails if the person using it is in a loud environment with customers in front of them."
+
+Evidence: "Instead of thinking of it as user story let's take a step back and think of the human story — like what else is there around the humans when they are interacting with [the system]."
+
+Shareable potential: **High** — the "user story" concept is universal in agile and this reframe applies to any team using them.
+
+---
+
+**Conflict 4 — AI as leadership practice environment**
+
+Industry says: "Leadership skills are developed through experience managing people."
+Clauddio says: "You wouldn't put a junior person in charge of a real team to practice leadership. But you can do that with AI — and you should. AI is a risk-free sandbox for practicing the muscles: vision clarity, delegation, problem decomposition, observing, gap-filling."
+
+Evidence: "You can think of AI as your little agents as people that you are coordinating. It's a way to practice leadership so that by the time you actually show up with people, you've already practiced the muscles."
+
+Shareable potential: **Medium-High** — genuinely counter-intuitive, relevant for anyone who hasn't thought about AI this way.
+
+---
+
+**Conflict 5 — Prompting as a skill vs. delegation as a skill**
+
+Industry says: "Getting better AI results is about writing better prompts."
+Host/Clauddio say: "The problem isn't the prompt — it's the delegator. The same failures that make someone bad at delegating to junior staff (incomplete instructions, unconscious assumptions, 'just do it') make them bad at using AI. Rewriting the prompt keeps the problem in your head. Having a conversation externalizes it."
+
+Evidence (Host): "I've said before that utilizing a model when we use AI, we're doing delegation. And people generally are bad at delegation."
+Evidence (Clauddio): "If you just rewrite the prompt, then everything's staying in your head. You need to externalize that into the AI."
+
+Shareable potential: **Medium** — reframes the "prompt engineering" conversation productively.
+
+---
+
+**Conflict 6 — Task identity vs. problem-solver identity**
+
+Host's customer conversation: People who derive identity from tasks ("I am a software developer") feel AI is stealing their work. People who identify as problem-solvers ("I deliver solutions") become 10x more powerful with AI.
+Clauddio extends: "I don't call myself a software developer. I'm a solution developer. The solutions I develop may or may not include software."
+
+Shareable potential: **Medium** — resonates strongly with developers in AI transition anxiety, useful for managers having those conversations.
+
+---
+
+### 4. Explicit Exclusion List
+
+These must NOT appear in the article:
+
+- **AI governance frameworks and compliance checklists** — Clauddio said nothing about governance; injecting it would dilute his practitioner frame.
+- **Comparisons of AI tools** (Copilot vs. Claude vs. ChatGPT) — Copilot appeared only as the coach's existing tool. Tool selection is not the point.
+- **Prompt engineering as a discipline** — the article deliberately reframes away from this toward leadership and intent.
+- **AI safety, hallucination risk, or model reliability** — the hidden tabs story is about unexpected data access, not hallucination. Don't conflate.
+- **101-level Scrum or agile methodology explanation** — the target reader (tech lead, senior dev, engineering leader) already knows this.
+- **ROI calculators or productivity benchmarks** — Clauddio explicitly says measuring by output is the wrong frame. Don't undercut him by adding one.
+- **Any section titled "Best Practices for AI Adoption"** — this is exactly the genre of content this article pushes back against.
+- **"Requirements" as a legitimate framing** — Clauddio explicitly rejects conflating stories with requirements; using the word requirements positively undermines the piece.
+
+---
+
+### 5. Gap Analysis
+
+**GAP [CRITICAL]:** The "AI in the human loop" framework is the article's central idea but it's never operationalized. Clauddio says AI should enter the human loop "over here" where it helps — but he never offers a diagnostic for deciding *where* that is. The Scrum loop and the Brazil story gesture at an answer, but there's no decision framework. Without this, the article's core claim is compelling and unactionable.
+
+Why it matters for the article: Readers who agree with the reframe will immediately ask "okay, so how do I figure out where AI enters my team's loop?" If the article can't answer that, it ends at the insight without the tool.
+
+What the draft loses if this stays unresolved: The article becomes a philosophical argument rather than a practitioner guide. It will get LinkedIn shares and no behavior change.
+
+---
+
+**GAP [CRITICAL]:** Clauddio introduces a "need-problem-solution" framework ("don't tell me what you want, tell me what you need") and says he's "been playing around with it in his mind." This is potentially the most actionable part of the entire interview — a structured approach to surfacing human intent before defining problems or solutions. But it's underdeveloped. Is this a 3-step process? A facilitation question set? How do you help someone articulate a need when they instinctively jump to a solution?
+
+Why it matters for the article: This framework is the connective tissue between "AI in the human loop" (the philosophy) and "human stories" (the artifact). Without it, the how-to section has a gap in the middle.
+
+What the draft loses if this stays unresolved: The article cannot walk a reader through the full process. It will describe outcomes but not the path.
+
+---
+
+**GAP [CRITICAL]:** Clauddio claims "clarity of human intent" is the real bottleneck — not tools, not code. But the claim is asserted, not evidenced. There is no concrete example of a team that had high clarity vs. low clarity and the difference in outcomes. The sprint review anecdote ("that's not what we meant") is a symptom, not a comparison. Without a before/after or a case study anchored in this claim, it reads as a confident assertion rather than a grounded observation.
+
+Why it matters for the article: A CTO reading this needs more than conviction. The onboarding story is the closest thing to evidence — it should carry more weight in the draft if the clarity bottleneck claim can't be substantiated further.
+
+What the draft loses if this stays unresolved: The central thesis is vulnerable to "that's just your opinion" dismissal.
+
+---
+
+**GAP [NICE-TO-HAVE]:** The "human story" terminology is introduced but Clauddio acknowledges "that's what most people call them" [user stories] while he prefers something else. He uses "human story" but it's never formally defined as his term. Is this a named methodology? Does he have a written definition?
+
+Why it matters for the article: If "human story" is a term Clauddio has written about in his blog, citing that adds credibility. If it's informal, the article should present it as such.
+
+What the draft loses if this stays unresolved: Minor — can work around with attribution ("the way Clauddio frames it...").
+
+---
+
+**GAP [NICE-TO-HAVE]:** The onboarding story mentions 8 months of recorded interactions and AI-generated documentation, but the process is described only at the output level. How long does synthesizing a sprint's worth of transcripts actually take? What prompts produce the onboarding guides? What does the human review step look like?
+
+Why it matters for the article: Teams wanting to replicate this need more than the outcome. The process is the product.
+
+What the draft loses if this stays unresolved: The onboarding section becomes inspirational without being replicable.
+
+---
+
+**GAP [NICE-TO-HAVE]:** Clauddio's blog is referenced twice as a substantive resource — once by the host ("I love your blog, by the way") and once as the source material he fed to his AI to build the story-writing recipe. A link or at minimum a title/URL would let the article direct readers to the deeper methodology.
+
+What the draft loses if this stays unresolved: A missed citation opportunity; the article will have to stand alone on the transcript content.
+
+---
+
+### 6. Competitive Landscape
+
+*Note: I'm drawing on training knowledge here rather than a live search — recommend a quick verification pass on current SERPs before publishing.*
+
+**What exists on "human in the loop":**
+The dominant content treats "human in the loop" as an AI safety and model oversight concept — Anthropic, MIT, Harvard Business Review, and NIST publications. These are primarily about model governance and responsible AI, not organizational workflow design. None approach the reframe Clauddio offers (humans have their own loops; AI inserts into those).
+
+**What exists on "10x developer productivity with AI":**
+Dominated by vendor content from GitHub (Copilot studies), McKinsey (developer productivity surveys), and tool comparison blogs. These universally measure lines of code, PR merge rate, or time-to-completion. None challenge the measurement frame itself.
+
+**What exists on "user stories in agile":**
+Massive volume of content on Mountain Goat Software, Scrum Alliance, Atlassian, etc. Almost none addresses the "user" constraint Clauddio raises — that treating humans only as system users ignores their full context.
+
+**What exists on "AI leadership skills":**
+C-suite focused (managing AI strategy, board governance). Almost nothing at the practitioner level — how a tech lead, senior dev, or agile coach develops leadership muscles through AI interaction.
+
+**How this article differs:**
+Every existing article in these spaces either (a) treats AI as the subject and humans as the governance mechanism, or (b) measures AI value by output. This article inverts both assumptions simultaneously. That's the positioning opportunity.
+
+**Featured snippet / AI overview candidates:**
+- "What is the difference between human in the loop and AI in the human loop?"
+- "How do you measure AI productivity beyond lines of code?"
+- "What is a human story vs a user story in agile?"
+
+**Primary search intent this article serves:**
+A tech lead or senior developer who has been using AI tools for 6-12 months, is disappointed in the results, and is trying to understand why. They have not connected the gap to their own clarity-of-intent problem — they're blaming the model or the prompts.
+
+---
+
+## The Outline
+
+---
+
+### H2: The framing that's been setting your team up to fail
+
+*Section purpose:* Establish the villain. "Human in the loop" is a passive, supervisory frame that subordinates humans to the AI process. Clauddio's reframe flips it: AI belongs in the human loop.
+
+#### H3: What "human in the loop" actually implies
+- Positions the human as a checkpoint in an AI pipeline
+- Subtly makes AI the primary process and the human the exception handler
+- Industry has adopted this language from model safety research and applied it wholesale to org design
+
+#### H3: The inversion — AI in the human loop
+- Humans have their own loops: Scrum sprints, decision cycles, daily work rhythms
+- AI should be selectively inserted where it helps and feed results back into the human process
+- The question is never "where should the human intervene?" — it's "where should AI enter?"
+- `[INSERT DIAGRAM: A Scrum loop with AI entry/exit points labeled — conversation extraction, story synthesis, documentation — vs. the sections the human owns exclusively]`
+
+---
+
+### H2: The bottleneck you're not measuring
+
+*Section purpose:* Deliver the counter-intuitive central claim. Code speed has never been the constraint. Clarity of human intent has always been.
+
+#### H3: A history of faster tools, same problems
+- CASE tools, IDEs, frameworks, code generators — each iteration improved code production velocity
+- Sprint reviews still produce "that's not what we meant"
+- Clauddio: "Writing code faster has never been the bottleneck. The bottleneck has been clarity of intent."
+
+#### H3: The sprint review as a clarity test
+- If stakeholders are surprised at sprint review, clarity failed upstream — not execution
+- The team can follow requirements perfectly and still deliver the wrong thing
+- AI amplifies this in both directions: it can help you reach clarity faster, or help you build the wrong thing at higher speed
+
+#### H3: What you should be measuring instead
+- Can AI help your team reach clear thinking earlier in the cycle?
+- The right question is not "how much output did AI produce?" — it's "how much earlier did we discover we were solving the right problem?"
+- `[INSERT CALLOUT BOX: "Two sprint review outcomes — one team used AI to generate code faster; one used AI to surface stakeholder intent in week 1. Which team's sprint review went well?"]`
+
+---
+
+### H2: Need, problem, solution — in that order
+
+*Section purpose:* The most actionable section. Clauddio's framework for surfacing human intent before defining problems or solutions. Bridges the philosophy to the human story artifact.
+
+#### H3: Why people articulate wants, not needs
+- "We are good at telling people what we want but not why we need it or even if we need it" (Clauddio)
+- Needs connect to values and identity — harder to surface, require facilitation
+- The consultant's instinct: show up, hear what the client asks for, build it. The better instinct: stop before the solution and ask what is actually needed.
+
+#### H3: The facilitation practice — tell me your story
+- Clauddio's approach: ask stakeholders for their pain stories, not their requirements
+- "Tell me a typical day. Tell me the typical pain points. Tell me what makes you go [frustrated sound]. Tell me those experiences. Just say it out loud."
+- The conversation reveals needs. The AI synthesizes the stories from that raw material.
+
+#### H3: Human stories, not user stories
+
+*The reframe with the highest daily applicability for the target audience.*
+
+- "User" constrains the person to their role at a computer — it ignores everything else in their context
+- Example: a UX designed for efficiency fails because the user is in a loud environment with customers demanding attention in front of them. The "user" story didn't capture the human
+- Human story: what is the full context of this person when they interact with the system?
+- Stories are not requirements: "Nobody says 'I have to tell you some requirements.' They say 'I got to tell you a story.'"
+- Non-technical framing in practice: "There will be a way to place a purchase order" — not "there will be a button and a dropdown"
+- `[INSERT DIAGRAM: Concentric circles — inner circle: user-at-computer (user story scope), outer circle: full human context including environment, competing demands, emotional state (human story scope)]`
+
+---
+
+### H2: The story-writing agent — where this comes together in practice
+
+*Section purpose:* Concrete demonstration of the philosophy in action. Clauddio's 2-year-old agent as a real artifact.
+
+#### H3: The markdown file that changed his workflow
+- Two years ago: wrote a markdown file encoding his approach to stories — how to identify value, persona, context, acceptance criteria (given/when/then)
+- Fed his blog posts to AI, had it build the recipe — "look at all these posts and write me this recipe"
+- This file became his agent. Every stakeholder transcript goes through it.
+- "I don't just tell AI, here's a transcript, cut me some stories. I tell it: this is how I think through decomposing a problem. This is how I identify value. When you write stories, think the way I do."
+
+#### H3: Building an agent from intention, not instructions (the Houston story)
+- A fellow Improver agile coach asked Clauddio to share his prompt
+- Instead: walked the coach through building a Copilot agent via conversation — natural language description + blog post links
+- The coach then described his own problem via voice dictation → stories → new agent, created by Copilot from those stories
+- Result: the coach's human intention, expressed as a story, became the agent specification — no prompt engineering involved
+- `[INSERT DIAGRAM: Flow from stakeholder conversation → transcript → AI story agent → user stories → agent specification → new agent]`
+
+---
+
+### H2: Leading AI the same way you lead people
+
+*Section purpose:* The leadership development angle — counter-intuitive and differentiated.*
+
+#### H3: AI exposes your delegation gaps
+- Using AI is delegation. Most people are bad at delegating. (Host's observation, validated by Clauddio)
+- Symptoms: incomplete instructions, unconscious assumptions, "do this because I told you so"
+- These failures surface immediately with AI because AI has no body language, no implicit context, no ability to fill gaps from social cues
+- This is diagnostic information, not a flaw in the model
+
+#### H3: AI as a risk-free leadership practice environment
+- You wouldn't put a junior leader in charge of a real team to practice — but you can do this with AI
+- Practicing the muscles: clear vision → enable → let it run → observe where it goes → fill the gap → have it restate its own instructions in its own words
+- Clauddio's coaching loop applied to AI: "I tell it to do something. I watch it. I see where it's trying to look for information. I ask why it went that path. Then I give direction. Then I say: rewrite your instructions based on what I've told you. Let me see how you do it."
+- The "wax on, wax off" principle: the repetition builds the skill before it matters
+
+#### H3: What the hidden Excel tabs reveal about AI as an observer
+- The accounting team story: AI read data the humans literally could not see (hidden tabs)
+- The same dynamic applies to conflicting instructions, dead code, buried assumptions in documents
+- Good leaders use what AI surfaces; bad prompts suppress it
+- Asking AI "do you know a better way?" is a leadership habit — openness to information you didn't ask for
+
+---
+
+### H2: When new team members onboard themselves
+
+*Section purpose:* The most concrete proof point. Stakes are real; outcome is measurable.*
+
+#### H3: The precondition — 8 months of recorded work
+- Every team interaction recorded: daily scrums, stakeholder conversations, everything
+- Transcripts fed to AI → AI synthesized decision logs, challenge summaries, onboarding guides
+- Clauddio did not write the documentation — he prompted AI to synthesize it from the transcripts
+
+#### H3: Two new team members, no handholding
+- Previous team member (who had helped build the AI tools) rolled off
+- New members joined without knowledge of the tools, process, or mindset
+- They used the documentation to self-onboard; came to Clauddio having already done the work
+- Sprint review that Friday: stakeholders said "wow" about contributions from brand-new team members
+
+#### H3: What made this possible — and what most teams skip
+- The documentation habit had to exist *before* the need arose — 8 months of consistent recording
+- The value is proportional to the upstream discipline; teams that record sporadically get sporadic benefit
+- The team lead's role shifts: not a trainer, but a gap-filler for people who have already prepared
+
+---
+
+### H2: What this approach doesn't solve — and where it can go wrong
+
+*Section purpose:* The Skeptic's View. Credible, fair, not a strawman.*
+
+#### H3: This requires a facilitator with accumulated discipline
+- The story-writing recipe Clauddio uses took years of coaching practice and blogging to build — it encodes his judgment, not a generic method
+- A team starting from zero cannot simply download a markdown file and get the same results
+- The "clarity of intent" discipline is a skill that must be practiced, not a tool that can be installed
+
+#### H3: AI-generated clarity isn't the same as validated clarity
+- A well-structured prompt can produce a well-structured story that's still wrong about the human need
+- AI synthesizes what humans say — if the facilitated conversation didn't surface the real need, the story won't either
+- Human stories still require human validation; the AI is a synthesis tool, not a truth engine
+
+#### H3: When problem articulation creates unnecessary friction
+- The need-problem-solution framework is most valuable at discovery phase
+- Mid-execution, teams with clear scope don't need to restart from need articulation
+- Forcing story-first thinking onto a team that already has clarity adds overhead, not value
+
+---
+
+## Recommended Title Options
+
+**Ranked:**
+
+1. **"The Bottleneck Isn't Code: Why Human Intent Is the Real Constraint on AI-Assisted Teams"**
+Strongest. Names the counter-intuitive claim directly. A CTO will either nod hard or want to argue — both responses drive reading.
+
+2. **"Stop Putting AI in the Loop: The Case for Human-Centered AI Leadership"**
+The "human in the loop" provocation will land with anyone who has used that phrase in a meeting, which is most of the target audience.
+
+3. **"AI in the Human Loop: How Technical Teams Solve the Right Problems Faster"**
+Cleaner and more accessible, but lower friction — less likely to stop a scroll.
+
+---
+
+## Primary Search Intent
+
+Someone who has been using AI tools for several months, is disappointed the productivity gains feel smaller than promised, and is trying to understand what they're doing wrong. They are not searching for "prompt engineering tips" — they are searching closer to "why isn't AI making my team more productive" or "how to actually use AI in software development."
+
+Secondary intent: an engineering leader or agile practitioner who has heard the "human in the loop" frame and something about it has felt off — they want a more useful model.
+
+---
+
+## Questions for the SME(s)
+
+**For Clauddio Lasala — addressing CRITICAL gaps:**
+
+1. **[GAP 1 — operationalizing "AI in the human loop"]** When you're working with a team that hasn't done this before, how do you identify which parts of their loop are candidates for AI insertion vs. which parts need to stay fully human? Is there a diagnostic question you ask, or is it pattern recognition from experience?
+
+2. **[GAP 2 — the need-problem-solution framework]** You described a three-part framework: need → problem → solution. Is this something you have written down in a structured way? What are the actual facilitation questions you ask to move someone from "here's what I want" to "here's the underlying need"? Can you walk through an example exchange?
+
+3. **[GAP 3 — evidencing the clarity bottleneck claim]** You say clarity of intent has always been the bottleneck. Do you have a specific engagement — even de-identified — where you can contrast a team with low clarity (and the sprint review outcome) vs. one with high clarity (and the outcome)? The claim is strong; a concrete case would make it bulletproof.
+
+4. **[GAP 4 — onboarding process specifics]** On the 8-month documentation system: roughly how long does it take to convert a sprint's worth of transcripts into useful documentation? What does the prompt or agent look like that does that synthesis? What's the human review step?
+
+5. **[Completeness — blog reference]** The host mentioned loving your blog and wanting to include a link. What's the URL, and which post would you most want readers to read alongside this article?
+
+---
+
+```json
+{
+  "title": "The Bottleneck Isn't Code: Why Human Intent Is the Real Constraint on AI-Assisted Teams",
+  "introduction": "For tech leads and agile practitioners who feel AI tools are underdelivering, Clauddio Lasala makes the case that the problem has never been code velocity — it has always been clarity of human intent, and most teams are using AI to build the wrong thing faster.",
+  "problem_statement": "Organizations measure AI productivity by output speed (lines of code, tasks completed) while the actual bottleneck — humans' inability to clearly articulate what they actually need — goes unaddressed, causing teams to use AI to deliver the wrong thing at higher velocity.",
+  "takeaway": "Before optimizing AI for output, invest in using AI to achieve clarity of human intent earlier in the work cycle — the teams that do this produce sprint reviews where stakeholders say 'wow,' not 'that's not what we meant.'",
+  "body_sections": [
+    { "heading": "The framing that's been setting your team up to fail" },
+    { "heading": "The bottleneck you're not measuring" },
+    { "heading": "Need, problem, solution — in that order" },
+    { "heading": "The story-writing agent — where this comes together in practice" },
+    { "heading": "Leading AI the same way you lead people" },
+    { "heading": "When new team members onboard themselves" },
+    { "heading": "What this approach doesn't solve — and where it can go wrong" }
+  ]
+}
+```

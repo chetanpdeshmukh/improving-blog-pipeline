@@ -18,14 +18,15 @@ reproducibility check against today's fixed `qa-gate.js`, the confirmed-correct
 figure is 24/31 (77.4%): 2 confirmed clean PASS (6.5%), 22 correct PUNCH-OUT (71.0%),
 and 6 INTERRUPTED (19.4%, unchanged).**
 
-**Updated 2026-09-27/28 (session 13) with `run-061`** — the first attempt at a real,
-full production-length (no `--draft`/`--short`) run against all the session-11/12
-fixes: **25 of 32 (78.1%)** reach a confirmed-correct terminal state. `run-061`
-correctly PUNCHED OUT at `grade-gate` (Grade C, plateaued after 1 revision through
-blog-refinement) — a real content-quality catch (unsourced statistics, an
-uncredentialed named expert, unresolved diagram placeholders), not a bug. This is
-still not the genuine production-length PASS the project needs as its
-certification-representative run; see §8.
+**Updated 2026-09-27/28 (session 13) with `run-061` and `run-062`** — both real,
+full production-length (no `--draft`/`--short`) runs: **26 of 33 (78.8%)** reach a
+confirmed-correct terminal state. `run-061` correctly PUNCHED OUT at `grade-gate`
+(Grade C, unsourced stats + uncredentialed expert). `run-062` — run against the
+same-session `blog-draft-writer.md` fixes for exactly those two issues — cleared
+`ai-smell-test` clean on the first pass (Grade B, no revision), then correctly
+PUNCHED OUT at `qa-gate` on two unrelated real issues (banned-word overuse,
+near-verbatim restatement). Neither is the genuine production-length PASS the
+project still needs as its certification-representative run; see §8–§9.
 
 The gap between those two numbers is itself a real finding, not rounding: 3 of the
 5 historically-logged PASSes (`run-035`, `run-038`, `run-040`) ran before a same-day
@@ -207,3 +208,20 @@ transcripts never run — see the KB's session-12 note) rather than retrying thi
 since this transcript's source material itself (unattributed stats, uncredentialed
 expert) is the likely root cause, not something a redraft can fix without editing
 the transcript.
+
+## 9. First run against the blog-draft-writer prompt fixes (session 13)
+
+`run-062` — `test-data/Improving Podcast - The Clarity Multiplier AI In the Human
+Loop.txt`, full production length, run against the same-session `blog-draft-writer.md`
+changes (Statistic & Attribution Discipline, Contrast-Negation Avoidance, `[NEEDS
+SOURCE: ...]` tag). Result: **cleared `ai-smell-test` on the first pass (Grade B, no
+revision loop)** — checkpoints 2A/2B/2C (grounded in transcript, no invented examples,
+gaps acknowledged) all PASS, with the two `[INSERT DIAGRAM]` placeholders explicitly
+called out as legitimate rather than penalized. This is the first run where neither
+category the prompt changes targeted (unsourced stats, uncredentialed experts,
+contrast negation) shows up as a finding. Still **PUNCH-OUT**, at `qa-gate` — on two
+unrelated, real issues the prompt change didn't target: "stakeholders" used 6 times
+(a banned vague noun) and a near-verbatim restated point across two sections. A
+legitimate content-quality catch, not a bug. Net read: the targeted fix appears to be
+working; the pipeline still needs a run clean across every checkpoint for the
+production-length PASS this project still lacks.

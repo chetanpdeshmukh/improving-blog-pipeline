@@ -1,0 +1,6 @@
+{
+  "runId": "run-062",
+  "step": "qa-gate",
+  "reason": "QA reviewer found 2 FAIL item(s): | 3B | Banned words | FAIL | \"stakeholders\" appears 6 times — explicitly listed as a banned vague noun |; | 4D | No filler | FAIL | Section 3 para 5 and Section 7 para 2 are near-verbatim restatements of the same point |",
+  "timestamp": "2026-09-28T00:36:24.355Z"
+}
