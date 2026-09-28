@@ -319,6 +319,20 @@ test('word count (4A) alone, even at FAIL, never triggers punch-out (Chetan\'s d
   assert.strictEqual(result.wordCountFailItems.length, 1, 'the 4A FAIL should still be surfaced, just non-blocking');
 });
 
+test('bolded FAIL cell (e.g. "| **FAIL** |") triggers punch-out (regression: run-065, 2026-09-28 — reviewer bolded checkpoint 3A\'s FAIL cell for POV-consistency leak, and the unadorned "| FAIL |" pattern silently let it through as "all checks PASS/WARN")', () => {
+  const text = [
+    '### Verdict: FAIL',
+    '',
+    '| # | Checkpoint | Status | Notes |',
+    '|---|-----------|--------|-------|',
+    '| 3A | POV consistency | **FAIL** | "The host cited a report" — podcast transcript language leaked through |',
+    '| 3B | Banned words | PASS | clean |',
+  ].join('\n');
+  const result = qaGate(text);
+  assert.strictEqual(result.decision, 'punch-out', 'a bolded FAIL cell must still block, not silently proceed');
+  assert.ok(result.failItems.some(i => /3A/.test(i)), 'the 3A FAIL should be in the blocking failItems');
+});
+
 test('real blog-qa-reviewer clean table (all PASS/WARN cells) proceeds', () => {
   const text = [
     '## Verdict: PASS',

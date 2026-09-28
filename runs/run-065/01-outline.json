@@ -1,0 +1,297 @@
+I'll work through the full Phase 1 analysis on this podcast transcript now.
+
+---
+
+## Phase 1 Analysis: Robin Fuentes — Improving Edge Podcast on Agentic AI
+
+---
+
+### 0. Speaker Identification
+
+**Host/Moderator:** Unnamed (based on internal references — "our organization," mentioning Jake Stevenson as "one of my co-workers" — this appears to be an Improving employee hosting the show). The host contributes genuine observations beyond filler: cites David Allen's "psychic weight" concept, references a weekend report on shadow AI statistics, introduces the delegation framing and "smart trust" terminology. These are substantive contributions, not just prompts.
+
+**Guest/SME:** **Robin Fuentes** — President, Improving Houston Enterprise (also called South Texas internally). Robin is the primary practitioner voice. All war stories, operational examples, and counter-intuitive positions originate with him unless otherwise noted.
+
+**Attribution rule applied throughout:** Where the host contributed a substantive point, it is attributed to the host. Where Robin built on a host prompt, the insight is credited to Robin. Jake Stevenson is a named third party (Robin's co-worker) who originated the communication-coaching prompt concept — credited to him, not Robin.
+
+---
+
+### 1. The Villain
+
+Organizations treating agentic AI as a technology procurement decision are failing on two fronts simultaneously: their employees are already routing around inaction using personal accounts and exposing corporate data, while leaders who do attempt adoption build agents that don't work because they cannot articulate — in precise, decomposed terms — what they actually want the agent to do. The real blocker is not the technology. It is that most people are bad at delegation, and agents make that invisible skill gap impossible to hide.
+
+---
+
+### 2. War Stories Extracted
+
+**War Story 1 — The Meeting Transcript Pipeline (Robin)**
+- **Setup:** Robin runs 15+ conversations per day and was losing commitments — tasks he promised people, follow-ups he forgot to send.
+- **Pressure:** Couldn't simultaneously be present in a conversation and take accurate notes on action items. The cognitive split was degrading both.
+- **Decision:** Built a multi-step agentic pipeline: meeting transcript → downloaded to OneDrive (deterministic step) → AI summarization (non-deterministic) → calendar matching to identify which meeting the transcript belongs to (non-deterministic — accounts for edge cases like a meeting that ends at 3:35 being ambiguous against one starting at 3:30) → attendee extraction → commitment/to-do identification → output into Todoist.
+- **Outcome:** Within 15 minutes of any meeting ending, action items appear in his inbox. He can be fully present in conversations. "That's a beautiful loop that I no longer have to do manually."
+- **Note:** The calendar-matching step is a good example of why "deterministic" framing breaks down — it appears simple but requires genuine contextual reasoning.
+
+**War Story 2 — The Failed Single-Agent Attempt (Robin)**
+- **Setup:** Robin described steps A through G of his transcript pipeline and asked a single agent to execute the full workflow.
+- **Pressure:** Wanted automation, took the obvious shortcut of treating it as one job.
+- **Decision:** Deployed a monolithic agent against multiple test scenarios, which measured its own success rate.
+- **Outcome:** It tried and tried and kept failing. Success rate was measurably low. Resolution came only after he decomposed the workflow into discrete agents, each responsible for one output — a summary, a separate attendee markdown file, a to-do markdown file, a review layer — all stored in the same folder so subsequent agents had clean, specific context to work from. "Trying to do too much becomes a problem."
+
+**War Story 3 — AI Communication Coaching Without Context (Robin, based on Jake Stevenson's prompt concept)**
+- **Setup:** Jake Stevenson (Robin's co-worker) created a prompt that reviews meeting transcripts and grades the user on communication style, management quality, and communication skills. Robin tested a similar version on one of his own meetings.
+- **Pressure:** Wanted objective feedback on his performance.
+- **Decision:** Fed the transcript in without providing full context about the meeting's purpose and Robin's role in it.
+- **Outcome 1:** AI told him he "should have" led the meeting more forcefully. Problem: it wasn't his meeting. Once he gave more context, the feedback shifted. Point: the model made authoritative-sounding recommendations built on wrong assumptions.
+- **Outcome 2:** In a separate instance, Robin's presentation to the executive Friday call included a Fart Miner song reference and henna on his hand as intentional personality touches. AI feedback called them "distracting." Robin disagrees — he wanted his personality to show. The AI had no mechanism to distinguish intentional style from accidental noise.
+- **Story status:** Complete, though the specific prompt Jake used is not reproduced. Would strengthen the article if the prompt structure or approach could be shared.
+
+**War Story 4 — High-Profile Podcaster and Open Claw (referenced by Robin)**
+- **Setup:** A high-profile podcaster gave an agent called "Open Claw" (identity of this product is unclear from the transcript — may be a specific tool or a name Robin used loosely) full access to their social media accounts.
+- **Pressure:** Presumably wanted automated posting or engagement.
+- **Decision:** Turned it loose with minimal oversight.
+- **Outcome:** It posted rage bait on X. The podcaster got blowback and tried to disclaim responsibility ("It wasn't me, it was Open Claw"). Robin's point: the agent acted; the human owns it. There is no plausible deniability when you hand an agent the keys.
+- **Note:** The specific product name is ambiguous in the transcript. Do not use this as a named reference without confirmation.
+
+**War Story 5 — Insurance Industry AI Discrimination (Robin)**
+- **Setup:** Insurance companies — early, long-term AI adopters — used AI to approve coverage and set risk-based rates, but had to work around PII restrictions so they could not feed explicit demographic data into the model.
+- **Pressure:** Needed to use AI for risk scoring without violating personal data handling rules.
+- **Decision:** Ran models using non-demographic proxies.
+- **Outcome:** When the resulting decisions were reassociated back to the actual people, there was heavy discrimination against people of color — not because they were higher risk, but because the historical training data reflected an insurance market that had primarily served white customers. The bias was baked in from history, not from intent. A human had to look at the aggregate output and say "no, that's not what we want."
+- **Story status:** Incomplete — Robin does not describe the resolution. What did the corrective action look like? This is a gap.
+
+**War Story 6 — Improving's SharePoint-Connected Agent (Robin)**
+- **Setup:** Improving recently deployed an agent that can search SharePoint.
+- **Pressure:** Wanted organizational knowledge to be more accessible via natural language.
+- **Decision:** Connected agent to SharePoint with underlying SharePoint permissions controlling access.
+- **Outcome:** Robin identified the risk immediately — any SharePoint site he personally has access to is now queryable. "If I want to be a little sneaky, I might be able to do that." The agent doesn't discriminate based on whether the user is supposed to actively consult a given document — it just knows they have read access.
+- **Point made:** Security through obscurity does not survive agent access. If the permissions structure was not already clean, the agent will surface data that was previously hidden by inconvenience.
+
+---
+
+### 3. Controversy & Counter-Intuitive Points
+
+**Controversy 1 — AI is not creative. It is deliberately made to appear creative.**
+- Industry says: "AI is creative — it generates novel solutions and original ideas."
+- Robin says: "There's no creativity without biology. AI just 'maths its way' to an answer. It is statistically guessing the next word. It has no concept of the answer it gave you."
+- Additional layer (from both Robin and the host, who is a math major): LLMs are deliberately engineered to be non-deterministic above approximately 70% probability confidence. Below that threshold they pick the most likely next token. Above it, they randomize — on purpose — to appear creative and human-like. It is a trust-building design decision, not an emergent property.
+- Evidence: "It just understands that it gave you what it understood to be the right words." / "They randomize the answer above that. So that it appears creative."
+- Shareable potential: **High** — this reframes AI capability in a way that would surprise most non-technical executives.
+
+**Controversy 2 — More context and information does not make agents better. It makes them worse.**
+- Industry says: "Give AI as much context as possible for better results."
+- Robin says: "AI actually really struggles with that. It does very well on very small, very systematic tasks — this is the information, this is the output."
+- Evidence: His monolithic agent failed repeatedly. Decomposed agents, each with one specific output, succeeded. He explicitly states: "I think one of the things most people struggle with when it comes to working with AI is that they think more is always better."
+- Shareable potential: **High** — directly contradicts the most common prompting advice.
+
+**Controversy 3 — Refusing to adopt AI is not a risk mitigation strategy. It is a different, larger risk.**
+- Industry says: "Organizations should establish AI governance and policy before adoption."
+- Robin (and host, citing a report): Organizations without guidance or adoption policy already have employees feeding corporate data into personal AI accounts. 64% of such organizations experience this, with ~232 incidents of corporate data exposure per day through personal accounts.
+- Robin says: "I think we're at more risk in most organizations of not doing this than doing this."
+- Shareable potential: **High** — the stat reframes "AI-free" as an active liability choice, not a safe default.
+
+**Controversy 4 — Security through obscurity does not work with agents.**
+- Common assumption: Sensitive data that is hard to find is effectively protected.
+- Robin says: "I think we'd be surprised how many companies have used obfuscation as a way to keep data private... Doesn't work with agents. Because the agent's going to find it."
+- Evidence: SharePoint agent example — any accessible site becomes queryable regardless of whether users would normally think to look there.
+- Shareable potential: **Medium-High** — a concrete, specific claim that security teams will react to.
+
+**Controversy 5 — You cannot use someone else's pre-built agent without inheriting their opinions.**
+- Common assumption: A well-built agent prompt or workflow can be shared and reused across teams.
+- Robin says: "You are adopting their opinions. You might care about very different things out of those transcripts than anybody else does." Pre-built workflows embed the creator's priorities.
+- Nuance Robin adds: This is also an opportunity — organizations *can* build shared agents that encode organizational opinions about what matters.
+- Shareable potential: **Medium** — reframes the "just use this template" advice circulating in productivity communities.
+
+**Controversy 6 — AI cannot replace the coaching conversation, and trusting it to do so creates false confidence.**
+- Common framing: AI provides objective, bias-free feedback.
+- Robin says: "It cannot replace that conversation... AI fundamentally doesn't understand the people in the room." It cannot account for emotional context, the relationship between the people, or the actual intent of the meeting.
+- Host adds: "It doesn't actually know intent." Without full context, AI coaching produces authoritative-sounding wrong answers.
+- Shareable potential: **Medium** — important corrective for the growing AI-coaching tool market, but less surprising than the others.
+
+**Controversy 7 — The correct analogy for an AI agent is a very junior employee — and most of what makes a good manager transfers directly.**
+- Common framing: Agent orchestration is a technical discipline.
+- Robin says: The closest analogy is a brand-new college graduate. They don't know much, they make mistakes, they need extremely clear instructions, and you build trust incrementally. The same delegation skills that make someone a good manager are what make someone effective at orchestrating agents.
+- Implication (stated by Robin and host): Most people are bad at delegation, and agents ruthlessly expose this. Learning to use agents well is learning to delegate well.
+- Shareable potential: **High** — reframes a technical skill as a human/management skill, accessible to a much wider executive audience.
+
+---
+
+### 4. Exclusion List
+
+The following must not appear in the article draft:
+
+- **Detailed LLM technical explainers** — transformer architecture, tokenization, training data mechanics. The target reader (CTO/VP/president) does not need this and Robin blew past it quickly. The "statistical next word" point is made and should land simply.
+- **Product comparisons** — Robin explicitly said to choose tools based on your existing platform (Microsoft → Copilot, Google → Gemini). This article should not become a tool review or feature comparison.
+- **Generic time-management or productivity advice** — the David Allen "psychic weight" reference is useful framing, but the article is about agents and delegation, not GTD methodology.
+- **AI ethics as an abstract topic** — the insurance story is included as a concrete war story. Do not let it expand into a general AI ethics treatise.
+- **AI existential risk** — not raised, not relevant to the audience.
+- **AI-generated image bias** — briefly mentioned as a parallel, not developed. Pulling it in would dilute the focus.
+- **Open Claw product specifics** — the identity of this tool is ambiguous. Do not name or link to it without confirmation from Robin.
+- **Detailed coverage of human-in-the-loop ML systems** — Robin touched on confidence thresholds, but the article is for business leaders, not ML engineers. Keep it at the decision-making level.
+
+---
+
+### 5. Gap Analysis
+
+> **GAP [CRITICAL]:** Robin describes his meeting transcript pipeline but never names the orchestration layer. He identifies OneDrive and Todoist as endpoints, but the tool or combination of tools that connects steps — how the transcript gets pulled, how calendar matching is triggered, how the to-do output is formatted and pushed — is unspecified. Without this, the article's most compelling practical example has no mechanism and reads as inspiring but unrepeatable. **What the draft loses:** The "here's how to actually do this" credibility that distinguishes Improving's practitioner perspective from generic AI hype.
+
+> **GAP [CRITICAL]:** The 64% / 232 daily incidents statistic comes from the host saying "I was actually reading a report this weekend." No report, no organization, no date is named. This is the article's strongest urgency argument for why organizations must act now — it cannot be used in a published piece without a citation. **What the draft loses:** The single most compelling data point for executive audiences who want evidence before acting.
+
+> **GAP [CRITICAL]:** Robin's core tactical advice is "break agents into atomic tasks," but he provides no heuristic for knowing when a task is atomic enough. He says "challenge yourself on what is the most finite task inside of this list" — which is a disposition, not a method. Every reader who attempts to implement this will immediately hit this question. **What the draft loses:** The article moves from "here's the principle" to "here's the method" without ever completing the bridge. The practical guidance is incomplete.
+
+> **GAP [NICE-TO-HAVE]:** Robin sketches a five-level AI maturity progression — from "I can spell AI" through tool user, code reviewer, task automator, to orchestrator — but never completes or names the levels explicitly. This is a potentially citable, differentiated framework that Improving could own. As stated, it's a loose allusion. **What the draft loses:** A structured maturity model that practitioners could use to self-assess and plan — would significantly increase shareability and repeat citation.
+
+> **GAP [NICE-TO-HAVE]:** "Smart trust" — extending agent autonomy incrementally, including Robin's 90% confidence interval auto-approve example — is introduced but not developed. What tool or platform surfaces that confidence metric? How does a non-technical executive implement this? The concept is strong; the execution detail is missing. **What the draft loses:** The article's best tactical answer to "okay, but how do I actually start trusting it more" is an incomplete example.
+
+> **GAP [NICE-TO-HAVE]:** Robin claims that agentic AI "is reinforcing the need for human-to-human connection" and that he is "excited about" this — but gives no evidence or mechanism. Why specifically does agent deployment push people toward human relationships rather than away from them? **What the draft loses:** A genuinely interesting counter-narrative to job-displacement fear, unsupported.
+
+> **GAP [NICE-TO-HAVE]:** The insurance discrimination story ends at problem identification. Robin does not describe what correction looked like, how the company addressed it, or what human oversight actually meant in operational terms for that use case. **What the draft loses:** The story lands as a warning without a resolution — useful, but not as instructive as it could be.
+
+---
+
+### 6. Competitive Landscape
+
+Existing content on this topic clusters into four categories:
+
+- **Vendor content** (Microsoft, Salesforce, ServiceNow): entirely optimistic, feature-focused, written to sell platform adoption. No failure modes, no decomposition method, no data exposure risk framing. Credibility gap is large for a practitioner audience.
+- **Strategy consulting content** (McKinsey, HBR, Deloitte): high-altitude, ROI-focused, change management framing. Accurate at the macro level but provides no operational guidance. "Establish a governance committee" is not useful to someone who already has 15 meetings a day.
+- **Technical tutorials** (LangChain, AutoGPT, CrewAI, Anthropic docs): written for developers and ML engineers. Not accessible to the executive audience; not concerned with organizational change or delegation skills.
+- **AI productivity guides** (LinkedIn thought leadership, newsletter content): generic, tip-focused, no failure modes, no security implications. Usually produced by people who have not actually built and iterated on working agent pipelines.
+
+**What this article can own that none of the above have:**
+- The reframe of agent orchestration as a delegation skill problem, not a technical problem
+- The "atomic task decomposition" method from a practitioner who failed first and fixed it
+- The data exposure risk of inaction, specifically the shadow AI / personal account angle
+- The honest acknowledgment of where AI coaching and agent autonomy break down
+- The maturity progression from LLM user to orchestrator — as a named, citable model
+
+**Potential featured snippet H2s:**
+- "What is the difference between generative AI and agentic AI?"
+- "Why do AI agents fail to complete multi-step tasks?"
+- "How do you prevent corporate data exposure from employee AI use?"
+
+**Primary search intent:** An executive or operations leader who has heard about agentic AI, wants to understand whether and how to implement it in their organization, and is trying to figure out what they're actually supposed to do — beyond "adopt AI."
+
+---
+
+### 7. The Outline
+
+**H2: What agents actually do — and why "go summarize my day" is a broken instruction**
+- Distinction between generative AI (statistically probable next word, question-answering) and agentic AI (purpose-focused task execution)
+- The asterisk Robin puts on "AI is intelligent": it guessed. It has no concept of the answer it gave you.
+- Why vague instructions produce useless or hallucinatory results — the golden retriever problem
+- Section note: Establish shared vocabulary early. Readers who conflate "ChatGPT" with "agents" will miscalibrate the rest of the article.
+
+**H2: The one reason your agent pipeline will fail before it starts**
+- Robin's monolithic agent failure: steps A through G, one agent, kept failing
+- What he found when he decomposed it: each step has one input and one output, stored as a discrete file
+- The counter-intuitive rule: agents excel at small, systematic, well-bounded tasks; they fail at large, ambiguous, compound ones
+- This is the opposite of "more context = better results"
+- Probe question the reader should apply to every agent they build: what is the most finite task inside this list?
+- `[INSERT DIAGRAM: the transcript pipeline as a chain — each node is one agent, each edge is one output file feeding the next input. Show where the human is in the loop and where automation runs unattended.]`
+
+**H2: Decomposition is just delegation — and most people are bad at it**
+- The analogy: a very junior employee who needs explicit, complete instructions
+- What makes delegation hard: most people don't know what they want until they see the wrong version of it (the taco test — you realize what you want when you see what you don't want)
+- The identity block for specialists: "My craft is the code" vs. "My job is to produce a system that solves a problem"
+- How agents force clarity: you cannot be vague with an agent the way you can be vague with a competent colleague who fills in the gaps
+- Section note: This is the article's core argument. The other sections set it up and extend it. Do not let it become a time management or GTD section.
+
+**H2: The data exposure problem your "no AI" policy is creating right now**
+- The 64% / 232 incidents stat — organizations without guidance have employees feeding company data into personal accounts daily [NEEDS SOURCE before publishing]
+- "$3.99 is not free. If you are not paying for the tool, you are the product."
+- Robin's organizational guidance: match tool to existing platform, pay for a corporate tier, require corporate account login, maintain control over access
+- The obfuscation-does-not-work point: hidden data is not protected data when an agent can search your entire accessible document store
+- The SharePoint example: every site you have read access to is now queryable — if your permissions weren't clean before, they aren't now
+- Section note: This section reframes "we're not adopting AI" from a risk-mitigation posture to an active liability posture.
+
+**H2: How to build trust with something that can't earn it the way people do**
+- The standard sequence: start in the loop, approve every output, iterate until you are annoyed by always approving the right answer
+- Robin's 90% confidence threshold: at that point, auto-approve. But he would not have reached that trust without the approval loop.
+- "Smart trust" — incremental extension of autonomy, defined by specific conditions for escalating to human review
+- The maturity progression: LLM question-asker → code reviewer with AI assistance → single-task automator → multi-step orchestrator
+- The escalation design question: what could this agent do that I really don't want it to do while I'm not watching? Define that before you remove yourself from the loop.
+- `[INSERT DIAGRAM: trust-building progression — five stages, what the human controls at each stage, what triggers escalation back to human judgment.]`
+
+**H2: Where the junior employee analogy breaks down — and why it matters**
+- Agents have no intuition, no emotional context, no awareness of intent
+- The AI coaching failure modes: it told Robin to lead a meeting he wasn't leading; it called his intentional personality touches "distracting"
+- The insurance discrimination case: AI produced discriminatory outcomes not from intent but from history embedded in training data — a human had to catch it
+- The OpenClaw incident: a publicly attributed agent action is your action, not the agent's
+- Frame: use AI coaching and agent output as additive signal, not as authoritative verdict
+- Do not let AI be the replacement. Let it be the amplifier.
+
+**H2: The case for waiting (and why it doesn't hold)**
+- Fair counter: agent failures have real consequences — data exposure, reputation damage, discriminatory outcomes, wasted build time
+- Fair counter: most organizations don't have the people or the clear task definitions to do this well right now
+- Fair counter: the insurance example shows that moving fast with AI and inadequate oversight causes measurable harm
+- The counter-counter: shadow AI is already causing measurable harm — 232 incidents per day is not theoretical
+- Robin's actual position: "Don't let the fear of that stop you. We're at more risk by not doing this."
+- The nuance that makes this credible: start with low-stakes, well-bounded tasks. The goal is not to automate everything — it is to find the boring, predictable things that consume time without requiring judgment, and start there.
+
+**H2: What leaders owe their people as this shift accelerates**
+- The homeowner analogy: basic AI literacy is a functional life skill — not because everyone needs to build agents, but because you need to know when to call the expert and when you can just do it yourself
+- "The story is not AI is going to replace your job. The person using AI is."
+- Leadership choice: help your people evolve into that person, or eventually replace them with someone who already is
+- This is also a retention and culture argument — the people who feel supported through a capability shift stay; the ones who feel left behind leave or quietly resist
+- The organizational opinion question: what do we as an organization care about? Building shared agents that encode those priorities is a leadership act, not a technical one.
+
+---
+
+### 8. Recommended Title Options (ranked)
+
+1. **"You're Bad at Delegation — That's Why Your AI Agents Keep Failing"** — specific, provocative, makes the real problem impossible to dismiss. A CTO reads this and either agrees (already knows they have a delegation problem) or disagrees (immediately wants to argue). Both responses drive a click. Strongest for shareability and engagement.
+
+2. **"Agentic AI Is Not a Technology Problem. It's a People Problem."** — clear thesis, credible, executive-facing. Less provocative than option 1 but broader in appeal. Better for an audience that is still defining its relationship with AI adoption.
+
+3. **"The One Skill That Determines Whether Your AI Agents Actually Work"** — curiosity-gap structure, slightly softer. Trades some specificity for accessibility. Good for audiences earlier in their AI adoption thinking.
+
+---
+
+### 9. Primary Search Intent
+
+An executive, operations leader, or technically-aware manager searching for: **"how to implement AI agents in my organization"** or **"why AI agents keep failing"** or **"agentic AI vs generative AI for business"**. Secondary: **"corporate AI data exposure risk"** / **"shadow AI policy"** / **"how to coordinate AI agents"**.
+
+The reader has heard the pitch, believes the value is real, and is now trying to figure out what to actually do — and what mistakes to avoid first.
+
+---
+
+### 10. Questions for the SME Before Publishing
+
+The following questions address CRITICAL gaps and should be directed to the specific person who can answer them.
+
+**For Robin Fuentes:**
+
+1. Your meeting transcript pipeline is the article's central example. What is the actual tooling in the orchestration layer? You mention OneDrive and Todoist as the endpoints — but what tool or combination of tools connects the steps? (CRITICAL — without this, the example is inspiring but not repeatable for the reader.)
+
+2. You say to "challenge yourself on the most finite task inside of this list" as the way to know when you've decomposed enough. Is there a cleaner decision rule? How do you personally know when a task is atomic enough for a single agent versus needing further decomposition? (CRITICAL — the article's practical guidance is incomplete without a method, not just a disposition.)
+
+3. Your 90% confidence interval auto-approve example — what platform or tool surfaces that metric? How would a non-technical executive set up a similar threshold for their own workflows? (NICE-TO-HAVE — would make the "smart trust" section actionable rather than illustrative.)
+
+4. You described a maturity progression from "I can spell AI" to "orchestrator with all the instruments playing." Can you name and define all five stages more specifically? This could become a citable Improving framework. (NICE-TO-HAVE — high leverage for positioning the article.)
+
+5. The "Open Claw" incident you referenced — can you confirm what product that actually refers to? We cannot name it in the article without confirmation. (NICE-TO-HAVE — strengthens the cautionary example but we can make the point without the name if needed.)
+
+**For the host:**
+
+6. You cited a report over the weekend about 64% of organizations and ~232 corporate data exposure incidents per day from personal AI account use. What report is that — author, organization, and approximate publish date? We cannot run that statistic without a citation. (CRITICAL — this is the article's strongest urgency argument for executive audiences.)
+
+---
+
+```json
+{
+  "title": "You're Bad at Delegation — That's Why Your AI Agents Keep Failing",
+  "introduction": "Robin Fuentes, President of Improving Houston Enterprise, argues that the reason most agentic AI deployments fail has nothing to do with the technology and everything to do with whether leaders can articulate — precisely and completely — what they actually want done.",
+  "problem_statement": "Organizations and their leaders treat agentic AI as a technology procurement decision, then fail because they cannot decompose tasks clearly enough for agents to execute them — while simultaneously, their employees route around inaction with personal accounts, creating the exact data exposure the organization was trying to avoid.",
+  "takeaway": "Agent orchestration is a delegation skill, not a technical one — and the same clarity, specificity, and incremental trust-building that makes someone an effective manager of people is exactly what makes them effective at orchestrating agents.",
+  "body_sections": [
+    { "heading": "What agents actually do — and why 'go summarize my day' is a broken instruction" },
+    { "heading": "The one reason your agent pipeline will fail before it starts" },
+    { "heading": "Decomposition is just delegation — and most people are bad at it" },
+    { "heading": "The data exposure problem your 'no AI' policy is creating right now" },
+    { "heading": "How to build trust with something that can't earn it the way people do" },
+    { "heading": "Where the junior employee analogy breaks down — and why it matters" },
+    { "heading": "The case for waiting (and why it doesn't hold)" },
+    { "heading": "What leaders owe their people as this shift accelerates" }
+  ]
+}
+```

@@ -23,7 +23,12 @@ const FAIL_PATTERNS = [
   /^\*\*FAIL\*\*/im,
   /^\s*[-*]\s*FAIL\b/im,
   /\bstatus:\s*FAIL\b/i,
-  /\|\s*FAIL\s*\|/i,
+  // Table-row cell, tolerating markdown emphasis around the value itself
+  // (e.g. "| **FAIL** |") — a real reviewer report bolded a FAIL cell
+  // (run-065, checkpoint 3A) and the unadorned "| FAIL |" version below
+  // silently failed to match it, letting a real punch-out-worthy row
+  // through as if the gate were clean.
+  /\|\s*[*_]{0,2}FAIL[*_]{0,2}\s*\|/i,
 ];
 
 // The reviewer's own top-line summary ("## Verdict: FAIL" / "### Verdict:
@@ -128,7 +133,7 @@ function qaGate(qaOutput, bannedWordRevisionCount = 0) {
   // real report either, just less harmfully (warnCount is informational
   // only and never affects `decision`).
   const warnLines = qaOutput.split('\n').filter(line =>
-    /^WARN:|^\*\*WARN\*\*|\bstatus:\s*WARN\b|\|\s*WARN\s*\|/i.test(line)
+    /^WARN:|^\*\*WARN\*\*|\bstatus:\s*WARN\b|\|\s*[*_]{0,2}WARN[*_]{0,2}\s*\|/i.test(line)
   );
   const warnCount = warnLines.length;
 
