@@ -1,32 +1,87 @@
-Running the AI smell test on the pasted draft. I'll save the report next to where the draft would live, using a descriptive filename since the content was pasted rather than from a file.
+# AI Smell Test - nearshore-ai-velocity-draft.md
 
-**Category 2 grep pass first** (the required pre-step before scoring anything else):
+**Date:** 2026-09-27
+**Grade:** B   ·   **Word count:** ~1,450   ·   **Threshold:** B (default)
+**Document type:** Client-facing deliverable
 
-Scanning for: `isn't|wasn't|doesn't|not a |not the |it's not|that's not|rather than|, not |not because`
-
-The draft is genuinely clean on this pattern. The parallel contrasts throughout use a "with/without" or "A team with X... A team running on Y" structure, which is a different shape -- not the two-sentence corrective template. The revision notes confirm em dashes were removed. Zero hits from the grep, and a by-eye pass confirms it.
-
-Now running all six checks and writing the report.
-
-
-{"type":"write_file","path":"/Users/Chetan.Deshmukh/Documents/Claude Cowork Project/blog writing framework/blog-pipeline-stage4/nearshore-ai-velocity-draft.smell-test.md","content":"# AI Smell Test - nearshore-ai-velocity-draft.md\n\n**Date:** 2026-09-27\n**Grade:** B   ·   **Word count:** ~1,450   ·   **Threshold:** B (default)\n**Document type:** Client-facing deliverable\n\n*(The revision notes appended after the horizontal rule were excluded from word count and scoring -- they are not part of the draft.)*\n\n---\n\n## Scorecard\n\n| Category | Score | Weight | Notes |\n|---|---|---|---|\n| Voice clichés, hollow affirmations & false authoritative framing | 8/10 | 20% | \"honest story\" (line 27) and \"honest acknowledgment\" (line 57) label content as candid rather than letting it speak |\n| Contrast negation & em-dash overuse | 8.5/10 | 20% | Em dashes confirmed removed; full-document grep found zero corrective-negation hits; parallel contrasts use \"with/without\" framing, not the two-sentence corrective template |\n| Triadic structures & parallel listing | 7.5/10 | 10% | Five three-item constructions spread across the piece; none concentrated enough to breach the 3-per-500-word threshold |\n| Generic content & fake specifics | 7/10 | 25% | Two unresolved [NEEDS SOURCE] tags: 130K STEM graduates (no confirmed source) and 50-60% productivity gains (no confirmed measurement basis) |\n| Structural tells | 9/10 | 15% | Headers are specific and argumentative; no tables, no TOC; section lengths vary meaningfully |\n| Synonym sprawl, repetition & rhetorical scaffolding | 5/10 | 10% | \"Prepared X / unprepared Y\" scaffold runs through 6+ sections as the default move; aphoristic mic-drop closers after 5 of 7 sections; \"AI [verb]\" as sentence subject 4+ times |\n\n**Weighted average: 7.65 --> Grade: B**\n\n---\n\n## Critical findings\n\n- **Line 7:** \"Mexico produces roughly 130,000 STEM graduates annually [NEEDS SOURCE: confirm whether this is Sandoval's own estimate or a cited figure]\"\n  - **Why it's a smell:** An unconfirmed statistic in the second paragraph sets a credibility ceiling for the entire piece. Readers who check and cannot verify it discount everything that follows.\n  - **Suggested rewrite:** If the figure is Sandoval's own: \"Sandoval puts Mexico's annual STEM graduate output at roughly 130,000.\" If it's a third-party figure, name the source in-line.\n\n- **Line 27:** \"Some team members saw 50-60% productivity gains across their broader workload [NEEDS SOURCE: confirm measurement basis with Sandoval: story points per sprint, DORA metrics, or another tracking method]\"\n  - **Why it's a smell:** A percentage range without a confirmed denominator reads as invented. The 40-minute-to-4-minute metric directly above it is specific and survives scrutiny; this one does not yet.\n  - **Suggested rewrite:** Resolve with Sandoval before publishing. If story points: \"Several team members averaged 50-60% more story points per sprint over the pilot period.\" If it cannot be confirmed, remove it -- the ticket-resolution metric is sufficient on its own.\n\n---\n\n## Major findings\n\n- **Line 27:** \"Results were uneven across individuals, which Sandoval presents as the honest story of AI adoption in a real team.\"\n  - **Why it's a smell:** \"Honest story\" labels the content as candid before the content can demonstrate it -- the false-authority-framing tell. A human giving an honest account just gives it.\n  - **Suggested rewrite:** \"Results were uneven across individuals. Sandoval names that directly rather than rounding up to a headline number.\"\n\n- **Line 57:** \"Sandoval notes AI gains are currently uneven. That honest acknowledgment matters before making structural decisions.\"\n  - **Why it's a smell:** \"Honest acknowledgment\" applies the same manufactured-candor label to a Sandoval observation in the closing section.\n  - **Suggested rewrite:** \"Sandoval notes AI gains are currently uneven -- a point worth sitting with before making structural decisions.\"\n\n- **Lines 11, 15, 19, 27, 43, 49, 51, 57 (throughout):** \"Teams with clear outcome definitions... Teams without mature sprint metrics,\" \"A team with clear process... A team running on ambiguous requirements,\" \"Teams with an existing engineering culture... When licenses land on a team without prompt governance,\" \"Teams with psychological safety... Teams that treat a pilot as a performance evaluation,\" \"Organizations that define... Organizations that skip,\" \"A partner ahead of that curve... A partner building it alongside you... A partner whose AI strategy exists only on slide decks\"\n  - **Why it's a smell:** The \"prepared X / unprepared Y\" parallel scaffold is the article's primary rhetorical move -- it appears in six of seven sections. A structure this consistent reads as a template, not as analysis.\n  - **Suggested rewrite:** In Sections 6 (partner) and 7 (pendulum), convert at least two instances into direct recommendations. \"Ask for a measurement log from a past engagement, not a pitch deck\" replaces the partner-comparison frame and delivers the same verdict without the scaffold.\n\n- **Lines 19, 27, 35, 43, 51 (section closers):** \"The failure surface grows with adoption speed.\" / \"The dashboard looks strong while the operating model stays unchanged.\" / \"A hiring process built on detection tooling alone will eventually surface teams built on undiscovered gaps.\" / \"The swing becomes unpredictable.\" / \"A partner whose AI strategy exists only on slide decks means inheriting their experiment as your production risk.\"\n  - **Why it's a smell:** Five of seven sections close with a short, punchy aphoristic line. One or two reads as earned punctuation; five in sequence reads as a formatting habit.\n  - **Suggested rewrite:** Collapse the two weakest instances -- \"The swing becomes unpredictable\" and \"The failure surface grows with adoption speed\" -- into the preceding sentence so they land as conclusions rather than mic drops.\n\n- **Lines 9, 33, 55, 59:** \"AI collapsed that framing,\" \"AI lowered the barrier,\" \"AI moves collaboration higher in the value chain,\" \"AI has already reshaped nearshore delivery\"\n  - **Why it's a smell:** AI as sentence subject doing action appears four times. Once or twice is precise shorthand; four times is a tic where an abstraction is carrying work the author should do.\n  - **Suggested rewrite:** At least two should shift to a human or organizational subject. \"Every CFO who looks at a team's sprint velocity can now see the cost-arbitrage argument collapse\" puts the observation on the person experiencing it rather than on the technology.\n\n---\n\n## Minor findings\n\n- Five three-item constructions across the piece (\"what did this team ship, in what timeframe, with what quality signal?\" / \"clear process, good review habits, and collaborative trust\" / \"AI spend at scale, zero business alignment, no accountability for outcomes\" / \"cultural alignment and growth mindset come first, foundational engineering competency second, AI proficiency third\" / \"prompt governance, token spend observability, and output review before code ships\"). None concentrated in a single 500-word stretch, but the pattern is visible.\n- \"operating model\" appears seven times. Topically central, but one synonym substitution (delivery model, operating structure) in Sections 6 or 7 would reduce the density without losing precision.\n\n---\n\n## The one paragraph to rewrite first\n\n**Before** (line 27):\n\"Results were uneven across individuals, which Sandoval presents as the honest story of AI adoption in a real team. Teams with psychological safety treat that unevenness as signal, surfacing what is working and what is failing in near-real time. Teams that treat a pilot as a performance evaluation will game their individual metrics. The dashboard looks strong while the operating model stays unchanged.\"\n\n**After:**\n\"Results were uneven across individuals. Sandoval names that directly rather than rounding up to a headline number. On teams with psychological safety, the unevenness surfaced what was working and what was failing, and the team adjusted. On teams running the pilot as a performance review, engineers gamed individual metrics instead. The dashboard looked strong; nothing changed.\"\n\nChanges: \"honest story\" removed and replaced with a direct statement; the \"Teams with X / Teams that Y\" scaffold broken into asymmetric sentences; the aphoristic mic-drop collapsed into a plain declarative that still lands.\n\n---\n\n## What to do next\n\n- Resolve both [NEEDS SOURCE] tags with Sandoval before the draft ships -- confirm the 130K STEM figure source and nail down the measurement basis for the 50-60% productivity claim.\n- Strip \"honest story\" (line 27) and \"honest acknowledgment\" (line 57); state both assessments directly using the rewrites above.\n- In Sections 6 and 7, convert two of the three \"A partner who X / A partner who Y\" parallel instances into direct recommendations so the scaffold varies.\n- Collapse two of the five mic-drop section closers into the preceding sentence -- \"The swing becomes unpredictable\" and \"The failure surface grows with adoption speed\" are the candidates.\n- Re-run the smell test after the [NEEDS SOURCE] items are resolved to confirm the Category 4 score.\n"}
-
-
-Successfully wrote file /Users/Chetan.Deshmukh/Documents/Claude Cowork Project/blog writing framework/blog-pipeline-stage4/nearshore-ai-velocity-draft.smell-test.md
-
-
-**Grade: B** (weighted average 7.65). Meets the default B threshold -- one polish pass and this ships.
+*(The revision notes appended after the horizontal rule were excluded from word count and scoring -- they are not part of the draft.)*
 
 ---
 
-The draft is notably clean on the two highest-risk categories. Category 2 came back with zero negation hits on a full grep pass, and the opening/closing paragraphs are both clear of contrast-negation patterns. The em dash removal is confirmed. For a blog draft at this stage, that's the strongest indicator it's been edited by a human who knew what to fix.
+## Scorecard
 
-The score is pulled down mainly by two things:
+| Category | Score | Weight | Notes |
+|---|---|---|---|
+| Voice clichés, hollow affirmations & false authoritative framing | 8/10 | 20% | "honest story" (line 27) and "honest acknowledgment" (line 57) label content as candid rather than letting it speak |
+| Contrast negation & em-dash overuse | 8.5/10 | 20% | Em dashes confirmed removed; full-document grep found zero corrective-negation hits; parallel contrasts use "with/without" framing, not the two-sentence corrective template |
+| Triadic structures & parallel listing | 7.5/10 | 10% | Five three-item constructions spread across the piece; none concentrated enough to breach the 3-per-500-word threshold |
+| Generic content & fake specifics | 7/10 | 25% | Two unresolved [NEEDS SOURCE] tags: 130K STEM graduates (no confirmed source) and 50-60% productivity gains (no confirmed measurement basis) |
+| Structural tells | 9/10 | 15% | Headers are specific and argumentative; no tables, no TOC; section lengths vary meaningfully |
+| Synonym sprawl, repetition & rhetorical scaffolding | 5/10 | 10% | "Prepared X / unprepared Y" scaffold runs through 6+ sections as the default move; aphoristic mic-drop closers after 5 of 7 sections; "AI [verb]" as sentence subject 4+ times |
 
-**Category 4 (25% weight, 7/10):** The two [NEEDS SOURCE] tags are the blocking items. The 50-60% productivity figure is the more critical one -- the 40-to-4-minute metric directly above it is specific and survives scrutiny; the percentage range without a confirmed denominator does not. Resolve those with Sandoval and this category goes to 9 or 10, which would push the overall grade to A.
+**Weighted average: 7.65 --> Grade: B**
 
-**Category 6 (10% weight, 5/10):** The "prepared X / unprepared Y" parallel scaffold runs through six of seven sections as the article's primary analytical move. Each individual instance reads fine; the repetition is only visible when you look at the piece structurally. The aphoristic one-liner section closers have the same problem -- five of seven sections end with one, which makes the pattern visible rather than felt. Neither of these is hard to fix; they just require a structural read rather than a line-by-line pass.
+---
 
-The "honest story" and "honest acknowledgment" phrases are smaller catches -- false-authority-framing tells that label Sandoval's candor instead of letting it show. Both are one-sentence fixes.
+## Critical findings
 
-Scorecard saved at `nearshore-ai-velocity-draft.smell-test.md` -- use it as your checklist while you edit.
+- **Line 7:** "Mexico produces roughly 130,000 STEM graduates annually [NEEDS SOURCE: confirm whether this is Sandoval's own estimate or a cited figure]"
+  - **Why it's a smell:** An unconfirmed statistic in the second paragraph sets a credibility ceiling for the entire piece. Readers who check and cannot verify it discount everything that follows.
+  - **Suggested rewrite:** If the figure is Sandoval's own: "Sandoval puts Mexico's annual STEM graduate output at roughly 130,000." If it's a third-party figure, name the source in-line.
+
+- **Line 27:** "Some team members saw 50-60% productivity gains across their broader workload [NEEDS SOURCE: confirm measurement basis with Sandoval: story points per sprint, DORA metrics, or another tracking method]"
+  - **Why it's a smell:** A percentage range without a confirmed denominator reads as invented. The 40-minute-to-4-minute metric directly above it is specific and survives scrutiny; this one does not yet.
+  - **Suggested rewrite:** Resolve with Sandoval before publishing. If story points: "Several team members averaged 50-60% more story points per sprint over the pilot period." If it cannot be confirmed, remove it -- the ticket-resolution metric is sufficient on its own.
+
+---
+
+## Major findings
+
+- **Line 27:** "Results were uneven across individuals, which Sandoval presents as the honest story of AI adoption in a real team."
+  - **Why it's a smell:** "Honest story" labels the content as candid before the content can demonstrate it -- the false-authority-framing tell. A human giving an honest account just gives it.
+  - **Suggested rewrite:** "Results were uneven across individuals. Sandoval names that directly rather than rounding up to a headline number."
+
+- **Line 57:** "Sandoval notes AI gains are currently uneven. That honest acknowledgment matters before making structural decisions."
+  - **Why it's a smell:** "Honest acknowledgment" applies the same manufactured-candor label to a Sandoval observation in the closing section.
+  - **Suggested rewrite:** "Sandoval notes AI gains are currently uneven -- a point worth sitting with before making structural decisions."
+
+- **Lines 11, 15, 19, 27, 43, 49, 51, 57 (throughout):** "Teams with clear outcome definitions... Teams without mature sprint metrics," "A team with clear process... A team running on ambiguous requirements," "Teams with an existing engineering culture... When licenses land on a team without prompt governance," "Teams with psychological safety... Teams that treat a pilot as a performance evaluation," "Organizations that define... Organizations that skip," "A partner ahead of that curve... A partner building it alongside you... A partner whose AI strategy exists only on slide decks"
+  - **Why it's a smell:** The "prepared X / unprepared Y" parallel scaffold is the article's primary rhetorical move -- it appears in six of seven sections. A structure this consistent reads as a template, not as analysis.
+  - **Suggested rewrite:** In Sections 6 (partner) and 7 (pendulum), convert at least two instances into direct recommendations. "Ask for a measurement log from a past engagement, not a pitch deck" replaces the partner-comparison frame and delivers the same verdict without the scaffold.
+
+- **Lines 19, 27, 35, 43, 51 (section closers):** "The failure surface grows with adoption speed." / "The dashboard looks strong while the operating model stays unchanged." / "A hiring process built on detection tooling alone will eventually surface teams built on undiscovered gaps." / "The swing becomes unpredictable." / "A partner whose AI strategy exists only on slide decks means inheriting their experiment as your production risk."
+  - **Why it's a smell:** Five of seven sections close with a short, punchy aphoristic line. One or two reads as earned punctuation; five in sequence reads as a formatting habit.
+  - **Suggested rewrite:** Collapse the two weakest instances -- "The swing becomes unpredictable" and "The failure surface grows with adoption speed" -- into the preceding sentence so they land as conclusions rather than mic drops.
+
+- **Lines 9, 33, 55, 59:** "AI collapsed that framing," "AI lowered the barrier," "AI moves collaboration higher in the value chain," "AI has already reshaped nearshore delivery"
+  - **Why it's a smell:** AI as sentence subject doing action appears four times. Once or twice is precise shorthand; four times is a tic where an abstraction is carrying work the author should do.
+  - **Suggested rewrite:** At least two should shift to a human or organizational subject. "Every CFO who looks at a team's sprint velocity can now see the cost-arbitrage argument collapse" puts the observation on the person experiencing it rather than on the technology.
+
+---
+
+## Minor findings
+
+- Five three-item constructions across the piece ("what did this team ship, in what timeframe, with what quality signal?" / "clear process, good review habits, and collaborative trust" / "AI spend at scale, zero business alignment, no accountability for outcomes" / "cultural alignment and growth mindset come first, foundational engineering competency second, AI proficiency third" / "prompt governance, token spend observability, and output review before code ships"). None concentrated in a single 500-word stretch, but the pattern is visible.
+- "operating model" appears seven times. Topically central, but one synonym substitution (delivery model, operating structure) in Sections 6 or 7 would reduce the density without losing precision.
+
+---
+
+## The one paragraph to rewrite first
+
+**Before** (line 27):
+"Results were uneven across individuals, which Sandoval presents as the honest story of AI adoption in a real team. Teams with psychological safety treat that unevenness as signal, surfacing what is working and what is failing in near-real time. Teams that treat a pilot as a performance evaluation will game their individual metrics. The dashboard looks strong while the operating model stays unchanged."
+
+**After:**
+"Results were uneven across individuals. Sandoval names that directly rather than rounding up to a headline number. On teams with psychological safety, the unevenness surfaced what was working and what was failing, and the team adjusted. On teams running the pilot as a performance review, engineers gamed individual metrics instead. The dashboard looked strong; nothing changed."
+
+Changes: "honest story" removed and replaced with a direct statement; the "Teams with X / Teams that Y" scaffold broken into asymmetric sentences; the aphoristic mic-drop collapsed into a plain declarative that still lands.
+
+---
+
+## What to do next
+
+- Resolve both [NEEDS SOURCE] tags with Sandoval before the draft ships -- confirm the 130K STEM figure source and nail down the measurement basis for the 50-60% productivity claim.
+- Strip "honest story" (line 27) and "honest acknowledgment" (line 57); state both assessments directly using the rewrites above.
+- In Sections 6 and 7, convert two of the three "A partner who X / A partner who Y" parallel instances into direct recommendations so the scaffold varies.
+- Collapse two of the five mic-drop section closers into the preceding sentence -- "The swing becomes unpredictable" and "The failure surface grows with adoption speed" are the candidates.
+- Re-run the smell test after the [NEEDS SOURCE] items are resolved to confirm the Category 4 score.

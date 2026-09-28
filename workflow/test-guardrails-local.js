@@ -19,7 +19,7 @@ const { voiceCheck } = require('../guardrails/voice-check');
 const { draftCheck } = require('../guardrails/draft-check');
 const { gradeGate } = require('../guardrails/grade-gate');
 const { qaGate, MAX_BANNED_WORD_REVISIONS } = require('../guardrails/qa-gate');
-const { extractSmellTestReport, stripDraftMetaCommentary } = require('./run-workflow');
+const { extractSmellTestReport, extractCleanContent, stripDraftMetaCommentary } = require('./run-workflow');
 
 let pass = 0;
 let fail = 0;
@@ -199,6 +199,47 @@ test('falls back to tag-stripping when no parameter block present', () => {
   const text = '<report>**Grade:** A</report>';
   const result = extractSmellTestReport(text);
   assert.ok(result.includes('**Grade:** A'));
+});
+
+console.log('\n=== extractCleanContent (JSON write_file blob + leading-narration stripping) ===');
+
+test('regression: run-065/066 — literal {"type":"write_file",...} JSON blob (not XML) is unwrapped, not saved raw', () => {
+  const text = [
+    'Running the AI smell test on the pasted draft. I\'ll save the report next to where the draft would live.',
+    '',
+    '**Category 2 grep pass first**: clean.',
+    '',
+    '{"type":"write_file","path":"/tmp/x.smell-test.md","content":"# AI Smell Test - draft.md\\n\\n**Grade:** B\\n\\nBody text here."}',
+    '',
+    '**Grade: B** (weighted average 7.65) -- one polish pass and ship.',
+  ].join('\n');
+  const result = extractCleanContent(text);
+  assert.ok(result.startsWith('# AI Smell Test'), `expected to start at the real heading, got: ${result.slice(0, 60)}`);
+  assert.ok(result.includes('**Grade:** B'));
+  assert.ok(!result.includes('Running the AI smell test'), 'leading narration should be stripped');
+  assert.ok(!result.includes('{"type":"write_file"'), 'raw JSON wrapper should not appear in the saved artifact');
+});
+
+test('extractCleanContent falls through to tag/narration stripping when the JSON blob is truncated/unparseable', () => {
+  const text = 'Some narration.\n\n{"type":"write_file","path":"/tmp/x.md","content":"# Title\\n\\nBody'; // missing closing quote+brace
+  const result = extractCleanContent(text);
+  // No valid JSON and no heading found in the raw text as-is (the truncated
+  // blob's literal "# Title" is still embedded in unparsed text) — just
+  // confirm it does not throw and returns *something* usable, not empty.
+  assert.ok(result.length > 0, 'must not crash or return empty on a truncated JSON blob');
+});
+
+test('regression: leading narration before a real heading is stripped even with no wrapper at all (e.g. 06-publish-kit.md, every real run to date)', () => {
+  const text = 'I\'ll run the full Phase 3 refinement pass on this draft now.\n\n# The Real Title\n\nBody of the article.';
+  const result = extractCleanContent(text);
+  assert.ok(result.startsWith('# The Real Title'));
+  assert.ok(!result.includes('Phase 3 refinement pass'));
+});
+
+test('extractCleanContent leaves clean content (already starting at a heading) unchanged', () => {
+  const text = '# Already Clean\n\nNo narration here.';
+  const result = extractCleanContent(text);
+  assert.strictEqual(result, text);
 });
 
 console.log('\n=== stripDraftMetaCommentary (model preamble/postamble leak) ===');

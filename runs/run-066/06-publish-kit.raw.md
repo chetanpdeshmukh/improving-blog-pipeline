@@ -1,3 +1,5 @@
+I'll run the full Phase 3 refinement pass on this draft, addressing all QA WARN items, adding structured elements, converting H2s to question format, and generating the publication kit.
+
 ## Refined Article
 
 ---

@@ -266,26 +266,105 @@ function callModel(systemPrompt, userContent) {
 }
 
 /**
- * Extract the actual smell-test report from ai-smell-test output.
- * The skill runs with --tools none, so it outputs tool call XML wrapping the report.
- * Pull the content out of the <parameter name="content"> block when present,
- * otherwise strip all XML tags and return what remains.
+ * Scan text starting at a '{' for the matching '}', respecting quoted
+ * strings (including escaped quotes), and return the balanced substring —
+ * or null if the braces never close (a truncated/partial blob).
  */
-function extractSmellTestReport(text) {
-  // Try to pull content from <parameter name="content">...</parameter>.
+function extractBalancedJSON(text, startIdx) {
+  let depth = 0;
+  let inString = false;
+  let escape = false;
+  for (let i = startIdx; i < text.length; i++) {
+    const ch = text[i];
+    if (inString) {
+      if (escape) escape = false;
+      else if (ch === '\\') escape = true;
+      else if (ch === '"') inString = false;
+      continue;
+    }
+    if (ch === '"') { inString = true; continue; }
+    if (ch === '{') depth++;
+    else if (ch === '}') {
+      depth--;
+      if (depth === 0) return text.slice(startIdx, i + 1);
+    }
+  }
+  return null;
+}
+
+/**
+ * Extract the real deliverable content from a step's raw CLI output,
+ * stripping every wrapper/narration format seen in practice so far:
+ *
+ *   1. The XML tool-call wrapper (`<parameter name="content">...`) — the
+ *      original format ai-smell-test used under --tools none.
+ *   2. A literal `{"type":"write_file",...}` JSON blob — a formatting
+ *      drift seen starting session 14 (run-065/066): the model still
+ *      tries to "save" its output as a tool call, but emits it as JSON
+ *      text instead of the XML form above, so it never matched (1) and
+ *      was saved to disk as an unparsed blob with escaped \n's.
+ *   3. Neither of the above: falls back to stripping bare XML-style tags.
+ *
+ * Whichever path produced the content, this then trims to the first
+ * markdown heading (dropping any leading self-narration like "I'll run
+ * the smell test now...") and drops a few known trailing asides the model
+ * appends after its real output (e.g. "Scorecard saved at ..." — a
+ * hallucinated aside, since --tools none means nothing was actually
+ * written to disk).
+ */
+function extractCleanContent(text) {
+  let content = null;
+
   // The model sometimes emits more than one tool-call attempt in a single
   // response (a partial/aborted one, then a corrected one) — taking the
   // FIRST match risks capturing a truncated fragment with no scorecard,
-  // which then fails grade-gate parsing entirely. Take the LONGEST match
+  // which then fails downstream parsing entirely. Take the LONGEST match
   // instead, since a truncated attempt is reliably shorter than the real
   // report.
-  const matches = [...text.matchAll(/<parameter name="content">([\s\S]*?)<\/parameter>/g)];
-  if (matches.length > 0) {
-    const longest = matches.reduce((a, b) => (b[1].length > a[1].length ? b : a));
-    return longest[1].trim();
+  const xmlMatches = [...text.matchAll(/<parameter name="content">([\s\S]*?)<\/parameter>/g)];
+  if (xmlMatches.length > 0) {
+    content = xmlMatches.reduce((a, b) => (b[1].length > a[1].length ? b : a))[1].trim();
+  } else {
+    const jsonStart = text.search(/\{"type":\s*"write_file"/);
+    if (jsonStart !== -1) {
+      const jsonBlob = extractBalancedJSON(text, jsonStart);
+      if (jsonBlob) {
+        try {
+          const parsed = JSON.parse(jsonBlob);
+          if (typeof parsed.content === 'string' && parsed.content.trim()) {
+            content = parsed.content;
+          }
+        } catch (_) {
+          // Unparseable — fall through to the tag-stripping fallback below.
+        }
+      }
+    }
   }
-  // Fallback: strip XML-style tags
-  return text.replace(/<[^>]+>/g, '').trim();
+
+  if (content === null) {
+    content = text.replace(/<[^>]+>/g, '').trim();
+  }
+
+  const lines = content.split('\n');
+  const firstHeadingIdx = lines.findIndex(l => /^#{1,6}\s/.test(l));
+  if (firstHeadingIdx !== -1) {
+    content = lines.slice(firstHeadingIdx).join('\n');
+  }
+
+  content = content.replace(/\n---\s*\nDraft complete[\s\S]*$/i, '');
+  content = content.replace(/\n\nDraft complete[\s\S]*$/i, '');
+  content = content.replace(/\n+Scorecard saved at[\s\S]*$/i, '');
+
+  return content.trim();
+}
+
+/**
+ * Extract the actual smell-test report from ai-smell-test output.
+ * Thin wrapper over extractCleanContent() — kept as its own name since
+ * grade-gate parsing depends on it and existing tests reference it.
+ */
+function extractSmellTestReport(text) {
+  return extractCleanContent(text);
 }
 
 /**
@@ -611,8 +690,13 @@ async function main() {
       attempt:      revisionCount + 1,
     });
 
-    // Extract clean report text (strips tool-call XML that ai-smell-test emits with --tools none)
+    // Extract clean report text (strips the tool-call wrapper — XML or the
+    // literal JSON blob variant, see extractCleanContent() — and any leading
+    // self-narration) so the saved artifact is a clean report, not raw output.
     const gradeReport = extractSmellTestReport(gradedText);
+    if (gradeReport !== gradedText) {
+      saveArtifact(runDir, `04-graded${revisionCount > 0 ? `-rev${revisionCount}` : ''}.md`, gradeReport);
+    }
 
     const gradeResult = gradeGate(gradeReport, revisionCount);
     logStep(runDir, guardrailEntry(runId, 'grade-gate',
@@ -666,7 +750,7 @@ async function main() {
 
   // eslint-disable-next-line no-constant-condition
   while (true) {
-    qaText = await runStep({
+    const rawQaText = await runStep({
       runId, runDir,
       stepName:     'blog-qa-reviewer',
       artifactFile: `05-qa${bannedWordRevisionCount > 0 ? `-rev${bannedWordRevisionCount}` : ''}.md`,
@@ -674,6 +758,13 @@ async function main() {
       userContent:  `Please review this blog article:\n\n${cleanedText}`,
       attempt:      bannedWordRevisionCount + 1,
     });
+
+    // Strip any tool-call wrapper / leading narration before gating and
+    // saving, same treatment as ai-smell-test's output (see extractCleanContent).
+    qaText = extractCleanContent(rawQaText);
+    if (qaText !== rawQaText) {
+      saveArtifact(runDir, `05-qa${bannedWordRevisionCount > 0 ? `-rev${bannedWordRevisionCount}` : ''}.md`, qaText);
+    }
 
     qaResult = qaGate(qaText, bannedWordRevisionCount);
 
@@ -730,7 +821,7 @@ async function main() {
 
   // ── Step 6: blog-refinement (PASS path) ──────────────────────────────────
   console.log('[6/6] blog-refinement');
-  await runStep({
+  const rawPublishKitText = await runStep({
     runId, runDir,
     stepName:     'blog-refinement',
     artifactFile: '06-publish-kit.md',
@@ -745,6 +836,14 @@ async function main() {
       qaText,
     ].join('\n'),
   });
+
+  // Strip leading self-narration from the final deliverable — this is the
+  // one artifact a human reviewer is most likely to actually read, so it
+  // gets the same cleanup as every other step's output.
+  const publishKitText = extractCleanContent(rawPublishKitText);
+  if (publishKitText !== rawPublishKitText) {
+    saveArtifact(runDir, '06-publish-kit.md', publishKitText);
+  }
 
   // ── Success ───────────────────────────────────────────────────────────────
   console.log('\n=== Pipeline Complete ===');
@@ -779,4 +878,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { extractSmellTestReport, stripDraftMetaCommentary };
+module.exports = { extractSmellTestReport, extractCleanContent, stripDraftMetaCommentary };
