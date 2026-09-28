@@ -6,6 +6,11 @@ deterministic guardrails and adversarial review agents. Every AI step is a
 Stage 3-certified skill; the orchestration itself is evaluated as its own
 Stage 3 prompt (see `workflow/orchestration-eval.md`).
 
+**Repo (public, full commit history):** https://github.com/chetanpdeshmukh/improving-blog-pipeline
+— this ZIP is a snapshot of the repo at submission time; the live repo is
+there if you want to browse individual commits (e.g. the bug fixes described
+in §10 of `results/e2e-success-rate-report.md`).
+
 ## Workflow at a glance
 
 ```
