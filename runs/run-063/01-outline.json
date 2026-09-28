@@ -1,0 +1,358 @@
+I'll work through the full Phase 1 analysis on this transcript now.
+
+---
+
+## Phase 1: Transcript Analysis & Outline
+
+---
+
+### 0. Speaker Identification
+
+**Host/Moderator:** Unnamed (likely a senior leader or practice lead at Improving based on their use of "we had a customer" and substantive business commentary). Role is primarily interviewer, but they contribute genuine practitioner perspective — not just filler.
+
+**Guest/SME:** Nick Larson, VP of Technology, Improving.
+
+Attribution rules for this analysis: Nick is the primary insight source. The host contributes three substantive items that are **not** Nick's views: the licensed-photographer/custom-model story, the telematics/shipping company example, and the Netflix/streaming pivot framing. These are attributed to the host throughout.
+
+---
+
+### 1. The Villain
+
+Organizations believe their existing data infrastructure is good enough for AI, conduct a generous self-assessment ("our data is totally clean, we're ready"), then bolt an AI agent on top of what they have — expecting transformation. The villain is the assumption that AI compensates for data quality rather than amplifying whatever is already there. As Nick puts it: "Just adding AI to anything is not going to make it better. It's AI on top of it."
+
+---
+
+### 2. War Stories Extracted
+
+**War Story 1 — The Dead Letter Queue (Nick)**
+- Setup: A customer had 400,000 records stuck in a dead letter queue
+- Pressure: The customer was frustrated and asking why the problem wasn't being addressed — the backlog was large enough to be visible to leadership
+- Decision: Applied an agentic triage process directly to the queue
+- Outcome: The agent classified each record (system error, personal/customer error, other), then routed it to the appropriate action — surfacing via email, opening a ticket, or sending a personalized outreach to the customer ("Could you try this again?")
+- Note: **CRITICAL GAP** — story trails off before resolution metrics. We don't know how many records were resolved, at what accuracy rate, or over what timeframe. The outcome described is the process design, not the result.
+
+**War Story 2 — The Online Store Real-Time Discovery (Nick)**
+- Setup: A client (online retailer) told Improving "We don't need this real-time. Tomorrow's good enough."
+- Pressure: Nick pushed back — the client wanted to save money, but running models and infrastructure 24/7 actually costs more, and cutting developers doesn't improve system performance. The cost math forced a rethink.
+- Decision: Redesigned toward a more real-time architecture. The team journey-mapped all the data flowing through the system and shifted the client's mental model from "data in tables" to "data as a product" — with ownership, SLAs, a schema, and defined access contracts.
+- Outcome: Not fully stated. The story transitions into a conceptual discussion of data products rather than a concrete before/after. **GAP — outcome is implied but unresolved.**
+
+**War Story 3 — The "New Analyst" Test as a Diagnostic (Nick)**
+- Not a named engagement, but a repeatable heuristic Nick applies with clients. Setup: Nick describes sitting down with a dataset as a new analyst — taking two weeks to realize that "external customers" don't have accounts, can't store credit cards, and have no formal relationship with the business. Nothing in the data itself communicated this. A human had to explain it verbally.
+- The point: if it takes a person two weeks to understand what a dataset means, an AI has to figure it out in seconds with no one available to explain. That gap is where hallucinations originate.
+- Outcome: Used as a readiness test with clients. Implied to be reliable but no formal scoring or pass/fail threshold is given.
+
+**War Story 4 — The 90% Accuracy Anecdote (Nick, third-party)**
+- Nick heard this on his commute home — a company processing 100,000 transactions per day at 90% accuracy. He reframes it: 90% accuracy = 10,000 errors per day. 95% accuracy at the same volume = 5,000 errors. Scale doesn't reduce absolute error count — it often increases it.
+- Attribution: Nick explicitly says he "saw something on the car ride home" — this is not an Improving engagement. It is a cited observation, not a first-person war story, but the framing is original and strong.
+
+**War Story 5 — The Licensed Photographer / Custom Model (Host)**
+- Setup: A client came to Improving holding exclusive rights to a photographer's body of work. Existing AI models (including Claude) could approximate the photographer's style from publicly available training data but could not replicate it.
+- Decision: Improving built and trained a custom model on the exclusive dataset.
+- Outcome: Created a proprietary capability — any customer wanting images in that specific photographer's style must license and use the client's model. Turns a data right into a recurring revenue stream.
+- **Attribution note:** This story was told by the host, not Nick. Nick agreed and extended the concept, but the example and the outcome belong to the host.
+
+---
+
+### 3. Controversy & Counter-Intuitive Points
+
+**Conflict 1: Agentic AI won't make your business faster — it makes building systems easier**
+- Industry says: "AI agents will dramatically accelerate business operations"
+- Nick says: "I don't know that agentic agents are that much faster or going to speed your business up that much faster. Except it's just easier to produce them and build them."
+- Evidence: "The rage right now in AI is all like how it's helping developers... I don't know that agentic agents are that much faster or going to speed your business up that much faster."
+- Shareable potential: **High** — directly contradicts a primary AI selling point used in executive pitches
+
+**Conflict 2: AI doesn't make better decisions — it makes decisions faster**
+- Industry says: "AI will outperform humans on repetitive judgment tasks"
+- Nick says: "It's probably not better than the human that's worked in the industry for 25 years sitting there and being like that claim should be paid or that customer needs a refund. It just does it faster."
+- Evidence: "I don't know that any of the LLMs write better code than any of our developers. They just do it faster. We still need our developers and our engineers to be there and review it to make it better."
+- Shareable potential: **High** — nuanced pushback that validates AI's value without overstating it
+
+**Conflict 3: AI doesn't reduce costs — and may increase them**
+- Industry says: "AI automation reduces operational costs, especially headcount"
+- Nick says: "It's not going to cost less, right? Like it's not going to cost less than the developer sitting there to have some AI process running this thing."
+- Evidence: "Getting rid of your developers doesn't make your system run better. Like, somewhere your money crunches somewhere." Also: "if your data's garbage going in, you're going to have full teams of support people helping people and they don't have problems."
+- Shareable potential: **High** — goes directly against most AI ROI projections
+
+**Conflict 4: Higher accuracy at scale means more errors, not fewer**
+- Industry says: "Improving model accuracy reduces the problem"
+- Nick says: "Getting better more efficient over more data doesn't mean less problems."
+- Evidence: 90% accurate on 100,000 transactions = 10,000 errors/day. 95% accurate = 5,000 errors. The math is counterintuitive and concrete.
+- Shareable potential: **High** — immediately shareable, simple enough to quote
+
+**Conflict 5: The AI model you choose is not your competitive moat — your data is**
+- Industry says: "Model selection and fine-tuning are the primary AI investment decisions"
+- Nick says: "The models are pretty much a commodity... your data becomes the gas for that engine... that's how you're going to make your differentiator."
+- Evidence: "Everybody gets it [for $200/month]... the open-source ones are less than a year behind the main ones for the most part."
+- Shareable potential: **High** — strategic reframe that changes where a CTO should be spending budget and attention
+
+**Conflict 6: Absent data is as dangerous as wrong data**
+- Industry glosses over: Most content focuses on data accuracy and cleanliness; missing fields are treated as a lesser problem
+- Nick says: "The absence of data can have just as adverse of effects as having wrong data in there."
+- Evidence: Medical claims example — if a claim isn't labeled with the correct state, the AI may adjudicate it incorrectly based on wrong state laws. The AI didn't have bad data — it had no data, and filled the gap with a plausible but wrong answer.
+- Shareable potential: **High** — often overlooked, immediately relatable to anyone who has worked with LLM hallucination
+
+**Conflict 7: Real-time data is not always the right answer**
+- Industry says: "Real-time is the gold standard for modern data architecture"
+- Nick says: Speed has a cost — infrastructure, financial, organizational. "Everybody wants to talk about Oh, it's the fastest... No, fast isn't always good."
+- Evidence: "There's a cost to speed, right? And so, what's your balance of like do we really need it that fast? Cuz here's how much it's going to cost."
+- Shareable potential: **Medium** — nuanced point that could get lost without a strong concrete example tying it to business liability
+
+---
+
+### 4. Exclusion List
+
+- **Generic AI hype framing** (AI will save you billions, agents will handle everything): Nick explicitly dismantles this. Including it even as a setup risks credibility.
+- **Model comparisons or tool recommendations**: Nick said directly "We don't have any that we're like, you have to use this tool or that tool." Any tool-specific recommendation would contradict his stated position.
+- **LLM technical internals** (how attention works, RAG architecture, prompt engineering how-to): Not covered, not the audience's need.
+- **"Build your own model" discussion**: Nick says most companies are too late and the commodity models are good enough. This debate is settled in the transcript.
+- **AI ethics beyond governance**: Nick touches on PII/data leakage as a governance issue but doesn't extend to broader AI ethics. Don't editorialize.
+- **Workforce displacement framing**: Nick is careful here — "It doesn't take PTO" is about business drivers, not job elimination. Headcount reduction as a primary value proposition is not Nick's thesis.
+- **Batch processing / data warehousing basics**: 101-level infrastructure content the target audience already knows.
+- **Any framing that implies AI will "fix" a data problem**: The opposite of Nick's central argument.
+
+---
+
+### 5. Gap Analysis
+
+> **GAP [CRITICAL]:** The dead letter queue story has no resolution metrics — We know 400,000 records existed and that an agentic process was applied. We don't know how many records were resolved, at what accuracy rate, over what timeframe, or what the error rate of the agent's triage was. Without an outcome, this is an architecture description rather than a proof point. The draft loses its most compelling war story's persuasive power — the story makes the concept real, but without a result, it can't make the argument.
+
+> **GAP [CRITICAL]:** No structured self-assessment framework — Nick's "new analyst" test is intuitive and memorable, but he doesn't give a CTO a replicable framework beyond that one heuristic. How does a company formally diagnose whether it is AI-ready? What are the five things to check? Without this, the article is diagnostic but not prescriptive, and readers leave without an entry point into action. The draft loses its practical "what do I do Monday morning" value.
+
+> **GAP [CRITICAL]:** The cost of not acting is implied but never quantified — Nick says "it costs you more and more money" and mentions "business liability" of slow data, but never gives an order-of-magnitude or a concrete example of what delayed data cost a client. Without this, the urgency of the article relies on abstract risk rather than grounded consequence. The fraud detection example (3-day-late fraud alert) comes closest but is anecdotal. The draft's call to action is weakened without a concrete cost story.
+
+> **GAP [NICE-TO-HAVE]:** The online store engagement lacks a named outcome — We know they shifted to a data-product mindset and real-time architecture, but not what business result followed. Was there a revenue metric? A latency improvement? Did the client pursue new use cases faster as a result? Without this, the engagement story illustrates a process change rather than a business result.
+
+> **GAP [NICE-TO-HAVE]:** Observability is declared important but not operationalized — Nick says you need observability and traceability for agentic systems, and that every event generates another event you must trace. But he doesn't describe what good observability looks like in practice: what tools, what metrics, what alert thresholds, what does the "kill switch" look like? The draft can acknowledge this gap with a placeholder but the section currently has conceptual depth without tactical grounding.
+
+> **GAP [NICE-TO-HAVE]:** "Caught up" is never defined — Nick says "most companies are behind" and that "there's time to catch up," but he doesn't describe what a realistic intermediate milestone looks like. A CTO who takes this article seriously and starts the journey needs to know what "good enough to start experimenting with AI" looks like before "full modern data platform." The draft loses a key motivational bridge between the problem and the 10-year solution.
+
+Probe question applied to major claims:
+
+- **"Data as moat" claim:** Assumption left unchallenged — that the data you have is actually proprietary. Most enterprise transactional data (orders, addresses, customer records) is structurally similar across competitors. Nick doesn't address how to assess whether your data is genuinely differentiated vs. commoditized. **Flagged as NICE-TO-HAVE above.**
+- **"90% accuracy = 10,000 errors" claim:** Assumption unchallenged — that all errors carry equal weight. A wrong product recommendation and a wrong medical claim adjudication are not the same. Nick doesn't address error severity triage, which is part of the observability conversation. Worth a sentence in the draft.
+- **"Modern data platform serves both operational and analytical":** Assumption unchallenged — organizational and cost complexity of maintaining such a platform. Nick says "it's not cheap" but leaves it there. This is a real objection for mid-market enterprises.
+
+---
+
+### 6. Competitive Landscape
+
+**What exists:**
+
+- **Gartner/Forrester analyst content** — governance frameworks, maturity models, vendor comparisons. Tone is abstract and consultant-coded. Misses: practitioner-level honesty about what "not ready" looks like from inside an engagement.
+- **Vendor content (Databricks, Snowflake, Azure, AWS)** — tool-centric, optimize toward their platform. Cannot credibly say "adding AI won't fix bad data" when their business model depends on selling you AI infrastructure.
+- **Generic "AI readiness checklist" blog posts** — surface-level bullet lists, usually marketing-gated. No war stories, no controversy, no honest reckoning with cost or failure.
+- **McKinsey/BCG thought leadership** — strategic framing, high altitude. Misses: nothing operational, no "here's what the dead letter queue looks like at 3am."
+
+**What this article can own:**
+
+- The honest practitioner's assessment delivered by someone who has lived inside these engagements — not a vendor or analyst
+- The counterintuitive cost argument: AI may increase operational cost before it reduces it
+- "Absent data = hallucination" framing — underrepresented in existing content
+- "Models are commoditized; your data is the moat" as a strategic reframe rather than a vendor pitch
+- The "new analyst" test as a memorable, shareable self-assessment heuristic
+
+**Question-based H2s for featured snippets / AI overviews:**
+- "What makes data AI-ready?"
+- "How do I know if my data is ready for AI agents?"
+
+**Primary search intent:** A CTO or VP Engineering who has heard "you need AI-ready data" from a vendor or consultant, is skeptical of the hype, and wants an honest breakdown of what it actually means — and whether their organization's current infrastructure is sufficient to proceed.
+
+---
+
+### 7. The Outline
+
+---
+
+**H1: Your Data Isn't AI-Ready (And Slapping an Agent on It Won't Help)**
+
+*Target length: 1,200–1,600 words. Audience: CTO, VP Engineering, CDO. Tone: experienced practitioner, direct, no hype.*
+
+---
+
+**Intro** *(~150 words)*
+Section notes: Open with the scenario most CTOs recognize — the AI pilot that underdelivered, the agent that hallucinated, the executive who insists "our data is fine." Establish the stakes: bad data processed at AI speed doesn't produce bad results occasionally — it produces bad results continuously, at scale. Frame Nick as a practitioner who has built the systems that work and diagnosed the ones that don't. Thesis: the model is the easy part. Your data is the hard part. And most enterprises are further behind on the data than they think.
+
+---
+
+**H2: What "AI-ready data" actually means — and what it doesn't**
+
+Section notes: Establish Nick's working definition. Pushback on the common assumption that AI-ready means a specific schema, format, or vendor platform. The four dimensions: availability (right speed for the decision), semantic understanding (does the AI know what "customer" means in your organization), governance/security (row-level access applies to agents just like it applies to people), and contextual richness (valid values, labels, ownership).
+
+> H3: Availability isn't just access — it's latency matched to purpose
+> - Fraud detection requires milliseconds. End-of-day reporting can wait a day. Data architecture must match the decision it supports.
+> - Choosing "tomorrow's good enough" has a cost — so does choosing real-time unnecessarily. The business outcome defines the data requirement.
+
+> H3: Governance means the agent is treated like a person with a job role
+> - Row-level security applies to agents. "The AI's harder to trust because you can't see it on an individual basis" — don't give it system-wide access.
+> - Prompt injection, data leakage, PII exposure: these aren't theoretical. "Just stand an LLM up against what we've got and feed it everything" is how you expose customer data.
+> - The production database failure mode: wide-open agent access + bad data + non-determinism = catastrophic outcomes at machine speed.
+
+`[INSERT DIAGRAM: A layered model showing the four AI-readiness dimensions — availability, semantic context, governance/security, and schema/metadata richness — with examples of what "missing" looks like in each layer]`
+
+---
+
+**H2: How to tell if your data is ready — the new analyst test**
+
+Section notes: Nick's heuristic deserves its own section because it gives readers something they can apply immediately. Build it out fully. Connect it to the absence-of-data hallucination problem.
+
+> H3: What the test reveals
+> - If a new analyst couldn't understand your dataset in two weeks, an AI cannot do it in seconds.
+> - The "blind customer" example: nothing in the data communicated that external customers have no accounts and cannot store credit cards. A person had to explain it verbally. That explanation doesn't exist for the AI.
+> - Semantic gaps — the difference between "member," "customer," "internal customer," "online customer" — produce divergent agent behavior at scale.
+
+> H3: Absent data is as dangerous as wrong data
+> - "The absence of data can have just as adverse of effects as having wrong data in there."
+> - The medical claims example: a claim without a state label may be adjudicated under the wrong state's rules. The AI didn't have bad data — it had no data, and filled the gap with a confident wrong answer.
+> - LLMs are "golden retrievers" — they want to give you an answer. Missing context doesn't produce a refusal; it produces a hallucination.
+
+> H3: What the test doesn't catch
+> - Semantic gaps are visible with this test. Latency mismatches, security gaps, and missing ownership aren't. Use this in combination with a governance audit and infrastructure review, not as a standalone pass/fail.
+
+`[INSERT DIAGRAM: A before/after schema comparison — unlabeled, context-free fields vs. enriched schema with labels, valid values, ownership, and SLA — showing what the "new analyst" would encounter in each case]`
+
+---
+
+**H2: The failure modes that AI optimism skips over**
+
+Section notes: The controversy section. Lay out Nick's three counterintuitive arguments clearly and fairly. This is the section most likely to be shared.
+
+> H3: More accuracy at scale means more errors, not fewer
+> - 90% accurate on 100,000 daily transactions = 10,000 errors per day. 95% accurate = 5,000. Improving the percentage doesn't reduce the absolute count when volume is growing.
+> - The implication: observability and error-handling infrastructure is not optional. You are not eliminating errors — you are managing their rate and catching their effects.
+
+> H3: Agentic AI does the wrong things faster, too
+> - "We've talked before about how agents, because they can do things faster, they can do the wrong things faster, too." Bad data + autonomous agent + non-determinism = financial or operational damage at machine speed.
+> - The refund scenario: an agent that can approve refunds can incorrectly approve refunds at a rate no human team could achieve. The speed is the risk, not just the benefit.
+> - This is why the kill switch and observability are load-bearing, not nice-to-have.
+
+> H3: Agentic AI makes systems easier to build — not necessarily faster to run
+> - "I don't know that agentic agents are that much faster or going to speed your business up that much faster. Except it's just easier to produce them and build them."
+> - The value proposition is architectural: agents reduce the hand-coded wiring between microservices. They do not reduce the quality requirements on the data those services consume.
+> - Developer experience improvement is real. Business velocity improvement is dependent on data readiness — and most enterprises aren't there yet.
+
+---
+
+**H2: What agentic systems actually look like when they work**
+
+Section notes: The dead letter queue story goes here. Show the architecture and the outcome (with a gap flag on missing metrics). Transition into observability requirements.
+
+> H3: The dead letter queue — a real deployment [War story]
+> - Setup: 400,000 records stuck, leadership asking why they weren't being resolved
+> - Decision: apply an agentic triage process to the queue directly
+> - The agent classified each record — system error, customer error, other — and routed it: open a ticket, send an internal alert, or trigger a personalized customer email
+> - What made this work: the underlying data had enough structure and semantic context for the agent to make meaningful distinctions. Without that, the agent would triage noise, not signal.
+> - *Note: resolution metrics not available — see Gap Analysis. The architecture is sound; the outcome data needs follow-up.*
+
+> H3: Observability is non-negotiable — especially while building trust
+> - Every agent action generates an output event. That output event is now data. You need to trace the chain.
+> - "As soon as you have something agentic evaluate a message or an event, it's usually generating something else."
+> - The transition from human-in-the-loop to autonomous operation is earned through observation, not granted at deployment. While building trust: trace everything, monitor for drift, have a kill switch.
+> - Treat agentic systems the same way you treat microservices: same bugs, same edge cases, same need for monitoring and incident response.
+
+`[INSERT DIAGRAM: Event flow trace — incoming event → agent evaluation → output event(s) → observability layer tracking each step — with a kill switch/alert threshold indicated]`
+
+---
+
+**H2: Your data is the only competitive moat the models can't commoditize**
+
+Section notes: Strategic framing section for the executive audience. The host's photographer story is the strongest example here — attribute it correctly.
+
+> H3: When everyone has the same models, differentiation is entirely in the data
+> - "The models are pretty much a commodity. Everybody gets it for $200 a month." Open-source models are less than a year behind frontier models.
+> - Building a proprietary model from scratch is a multi-year, multi-million-dollar endeavor that most enterprises can't win. The data those models run on is where advantage lives.
+> - "Your data becomes the gas for that engine. That's how you're going to make your differentiator."
+
+> H3: From data warehouse to data product — a shift in relationship
+> - Legacy architecture: data sits in tables, queried when needed, owned by nobody in particular.
+> - Data product thinking: every dataset has an owner, an SLA, a schema contract, and a defined access mechanism. It is exposable to new use cases without infrastructure rebuilds.
+> - When data is a product, a new use case can be stood up in hours — not a quarter. When it isn't, every new use case is a project.
+
+> H3: What "data as moat" looks like in practice
+> - The photographer example [Host's story]: a client held exclusive rights to a photographer's work. No public model had been trained on it. Improving built a custom model on that exclusive dataset — now the only way to generate images in that style is through the client's licensed model. A data right became a revenue moat.
+> - The broader implication: any dataset that is genuinely proprietary — your transaction history, your operational telemetry, your customer behavior — is a competitive asset. Most enterprises have it and don't know how to expose it.
+
+`[INSERT DIAGRAM: Comparison showing "data as a table" (static, owned by no one, batch-queried) vs. "data as a product" (owner, SLA, schema contract, streaming access) with use case coverage comparison]`
+
+---
+
+**H2: The honest roadmap — where most enterprises actually are**
+
+Section notes: Ground the article in reality. Nick's direct observation: "Most companies are behind." Help the reader see themselves clearly and understand the path.
+
+> H3: The self-assessment most companies fail
+> - "When we talk to customers, they are maybe overly generous in their self-assessment of where they are in this journey."
+> - Most companies have components of a modern data platform in place. Few have refined them to the point where AI can consume the output without introducing hallucinations or governance failures.
+> - The right question isn't "do we have data?" It's "can our data be understood, trusted, and acted on — in seconds — without human context being provided at runtime?"
+
+> H3: The foundation before the agents
+> - "I think those are kind of table stakes for having good AI problems." A decade of modern data platform work — ETL, streaming, governance, data products — is the prerequisite, not the alternative, to AI investment.
+> - Stacking an AI agent on top of 47 SQL databases and a batch ETL process is not an AI implementation. It is a liability.
+> - The right sequence: define business outcomes → determine data requirements → build or refine the foundation → introduce AI where the data is ready to support it.
+
+> H3: Iteration is the mechanism — not planning
+> - "You're going to fail about a hundred times first because you don't have it."
+> - The internet analogy: two years in, we were building logo websites. We weren't ordering pizza. We're at a similar point with AI — the infrastructure is maturing, the patterns are forming, and most companies are still learning what works.
+> - The companies doing this well have failed millions of times. The difference is they have safeguards and can absorb failure safely. Traditional enterprises building production-critical agentic systems without observability don't have that buffer.
+
+---
+
+**H2: The skeptic's case — "Maybe our data really is ready"**
+
+Section notes: This must be a fair steelman, not a strawman. Take the counterargument seriously.
+
+The credible counterargument: Some organizations genuinely are ready. Cloud-native companies built in the last decade — digital-first, with streaming data infrastructure already in place — may have all four readiness dimensions covered. For narrow, low-stakes use cases (document summarization, semantic search, internal Q&A), the data quality bar is lower and the hallucination risk is manageable. The cost of a full modern data platform build-out is real and not always justified by current AI use cases.
+
+Nick's response to this: Even the companies doing it best have failed millions of times. The difference is they have institutional safeguards, experienced teams, and the ability to absorb failures before they reach customers. An enterprise without those safeguards, deploying in production-critical contexts (medical claims, fraud, financial transactions), is taking on a different risk profile. And "low-stakes use cases only" is a valid starting point — but it is not a data strategy.
+
+---
+
+### 8. Recommended Title Options (Ranked)
+
+1. **"Your Data Isn't AI-Ready (And Slapping an Agent on It Won't Help)"** — Most likely to earn a click from a CTO who has lived this. Specific, honest, slightly irreverent in a way that signals credibility rather than vendor polish.
+2. **"The AI Readiness Problem Nobody Talks About: It's Your Data, Not Your Model"** — Better SEO signal, broader appeal, still substantive. Less voice-forward.
+3. **"Before You Build an AI Agent, Fix Your Data"** — Clean and direct. Best for LinkedIn distribution. Slightly prescriptive in a way that may undersell the nuance.
+
+---
+
+### 9. Primary Search Intent
+
+A technology leader — CTO, VP Engineering, CDO, or senior architect — who has heard "you need AI-ready data" from a vendor, consultant, or peer, is trying to understand what that actually means operationally, and wants to know whether their organization's current data infrastructure is sufficient to proceed with AI agent development. They are not looking for a vendor pitch. They want a practitioner's honest answer.
+
+Representative queries: "what is AI-ready data," "how do I know if my data is ready for AI agents," "AI agent data requirements enterprise," "modern data platform vs AI readiness."
+
+---
+
+### 10. Questions for the SME (Nick Larson)
+
+These are CRITICAL gap follow-ups that should be resolved before the draft is finalized.
+
+**For Nick — Dead letter queue resolution:** The story is compelling but ends at the architecture decision. What were the actual outcomes? How many of the 400,000 records were resolved, over what timeframe, and at what triage accuracy rate? Did the system require a human validation period before it ran autonomously, and how long did that period last? Without this, the story proves the concept but not the result.
+
+**For Nick — AI-readiness self-assessment:** Beyond the "new analyst" test, do you use a formal diagnostic or maturity model with clients? What are the specific dimensions you check, and what does a company need to score at each before you'd recommend proceeding with AI agent development? Even a rough rubric would give readers a concrete entry point.
+
+**For Nick — The cost argument:** You said AI processes aren't cheaper than developers — at least not initially — and that the modern data platform foundation "isn't cheap." Can you give a rough order-of-magnitude for what a proper foundation investment looks like, and at what scale (data volume, transaction volume, revenue) the investment typically starts to pay back? Without this, the cost caution lands as a warning without a threshold.
+
+**For Nick — The online store engagement:** What was the measurable business outcome after the shift to real-time architecture and data-product thinking? Was there a latency improvement, a revenue metric, a reduction in customer complaints? Even directional data would convert this from a process story into a results story.
+
+**For Nick — Absence-of-data hallucination in practice:** The medical claims example is strong but hypothetical as stated. Do you have an Improving engagement where missing data context caused an AI system to produce an incorrect output in production — and how was it caught and corrected? A real instance would make this the article's most citable point.
+
+---
+
+```json
+{
+  "title": "Your Data Isn't AI-Ready (And Slapping an Agent on It Won't Help)",
+  "introduction": "Nick Larson, VP of Technology at Improving, makes the case that AI adoption failures are almost always data failures — and that most enterprises are far less ready than they believe.",
+  "problem_statement": "Organizations believe their existing data infrastructure is good enough for AI, bolt on agents expecting transformation, and discover that AI amplifies what is already there — meaning bad data processed at AI speed produces bad outcomes at scale.",
+  "takeaway": "AI models are commoditized and accessible to everyone; your data — how it is structured, governed, labeled, and exposed — is the only competitive moat that cannot be copied, and building that moat requires a modern data platform foundation, not an AI layer on top of whatever you already have.",
+  "body_sections": [
+    { "heading": "What 'AI-ready data' actually means — and what it doesn't" },
+    { "heading": "How to tell if your data is ready — the new analyst test" },
+    { "heading": "The failure modes that AI optimism skips over" },
+    { "heading": "What agentic systems actually look like when they work" },
+    { "heading": "Your data is the only competitive moat the models can't commoditize" },
+    { "heading": "The honest roadmap — where most enterprises actually are" },
+    { "heading": "The skeptic's case — 'Maybe our data really is ready'" }
+  ]
+}
+```

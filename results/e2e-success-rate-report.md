@@ -18,15 +18,17 @@ reproducibility check against today's fixed `qa-gate.js`, the confirmed-correct
 figure is 24/31 (77.4%): 2 confirmed clean PASS (6.5%), 22 correct PUNCH-OUT (71.0%),
 and 6 INTERRUPTED (19.4%, unchanged).**
 
-**Updated 2026-09-27/28 (session 13) with `run-061` and `run-062`** — both real,
-full production-length (no `--draft`/`--short`) runs: **26 of 33 (78.8%)** reach a
-confirmed-correct terminal state. `run-061` correctly PUNCHED OUT at `grade-gate`
-(Grade C, unsourced stats + uncredentialed expert). `run-062` — run against the
-same-session `blog-draft-writer.md` fixes for exactly those two issues — cleared
-`ai-smell-test` clean on the first pass (Grade B, no revision), then correctly
-PUNCHED OUT at `qa-gate` on two unrelated real issues (banned-word overuse,
-near-verbatim restatement). Neither is the genuine production-length PASS the
-project still needs as its certification-representative run; see §8–§9.
+**Updated 2026-09-27/28 (session 13) with `run-061`, `run-062`, and `run-063`** —
+three real, full production-length (no `--draft`/`--short`) runs: **27 of 34
+(79.4%)** reach a confirmed-correct terminal state. `run-061` correctly PUNCHED OUT
+at `grade-gate` (Grade C, unsourced stats + uncredentialed expert). `run-062` and
+`run-063` — both run against the same-session `blog-draft-writer.md` fixes for
+exactly those two issues — cleared `ai-smell-test` clean on the first pass (Grade B,
+no revision) each time, then each correctly PUNCHED OUT at `qa-gate` on different,
+unrelated real issues (banned-word overuse + near-verbatim restatement in `062`;
+banned-word overuse + mirror-structure repetition in `063`). None of the three is
+the genuine production-length PASS the project still needs as its
+certification-representative run; see §8–§9.
 
 The gap between those two numbers is itself a real finding, not rounding: 3 of the
 5 historically-logged PASSes (`run-035`, `run-038`, `run-040`) ran before a same-day
@@ -222,6 +224,18 @@ category the prompt changes targeted (unsourced stats, uncredentialed experts,
 contrast negation) shows up as a finding. Still **PUNCH-OUT**, at `qa-gate` — on two
 unrelated, real issues the prompt change didn't target: "stakeholders" used 6 times
 (a banned vague noun) and a near-verbatim restated point across two sections. A
-legitimate content-quality catch, not a bug. Net read: the targeted fix appears to be
-working; the pipeline still needs a run clean across every checkpoint for the
-production-length PASS this project still lacks.
+legitimate content-quality catch, not a bug.
+
+`run-063` — `test-data/Improving Podcast - AI-Ready Data The New Benchmark of
+Enterprise Competitiveness.txt`, same prompt fixes — repeats the pattern. Grade B on
+`ai-smell-test` (contrast negation 8/10, one minor bare tail — clean relative to
+audit history); checkpoint 2A only WARN (an unattributed technical claim, not a
+FAIL), 2B/2C PASS. Still **PUNCH-OUT** at `qa-gate`, again on two different,
+unrelated real issues: "journey" (a banned vague word) in the closing section, and
+the Failure Modes section's three subsections all following an identical mirror
+structure (Category 3C, AI patterns). Two runs in a row now clear the targeted
+categories cleanly and punch out on other real content issues each time —
+consistent with the pipeline working as designed rather than a fluke. Net read: the
+targeted fix appears to be working; the still-missing genuine PASS may need either a
+cleaner source transcript or a next round of draft-writer instructions targeting
+banned-word density and structural mirroring specifically.

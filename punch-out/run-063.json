@@ -1,0 +1,6 @@
+{
+  "runId": "run-063",
+  "step": "qa-gate",
+  "reason": "QA reviewer found 2 FAIL item(s): | 3B | Banned words | FAIL | \"journey\" in final section: \"where they are in this journey\" |; | 3C | AI patterns | FAIL | Failure modes section: all three subsections follow mirror structure (bold headline → Larson attribution → consequence → architectural prescription) |",
+  "timestamp": "2026-09-28T01:03:40.343Z"
+}
