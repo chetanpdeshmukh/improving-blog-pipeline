@@ -412,6 +412,17 @@ in-memory to pass to the next step — these files are also the durable audit re
 Guardrail steps have zero cost (plain JS, no API calls).  
 Revision loops add approximately one blog-draft-writer + anti-ai-voice + ai-smell-test cycle per attempt (~$0.063/revision).
 
+**Reconciliation against real runs (added session 14):** the table above is a
+pre-launch estimate and reads low against actual observed cost. Real,
+full production-length runs with zero revision loops (the cheapest real
+case) land around **$0.45–$0.65** per run (e.g. `run-066`: $0.46, `run-061`:
+~$0.45) — roughly 5-7x the ~$0.086 estimate above, before counting any
+revision loop. The gap is mainly output-token volume: real drafts, cleaned
+articles, and smell-test/QA reports all run several times longer than the
+token counts assumed above. Treat the table above as directionally useful
+for relative step cost, not as the real per-run total — see
+`results/e2e-success-rate-report.md` for actual observed costs per run.
+
 ---
 
 ## Required Files per Run Folder (corrected 2026-09-27, session 12 — matches real output, see `run-workflow.js`)

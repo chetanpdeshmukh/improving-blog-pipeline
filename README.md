@@ -50,7 +50,7 @@ separate — see `punch-out/punch-out-policy.md`.
 | `workflow/run-workflow.js` | The orchestrator. Spawns the real `claude` CLI for each AI step, calls guardrails between steps, writes audit trail. |
 | `workflow/workflow-definition.md` | Full step-by-step spec: schemas, branching table, revision-loop detail, cost estimates, Stage 3 certification evidence per skill. |
 | `workflow/orchestration-eval.md` | The workflow's own Stage 3-style evaluation (the SharePoint framework requires this — "this workflow is itself a Stage 3 prompt"). |
-| `workflow/test-guardrails-local.js` | No-CLI regression suite (40 assertions) covering every guardrail and text-parsing helper. Run this before spending a real CLI call on any guardrail change. |
+| `workflow/test-guardrails-local.js` | No-CLI regression suite (44 assertions) covering every guardrail and text-parsing helper. Run this before spending a real CLI call on any guardrail change. |
 | `workflow/mock-claude-cli.js` | A stand-in for the real `claude` binary, used to validate orchestration control-flow at zero API cost. |
 | `guardrails/*.js` | Deterministic, zero-AI-call gates: `outline-check`, `draft-check`, `contrast-negation-check`, `voice-check`, `grade-gate`, `qa-gate`. |
 | `prompts/*.md` | The 6 Stage 3-certified skill prompts driving each AI step. |
