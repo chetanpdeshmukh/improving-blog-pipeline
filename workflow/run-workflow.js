@@ -95,7 +95,7 @@ const { contrastNegationCheck } = require('../guardrails/contrast-negation-check
 const { draftCheck, WORD_COUNT_WARN_THRESHOLD } = require('../guardrails/draft-check');
 const { voiceCheck }    = require('../guardrails/voice-check');
 const { gradeGate }     = require('../guardrails/grade-gate');
-const { qaGate }        = require('../guardrails/qa-gate');
+const { qaGate, MAX_BANNED_WORD_REVISIONS } = require('../guardrails/qa-gate');
 
 const MODEL = 'claude-sonnet-4-6';
 
@@ -657,27 +657,75 @@ async function main() {
     currentDraft = smellFixText;
   }
 
-  // ── Step 5: blog-qa-reviewer (adversarial gate) ───────────────────────────
+  // ── Step 5: blog-qa-reviewer (adversarial gate, with a bounded banned-word
+  //    revision loop — see qa-gate.js / Chetan's direction, session 13) ──────
   console.log('[5/6] blog-qa-reviewer');
-  const qaText = await runStep({
-    runId, runDir,
-    stepName:     'blog-qa-reviewer',
-    artifactFile: '05-qa.md',
-    systemPrompt: readPrompt('blog-qa-reviewer'),
-    userContent:  `Please review this blog article:\n\n${cleanedText}`,
-  });
+  let qaText;
+  let qaResult;
+  let bannedWordRevisionCount = 0;
 
-  const qaResult = qaGate(qaText);
-  const qaPunchOut = qaResult.decision === 'punch-out';
-  logStep(runDir, guardrailEntry(runId, 'qa-gate',
-    qaPunchOut ? 'punch-out' : 'pass',
-    qaPunchOut
-      ? `${qaResult.failItems.length} FAIL item(s): ${qaResult.failItems.slice(0, 3).join('; ')}`
-      : 'all checks PASS/WARN'));
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    qaText = await runStep({
+      runId, runDir,
+      stepName:     'blog-qa-reviewer',
+      artifactFile: `05-qa${bannedWordRevisionCount > 0 ? `-rev${bannedWordRevisionCount}` : ''}.md`,
+      systemPrompt: readPrompt('blog-qa-reviewer'),
+      userContent:  `Please review this blog article:\n\n${cleanedText}`,
+      attempt:      bannedWordRevisionCount + 1,
+    });
 
-  if (qaPunchOut) {
-    punchOut(runId, runDir, 'qa-gate',
-      `QA reviewer found ${qaResult.failItems.length} FAIL item(s): ${qaResult.failItems.join('; ')}`);
+    qaResult = qaGate(qaText, bannedWordRevisionCount);
+
+    if (qaResult.decision === 'punch-out') {
+      logStep(runDir, guardrailEntry(runId, 'qa-gate', 'punch-out',
+        `${qaResult.failItems.length} FAIL item(s): ${qaResult.failItems.slice(0, 3).join('; ')}`));
+      punchOut(runId, runDir, 'qa-gate',
+        `QA reviewer found ${qaResult.failItems.length} FAIL item(s): ${qaResult.failItems.join('; ')}`);
+    }
+
+    if (qaResult.decision === 'proceed') {
+      saveArtifact(runDir, '05-qa.md', qaText);
+      logStep(runDir, guardrailEntry(runId, 'qa-gate', 'pass', 'all checks PASS/WARN'));
+      break;
+    }
+
+    // decision === 'revise' — banned-word overuse (3B) only, everything else
+    // clean. Send back to anti-ai-voice for a targeted lexical fix (its actual
+    // job) rather than a full redraft — cheaper, and matches the existing
+    // "lexical fix -> anti-ai-voice, structural fix -> blog-refinement" split
+    // already used elsewhere in this pipeline.
+    bannedWordRevisionCount = qaResult.bannedWordRevisionCount;
+    logStep(runDir, guardrailEntry(runId, 'qa-gate', 'fail',
+      `Banned-word overuse (3B): ${qaResult.bannedWordFailItems.join('; ')} — targeted fix via anti-ai-voice (attempt ${bannedWordRevisionCount}/${MAX_BANNED_WORD_REVISIONS})`));
+    console.log(`  [qa-gate] Banned-word overuse (3B) — targeted fix via anti-ai-voice (attempt ${bannedWordRevisionCount}/${MAX_BANNED_WORD_REVISIONS})`);
+
+    const bannedWordFixText = await runStep({
+      runId, runDir,
+      stepName:     'anti-ai-voice',
+      artifactFile: `03-cleaned-qafix-rev${bannedWordRevisionCount}.md`,
+      systemPrompt: readPrompt('anti-ai-voice'),
+      userContent:  [
+        'TARGETED REVISION ONLY. This draft already passed the lexical clean and quality grade.',
+        'The QA reviewer flagged ONLY the overused banned word(s) below — fix ONLY these, nothing else in the draft.',
+        '',
+        '## Overused banned word(s) to fix',
+        qaResult.bannedWordFailItems.join('\n'),
+        '',
+        '## Draft to fix',
+        cleanedText,
+      ].join('\n'),
+      attempt: bannedWordRevisionCount,
+    });
+
+    cleanedText = stripDraftMetaCommentary(bannedWordFixText);
+    saveArtifact(runDir, '03-cleaned.md', cleanedText);
+
+    const voiceResult = voiceCheck(cleanedText);
+    logStep(runDir, guardrailEntry(runId, 'voice-check',
+      voiceResult.pass ? 'pass' : 'fail',
+      voiceResult.pass ? 'voice clean' : `${voiceResult.violations?.length ?? 0} banned phrases found`));
+    // informational only, same as the first voice-check pass — grade-gate/qa-gate catch real issues
   }
 
   // ── Step 6: blog-refinement (PASS path) ──────────────────────────────────

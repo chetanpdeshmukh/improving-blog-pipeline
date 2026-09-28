@@ -133,7 +133,24 @@ Check all categories:
 - Banned phrases ("In today's…", "At the end of the day", "It's important to note"…)
 - Banned closers ("Ready to transform?", "Contact us to learn more"…)
 
-**Every single instance is a FAIL.** List the exact word and sentence for each.
+**Scored per word/phrase, not per document (added 2026-09-27, session 13, Chetan's
+direction).** Count how many times each individual banned word or phrase appears
+in the article:
+- **1–3 occurrences of a given word/phrase → WARN.** A word used once or twice is an
+  editing slip, not a pattern — it shouldn't block the whole article. List it in
+  WARN Items with the count and one example sentence.
+- **More than 3 occurrences of the same word/phrase → FAIL.** That's real overuse,
+  not a slip (e.g. "stakeholders" used 6 times in one article). List the exact word,
+  its count, and one example sentence.
+- Score the row **FAIL** if ANY individual word/phrase clears the >3 threshold, even
+  if every other banned word in the article is only used once or twice. Score it
+  **WARN** if at least one word/phrase appears but none exceeds 3. Score it **PASS**
+  only if the article is entirely clean.
+- This checkpoint has a bounded, one-time automated revision path (see
+  `guardrails/qa-gate.js`'s `MAX_BANNED_WORD_REVISIONS`) — a FAIL here sends the
+  draft back to anti-ai-voice once with the specific overused word(s) called out,
+  before escalating to a human. Report the exact word and count precisely so that
+  revision pass can act on it directly.
 
 ### 3C: AI Writing Patterns
 Check for:

@@ -18,7 +18,7 @@ const { contrastNegationCheck } = require('../guardrails/contrast-negation-check
 const { voiceCheck } = require('../guardrails/voice-check');
 const { draftCheck } = require('../guardrails/draft-check');
 const { gradeGate } = require('../guardrails/grade-gate');
-const { qaGate } = require('../guardrails/qa-gate');
+const { qaGate, MAX_BANNED_WORD_REVISIONS } = require('../guardrails/qa-gate');
 const { extractSmellTestReport, stripDraftMetaCommentary } = require('./run-workflow');
 
 let pass = 0;
@@ -358,9 +358,10 @@ test('a report failing ONLY on excluded checkpoints (4A + 5D) proceeds even thou
   assert.strictEqual(result.nonBlockingFailItems.length, 2);
 });
 
-test('a real (non-excluded) checkpoint FAIL still punches out even when 4A/5D also FAIL in the same report', () => {
+test('a real (non-excluded, non-revisable) checkpoint FAIL still punches out even when 4A/5D/3B also FAIL in the same report', () => {
   const text = [
     '## Verdict: FAIL',
+    '| 2B | No invented examples | FAIL | "Company X achieved 40%" is untraceable |',
     '| 3B | Banned words | FAIL | "leverage" present |',
     '| 4A | Word count | FAIL | 495 words |',
     '| 5D | Publication kit | FAIL | kit not yet generated |',
@@ -368,8 +369,39 @@ test('a real (non-excluded) checkpoint FAIL still punches out even when 4A/5D al
   const result = qaGate(text);
   assert.strictEqual(result.decision, 'punch-out');
   assert.strictEqual(result.failCount, 1);
-  assert.ok(result.failItems.some(i => /3B/.test(i)));
-  assert.ok(!result.failItems.some(i => /4A|5D/.test(i)), '4A/5D rows must not leak into the blocking failItems');
+  assert.ok(result.failItems.some(i => /2B/.test(i)));
+  assert.ok(!result.failItems.some(i => /3B|4A|5D/.test(i)), '3B/4A/5D rows must not leak into the blocking failItems');
+});
+
+test('a 3B (banned words) FAIL alone, with no other blocking checkpoint, is "revise" on the first attempt, not punch-out', () => {
+  const text = [
+    '## Verdict: FAIL',
+    '| 3B | Banned words | FAIL | "stakeholders" appears 6 times |',
+  ].join('\n');
+  const result = qaGate(text, 0);
+  assert.strictEqual(result.decision, 'revise');
+  assert.strictEqual(result.bannedWordRevisionCount, 1);
+  assert.ok(result.bannedWordFailItems.some(i => /3B/.test(i)));
+});
+
+test('a 3B FAIL still present after MAX_BANNED_WORD_REVISIONS attempts punches out instead of revising again', () => {
+  const text = [
+    '## Verdict: FAIL',
+    '| 3B | Banned words | FAIL | "stakeholders" appears 6 times |',
+  ].join('\n');
+  const result = qaGate(text, MAX_BANNED_WORD_REVISIONS);
+  assert.strictEqual(result.decision, 'punch-out');
+  assert.strictEqual(result.bannedWordRevisionCount, MAX_BANNED_WORD_REVISIONS + 1);
+});
+
+test('a 3B WARN (1-3 occurrences, per the tiered reviewer rule) never blocks or revises — only a 3B FAIL row does', () => {
+  const text = [
+    '## Verdict: CONDITIONAL PASS',
+    '| 3B | Banned words | WARN | "journey" appears once |',
+  ].join('\n');
+  const result = qaGate(text, 0);
+  assert.strictEqual(result.decision, 'proceed');
+  assert.strictEqual(result.failCount, 0);
 });
 
 // ---------------------------------------------------------------------------

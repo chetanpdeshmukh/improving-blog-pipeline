@@ -84,6 +84,31 @@ overridden by that summary line on every single run.
 Every checkpoint *other than 4A and 5D* is unaffected by these exclusions and still
 punches out normally on a real FAIL.
 
+**Checkpoint 3B (banned words) gets one bounded automated revision instead of an
+immediate punch-out (added 2026-09-27, session 13, Chetan's direction).** Unlike
+4A/5D, this is not an exclusion — a real 3B FAIL still matters — but it is
+mechanically fixable (a find-and-replace on the overused word), unlike the content
+and factual judgment calls the other checkpoints exist to catch, so it doesn't need
+a human on the first miss. The rule:
+- `prompts/blog-qa-reviewer.md` now scores 3B per word/phrase, not per document: 1–3
+  occurrences of a given banned word is a WARN (an editing slip, not a pattern);
+  more than 3 occurrences of the same word is a FAIL (e.g. "stakeholders" used 6
+  times in `run-062`).
+- A 3B FAIL, with no other blocking checkpoint FAIL in the same report, routes back
+  to `anti-ai-voice` exactly once — the skill whose actual job is lexical
+  banned-word removal, not a full redraft from `blog-draft-writer` — with the
+  specific overused word(s) called out. `blog-qa-reviewer` then re-reviews the
+  fixed draft.
+- If 3B is still FAIL after that one revision (`MAX_BANNED_WORD_REVISIONS` in
+  `guardrails/qa-gate.js`), it punches out like any other checkpoint — this is not
+  an infinite retry loop, and a 3B FAIL alongside any other real (non-4A/5D)
+  checkpoint FAIL in the same report still punches out immediately without
+  attempting the revision, since that other FAIL needs human judgment regardless.
+- Implementation: `qa-gate.js`'s `qaGate(qaOutput, bannedWordRevisionCount)` returns
+  a new `'revise'` decision (in addition to `'proceed'`/`'punch-out'`), mirroring
+  `grade-gate.js`'s existing revision-counter pattern. `run-workflow.js` wires the
+  loop between Step 5 (`blog-qa-reviewer`) and the targeted `anti-ai-voice` fix.
+
 ## 4. What triggers a failure (not punch-out)
 
 Reserved for breakage with no content judgment involved:
