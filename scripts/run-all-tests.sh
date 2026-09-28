@@ -1,12 +1,12 @@
 #!/bin/bash
 # run-all-tests.sh
 # Runs all 5 test transcripts through the blog pipeline sequentially.
-# Usage: bash run-all-tests.sh (from blog-pipeline-stage4/ directory)
+# Usage: bash scripts/run-all-tests.sh (from anywhere — resolves to the repo root)
 
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$SCRIPT_DIR"
+cd "$SCRIPT_DIR/.."
 
 TRANSCRIPTS=(
   "test-data/AI ROI and Business Value Measuring What Actually Matters.txt"

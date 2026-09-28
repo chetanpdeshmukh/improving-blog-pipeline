@@ -1,21 +1,27 @@
 #!/bin/bash
-# run-batch-session9-small.sh
-# Smaller pilot batch: 2 InfraCloud Webinar (--short) + 2 Improving Podcast (full length).
-# Usage: bash run-batch-session9-small.sh (from blog-pipeline-stage4/ directory)
+# run-batch-session9.sh
+# Runs the 10 new certification transcripts (5 InfraCloud Webinar --short, 5 Improving Podcast full-length).
+# Usage: bash scripts/run-batch-session9.sh (from anywhere — resolves to the repo root)
 
 set -uo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$SCRIPT_DIR"
+cd "$SCRIPT_DIR/.."
 
 SHORT_TRANSCRIPTS=(
   "test-data/InfraCloud Webinar - Architecting Modern AI Systems A Microservices Approach.txt"
   "test-data/InfraCloud Webinar - Bringing Observability to Complex AI Platforms and Models - LIVE.txt"
+  "test-data/InfraCloud Webinar - Model to Production Optimizing, Deploying, and Scaling ML Inference.txt"
+  "test-data/InfraCloud Webinar - The Modern 10x Engineer - Code Generation & Beyond.txt"
+  "test-data/InfraCloud Webinar -  Infrastructure Economics Technical Strategies for Cost-Efficient AI Scaling.txt"
 )
 
 FULL_TRANSCRIPTS=(
   "test-data/Improving Podcast - AI Strategies Why You Need One for Your Business.txt"
+  "test-data/Improving Podcast - AI-Ready Data The New Benchmark of Enterprise Competitiveness.txt"
   "test-data/Improving Podcast - Orchestrating AI Agents The New Scarce Skill.txt"
+  "test-data/Improving Podcast - The Clarity Multiplier AI In the Human Loop.txt"
+  "test-data/Improving Podcast - The Nearshore Advantage Building Teams That Scale 10x.txt"
 )
 
 PASS=0
@@ -52,7 +58,7 @@ run_one() {
 }
 
 echo "════════════════════════════════════════════════"
-echo "  Session 9 PILOT batch — 2 InfraCloud (--short) + 2 Improving Podcast (full length)"
+echo "  Session 9 batch — 5 InfraCloud (--short) + 5 Improving Podcast (full length)"
 echo "════════════════════════════════════════════════"
 
 for t in "${SHORT_TRANSCRIPTS[@]}"; do
@@ -71,4 +77,4 @@ for r in "${RESULTS[@]}"; do
   echo "  $r"
 done
 echo ""
-echo "  PASS: $PASS   PUNCH-OUT: $PUNCHOUT   ERROR: $FAIL   TOTAL: 4"
+echo "  PASS: $PASS   PUNCH-OUT: $PUNCHOUT   ERROR: $FAIL   TOTAL: 10"

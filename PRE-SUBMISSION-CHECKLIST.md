@@ -69,10 +69,10 @@ Last audited: 2026-09-27 (session 13; §1's two partial items closed this sessio
 
 ## 6. Repo hygiene (not a scored artifact, but affects how ready the submission looks)
 
-- [ ] Move loose top-level scripts (`run-all-tests.sh`, `run-batch-session9*.sh`) into a `scripts/` folder or wire as `npm run` targets.
-- [ ] Move or delete loose session log files at root (`session9-*.log`, `session10-*.log`).
+- [x] Move loose top-level scripts (`run-all-tests.sh`, `run-batch-session9*.sh`) into a `scripts/` folder or wire as `npm run` targets. Done session 14 — moved to `scripts/`, fixed their `cd` logic (they used to `cd` into their own directory, which was fine at root but would have broken relative `test-data/` paths once moved) to resolve to the repo root instead.
+- [x] Move or delete loose session log files at root (`session9-*.log`, `session10-*.log`). Done session 14 — moved to `logs/` (kept, not deleted, per the project's iteration-evidence policy).
 - [x] Fix the drift between `workflow/workflow-definition.md`'s documented run-folder filenames (`step-1-outline.md`, `punch-out-record.json`, etc.) and the real ones on disk (`01-outline.json`, `punch-out.json`, `failure.json`, etc.) — corrected session 12, along with the stale revision-loop routing (blog-draft-writer → now correctly documented as blog-refinement) and the phantom `workflow-result.json` file that was never implemented.
-- [ ] `README.md` — **optional per the official framework**, but still worth writing: workflow diagram, folder map, run instructions, and — modeled on the strongest reference submissions — an artifact-checklist table mirroring this file's structure, so "Tim" doesn't have to open this whole doc to see the headline status.
+- [x] `README.md` — **optional per the official framework**, but still worth writing. Done session 14: workflow diagram, folder map, run instructions, eval instructions, and an artifact-checklist table mirroring this file's structure.
 
 ---
 
